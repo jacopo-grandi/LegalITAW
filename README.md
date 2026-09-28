@@ -1,6 +1,6 @@
 # LegalITA-W
 
-**Legal Italian agentic Workflows.** È un benchmark agentico di workflow legali italiani: 100 incarichi
+**Legal Italian Agentic Workflows.** È un benchmark agentico di workflow legali italiani: 100 incarichi
 realistici (WF2-001…WF2-100) e 5.032 criteri binari. Il modello lavora in un workspace isolato con
 sei tool generici e consegna i propri deliverable, che una terna di giudici valuta criterio per
 criterio.
