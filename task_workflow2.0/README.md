@@ -101,9 +101,9 @@ Nei cento profili la lane interna primaria è `generic_agent`: il modello riceve
 il testo di `public/01_task.md`, i documenti pubblici in sola lettura e i sei
 tool generici `bash`, `read`, `write`, `edit`, `glob` e `grep`. L'output mode
 normalizzato è `prompt_only_free_artifacts`; il runtime non impone nomi, numero
-o struttura della consegna. `text_bundle` resta una baseline one-shot e
-`agentic_workspace` una modalità storica conservata per riprodurre le run
-precedenti.
+o struttura della consegna. Le modalità storiche `text_bundle` e
+`agentic_workspace` compaiono ancora nei profili dei task, ma LegalITA-W esegue
+solo `generic_agent`.
 
 Ogni risultato per criterio usa il contratto `response_span_v1`: il judge deve
 indicare estratti esatti della risposta e il runtime li localizza nell'artifact

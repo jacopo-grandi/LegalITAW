@@ -18,9 +18,9 @@ filename privato e nessun criterio della rubrica entra nella conversazione.
 
 Nel profilo normalizzato dei cento task, `generic_agent` è dichiarato fra le
 modalità supportate e `output_mode` vale `prompt_only_free_artifacts`. I campi
-`tool_allowlist`, `agentic_instructions` e `agentic_output_format` restano nel
-corpus esclusivamente per riprodurre il runtime storico `agentic_workspace` e
-non vengono inoltrati al modello nella lane ufficiale.
+`tool_allowlist`, `agentic_instructions` e `agentic_output_format` sono residui
+del runtime storico `agentic_workspace`, non più eseguibile in LegalITA-W: restano
+nei dati del corpus ma non vengono inoltrati al modello.
 
 I sei tool — `bash`, `read`, `write`, `edit`, `glob`, `grep` — sono esposti con
 lo schema nativo del provider e restano disponibili a ogni turno. Il transcript
@@ -93,15 +93,11 @@ contiene il reasoning nascosto che i provider non restituiscono.
 ## Verifica offline
 
 ```bash
-env PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest \
-  checks.test_generic_agent_harness \
-  checks.test_workflow2_agentic_workspace \
-  checks.test_agentic_workflow_runtime
+python3 -m pytest tests/test_generic_agent_harness.py tests/test_workflow2_agentic_workspace.py
 ```
 
 I test coprono la parità del toolset, l'identità del messaggio utente, il
-confine public/private, la libertà dei nomi di output, l'arresto naturale e la
-compatibilità con il runtime precedente. La prova effettiva di `sandbox-exec`
+confine public/private, la libertà dei nomi di output e l'arresto naturale. La prova effettiva di `sandbox-exec`
 resta un controllo di preflight della macchina di run: ambienti già confinati,
 come alcuni runner CI, possono vietare correttamente l'annidamento di un secondo
 sandbox.

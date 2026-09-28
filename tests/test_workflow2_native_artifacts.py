@@ -13,7 +13,7 @@ from legalitaw.agentic.loader import select_tasks
 from legalitaw.agentic.models import WorkflowArtifact, WorkflowSubmission
 from legalitaw.agentic.native_artifacts import DOCX_MEDIA_TYPE, docx_features, render_docx
 from legalitaw.agentic.submissions import import_submission, save_submission
-from legalitaw.agentic.workspace import MatterWorkspace, public_envelope_paths
+from legalitaw.agentic.workspace import PublicDocumentReader, public_envelope_paths
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -75,35 +75,18 @@ def _canary_source(task_id: str, deliverable: str, *, redline: bool = False) -> 
 
 
 class Workflow2NativeArtifactTest(unittest.TestCase):
-    def test_every_task_accepts_a_free_artifact_submission(self) -> None:
+    def test_every_public_input_is_readable_as_text(self) -> None:
         for task in select_tasks(["all"], root=WORKFLOW2_ROOT):
             with self.subTest(task=task.spec.task_id):
-                workspace = MatterWorkspace(task)
-                try:
-                    sources = [
-                        path
-                        for path in public_envelope_paths(task)
-                        if path != "public/01_task.md"
-                    ]
-                    self.assertTrue(sources)
-                    for relative in sources:
-                        workspace.execute(
-                            "open_document",
-                            {"path": relative, "page": 1},
-                        )
-                    artifact = f"consegna/{task.spec.task_id.casefold()}-output.md"
-                    workspace.execute(
-                        "write_artifact",
-                        {
-                            "path": artifact,
-                            "content": "# Output canary\nConsegna libera del sistema.",
-                        },
-                    )
-                    result = workspace.execute("submit", {"path": artifact})
-                    self.assertEqual(result["submitted"], artifact)
-                    self.assertTrue(workspace.document_coverage()["all_sources_opened"])
-                finally:
-                    workspace.close()
+                reader = PublicDocumentReader(task)
+                sources = [
+                    path
+                    for path in public_envelope_paths(task)
+                    if path != "public/01_task.md"
+                ]
+                self.assertTrue(sources)
+                for relative in sources:
+                    self.assertTrue(reader.document_pages(relative), relative)
 
     def test_all_hundred_profiles_have_explicit_runtime_contracts(self) -> None:
         tasks = select_tasks(["all"], root=WORKFLOW2_ROOT)
@@ -174,7 +157,7 @@ class Workflow2NativeArtifactTest(unittest.TestCase):
                 task_id=task.spec.task_id,
                 model="native-canary",
                 source="fixture",
-                execution_mode="agentic_workspace",
+                execution_mode="generic_agent",
                 artifacts=[
                     WorkflowArtifact(
                         path=task.spec.expected_deliverable,
@@ -216,7 +199,7 @@ class Workflow2NativeArtifactTest(unittest.TestCase):
                 task_id=task.spec.task_id,
                 model="native-canary",
                 source="fixture",
-                execution_mode="agentic_workspace",
+                execution_mode="generic_agent",
                 artifacts=[
                     WorkflowArtifact(
                         path=task.spec.expected_deliverable,

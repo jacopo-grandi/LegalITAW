@@ -2,21 +2,12 @@
 
 from __future__ import annotations
 
-from contextlib import redirect_stderr
-import io
-import json
 import os
 from pathlib import Path
 import tempfile
-from types import SimpleNamespace
 import unittest
 from unittest.mock import patch
 
-from legalitaw.benchmark.agentic_service import (
-    generate_agentic_submission,
-    persist_failed_run,
-    persist_run,
-)
 from legalitaw.evaluation.agentic import (
     _evidence_within_scope,
     _find_quote_span,
@@ -29,14 +20,10 @@ from legalitaw.agentic.loader import select_tasks, validate_corpus
 from legalitaw.agentic.models import WorkflowArtifact, WorkflowSubmission
 from legalitaw.agentic.submissions import import_submission
 from legalitaw.agentic.workspace import (
-    MatterWorkspace,
+    PublicDocumentReader,
     WorkspaceError,
-    WorkspaceRunFailure,
     _xlsx_pages,
-    build_workspace_prompt,
-    model_workspace_tools,
 )
-from legalitaw.modeling.usage import ModelCallResult
 from legalitaw.schemas import JudgeVote, ResponseEvidence
 
 
@@ -86,89 +73,6 @@ TIMELINE_DELIVERABLE = """# Timeline signing–closing — Ardesia / Belmonte
 ## Valutazione della data obiettivo di Closing
 La data obiettivo è programmatica; la data effettiva dipende dall'ultima condizione.
 """
-
-DELFINA_DOCUMENT = (
-    "public/documents/Allegati/Accordo_quadro_fornitura_Delfina_Motori.pdf"
-)
-ALL_SOURCE_DOCUMENTS = sorted(
-    path.relative_to(
-        WORKFLOW2_ROOT / "dossier_analysis/003_mna_red_flag_data_room"
-    ).as_posix()
-    for path in (
-        WORKFLOW2_ROOT
-        / "dossier_analysis/003_mna_red_flag_data_room/public/documents"
-    ).rglob("*")
-    if path.is_file() and not path.name.startswith(".")
-)
-
-
-def analysis_decision_call(*, with_evidence: bool = True) -> dict[str, object]:
-    evidence = (
-        [
-            {
-                "document": DELFINA_DOCUMENT,
-                "locator": "art. 14",
-                "finding": "Il cliente può recedere in caso di cambio di controllo.",
-            }
-        ]
-        if with_evidence
-        else []
-    )
-    return {
-        "tool": "record_decision",
-        "arguments": {
-            "stage": "analysis",
-            "objective": "Valutare la materialità del rapporto con Delfina Motori.",
-            "evidence": evidence,
-            "documents_not_reviewed": [],
-            "inference": (
-                "Il diritto di recesso rende il cambio di controllo rilevante "
-                "per la continuità dei ricavi."
-            ),
-            "alternatives_considered": [
-                "Trattare il punto come sola representation & warranty."
-            ],
-            "decision": (
-                "Segnalare il rischio come red flag ad alta priorità e proporre "
-                "una condizione sospensiva."
-            ),
-            "confidence": "high",
-            "missing_information": [
-                "Non è disponibile un consenso preventivo di Delfina."
-            ],
-            "checks_performed": [],
-            "next_action": "Redigere il deliverable con fonte e rimedio.",
-        },
-    }
-
-
-def final_check_call() -> dict[str, object]:
-    return {
-        "tool": "record_decision",
-        "arguments": {
-            "stage": "final_check",
-            "objective": "Verificare il deliverable prima della submission.",
-            "evidence": [
-                {
-                    "document": DELFINA_DOCUMENT,
-                    "locator": "art. 14",
-                    "finding": "La fonte citata sostiene il rischio descritto.",
-                }
-            ],
-            "documents_not_reviewed": [],
-            "inference": "La conclusione è coerente con la fonte pubblica osservata.",
-            "alternatives_considered": [],
-            "decision": "Il deliverable è pronto per la submission.",
-            "confidence": "high",
-            "missing_information": [],
-            "checks_performed": [
-                "Verificati titolo, priorità, esposizione, rimedio e fonte.",
-                "Verificata la sintesi per l'investment committee.",
-            ],
-            "next_action": "Sottoporre il deliverable.",
-        },
-    }
-
 
 class PassJudge:
     model = "fixture-pass-judge"
@@ -243,84 +147,6 @@ class MissingTopicBugJudge(EvidenceJudge):
         return vote
 
 
-class SequentialGateway:
-    def __init__(self) -> None:
-        self.prompts: list[str] = []
-        self.responses = [
-            {"tool": "list_files", "arguments": {}},
-            {
-                "tool": "search_documents",
-                "arguments": {"query": "Delfina", "limit": 5},
-            },
-            *[
-                {
-                    "tool": "open_document",
-                    "arguments": {"path": path, "page": 1},
-                }
-                for path in ALL_SOURCE_DOCUMENTS
-            ],
-            {
-                "tool": "write_artifact",
-                "arguments": {"path": "due_diligence_red_flags.md", "content": DELIVERABLE},
-            },
-            {
-                "tool": "submit",
-                "arguments": {"path": "due_diligence_red_flags.md"},
-            },
-        ]
-
-    def complete(self, model: str, prompt: str) -> ModelCallResult:
-        self.prompts.append(prompt)
-        response = self.responses[len(self.prompts) - 1]
-        return ModelCallResult(
-            text=json.dumps(response, ensure_ascii=False),
-            metrics={
-                "provider": "fixture",
-                "model": model,
-                "latency_ms": 1,
-                "input_tokens": 10,
-                "output_tokens": 5,
-                "total_tokens": 15,
-            },
-        )
-
-
-class ExhaustingGateway(SequentialGateway):
-    def __init__(self) -> None:
-        self.prompts = []
-        self.responses = [
-            {"tool": "list_files", "arguments": {}},
-            {
-                "tool": "write_artifact",
-                "arguments": {
-                    "path": "due_diligence_red_flags.md",
-                    "content": DELIVERABLE,
-                },
-            },
-            {
-                "tool": "write_artifact",
-                "arguments": {
-                    "path": "due_diligence_red_flags.md",
-                    "content": DELIVERABLE,
-                },
-            },
-            {
-                "tool": "write_artifact",
-                "arguments": {
-                    "path": "due_diligence_red_flags.md",
-                    "content": DELIVERABLE,
-                },
-            },
-            {
-                "tool": "write_artifact",
-                "arguments": {
-                    "path": "due_diligence_red_flags.md",
-                    "content": DELIVERABLE,
-                },
-            },
-        ]
-
-
 class Workflow2AgenticWorkspaceTest(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
@@ -348,18 +174,6 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
         self.assertEqual(self.task.spec.version, "2.0.0-draft+agentic.3")
         self.assertNotIn("record_decision", self.task.spec.tool_allowlist)
 
-    def test_workspace_prompt_contains_no_hidden_output_contract(self) -> None:
-        prompt = build_workspace_prompt(
-            self.task,
-            current_step=1,
-            max_steps=40,
-            allowed_tools=model_workspace_tools(self.task),
-        )
-        self.assertNotIn(self.task.spec.agentic_output_format or "", prompt)
-        self.assertNotIn("due_diligence_red_flags.md", prompt)
-        for instruction in self.task.spec.agentic_instructions:
-            self.assertNotIn(instruction, prompt)
-        self.assertNotIn("record_decision", prompt)
 
     def test_external_submission_accepts_free_nested_artifact_name(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
@@ -405,30 +219,26 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
         self.assertEqual(criteria["B.42"].criterion_logic, "prohibited_presence")
 
     def test_timeline_docx_is_paged_without_hiding_late_annexes(self) -> None:
-        workspace = MatterWorkspace(self.timeline_task)
-        try:
-            path = "public/documents/SPA_Ardesia_Belmonte.docx"
-            metadata = workspace.execute("inspect_metadata", {"path": path})
-            self.assertGreaterEqual(metadata["page_count"], 3)
-            content = "\n".join(
-                workspace.execute(
-                    "open_document",
-                    {"path": path, "page": page},
-                )["content"]
-                for page in range(1, metadata["page_count"] + 1)
-            )
-            self.assertIn("Allegato D – Adempimenti di Closing", content)
-            self.assertIn("Allegato E – Dati rilevanti", content)
-            self.assertIn("1.184.000.000", content)
-        finally:
-            workspace.close()
+        reader = PublicDocumentReader(self.timeline_task)
+        pages = reader.document_pages("public/documents/SPA_Ardesia_Belmonte.docx")
+        self.assertGreaterEqual(len(pages), 3)
+        content = "\n".join(pages)
+        self.assertIn("Allegato D – Adempimenti di Closing", content)
+        self.assertIn("Allegato E – Dati rilevanti", content)
+        self.assertIn("1.184.000.000", content)
+
+    def test_document_reader_blocks_private_and_undeclared_paths(self) -> None:
+        reader = PublicDocumentReader(self.task)
+        for relative in ("private/rubric.json", "public/../private/rubric.json", "public/response_template.md"):
+            with self.assertRaises(WorkspaceError):
+                reader.document_pages(relative)
 
     def test_timeline_exact_dates_are_judged_under_free_artifact_contract(self) -> None:
         submission = WorkflowSubmission(
             task_id=self.timeline_task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="spa_signing_closing_timeline.md",
@@ -511,7 +321,7 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             task_id=self.task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="due_diligence_red_flags.md",
@@ -538,63 +348,6 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
         self.assertEqual(accepted, [])
         self.assertEqual(rejected, [quote])
 
-    def test_workspace_copies_public_inputs_and_blocks_private_traversal(self) -> None:
-        workspace = MatterWorkspace(self.task)
-        root = workspace.root
-        try:
-            listing = workspace.execute("list_files", {})
-            self.assertEqual(listing["count"], 28)
-            self.assertFalse(workspace.manifest["private_envelope_mounted"])
-            self.assertFalse(workspace.manifest["shell_available"])
-            self.assertFalse(workspace.manifest["workspace_network_available"])
-            self.assertFalse((workspace.matter / "private").exists())
-            with self.assertRaises(WorkspaceError):
-                workspace.execute(
-                    "open_document",
-                    {"path": "../private/rubric.json"},
-                )
-            self.assertEqual(workspace.trace[-1]["status"], "error")
-            self.assertIn("non accessibile", workspace.trace[-1]["error"])
-            hits = workspace.execute(
-                "search_documents",
-                {"query": "Delfina Motori", "limit": 5},
-            )
-            self.assertTrue(hits["hits"])
-            self.assertTrue(
-                any("Delfina" in item["snippet"] for item in hits["hits"])
-            )
-        finally:
-            workspace.close()
-        self.assertFalse(root.exists())
-
-    def test_runtime_coverage_distinguishes_search_from_open(self) -> None:
-        workspace = MatterWorkspace(self.task)
-        try:
-            hits = workspace.execute(
-                "search_documents",
-                {"query": "Delfina Motori", "limit": 5},
-            )
-            hit_path = hits["hits"][0]["path"]
-            searched = workspace.document_coverage()
-            self.assertIn(hit_path, searched["search_only_sources"])
-            self.assertIn(hit_path, searched["unopened_sources"])
-
-            workspace.execute("open_document", {"path": hit_path, "page": 1})
-            opened = workspace.document_coverage()
-            self.assertNotIn(hit_path, opened["search_only_sources"])
-            self.assertNotIn(hit_path, opened["unopened_sources"])
-            row = next(
-                item for item in opened["by_source"] if item["path"] == hit_path
-            )
-            self.assertEqual(row["opened_pages"], [1])
-            self.assertEqual(row["fully_read_pages"], [1])
-            self.assertLess(opened["document_open_rate"], 1.0)
-            self.assertEqual(
-                opened["policy"],
-                "observe_only",
-            )
-        finally:
-            workspace.close()
 
     def test_xlsx_reader_extracts_cells_dates_and_cached_formulas(self) -> None:
         path = (
@@ -611,27 +364,6 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
         self.assertIn("F14=78500", content)
         self.assertIn("G13==C10+N(F13)-N(E13) -> 23200", content)
 
-    def test_decision_log_tool_is_not_part_of_the_free_output_contract(self) -> None:
-        workspace = MatterWorkspace(self.task)
-        try:
-            with self.assertRaisesRegex(
-                WorkspaceError,
-                "tool non autorizzato",
-            ):
-                workspace.execute("record_decision", {})
-
-            workspace.execute(
-                "write_artifact",
-                {"path": "risposta-libera.md", "content": DELIVERABLE},
-            )
-            submitted = workspace.execute(
-                "submit",
-                {"path": "risposta-libera.md"},
-            )
-            self.assertEqual(submitted["submitted"], "risposta-libera.md")
-            self.assertEqual(workspace.decision_log, [])
-        finally:
-            workspace.close()
 
     def test_judge_receives_public_evidence_but_no_private_envelope(self) -> None:
         with patch.dict(os.environ, {"LEGALITA_JUDGE_CONTEXT": "full"}):
@@ -650,7 +382,7 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             task_id=self.task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="due_diligence_red_flags.md",
@@ -697,7 +429,7 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             task_id=self.task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="due_diligence_red_flags.md",
@@ -759,7 +491,7 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             task_id=self.task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="due_diligence_red_flags.md",
@@ -802,7 +534,7 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             task_id=self.task.spec.task_id,
             model="fixture-model",
             source="fixture",
-            execution_mode="agentic_workspace",
+            execution_mode="generic_agent",
             artifacts=[
                 WorkflowArtifact(
                     path="due_diligence_red_flags.md",
@@ -828,134 +560,6 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             score.judge_diagnostics["judge_panel"]["reporting_status"],
             "diagnostic_only",
         )
-
-    def test_fixture_agent_uses_tools_and_persists_replay_evidence(self) -> None:
-        gateway = SequentialGateway()
-        submission = generate_agentic_submission(
-            self.task,
-            model="fixture-agent",
-            gateway=gateway,  # type: ignore[arg-type]
-            max_steps=34,
-            timeout_seconds=60,
-        )
-        self.assertEqual(submission.execution_mode, "agentic_workspace")
-        self.assertEqual(
-            [item["tool"] for item in submission.tool_trace],
-            [
-                "list_files",
-                "search_documents",
-                *["open_document"] * len(ALL_SOURCE_DOCUMENTS),
-                "write_artifact",
-                "submit",
-            ],
-        )
-        self.assertNotIn("Delfina Motori", gateway.prompts[0])
-        self.assertIn("Delfina Motori", gateway.prompts[2])
-        self.assertNotIn("private/", "\n".join(gateway.prompts))
-        self.assertIn('current_step="1"', gateway.prompts[0])
-        self.assertIn('remaining_steps_including_current="34"', gateway.prompts[0])
-        self.assertIn(
-            'phase="finalization"',
-            gateway.prompts[2 + len(ALL_SOURCE_DOCUMENTS)],
-        )
-        expected_calls = len(ALL_SOURCE_DOCUMENTS) + 4
-        self.assertEqual(submission.model_call_metrics["call_count"], expected_calls)
-        self.assertEqual(submission.model_call_metrics["total_tokens"], expected_calls * 15)
-        self.assertEqual(submission.decision_log, [])
-
-        with tempfile.TemporaryDirectory() as directory:
-            run_dir = persist_run(
-                self.task,
-                submission,
-                results_root=Path(directory),
-            )
-            manifest = json.loads(
-                (run_dir / "run_manifest.json").read_text(encoding="utf-8")
-            )
-            self.assertTrue((run_dir / "tool_trace.json").is_file())
-            self.assertFalse((run_dir / "decision_log.json").exists())
-            self.assertTrue((run_dir / "workspace_manifest.json").is_file())
-            self.assertFalse(manifest["private_inputs_exposed_to_model"])
-            self.assertEqual(
-                manifest["workspace_policy"],
-                {
-                    "private_envelope_mounted": False,
-                    "shell_available": False,
-                    "workspace_network_available": False,
-                },
-            )
-            self.assertTrue(manifest["tool_trace_sha256"])
-            self.assertIsNone(manifest["decision_log_sha256"])
-            self.assertEqual(manifest["decision_log_entries"], 0)
-            self.assertEqual(
-                manifest["document_coverage"]["source_count"],
-                27,
-            )
-            self.assertFalse(manifest["document_coverage"]["all_sources_opened"])
-            coverage_paths = {
-                item["path"]
-                for item in manifest["document_coverage"]["by_source"]
-            }
-            self.assertIn(DELFINA_DOCUMENT, coverage_paths)
-
-    def test_exhausted_run_persists_trace_metrics_and_partial_artifact(self) -> None:
-        gateway = ExhaustingGateway()
-        with self.assertLogs("legalitaw.agentic.workspace", level="INFO") as logs:
-            with self.assertRaises(WorkspaceRunFailure) as captured:
-                generate_agentic_submission(
-                    self.task,
-                    model="fixture-exhausted-agent",
-                    gateway=gateway,  # type: ignore[arg-type]
-                    max_steps=5,
-                    timeout_seconds=60,
-                )
-
-        failure = captured.exception
-        self.assertEqual(failure.error_type, "WorkspaceError")
-        self.assertEqual(failure.model_call_metrics["call_count"], 5)
-        self.assertEqual(failure.model_call_metrics["total_tokens"], 75)
-        self.assertEqual(len(failure.tool_trace), 5)
-        self.assertEqual(failure.artifacts[0].content, DELIVERABLE)
-        self.assertEqual(failure.workspace_manifest["run_status"], "failed")
-        self.assertEqual(failure.workspace_manifest["finalization_steps"], 2)
-        self.assertEqual(len(failure.decision_log), 0)
-        self.assertIn("step=1/5", "\n".join(logs.output))
-        self.assertIn("tool=list_files", "\n".join(logs.output))
-        self.assertIn('phase="finalization"', gateway.prompts[3])
-        self.assertIn(
-            "Tool consentiti in questo turno: submit, write_artifact",
-            gateway.prompts[3],
-        )
-        self.assertIn("non ammesso", failure.tool_trace[-1]["error"])
-
-        with tempfile.TemporaryDirectory() as directory:
-            run_dir = persist_failed_run(
-                self.task,
-                failure,
-                results_root=Path(directory),
-            )
-            manifest = json.loads(
-                (run_dir / "run_manifest.json").read_text(encoding="utf-8")
-            )
-            failure_payload = json.loads(
-                (run_dir / "failure.json").read_text(encoding="utf-8")
-            )
-            self.assertEqual(manifest["run_status"], "failed")
-            self.assertFalse(manifest["private_inputs_exposed_to_model"])
-            self.assertEqual(failure_payload["model_call_metrics"]["call_count"], 5)
-            self.assertTrue((run_dir / "tool_trace.json").is_file())
-            self.assertTrue((run_dir / "decision_log.json").is_file())
-            self.assertTrue((run_dir / "workspace_manifest.json").is_file())
-            self.assertEqual(manifest["decision_log_entries"], 0)
-            self.assertTrue(manifest["decision_log_sha256"])
-            self.assertTrue(
-                (
-                    run_dir
-                    / "partial_artifacts"
-                    / "due_diligence_red_flags.md"
-                ).is_file()
-            )
-            self.assertFalse((run_dir / "submission.json").exists())
 
 
 if __name__ == "__main__":

@@ -5,7 +5,6 @@ import unittest
 import zipfile
 from dataclasses import replace
 from pathlib import Path
-from types import SimpleNamespace
 from unittest.mock import patch
 
 from legalitaw.benchmark.agentic_service import persist_failed_run, persist_run

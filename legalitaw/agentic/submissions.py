@@ -4,8 +4,6 @@ from __future__ import annotations
 
 import base64
 import hashlib
-import json
-import re
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree
@@ -32,21 +30,6 @@ IGNORED_EXTERNAL_FILENAMES = frozenset(
         "workspace_manifest.json",
     }
 )
-
-
-def _json_object(text: str) -> dict:
-    cleaned = text.strip()
-    cleaned = re.sub(r"^```(?:json)?\s*", "", cleaned, flags=re.IGNORECASE)
-    cleaned = re.sub(r"\s*```$", "", cleaned)
-    decoder = json.JSONDecoder()
-    for start in [0, *(match.start() for match in re.finditer(r"\{", cleaned))]:
-        try:
-            value, _ = decoder.raw_decode(cleaned[start:])
-        except json.JSONDecodeError:
-            continue
-        if isinstance(value, dict):
-            return value
-    raise SubmissionError("la risposta non contiene un oggetto JSON valido")
 
 
 def validate_submission(

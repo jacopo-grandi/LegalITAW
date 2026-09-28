@@ -20,7 +20,6 @@ from legalitaw.agentic.submissions import (
 )
 from legalitaw.agentic.workspace import (
     WorkspaceRunFailure,
-    generate_workspace_submission,
     public_envelope_paths,
 )
 from legalitaw.artifacts import write_json_atomic
@@ -29,42 +28,9 @@ from legalitaw.config import (
     JudgeRuntimeConfig,
     validate_judge_runtime_config,
 )
-from legalitaw.modeling.gateway import ModelGateway
 
 
 log = logging.getLogger(__name__)
-
-
-class BundleRunFailure(RuntimeError):
-    """A failed one-shot run with its last provider response preserved."""
-
-    def __init__(
-        self,
-        message: str,
-        *,
-        task: LoadedWorkflowTask,
-        model: str,
-        raw_response: str | None,
-        model_call_metrics: dict[str, Any],
-    ) -> None:
-        super().__init__(message)
-        self.task_id = task.spec.task_id
-        self.model = model
-        self.error_type = type(self).__name__
-        self.artifacts: list[Any] = []
-        self.tool_trace: list[dict[str, Any]] = []
-        self.decision_log: list[Any] = []
-        self.workspace_manifest = {
-            "run_status": "failed",
-            "private_envelope_mounted": False,
-            "shell_available": False,
-            "workspace_network_available": False,
-            "document_coverage": None,
-        }
-        self.model_call_metrics = model_call_metrics
-        self.raw_response = raw_response
-        self.execution_mode = "text_bundle"
-        self.created_at = datetime.now(timezone.utc).isoformat()
 
 
 def _decision_log_payload(entries: list[Any]) -> dict[str, Any]:
@@ -166,35 +132,6 @@ def create_judge(config: JudgeRuntimeConfig) -> Any:
     if config.strategy == "single" and config.judge_a.provider == "anthropic":
         return Judge(model=config.judge_a.model)
     return create_judge_from_config(config)
-
-
-def generate_agentic_submission(
-    task: LoadedWorkflowTask,
-    *,
-    model: str,
-    gateway: ModelGateway | None = None,
-    max_steps: int = 40,
-    timeout_seconds: int = 900,
-) -> WorkflowSubmission:
-    log.info(
-        "[%s] Task avviato — modello=%s, modalità=agentic_workspace",
-        task.short_id,
-        model,
-    )
-    submission = generate_workspace_submission(
-        task,
-        model=model,
-        gateway=gateway,
-        max_steps=max_steps,
-        timeout_seconds=timeout_seconds,
-    )
-    log.info(
-        "[%s] Workspace completato — step=%d, artifact=%s",
-        task.short_id,
-        len(submission.tool_trace),
-        ", ".join(artifact.path for artifact in submission.artifacts),
-    )
-    return submission
 
 
 def generate_generic_submission(
@@ -315,7 +252,7 @@ def persist_run(
 
 def persist_failed_run(
     task: LoadedWorkflowTask,
-    failure: WorkspaceRunFailure | BundleRunFailure,
+    failure: WorkspaceRunFailure,
     *,
     results_root: Path = AGENTIC_RESULTS_DIR,
 ) -> Path:
@@ -381,7 +318,7 @@ def persist_failed_run(
             task,
             model=failure.model,
             source="live",
-            execution_mode=getattr(failure, "execution_mode", "agentic_workspace"),
+            execution_mode=getattr(failure, "execution_mode", "generic_agent"),
             created_at=failure.created_at,
         ),
         "run_status": "failed",

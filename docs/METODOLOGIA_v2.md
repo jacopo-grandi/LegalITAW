@@ -310,7 +310,7 @@ Un'analisi di progetto distingue ciò che il judge deve fare con un criterio: **
 
 ### 8.1 Le tre lane
 
-La modalità interna ufficiale è `generic_agent`: modelli diversi lavorano nello stesso ambiente, con il medesimo corredo di tool, e sono liberi di scegliere strategia e ordine delle operazioni. `external_system` serve invece a importare sistemi completi — NextOS è il caso tipico — senza alterarne il runtime; `one_shot`, implementata dalla modalità storica `text_bundle`, resta una diagnostica non agentica. `agentic_workspace` sopravvive per riprodurre le run precedenti, ma non definisce più lo standard v2.
+La modalità interna ufficiale è `generic_agent`: modelli diversi lavorano nello stesso ambiente, con il medesimo corredo di tool, e sono liberi di scegliere strategia e ordine delle operazioni. `external_system` serve invece a importare sistemi completi — NextOS è il caso tipico — senza alterarne il runtime; Le modalità storiche `text_bundle` (diagnostica one-shot non agentica) e `agentic_workspace` (broker di tool dedicati della prima fase del pilot) non sono più eseguibili in LegalITA-W: le run precedenti si riproducono con il repository legal-ITA.
 
 ### 8.2 Il workspace `generic_agent`
 

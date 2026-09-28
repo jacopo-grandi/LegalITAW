@@ -4,7 +4,7 @@ from __future__ import annotations
 
 from .models import LoadedWorkflowTask
 from .workspace import (
-    MatterWorkspace,
+    PublicDocumentReader,
     public_envelope_paths,
     validate_runtime_capabilities,
 )
@@ -13,19 +13,16 @@ from .workspace import (
 def build_public_bundle(task: LoadedWorkflowTask) -> str:
     validate_runtime_capabilities(task, execution_mode="text_bundle")
     files: list[str] = []
-    workspace = MatterWorkspace(task)
-    try:
-        for relative in public_envelope_paths(task):
-            pages = workspace.document_pages(relative)
-            content = "\n\n".join(
-                f"[PAGINA {index}]\n{page}"
-                for index, page in enumerate(pages, start=1)
-            )
-            files.append(
-                f'<public_file path="{relative}">\n{content.strip()}\n</public_file>'
-            )
-    finally:
-        workspace.close()
+    reader = PublicDocumentReader(task)
+    for relative in public_envelope_paths(task):
+        pages = reader.document_pages(relative)
+        content = "\n\n".join(
+            f"[PAGINA {index}]\n{page}"
+            for index, page in enumerate(pages, start=1)
+        )
+        files.append(
+            f'<public_file path="{relative}">\n{content.strip()}\n</public_file>'
+        )
 
     protocol = f"""<output_protocol>
 Restituisci esclusivamente un oggetto JSON valido, senza markdown esterno e senza
