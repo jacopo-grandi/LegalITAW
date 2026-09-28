@@ -1,0 +1,225 @@
+{
+  "task_id": "WF2-046",
+  "lato_assistito": "Officine Salierna S.r.l., committente contestato",
+  "data_di_riferimento": "2026-08-26",
+  "stato_del_fascicolo": "diffida ricevuta; nessun giudizio pendente e dati presenze incompleti",
+  "fonti_ammesse": [
+    "cc",
+    "jobs",
+    "orario"
+  ],
+  "dati_mancanti": [
+    "acquisire versioni precedenti e comunicazioni esterne",
+    "richiedere elenco clienti e fatture anonimizzate",
+    "non quantificare il credito; acquisire CCNL e livello"
+  ],
+  "calcoli": [
+    "euro 4.200",
+    "694 ore",
+    "512 ore"
+  ],
+  "errori_bersaglio": [
+    "consulenza decisiva per il nomen",
+    "61 ingressi uguali a 549 ore",
+    "694 ore come dato validato",
+    "512 ore come lavoro effettivo",
+    "maggiorazione del 30%",
+    "esclusiva di fatto provata",
+    "qualificazione definitiva nel memo"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "nomen iuris",
+      "gravita": "alta",
+      "affermazione_richiesta": "il contratto denomina il rapporto consulenza ma la qualificazione dipende dall'esecuzione concreta",
+      "evidenza": "articolo 1 del contratto e fatti discordanti nei messaggi",
+      "azione": "trattare il nomen come dato non decisivo",
+      "cautela": "non chiudere l'analisi sul titolo del contratto"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "orario imposto",
+      "gravita": "alta",
+      "affermazione_richiesta": "i messaggi richiedono presenza dalle 9 alle 18 per quattro giorni a settimana",
+      "evidenza": "chat del responsabile dal 4 maggio",
+      "azione": "classificare l'orario come indice di eterodirezione",
+      "cautela": "non dire che il log da solo prova lavoro effettivo"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "luogo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la prestazione avviene prevalentemente nella sede del committente",
+      "evidenza": "log accessi: 61 ingressi in sedici settimane",
+      "azione": "incrociare accessi e chat",
+      "cautela": "non trasformare ogni ingresso in nove ore"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "strumenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "account, laptop e telefono sono forniti dalla società",
+      "evidenza": "verbale consegna asset e organigramma",
+      "azione": "registrare il dato come indice non conclusivo",
+      "cautela": "non considerarlo da solo decisivo"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "inserimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "Giada Ferretti compare nell'organigramma operativo sotto il responsabile produzione",
+      "evidenza": "organigramma versione giugno 2026",
+      "azione": "acquisire versioni precedenti e comunicazioni esterne",
+      "cautela": "non equiparare organigramma e contratto di lavoro"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "potere direttivo",
+      "gravita": "alta",
+      "affermazione_richiesta": "le chat contengono istruzioni quotidiane su priorità e modalità",
+      "evidenza": "messaggi con approvazione preventiva e correzioni",
+      "azione": "selezionare esempi datati",
+      "cautela": "non citare valutazioni generiche"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "compenso",
+      "gravita": "alta",
+      "affermazione_richiesta": "il compenso mensile fisso di euro 4.200 non varia con i risultati",
+      "evidenza": "sei fatture identiche e pagamenti mensili",
+      "azione": "considerarlo insieme agli altri indici",
+      "cautela": "non qualificarlo automaticamente come retribuzione"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "rischio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la collaboratrice emette fattura e sostiene spese di trasferta non rimborsate",
+      "evidenza": "contratto e fatture",
+      "azione": "registrare il dato come indice di autonomia",
+      "cautela": "non omettere gli elementi contrari"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "pluralità clienti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fascicolo non prova se la collaboratrice avesse altri clienti",
+      "evidenza": "diffida lo nega ma non allega dichiarazioni fiscali",
+      "azione": "richiedere elenco clienti e fatture anonimizzate",
+      "cautela": "non assumere esclusiva di fatto"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "periodo provato",
+      "gravita": "alta",
+      "affermazione_richiesta": "i dati disponibili coprono dal 4 maggio al 21 agosto 2026",
+      "evidenza": "prima chat utile e ultimo log",
+      "azione": "limitare la ricostruzione a questo intervallo",
+      "cautela": "non estendere a tutto il rapporto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "ore documentate",
+      "gravita": "alta",
+      "affermazione_richiesta": "i timesheet personali indicano 694 ore ma non sono validati",
+      "evidenza": "foglio della collaboratrice privo di approvazione",
+      "azione": "distinguere dichiarato da corroborato",
+      "cautela": "non usare 694 come dato certo"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "ore corroborate",
+      "gravita": "alta",
+      "affermazione_richiesta": "i log corroborano 512 ore di permanenza massima ma non lavoro effettivo",
+      "evidenza": "differenza fra ingresso e uscita per 61 giornate",
+      "azione": "usare 512 come tetto documentale",
+      "cautela": "non chiamarle ore lavorate"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "straordinario",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca l'orario normale applicabile e il livello retributivo",
+      "evidenza": "nessun contratto collettivo o inquadramento nel fascicolo",
+      "azione": "non quantificare il credito; acquisire CCNL e livello",
+      "cautela": "non applicare una maggiorazione inventata"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "onere probatorio",
+      "gravita": "alta",
+      "affermazione_richiesta": "chi rivendica subordinazione e straordinario deve provare fatti e ore, mentre la società deve preservare i propri dati",
+      "evidenza": "diffida, log e chat hanno forza diversa",
+      "azione": "costruire una matrice fonte-fatto-lacuna",
+      "cautela": "non invertire l'onere senza distinguere disponibilità della prova"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "consulenza decisiva per il nomen",
+      "chiave_nel_criterio": "consulenza decisiva per il nomen"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "61 ingressi uguali a 549 ore",
+      "chiave_nel_criterio": "61 ingressi uguali a 549 ore"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "694 ore come dato validato",
+      "chiave_nel_criterio": "694 ore come dato validato"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "512 ore come lavoro effettivo",
+      "chiave_nel_criterio": "512 ore come lavoro effettivo"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "maggiorazione del 30%",
+      "chiave_nel_criterio": "maggiorazione del 30%"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "esclusiva di fatto provata",
+      "chiave_nel_criterio": "esclusiva di fatto provata"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "qualificazione definitiva nel memo",
+      "chiave_nel_criterio": "qualificazione definitiva nel memo"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_contratto_consulenza.pdf",
+      "funzione": "Contratto di consulenza"
+    },
+    {
+      "file": "02_fatture_e_pagamenti.xlsx",
+      "funzione": "Fatture e pagamenti"
+    },
+    {
+      "file": "03_chat_responsabile.md",
+      "funzione": "Chat con il responsabile"
+    },
+    {
+      "file": "04_log_accessi.xlsx",
+      "funzione": "Log di accesso"
+    },
+    {
+      "file": "05_organigramma.pdf",
+      "funzione": "Organigramma"
+    },
+    {
+      "file": "06_timesheet_personale.xlsx",
+      "funzione": "Timesheet personale"
+    },
+    {
+      "file": "07_diffida.pdf",
+      "funzione": "Diffida della collaboratrice"
+    }
+  ]
+}

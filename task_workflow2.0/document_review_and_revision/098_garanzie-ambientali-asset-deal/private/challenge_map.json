@@ -1,0 +1,298 @@
+{
+  "task_id": "WF2-098",
+  "lato_assistito": "Nordovest Polimeri S.p.A., cessionaria del ramo d'azienda",
+  "committente": "amministratore delegato di Nordovest Polimeri S.p.A.",
+  "data_di_riferimento": "2026-11-18",
+  "stato_fascicolo": "bozza dell'Allegato 7 circolata dai legali del cedente e non negoziata; closing previsto per il 15 dicembre 2026 e non ancora avvenuto; interventi di bonifica approvati e non avviati; nessuna pretesa avanzata",
+  "meccanismi_di_difficolta": [
+    "gerarchia fra documenti: il massimale sta nell'Allegato, la regola che ne esclude il cumulo con il massimale generale sta in due clausole del contratto",
+    "regola generale da dedurre: l'accertamento del completamento degli interventi è attribuito dalla legge a un'autorità determinata e il documento non lo dice",
+    "definizione convenzionale contro regola di legge: lo stato di riferimento e il completamento sono definizioni delle parti, mentre l'accertamento del completamento e gli obblighi del proprietario non responsabile sono regole di legge",
+    "presenza contro adeguatezza: il massimale, la franchigia e la durata esistono, sono espressi in cifre e non sono adeguati all'esposizione documentata; la franchigia invece è adeguata pur essendo formulata a sfavore",
+    "evidenze incomplete: la relazione di due diligence contiene due campagne analitiche con punti non coincidenti e un elenco chiuso di ciò che non è stato verificato",
+    "termine costruito su un evento futuro e incerto: il decennio di monitoraggio decorre dall'avvio dell'esercizio di un'opera non realizzata, quindi nessuna data di conclusione è ricavabile",
+    "dichiarazione di parte da smentire: la mail della committente contiene otto affermazioni, di cui sei da correggere e due da confermare",
+    "adempimento scaduto che non passa dal testo: il termine di avvio dei lavori fissato dal provvedimento è decorso e l'intervento è una condizione al closing"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "massimale insufficiente",
+      "gravita": "alta",
+      "affermazione_richiesta": "il massimale di 900.000 euro della clausola 3.2 copre meno della metà dell'esposizione documentata di 2.150.000 euro, lasciando scoperti 1.250.000 euro; il massimale generale del contratto opera autonomamente e non si somma a quello ambientale, perché la clausola 5.2 riserva la materia ambientale all'Allegato 7 e la clausola 5.4 tiene i due massimali separati",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 3.2; 04_stima_oneri_ambientali.md; 02_bozza_contratto_cessione_ramo.md, clausole 5.2 e 5.4",
+      "errore_bersaglio": "sommare il massimale generale e quello ambientale per concludere che l'esposizione è coperta, oppure valutare il massimale solo in percentuale sul prezzo"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "durata della garanzia ambientale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la garanzia ambientale scade il 15 dicembre 2028, mentre il decennio di monitoraggio prescritto dal decreto regionale decorre dall'avvio dell'esercizio della barriera idraulica, che alla data di riferimento non è realizzata: la garanzia si estingue prima che il monitoraggio inizi a decorrere",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 3.4; 05_provvedimento_regionale_approvazione_progetto.md, punto 3; 03_relazione_due_diligence_ambientale.md, punto 3",
+      "errore_bersaglio": "trattare i ventiquattro mesi come termine di mercato accettabile senza confrontarlo con la durata degli adempimenti, oppure indicare una data determinata di fine del monitoraggio"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "effetto della informativa generale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 6.1 esclude la garanzia per quanto reso noto nella data room o in qualunque relazione tecnica consegnata, e la disclosure letter rinvia integralmente alla cartella ambientale della data room: la combinazione svuota la manleva proprio sulle voci di costo stimate, che sono le sole documentate",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 6.1; 06_disclosure_letter.md, parte I e punto 6.1",
+      "errore_bersaglio": "trattare la clausola 6.1 come formula di stile, oppure ritenere che la relazione commissionata dal cessionario resti fuori dall'informativa perché non proviene dal cedente"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "definizione dello stato di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la definizione di stato di riferimento rinvia a una relazione senza identificarla per data e senza indicare quale set analitico rilevi, mentre la relazione contiene due campagne con punti di indagine diversi e non omogenei: il rinvio va ancorato alla relazione del 30 ottobre 2026 e ai risultati della campagna integrativa di settembre 2026",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 1.5; 03_relazione_due_diligence_ambientale.md, tabelle 3 e 4",
+      "errore_bersaglio": "accettare il rinvio generico, oppure ancorare lo stato di riferimento alla campagna 2024, che non comprende i punti Pz-9 e S-11"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "definizione di completamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 1.7 fa coincidere il completamento con la comunicazione del consulente incaricato dal cedente, mentre il completamento degli interventi e la loro conformità al progetto approvato sono accertati dalla provincia mediante certificazione sulla base della relazione tecnica dell'agenzia regionale: il rinvio va spostato sull'atto amministrativo",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 1.7; art. 248, comma 2, del codice dell'ambiente",
+      "errore_bersaglio": "accettare la definizione convenzionale, oppure attribuire alla certificazione effetti che il testo di legge non le attribuisce"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "criterio di imputazione e onere della prova",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 1.8 àncora la passività anteriore alla causazione da parte del cedente e la clausola 3.1 pone al cessionario l'onere di provarla: su una contaminazione da solventi risalente a una linea dismessa nel 1997 quella prova non è raggiungibile, e il criterio va spostato sulla presenza della condizione ambientale alla data del closing, con onere della prova a carico del cedente per le classi analitiche già riscontrate",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausole 1.8 e 3.1; 03_relazione_due_diligence_ambientale.md, punto 3",
+      "errore_bersaglio": "intervenire sul solo onere della prova lasciando il criterio della causazione, oppure intervenire sul solo criterio lasciando l'onere al cessionario"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "migrazione e condizioni scoperte in corso d'opera",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'allegato non disciplina né la migrazione di sostanze pericolose dai fondi limitrofi né le condizioni ambientali che emergano da scavi successivi al closing: il sito confina a nord con un'area interessata da un procedimento di bonifica e la falda scorre da nord verso sud, e gli scavi previsti dal progetto sono imposti dal provvedimento dell'autorità",
+      "evidenza": "03_relazione_due_diligence_ambientale.md, punto 5; 04_stima_oneri_ambientali.md, voce 4",
+      "errore_bersaglio": "non rilevare la lacuna, oppure addossare al cedente ogni condizione scoperta in corso d'opera senza distinguere gli scavi imposti da quelli scelti dal cessionario"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "termine di notifica del claim",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.1 fissa un termine di trenta giorni dalla conoscenza a pena di decadenza, senza che rilevi l'esistenza di un pregiudizio per il cedente: il termine va allungato e la decadenza va condizionata al pregiudizio effettivo e circoscritta alla sua misura",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 4.1",
+      "errore_bersaglio": "intervenire soltanto sulla durata del termine lasciando la decadenza automatica"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "gestione della pretesa e vincoli sul sito",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.2 consente al cedente di definire in via transattiva la pretesa senza il consenso del cessionario: poiché la definizione può comportare prescrizioni, obblighi di monitoraggio o vincoli d'uso che gravano sul sito dopo il completamento, il consenso va richiesto e il cessionario va messo in condizione di partecipare ai rapporti con l'autorità",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausole 4.2 e 4.4",
+      "errore_bersaglio": "chiedere il consenso senza limitarlo a ciò che non può essere irragionevolmente negato, oppure non collegare l'intervento all'effetto dei vincoli sul sito"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "divieto di contatto con l'autorità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.3 impegna il cessionario ad astenersi dal contattare l'autorità competente, mentre il proprietario o gestore che rilevi il superamento o il pericolo concreto e attuale del superamento delle soglie di contaminazione deve darne comunicazione alle amministrazioni e attuare le misure di prevenzione: l'obbligo di legge va fatto salvo",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 4.3; art. 245, comma 2, del codice dell'ambiente",
+      "errore_bersaglio": "eliminare l'intera clausola invece di far salvi gli obblighi di legge, oppure non rilevare il conflitto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "accesso al sito senza preavviso",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 5.1 consente l'accesso in qualunque momento e senza preavviso su tutto il sito: l'accesso va circoscritto alle aree interessate, subordinato a preavviso e a modalità che non pregiudichino l'attività produttiva, con salvezza dei casi di emergenza, e il diniego motivato da ragioni di sicurezza non deve costituire inadempimento del cessionario",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 5.1",
+      "errore_bersaglio": "sopprimere il diritto di accesso, che è funzionale all'esecuzione degli interventi a carico del cedente, anziché disciplinarlo"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "imputazione del monitoraggio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 7.1 pone il monitoraggio decennale a carico del cessionario, mentre il decreto regionale lo imputa al cedente in qualità di soggetto proponente per l'intera durata prescritta: l'imputazione contrattuale va allineata a quella del provvedimento",
+      "evidenza": "01_bozza_schedule_ambientale.docx, clausola 7.1; 05_provvedimento_regionale_approvazione_progetto.md, punti 3 e 4",
+      "errore_bersaglio": "accettare l'imputazione al cessionario in cambio di una riduzione di prezzo, senza rilevare la divergenza dal provvedimento"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "assenza di garanzia finanziaria del cedente",
+      "gravita": "alta",
+      "affermazione_richiesta": "il corrispettivo è pagato integralmente alla data del closing e nessuna clausola prevede un deposito a garanzia o altra garanzia finanziaria a fronte degli obblighi di manleva: la garanzia va introdotta e commisurata all'esposizione stimata, con svincolo progressivo",
+      "evidenza": "02_bozza_contratto_cessione_ramo.md, clausola 3.1; 01_bozza_schedule_ambientale.docx, clausola 3",
+      "errore_bersaglio": "non rilevare l'assenza della garanzia, oppure proporre una ritenuta sul prezzo senza indicarne il meccanismo di svincolo"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "termine di avvio dei lavori scaduto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il decreto regionale imponeva l'avvio dei lavori entro dodici mesi dalla notifica, cioè entro il 25 novembre 2025, e alla data di riferimento i lavori non risultano avviati: il cessionario acquisirebbe un sito con un adempimento scaduto verso l'autorità, e l'intervento non passa dal testo dell'Allegato ma dalla condizione da porre al closing",
+      "evidenza": "05_provvedimento_regionale_approvazione_progetto.md, punto 6 e relata di notifica; 03_relazione_due_diligence_ambientale.md, punto 3; 07_email_responsabile_ma.md",
+      "errore_bersaglio": "accogliere l'affermazione secondo cui il ritardo resta un problema del cedente fino al closing, oppure trattarlo come una violazione contrattuale anziché come un inadempimento verso l'autorità che segue il sito"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "formulazione della franchigia",
+      "chiave_nel_criterio": "formulazione della franchigia",
+      "ragione": "la franchigia della clausola 3.3 è costruita come importo deducibile e non come soglia di attivazione, ma sull'esposizione documentata il massimale opera prima della franchigia: il recupero massimo resta di 900.000 euro in entrambe le letture, e la formulazione non incide sull'esito",
+      "errore_bersaglio": "presentare la formulazione della franchigia come uno degli interventi prioritari, o quantificare in 150.000 euro una perdita di recupero che la quadratura non produce"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "esclusione per modifiche normative successive",
+      "chiave_nel_criterio": "esclusione per modifiche normative successive",
+      "ragione": "la clausola 3.5 esclude la responsabilità del cedente per le sole perdite che derivino esclusivamente da modifiche della normativa entrate in vigore dopo il closing: la formulazione è circoscritta dall'avverbio e non incide sulle voci documentate, che derivano dal provvedimento già approvato",
+      "errore_bersaglio": "chiedere la soppressione della clausola 3.5 come intervento necessario"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "esclusione del lucro cessante",
+      "chiave_nel_criterio": "esclusione del lucro cessante",
+      "ragione": "la definizione di perdita esclude il lucro cessante, i danni indiretti e i calcoli su base moltiplicativa: le quattro voci di costo stimate sono danno emergente e restano interamente comprese nella definizione",
+      "errore_bersaglio": "indicare l'esclusione del lucro cessante fra gli interventi da chiedere sulla base dell'esposizione documentata"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "dichiarazione del cessionario sulle verifiche svolte",
+      "chiave_nel_criterio": "dichiarazione del cessionario sulle verifiche svolte",
+      "ragione": "la clausola 6.2 contiene una dichiarazione di fatto sull'accesso alla documentazione e sulle verifiche svolte, e non una rinuncia alle garanzie né una limitazione della manleva: l'effetto da neutralizzare è quello della clausola 6.1",
+      "errore_bersaglio": "intervenire sulla clausola 6.2 come se contenesse una rinuncia alle garanzie"
+    }
+  ],
+  "dati_mancanti": [
+    "i rapporti di prova del sito confinante a nord, senza i quali il contributo della falda proveniente dai fondi limitrofi non è quantificabile",
+    "la determinazione dei valori di fondo dell'area, che nessun documento del fascicolo contiene",
+    "il computo allegato al progetto operativo del 2023, senza il quale la base di calcolo delle garanzie finanziarie prestate alla regione non è determinabile",
+    "la data di avvio dell'esercizio della barriera idraulica, da cui dipende la decorrenza del decennio di monitoraggio",
+    "l'indice della data room e il registro dei quesiti richiamati dalla disclosure letter, che delimitano l'estensione dell'informativa generale",
+    "l'elenco dei contratti e dei rapporti di lavoro trasferiti e la situazione patrimoniale, richiamati come allegati e non presenti",
+    "la documentazione sullo smaltimento dei solventi della linea dismessa nel 1997"
+  ],
+  "fonti_ammesse": [
+    "D.Lgs. 152/2006, artt. 240, 242, 244, 245, 248, 250, 253"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "18 novembre 2026",
+      "calcolo": "mercoledì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "corrispettivo della cessione",
+      "valore": "14.500.000 euro",
+      "calcolo": "il massimale ambientale di 900.000 euro corrisponde al 6,21 per cento del corrispettivo",
+      "fonte": "02_bozza_contratto_cessione_ramo.md, clausola 3.1"
+    },
+    {
+      "milestone": "stima complessiva degli oneri ambientali",
+      "valore": "2.150.000 euro",
+      "calcolo": "1.240.000 + 185.000 + 430.000 + 295.000 = 2.150.000",
+      "fonte": "04_stima_oneri_ambientali.md"
+    },
+    {
+      "milestone": "massimale dell'indennità ambientale specifica",
+      "valore": "900.000 euro",
+      "calcolo": "copre il 41,9 per cento della stima complessiva",
+      "fonte": "01_bozza_schedule_ambientale.docx, clausola 3.2"
+    },
+    {
+      "milestone": "esposizione non coperta dal massimale",
+      "valore": "1.250.000 euro",
+      "calcolo": "2.150.000 - 900.000 = 1.250.000",
+      "fonte": "quadratura fra clausola 3.2 e 04_stima_oneri_ambientali.md"
+    },
+    {
+      "milestone": "massimale generale del contratto",
+      "valore": "1.450.000 euro",
+      "calcolo": "opera autonomamente e non concorre al massimale ambientale, che è riservato all'Allegato 7",
+      "fonte": "02_bozza_contratto_cessione_ramo.md, clausole 5.2 e 5.4"
+    },
+    {
+      "milestone": "derivazione errata: somma dei due massimali",
+      "valore": "2.350.000 euro",
+      "calcolo": "i due massimali non si sommano sulle perdite ambientali",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "soglia di irrilevanza per singola condizione ambientale",
+      "valore": "25.000 euro",
+      "calcolo": "nessuna delle quattro voci di costo stimate resta sotto la soglia",
+      "fonte": "01_bozza_schedule_ambientale.docx, clausola 3.3"
+    },
+    {
+      "milestone": "franchigia aggregata",
+      "valore": "150.000 euro",
+      "calcolo": "costruita come importo deducibile; sull'esposizione stimata il massimale opera prima della franchigia, quindi la formulazione non incide sul recupero massimo",
+      "fonte": "01_bozza_schedule_ambientale.docx, clausola 3.3"
+    },
+    {
+      "milestone": "recupero massimo sull'esposizione stimata",
+      "valore": "900.000 euro",
+      "calcolo": "il minore fra 2.150.000 meno 150.000 e 900.000 è 900.000: il massimale opera prima della franchigia",
+      "fonte": "quadratura fra clausola 3.2, clausola 3.3 e 04_stima_oneri_ambientali.md"
+    },
+    {
+      "milestone": "data prevista di closing",
+      "valore": "15 dicembre 2026",
+      "calcolo": "martedì",
+      "fonte": "02_bozza_contratto_cessione_ramo.md, clausola 4.1"
+    },
+    {
+      "milestone": "scadenza della garanzia ambientale",
+      "valore": "15 dicembre 2028",
+      "calcolo": "ventiquattro mesi dal closing",
+      "fonte": "01_bozza_schedule_ambientale.docx, clausola 3.4"
+    },
+    {
+      "milestone": "costo annuo del monitoraggio della falda",
+      "valore": "43.000 euro",
+      "calcolo": "430.000 euro su dieci annualità di importo omogeneo; ciascuna annualità supera la soglia di irrilevanza di 25.000 euro",
+      "fonte": "04_stima_oneri_ambientali.md, voce 3"
+    },
+    {
+      "milestone": "notifica del decreto regionale di approvazione",
+      "valore": "25 novembre 2024",
+      "calcolo": "lunedì",
+      "fonte": "05_provvedimento_regionale_approvazione_progetto.md, relata di notifica"
+    },
+    {
+      "milestone": "termine per l'avvio dei lavori",
+      "valore": "25 novembre 2025",
+      "calcolo": "dodici mesi dalla notifica del decreto; alla data di riferimento il termine è decorso da 358 giorni e i lavori non risultano avviati",
+      "fonte": "05_provvedimento_regionale_approvazione_progetto.md, punto 6"
+    },
+    {
+      "milestone": "termine del monitoraggio decennale",
+      "valore": "non determinabile",
+      "calcolo": "il decennio decorre dall'avvio dell'esercizio della barriera idraulica, che non è realizzata; assumendo l'avvio nel quarto trimestre 2027, indicato dalla stima degli oneri, il monitoraggio si chiuderebbe non prima del quarto trimestre 2037, quindi in ogni caso dopo la scadenza della garanzia ambientale",
+      "fonte": "05_provvedimento_regionale_approvazione_progetto.md, punto 3"
+    },
+    {
+      "milestone": "rapporto fra scadenza della garanzia e durata del monitoraggio",
+      "valore": "la garanzia scade prima che il monitoraggio inizi a decorrere",
+      "calcolo": "alla data di riferimento la barriera idraulica non è realizzata e il decennio di monitoraggio non ha iniziato a decorrere",
+      "fonte": "quadratura fra clausola 3.4 e 05_provvedimento_regionale_approvazione_progetto.md"
+    },
+    {
+      "milestone": "garanzie finanziarie da prestare alla regione",
+      "valore": "non determinabile",
+      "calcolo": "il decreto rinvia alla misura massima consentita dalla legge, che è il cinquanta per cento del costo stimato dell'intervento; il computo allegato al progetto operativo del 2023 non è presente nel fascicolo, quindi la base di calcolo e l'importo non sono determinabili",
+      "fonte": "05_provvedimento_regionale_approvazione_progetto.md, punto 5"
+    },
+    {
+      "milestone": "termine di notifica del claim",
+      "valore": "trenta giorni dalla conoscenza",
+      "calcolo": "a pena di decadenza e senza rilievo del pregiudizio per il cedente",
+      "fonte": "01_bozza_schedule_ambientale.docx, clausola 4.1"
+    }
+  ],
+  "funzione_allegati": {
+    "01_bozza_schedule_ambientale.docx": "è il documento da revisionare: contiene tutte le clausole su cui gli interventi incidono e le definizioni convenzionali su cui il resto dell'allegato poggia",
+    "02_bozza_contratto_cessione_ramo.md": "porta il corrispettivo, la data di closing, il massimale generale e la clausola che riserva la materia ambientale all'Allegato 7: è il documento da cui si ricava che i due massimali non si cumulano sulle voci ambientali",
+    "03_relazione_due_diligence_ambientale.md": "contiene le due campagne analitiche non omogenee su cui la definizione di stato di riferimento deve essere ancorata, e l'elenco chiuso di ciò che non è stato verificato",
+    "04_stima_oneri_ambientali.md": "quantifica l'esposizione voce per voce e articola il monitoraggio in dieci annualità: è la base della quadratura economica",
+    "05_provvedimento_regionale_approvazione_progetto.md": "imputa gli interventi e il monitoraggio al cedente, fissa la decorrenza del decennio di monitoraggio e il termine di avvio dei lavori, e rinvia alla legge per la misura delle garanzie finanziarie",
+    "06_disclosure_letter.md": "contiene l'informativa generale che, combinata con la clausola 6.1 della bozza, produce l'effetto da neutralizzare",
+    "07_email_responsabile_ma.md": "porta le affermazioni della committente da verificare, di cui alcune da correggere e una da confermare"
+  }
+}

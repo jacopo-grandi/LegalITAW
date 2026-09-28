@@ -1,0 +1,302 @@
+{
+  "task_id": "WF2-096",
+  "lato_assistito": "Costruzioni Pratomagno S.p.A., titolare del permesso di costruire",
+  "committente": "direttore tecnico di Costruzioni Pratomagno S.p.A.",
+  "data_di_riferimento": "2026-12-02",
+  "stato_fascicolo": "cantiere aperto; lavori iniziati l'11 maggio 2026, sospesi dal 15 giugno al 30 luglio 2026 e ripresi; nessuna istanza di proroga presentata; variante proposta dal direttore dei lavori e non ancora presentata",
+  "meccanismi_di_difficolta": [
+    "due dies a quo diversi nella stessa disposizione: il termine di inizio decorre dal rilascio del titolo, quello di ultimazione dall'inizio dei lavori, e nessun documento enuncia la differenza",
+    "fatti distribuiti: il dies a quo del termine di ultimazione sta soltanto nella comunicazione di inizio dei lavori, mentre la regola sta nel provvedimento di rilascio",
+    "data del documento contro data di efficacia: l'autorizzazione paesaggistica è anteriore di quasi tre anni al permesso e il quinquennio di efficacia decorre dal titolo edilizio",
+    "regola generale da dedurre: la sospensione dei lavori sembra allungare il termine e non lo allunga, e nessun documento dice che la proroga richiede un'istanza",
+    "metodo di calcolo controintuitivo: lo slittamento del cronoprogramma si misura in giorni di calendario e non nei giorni lavorativi perduti, che i documenti pure espongono",
+    "presenza contro adeguatezza: la variante lascia invariati volume, sagoma, altezza e piani, e incide sulla sola superficie di solaio",
+    "evidenze incomplete: la determinazione delle variazioni essenziali è rimessa alla legge regionale, che il fascicolo non contiene, e la qualificazione resta sospesa",
+    "presupposto di applicazione da verificare su una data: la proroga straordinaria riguarda i titoli fino al 31 dicembre 2025 e il permesso è del 12 febbraio 2026"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "termine di inizio dei lavori",
+      "gravita": "media",
+      "affermazione_richiesta": "il termine per l'inizio dei lavori è di un anno dal rilascio del titolo, scade il 12 febbraio 2027 ed è stato rispettato con la comunicazione dell'11 maggio 2026",
+      "evidenza": "01_permesso_di_costruire.md, punto 3.1; 03_comunicazione_inizio_lavori.md",
+      "errore_bersaglio": "indicare il termine come ancora pendente e rilevante, quando i lavori sono già iniziati, oppure computarlo da un evento diverso dal rilascio"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "dies a quo del termine di ultimazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di ultimazione è di tre anni dall'inizio dei lavori e non dal rilascio del titolo: decorre dall'11 maggio 2026 e scade l'11 maggio 2029",
+      "evidenza": "01_permesso_di_costruire.md, punto 3.1; 03_comunicazione_inizio_lavori.md",
+      "errore_bersaglio": "computare i tre anni dal rilascio del titolo, indicando come scadenza il 12 febbraio 2029"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "effetto della sospensione sul termine",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sospensione dei lavori non proroga automaticamente il termine di ultimazione: la proroga richiede un'istanza, e nel caso di iniziative dell'amministrazione rivelatesi infondate è comunque accordata",
+      "evidenza": "04_ordinanza_sospensione_lavori.md; 05_provvedimento_revoca.md; art. 15, commi 2 e 2-bis, del testo unico dell'edilizia",
+      "errore_bersaglio": "affermare che il termine si è automaticamente allungato della durata della sospensione, senza istanza"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "presupposto della proroga comunque accordata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la determinazione di revoca accerta che la difformità segnalata non sussiste e che i presupposti dell'ordinanza sono venuti meno: è l'accertamento che rende l'iniziativa dell'amministrazione rivelatasi infondata e che fonda la proroga comunque accordata",
+      "evidenza": "05_provvedimento_revoca.md, punti 1 e 2",
+      "errore_bersaglio": "fondare la proroga sulla sola esistenza dell'ordinanza, senza il provvedimento che ne accerta l'infondatezza, oppure trattare la revoca come un atto meramente ricognitivo"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "momento in cui la proroga va richiesta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la proroga va richiesta anteriormente alla scadenza del termine di ultimazione: alla data di riferimento nessuna istanza risulta presentata e il termine non è ancora scaduto, quindi l'iniziativa è ancora possibile",
+      "evidenza": "06_cronoprogramma_e_stato_avanzamento.md, punto 5; art. 15, comma 2, del testo unico dell'edilizia",
+      "errore_bersaglio": "indicare la proroga come acquisita o come ottenibile in qualunque momento, anche dopo la scadenza"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "durata dell'interruzione",
+      "gravita": "media",
+      "affermazione_richiesta": "l'interruzione è durata dal 15 giugno al 30 luglio 2026, pari a quarantasei giorni di calendario compresi gli estremi",
+      "evidenza": "04_ordinanza_sospensione_lavori.md; 05_provvedimento_revoca.md, punto 3; 06_cronoprogramma_e_stato_avanzamento.md, punto 3",
+      "errore_bersaglio": "escludere dal computo uno dei due giorni estremi, o usare la durata in giorni lavorativi come misura dello slittamento del cronoprogramma"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "effetto sul cronoprogramma",
+      "gravita": "media",
+      "affermazione_richiesta": "l'ultimazione programmata slitta dal 9 aprile 2027 al 25 maggio 2027 e resta anteriore al termine di ultimazione del permesso: il titolo non è a rischio per effetto dello slittamento",
+      "evidenza": "06_cronoprogramma_e_stato_avanzamento.md, punti 1 e 4",
+      "errore_bersaglio": "presentare lo slittamento come rischio per il titolo, oppure omettere il confronto fra la nuova data di programma e il termine di legge"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "riprogrammazione non comunicata",
+      "gravita": "media",
+      "affermazione_richiesta": "la riprogrammazione non è stata comunicata allo Sportello Unico: la comunicazione non è un adempimento imposto dal titolo, ma la sua assenza priva l'amministrazione di ogni evidenza dell'interruzione ai fini dell'istanza di proroga",
+      "evidenza": "06_cronoprogramma_e_stato_avanzamento.md, punto 5; 01_permesso_di_costruire.md, prescrizioni",
+      "errore_bersaglio": "indicare la mancata comunicazione della riprogrammazione come violazione di una prescrizione del titolo"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "incremento della superficie di solaio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la variante proposta incrementa la superficie di solaio di 240 metri quadrati sui 1.640 assentiti, pari al 14,63 per cento, mentre volume fuori terra, superficie coperta, altezza e numero dei piani restano invariati",
+      "evidenza": "07_relazione_direzione_lavori_variante.md, punto 3; 01_permesso_di_costruire.md, punto 2",
+      "errore_bersaglio": "concludere che la variante non incide sui parametri perché volume e sagoma restano invariati, senza rilevare l'incremento della superficie di solaio"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "qualificazione della variante",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'aumento consistente della superficie di solaio è una delle condizioni in cui può ricorrere la variazione essenziale, ma la determinazione delle variazioni essenziali è rimessa alla legge regionale, che il fascicolo non contiene: la qualificazione non è raggiungibile e va indicato che cosa manca",
+      "evidenza": "art. 32 del testo unico dell'edilizia; 07_relazione_direzione_lavori_variante.md, punto 5.1",
+      "errore_bersaglio": "qualificare la variante come essenziale o come non essenziale sulla base della sola percentuale, senza rilevare che la determinazione è rimessa alla legge regionale"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "titolo richiesto per la variante",
+      "gravita": "alta",
+      "affermazione_richiesta": "se la variante non configura variazione essenziale è realizzabile con segnalazione certificata, comunicata a fine lavori con attestazione del professionista e attuata dopo l'acquisizione degli atti di assenso prescritti dalla normativa sui vincoli paesaggistici; se configura variazione essenziale la segnalazione non è utilizzabile e occorre un titolo",
+      "evidenza": "art. 22, commi 2 e 2-bis, del testo unico dell'edilizia",
+      "errore_bersaglio": "indicare un solo percorso come praticabile, senza condizionarlo alla qualificazione, oppure omettere la condizione dell'atto di assenso paesaggistico"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "assenso paesaggistico sulla variante",
+      "gravita": "alta",
+      "affermazione_richiesta": "la variante modifica i materiali di finitura del fronte est, che l'autorizzazione paesaggistica prescrive, e arretra la facciata sud: occorre verificare la necessità di un nuovo assenso paesaggistico prima dell'esecuzione, perché l'autorizzazione non può essere rilasciata in sanatoria dopo la realizzazione anche parziale degli interventi fuori dalle ipotesi tassative",
+      "evidenza": "02_autorizzazione_paesaggistica.md, prescrizioni 1 e 2; 07_relazione_direzione_lavori_variante.md, punti 2.3, 2.4 e 5.2",
+      "errore_bersaglio": "trattare la modifica dei materiali come irrilevante sul piano paesaggistico, oppure rinviare l'assenso a dopo l'esecuzione"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "momento di presentazione della variante",
+      "gravita": "media",
+      "affermazione_richiesta": "le varianti realizzabili con segnalazione certificata vanno presentate prima della dichiarazione di ultimazione dei lavori: il momento è vincolato e va collocato nel cronoprogramma",
+      "evidenza": "art. 22, comma 2, del testo unico dell'edilizia; 06_cronoprogramma_e_stato_avanzamento.md",
+      "errore_bersaglio": "collocare la presentazione della variante dopo l'ultimazione dei lavori, oppure non indicare alcun vincolo temporale"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "parte non ultimata e nuovo titolo",
+      "gravita": "media",
+      "affermazione_richiesta": "se alla scadenza del termine i lavori non sono ultimati, la parte non eseguita richiede un nuovo permesso, salvo che rientri fra le opere realizzabili con segnalazione certificata, e si procede ove necessario al ricalcolo del contributo di costruzione",
+      "evidenza": "art. 15, comma 3, del testo unico dell'edilizia; 01_permesso_di_costruire.md, importo del contributo versato",
+      "errore_bersaglio": "affermare che la decadenza travolge l'intero titolo, o che il contributo già versato copre in ogni caso l'intervento"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "segnalazione di agibilità e agibilità parziale",
+      "gravita": "media",
+      "affermazione_richiesta": "la segnalazione certificata di agibilità va presentata entro quindici giorni dall'ultimazione dei lavori di finitura; è ammessa l'agibilità parziale per singoli edifici o porzioni funzionalmente autonome e per singole unità immobiliari, alle condizioni previste",
+      "evidenza": "art. 24, commi 2 e 4, del testo unico dell'edilizia; 06_cronoprogramma_e_stato_avanzamento.md, punto 4",
+      "errore_bersaglio": "fissare una data determinata per la segnalazione di agibilità, quando dipende dall'ultimazione effettiva, oppure escludere l'agibilità parziale"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "efficacia dell'autorizzazione paesaggistica",
+      "chiave_nel_criterio": "scadenza dell'autorizzazione paesaggistica",
+      "ragione": "il termine di efficacia di cinque anni decorre dal giorno in cui acquista efficacia il titolo edilizio, non dalla data di rilascio dell'autorizzazione: decorre quindi dal 12 febbraio 2026 e i lavori iniziati nel quinquennio possono essere conclusi entro l'anno successivo alla scadenza, ben oltre il termine di ultimazione del permesso",
+      "errore_bersaglio": "computare il quinquennio dal 2 marzo 2023 e concludere che l'autorizzazione paesaggistica scade prima della fine dei lavori"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "ordinanza di sospensione revocata",
+      "chiave_nel_criterio": "impugnazione dell'ordinanza di sospensione",
+      "ragione": "l'ordinanza è stata revocata in autotutela con determinazione del 30 luglio 2026 e non è più un provvedimento efficace: non vi è alcun atto da impugnare e il termine per il ricorso non rileva",
+      "errore_bersaglio": "indicare fra le azioni l'impugnazione dell'ordinanza o il calcolo del termine per il ricorso al giudice amministrativo"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "proroga straordinaria di quarantotto mesi",
+      "chiave_nel_criterio": "proroga straordinaria di quarantotto mesi",
+      "ragione": "la proroga straordinaria riguarda i permessi rilasciati o formatisi fino al 31 dicembre 2025, mentre il permesso è stato rilasciato il 12 febbraio 2026: non è applicabile e non va invocata",
+      "errore_bersaglio": "invocare la proroga straordinaria per allungare i termini del permesso"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "contributo di costruzione già versato",
+      "chiave_nel_criterio": "versamento del contributo di costruzione",
+      "ragione": "il contributo di costruzione risulta versato con quietanza richiamata nel provvedimento di rilascio: non è un adempimento mancante, fermo restando il possibile ricalcolo in caso di nuovo permesso per la parte non ultimata",
+      "errore_bersaglio": "indicare il versamento del contributo di costruzione fra gli adempimenti da compiere"
+    }
+  ],
+  "dati_mancanti": [
+    "la legge regionale in materia di variazioni essenziali, senza la quale la qualificazione della variante non è raggiungibile",
+    "la valutazione sulla necessità di un nuovo assenso paesaggistico per la modifica dei materiali del fronte est e per l'arretramento della facciata sud, che il direttore dei lavori dichiara di non avere svolto",
+    "la verifica della dotazione di parcheggi pertinenziali richiesta per le due unità immobiliari aggiuntive",
+    "il ricalcolo del contributo di costruzione conseguente alla variante",
+    "la data effettiva di ultimazione dei lavori di finitura, da cui dipende il termine per la segnalazione certificata di agibilità",
+    "il regolamento edilizio comunale e le eventuali condizioni che lo strumento urbanistico pone in zona B2"
+  ],
+  "fonti_ammesse": [
+    "DPR 380/2001, artt. 15, 22, 23, 24, 32, 34, 34-bis, 36-bis",
+    "art. 10-septies",
+    "D.Lgs. 42/2004, artt. 142, 146, 167",
+    "artt. 21-quinquies e 21-nonies"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "2 dicembre 2026",
+      "calcolo": "mercoledì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "rilascio dell'autorizzazione paesaggistica",
+      "valore": "2 marzo 2023",
+      "calcolo": "giovedì; anteriore al titolo edilizio",
+      "fonte": "02_autorizzazione_paesaggistica.md"
+    },
+    {
+      "milestone": "rilascio del permesso di costruire",
+      "valore": "12 febbraio 2026",
+      "calcolo": "giovedì; successivo al 31 dicembre 2025, quindi fuori dall'ambito della proroga straordinaria di quarantotto mesi",
+      "fonte": "01_permesso_di_costruire.md"
+    },
+    {
+      "milestone": "termine massimo di inizio dei lavori",
+      "valore": "12 febbraio 2027",
+      "calcolo": "un anno dal rilascio del titolo",
+      "fonte": "art. 15, comma 2, del testo unico dell'edilizia"
+    },
+    {
+      "milestone": "comunicazione di inizio dei lavori",
+      "valore": "11 maggio 2026",
+      "calcolo": "lunedì; precede il termine di inizio di 277 giorni",
+      "fonte": "03_comunicazione_inizio_lavori.md"
+    },
+    {
+      "milestone": "termine di ultimazione dei lavori",
+      "valore": "11 maggio 2029",
+      "calcolo": "tre anni dall'inizio dei lavori, non dal rilascio del titolo",
+      "fonte": "art. 15, comma 2, del testo unico dell'edilizia"
+    },
+    {
+      "milestone": "derivazione errata: tre anni dal rilascio del titolo",
+      "valore": "12 febbraio 2029",
+      "calcolo": "il termine di ultimazione non decorre dal rilascio del titolo",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "efficacia dell'autorizzazione paesaggistica",
+      "valore": "dal 12 febbraio 2026 al 12 febbraio 2031",
+      "calcolo": "cinque anni decorrenti dal giorno in cui acquista efficacia il titolo edilizio, non dalla data di rilascio dell'autorizzazione",
+      "fonte": "art. 146, comma 4, del codice dei beni culturali e del paesaggio"
+    },
+    {
+      "milestone": "termine ultimo di conclusione dei lavori iniziati nel quinquennio",
+      "valore": "12 febbraio 2032",
+      "calcolo": "un anno successivo alla scadenza del quinquennio; posteriore di 1007 giorni al termine di ultimazione del permesso, che resta quindi il vincolo operativo",
+      "fonte": "art. 146, comma 4, del codice dei beni culturali e del paesaggio"
+    },
+    {
+      "milestone": "derivazione errata: quinquennio computato dal rilascio dell'autorizzazione",
+      "valore": "2 marzo 2028",
+      "calcolo": "il quinquennio non decorre dalla data di rilascio dell'autorizzazione paesaggistica",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "sospensione dei lavori disposta",
+      "valore": "dal 15 giugno al 30 luglio 2026",
+      "calcolo": "quarantasei giorni di calendario compresi gli estremi",
+      "fonte": "04_ordinanza_sospensione_lavori.md e 05_provvedimento_revoca.md"
+    },
+    {
+      "milestone": "giorni lavorativi perduti nella sospensione",
+      "valore": "trentaquattro",
+      "calcolo": "conteggio dei giorni lavorativi fra il 15 giugno e il 30 luglio 2026, estremi inclusi, con esclusione dei sabati, delle domeniche e delle festività nazionali; non è la misura dello slittamento del cronoprogramma",
+      "fonte": "04_ordinanza_sospensione_lavori.md"
+    },
+    {
+      "milestone": "ultimazione programmata dal cronoprogramma originario",
+      "valore": "9 aprile 2027",
+      "calcolo": "venerdì; data di programma, non ancora avvenuta",
+      "fonte": "06_cronoprogramma_e_stato_avanzamento.md"
+    },
+    {
+      "milestone": "ultimazione programmata dopo lo slittamento",
+      "valore": "25 maggio 2027",
+      "calcolo": "9 aprile 2027 più quarantasei giorni di calendario; resta anteriore di 717 giorni al termine di ultimazione del permesso",
+      "fonte": "06_cronoprogramma_e_stato_avanzamento.md"
+    },
+    {
+      "milestone": "termine per la segnalazione certificata di agibilità",
+      "valore": "quindici giorni dall'ultimazione dei lavori di finitura",
+      "calcolo": "la data effettiva di ultimazione dei lavori di finitura non è nota e il termine non è fissabile in una data determinata",
+      "fonte": "art. 24, comma 2, del testo unico dell'edilizia"
+    },
+    {
+      "milestone": "superficie di solaio assentita",
+      "valore": "1.640 metri quadrati",
+      "calcolo": "dato del progetto approvato",
+      "fonte": "01_permesso_di_costruire.md, punto 2"
+    },
+    {
+      "milestone": "superficie di solaio della variante",
+      "valore": "1.880 metri quadrati",
+      "calcolo": "dato della relazione di variante",
+      "fonte": "07_relazione_direzione_lavori_variante.md, punto 3"
+    },
+    {
+      "milestone": "incremento della superficie di solaio",
+      "valore": "240 metri quadrati, pari al 14,63 per cento",
+      "calcolo": "1.880 meno 1.640 uguale 240 metri quadrati; 240 diviso 1.640 uguale 0,1463",
+      "fonte": "07_relazione_direzione_lavori_variante.md, punto 3"
+    }
+  ],
+  "funzione_allegati": {
+    "01_permesso_di_costruire.md": "fissa i dati dimensionali assentiti, richiama l'autorizzazione paesaggistica e contiene le prescrizioni sui termini: è il documento da cui si ricavano entrambi i dies a quo",
+    "02_autorizzazione_paesaggistica.md": "contiene la regola di decorrenza dell'efficacia, che è diversa dalla data di rilascio, e le prescrizioni sui materiali che la variante propone di modificare",
+    "03_comunicazione_inizio_lavori.md": "fissa il dies a quo del termine di ultimazione, che nessun altro documento dà",
+    "04_ordinanza_sospensione_lavori.md": "documenta l'inizio dell'interruzione e la ragione addotta",
+    "05_provvedimento_revoca.md": "documenta la fine dell'interruzione e, con l'accertamento dell'insussistenza della difformità, il presupposto della proroga comunque accordata",
+    "06_cronoprogramma_e_stato_avanzamento.md": "quantifica lo slittamento e dichiara che nessuna istanza di proroga è stata presentata e che la riprogrammazione non è stata comunicata",
+    "07_relazione_direzione_lavori_variante.md": "contiene i dati dimensionali a confronto e, con l'elenco degli elementi non verificati, delimita ciò che il fascicolo non consente di concludere"
+  }
+}

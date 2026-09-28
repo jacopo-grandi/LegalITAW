@@ -1,0 +1,39 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-080",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "lease_redline.docx",
+    "negotiation_note.md"
+  ],
+  "criteria_total": 35,
+  "proposals_count": 1,
+  "proposals": [
+    {
+      "criterion_id": "B.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "sei anni",
+        "6 anni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «sei anni»; compare «6 anni»",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-080-B1",
+        "type": "required_regex",
+        "artifact": "lease_redline.docx",
+        "patterns": [
+          "(?:(?:6|sei)\\s+ann[oaei]|(?:6|sei)\\s+ann[oaei])"
+        ]
+      }
+    }
+  ]
+}

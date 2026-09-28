@@ -1,0 +1,674 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-011",
+  "title": "Data breach. Termini di notifica al Garante e di comunicazione agli interessati",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 41,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni voce dell'elenco riporta quattro elementi: adempimento, termine, decorrenza, stato.",
+      "pass_condition": "in ciascuna voce compaiono tutti e quattro gli elementi.",
+      "fail_condition": "in almeno una voce manca uno dei quattro elementi.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 struttura delle voci\nissue: A-01 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: ogni voce dell'elenco riporta quattro elementi: adempimento, termine, decorrenza, stato.\nPass se: in ciascuna voce compaiono tutti e quattro gli elementi.\nFail se: in almeno una voce manca uno dei quattro elementi."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni decorrenza riporta il nome o il numero di un documento del fascicolo.",
+      "pass_condition": "in ciascuna voce compare un riferimento a un documento.",
+      "fail_condition": "almeno una decorrenza è priva di riferimento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 ancoraggio della decorrenza\nissue: A-02 · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: ogni decorrenza riporta il nome o il numero di un documento del fascicolo.\nPass se: in ciascuna voce compare un riferimento a un documento.\nFail se: almeno una decorrenza è priva di riferimento."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "per ogni termine è riportato il calcolo seguito.",
+      "pass_condition": "per ciascun termine compare il passaggio da decorrenza a scadenza.",
+      "fail_condition": "almeno un termine riporta solo la data finale.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 percorso di calcolo\nissue: A-03 · tipo: presenza · gravità: media · judge: sì · fonte: prompt\nVerifica: per ogni termine è riportato il calcolo seguito.\nPass se: per ciascun termine compare il passaggio da decorrenza a scadenza.\nFail se: almeno un termine riporta solo la data finale."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "lo stato di ciascun adempimento è espresso con una delle formulazioni ammesse per i quattro stati.",
+      "pass_condition": "ciascuno stato usa una fra: adempimento eseguito nei termini (rispettato, adempiuto, eseguito nei termini); termine già decorso (scaduto, decorso, non rispettato, fuori termine); adempimento da eseguire con termine non ancora decorso (pendente, in corso, da eseguire, non ancora scaduto); adempimento privo di termine di legge (senza termine, nessun termine di legge, adempimento continuativo).",
+      "fail_condition": "compare uno stato formulato fuori da questo elenco.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 vocabolario dello stato\nissue: A-04 · tipo: valore · gravità: media · judge: no · fonte: prompt\nVerifica: lo stato di ciascun adempimento è espresso con una delle formulazioni ammesse per i quattro stati.\nPass se: ciascuno stato usa una fra: adempimento eseguito nei termini (rispettato, adempiuto, eseguito nei termini); termine già decorso (scaduto, decorso, non rispettato, fuori termine); adempimento da eseguire con termine non ancora decorso (pendente, in corso, da eseguire, non ancora scaduto); adempimento privo di termine di legge (senza termine, nessun termine di legge, adempimento continuativo).\nFail se: compare uno stato formulato fuori da questo elenco."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento normativo appartiene all'elenco.",
+      "fail_condition": "compare un riferimento fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 fonti nell'elenco chiuso\nissue: A-05 · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento normativo appartiene all'elenco.\nFail se: compare un riferimento fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 7 dicembre 2026 come momento in cui il titolare è venuto a conoscenza della violazione.",
+      "pass_condition": "il 7 dicembre non compare come momento della conoscenza.",
+      "fail_condition": "il 7 dicembre è indicato come momento della conoscenza.",
+      "indifferent": "la menzione della riunione del comitato come fatto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.1 esclusione della riunione del comitato\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: All. 4 + All. 5, Sez. C.2 e C.3 + All. 6, scheda VIO-2026-005\nVerifica: il deliverable non indica il 7 dicembre 2026 come momento in cui il titolare è venuto a conoscenza della violazione.\nPass se: il 7 dicembre non compare come momento della conoscenza.\nFail se: il 7 dicembre è indicato come momento della conoscenza.\nIndifferente: la menzione della riunione del comitato come fatto."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 3 dicembre 2026 come momento in cui il titolare è venuto a conoscenza della violazione.",
+      "pass_condition": "il 3 dicembre non compare come momento della conoscenza.",
+      "fail_condition": "il 3 dicembre è indicato come momento della conoscenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.2 esclusione dell'alert del monitoraggio\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: All. 1\nVerifica: il deliverable non indica il 3 dicembre 2026 come momento in cui il titolare è venuto a conoscenza della violazione.\nPass se: il 3 dicembre non compare come momento della conoscenza.\nFail se: il 3 dicembre è indicato come momento della conoscenza."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la notifica all'autorità va trasmessa senza ulteriore ritardo.",
+      "pass_condition": "compare l'indicazione di trasmettere la notifica adesso, oppure subito, oppure senza ulteriore ritardo.",
+      "fail_condition": "il deliverable afferma che la notifica non è più dovuta, oppure rinvia la trasmissione a una data successiva.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.3 obbligo di trasmettere comunque\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt, terza riga\nVerifica: il deliverable afferma che la notifica all'autorità va trasmessa senza ulteriore ritardo.\nPass se: compare l'indicazione di trasmettere la notifica adesso, oppure subito, oppure senza ulteriore ritardo.\nFail se: il deliverable afferma che la notifica non è più dovuta, oppure rinvia la trasmissione a una data successiva."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la notifica tardiva è corredata dei motivi del ritardo.",
+      "pass_condition": "l'indicazione dei motivi del ritardo compare. Varianti accettate: «indicare i motivi del ritardo», «motivare il ritardo», «allegare la giustificazione del ritardo».",
+      "fail_condition": "non compare nessuna delle formulazioni ammesse.",
+      "indifferent": "il contenuto proposto per la motivazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.4 motivi del ritardo\nissue: I-04 · tipo: presenza · gravità: media · judge: sì · fonte: art. 33 par. 1 ultimo periodo + All. 5, Sez. C.4 (campo vuoto)\nVerifica: il deliverable afferma che la notifica tardiva è corredata dei motivi del ritardo.\nPass se: l'indicazione dei motivi del ritardo compare.\nVarianti accettate: «indicare i motivi del ritardo», «motivare il ritardo», «allegare la giustificazione del ritardo».\nFail se: non compare nessuna delle formulazioni ammesse.\nIndifferente: il contenuto proposto per la motivazione."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la bozza predisposta non è stata trasmessa all'autorità.",
+      "pass_condition": "la mancata trasmissione è affermata. Varianti accettate: «la notifica non risulta trasmessa», «manca la ricevuta», «la bozza è rimasta interna».",
+      "fail_condition": "il deliverable tratta la notifica come già effettuata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.5 bozza contro trasmissione\nissue: I-05 · tipo: presenza · gravità: media · judge: sì · fonte: All. 5, campi di protocollo, data e ora di trasmissione e ricevuta vuoti\nVerifica: il deliverable afferma che la bozza predisposta non è stata trasmessa all'autorità.\nPass se: la mancata trasmissione è affermata.\nVarianti accettate: «la notifica non risulta trasmessa», «manca la ricevuta», «la bozza è rimasta interna».\nFail se: il deliverable tratta la notifica come già effettuata."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le informazioni mancanti possono essere fornite in un momento successivo alla prima notifica.",
+      "pass_condition": "la possibilità di integrare in un secondo momento è affermata. Varianti accettate: «notifica per fasi», «notifica preliminare seguita da integrazione», «integrazione successiva».",
+      "fail_condition": "il deliverable subordina la notifica al completamento dell'analisi tecnica.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.6 notifica per fasi\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 9; EDPB 9/2022, parr. 56-57 e 62\nVerifica: il deliverable afferma che le informazioni mancanti possono essere fornite in un momento successivo alla prima notifica.\nPass se: la possibilità di integrare in un secondo momento è affermata.\nVarianti accettate: «notifica per fasi», «notifica preliminare seguita da integrazione», «integrazione successiva».\nFail se: il deliverable subordina la notifica al completamento dell'analisi tecnica."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che si deve attendere il referto definitivo del fornitore prima di notificare.",
+      "pass_condition": "non compare l'indicazione di attendere l'esito dell'analisi prima di notificare.",
+      "fail_condition": "compare tale indicazione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.7 divieto di attendere il referto\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: All. 4, punto 3 + All. 6, scheda VIO-2026-005\nVerifica: il deliverable non afferma che si deve attendere il referto definitivo del fornitore prima di notificare.\nPass se: non compare l'indicazione di attendere l'esito dell'analisi prima di notificare.\nFail se: compare tale indicazione."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la violazione va comunicata agli iscritti.",
+      "pass_condition": "compare l'indicazione di scrivere agli iscritti, oppure di comunicare la violazione agli interessati.",
+      "fail_condition": "il deliverable afferma che la comunicazione agli iscritti non è dovuta, oppure lascia la questione senza risposta.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.8 comunicazione agli iscritti dovuta\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 9, sezione 1\nVerifica: il deliverable afferma che la violazione va comunicata agli iscritti.\nPass se: compare l'indicazione di scrivere agli iscritti, oppure di comunicare la violazione agli interessati.\nFail se: il deliverable afferma che la comunicazione agli iscritti non è dovuta, oppure lascia la questione senza risposta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica le attestazioni di invalidità civile presenti nelle registrazioni estratte come dati relativi alla salute.",
+      "pass_condition": "quelle attestazioni sono qualificate come categoria particolare di dati. Varianti accettate: «dati relativi alla salute», «dati sanitari», «categoria particolare di dati», «dati particolari», «dati di cui all'art. 9».",
+      "fail_condition": "quelle attestazioni restano qualificate come normali dati anagrafici o documentali, oppure la qualificazione non compare.",
+      "indifferent": "la citazione dell'articolo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.9 natura delle attestazioni\nissue: I-07 · tipo: qualificazione · gravità: alta · judge: sì · fonte: All. 9, sezione 1, prima riga\nVerifica: il deliverable qualifica le attestazioni di invalidità civile presenti nelle registrazioni estratte come dati relativi alla salute.\nPass se: quelle attestazioni sono qualificate come categoria particolare di dati.\nVarianti accettate: «dati relativi alla salute», «dati sanitari», «categoria particolare di dati», «dati particolari», «dati di cui all'art. 9».\nFail se: quelle attestazioni restano qualificate come normali dati anagrafici o documentali, oppure la qualificazione non compare.\nIndifferente: la citazione dell'articolo."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica un termine di 72 ore per la comunicazione agli iscritti.",
+      "pass_condition": "le 72 ore sono riferite soltanto alla notifica all'autorità.",
+      "fail_condition": "le 72 ore sono riferite anche alla comunicazione agli iscritti.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10 assenza di un termine di 72 ore verso gli iscritti\nissue: I-08 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 34 par. 1\nVerifica: il deliverable non indica un termine di 72 ore per la comunicazione agli iscritti.\nPass se: le 72 ore sono riferite soltanto alla notifica all'autorità.\nFail se: le 72 ore sono riferite anche alla comunicazione agli iscritti."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la comunicazione agli iscritti va effettuata senza ingiustificato ritardo.",
+      "pass_condition": "la tempistica è espressa senza indicazione di una scadenza fissa. Varianti accettate: «senza ingiustificato ritardo», «senza indugio», «il prima possibile».",
+      "fail_condition": "è indicata una scadenza a giorni o a ore, oppure la tempistica non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.11 tempistica della comunicazione agli iscritti\nissue: I-08 · tipo: presenza · gravità: media · judge: sì · fonte: prompt, quarta riga\nVerifica: il deliverable afferma che la comunicazione agli iscritti va effettuata senza ingiustificato ritardo.\nPass se: la tempistica è espressa senza indicazione di una scadenza fissa.\nVarianti accettate: «senza ingiustificato ritardo», «senza indugio», «il prima possibile».\nFail se: è indicata una scadenza a giorni o a ore, oppure la tempistica non compare."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non include nel perimetro della comunicazione agli iscritti gli interessati dell'archivio di backup cifrato.",
+      "pass_condition": "l'archivio cifrato non compare tra le ragioni per avvisare gli iscritti.",
+      "fail_condition": "il perimetro è esteso all'archivio cifrato.",
+      "indifferent": "la menzione dell'archivio nella descrizione dell'accaduto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 archivio cifrato fuori perimetro\nissue: N-03 · tipo: assenza · gravità: media · judge: sì · fonte: All. 9, sezione 1, terza riga\nVerifica: il deliverable non include nel perimetro della comunicazione agli iscritti gli interessati dell'archivio di backup cifrato.\nPass se: l'archivio cifrato non compare tra le ragioni per avvisare gli iscritti.\nFail se: il perimetro è esteso all'archivio cifrato.\nIndifferente: la menzione dell'archivio nella descrizione dell'accaduto."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable valuta espressamente se includere nella comunicazione anche i 41.027 utenti le cui email e credenziali non reversibili sono state esposte.",
+      "pass_condition": "il deliverable prende una posizione motivata, considerando almeno il carattere non reversibile delle credenziali e il rischio residuo collegato agli indirizzi email, come phishing o credential stuffing.",
+      "fail_condition": "i 41.027 utenti sono ignorati, oppure inclusi o esclusi senza motivazione.",
+      "indifferent": "la conclusione adottata; la raccomandazione di reimpostare le password.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 credenziali: decisione motivata sul perimetro\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 9, sezione 1, seconda riga + All. 3, corpo lett. a\nVerifica: il deliverable valuta espressamente se includere nella comunicazione anche i 41.027 utenti le cui email e credenziali non reversibili sono state esposte.\nPass se: il deliverable prende una posizione motivata, considerando almeno il carattere non reversibile delle credenziali e il rischio residuo collegato agli indirizzi email, come phishing o credential stuffing.\nFail se: i 41.027 utenti sono ignorati, oppure inclusi o esclusi senza motivazione.\nIndifferente: la conclusione adottata; la raccomandazione di reimpostare le password."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il responsabile ha comunicato la violazione al titolare oltre il termine di 24 ore previsto dal contratto.",
+      "pass_condition": "il superamento del termine contrattuale è affermato. Varianti accettate: «comunicazione oltre le 24 ore», «termine contrattuale non rispettato», «inadempimento della clausola 9.2».",
+      "fail_condition": "il deliverable afferma che il termine contrattuale è stato rispettato, oppure il tema non compare.",
+      "indifferent": "l'ora esatta della scadenza contrattuale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 ritardo del responsabile\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 7 clausola 9.2 + All. 2 (4/12 ore 09:10) + All. 3 (messaggio del 5/12 ore 18:40)\nVerifica: il deliverable afferma che il responsabile ha comunicato la violazione al titolare oltre il termine di 24 ore previsto dal contratto.\nPass se: il superamento del termine contrattuale è affermato.\nVarianti accettate: «comunicazione oltre le 24 ore», «termine contrattuale non rispettato», «inadempimento della clausola 9.2».\nFail se: il deliverable afferma che il termine contrattuale è stato rispettato, oppure il tema non compare.\nIndifferente: l'ora esatta della scadenza contrattuale."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non fa decorrere il termine di notifica all'autorità dal 4 dicembre 2026.",
+      "pass_condition": "il 4 dicembre non compare come decorrenza del termine verso l'autorità.",
+      "fail_condition": "il 4 dicembre è usato come decorrenza di quel termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 il termine contrattuale non anticipa la decorrenza\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: All. 2 + All. 3, corpo lett. a\nVerifica: il deliverable non fa decorrere il termine di notifica all'autorità dal 4 dicembre 2026.\nPass se: il 4 dicembre non compare come decorrenza del termine verso l'autorità.\nFail se: il 4 dicembre è usato come decorrenza di quel termine."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la registrazione della violazione nel registro come adempimento senza termine di legge.",
+      "pass_condition": "al registro non è assegnato un termine di legge. Varianti accettate: «senza termine», «nessun termine di legge», «adempimento continuativo».",
+      "fail_condition": "al registro è assegnata una data di scadenza.",
+      "indifferent": "l'indicazione di aggiornarlo subito come buona prassi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 registro senza termine\nissue: N-06 · tipo: qualificazione · gravità: media · judge: sì · fonte: All. 6 (registro aggiornato al 9/12/2026; art. 33 par. 5, che non fissa alcun termine)\nVerifica: il deliverable qualifica la registrazione della violazione nel registro come adempimento senza termine di legge.\nPass se: al registro non è assegnato un termine di legge.\nVarianti accettate: «senza termine», «nessun termine di legge», «adempimento continuativo».\nFail se: al registro è assegnata una data di scadenza.\nIndifferente: l'indicazione di aggiornarlo subito come buona prassi."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la notifica all'autorità tra gli adempimenti relativi all'invio del 30 novembre 2026 al destinatario errato.",
+      "pass_condition": "per quell'evento non è prevista la notifica all'autorità.",
+      "fail_condition": "per quell'evento è prevista la notifica all'autorità.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 evento del 30 novembre non notificabile\nissue: N-05 · tipo: assenza · gravità: media · judge: sì · fonte: All. 8, conferma di cancellazione da parte di un ente in rapporto continuativo\nVerifica: il deliverable non indica la notifica all'autorità tra gli adempimenti relativi all'invio del 30 novembre 2026 al destinatario errato.\nPass se: per quell'evento non è prevista la notifica all'autorità.\nFail se: per quell'evento è prevista la notifica all'autorità."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la scheda di registro dell'invio del 30 novembre 2026 va completata con la valutazione e con l'esito su notifica e comunicazione.",
+      "pass_condition": "il completamento della scheda è indicato fra gli adempimenti. Varianti accettate: «completare la scheda VIO-2026-004», «chiudere la scheda del 30 novembre», «registrare la valutazione dell'evento del 30 novembre», «formalizzare nel registro l'esito di quell'evento».",
+      "fail_condition": "l'evento non compare tra gli adempimenti, oppure è dichiarato irrilevante, oppure il deliverable afferma che la scheda è già completa.",
+      "indifferent": "l'indicazione che la scheda esiste già.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 scheda di registro del 30 novembre da completare\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: All. 6, scheda VIO-2026-004 (campi Notifica al Garante, Comunicazione agli interessati e Valutazione registrata vuoti, verificato sull'allegato in revisione 18/08/2026)\nVerifica: il deliverable afferma che la scheda di registro dell'invio del 30 novembre 2026 va completata con la valutazione e con l'esito su notifica e comunicazione.\nPass se: il completamento della scheda è indicato fra gli adempimenti.\nVarianti accettate: «completare la scheda VIO-2026-004», «chiudere la scheda del 30 novembre», «registrare la valutazione dell'evento del 30 novembre», «formalizzare nel registro l'esito di quell'evento».\nFail se: l'evento non compare tra gli adempimenti, oppure è dichiarato irrilevante, oppure il deliverable afferma che la scheda è già completa.\nIndifferente: l'indicazione che la scheda esiste già."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non propone di notificare i due eventi in un'unica notifica.",
+      "pass_condition": "i due eventi restano trattati separatamente.",
+      "fail_condition": "è proposta una notifica unica o cumulativa dei due eventi.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 nessuna notifica cumulativa\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: All. 6 + All. 8\nVerifica: il deliverable non propone di notificare i due eventi in un'unica notifica.\nPass se: i due eventi restano trattati separatamente.\nFail se: è proposta una notifica unica o cumulativa dei due eventi."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come violazione dei dati personali il tentativo di injection bloccato dai controlli il 2 dicembre 2026.",
+      "pass_condition": "quel tentativo non compare tra le violazioni né genera adempimenti.",
+      "fail_condition": "il tentativo è qualificato come violazione o gli è associato un termine.",
+      "indifferent": "la sua menzione come evento di sicurezza.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 tentativo bloccato\nissue: N-01 · tipo: assenza · gravità: media · judge: sì · fonte: All. 1, EVT-6702\nVerifica: il deliverable non qualifica come violazione dei dati personali il tentativo di injection bloccato dai controlli il 2 dicembre 2026.\nPass se: quel tentativo non compare tra le violazioni né genera adempimenti.\nFail se: il tentativo è qualificato come violazione o gli è associato un termine.\nIndifferente: la sua menzione come evento di sicurezza."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come violazione dei dati personali l'indisponibilità del portale nella finestra di manutenzione del 29 novembre 2026.",
+      "pass_condition": "quell'indisponibilità non compare tra le violazioni né genera adempimenti.",
+      "fail_condition": "è qualificata come violazione o le è associato un termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 manutenzione programmata\nissue: N-02 · tipo: assenza · gravità: media · judge: sì · fonte: All. 1, EVT-6621\nVerifica: il deliverable non qualifica come violazione dei dati personali l'indisponibilità del portale nella finestra di manutenzione del 29 novembre 2026.\nPass se: quell'indisponibilità non compare tra le violazioni né genera adempimenti.\nFail se: è qualificata come violazione o le è associato un termine."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non attribuisce al responsabile della protezione dei dati l'obbligo di notificare all'autorità.",
+      "pass_condition": "l'obbligo è attribuito al titolare, oppure il soggetto obbligato non è nominato.",
+      "fail_condition": "l'obbligo è attribuito al responsabile della protezione dei dati.",
+      "indifferent": "l'indicazione del responsabile della protezione dei dati come punto di contatto o come estensore.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.22 soggetto obbligato\nissue: N-07 · tipo: assenza · gravità: media · judge: sì · fonte: All. 5, Sez. A e B1\nVerifica: il deliverable non attribuisce al responsabile della protezione dei dati l'obbligo di notificare all'autorità.\nPass se: l'obbligo è attribuito al titolare, oppure il soggetto obbligato non è nominato.\nFail se: l'obbligo è attribuito al responsabile della protezione dei dati.\nIndifferente: l'indicazione del responsabile della protezione dei dati come punto di contatto o come estensore."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che i dati sono stati modificati o cancellati.",
+      "pass_condition": "non compare l'affermazione di una modifica o di una cancellazione dei dati.",
+      "fail_condition": "compare tale affermazione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.23 simmetria sull'integrità\nissue: S-01 · tipo: assenza · gravità: media · judge: sì · fonte: All. 9, sezione 3 + All. 3, corpo lett. c\nVerifica: il deliverable non afferma che i dati sono stati modificati o cancellati.\nPass se: non compare l'affermazione di una modifica o di una cancellazione dei dati.\nFail se: compare tale affermazione."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che i contenuti estratti sono stati diffusi o pubblicati.",
+      "pass_condition": "non compare l'affermazione di una diffusione o pubblicazione avvenuta.",
+      "fail_condition": "compare tale affermazione.",
+      "indifferent": "l'indicazione del rischio che ciò avvenga. C. VALORI CALCOLATI",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.24 divieto di presunzione dell'esito\nissue: S-03 · tipo: assenza · gravità: media · judge: sì · fonte: All. 9, esito tecnico non determinato\nVerifica: il deliverable non afferma che i contenuti estratti sono stati diffusi o pubblicati.\nPass se: non compare l'affermazione di una diffusione o pubblicazione avvenuta.\nFail se: compare tale affermazione.\nIndifferente: l'indicazione del rischio che ciò avvenga."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come decorrenza del termine di notifica all'autorità il 5 dicembre 2026.",
+      "pass_condition": "compare quella data come decorrenza, con o senza l'ora.",
+      "fail_condition": "compare un'altra data.",
+      "indifferent": "l'indicazione dell'ora e del fuso orario.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 decorrenza\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: All. 3, intestazioni del messaggio (Date/Received 5/12/2026 ore 18:40)\nVerifica: il deliverable indica come decorrenza del termine di notifica all'autorità il 5 dicembre 2026.\nPass se: compare quella data come decorrenza, con o senza l'ora.\nFail se: compare un'altra data.\nIndifferente: l'indicazione dell'ora e del fuso orario."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che nel computo delle 72 ore rientrano il sabato, la domenica e il giorno festivo.",
+      "pass_condition": "la continuità del computo è affermata. Varianti accettate: «i giorni festivi e il fine settimana rientrano nel computo», «il termine corre anche di sabato e domenica», «il computo è continuo», «72 ore consecutive», «ore naturali e consecutive», «il termine non si sospende nei giorni festivi», «il termine non si sospende nel fine settimana».",
+      "fail_condition": "il deliverable esclude dal computo il fine settimana o il festivo, oppure non si pronuncia.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 computo continuo\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: reg. (CEE, Euratom) 1182/71, art. 3, par. 3 + calendario 5-8 dicembre 2026\nVerifica: il deliverable afferma che nel computo delle 72 ore rientrano il sabato, la domenica e il giorno festivo.\nPass se: la continuità del computo è affermata.\nVarianti accettate: «i giorni festivi e il fine settimana rientrano nel computo», «il termine corre anche di sabato e domenica», «il computo è continuo», «72 ore consecutive», «ore naturali e consecutive», «il termine non si sospende nei giorni festivi», «il termine non si sospende nel fine settimana».\nFail se: il deliverable esclude dal computo il fine settimana o il festivo, oppure non si pronuncia."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la scadenza non si sposta al primo giorno lavorativo successivo pur cadendo in giorno festivo.",
+      "pass_condition": "l'assenza di proroga è affermata. Varianti accettate: «non si applica la proroga», «il termine non slitta», «la scadenza resta l'8 dicembre nonostante la festività», «il termine in ore non si proroga», «la proroga al primo giorno lavorativo successivo non si applica ai termini in ore», «l'8 dicembre resta il giorno di scadenza benché festivo».",
+      "fail_condition": "il deliverable sposta la scadenza al 9 dicembre o a un giorno successivo per effetto della festività.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 nessuna proroga\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: reg. 1182/71, art. 3, par. 4 (il differimento riguarda i periodi espressi non in ore) + 8 dicembre 2026 festivo\nVerifica: il deliverable afferma che la scadenza non si sposta al primo giorno lavorativo successivo pur cadendo in giorno festivo.\nPass se: l'assenza di proroga è affermata.\nVarianti accettate: «non si applica la proroga», «il termine non slitta», «la scadenza resta l'8 dicembre nonostante la festività», «il termine in ore non si proroga», «la proroga al primo giorno lavorativo successivo non si applica ai termini in ore», «l'8 dicembre resta il giorno di scadenza benché festivo».\nFail se: il deliverable sposta la scadenza al 9 dicembre o a un giorno successivo per effetto della festività."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come scadenza della notifica all'autorità martedì 8 dicembre 2026.",
+      "pass_condition": "compare la data 8 dicembre 2026; se è indicata anche l'ora, sono ammesse le ore 19:00 e le ore 18:40.",
+      "fail_condition": "compare un'altra data.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 scadenza della notifica\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: 5/12/2026 ore 18:40 più 72 ore; l'ora nel corso della quale si verifica l'evento non si computa (reg. 1182/71, art. 3, par. 1), da cui le ore 19:00\nVerifica: il deliverable indica come scadenza della notifica all'autorità martedì 8 dicembre 2026.\nPass se: compare la data 8 dicembre 2026; se è indicata anche l'ora, sono ammesse le ore 19:00 e le ore 18:40.\nFail se: compare un'altra data."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il termine di notifica all'autorità come scaduto alla data di riferimento.",
+      "pass_condition": "compare, riferita a quel termine, una fra scaduto, decorso, non rispettato.",
+      "fail_condition": "compare pendente o rispettato, oppure lo stato non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 stato del termine\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: All. 5 senza ricevuta + data di riferimento 9/12/2026 ore 10:00\nVerifica: il deliverable indica il termine di notifica all'autorità come scaduto alla data di riferimento.\nPass se: compare, riferita a quel termine, una fra scaduto, decorso, non rispettato.\nFail se: compare pendente o rispettato, oppure lo stato non compare."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 9 dicembre 2026 come scadenza della notifica.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": "la menzione del 9 dicembre 2026 come data di riferimento.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 derivazione errata: proroga per festivo\nissue: C-06 · tipo: assenza · gravità: media · judge: sì · fonte: diagnostica\nVerifica: il deliverable non indica il 9 dicembre 2026 come scadenza della notifica.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza.\nIndifferente: la menzione del 9 dicembre 2026 come data di riferimento."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il 10 dicembre 2026 come risultato di 72 ore decorrenti dalla riunione del comitato del 7 dicembre.",
+      "pass_condition": "quel calcolo non compare.",
+      "fail_condition": "compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 derivazione errata: 72 ore dalla riunione\nissue: C-06 · tipo: assenza · gravità: media · judge: sì · fonte: diagnostica\nVerifica: il deliverable non presenta il 10 dicembre 2026 come risultato di 72 ore decorrenti dalla riunione del comitato del 7 dicembre.\nPass se: quel calcolo non compare.\nFail se: compare."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica fra le azioni immediate l'aggiornamento delle categorie di dati nella scheda VIO-2026-005 sulla base del referto già disponibile.",
+      "pass_condition": "è richiesto di completare o aggiornare il registro con le categorie accertate nel referto.",
+      "fail_condition": "la scheda è trattata come completa, oppure l'aggiornamento non compare fra le azioni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.25 aggiornamento della scheda VIO-2026-005\nissue: I-16 · tipo: presenza · gravità: media · judge: sì · fonte: All. 6, scheda VIO-2026-005 + All. 9\nVerifica: il deliverable indica fra le azioni immediate l'aggiornamento delle categorie di dati nella scheda VIO-2026-005 sulla base del referto già disponibile.\nPass se: è richiesto di completare o aggiornare il registro con le categorie accertate nel referto.\nFail se: la scheda è trattata come completa, oppure l'aggiornamento non compare fra le azioni."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il 10 dicembre 2026 come risultato di un computo in giorni lavorativi.",
+      "pass_condition": "quel calcolo non compare.",
+      "fail_condition": "compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.8 derivazione errata: tre giorni lavorativi\nissue: C-06 · tipo: assenza · gravità: media · judge: sì · fonte: diagnostica\nVerifica: il deliverable non presenta il 10 dicembre 2026 come risultato di un computo in giorni lavorativi.\nPass se: quel calcolo non compare.\nFail se: compare."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il 6 dicembre 2026 come scadenza calcolata dall'alert del monitoraggio del 3 dicembre.",
+      "pass_condition": "quel calcolo non compare.",
+      "fail_condition": "compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.9 derivazione errata: computo dall'alert del monitoraggio\nissue: C-06 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica (3/12/2026 ore 23:47 più 72 ore uguale domenica 6/12/2026 ore 23:47)\nVerifica: il deliverable non presenta il 6 dicembre 2026 come scadenza calcolata dall'alert del monitoraggio del 3 dicembre.\nPass se: quel calcolo non compare.\nFail se: compare."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable identifica 12.400 interessati come perimetro minimo certamente destinatario della comunicazione.",
+      "pass_condition": "compare il numero 12.400 come gruppo certamente da avvisare, anche se il deliverable propone motivatamente di estendere la comunicazione ai 41.027 utenti valutati in B.13.",
+      "fail_condition": "i 12.400 interessati non sono inclusi nel perimetro, oppure il perimetro minimo non è quantificato.",
+      "indifferent": "un perimetro finale più ampio, se motivato; l'indicazione che il numero è approssimativo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.10 interessati da avvisare\nissue: I-09 · tipo: valore · gravità: alta · judge: sì · fonte: All. 9, sezione 1 + All. 3, corpo lett. a\nVerifica: il deliverable identifica 12.400 interessati come perimetro minimo certamente destinatario della comunicazione.\nPass se: compare il numero 12.400 come gruppo certamente da avvisare, anche se il deliverable propone motivatamente di estendere la comunicazione ai 41.027 utenti valutati in B.13.\nFail se: i 12.400 interessati non sono inclusi nel perimetro, oppure il perimetro minimo non è quantificato.\nIndifferente: un perimetro finale più ampio, se motivato; l'indicazione che il numero è approssimativo."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 380 le registrazioni estratte in chiaro che contengono un'attestazione di invalidità civile.",
+      "pass_condition": "compare il numero 380 riferito alle attestazioni di invalidità o ai dati sulla salute.",
+      "fail_condition": "quel dato non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.11 registrazioni con attestazione di invalidità\nissue: I-07 · tipo: valore · gravità: alta · judge: no · fonte: All. 9, sezione 1\nVerifica: il deliverable indica in 380 le registrazioni estratte in chiaro che contengono un'attestazione di invalidità civile.\nPass se: compare il numero 380 riferito alle attestazioni di invalidità o ai dati sulla salute.\nFail se: quel dato non compare."
+    }
+  ]
+}

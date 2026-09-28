@@ -1,0 +1,40 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-054",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "agreement_redline.docx"
+  ],
+  "criteria_total": 77,
+  "proposals_count": 1,
+  "proposals": [
+    {
+      "criterion_id": "B.27",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 1.000.000,00",
+        "euro 250.000,00",
+        "1.000.000,00",
+        "250.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 1.000.000,00» ed «euro 250.000,00» come soglia prevista e soglia ammessa.; compaiono «1.000.000,00» e «250.000,00» come soglia prevista e soglia ammessa.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-054-B27",
+        "type": "required_regex",
+        "artifact": "agreement_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?000[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])250[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?000[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])250[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

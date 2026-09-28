@@ -1,0 +1,325 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-097",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "environmental_compliance_memo.md"
+  ],
+  "criteria_total": 70,
+  "proposals_count": 13,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "10 settembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «10 settembre 2026» come data alla quale il memo è riferito",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-A3",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:10°?\\s+settembre(?:\\s+2026)?|0?10\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2026|0?10\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "22 marzo 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «22 marzo 2027» riferita alla scadenza dell'autorizzazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C1",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:22°?\\s+marzo(?:\\s+2027)?|0?22\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2027|0?22\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "22 marzo 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «22 marzo 2026» riferita al termine per la domanda di rinnovo",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C2",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:22°?\\s+marzo(?:\\s+2026)?|0?22\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2026|0?22\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "30 giugno 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «30 giugno 2026» riferita al termine dell'autocontrollo del primo semestre",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C4",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:30°?\\s+giugno(?:\\s+2026)?|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*2026|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "14 settembre 2022"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «14 settembre 2022» riferita al termine della sostituzione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C5",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:14°?\\s+settembre(?:\\s+2022)?|0?14\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2022|0?14\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*22))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "13 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «13 ottobre 2026» riferita alla scadenza della prescrizione 1",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C6",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:13°?\\s+ottobre(?:\\s+2026)?|0?13\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?13\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "23 settembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «23 settembre 2026» riferita alla scadenza della prescrizione 2",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C7",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:23°?\\s+settembre(?:\\s+2026)?|0?23\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2026|0?23\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.9",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2.500"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «2.500» riferito alla somma da pagare in sede amministrativa",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C9",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?500(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.10",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "12 dicembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «12 dicembre 2026» riferita alla verifica dell'adempimento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C10",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:12°?\\s+dicembre(?:\\s+2026)?|0?12\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2026|0?12\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.11",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "10 febbraio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «10 febbraio 2027» riferita alla comunicazione dell'adempimento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C11",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:10°?\\s+febbraio(?:\\s+2027)?|0?10\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2027|0?10\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.12",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "11 gennaio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «11 gennaio 2027» riferita alla comunicazione dell'inadempimento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C12",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:11°?\\s+gennaio(?:\\s+2027)?|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2027|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.15",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "7 settembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «7 settembre 2026» riferita al termine di annotazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C15",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:7°?\\s+settembre(?:\\s+2026)?|0?7\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2026|0?7\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.17",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "26 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «26 novembre 2026» riferita al termine di tre mesi",
+      "combine": "single",
+      "check": {
+        "id": "WF2-097-C17",
+        "type": "required_regex",
+        "artifact": "environmental_compliance_memo.md",
+        "patterns": [
+          "(?:(?:26°?\\s+novembre(?:\\s+2026)?|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    }
+  ]
+}

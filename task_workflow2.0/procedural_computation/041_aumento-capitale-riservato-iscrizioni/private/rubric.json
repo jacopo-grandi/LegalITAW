@@ -1,0 +1,673 @@
+{
+  "task_id": "WF2-041",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 33,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non cita fonti estranee al reference pack chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti estranee al reference pack chiuso.\nPASS se: ogni fonte normativa appartiene al reference pack\nFAIL se: Fallisce se una regola decisiva è fondata su una fonte normativa assente dal reference pack.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni fonte normativa appartiene al reference pack",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: il capitale precedente risulta interamente liberato prima della delibera.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il capitale precedente risulta interamente liberato prima della delibera.\nPASS se: Il testo afferma: il capitale precedente risulta interamente liberato prima della delibera.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la situazione contabile al 30 giugno riporta capitale euro 1.200.000 e versamenti ancora dovuti pari a zero",
+      "pass_condition": "Il testo afferma: il capitale precedente risulta interamente liberato prima della delibera.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «il capitale precedente risulta interamente liberato prima della delibera» (I-01) è attribuita al documento 01_statuto_e_capitale_pre_aumento.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il capitale precedente risulta interamente liberato prima della delibera» (I-01) è attribuita al documento 01_statuto_e_capitale_pre_aumento.pdf.\nPASS se: il deliverable enuncia la conclusione «il capitale precedente risulta interamente liberato prima della delibera» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_statuto_e_capitale_pre_aumento.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_statuto_e_capitale_pre_aumento.pdf = «Estratto statuto e situazione del capitale»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_statuto_e_capitale_pre_aumento.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il capitale precedente risulta interamente liberato prima della delibera» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_statuto_e_capitale_pre_aumento.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: la delibera è stata adottata il 3 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la delibera è stata adottata il 3 agosto 2026.\nPASS se: compare \"3 agosto 2026\" nel contesto di data della delibera\nFAIL se: Nel contesto di data della delibera il valore è assente, diverso da \"3 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il verbale notarile reca la data 3 agosto 2026",
+      "pass_condition": "compare \"3 agosto 2026\" nel contesto di data della delibera",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «la delibera è stata adottata il 3 agosto 2026» (I-02) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la delibera è stata adottata il 3 agosto 2026» (I-02) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.\nPASS se: il deliverable enuncia la conclusione «la delibera è stata adottata il 3 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_verbale_assemblea_straordinaria.pdf = «Verbale notarile dell'assemblea straordinaria»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_verbale_assemblea_straordinaria.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la delibera è stata adottata il 3 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: la delibera è stata iscritta il 7 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la delibera è stata iscritta il 7 agosto 2026.\nPASS se: compare \"7 agosto 2026\" nel contesto di iscrizione della delibera\nFAIL se: Nel contesto di iscrizione della delibera il valore è assente, diverso da \"7 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la visura distingue deposito 5 agosto e iscrizione 7 agosto",
+      "pass_condition": "compare \"7 agosto 2026\" nel contesto di iscrizione della delibera",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «la delibera è stata iscritta il 7 agosto 2026» (I-03) è attribuita al documento 03_visura_storica_riassuntiva.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la delibera è stata iscritta il 7 agosto 2026» (I-03) è attribuita al documento 03_visura_storica_riassuntiva.pdf.\nPASS se: il deliverable enuncia la conclusione «la delibera è stata iscritta il 7 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_visura_storica_riassuntiva.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_visura_storica_riassuntiva.pdf = «Visura: iscrizione della delibera»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_visura_storica_riassuntiva.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la delibera è stata iscritta il 7 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_visura_storica_riassuntiva.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: l'offerta è riservata a Selciato Investimenti II S.r.l..",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'offerta è riservata a Selciato Investimenti II S.r.l..\nPASS se: Il testo afferma: l'offerta è riservata a Selciato Investimenti II S.r.l..\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il verbale individua il sottoscrittore e motiva l'esclusione del diritto di opzione",
+      "pass_condition": "Il testo afferma: l'offerta è riservata a Selciato Investimenti II S.r.l..",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «l'offerta è riservata a Selciato Investimenti II S.r.l» (I-04) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'offerta è riservata a Selciato Investimenti II S.r.l» (I-04) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.\nPASS se: il deliverable enuncia la conclusione «l'offerta è riservata a Selciato Investimenti II S.r.l» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_verbale_assemblea_straordinaria.pdf = «Verbale notarile dell'assemblea straordinaria»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_verbale_assemblea_straordinaria.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'offerta è riservata a Selciato Investimenti II S.r.l» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo.\nPASS se: compare \"euro 400.000\" nel contesto di importo dell'aumento\nFAIL se: Nel contesto di importo dell'aumento il valore è assente, diverso da \"euro 400.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il verbale separa nominale e soprapprezzo",
+      "pass_condition": "compare \"euro 400.000\" nel contesto di importo dell'aumento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo» (I-05) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo» (I-05) è attribuita al documento 02_verbale_assemblea_straordinaria.pdf.\nPASS se: il deliverable enuncia la conclusione «l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_verbale_assemblea_straordinaria.pdf = «Verbale notarile dell'assemblea straordinaria»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_verbale_assemblea_straordinaria.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_verbale_assemblea_straordinaria.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: la sottoscrizione integrale è avvenuta il 21 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la sottoscrizione integrale è avvenuta il 21 agosto 2026.\nPASS se: compare \"21 agosto 2026\" nel contesto di sottoscrizione integrale\nFAIL se: Nel contesto di sottoscrizione integrale il valore è assente, diverso da \"21 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la scheda è firmata digitalmente il 21 agosto",
+      "pass_condition": "compare \"21 agosto 2026\" nel contesto di sottoscrizione integrale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «la sottoscrizione integrale è avvenuta il 21 agosto 2026» (I-06) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la sottoscrizione integrale è avvenuta il 21 agosto 2026» (I-06) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nPASS se: il deliverable enuncia la conclusione «la sottoscrizione integrale è avvenuta il 21 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_scheda_sottoscrizione_e_bonifico.pdf = «Sottoscrizione dell'investitore e accredito»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_scheda_sottoscrizione_e_bonifico.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la sottoscrizione integrale è avvenuta il 21 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026.\nPASS se: compare \"euro 1.000.000\" nel contesto di versamento\nFAIL se: Nel contesto di versamento il valore è assente, diverso da \"euro 1.000.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la contabile bancaria riporta valuta e disponibilità 24 agosto",
+      "pass_condition": "compare \"euro 1.000.000\" nel contesto di versamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026» (I-07) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026» (I-07) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nPASS se: il deliverable enuncia la conclusione «l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_scheda_sottoscrizione_e_bonifico.pdf = «Sottoscrizione dell'investitore e accredito»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_scheda_sottoscrizione_e_bonifico.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026.\nPASS se: compare \"21 agosto 2026\" nel contesto di termine attestazione\nFAIL se: Nel contesto di termine attestazione il valore è assente, diverso da \"21 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la norma collega il deposito all'avvenuta sottoscrizione; il fascicolo indica sottoscrizione e accredito in giorni diversi",
+      "pass_condition": "compare \"21 agosto 2026\" nel contesto di termine attestazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026» (I-08) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026» (I-08) è attribuita al documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nPASS se: il deliverable enuncia la conclusione «il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_scheda_sottoscrizione_e_bonifico.pdf = «Sottoscrizione dell'investitore e accredito»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_scheda_sottoscrizione_e_bonifico.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_sottoscrizione_e_bonifico.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: alla data di riferimento l'attestazione di esecuzione non risulta depositata.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: alla data di riferimento l'attestazione di esecuzione non risulta depositata.\nPASS se: Il testo afferma: alla data di riferimento l'attestazione di esecuzione non risulta depositata.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la visura è aggiornata al 27 agosto e l'email del notaio chiede ancora i documenti",
+      "pass_condition": "Il testo afferma: alla data di riferimento l'attestazione di esecuzione non risulta depositata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «alla data di riferimento l'attestazione di esecuzione non risulta depositata» (I-09) è attribuita ai documenti 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «alla data di riferimento l'attestazione di esecuzione non risulta depositata» (I-09) è attribuita ai documenti 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.\nPASS se: il deliverable enuncia la conclusione «alla data di riferimento l'attestazione di esecuzione non risulta depositata» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_visura_storica_riassuntiva.pdf = «Visura: iscrizione della delibera»; 05_email_notaio_adempimenti_residui.eml = «Email del notaio sugli adempimenti residui»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_visura_storica_riassuntiva.pdf + 05_email_notaio_adempimenti_residui.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «alla data di riferimento l'attestazione di esecuzione non risulta depositata» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: il testo statutario coordinato segue il deposito dell'attestazione.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il testo statutario coordinato segue il deposito dell'attestazione.\nPASS se: Il testo afferma: il testo statutario coordinato segue il deposito dell'attestazione.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: l'email notarile lo include nel pacchetto residuo",
+      "pass_condition": "Il testo afferma: il testo statutario coordinato segue il deposito dell'attestazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «il testo statutario coordinato segue il deposito dell'attestazione» (I-10) è attribuita al documento 05_email_notaio_adempimenti_residui.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il testo statutario coordinato segue il deposito dell'attestazione» (I-10) è attribuita al documento 05_email_notaio_adempimenti_residui.eml.\nPASS se: il deliverable enuncia la conclusione «il testo statutario coordinato segue il deposito dell'attestazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_email_notaio_adempimenti_residui.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_email_notaio_adempimenti_residui.eml = «Email del notaio sugli adempimenti residui»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_email_notaio_adempimenti_residui.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «il testo statutario coordinato segue il deposito dell'attestazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_email_notaio_adempimenti_residui.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: la fotografia del fascicolo va fermata al 27 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la fotografia del fascicolo va fermata al 27 agosto 2026.\nPASS se: compare \"27 agosto 2026\" nel contesto di data di riferimento\nFAIL se: Nel contesto di data di riferimento il valore è assente, diverso da \"27 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: prompt, visura ed email riportano lo stesso cut-off",
+      "pass_condition": "compare \"27 agosto 2026\" nel contesto di data di riferimento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «la fotografia del fascicolo va fermata al 27 agosto 2026» (I-11) è attribuita ai documenti 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la fotografia del fascicolo va fermata al 27 agosto 2026» (I-11) è attribuita ai documenti 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.\nPASS se: il deliverable enuncia la conclusione «la fotografia del fascicolo va fermata al 27 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_visura_storica_riassuntiva.pdf = «Visura: iscrizione della delibera»; 05_email_notaio_adempimenti_residui.eml = «Email del notaio sugli adempimenti residui»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_visura_storica_riassuntiva.pdf + 05_email_notaio_adempimenti_residui.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «la fotografia del fascicolo va fermata al 27 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_visura_storica_riassuntiva.pdf e 05_email_notaio_adempimenti_residui.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Verifica una sola conclusione: gli amministratori curano l'attestazione e il notaio il deposito telematico concordato.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: gli amministratori curano l'attestazione e il notaio il deposito telematico concordato.\nPASS se: Il testo afferma: gli amministratori curano l'attestazione e il notaio il deposito telematico concordato.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: l'email assegna firma agli amministratori e invio al notaio",
+      "pass_condition": "Il testo afferma: gli amministratori curano l'attestazione e il notaio il deposito telematico concordato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "La conclusione «gli amministratori curano l'attestazione e il notaio il deposito telematico concordato» (I-12) è attribuita al documento 05_email_notaio_adempimenti_residui.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «gli amministratori curano l'attestazione e il notaio il deposito telematico concordato» (I-12) è attribuita al documento 05_email_notaio_adempimenti_residui.eml.\nPASS se: il deliverable enuncia la conclusione «gli amministratori curano l'attestazione e il notaio il deposito telematico concordato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_email_notaio_adempimenti_residui.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_email_notaio_adempimenti_residui.eml = «Email del notaio sugli adempimenti residui»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_email_notaio_adempimenti_residui.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «gli amministratori curano l'attestazione e il notaio il deposito telematico concordato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_email_notaio_adempimenti_residui.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: nuova assemblea per attestare l'esecuzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: nuova assemblea per attestare l'esecuzione.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: nuova assemblea per attestare l'esecuzione.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: efficacia prima dell'iscrizione della delibera.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: efficacia prima dell'iscrizione della delibera.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: efficacia prima dell'iscrizione della delibera.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: opzione aperta a tutti i soci.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: opzione aperta a tutti i soci.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: opzione aperta a tutti i soci.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: aumento nominale di euro 1.000.000.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: aumento nominale di euro 1.000.000.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: aumento nominale di euro 1.000.000.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: capitale già aggiornato in visura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: capitale già aggiornato in visura.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: capitale già aggiornato in visura.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.\nPASS se: sono trattati fatti di entrambi i segni\nFAIL se: una delle due direzioni è sistematicamente omessa.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "sono trattati fatti di entrambi i segni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable evita la sovra-segnalazione dei rischi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la sovra-segnalazione dei rischi.\nPASS se: gli elementi neutri sono mantenuti distinti dai rischi\nFAIL se: Fallisce se almeno un elemento neutro o favorevole è qualificato come rischio concreto senza un fatto o una regola che lo sostenga.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "gli elementi neutri sono mantenuti distinti dai rischi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_operazione.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito su dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito su dati mancanti.\nPASS se: le lacune restano esplicite\nFAIL se: Fallisce se almeno una lacuna dichiarata nel fascicolo è colmata con un fatto dato per certo.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "le lacune restano esplicite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

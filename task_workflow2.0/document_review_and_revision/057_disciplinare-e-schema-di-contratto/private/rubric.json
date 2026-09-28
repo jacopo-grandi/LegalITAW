@@ -1,0 +1,1033 @@
+{
+  "task_id": "WF2-057",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 51,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable è prodotto come file `tender_review.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `tender_review.md`.\nPASS se: il file consegnato ha nome `tender_review.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `tender_review.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non supera il limite di 2200 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2200 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2200.\nFAIL se: il corpo del deliverable supera 2200 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2200.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "ogni rilievo porta il riferimento alla clausola o al paragrafo del documento su cui incide.",
+      "match_criteria": "Oggetto del criterio: ogni rilievo porta il riferimento alla clausola o al paragrafo del documento su cui incide.\nPASS se: accanto a ciascun rilievo compare il numero della clausola o del paragrafo.\nFAIL se: almeno un rilievo non porta il riferimento alla clausola o al paragrafo.\nÈ indifferente: la forma del riferimento.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascun rilievo compare il numero della clausola o del paragrafo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "per ciascuna incoerenza fra documenti il deliverable indica quale documento contiene il valore da mantenere.",
+      "match_criteria": "Oggetto del criterio: per ciascuna incoerenza fra documenti il deliverable indica quale documento contiene il valore da mantenere.\nPASS se: per ciascuna incoerenza compare l'indicazione del documento il cui valore va mantenuto.\nFAIL se: almeno una incoerenza è segnalata senza indicare quale valore va mantenuto.\nÈ indifferente: l'ordine in cui i documenti sono citati.\nFonte di authoring: public/01_task.md, richiesta sulle incoerenze",
+      "pass_condition": "per ciascuna incoerenza compare l'indicazione del documento il cui valore va mantenuto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable distingue i rilievi che impongono una modifica prima della pubblicazione da quelli che non la impongono.",
+      "match_criteria": "Oggetto del criterio: il deliverable distingue i rilievi che impongono una modifica prima della pubblicazione da quelli che non la impongono.\nPASS se: compare una separazione fra i rilievi che impongono modifica e gli elementi che non la impongono.\nFAIL se: il deliverable presenta un elenco indistinto di osservazioni.\nÈ indifferente: le etichette usate per la separazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare una separazione fra i rilievi che impongono modifica e gli elementi che non la impongono.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole dei documenti di gara e alle voci del quadro economico.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 2,0 per mille la penale giornaliera prevista dalla clausola 12.1 dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 2,0 per mille la penale giornaliera prevista dalla clausola 12.1 dello schema.\nPASS se: compare «2,0 per mille» come misura prevista dalla bozza.; compare «2 per mille» come misura prevista dalla bozza.\nFAIL se: è indicata una misura diversa, oppure la misura prevista dalla bozza non è rilevata.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 12.1 dello schema",
+      "pass_condition": "compare «2,0 per mille» come misura prevista dalla bozza.; compare «2 per mille» come misura prevista dalla bozza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in un intervallo dallo 0,5 all'1,5 per mille il limite consentito per la penale giornaliera.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in un intervallo dallo 0,5 all'1,5 per mille il limite consentito per la penale giornaliera.\nPASS se: compare «da 0,5 a 1,5 per mille» come intervallo consentito.; compaiono «0,5 per mille» e «1,5 per mille» come estremi dell'intervallo consentito.\nFAIL se: è indicato un intervallo diverso, oppure l'intervallo non è indicato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione della misura che il deliverable propone entro l'intervallo.\nFonte di authoring: disciplina delle penali negli appalti pubblici",
+      "pass_condition": "compare «da 0,5 a 1,5 per mille» come intervallo consentito.; compaiono «0,5 per mille» e «1,5 per mille» come estremi dell'intervallo consentito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable qualifica la penale della clausola 12.1 come eccedente il limite superiore dell'intervallo consentito.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la penale della clausola 12.1 come eccedente il limite superiore dell'intervallo consentito.\nPASS se: compare, riferita a quella penale, una fra: «eccede il limite superiore», «oltre il massimo consentito», «fuori dall'intervallo consentito».\nFAIL se: la penale è presentata come rientrante nell'intervallo, oppure come rimessa alla discrezionalità della stazione appaltante, oppure la qualificazione non compare.\nÈ indifferente: il giudizio sull'entità economica della penale.\nFonte di authoring: clausola 12.1 dello schema",
+      "pass_condition": "compare, riferita a quella penale, una fra: «eccede il limite superiore», «oltre il massimo consentito», «fuori dall'intervallo consentito».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 20 per cento il tetto complessivo delle penali previsto dalla clausola 12.2 e in 10 per cento il limite consentito.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 20 per cento il tetto complessivo delle penali previsto dalla clausola 12.2 e in 10 per cento il limite consentito.\nPASS se: compaiono «20 per cento» e «10 per cento» come tetto previsto e limite consentito.\nFAIL se: è indicata una misura diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 12.2 dello schema; disciplina delle penali",
+      "pass_condition": "compaiono «20 per cento» e «10 per cento» come tetto previsto e limite consentito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica come modifica la riduzione del tetto complessivo delle penali entro il limite consentito.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come modifica la riduzione del tetto complessivo delle penali entro il limite consentito.\nPASS se: compare l'indicazione di ridurre il tetto complessivo entro il limite consentito.\nFAIL se: la modifica non compare, oppure è proposta una misura superiore al limite.\nÈ indifferente: la misura esatta proposta, purché non superiore al limite.\nFonte di authoring: clausola 12.2 dello schema",
+      "pass_condition": "compare l'indicazione di ridurre il tetto complessivo entro il limite consentito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che la clausola 13.2 dello schema àncora la risoluzione a una misura di penali diversa dal tetto della clausola 12.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la clausola 13.2 dello schema àncora la risoluzione a una misura di penali diversa dal tetto della clausola 12.2.\nPASS se: compare l'indicazione che le clausole 12.2 e 13.2 dello schema non sono coerenti fra loro quanto alla misura delle penali.\nFAIL se: il rilievo non compare, oppure le due clausole sono presentate come allineate.\nÈ indifferente: l'ordine in cui le due clausole sono citate.\nFonte di authoring: clausole 12.2 e 13.2 dello schema",
+      "pass_condition": "compare l'indicazione che le clausole 12.2 e 13.2 dello schema non sono coerenti fra loro quanto alla misura delle penali.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica come modifica l'allineamento della clausola 13.2 al tetto della clausola 12.2 come rideterminato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come modifica l'allineamento della clausola 13.2 al tetto della clausola 12.2 come rideterminato.\nPASS se: compare l'indicazione di allineare la soglia della clausola 13.2 al tetto della clausola 12.2 come rideterminato.\nFAIL se: la modifica non compare, oppure l'incoerenza è risolta mantenendo il tetto del 20 per cento.\nÈ indifferente: la misura proposta, purché coerente fra le due clausole.\nFonte di authoring: clausole 12.2 e 13.2 dello schema",
+      "pass_condition": "compare l'indicazione di allineare la soglia della clausola 13.2 al tetto della clausola 12.2 come rideterminato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable qualifica l'appalto come appalto di lavori ai fini della taratura della clausola di revisione dei prezzi.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'appalto come appalto di lavori ai fini della taratura della clausola di revisione dei prezzi.\nPASS se: compare, riferita all'oggetto dell'appalto, una fra: «appalto di lavori», «contratto di lavori», «esecuzione di lavori».\nFAIL se: l'appalto è qualificato come appalto di servizi o di forniture, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla categoria delle lavorazioni.\nFonte di authoring: punto 5 della determina a contrarre; oggetto del disciplinare",
+      "pass_condition": "compare, riferita all'oggetto dell'appalto, una fra: «appalto di lavori», «contratto di lavori», «esecuzione di lavori».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 5 per cento la soglia di attivazione prevista dalla clausola 14.2 e in 3 per cento la soglia applicabile agli appalti di lavori.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 5 per cento la soglia di attivazione prevista dalla clausola 14.2 e in 3 per cento la soglia applicabile agli appalti di lavori.\nPASS se: compaiono «5 per cento» e «3 per cento» come soglia prevista e soglia applicabile.\nFAIL se: è indicata una soglia diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 14.2 dello schema; disciplina della revisione dei prezzi",
+      "pass_condition": "compaiono «5 per cento» e «3 per cento» come soglia prevista e soglia applicabile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 80 per cento la quota prevista dalla clausola 14.3 e in 90 per cento la quota applicabile agli appalti di lavori.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 80 per cento la quota prevista dalla clausola 14.3 e in 90 per cento la quota applicabile agli appalti di lavori.\nPASS se: compaiono «80 per cento» e «90 per cento» come quota prevista e quota applicabile.\nFAIL se: è indicata una quota diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 14.3 dello schema; disciplina della revisione dei prezzi",
+      "pass_condition": "compaiono «80 per cento» e «90 per cento» come quota prevista e quota applicabile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable afferma che i parametri della clausola 14 sono quelli previsti per gli appalti di servizi e forniture.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che i parametri della clausola 14 sono quelli previsti per gli appalti di servizi e forniture.\nPASS se: compare l'indicazione che i parametri usati sono quelli degli appalti di servizi e forniture.\nFAIL se: l'affermazione non compare, oppure i parametri sono presentati come propri degli appalti di lavori.\nÈ indifferente: il richiamo all'allegato che disciplina le modalità di applicazione.\nFonte di authoring: clausole 14.2 e 14.3 dello schema",
+      "pass_condition": "compare l'indicazione che i parametri usati sono quelli degli appalti di servizi e forniture.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable afferma che l'inserimento della clausola di revisione dei prezzi nei documenti di gara iniziali è obbligatorio.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'inserimento della clausola di revisione dei prezzi nei documenti di gara iniziali è obbligatorio.\nPASS se: compare l'indicazione che la clausola di revisione dei prezzi va inserita obbligatoriamente nei documenti di gara iniziali.\nFAIL se: l'obbligatorietà non è affermata, oppure la clausola è presentata come rimessa alla scelta della stazione appaltante.\nÈ indifferente: il richiamo al numero dell'articolo.\nFonte di authoring: disciplina della revisione dei prezzi",
+      "pass_condition": "compare l'indicazione che la clausola di revisione dei prezzi va inserita obbligatoriamente nei documenti di gara iniziali.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non indica come modifica la soppressione della clausola 14 dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica come modifica la soppressione della clausola 14 dello schema.\nPASS se: il deliverable non indica come modifica la soppressione della clausola 14 dello schema.\nFAIL se: compare l'indicazione di sopprimere la clausola di revisione dei prezzi.\nÈ indifferente: l'indicazione di riscrivere la clausola con i parametri applicabili.\nFonte di authoring: clausola 14 dello schema",
+      "pass_condition": "il deliverable non indica come modifica la soppressione della clausola 14 dello schema.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che lo schema non prevede il premio di accelerazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che lo schema non prevede il premio di accelerazione.\nPASS se: compare l'indicazione che il premio di accelerazione non figura nello schema.\nFAIL se: il rilievo non compare, oppure il premio è dato per previsto.\nÈ indifferente: la misura proposta per il premio.\nFonte di authoring: schema di contratto; disciplina delle penali e dei premi di accelerazione",
+      "pass_condition": "compare l'indicazione che il premio di accelerazione non figura nello schema.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable collega l'assenza del premio di accelerazione alla voce del quadro economico destinata a coprirlo, pari a zero.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega l'assenza del premio di accelerazione alla voce del quadro economico destinata a coprirlo, pari a zero.\nPASS se: il rilievo è ricondotto alla riga del quadro economico relativa al premio di accelerazione.\nFAIL se: il rilievo è formulato senza il collegamento al quadro economico.\nÈ indifferente: l'indicazione dell'importo che la voce dovrebbe assumere.\nFonte di authoring: sezione D del quadro economico",
+      "pass_condition": "il rilievo è ricondotto alla riga del quadro economico relativa al premio di accelerazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in euro 2.740.000,00 l'importo complessivo dell'intervento secondo determina e quadro economico e in euro 2.679.000,00 l'importo soggetto a ribasso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 2.740.000,00 l'importo complessivo dell'intervento secondo determina e quadro economico e in euro 2.679.000,00 l'importo soggetto a ribasso.\nPASS se: compaiono «euro 2.740.000,00» ed «euro 2.679.000,00» come importo complessivo e importo soggetto a ribasso.; compaiono «2.740.000,00» e «2.679.000,00» come importo complessivo e importo soggetto a ribasso.\nFAIL se: è indicato un importo diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: punto 2 della determina; sezione A del quadro economico",
+      "pass_condition": "compaiono «euro 2.740.000,00» ed «euro 2.679.000,00» come importo complessivo e importo soggetto a ribasso.; compaiono «2.740.000,00» e «2.679.000,00» come importo complessivo e importo soggetto a ribasso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che la clausola 2.2 del disciplinare somma gli oneri della sicurezza all'importo a base di gara invece di scorporarli.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la clausola 2.2 del disciplinare somma gli oneri della sicurezza all'importo a base di gara invece di scorporarli.\nPASS se: compare l'indicazione che il disciplinare somma gli oneri all'importo a base di gara invece di scorporarli.\nFAIL se: il rilievo non compare, oppure la clausola 2.2 è presentata come coerente con la determina.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 2.2 del disciplinare; punto 2 della determina",
+      "pass_condition": "compare l'indicazione che il disciplinare somma gli oneri all'importo a base di gara invece di scorporarli.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in euro 61.000,00 lo scostamento fra l'importo del disciplinare e quello della determina.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 61.000,00 lo scostamento fra l'importo del disciplinare e quello della determina.\nPASS se: compare «euro 61.000,00» come scostamento.; compare «61.000,00» come scostamento.\nFAIL se: è indicato uno scostamento diverso, oppure lo scostamento non è quantificato.\nÈ indifferente: l'indicazione dell'importo complessivo erroneamente riportato dal disciplinare.\nFonte di authoring: clausola 2.2 del disciplinare; sezione A del quadro economico",
+      "pass_condition": "compare «euro 61.000,00» come scostamento.; compare «61.000,00» come scostamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che la clausola 5.2 del disciplinare introduce il minor prezzo come criterio residuale in una procedura aggiudicata con il miglior rapporto qualita prezzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la clausola 5.2 del disciplinare introduce il minor prezzo come criterio residuale in una procedura aggiudicata con il miglior rapporto qualita prezzo.\nPASS se: compare l'indicazione che il criterio residuale della clausola 5.2 non è compatibile con il criterio di aggiudicazione fissato.\nFAIL se: il rilievo non compare, oppure la clausola 5.2 è presentata come compatibile.\nÈ indifferente: il criterio residuale proposto in sostituzione.\nFonte di authoring: clausole 5.1 e 5.2 del disciplinare; punto 3 della determina",
+      "pass_condition": "compare l'indicazione che il criterio residuale della clausola 5.2 non è compatibile con il criterio di aggiudicazione fissato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica un criterio residuale sostitutivo per il caso di parità di punteggio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica un criterio residuale sostitutivo per il caso di parità di punteggio.\nPASS se: compare l'indicazione di un criterio residuale, fra prevalenza del punteggio tecnico e sorteggio.\nFAIL se: la modifica non compare.\nÈ indifferente: quale dei due criteri residuali è proposto.\nFonte di authoring: clausola 5.2 del disciplinare",
+      "pass_condition": "compare l'indicazione di un criterio residuale, fra prevalenza del punteggio tecnico e sorteggio.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable qualifica il grave illecito professionale come causa di esclusione che richiede una valutazione della stazione appaltante.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il grave illecito professionale come causa di esclusione che richiede una valutazione della stazione appaltante.\nPASS se: compare, riferita a quella causa, una fra: «richiede una valutazione della stazione appaltante», «non è automatica», «esclusione non automatica».\nFAIL se: la causa è presentata come automatica, oppure come priva di rilievo, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo al numero dell'articolo.\nFonte di authoring: clausola 6.3 del disciplinare",
+      "pass_condition": "compare, riferita a quella causa, una fra: «richiede una valutazione della stazione appaltante», «non è automatica», «esclusione non automatica».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica come modifica la soppressione dell'esclusione della valutazione prevista dalla clausola 6.3.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come modifica la soppressione dell'esclusione della valutazione prevista dalla clausola 6.3.\nPASS se: compare l'indicazione di sopprimere o riformulare la parte della clausola 6.3 che esclude la valutazione della stazione appaltante.\nFAIL se: la modifica non compare.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 6.3 del disciplinare",
+      "pass_condition": "compare l'indicazione di sopprimere o riformulare la parte della clausola 6.3 che esclude la valutazione della stazione appaltante.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 420 giorni il termine di esecuzione di disciplinare e determina e in 450 giorni quello dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 420 giorni il termine di esecuzione di disciplinare e determina e in 450 giorni quello dello schema.\nPASS se: compaiono «420 giorni» e «450 giorni» come termini rispettivamente di disciplinare e determina e di schema.\nFAIL se: è indicato un termine diverso per uno dei due documenti, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 3.1 del disciplinare; punto 5 della determina; clausola 5.1 dello schema",
+      "pass_condition": "compaiono «420 giorni» e «450 giorni» come termini rispettivamente di disciplinare e determina e di schema.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica che il valore da mantenere è quello del progetto esecutivo richiamato dalla determina.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica che il valore da mantenere è quello del progetto esecutivo richiamato dalla determina.\nPASS se: compare l'indicazione che va mantenuto il termine di 420 giorni.\nFAIL se: è indicato come valore da mantenere quello dello schema, oppure il valore da mantenere non è indicato.\nÈ indifferente: la motivazione della scelta.\nFonte di authoring: punto 5 della determina; clausola 5.1 dello schema",
+      "pass_condition": "compare l'indicazione che va mantenuto il termine di 420 giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva la contraddizione fra la clausola 8.2 del disciplinare e la clausola 10.2 dello schema in materia di limite quantitativo al subappalto.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva la contraddizione fra la clausola 8.2 del disciplinare e la clausola 10.2 dello schema in materia di limite quantitativo al subappalto.\nPASS se: compare l'indicazione che le due clausole si contraddicono quanto al limite quantitativo del subappalto.\nFAIL se: il rilievo non compare, oppure le due clausole sono presentate come conciliabili.\nÈ indifferente: quale delle due soluzioni è proposta.\nFonte di authoring: clausola 8.2 del disciplinare; clausola 10.2 dello schema",
+      "pass_condition": "compare l'indicazione che le due clausole si contraddicono quanto al limite quantitativo del subappalto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica come modifica l'allineamento dei due documenti su un unico assetto del subappalto prima della pubblicazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come modifica l'allineamento dei due documenti su un unico assetto del subappalto prima della pubblicazione.\nPASS se: compare l'indicazione di allineare disciplinare e schema su un unico assetto del subappalto.\nFAIL se: la modifica non compare.\nÈ indifferente: quale dei due assetti è scelto.\nFonte di authoring: clausola 8.2 del disciplinare; clausola 10.2 dello schema",
+      "pass_condition": "compare l'indicazione di allineare disciplinare e schema su un unico assetto del subappalto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che la clausola 1.2 dello schema, facendo prevalere il contratto, farebbe prevalere i valori disallineati dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la clausola 1.2 dello schema, facendo prevalere il contratto, farebbe prevalere i valori disallineati dello schema.\nPASS se: compare l'indicazione che la clausola di prevalenza consoliderebbe i valori disallineati dello schema.\nFAIL se: il rilievo non compare, oppure la clausola di prevalenza è presentata come rimedio alle incoerenze.\nÈ indifferente: la formulazione sostitutiva proposta per la clausola 1.2.\nFonte di authoring: clausola 1.2 dello schema",
+      "pass_condition": "compare l'indicazione che la clausola di prevalenza consoliderebbe i valori disallineati dello schema.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non afferma che la clausola di prevalenza dello schema risolve le incoerenze fra i documenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la clausola di prevalenza dello schema risolve le incoerenze fra i documenti.\nPASS se: il deliverable non afferma che la clausola di prevalenza dello schema risolve le incoerenze fra i documenti.\nFAIL se: compare l'affermazione che le incoerenze sono risolte dalla clausola di prevalenza.\nÈ indifferente: l'indicazione che le incoerenze vanno eliminate nel testo.\nFonte di authoring: clausola 1.2 dello schema",
+      "pass_condition": "il deliverable non afferma che la clausola di prevalenza dello schema risolve le incoerenze fra i documenti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che il piano di manutenzione dell'opera, richiamato dalla clausola 1.1 dello schema, non figura fra i documenti di gara elencati dal disciplinare.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il piano di manutenzione dell'opera, richiamato dalla clausola 1.1 dello schema, non figura fra i documenti di gara elencati dal disciplinare.\nPASS se: compare l'indicazione che il piano di manutenzione non è elencato fra i documenti di gara.\nFAIL se: il rilievo non compare, oppure il piano è dato per elencato.\nÈ indifferente: il richiamo al numero delle clausole.\nFonte di authoring: clausola 1.1 dello schema; clausola 16.1 del disciplinare",
+      "pass_condition": "compare l'indicazione che il piano di manutenzione non è elencato fra i documenti di gara.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 240 giorni la durata del vincolo dell'offerta e in 90 giorni la validità della garanzia provvisoria richieste dal disciplinare.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 240 giorni la durata del vincolo dell'offerta e in 90 giorni la validità della garanzia provvisoria richieste dal disciplinare.\nPASS se: compaiono «240 giorni» e «90 giorni» come durata del vincolo dell'offerta e validità della garanzia.\nFAIL se: è indicato un valore diverso per uno dei due dati, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausole 9.1 e 10.2 del disciplinare",
+      "pass_condition": "compaiono «240 giorni» e «90 giorni» come durata del vincolo dell'offerta e validità della garanzia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che la garanzia provvisoria non copre l'intero periodo di vincolo dell'offerta.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la garanzia provvisoria non copre l'intero periodo di vincolo dell'offerta.\nPASS se: compare l'indicazione che la validità della garanzia è inferiore alla durata del vincolo dell'offerta.\nFAIL se: il rilievo non compare, oppure la garanzia è presentata come estesa a tutto il periodo di vincolo.\nÈ indifferente: la durata proposta per la garanzia.\nFonte di authoring: clausole 9.1 e 10.2 del disciplinare",
+      "pass_condition": "compare l'indicazione che la validità della garanzia è inferiore alla durata del vincolo dell'offerta.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non afferma che l'impegno al rinnovo della clausola 10.3 rende irrilevante il disallineamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'impegno al rinnovo della clausola 10.3 rende irrilevante il disallineamento.\nPASS se: il deliverable non afferma che l'impegno al rinnovo della clausola 10.3 rende irrilevante il disallineamento.\nFAIL se: compare l'affermazione che l'impegno al rinnovo sana il disallineamento fra le due durate.\nÈ indifferente: l'indicazione che l'impegno al rinnovo resta una previsione utile.\nFonte di authoring: clausola 10.3 del disciplinare",
+      "pass_condition": "il deliverable non afferma che l'impegno al rinnovo della clausola 10.3 rende irrilevante il disallineamento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica in 35 il numero dei giorni fra la pubblicazione prevista e il termine per la presentazione delle offerte.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 35 il numero dei giorni fra la pubblicazione prevista e il termine per la presentazione delle offerte.\nPASS se: compare «35 giorni» come intervallo fra pubblicazione e termine per le offerte.; compare «trentacinque giorni» come intervallo fra pubblicazione e termine per le offerte.\nFAIL se: è indicato un numero diverso, oppure l'intervallo non è calcolato.\nÈ indifferente: l'indicazione dei giorni lavorativi.\nFonte di authoring: clausole 4.1 e 4.2 del disciplinare; date_verificate.md",
+      "pass_condition": "compare «35 giorni» come intervallo fra pubblicazione e termine per le offerte.; compare «trentacinque giorni» come intervallo fra pubblicazione e termine per le offerte.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable indica come verifica il confronto fra quell'intervallo e il termine minimo applicabile alla procedura.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come verifica il confronto fra quell'intervallo e il termine minimo applicabile alla procedura.\nPASS se: compare l'indicazione di verificare l'intervallo rispetto al termine minimo applicabile.\nFAIL se: l'intervallo è dichiarato conforme o non conforme senza indicare la verifica, oppure la questione non è trattata.\nÈ indifferente: il termine minimo che il deliverable ipotizza.\nFonte di authoring: clausole 4.1 e 4.2 del disciplinare",
+      "pass_condition": "compare l'indicazione di verificare l'intervallo rispetto al termine minimo applicabile.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable rileva che il quadro economico non destina alcuna somma alla revisione dei prezzi.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il quadro economico non destina alcuna somma alla revisione dei prezzi.\nPASS se: compare l'indicazione che la voce del quadro economico destinata alla revisione dei prezzi è pari a zero.\nFAIL se: il rilievo non compare, oppure la copertura è data per presente.\nÈ indifferente: l'importo proposto per la provvista.\nFonte di authoring: sezione D del quadro economico",
+      "pass_condition": "compare l'indicazione che la voce del quadro economico destinata alla revisione dei prezzi è pari a zero.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non afferma che l'accantonamento per accordo bonario o la voce imprevisti coprono la revisione dei prezzi.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'accantonamento per accordo bonario o la voce imprevisti coprono la revisione dei prezzi.\nPASS se: il deliverable non afferma che l'accantonamento per accordo bonario o la voce imprevisti coprono la revisione dei prezzi.\nFAIL se: compare l'affermazione che la revisione dei prezzi è coperta dall'accantonamento per accordo bonario o dalla voce imprevisti.\nÈ indifferente: la menzione di quelle voci nella descrizione del quadro economico.\nFonte di authoring: sezione B del quadro economico",
+      "pass_condition": "il deliverable non afferma che l'accantonamento per accordo bonario o la voce imprevisti coprono la revisione dei prezzi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come irregolarità l'esclusione degli oneri della sicurezza non soggetti a ribasso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come irregolarità l'esclusione degli oneri della sicurezza non soggetti a ribasso.\nPASS se: il deliverable non segnala come irregolarità l'esclusione degli oneri della sicurezza non soggetti a ribasso.\nFAIL se: l'esclusione degli oneri della sicurezza dal ribasso compare fra i rilievi da modificare.\nÈ indifferente: la menzione degli oneri nella trattazione dello scostamento sull'importo.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non segnala come irregolarità l'esclusione degli oneri della sicurezza non soggetti a ribasso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come rilievo il differimento dell'accesso agli atti previsto dalla clausola 13.1 del disciplinare.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rilievo il differimento dell'accesso agli atti previsto dalla clausola 13.1 del disciplinare.\nPASS se: il deliverable non segnala come rilievo il differimento dell'accesso agli atti previsto dalla clausola 13.1 del disciplinare.\nFAIL se: il differimento dell'accesso agli atti compare fra i rilievi da modificare.\nÈ indifferente: la menzione della clausola 13.1 nella descrizione del disciplinare.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non segnala come rilievo il differimento dell'accesso agli atti previsto dalla clausola 13.1 del disciplinare.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come ostacolo alla partecipazione l'obbligatorieta del sopralluogo prevista dalla clausola 11.1.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come ostacolo alla partecipazione l'obbligatorieta del sopralluogo prevista dalla clausola 11.1.\nPASS se: il deliverable non segnala come ostacolo alla partecipazione l'obbligatorieta del sopralluogo prevista dalla clausola 11.1.\nFAIL se: l'obbligatorietà del sopralluogo compare fra i rilievi da modificare o fra i profili che limitano la partecipazione.\nÈ indifferente: la menzione del sopralluogo nella descrizione della procedura.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non segnala come ostacolo alla partecipazione l'obbligatorieta del sopralluogo prevista dalla clausola 11.1.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come esposizione della stazione appaltante l'anticipazione del prezzo prevista dalla clausola 14.1 del disciplinare.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come esposizione della stazione appaltante l'anticipazione del prezzo prevista dalla clausola 14.1 del disciplinare.\nPASS se: il deliverable non segnala come esposizione della stazione appaltante l'anticipazione del prezzo prevista dalla clausola 14.1 del disciplinare.\nFAIL se: l'anticipazione del prezzo compare fra i rilievi da modificare o fra i profili di rischio per la stazione appaltante.\nÈ indifferente: la menzione dell'anticipazione nella descrizione dei pagamenti.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non segnala come esposizione della stazione appaltante l'anticipazione del prezzo prevista dalla clausola 14.1 del disciplinare.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come contraddittorio il riparto di giurisdizione fra la clausola 15.1 del disciplinare e la clausola 18.1 dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come contraddittorio il riparto di giurisdizione fra la clausola 15.1 del disciplinare e la clausola 18.1 dello schema.\nPASS se: il deliverable non segnala come contraddittorio il riparto di giurisdizione fra la clausola 15.1 del disciplinare e la clausola 18.1 dello schema.\nFAIL se: il riparto di giurisdizione fra le due clausole compare fra le incoerenze da sanare.\nÈ indifferente: la menzione delle due clausole nell'elenco delle previsioni sulle controversie.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "il deliverable non segnala come contraddittorio il riparto di giurisdizione fra la clausola 15.1 del disciplinare e la clausola 18.1 dello schema.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "il deliverable non segnala come profilo di rischio la soglia dei pagamenti in acconto prevista dalla clausola 11.1 dello schema.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come profilo di rischio la soglia dei pagamenti in acconto prevista dalla clausola 11.1 dello schema.\nPASS se: il deliverable non segnala come profilo di rischio la soglia dei pagamenti in acconto prevista dalla clausola 11.1 dello schema.\nFAIL se: la soglia dei pagamenti in acconto compare fra i rilievi da modificare o fra i profili di rischio.\nÈ indifferente: la menzione della soglia nella descrizione dei pagamenti.\nFonte di authoring: challenge map, N-06",
+      "pass_condition": "il deliverable non segnala come profilo di rischio la soglia dei pagamenti in acconto prevista dalla clausola 11.1 dello schema.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come conforme il termine fra pubblicazione e offerte mentre tratta come da verificare la copertura della revisione dei prezzi.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come conforme il termine fra pubblicazione e offerte mentre tratta come da verificare la copertura della revisione dei prezzi.\nPASS se: simmetria del controllo: il deliverable non tratta come conforme il termine fra pubblicazione e offerte mentre tratta come da verificare la copertura della revisione dei prezzi.\nFAIL se: l'intervallo fra pubblicazione e termine per le offerte è dichiarato adempiuto senza verifica e nello stesso deliverable la copertura della revisione è rimessa a una verifica.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: clausole 4.1 e 4.2 del disciplinare; sezione D del quadro economico",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come conforme il termine fra pubblicazione e offerte mentre tratta come da verificare la copertura della revisione dei prezzi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che la procedura sarà impugnata o annullata.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che la procedura sarà impugnata o annullata.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che la procedura sarà impugnata o annullata.\nFAIL se: compare l'affermazione che la procedura sarà impugnata, annullata o dichiarata illegittima.\nÈ indifferente: l'indicazione dei profili che esporrebbero la procedura a contestazione.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che la procedura sarà impugnata o annullata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tender_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la prenotazione della spesa disposta dalla determina a contrarre.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio la prenotazione della spesa disposta dalla determina a contrarre.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio la prenotazione della spesa disposta dalla determina a contrarre.\nFAIL se: la prenotazione della spesa compare fra i rilievi o fra i profili di rischio.\nÈ indifferente: la menzione della prenotazione nella descrizione della determina.\nFonte di authoring: punto 6 della determina a contrarre",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la prenotazione della spesa disposta dalla determina a contrarre.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

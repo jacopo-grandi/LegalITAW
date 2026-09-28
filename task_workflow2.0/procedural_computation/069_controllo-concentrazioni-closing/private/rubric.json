@@ -1,0 +1,673 @@
+{
+  "task_id": "WF2-069",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 33,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "esistono tutti i file di consegna richiesti dalla consegna.",
+      "match_criteria": "Oggetto del criterio: esistono tutti i file di consegna richiesti dalla consegna.\nPASS se: ogni file atteso esiste con il nome indicato\nFAIL se: manca almeno un file atteso; non esistono esiti intermedi.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ogni file atteso esiste con il nome indicato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "ogni allegato pubblico elencato nell'incarico e' richiamato almeno una volta nel deliverable.",
+      "match_criteria": "Oggetto del criterio: ogni allegato pubblico elencato nell'incarico e' richiamato almeno una volta nel deliverable.\nPASS se: tutti gli allegati sono richiamati\nFAIL se: almeno un allegato non e' richiamato; non esistono esiti intermedi.\nFonte di authoring: 01_task.md",
+      "pass_condition": "tutti gli allegati sono richiamati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non cita fonti esterne all'elenco chiuso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non cita fonti esterne all'elenco chiuso.\nPASS se: ogni fonte citata compare in 03_legal_sources.md\nFAIL se: FAIL se compare almeno una fonte non inclusa nell'elenco chiuso; PASS negli altri casi.\nFonte di authoring: 03_legal_sources.md",
+      "pass_condition": "ogni fonte citata compare in 03_legal_sources.md",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "fatti, inferenze e dati mancanti hanno etichette distinguibili.",
+      "match_criteria": "Oggetto del criterio: fatti, inferenze e dati mancanti hanno etichette distinguibili.\nPASS se: le tre categorie sono distinguibili\nFAIL se: almeno due categorie sono fuse; non esistono esiti intermedi.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "le tre categorie sono distinguibili",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che EUR 613 milioni supera EUR 595 milioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che EUR 613 milioni supera EUR 595 milioni.\nPASS se: nel deliverable compare «EUR 613 milioni supera EUR 595 milioni»\nFAIL se: FAIL se manca «EUR 613 milioni supera EUR 595 milioni», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 02 e AGCM",
+      "pass_condition": "nel deliverable compare «EUR 613 milioni supera EUR 595 milioni»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che almeno due imprese superano EUR 36 milioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che almeno due imprese superano EUR 36 milioni.\nPASS se: nel deliverable compare «almeno due imprese superano EUR 36 milioni»\nFAIL se: FAIL se manca «almeno due imprese superano EUR 36 milioni», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 02",
+      "pass_condition": "nel deliverable compare «almeno due imprese superano EUR 36 milioni»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che l'acquisto del 100% conferisce controllo esclusivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'acquisto del 100% conferisce controllo esclusivo.\nPASS se: la proposizione compare in una frase autonoma: l'acquisto del 100% conferisce controllo esclusivo; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: l'acquisto del 100% conferisce controllo esclusivo\nFAIL se: FAIL se la proposizione «l'acquisto del 100% conferisce controllo esclusivo» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 03",
+      "pass_condition": "la proposizione compare in una frase autonoma: l'acquisto del 100% conferisce controllo esclusivo; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: l'acquisto del 100% conferisce controllo esclusivo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack.\nPASS se: nel deliverable compare «il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack»\nFAIL se: FAIL se manca «il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "nel deliverable compare «il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il deposito deve precedere la realizzazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il deposito deve precedere la realizzazione.\nPASS se: la proposizione compare in una frase autonoma: il deposito deve precedere la realizzazione; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il deposito deve precedere la realizzazione\nFAIL se: FAIL se la proposizione «il deposito deve precedere la realizzazione» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 01 e fonti",
+      "pass_condition": "la proposizione compare in una frase autonoma: il deposito deve precedere la realizzazione; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il deposito deve precedere la realizzazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che lo SPA richiede non avvio, non il solo deposito.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che lo SPA richiede non avvio, non il solo deposito.\nPASS se: la proposizione compare in una frase autonoma: lo SPA richiede non avvio, non il solo deposito; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: lo SPA richiede non avvio, non il solo deposito\nFAIL se: FAIL se la proposizione «lo SPA richiede non avvio, non il solo deposito» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 01",
+      "pass_condition": "la proposizione compare in una frase autonoma: lo SPA richiede non avvio, non il solo deposito; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: lo SPA richiede non avvio, non il solo deposito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco.\nPASS se: la proposizione compare in una frase autonoma: il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco\nFAIL se: FAIL se la proposizione «il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: fonti congelate",
+      "pass_condition": "la proposizione compare in una frase autonoma: il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che le quote di mercato arrivano il 4 ottobre.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le quote di mercato arrivano il 4 ottobre.\nPASS se: la proposizione compare in una frase autonoma: le quote di mercato arrivano il 4 ottobre; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: le quote di mercato arrivano il 4 ottobre\nFAIL se: FAIL se la proposizione «le quote di mercato arrivano il 4 ottobre» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 04",
+      "pass_condition": "la proposizione compare in una frase autonoma: le quote di mercato arrivano il 4 ottobre; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: le quote di mercato arrivano il 4 ottobre",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il presidio iniziale decorre dal ricevimento della notifica.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il presidio iniziale decorre dal ricevimento della notifica.\nPASS se: nel deliverable compare «il presidio iniziale decorre dal ricevimento della notifica»\nFAIL se: FAIL se manca «il presidio iniziale decorre dal ricevimento della notifica», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: legge n. 287/1990 art. 16",
+      "pass_condition": "nel deliverable compare «il presidio iniziale decorre dal ricevimento della notifica»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che una richiesta puo' rendere necessario integrare il fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che una richiesta puo' rendere necessario integrare il fascicolo.\nPASS se: la proposizione compare in una frase autonoma: una richiesta puo' rendere necessario integrare il fascicolo; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: una richiesta puo' rendere necessario integrare il fascicolo\nFAIL se: FAIL se la proposizione «una richiesta puo' rendere necessario integrare il fascicolo» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 04 e fonti",
+      "pass_condition": "la proposizione compare in una frase autonoma: una richiesta puo' rendere necessario integrare il fascicolo; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: una richiesta puo' rendere necessario integrare il fascicolo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento.\nPASS se: nel deliverable compare «il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento»\nFAIL se: FAIL se manca «il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 01",
+      "pass_condition": "nel deliverable compare «il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable afferma che il team vuole anticipare integrazione operativa.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il team vuole anticipare integrazione operativa.\nPASS se: la proposizione compare in una frase autonoma: il team vuole anticipare integrazione operativa; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il team vuole anticipare integrazione operativa\nFAIL se: FAIL se la proposizione «il team vuole anticipare integrazione operativa» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 01 e doc. 04",
+      "pass_condition": "la proposizione compare in una frase autonoma: il team vuole anticipare integrazione operativa; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il team vuole anticipare integrazione operativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce soglia complessiva a doc. 02 e AGCM.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce soglia complessiva a doc. 02 e AGCM.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02 e AGCM; un richiamo immediatamente adiacente collega il punto a doc. 02 e AGCM\nFAIL se: FAIL se doc. 02 e AGCM non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02 e AGCM",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02 e AGCM; un richiamo immediatamente adiacente collega il punto a doc. 02 e AGCM",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce soglia individuale a doc. 02.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce soglia individuale a doc. 02.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02; un richiamo immediatamente adiacente collega il punto a doc. 02\nFAIL se: FAIL se doc. 02 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02; un richiamo immediatamente adiacente collega il punto a doc. 02",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce concentrazione a doc. 03.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce concentrazione a doc. 03.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 03\nFAIL se: FAIL se doc. 03 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 03",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 03",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce competenza nazionale a doc. 02 e doc. 03.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce competenza nazionale a doc. 02 e doc. 03.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03\nFAIL se: FAIL se doc. 02 e doc. 03 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce filing preventivo a doc. 01 e fonti.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce filing preventivo a doc. 01 e fonti.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 01 e fonti; un richiamo immediatamente adiacente collega il punto a doc. 01 e fonti\nFAIL se: FAIL se doc. 01 e fonti non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 01 e fonti",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 01 e fonti; un richiamo immediatamente adiacente collega il punto a doc. 01 e fonti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce closing condition contrattuale a doc. 01.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce closing condition contrattuale a doc. 01.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 01; un richiamo immediatamente adiacente collega il punto a doc. 01\nFAIL se: FAIL se doc. 01 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 01",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 01; un richiamo immediatamente adiacente collega il punto a doc. 01",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce nessun standstill legale presunto a fonti congelate.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce nessun standstill legale presunto a fonti congelate.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a fonti congelate; un richiamo immediatamente adiacente collega il punto a fonti congelate\nFAIL se: FAIL se fonti congelate non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: fonti congelate",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a fonti congelate; un richiamo immediatamente adiacente collega il punto a fonti congelate",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce completezza filing a doc. 04.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce completezza filing a doc. 04.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 04\nFAIL se: FAIL se doc. 04 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 04",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 04",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce termine di trenta giorni a legge n. 287/1990 art. 16.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce termine di trenta giorni a legge n. 287/1990 art. 16.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a legge n. 287/1990 art. 16; un richiamo immediatamente adiacente collega il punto a legge n. 287/1990 art. 16\nFAIL se: FAIL se legge n. 287/1990 art. 16 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: legge n. 287/1990 art. 16",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a legge n. 287/1990 art. 16; un richiamo immediatamente adiacente collega il punto a legge n. 287/1990 art. 16",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce richieste informative a doc. 04 e fonti.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce richieste informative a doc. 04 e fonti.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 04 e fonti; un richiamo immediatamente adiacente collega il punto a doc. 04 e fonti\nFAIL se: FAIL se doc. 04 e fonti non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 04 e fonti",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 04 e fonti; un richiamo immediatamente adiacente collega il punto a doc. 04 e fonti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable riconduce long-stop a doc. 01.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce long-stop a doc. 01.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 01; un richiamo immediatamente adiacente collega il punto a doc. 01\nFAIL se: FAIL se doc. 01 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 01",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 01; un richiamo immediatamente adiacente collega il punto a doc. 01",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento signing del 15 settembre (doc. 01).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento signing del 15 settembre (doc. 01).\nPASS se: sovra-segnalazione - signing del 15 settembre non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - signing del 15 settembre e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 01",
+      "pass_condition": "sovra-segnalazione - signing del 15 settembre non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento rifinanziamento del debito (SPA allegato).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento rifinanziamento del debito (SPA allegato).\nPASS se: sovra-segnalazione - rifinanziamento del debito non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - rifinanziamento del debito e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: SPA allegato",
+      "pass_condition": "sovra-segnalazione - rifinanziamento del debito non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento fatturato mondiale EUR 1,4 miliardi (doc. 03).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento fatturato mondiale EUR 1,4 miliardi (doc. 03).\nPASS se: sovra-segnalazione - fatturato mondiale EUR 1,4 miliardi non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - fatturato mondiale EUR 1,4 miliardi e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 03",
+      "pass_condition": "sovra-segnalazione - fatturato mondiale EUR 1,4 miliardi non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento bozza filing del 27 settembre (doc. 04).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento bozza filing del 27 settembre (doc. 04).\nPASS se: sovra-segnalazione - bozza filing del 27 settembre non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - bozza filing del 27 settembre e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 04",
+      "pass_condition": "sovra-segnalazione - bozza filing del 27 settembre non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable verifica separatamente la soglia complessiva e la soglia individuale, indicando per ciascuna il dato di fatturato utilizzato e la fonte della soglia.",
+      "match_criteria": "Oggetto del criterio: il deliverable verifica separatamente la soglia complessiva e la soglia individuale, indicando per ciascuna il dato di fatturato utilizzato e la fonte della soglia.\nPASS se: per ciascuna delle voci indicate nell'oggetto del criterio il deliverable riporta tutti gli elementi richiesti, applicando a ogni voce lo stesso test\nFAIL se: almeno una delle voci non e' esaminata, oppure per almeno una voce manca uno degli elementi richiesti, oppure le voci sono esaminate con criteri diversi senza che la differenza sia motivata\nÈ indifferente: l'ordine delle voci, la forma (tabella o testo) e la scelta lessicale, purche' ogni elemento sia riconoscibile per ciascuna voce\nFonte di authoring: doc. 02 e 02_reference_pack.md",
+      "pass_condition": "per ciascuna delle voci indicate nell'oggetto del criterio il deliverable riporta tutti gli elementi richiesti, applicando a ogni voce lo stesso test",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "merger_control_timeline.md"
+      ],
+      "title": "il deliverable non afferma che l'Autorita' non avviera' l'istruttoria.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'Autorita' non avviera' l'istruttoria.\nPASS se: presunzione dell'esito non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se presunzione dell'esito e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: 02_reference_pack.md",
+      "pass_condition": "presunzione dell'esito non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-benchmark-audited-draft"
+  }
+}

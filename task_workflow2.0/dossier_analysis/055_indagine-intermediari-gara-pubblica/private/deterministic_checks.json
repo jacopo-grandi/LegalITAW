@@ -1,0 +1,113 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-055",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "investigation_matrix.md"
+  ],
+  "criteria_total": 52,
+  "proposals_count": 4,
+  "proposals": [
+    {
+      "criterion_id": "B.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 209.000,00",
+        "209.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 209.000,00» come corrispettivo complessivo.; compare «209.000,00» come corrispettivo complessivo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-055-B4",
+        "type": "required_regex",
+        "artifact": "investigation_matrix.md",
+        "patterns": [
+          "(?:(?<![\\d.,])209[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])209[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.10",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "30 ottobre 2030",
+        "30/10/2030"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «30 ottobre 2030» come data del primo pagamento.; compare «30/10/2030» come data del primo pagamento.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-055-B10",
+        "type": "required_regex",
+        "artifact": "investigation_matrix.md",
+        "patterns": [
+          "(?:(?:30°?\\s+ottobre(?:\\s+2030)?|0?30\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2030|0?30\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*30)|(?:30°?\\s+ottobre(?:\\s+2030)?|0?30\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2030|0?30\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*30))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.13",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "4 settembre 2030",
+        "16 settembre 2030"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compaiono «4 settembre 2030» e «16 settembre 2030» come date rispettivamente del contratto e del bando.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-055-B13",
+        "type": "required_regex",
+        "artifact": "investigation_matrix.md",
+        "patterns": [
+          "(?:(?:4°?\\s+settembre(?:\\s+2030)?|0?4\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2030|0?4\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*30)|(?:16°?\\s+settembre(?:\\s+2030)?|0?16\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2030|0?16\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*30))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.24",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "14 aprile 2031",
+        "14/04/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «14 aprile 2031» come data del rapporto di screening.; compare «14/04/2031» come data del rapporto di screening.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-055-B24",
+        "type": "required_regex",
+        "artifact": "investigation_matrix.md",
+        "patterns": [
+          "(?:(?:14°?\\s+aprile(?:\\s+2031)?|0?14\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?14\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31)|(?:14°?\\s+aprile(?:\\s+2031)?|0?14\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?14\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    }
+  ]
+}

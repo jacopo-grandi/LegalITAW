@@ -1,0 +1,185 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-033",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "timeline_copertura_denuncia.md"
+  ],
+  "criteria_total": 48,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "B.16",
+      "verification_class": "span",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "quindici giorni",
+        "15 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «quindici giorni» oppure «15 giorni» riferito alla consegna della documentazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-B16",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?:15|quindici)\\s+giorn[oaei]|(?:15|quindici)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "17 marzo 2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «17 marzo 2031» riferito alla scadenza del termine di denuncia dell'Evento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C2",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?:17°?\\s+marzo(?:\\s+2031)?|0?17\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?17\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "22 agosto 2031",
+        "22/08/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «22 agosto 2031» oppure «22/08/2031» come termine di denuncia della Richiesta",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C8",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?:22°?\\s+agosto(?:\\s+2031)?|0?22\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2031|0?22\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*31)|(?:22°?\\s+agosto(?:\\s+2031)?|0?22\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2031|0?22\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.11",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "14 agosto 2031",
+        "14/08/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «14 agosto 2031» oppure «14/08/2031» come termine di consegna",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C11",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?:14°?\\s+agosto(?:\\s+2031)?|0?14\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2031|0?14\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*31)|(?:14°?\\s+agosto(?:\\s+2031)?|0?14\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2031|0?14\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.12",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "500.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «500.000» come limite delle spese di resistenza",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C12",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?<![\\d.,])500[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.13",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "1.130.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «1.130.000» come importo riferibile alla copertura",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C13",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?130[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.14",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "14 giorni",
+        "quattordici giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «14 giorni» oppure «quattordici giorni» come giorni residui",
+      "combine": "single",
+      "check": {
+        "id": "WF2-033-C14",
+        "type": "required_regex",
+        "artifact": "timeline_copertura_denuncia.md",
+        "patterns": [
+          "(?:(?:14|quattordici)\\s+giorn[oaei]|(?:14|quattordici)\\s+giorn[oaei])"
+        ]
+      }
+    }
+  ]
+}

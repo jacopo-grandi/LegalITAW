@@ -1,0 +1,953 @@
+{
+  "task_id": "WF2-035",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 47,
+  "criteria": [
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "ogni riga della tabella della sezione 1 riporta, nella colonna della fonte, un riferimento a un documento del fascicolo oppure a una norma.",
+      "match_criteria": "Oggetto del criterio: ogni riga della tabella della sezione 1 riporta, nella colonna della fonte, un riferimento a un documento del fascicolo oppure a una norma.\nPASS se: nessuna riga della tabella della sezione 1 ha la colonna della fonte vuota\nFAIL se: almeno una riga della tabella della sezione 1 non riporta alcun riferimento di fonte.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna riga della tabella della sezione 1 ha la colonna della fonte vuota",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati nella tabella dell'elenco chiuso di 03_legal_sources.md.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati nella tabella dell'elenco chiuso di 03_legal_sources.md.\nPASS se: tutti i riferimenti normativi e giurisprudenziali presenti nel deliverable compaiono nell'elenco chiuso\nFAIL se: compare un riferimento normativo o giurisprudenziale estraneo all'elenco chiuso.\nFonte di authoring: 03_legal_sources.md",
+      "pass_condition": "tutti i riferimenti normativi e giurisprudenziali presenti nel deliverable compaiono nell'elenco chiuso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "ogni riga della tabella della sezione 1 riporta lo stato della voce alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: ogni riga della tabella della sezione 1 riporta lo stato della voce alla data di riferimento.\nPASS se: nessuna riga della tabella della sezione 1 ha la colonna dello stato vuota\nFAIL se: almeno una riga della tabella della sezione 1 non indica lo stato alla data di riferimento.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna riga della tabella della sezione 1 ha la colonna dello stato vuota",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable qualifica come fatto da cui decorre il termine per impugnare l'aggiudicazione la ricezione della comunicazione di aggiudicazione, individuata nella consegna in piattaforma.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come fatto da cui decorre il termine per impugnare l'aggiudicazione la ricezione della comunicazione di aggiudicazione, individuata nella consegna in piattaforma.\nPASS se: compare, riferita al termine per impugnare, una fra: «dalla ricezione della comunicazione»; «dalla consegna in piattaforma»; «dalla data di consegna registrata dalla piattaforma»; «dalla comunicazione ex art. 90 ricevuta il 25 ottobre 2027»\nFAIL se: il termine è fatto decorrere dalla pubblicazione dell'avviso, dall'adozione della determina, dalla presa visione o dalla data del verbale.\nÈ indifferente: la citazione dell'art. 120, comma 2, c.p.a.: né richiesta né penalizzata.\nFonte di authoring: documenti 05 e 06; art. 120, comma 2, c.p.a.",
+      "pass_condition": "compare, riferita al termine per impugnare, una fra: «dalla ricezione della comunicazione»; «dalla consegna in piattaforma»; «dalla data di consegna registrata dalla piattaforma»; «dalla comunicazione ex art. 90 ricevuta il 25 ottobre 2027»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable riconduce la data di decorrenza del primo termine all'estratto del registro di sistema della piattaforma.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la data di decorrenza del primo termine all'estratto del registro di sistema della piattaforma.\nPASS se: la decorrenza è agganciata a una fra: «estratto del registro di sistema»; «registro di sistema della piattaforma»; «data di consegna registrata dal sistema»; «documento 06»\nFAIL se: la decorrenza non è agganciata ad alcun documento, oppure è agganciata soltanto al testo della comunicazione senza il dato della consegna.\nFonte di authoring: documento 06",
+      "pass_condition": "la decorrenza è agganciata a una fra: «estratto del registro di sistema»; «registro di sistema della piattaforma»; «data di consegna registrata dal sistema»; «documento 06»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che alla data di riferimento il termine per la notificazione del ricorso principale è ancora pendente.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che alla data di riferimento il termine per la notificazione del ricorso principale è ancora pendente.\nPASS se: compare, riferita a quel termine, una fra: «è ancora pendente»; «non è ancora scaduto»; «è in corso»; «restano … giorni»\nFAIL se: il termine è presentato come scaduto, oppure il suo stato non è indicato.\nFonte di authoring: art. 120, comma 2, c.p.a.",
+      "pass_condition": "compare, riferita a quel termine, una fra: «è ancora pendente»; «non è ancora scaduto»; «è in corso»; «restano … giorni»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che per le censure che solo la relazione tecnica dell'aggiudicataria rivela il termine decorre dal momento in cui quell'atto è stato messo a disposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che per le censure che solo la relazione tecnica dell'aggiudicataria rivela il termine decorre dal momento in cui quell'atto è stato messo a disposizione.\nPASS se: compare l'affermazione che il termine decorre dalla messa a disposizione degli atti; compare l'affermazione che il termine decorre dall'ostensione della relazione tecnica; compare l'affermazione che il termine decorre dalla disponibilità dell'offerta tecnica dell'aggiudicataria\nFAIL se: il deliverable fa decorrere il termine per tutte le censure dalla sola comunicazione di aggiudicazione.\nFonte di authoring: documento 07; art. 120, comma 2, c.p.a.",
+      "pass_condition": "compare l'affermazione che il termine decorre dalla messa a disposizione degli atti; compare l'affermazione che il termine decorre dall'ostensione della relazione tecnica; compare l'affermazione che il termine decorre dalla disponibilità dell'offerta tecnica dell'aggiudicataria",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable riconduce la decorrenza del secondo termine al provvedimento sulle richieste di oscuramento.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la decorrenza del secondo termine al provvedimento sulle richieste di oscuramento.\nPASS se: la decorrenza del secondo termine è agganciata a una fra: «provvedimento sulle richieste di oscuramento»; «provvedimento del 16 novembre 2027»; «documento 07»; «seconda comunicazione in piattaforma»\nFAIL se: la decorrenza del secondo termine non è agganciata ad alcun documento.\nFonte di authoring: documento 07; documento 06",
+      "pass_condition": "la decorrenza del secondo termine è agganciata a una fra: «provvedimento sulle richieste di oscuramento»; «provvedimento del 16 novembre 2027»; «documento 07»; «seconda comunicazione in piattaforma»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che il termine per impugnare non è unico e dipende dall'atto da cui la singola censura è conoscibile.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine per impugnare non è unico e dipende dall'atto da cui la singola censura è conoscibile.\nPASS se: compare l'affermazione che esistono due termini distinti a seconda della censura; compare l'affermazione che il termine dipende dall'atto da cui il vizio è conoscibile; compare l'affermazione che non è possibile indicare una sola scadenza per tutte le censure\nFAIL se: il deliverable presenta un termine unico senza indicare da che cosa dipenda.\nFonte di authoring: art. 120, comma 2, c.p.a., che pone due decorrenze in alternativa",
+      "pass_condition": "compare l'affermazione che esistono due termini distinti a seconda della censura; compare l'affermazione che il termine dipende dall'atto da cui il vizio è conoscibile; compare l'affermazione che non è possibile indicare una sola scadenza per tutte le censure",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non presenta il 24 novembre 2027 come termine ultimo per far valere anche la censura sull'attribuzione del punteggio sul criterio B.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il 24 novembre 2027 come termine ultimo per far valere anche la censura sull'attribuzione del punteggio sul criterio B.2.\nPASS se: il 24 novembre 2027 non è indicato come scadenza della censura sul punteggio del criterio B.2\nFAIL se: il 24 novembre 2027 è presentato come scadenza valida anche per quella censura.\nFonte di authoring: documento 07; art. 120, comma 2, c.p.a.",
+      "pass_condition": "il 24 novembre 2027 non è indicato come scadenza della censura sul punteggio del criterio B.2",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che il termine per la notificazione del ricorso introduttivo non è dimezzato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine per la notificazione del ricorso introduttivo non è dimezzato.\nPASS se: compare, riferita alla notificazione del ricorso introduttivo, una fra: «non è dimezzato»; «resta di trenta giorni»; «è sottratto al dimezzamento»; «il dimezzamento non si applica»\nFAIL se: il deliverable non tratta il punto, oppure afferma che quel termine è dimezzato.\nÈ indifferente: la citazione dell'art. 119, comma 2, c.p.a.\nFonte di authoring: art. 119, comma 2, c.p.a.",
+      "pass_condition": "compare, riferita alla notificazione del ricorso introduttivo, una fra: «non è dimezzato»; «resta di trenta giorni»; «è sottratto al dimezzamento»; «il dimezzamento non si applica»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non indica in quindici giorni il termine per la notificazione del ricorso introduttivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica in quindici giorni il termine per la notificazione del ricorso introduttivo.\nPASS se: il termine per la notificazione del ricorso introduttivo non è indicato in quindici giorni\nFAIL se: il termine per la notificazione del ricorso introduttivo è indicato in quindici giorni.\nFonte di authoring: art. 119, comma 2, c.p.a.",
+      "pass_condition": "il termine per la notificazione del ricorso introduttivo non è indicato in quindici giorni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica in quindici giorni il termine per il deposito del ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in quindici giorni il termine per il deposito del ricorso.\nPASS se: compare «quindici giorni» oppure «15 giorni» riferito al deposito del ricorso\nFAIL se: è indicato un termine diverso per il deposito, oppure il deposito non è trattato.\nFonte di authoring: artt. 45, comma 1, e 119, comma 2, c.p.a.",
+      "pass_condition": "compare «quindici giorni» oppure «15 giorni» riferito al deposito del ricorso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable fa decorrere il termine per il deposito dal perfezionamento dell'ultima notificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable fa decorrere il termine per il deposito dal perfezionamento dell'ultima notificazione.\nPASS se: la decorrenza del termine di deposito è agganciata a una fra: «perfezionamento dell'ultima notificazione»; «ultima notificazione perfezionata anche per il destinatario»; «perfezionamento della notifica nei confronti dell'ultimo destinatario»\nFAIL se: la decorrenza del termine di deposito è agganciata alla data di ricezione della comunicazione di aggiudicazione o alla data di sottoscrizione del ricorso.\nFonte di authoring: art. 45, comma 1, c.p.a.",
+      "pass_condition": "la decorrenza del termine di deposito è agganciata a una fra: «perfezionamento dell'ultima notificazione»; «ultima notificazione perfezionata anche per il destinatario»; «perfezionamento della notifica nei confronti dell'ultimo destinatario»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che il termine di dieci giorni per impugnare le decisioni sulle richieste di oscuramento è scaduto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine di dieci giorni per impugnare le decisioni sulle richieste di oscuramento è scaduto.\nPASS se: compare, riferito a quel rimedio, una fra: «è scaduto»; «è decorso»; «non è più esperibile»; «non è più possibile»\nFAIL se: quel termine è presentato come pendente, oppure il punto non è trattato.\nFonte di authoring: art. 36, comma 4, d.lgs. 36/2023",
+      "pass_condition": "compare, riferito a quel rimedio, una fra: «è scaduto»; «è decorso»; «non è più esperibile»; «non è più possibile»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non indica il ricorso contro le decisioni sulle richieste di oscuramento fra i rimedi ancora esperibili alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il ricorso contro le decisioni sulle richieste di oscuramento fra i rimedi ancora esperibili alla data di riferimento.\nPASS se: quel ricorso non compare nell'elenco dei rimedi da esperire\nFAIL se: quel ricorso è indicato fra gli adempimenti da compiere.\nFonte di authoring: art. 36, comma 4, d.lgs. 36/2023",
+      "pass_condition": "quel ricorso non compare nell'elenco dei rimedi da esperire",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che il termine dilatorio per la stipulazione del contratto è di trentadue giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine dilatorio per la stipulazione del contratto è di trentadue giorni.\nPASS se: compare «trentadue giorni» oppure «32 giorni» riferito al termine dilatorio\nFAIL se: è indicato un numero di giorni diverso, oppure la durata del termine dilatorio non è indicata.\nÈ indifferente: l'indicazione dell'evento da cui i trentadue giorni decorrono, se la data di scadenza indicata è quella corretta.\nFonte di authoring: art. 18, comma 3, d.lgs. 36/2023",
+      "pass_condition": "compare «trentadue giorni» oppure «32 giorni» riferito al termine dilatorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non afferma che il termine dilatorio per la stipulazione del contratto è di trentacinque giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il termine dilatorio per la stipulazione del contratto è di trentacinque giorni.\nPASS se: non compare «trentacinque giorni» né «35 giorni» riferito al termine dilatorio\nFAIL se: il termine dilatorio è indicato in trentacinque giorni.\nFonte di authoring: art. 18, comma 3, d.lgs. 36/2023",
+      "pass_condition": "non compare «trentacinque giorni» né «35 giorni» riferito al termine dilatorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che la notificazione del ricorso con contestuale domanda cautelare impedisce la stipulazione del contratto dal momento della notificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la notificazione del ricorso con contestuale domanda cautelare impedisce la stipulazione del contratto dal momento della notificazione.\nPASS se: compare l'affermazione che la notificazione dell'istanza cautelare sospende la stipulazione; compare l'affermazione che il contratto non può essere stipulato dal momento della notificazione della domanda cautelare; compare l'affermazione che la notificazione produce la sospensione obbligatoria del termine per la stipulazione\nFAIL se: l'effetto non è indicato, oppure è ricondotto a un'attività diversa dalla notificazione.\nFonte di authoring: art. 18, comma 4, d.lgs. 36/2023",
+      "pass_condition": "compare l'affermazione che la notificazione dell'istanza cautelare sospende la stipulazione; compare l'affermazione che il contratto non può essere stipulato dal momento della notificazione della domanda cautelare; compare l'affermazione che la notificazione produce la sospensione obbligatoria del termine per la stipulazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non afferma che, per impedire la stipulazione del contratto, occorre che il giudice conceda una misura cautelare.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che, per impedire la stipulazione del contratto, occorre che il giudice conceda una misura cautelare.\nPASS se: non compare l'affermazione che l'effetto impeditivo dipenda dalla concessione della misura cautelare\nFAIL se: l'effetto impeditivo è subordinato all'accoglimento della domanda cautelare.\nFonte di authoring: art. 18, comma 4, d.lgs. 36/2023",
+      "pass_condition": "non compare l'affermazione che l'effetto impeditivo dipenda dalla concessione della misura cautelare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che l'effetto sospensivo della stipulazione cessa se il giudice si dichiara incompetente oppure se fissa la data di discussione del merito senza pronunciarsi sulle misure cautelari con il consenso delle parti.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'effetto sospensivo della stipulazione cessa se il giudice si dichiara incompetente oppure se fissa la data di discussione del merito senza pronunciarsi sulle misure cautelari con il consenso delle parti.\nPASS se: compaiono entrambe le ipotesi di cessazione: la dichiarazione di incompetenza e la fissazione del merito senza pronuncia cautelare con il consenso delle parti\nFAIL se: nessuna delle due ipotesi compare, oppure ne compare una sola.\nFonte di authoring: art. 18, comma 4, secondo periodo, d.lgs. 36/2023",
+      "pass_condition": "compaiono entrambe le ipotesi di cessazione: la dichiarazione di incompetenza e la fissazione del merito senza pronuncia cautelare con il consenso delle parti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che la presentazione di un'istanza di parere di precontenzioso all'ANAC non sospende né proroga il termine per la proposizione del ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la presentazione di un'istanza di parere di precontenzioso all'ANAC non sospende né proroga il termine per la proposizione del ricorso.\nPASS se: compare, riferita al termine per ricorrere, una fra: «non sospende»; «non proroga»; «non interrompe»; «continua a decorrere»\nFAIL se: il deliverable afferma che l'istanza all'ANAC sospende, proroga o interrompe il termine, oppure il punto non è trattato.\nÈ indifferente: il giudizio sull'opportunità di presentare comunque l'istanza all'ANAC.\nFonte di authoring: art. 220, comma 1, d.lgs. 36/2023; documento 10",
+      "pass_condition": "compare, riferita al termine per ricorrere, una fra: «non sospende»; «non proroga»; «non interrompe»; «continua a decorrere»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non suggerisce di attendere il parere dell'ANAC prima di notificare il ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non suggerisce di attendere il parere dell'ANAC prima di notificare il ricorso.\nPASS se: non compare l'indicazione di attendere il parere prima di ricorrere\nFAIL se: è suggerito di presentare l'istanza all'ANAC e attendere il parere prima di notificare il ricorso.\nFonte di authoring: art. 220, comma 1, d.lgs. 36/2023",
+      "pass_condition": "non compare l'indicazione di attendere il parere prima di ricorrere",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che, se il contratto viene stipulato, il giudice che annulla l'aggiudicazione stabilisce se dichiarare inefficace il contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che, se il contratto viene stipulato, il giudice che annulla l'aggiudicazione stabilisce se dichiarare inefficace il contratto.\nPASS se: compare l'affermazione che la stipulazione non preclude la tutela; compare l'affermazione che il giudice può dichiarare inefficace il contratto; compare l'affermazione che l'inefficacia del contratto è rimessa alla valutazione del giudice\nFAIL se: il deliverable afferma che la stipulazione rende inutile o inammissibile il ricorso, oppure il punto non è trattato.\nFonte di authoring: art. 122 c.p.a.",
+      "pass_condition": "compare l'affermazione che la stipulazione non preclude la tutela; compare l'affermazione che il giudice può dichiarare inefficace il contratto; compare l'affermazione che l'inefficacia del contratto è rimessa alla valutazione del giudice",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica fra gli adempimenti la proposizione della domanda di subentro nel contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra gli adempimenti la proposizione della domanda di subentro nel contratto.\nPASS se: compare, fra le domande da proporre, una fra: «domanda di subentro»; «subentro nel contratto»; «domanda di subentrare»\nFAIL se: la domanda di subentro non compare fra gli adempimenti.\nFonte di authoring: art. 122 c.p.a.",
+      "pass_condition": "compare, fra le domande da proporre, una fra: «domanda di subentro»; «subentro nel contratto»; «domanda di subentrare»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable colloca la censura sulla nomina della commissione giudicatrice fra quelle da far valere entro il primo termine, quello decorrente dalla comunicazione di aggiudicazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable colloca la censura sulla nomina della commissione giudicatrice fra quelle da far valere entro il primo termine, quello decorrente dalla comunicazione di aggiudicazione.\nPASS se: la censura sulla nomina della commissione è associata al termine del 24 novembre 2027; la censura sulla nomina della commissione è associata al primo termine; la censura sulla nomina della commissione è associata al termine decorrente dalla comunicazione di aggiudicazione\nFAIL se: quella censura è associata al secondo termine, oppure la sua collocazione temporale non è indicata.\nÈ indifferente: il giudizio sulla fondatezza della censura.\nFonte di authoring: documenti 02 e 03; art. 93, comma 1, d.lgs. 36/2023",
+      "pass_condition": "la censura sulla nomina della commissione è associata al termine del 24 novembre 2027; la censura sulla nomina della commissione è associata al primo termine; la censura sulla nomina della commissione è associata al termine decorrente dalla comunicazione di aggiudicazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable colloca la censura sull'attribuzione del punteggio sul criterio B.2 fra quelle che ricadono nel secondo termine, quello decorrente dalla messa a disposizione della relazione tecnica.",
+      "match_criteria": "Oggetto del criterio: il deliverable colloca la censura sull'attribuzione del punteggio sul criterio B.2 fra quelle che ricadono nel secondo termine, quello decorrente dalla messa a disposizione della relazione tecnica.\nPASS se: la censura sul punteggio del criterio B.2 è associata al termine del 16 dicembre 2027; la censura sul punteggio del criterio B.2 è associata al secondo termine; la censura sul punteggio del criterio B.2 è associata al termine decorrente dalla messa a disposizione della relazione tecnica\nFAIL se: quella censura è associata al primo termine, oppure la sua collocazione temporale non è indicata.\nÈ indifferente: il giudizio sulla fondatezza della censura.\nFonte di authoring: documenti 03 e 08",
+      "pass_condition": "la censura sul punteggio del criterio B.2 è associata al termine del 16 dicembre 2027; la censura sul punteggio del criterio B.2 è associata al secondo termine; la censura sul punteggio del criterio B.2 è associata al termine decorrente dalla messa a disposizione della relazione tecnica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable riconduce la censura sul punteggio del criterio B.2 al confronto fra la motivazione del verbale n. 4 e il contenuto della relazione tecnica dell'aggiudicataria.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la censura sul punteggio del criterio B.2 al confronto fra la motivazione del verbale n. 4 e il contenuto della relazione tecnica dell'aggiudicataria.\nPASS se: la censura è agganciata a entrambi i documenti: il verbale n. 4 e la relazione tecnica dell'aggiudicataria\nFAIL se: la censura è agganciata a uno solo dei due documenti, oppure a nessuno.\nFonte di authoring: documento 03, criterio B.2; documento 08, paragrafo 3",
+      "pass_condition": "la censura è agganciata a entrambi i documenti: il verbale n. 4 e la relazione tecnica dell'aggiudicataria",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che le parti oscurate della relazione tecnica non consentono di stabilire se esistano ulteriori elementi rilevanti.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le parti oscurate della relazione tecnica non consentono di stabilire se esistano ulteriori elementi rilevanti.\nPASS se: compare, riferita alle parti oscurate, una fra: «non è possibile stabilire»; «non è possibile verificare»; «resta da verificare»; «non si può escludere»\nFAIL se: il deliverable afferma che le parti oscurate sono irrilevanti, oppure non tratta il punto.\nFonte di authoring: documenti 07 e 08",
+      "pass_condition": "compare, riferita alle parti oscurate, una fra: «non è possibile stabilire»; «non è possibile verificare»; «resta da verificare»; «non si può escludere»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che l'ostensione delle parti oscurate non è consentita prima del decorso del termine per impugnare le decisioni sull'oscuramento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'ostensione delle parti oscurate non è consentita prima del decorso del termine per impugnare le decisioni sull'oscuramento.\nPASS se: compare l'affermazione che l'ostensione delle parti oscurate è differita al decorso di quel termine; compare l'affermazione che le parti oscurate non sono ostensibili prima della scadenza di quel termine\nFAIL se: il punto non è trattato, oppure è affermato che le parti oscurate sono ottenibili con una nuova istanza di accesso.\nFonte di authoring: art. 36, comma 5, d.lgs. 36/2023",
+      "pass_condition": "compare l'affermazione che l'ostensione delle parti oscurate è differita al decorso di quel termine; compare l'affermazione che le parti oscurate non sono ostensibili prima della scadenza di quel termine",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non afferma che il termine per la notificazione del ricorso principale è già scaduto alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non afferma che il termine per la notificazione del ricorso principale è già scaduto alla data di riferimento.\nPASS se: non compare l'affermazione che quel termine sia scaduto\nFAIL se: il termine per il ricorso principale è presentato come già scaduto.\nFonte di authoring: art. 120, comma 2, c.p.a.",
+      "pass_condition": "non compare l'affermazione che quel termine sia scaduto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non indica fra gli adempimenti la notificazione del ricorso presso la sede reale della stazione appaltante o presso l'Avvocatura dello Stato.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non indica fra gli adempimenti la notificazione del ricorso presso la sede reale della stazione appaltante o presso l'Avvocatura dello Stato.\nPASS se: la notificazione presso la sede reale e la notificazione presso l'Avvocatura dello Stato non compaiono fra gli adempimenti\nFAIL se: è indicata come adempimento la notificazione presso la sede reale o presso l'Avvocatura dello Stato.\nFonte di authoring: art. 120, comma 4, c.p.a.; documento 04, punto 16",
+      "pass_condition": "la notificazione presso la sede reale e la notificazione presso l'Avvocatura dello Stato non compaiono fra gli adempimenti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non afferma che il termine dilatorio non si applica perché l'appalto è basato su un accordo quadro.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non afferma che il termine dilatorio non si applica perché l'appalto è basato su un accordo quadro.\nPASS se: non compare l'affermazione che l'appalto in esame sia basato su un accordo quadro; non compare l'affermazione che il termine dilatorio non si applichi\nFAIL se: il termine dilatorio è dichiarato inapplicabile, in tutto o in parte, per effetto dell'accordo quadro richiamato nella nota interna.\nFonte di authoring: art. 18, comma 3, lettera b), d.lgs. 36/2023; documento 10",
+      "pass_condition": "non compare l'affermazione che l'appalto in esame sia basato su un accordo quadro; non compare l'affermazione che il termine dilatorio non si applichi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non indica la presa visione in piattaforma come momento da cui decorre il termine per impugnare.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non indica la presa visione in piattaforma come momento da cui decorre il termine per impugnare.\nPASS se: la presa visione non compare come decorrenza di alcun termine\nFAIL se: la presa visione del 26 ottobre 2027 è indicata come decorrenza.\nFonte di authoring: documento 06",
+      "pass_condition": "la presa visione non compare come decorrenza di alcun termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non afferma che il prospetto dei punteggi analitici non è stato reso disponibile.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non afferma che il prospetto dei punteggi analitici non è stato reso disponibile.\nPASS se: non compare l'affermazione che il prospetto dei punteggi analitici manchi o non sia stato ostenso\nFAIL se: è segnalata la mancata messa a disposizione del prospetto dei punteggi analitici.\nFonte di authoring: documenti 05 e 06",
+      "pass_condition": "non compare l'affermazione che il prospetto dei punteggi analitici manchi o non sia stato ostenso",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non indica fra gli adempimenti del cliente alcuna attività relativa allo svincolo della garanzia provvisoria.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non indica fra gli adempimenti del cliente alcuna attività relativa allo svincolo della garanzia provvisoria.\nPASS se: lo svincolo della garanzia provvisoria non compare fra gli adempimenti\nFAIL se: è indicato come adempimento lo svincolo o la richiesta di svincolo della garanzia provvisoria.\nFonte di authoring: documento 05",
+      "pass_condition": "lo svincolo della garanzia provvisoria non compare fra gli adempimenti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il ricorso sarà accolto né che sarà respinto.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il ricorso sarà accolto né che sarà respinto.\nPASS se: non compare un pronostico sull'esito del ricorso\nFAIL se: il deliverable pronostica l'esito del ricorso.\nÈ indifferente: l'indicazione dei punti che restano da verificare e dei profili di incertezza.\nFonte di authoring: 01_task.md, ultima riga dell'incarico",
+      "pass_condition": "non compare un pronostico sull'esito del ricorso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 25 ottobre 2027 come data da cui decorre il primo termine per impugnare.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 25 ottobre 2027 come data da cui decorre il primo termine per impugnare.\nPASS se: compare «25 ottobre 2027» oppure «25/10/2027» come decorrenza del primo termine\nFAIL se: è indicata una data diversa.\nFonte di authoring: documenti 05 e 06",
+      "pass_condition": "compare «25 ottobre 2027» oppure «25/10/2027» come decorrenza del primo termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable afferma che il giorno da cui il termine decorre non si computa.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il giorno da cui il termine decorre non si computa.\nPASS se: compare una fra: «il giorno iniziale non si computa»; «a decorrere dal giorno successivo»; «escluso il giorno di ricezione»; «dal 26 ottobre 2027»\nFAIL se: il passaggio non compare, oppure il termine è contato includendo il giorno iniziale. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: computo dei termini a giorni",
+      "pass_condition": "compare una fra: «il giorno iniziale non si computa»; «a decorrere dal giorno successivo»; «escluso il giorno di ricezione»; «dal 26 ottobre 2027»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 24 novembre 2027 come termine per la notificazione del ricorso principale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 24 novembre 2027 come termine per la notificazione del ricorso principale.\nPASS se: compare «24 novembre 2027» oppure «24/11/2027» come termine per la notificazione del ricorso principale\nFAIL se: è indicata una data diversa.\nFonte di authoring: art. 120, comma 2, c.p.a.",
+      "pass_condition": "compare «24 novembre 2027» oppure «24/11/2027» come termine per la notificazione del ricorso principale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 16 novembre 2027 come data da cui decorre il secondo termine.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 16 novembre 2027 come data da cui decorre il secondo termine.\nPASS se: compare «16 novembre 2027» oppure «16/11/2027» come decorrenza del secondo termine\nFAIL se: è indicata una data diversa.\nFonte di authoring: documenti 06 e 07",
+      "pass_condition": "compare «16 novembre 2027» oppure «16/11/2027» come decorrenza del secondo termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 16 dicembre 2027 come termine per far valere le censure che dipendono dalla relazione tecnica dell'aggiudicataria.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 16 dicembre 2027 come termine per far valere le censure che dipendono dalla relazione tecnica dell'aggiudicataria.\nPASS se: compare «16 dicembre 2027» oppure «16/12/2027» come termine\nFAIL se: è indicata una data diversa, oppure il secondo termine non è datato.\nFonte di authoring: art. 120, comma 2, c.p.a.",
+      "pass_condition": "compare «16 dicembre 2027» oppure «16/12/2027» come termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 4 novembre 2027 come data di scadenza del termine per impugnare le decisioni sulle richieste di oscuramento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 4 novembre 2027 come data di scadenza del termine per impugnare le decisioni sulle richieste di oscuramento.\nPASS se: compare «4 novembre 2027» oppure «04/11/2027» come scadenza di quel termine\nFAIL se: è indicata una data diversa, oppure la scadenza non è datata.\nFonte di authoring: art. 36, comma 4, d.lgs. 36/2023",
+      "pass_condition": "compare «4 novembre 2027» oppure «04/11/2027» come scadenza di quel termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable indica il 26 novembre 2027 come data di scadenza del termine dilatorio per la stipulazione del contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 26 novembre 2027 come data di scadenza del termine dilatorio per la stipulazione del contratto.\nPASS se: compare «26 novembre 2027» oppure «26/11/2027» come scadenza del termine dilatorio\nFAIL se: è indicata una data diversa.\nFonte di authoring: art. 18, comma 3, d.lgs. 36/2023; documento 05",
+      "pass_condition": "compare «26 novembre 2027» oppure «26/11/2027» come scadenza del termine dilatorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non indica il 19 novembre 2027 come termine per la notificazione del ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 19 novembre 2027 come termine per la notificazione del ricorso.\nPASS se: non compare «19 novembre 2027» né «19/11/2027» come termine per la notificazione del ricorso\nFAIL se: è indicato come termine il risultato di trenta giorni decorrenti dalla pubblicazione dell'avviso di appalto aggiudicato o dall'adozione della determina di aggiudicazione.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «19 novembre 2027» né «19/11/2027» come termine per la notificazione del ricorso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non indica il 25 novembre 2027 come termine per la notificazione del ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 25 novembre 2027 come termine per la notificazione del ricorso.\nPASS se: non compare «25 novembre 2027» né «25/11/2027» come termine per la notificazione del ricorso\nFAIL se: è indicato come termine il risultato di trenta giorni decorrenti dalla presa visione in piattaforma.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «25 novembre 2027» né «25/11/2027» come termine per la notificazione del ricorso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_rimedi.md"
+      ],
+      "title": "il deliverable non indica il 29 novembre 2027 come data di scadenza del termine dilatorio.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 29 novembre 2027 come data di scadenza del termine dilatorio.\nPASS se: non compare «29 novembre 2027» né «29/11/2027» come scadenza del termine dilatorio\nFAIL se: è indicata come scadenza del termine dilatorio il risultato di trentacinque giorni.\nFonte di authoring: derivazione errata affermata nel documento 10",
+      "pass_condition": "non compare «29 novembre 2027» né «29/11/2027» come scadenza del termine dilatorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

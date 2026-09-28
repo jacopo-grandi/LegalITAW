@@ -1,0 +1,182 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-098",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "environmental_schedule_redline.docx",
+    "note.md"
+  ],
+  "criteria_total": 54,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "A.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "18 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «18 novembre 2026» come data alla quale la nota è riferita",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-A4",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?:18°?\\s+novembre(?:\\s+2026)?|0?18\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?18\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2.150.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «2.150.000» riferito all'esposizione ambientale documentata",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C1",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?150[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "1.250.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «1.250.000» riferito alla parte non coperta dal massimale",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C2",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?250[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "15 dicembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «15 dicembre 2026» riferita al closing",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C4",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?:15°?\\s+dicembre(?:\\s+2026)?|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2026|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "15 dicembre 2028"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «15 dicembre 2028» riferita alla scadenza della garanzia ambientale",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C5",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?:15°?\\s+dicembre(?:\\s+2028)?|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2028|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*28))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "25 novembre 2025"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «25 novembre 2025» riferita al termine di avvio dei lavori",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C6",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?:25°?\\s+novembre(?:\\s+2025)?|0?25\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2025|0?25\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*25))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "43.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «43.000» riferito al costo annuo del monitoraggio",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-098-C7",
+        "type": "required_regex",
+        "artifact": "environmental_schedule_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])43[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-036",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "contratto_redline.docx",
+    "nota_delle_modifiche.md"
+  ],
+  "criteria_total": 55,
+  "proposals_count": 4,
+  "proposals": [
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "9 marzo 2026",
+        "09/03/2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «9 marzo 2026» oppure «09/03/2026» come Data di Inizio",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-036-C1",
+        "type": "required_regex",
+        "artifact": "contratto_redline.docx",
+        "patterns": [
+          "(?:(?:9°?\\s+marzo(?:\\s+2026)?|0?9\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2026|0?9\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*26)|(?:9°?\\s+marzo(?:\\s+2026)?|0?9\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2026|0?9\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "4 maggio 2026",
+        "04/05/2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «4 maggio 2026» oppure «04/05/2026»",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-036-C2",
+        "type": "required_regex",
+        "artifact": "contratto_redline.docx",
+        "patterns": [
+          "(?:(?:4°?\\s+maggio(?:\\s+2026)?|0?4\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2026|0?4\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*26)|(?:4°?\\s+maggio(?:\\s+2026)?|0?4\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2026|0?4\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "16 febbraio 2027",
+        "16/02/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «16 febbraio 2027» oppure «16/02/2027»",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-036-C4",
+        "type": "required_regex",
+        "artifact": "contratto_redline.docx",
+        "patterns": [
+          "(?:(?:16°?\\s+febbraio(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*27)|(?:16°?\\s+febbraio(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "5 settembre 2028",
+        "05/09/2028"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «5 settembre 2028» oppure «05/09/2028»",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-036-C5",
+        "type": "required_regex",
+        "artifact": "contratto_redline.docx",
+        "patterns": [
+          "(?:(?:5°?\\s+settembre(?:\\s+2028)?|0?5\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2028|0?5\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*28)|(?:5°?\\s+settembre(?:\\s+2028)?|0?5\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2028|0?5\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*28))"
+        ]
+      }
+    }
+  ]
+}

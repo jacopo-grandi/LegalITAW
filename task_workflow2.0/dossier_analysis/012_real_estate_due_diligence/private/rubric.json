@@ -1,0 +1,850 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-012",
+  "title": "Immobiliare. Due diligence su un appartamento prima del preliminare",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 52,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "i rilievi sono esposti in un elenco ordinato per priorità.",
+      "pass_condition": "l'elenco riporta un ordine dichiarato, per numerazione oppure per etichette di gravità.",
+      "fail_condition": "i rilievi compaiono senza ordine dichiarato.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 ordine di priorità\nissue: A-01 · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: i rilievi sono esposti in un elenco ordinato per priorità.\nPass se: l'elenco riporta un ordine dichiarato, per numerazione oppure per etichette di gravità.\nFail se: i rilievi compaiono senza ordine dichiarato."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni rilievo riporta il nome o il numero di un documento del fascicolo.",
+      "pass_condition": "in ciascun rilievo compare un riferimento a un documento.",
+      "fail_condition": "almeno un rilievo è privo di riferimento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 ancoraggio al documento\nissue: A-02 · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: ogni rilievo riporta il nome o il numero di un documento del fascicolo.\nPass se: in ciascun rilievo compare un riferimento a un documento.\nFail se: almeno un rilievo è privo di riferimento."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contiene una parte dedicata agli elementi che risultano regolari.",
+      "pass_condition": "compare una sezione o un elenco di elementi indicati come regolari.",
+      "fail_condition": "il deliverable riporta soltanto i rilievi.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 sezione di ciò che è in ordine\nissue: A-03 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: il deliverable contiene una parte dedicata agli elementi che risultano regolari.\nPass se: compare una sezione o un elenco di elementi indicati come regolari.\nFail se: il deliverable riporta soltanto i rilievi."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che cosa manca dal fascicolo e a chi va richiesto.",
+      "pass_condition": "per ciascuna lacuna compare il soggetto a cui rivolgersi.",
+      "fail_condition": "le lacune sono elencate senza destinatario, oppure non compaiono.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 sezione delle lacune\nissue: A-04 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: il deliverable indica che cosa manca dal fascicolo e a chi va richiesto.\nPass se: per ciascuna lacuna compare il soggetto a cui rivolgersi.\nFail se: le lacune sono elencate senza destinatario, oppure non compaiono."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contiene un elenco di condizioni da inserire nel preliminare.",
+      "pass_condition": "l'elenco è presente e distinto dai rilievi.",
+      "fail_condition": "le condizioni non compaiono come elenco.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 elenco delle condizioni\nissue: A-05 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: il deliverable contiene un elenco di condizioni da inserire nel preliminare.\nPass se: l'elenco è presente e distinto dai rilievi.\nFail se: le condizioni non compaiono come elenco."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "per la porzione priva di titolo e per la quota di facciata è indicato il calcolo seguito.",
+      "pass_condition": "per ciascuno dei due valori compare l'operazione da cui deriva.",
+      "fail_condition": "almeno uno dei due compare senza derivazione.",
+      "indifferent": "la derivazione dei valori letti direttamente nei documenti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.6 percorso dei valori ricavati\nissue: A-06 · tipo: presenza · gravità: media · judge: sì · fonte: prompt\nVerifica: per la porzione priva di titolo e per la quota di facciata è indicato il calcolo seguito.\nPass se: per ciascuno dei due valori compare l'operazione da cui deriva.\nFail se: almeno uno dei due compare senza derivazione.\nIndifferente: la derivazione dei valori letti direttamente nei documenti."
+    },
+    {
+      "id": "A.7",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento normativo appartiene all'elenco.",
+      "fail_condition": "compare un riferimento fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.7 fonti dichiarate\nissue: A-07 · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento normativo appartiene all'elenco.\nFail se: compare un riferimento fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 18,00 mq la superficie coperta dal permesso di costruire in sanatoria del 2007.",
+      "pass_condition": "compare il valore 18,00 mq, o 18 mq, riferito alla sanatoria.",
+      "fail_condition": "compare un valore diverso, oppure il valore non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.1 superficie condonata\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: All. 7\nVerifica: il deliverable indica in 18,00 mq la superficie coperta dal permesso di costruire in sanatoria del 2007.\nPass se: compare il valore 18,00 mq, o 18 mq, riferito alla sanatoria.\nFail se: compare un valore diverso, oppure il valore non compare."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 26,40 mq la superficie della chiusura rilevata in sede di sopralluogo.",
+      "pass_condition": "compare il valore 26,40 mq riferito al locale ricavato dalla chiusura della loggia.",
+      "fail_condition": "compare un valore diverso, oppure il valore non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.2 superficie rilevata della chiusura\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: All. 8, punto 3\nVerifica: il deliverable indica in 26,40 mq la superficie della chiusura rilevata in sede di sopralluogo.\nPass se: compare il valore 26,40 mq riferito al locale ricavato dalla chiusura della loggia.\nFail se: compare un valore diverso, oppure il valore non compare."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il permesso in sanatoria non copre l'intera chiusura realizzata.",
+      "pass_condition": "la copertura parziale della sanatoria è affermata. Varianti accettate: «la sanatoria copre solo una parte», «la sanatoria non copre l'eccedenza», «parte della chiusura resta priva di titolo».",
+      "fail_condition": "il deliverable tratta la chiusura come integralmente sanata.",
+      "indifferent": "la quantificazione della porzione, verificata come valore in C.4.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.3 la sanatoria non copre l'intera chiusura\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 7 contro All. 8\nVerifica: il deliverable afferma che il permesso in sanatoria non copre l'intera chiusura realizzata.\nPass se: la copertura parziale della sanatoria è affermata.\nVarianti accettate: «la sanatoria copre solo una parte», «la sanatoria non copre l'eccedenza», «parte della chiusura resta priva di titolo».\nFail se: il deliverable tratta la chiusura come integralmente sanata.\nIndifferente: la quantificazione della porzione, verificata come valore in C.4."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che per il servizio igienico presente nel subalterno 12 non risulta agli atti alcun titolo edilizio.",
+      "pass_condition": "l'assenza di titolo è affermata. Varianti accettate: «privo di titolo», «senza titolo edilizio», «non autorizzato», «non risulta alcun titolo».",
+      "fail_condition": "il servizio igienico non è rilevato, oppure è indicato come assentito.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.4 servizio igienico nel deposito\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 8, punti 2 e 5\nVerifica: il deliverable afferma che per il servizio igienico presente nel subalterno 12 non risulta agli atti alcun titolo edilizio.\nPass se: l'assenza di titolo è affermata.\nVarianti accettate: «privo di titolo», «senza titolo edilizio», «non autorizzato», «non risulta alcun titolo».\nFail se: il servizio igienico non è rilevato, oppure è indicato come assentito."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable colloca l'intervento nel deposito nel 2016.",
+      "pass_condition": "compare l'anno 2016, o la data di aprile 2016, riferita a quell'intervento.",
+      "fail_condition": "compare un'altra epoca, oppure l'epoca non compare.",
+      "indifferent": "il giorno esatto e la precisazione che l'epoca risulta da dichiarazione della proprietà.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.5 epoca dell'intervento nel deposito\nissue: I-02 · tipo: valore · gravità: media · judge: no · fonte: All. 8, punto 5\nVerifica: il deliverable colloca l'intervento nel deposito nel 2016.\nPass se: compare l'anno 2016, o la data di aprile 2016, riferita a quell'intervento.\nFail se: compare un'altra epoca, oppure l'epoca non compare.\nIndifferente: il giorno esatto e la precisazione che l'epoca risulta da dichiarazione della proprietà."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la regolarizzazione delle opere prive di titolo come esito non assicurato.",
+      "pass_condition": "riferita alla regolarizzazione, l'incertezza dell'esito è affermata. Varianti accettate: «esito non certo», «da verificare», «subordinata all'accoglimento dell'istanza», «non assicurata», «non sanabile», «con possibile ordine di ripristino».",
+      "fail_condition": "la regolarizzazione è presentata come adempimento certo o come mera formalità.",
+      "indifferent": "il percorso di regolarizzazione indicato e il richiamo alla disciplina di zona.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.6 esito della regolarizzazione\nissue: I-03 · tipo: qualificazione · gravità: alta · judge: sì · fonte: All. 6 + All. 7 + All. 8\nVerifica: il deliverable qualifica la regolarizzazione delle opere prive di titolo come esito non assicurato.\nPass se: riferita alla regolarizzazione, l'incertezza dell'esito è affermata.\nVarianti accettate: «esito non certo», «da verificare», «subordinata all'accoglimento dell'istanza», «non assicurata», «non sanabile», «con possibile ordine di ripristino».\nFail se: la regolarizzazione è presentata come adempimento certo o come mera formalità.\nIndifferente: il percorso di regolarizzazione indicato e il richiamo alla disciplina di zona."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la planimetria depositata del subalterno 11 non rappresenta lo stato di fatto.",
+      "pass_condition": "la difformità rispetto allo stato di fatto è affermata. Varianti accettate: «non conforme allo stato di fatto», «difforme», «non aggiornata rispetto allo stato dei luoghi».",
+      "fail_condition": "la planimetria è indicata come conforme, oppure il raffronto non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.7 planimetria del sub 11\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 3 contro All. 8, punto 4\nVerifica: il deliverable afferma che la planimetria depositata del subalterno 11 non rappresenta lo stato di fatto.\nPass se: la difformità rispetto allo stato di fatto è affermata.\nVarianti accettate: «non conforme allo stato di fatto», «difforme», «non aggiornata rispetto allo stato dei luoghi».\nFail se: la planimetria è indicata come conforme, oppure il raffronto non compare."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la planimetria depositata del subalterno 12 non rappresenta il servizio igienico.",
+      "pass_condition": "compare l'indicazione che il servizio igienico non risulta nella planimetria del deposito.",
+      "fail_condition": "il deposito è indicato come catastalmente conforme, oppure il raffronto non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.8 planimetria del sub 12\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 4 contro All. 8, punto 6\nVerifica: il deliverable afferma che la planimetria depositata del subalterno 12 non rappresenta il servizio igienico.\nPass se: compare l'indicazione che il servizio igienico non risulta nella planimetria del deposito.\nFail se: il deposito è indicato come catastalmente conforme, oppure il raffronto non compare."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le planimetrie vanno aggiornate prima del rogito.",
+      "pass_condition": "l'aggiornamento è collocato prima dell'atto. Varianti accettate: «prima del rogito», «prima della stipula», «prima dell'atto».",
+      "fail_condition": "l'aggiornamento è collocato dopo l'atto, oppure la tempistica non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.9 aggiornamento catastale prima del rogito\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 3 + All. 4 + All. 8; art. 29, co. 1-bis, L. 52/1985\nVerifica: il deliverable afferma che le planimetrie vanno aggiornate prima del rogito.\nPass se: l'aggiornamento è collocato prima dell'atto.\nVarianti accettate: «prima del rogito», «prima della stipula», «prima dell'atto».\nFail se: l'aggiornamento è collocato dopo l'atto, oppure la tempistica non compare."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable pone a carico del venditore l'esecuzione dell'aggiornamento catastale.",
+      "pass_condition": "l'onere di provvedere è attribuito al venditore o alla parte venditrice.",
+      "fail_condition": "l'onere è posto sull'acquirente, oppure l'attribuzione non compare.",
+      "indifferent": "l'importo indicato e il riparto delle sole spese.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10 esecuzione dell'aggiornamento\nissue: I-06 · tipo: attribuzione · gravità: media · judge: sì · fonte: All. 9, art. 7 + All. 3 e All. 4\nVerifica: il deliverable pone a carico del venditore l'esecuzione dell'aggiornamento catastale.\nPass se: l'onere di provvedere è attribuito al venditore o alla parte venditrice.\nFail se: l'onere è posto sull'acquirente, oppure l'attribuzione non compare.\nIndifferente: l'importo indicato e il riparto delle sole spese."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la difformità come impedimento da rimuovere prima della stipula.",
+      "pass_condition": "riferita alla difformità, compare la qualificazione di impedimento da rimuovere prima dell'atto. Varianti accettate: «impedimento alla stipula», «ostacolo al rogito», «da regolarizzare prima dell'atto».",
+      "fail_condition": "la difformità è qualificata come causa di nullità già prodotta.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.11 qualificazione del difetto\nissue: I-07 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 46 D.P.R. 380/2001; art. 29, co. 1-bis, L. 52/1985\nVerifica: il deliverable qualifica la difformità come impedimento da rimuovere prima della stipula.\nPass se: riferita alla difformità, compare la qualificazione di impedimento da rimuovere prima dell'atto.\nVarianti accettate: «impedimento alla stipula», «ostacolo al rogito», «da regolarizzare prima dell'atto».\nFail se: la difformità è qualificata come causa di nullità già prodotta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'atto di compravendita è nullo.",
+      "pass_condition": "non compare l'affermazione di una nullità già prodotta.",
+      "fail_condition": "compare tale affermazione.",
+      "indifferent": "l'indicazione del rischio che l'atto non possa essere stipulato allo stato.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 divieto di dichiarare nullo l'atto\nissue: N-06 · tipo: assenza · gravità: alta · judge: sì · fonte: nessun atto stipulato alla data di riferimento\nVerifica: il deliverable non afferma che l'atto di compravendita è nullo.\nPass se: non compare l'affermazione di una nullità già prodotta.\nFail se: compare tale affermazione.\nIndifferente: l'indicazione del rischio che l'atto non possa essere stipulato allo stato."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il deposito come subalterno 12, distinto dal subalterno 11.",
+      "pass_condition": "compaiono entrambi gli identificativi, sub 11 e sub 12, riferiti alle due unità.",
+      "fail_condition": "compare un solo subalterno, oppure i due sono trattati come un'unica unità.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 subalterno del deposito\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: All. 1 + All. 2\nVerifica: il deliverable indica il deposito come subalterno 12, distinto dal subalterno 11.\nPass se: compaiono entrambi gli identificativi, sub 11 e sub 12, riferiti alle due unità.\nFail se: compare un solo subalterno, oppure i due sono trattati come un'unica unità."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica fra le condizioni l'identificazione di entrambe le unità nel preliminare.",
+      "pass_condition": "fra le condizioni compare l'indicazione di individuare anche il deposito.",
+      "fail_condition": "le condizioni riguardano soltanto l'appartamento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 identificazione nel preliminare\nissue: I-08 · tipo: presenza · gravità: media · judge: sì · fonte: All. 12\nVerifica: il deliverable indica fra le condizioni l'identificazione di entrambe le unità nel preliminare.\nPass se: fra le condizioni compare l'indicazione di individuare anche il deposito.\nFail se: le condizioni riguardano soltanto l'appartamento."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la provenienza donativa non espone l'acquirente alla restituzione del bene in natura.",
+      "pass_condition": "l'assenza di esposizione dell'acquirente alla restituzione in natura è affermata. Varianti accettate: «nessun rischio di restituzione in natura», «l'acquirente non è esposto all'azione di restituzione», «la tutela del legittimario opera per equivalente».",
+      "fail_condition": "il deliverable indica un rischio di restituzione del bene a carico dell'acquirente.",
+      "indifferent": "la menzione della donazione fra i dati della provenienza e il richiamo all'opponibilità della domanda di riduzione trascritta.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 provenienza donativa\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 9 + All. 12 (donante in vita); art. 563 c.c. come sostituito dall'art. 44 L. 182/2025\nVerifica: il deliverable afferma che la provenienza donativa non espone l'acquirente alla restituzione del bene in natura.\nPass se: l'assenza di esposizione dell'acquirente alla restituzione in natura è affermata.\nVarianti accettate: «nessun rischio di restituzione in natura», «l'acquirente non è esposto all'azione di restituzione», «la tutela del legittimario opera per equivalente».\nFail se: il deliverable indica un rischio di restituzione del bene a carico dell'acquirente.\nIndifferente: la menzione della donazione fra i dati della provenienza e il richiamo all'opponibilità della domanda di riduzione trascritta."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non misura il rischio della provenienza donativa sul termine di venti anni dalla trascrizione.",
+      "pass_condition": "non compaiono il termine ventennale né la data del 20 marzo 2039 come misura del rischio.",
+      "fail_condition": "compare il ventennio, o quella data, come misura del rischio.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 divieto del termine ventennale\nissue: N-04 · tipo: assenza · gravità: alta · judge: sì · fonte: successione non aperta, regime non operante\nVerifica: il deliverable non misura il rischio della provenienza donativa sul termine di venti anni dalla trascrizione.\nPass se: non compaiono il termine ventennale né la data del 20 marzo 2039 come misura del rischio.\nFail se: compare il ventennio, o quella data, come misura del rischio."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non richiede, fra le condizioni, atti di rinuncia dei legittimari, assensi dei familiari del donante o polizze a copertura del rischio di restituzione.",
+      "pass_condition": "nessuna di queste cautele compare fra le condizioni.",
+      "fail_condition": "almeno una di esse compare fra le condizioni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 divieto di cautele sulla donazione\nissue: I-09 · tipo: assenza · gravità: media · judge: sì · fonte: I-09\nVerifica: il deliverable non richiede, fra le condizioni, atti di rinuncia dei legittimari, assensi dei familiari del donante o polizze a copertura del rischio di restituzione.\nPass se: nessuna di queste cautele compare fra le condizioni.\nFail se: almeno una di esse compare fra le condizioni."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la delibera sulla facciata è anteriore all'accettazione della proposta.",
+      "pass_condition": "compare il raffronto fra la data del 27 marzo 2026 e quella del 29 giugno 2026, oppure l'affermazione che la delibera precede la proposta.",
+      "fail_condition": "la delibera è indicata come successiva, oppure il raffronto non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 anteriorità della delibera\nissue: I-10 · tipo: presenza · gravità: media · judge: sì · fonte: All. 11 + prompt\nVerifica: il deliverable afferma che la delibera sulla facciata è anteriore all'accettazione della proposta.\nPass se: compare il raffronto fra la data del 27 marzo 2026 e quella del 29 giugno 2026, oppure l'affermazione che la delibera precede la proposta.\nFail se: la delibera è indicata come successiva, oppure il raffronto non compare."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica fra le condizioni la regolazione della quota di facciata fra le parti.",
+      "pass_condition": "fra le condizioni compare l'imputazione espressa di quella spesa.",
+      "fail_condition": "la spesa è solo menzionata fra i rilievi senza entrare fra le condizioni.",
+      "indifferent": "la soluzione proposta per il riparto e il richiamo alla solidarietà verso il condominio.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 riparto da regolare nel preliminare\nissue: I-10 · tipo: presenza · gravità: media · judge: sì · fonte: All. 11\nVerifica: il deliverable indica fra le condizioni la regolazione della quota di facciata fra le parti.\nPass se: fra le condizioni compare l'imputazione espressa di quella spesa.\nFail se: la spesa è solo menzionata fra i rilievi senza entrare fra le condizioni.\nIndifferente: la soluzione proposta per il riparto e il richiamo alla solidarietà verso il condominio."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il certificato di agibilità fra i documenti mancanti da acquisire.",
+      "pass_condition": "il certificato compare fra le lacune, con il soggetto a cui richiederlo.",
+      "fail_condition": "non compare fra le lacune.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 certificato di agibilità\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: All. 8, punto 2\nVerifica: il deliverable indica il certificato di agibilità fra i documenti mancanti da acquisire.\nPass se: il certificato compare fra le lacune, con il soggetto a cui richiederlo.\nFail se: non compare fra le lacune."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il certificato di agibilità è stato rilasciato né che non è mai stato rilasciato.",
+      "pass_condition": "il deliverable si limita a rilevarne l'assenza dal fascicolo.",
+      "fail_condition": "compare una delle due affermazioni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 divieto di presumere l'agibilità\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: All. 8, punto 2\nVerifica: il deliverable non afferma che il certificato di agibilità è stato rilasciato né che non è mai stato rilasciato.\nPass se: il deliverable si limita a rilevarne l'assenza dal fascicolo.\nFail se: compare una delle due affermazioni."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non recepisce l'affermazione dell'agenzia secondo cui la posizione della loggia è stata sistemata definitivamente con il condono.",
+      "pass_condition": "il deliverable contraddice quell'affermazione, oppure non la riprende.",
+      "fail_condition": "il deliverable la riporta come esatta.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.22 affermazione sul condono\nissue: I-12 · tipo: assenza · gravità: alta · judge: sì · fonte: All. 12 contro All. 7 e All. 8\nVerifica: il deliverable non recepisce l'affermazione dell'agenzia secondo cui la posizione della loggia è stata sistemata definitivamente con il condono.\nPass se: il deliverable contraddice quell'affermazione, oppure non la riprende.\nFail se: il deliverable la riporta come esatta."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non riprende il decorso di cinque anni dalla donazione come ragione dell'irrilevanza della provenienza donativa.",
+      "pass_condition": "quel termine non compare come ragione.",
+      "fail_condition": "compare come ragione.",
+      "indifferent": "la conclusione, se raggiunta per altra via, sull'assenza di rischio (B.15).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.23 affermazione sui cinque anni\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: All. 12\nVerifica: il deliverable non riprende il decorso di cinque anni dalla donazione come ragione dell'irrilevanza della provenienza donativa.\nPass se: quel termine non compare come ragione.\nFail se: compare come ragione.\nIndifferente: la conclusione, se raggiunta per altra via, sull'assenza di rischio (B.15)."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica fra le condizioni la regolarizzazione edilizia delle opere prive di titolo prima del rogito.",
+      "pass_condition": "fra le condizioni compare la regolarizzazione, con collocazione prima dell'atto.",
+      "fail_condition": "la regolarizzazione non compare fra le condizioni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.24 condizione sulla regolarizzazione\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: I-01 + I-02\nVerifica: il deliverable indica fra le condizioni la regolarizzazione edilizia delle opere prive di titolo prima del rogito.\nPass se: fra le condizioni compare la regolarizzazione, con collocazione prima dell'atto.\nFail se: la regolarizzazione non compare fra le condizioni."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala l'ipoteca del 2016 come gravame esistente sull'immobile.",
+      "pass_condition": "l'ipoteca non compare fra i rilievi, oppure compare fra gli elementi regolari con l'indicazione della cancellazione.",
+      "fail_condition": "l'ipoteca è indicata come gravame da cancellare o come esposizione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.25 controlled non-issue: ipoteca cancellata\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: All. 5, annotazione del 22/11/2023\nVerifica: il deliverable non segnala l'ipoteca del 2016 come gravame esistente sull'immobile.\nPass se: l'ipoteca non compare fra i rilievi, oppure compare fra gli elementi regolari con l'indicazione della cancellazione.\nFail se: l'ipoteca è indicata come gravame da cancellare o come esposizione."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la classe energetica F, considerata isolatamente, come irregolarità giuridica.",
+      "pass_condition": "la classe F non è qualificata di per sé come violazione o impedimento al trasferimento.",
+      "fail_condition": "la sola classe F è presentata come irregolarità.",
+      "indifferent": "la sua menzione economica; la richiesta distinta di un APE aggiornato e coerente con lo stato regolarizzato dell'immobile.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.26 controlled non-issue: classe energetica\nissue: N-02 · tipo: assenza · gravità: media · judge: sì · fonte: All. 10\nVerifica: il deliverable non segnala la classe energetica F, considerata isolatamente, come irregolarità giuridica.\nPass se: la classe F non è qualificata di per sé come violazione o impedimento al trasferimento.\nFail se: la sola classe F è presentata come irregolarità.\nIndifferente: la sua menzione economica; la richiesta distinta di un APE aggiornato e coerente con lo stato regolarizzato dell'immobile."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la fascia di rispetto stradale o la zona di rispetto acquedottistica come limite al trasferimento.",
+      "pass_condition": "non compaiono fra i rilievi.",
+      "fail_condition": "almeno una compare fra i rilievi.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.27 controlled non-issue: fasce di rispetto\nissue: N-03 · tipo: assenza · gravità: media · judge: sì · fonte: All. 6\nVerifica: il deliverable non segnala la fascia di rispetto stradale o la zona di rispetto acquedottistica come limite al trasferimento.\nPass se: non compaiono fra i rilievi.\nFail se: almeno una compare fra i rilievi."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come opera priva di titolo la sostituzione dei serramenti esterni del 2014.",
+      "pass_condition": "quella sostituzione non compare fra le opere prive di titolo.",
+      "fail_condition": "compare fra le opere prive di titolo.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.28 controlled non-issue: sostituzione dei serramenti\nissue: N-05 · tipo: assenza · gravità: media · judge: sì · fonte: All. 8, punto 2\nVerifica: il deliverable non qualifica come opera priva di titolo la sostituzione dei serramenti esterni del 2014.\nPass se: quella sostituzione non compare fra le opere prive di titolo.\nFail se: compare fra le opere prive di titolo."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che sull'immobile gravano vincoli paesaggistici o storico-artistici.",
+      "pass_condition": "non compare l'affermazione di tali vincoli.",
+      "fail_condition": "compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.29 simmetria sui vincoli\nissue: S-01 · tipo: assenza · gravità: media · judge: sì · fonte: All. 6\nVerifica: il deliverable non afferma che sull'immobile gravano vincoli paesaggistici o storico-artistici.\nPass se: non compare l'affermazione di tali vincoli.\nFail se: compare."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il Comune rilascerà la sanatoria delle opere prive di titolo.",
+      "pass_condition": "non compare l'affermazione di un rilascio futuro.",
+      "fail_condition": "compare.",
+      "indifferent": "l'indicazione dei presupposti da verificare.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.30 divieto di presunzione dell'esito\nissue: S-03 · tipo: assenza · gravità: alta · judge: sì · fonte: I-03\nVerifica: il deliverable non afferma che il Comune rilascerà la sanatoria delle opere prive di titolo.\nPass se: non compare l'affermazione di un rilascio futuro.\nFail se: compare.\nIndifferente: l'indicazione dei presupposti da verificare."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'atto di donazione del 2019 è nullo.",
+      "pass_condition": "non compare l'affermazione della nullità di quell'atto.",
+      "fail_condition": "compare tale affermazione.",
+      "indifferent": "il rilievo che la dichiarazione di conformità resa in quell'atto non corrisponde allo stato di fatto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.31 divieto di dichiarare nulla la donazione\nissue: N-06 · tipo: assenza · gravità: alta · judge: sì · fonte: All. 9, art. 7 contro All. 8, punto 5\nVerifica: il deliverable non afferma che l'atto di donazione del 2019 è nullo.\nPass se: non compare l'affermazione della nullità di quell'atto.\nFail se: compare tale affermazione.\nIndifferente: il rilievo che la dichiarazione di conformità resa in quell'atto non corrisponde allo stato di fatto."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che l'ispezione a nome del solo venditore e l'atto di donazione del 2019 non bastano a documentare la continuità dei titoli e tutte le formalità rilevanti.",
+      "pass_condition": "è richiesta una verifica notarile o ipotecaria completa, aggiornata e riferita all'immobile e alla continuità dei passaggi.",
+      "fail_condition": "il titolo è dichiarato definitivamente libero e continuo sulla base dei soli atti presenti.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.32 continuità dei titoli non dimostrata\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 5 + All. 9\nVerifica: il deliverable rileva che l'ispezione a nome del solo venditore e l'atto di donazione del 2019 non bastano a documentare la continuità dei titoli e tutte le formalità rilevanti.\nPass se: è richiesta una verifica notarile o ipotecaria completa, aggiornata e riferita all'immobile e alla continuità dei passaggi.\nFail se: il titolo è dichiarato definitivamente libero e continuo sulla base dei soli atti presenti."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable richiede al Comune il fascicolo urbanistico-edilizio completo, inclusi titoli, elaborati e allegati richiamati ma non presenti.",
+      "pass_condition": "la documentazione comunale completa compare fra le lacune, con il soggetto a cui richiederla.",
+      "fail_condition": "il certificato di destinazione urbanistica è trattato come prova definitiva della regolarità del fabbricato.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.33 documentazione urbanistica comunale completa\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: All. 6 + All. 7 + All. 8\nVerifica: il deliverable richiede al Comune il fascicolo urbanistico-edilizio completo, inclusi titoli, elaborati e allegati richiamati ma non presenti.\nPass se: la documentazione comunale completa compare fra le lacune, con il soggetto a cui richiederla.\nFail se: il certificato di destinazione urbanistica è trattato come prova definitiva della regolarità del fabbricato."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable richiede all'amministratore una dichiarazione aggiornata su pagamenti, morosità, liti, lavori deliberati e ulteriori pendenze condominiali.",
+      "pass_condition": "almeno situazione pagamenti e delibere/lavori aggiornati compaiono fra le lacune.",
+      "fail_condition": "il solo verbale dell'ultima assemblea è trattato come fascicolo condominiale completo.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.34 situazione condominiale aggiornata\nissue: I-15 · tipo: presenza · gravità: media · judge: sì · fonte: All. 11\nVerifica: il deliverable richiede all'amministratore una dichiarazione aggiornata su pagamenti, morosità, liti, lavori deliberati e ulteriori pendenze condominiali.\nPass se: almeno situazione pagamenti e delibere/lavori aggiornati compaiono fra le lacune.\nFail se: il solo verbale dell'ultima assemblea è trattato come fascicolo condominiale completo."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable richiede di verificare o aggiornare l'APE dopo la definizione dello stato edilizio e catastale, poiché le superfici documentate non coincidono.",
+      "pass_condition": "la coerenza dell'APE con lo stato regolarizzato compare fra le verifiche o condizioni.",
+      "fail_condition": "l'APE è dichiarato senz'altro rappresentativo dello stato reale senza affrontare la divergenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.35 APE coerente con lo stato regolarizzato\nissue: I-16 · tipo: presenza · gravità: media · judge: sì · fonte: All. 8 + All. 10\nVerifica: il deliverable richiede di verificare o aggiornare l'APE dopo la definizione dello stato edilizio e catastale, poiché le superfici documentate non coincidono.\nPass se: la coerenza dell'APE con lo stato regolarizzato compare fra le verifiche o condizioni.\nFail se: l'APE è dichiarato senz'altro rappresentativo dello stato reale senza affrontare la divergenza."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable inserisce fra le condizioni un aggiornamento delle ispezioni ipotecarie e pregiudizievoli in prossimità del preliminare e del rogito.",
+      "pass_condition": "è richiesta almeno una verifica aggiornata prima della stipula.",
+      "fail_condition": "l'ispezione già presente è considerata sufficiente fino al rogito.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.36 ispezioni aggiornate prima della stipula\nissue: I-17 · tipo: presenza · gravità: alta · judge: sì · fonte: data di riferimento + All. 5\nVerifica: il deliverable inserisce fra le condizioni un aggiornamento delle ispezioni ipotecarie e pregiudizievoli in prossimità del preliminare e del rogito.\nPass se: è richiesta almeno una verifica aggiornata prima della stipula.\nFail se: l'ispezione già presente è considerata sufficiente fino al rogito."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega le principali lacune a condizioni del preliminare, includendo regolarizzazione, aggiornamento catastale, verifica del titolo e documenti mancanti essenziali.",
+      "pass_condition": "almeno questi quattro gruppi sono tradotti in condizioni o presupposti documentali prima del rogito.",
+      "fail_condition": "le lacune sono soltanto elencate senza essere tradotte in condizioni operative. C. VALORI CALCOLATI E SOGLIE",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.37 condizioni sospensive e rimedi\nissue: I-18 · tipo: presenza · gravità: alta · judge: sì · fonte: sintesi delle lacune\nVerifica: il deliverable collega le principali lacune a condizioni del preliminare, includendo regolarizzazione, aggiornamento catastale, verifica del titolo e documenti mancanti essenziali.\nPass se: almeno questi quattro gruppi sono tradotti in condizioni o presupposti documentali prima del rogito.\nFail se: le lacune sono soltanto elencate senza essere tradotte in condizioni operative."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 96,20 mq la superficie del subalterno 11 rappresentata in planimetria.",
+      "pass_condition": "compare quel valore con quella funzione.",
+      "fail_condition": "compare un valore diverso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 superficie in planimetria\nissue: C-01 · tipo: valore · gravità: alta · judge: no · fonte: All. 3\nVerifica: il deliverable indica in 96,20 mq la superficie del subalterno 11 rappresentata in planimetria.\nPass se: compare quel valore con quella funzione.\nFail se: compare un valore diverso."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 104,60 mq la superficie del subalterno 11 rilevata.",
+      "pass_condition": "compare quel valore con quella funzione.",
+      "fail_condition": "compare un valore diverso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 superficie rilevata\nissue: C-02 · tipo: valore · gravità: alta · judge: no · fonte: All. 8\nVerifica: il deliverable indica in 104,60 mq la superficie del subalterno 11 rilevata.\nPass se: compare quel valore con quella funzione.\nFail se: compare un valore diverso."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riporta la sottrazione fra la superficie rilevata della chiusura e quella condonata.",
+      "pass_condition": "compare l'operazione fra 26,40 e 18,00, oppure quella fra 104,60 e 96,20.",
+      "fail_condition": "il valore di 8,40 compare senza derivazione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 passaggio del calcolo\nissue: C-03 · tipo: presenza · gravità: media · judge: sì · fonte: All. 7 + All. 8\nVerifica: il deliverable riporta la sottrazione fra la superficie rilevata della chiusura e quella condonata.\nPass se: compare l'operazione fra 26,40 e 18,00, oppure quella fra 104,60 e 96,20.\nFail se: il valore di 8,40 compare senza derivazione."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica 8,40 mq come porzione priva di titolo.",
+      "pass_condition": "compare quel valore.",
+      "fail_condition": "compare un valore diverso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 porzione priva di titolo\nissue: C-04 · tipo: valore · gravità: alta · judge: no · fonte: 26,40 meno 18,00\nVerifica: il deliverable indica 8,40 mq come porzione priva di titolo.\nPass se: compare quel valore.\nFail se: compare un valore diverso."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica 26,40 mq come superficie coperta dalla sanatoria.",
+      "pass_condition": "quel valore non è attribuito alla sanatoria.",
+      "fail_condition": "lo è.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 derivazione errata sulla superficie condonata\nissue: C-06 · tipo: assenza · gravità: media · judge: sì · fonte: diagnostica\nVerifica: il deliverable non indica 26,40 mq come superficie coperta dalla sanatoria.\nPass se: quel valore non è attribuito alla sanatoria.\nFail se: lo è."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'intera chiusura di 26,40 mq come priva di titolo.",
+      "pass_condition": "la porzione priva di titolo resta circoscritta a 8,40 mq.",
+      "fail_condition": "l'intera chiusura è indicata come priva di titolo.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 derivazione errata sull'estensione dell'abuso\nissue: C-06 · tipo: assenza · gravità: media · judge: sì · fonte: diagnostica\nVerifica: il deliverable non indica l'intera chiusura di 26,40 mq come priva di titolo.\nPass se: la porzione priva di titolo resta circoscritta a 8,40 mq.\nFail se: l'intera chiusura è indicata come priva di titolo."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica 7.899,60 euro come quota riferita all'unità in trattativa.",
+      "pass_condition": "compare quel valore, o 7.900 euro.",
+      "fail_condition": "compare un valore diverso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 quota di facciata\nissue: C-05 · tipo: valore · gravità: media · judge: no · fonte: All. 11\nVerifica: il deliverable indica 7.899,60 euro come quota riferita all'unità in trattativa.\nPass se: compare quel valore, o 7.900 euro.\nFail se: compare un valore diverso."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riporta il calcolo della quota dai millesimi.",
+      "pass_condition": "compare l'operazione fra 90.800,00 euro e 87/1000.",
+      "fail_condition": "la quota compare senza derivazione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.8 derivazione della quota\nissue: C-05 · tipo: presenza · gravità: media · judge: sì · fonte: All. 11\nVerifica: il deliverable riporta il calcolo della quota dai millesimi.\nPass se: compare l'operazione fra 90.800,00 euro e 87/1000.\nFail se: la quota compare senza derivazione."
+    }
+  ]
+}

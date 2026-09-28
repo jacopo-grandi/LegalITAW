@@ -1,0 +1,123 @@
+{
+  "task_id": "WF2-086",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "soglia fornitore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la quota del fornitore e' ventotto per cento sul mercato rilevante indicato",
+      "evidenza": "report quote"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "soglia acquirente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la quota dell'acquirente e' otto per cento sul mercato di acquisto",
+      "evidenza": "report quote"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "prezzo minimo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 5.2 impone un prezzo minimo di rivendita e va eliminata",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "monitoraggio sconti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la perdita del bonus sotto il novantacinque per cento del listino rafforza l'RPM",
+      "evidenza": "policy bonus"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "prezzo raccomandato",
+      "gravita": "media",
+      "affermazione_richiesta": "un prezzo raccomandato puo' restare solo senza pressioni o incentivi",
+      "evidenza": "bozza e orientamenti"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "vendite passive",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 7 vieta consegne a richieste spontanee fuori zona e va rimossa",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "vendite attive",
+      "gravita": "media",
+      "affermazione_richiesta": "la limitazione delle campagne mirate va circoscritta al territorio esclusivo allocato",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "uso di internet",
+      "gravita": "media",
+      "affermazione_richiesta": "il tetto del venti per cento alle vendite online limita il canale e va eliminato",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "marketplace",
+      "gravita": "media",
+      "affermazione_richiesta": "il divieto di marketplace richiede applicazione uniforme e contesto del sistema selettivo",
+      "evidenza": "criteri rete"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "comparatore prezzi",
+      "gravita": "media",
+      "affermazione_richiesta": "il divieto di ogni comparatore elimina un intero canale pubblicitario",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "MFN ampia",
+      "gravita": "media",
+      "affermazione_richiesta": "la parity verso tutti i canali terzi e diretti e' piu' ampia del necessario",
+      "evidenza": "bozza contratto"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "cross-supply",
+      "gravita": "media",
+      "affermazione_richiesta": "il divieto di forniture incrociate tra autorizzati va eliminato",
+      "evidenza": "bozza contratto"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "standard fotografico",
+      "oggetto": "standard fotografico",
+      "chiave_nel_criterio": "standard fotografico",
+      "perche_non_e_issue": "lo standard fotografico uniforme e verificabile non e' un divieto di vendita online",
+      "criterio_assenza": "Il deliverable non presenta standard fotografico come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "sede del punto vendita",
+      "oggetto": "sede del punto vendita",
+      "chiave_nel_criterio": "sede del punto vendita",
+      "perche_non_e_issue": "l'approvazione della sede fisica non equivale al divieto di vendite passive",
+      "criterio_assenza": "Il deliverable non presenta sede del punto vendita come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "prezzo massimo",
+      "oggetto": "prezzo massimo",
+      "chiave_nel_criterio": "prezzo massimo",
+      "perche_non_e_issue": "il prezzo massimo privo di pressioni non e' un prezzo minimo",
+      "criterio_assenza": "Il deliverable non presenta prezzo massimo come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "marchio sulla vetrina",
+      "oggetto": "marchio sulla vetrina",
+      "chiave_nel_criterio": "marchio sulla vetrina",
+      "perche_non_e_issue": "le regole d'uso del marchio non costituiscono da sole una MFN",
+      "criterio_assenza": "Il deliverable non presenta marchio sulla vetrina come rilievo autonomo."
+    }
+  ]
+}

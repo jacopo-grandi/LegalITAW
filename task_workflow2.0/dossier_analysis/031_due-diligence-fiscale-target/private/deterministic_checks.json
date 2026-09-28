@@ -1,0 +1,403 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-031",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "red_flag_fiscali.md"
+  ],
+  "criteria_total": 65,
+  "proposals_count": 16,
+  "proposals": [
+    {
+      "criterion_id": "B.20",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "1.150.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «1.150.000» come limite della responsabilita' solidale",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-B20",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?150[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "148.800"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «148.800» riferito al rilievo sulle sponsorizzazioni",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C1",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])148[.\\s]?800(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "136.400"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «136.400» riferito al rilievo sull'imposta sul valore aggiunto",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C2",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])136[.\\s]?400(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "31 dicembre 2028",
+        "31/12/2028"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «31 dicembre 2028» oppure «31/12/2028» riferito al periodo d'imposta 2022",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C3",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?:31°?\\s+dicembre(?:\\s+2028)?|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2028|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*28)|(?:31°?\\s+dicembre(?:\\s+2028)?|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2028|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*28))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "31 dicembre 2029",
+        "31/12/2029"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «31 dicembre 2029» oppure «31/12/2029» riferito al periodo d'imposta 2023",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C4",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?:31°?\\s+dicembre(?:\\s+2029)?|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2029|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*29)|(?:31°?\\s+dicembre(?:\\s+2029)?|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2029|0?31\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*29))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "132.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «132.000» come limite di deducibilita'",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C7",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])132[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "180.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «180.000» come eccedenza indeducibile",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C8",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])180[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.9",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "43.200"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «43.200» come maggiore IRES del periodo d'imposta 2026",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C9",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])43[.\\s]?200(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.11",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "3.600.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «3.600.000» come soglia dei ricavi",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C11",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])3[.\\s]?600[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.12",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "920.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «920.000» come soglia delle spese per prestazioni di lavoro subordinato",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C12",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])920[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.16",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "890.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «890.000» come importo massimo riportabile",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C16",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])890[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.17",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2.530.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «2.530.000» come importo delle perdite non riportabili",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C17",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?530[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.21",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "328.400"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «328.400» come esposizione complessiva in imposta",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C21",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])328[.\\s]?400(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.22",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "178.400"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «178.400» come importo indennizzabile al netto dell'accantonamento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C22",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])178[.\\s]?400(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.23",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "28 aprile 2030",
+        "28/04/2030"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «28 aprile 2030» oppure «28/04/2030» come scadenza della garanzia fiscale",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C23",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?:28°?\\s+aprile(?:\\s+2030)?|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2030|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*30)|(?:28°?\\s+aprile(?:\\s+2030)?|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2030|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*30))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.24",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2024",
+        "2025",
+        "2026",
+        "2027"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono, indicati come periodi privi di copertura, «2024», «2025», «2026» e «2027»",
+      "combine": "single",
+      "check": {
+        "id": "WF2-031-C24",
+        "type": "required_regex",
+        "artifact": "red_flag_fiscali.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?024(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?025(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?026(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?027(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

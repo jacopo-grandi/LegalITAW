@@ -1,0 +1,546 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-005",
+  "title": "Amministrativo. Termine per il ricorso al TAR avverso un diniego",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 33,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable è un file documento scaricabile (.pdf o .docx).",
+      "pass_condition": "è consegnato un file documento scaricabile con estensione .pdf o .docx.",
+      "fail_condition": "non è consegnato un file documento scaricabile, oppure il file ha un’estensione diversa da .pdf o .docx.",
+      "indifferent": "Il nome del file e la sua impaginazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [valore] il deliverable è un file documento scaricabile (.pdf o .docx)."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nel deliverable compare una sola data indicata come scadenza del termine per impugnare.",
+      "pass_condition": "compare una sola data, indicata senza ambiguità come scadenza del termine per impugnare.",
+      "fail_condition": "non compare una scadenza, oppure compaiono due o più date presentate come scadenza del termine per impugnare, anche se una è indicata come alternativa.",
+      "indifferent": "Le date menzionate per eventi diversi dalla scadenza.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [valore] nel deliverable compare una sola data indicata come scadenza del termine per impugnare."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata porta il riferimento all'atto del fascicolo da cui è ricavata.",
+      "pass_condition": "ogni data ripresa dal fascicolo è accompagnata dal riferimento all'atto da cui è ricavata, e ogni data calcolata indica l'atto da cui parte il calcolo.",
+      "fail_condition": "anche una sola data ripresa dal fascicolo o calcolata è priva del riferimento all'atto.",
+      "indifferent": "la forma del rinvio (nome del file, numero o titolo del documento) e la sua collocazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] ogni data indicata porta il riferimento all'atto del fascicolo da cui è ricavata."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata porta il riferimento alla norma su cui si basa, con articolo e comma.",
+      "pass_condition": "ogni scadenza o termine indicato riporta la norma su cui si basa, con articolo e, se l'articolo è diviso in commi, comma.",
+      "fail_condition": "anche un solo termine è privo della norma, oppure la norma è citata senza articolo o senza comma.",
+      "indifferent": "le date di puro fatto (per esempio una ricezione o una comunicazione), che non si basano su una norma; la forma della citazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] ogni data indicata porta il riferimento alla norma su cui si basa, con articolo e comma."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non cita norme o decisioni fuori dall'elenco chiuso del reference pack.",
+      "pass_condition": "ogni norma citata appartiene all'elenco del reference pack: D.Lgs. 104/2010 (c.p.a.), artt. 29 e 41; L. 241/1990, art. 10-bis. Commi di questi articoli ammessi; nessuna giurisprudenza.",
+      "fail_condition": "compare anche una sola norma o decisione fuori da questo elenco, anche come ipotesi o esempio.",
+      "indifferent": "I rinvii agli atti del fascicolo non sono fonti normative.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.5 [assenza] nessun riferimento normativo o giurisprudenziale fuori dall'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che entro la data di scadenza il ricorso va notificato all'amministrazione.",
+      "pass_condition": "compare, riferito alla scadenza, una fra: «notificazione del ricorso», «notifica del ricorso», «il ricorso va notificato».",
+      "fail_condition": "la scadenza è riferita al deposito del ricorso, all'iscrizione a ruolo o al deposito presso il TAR, oppure non è indicato alcun adempimento da compiere entro la scadenza.",
+      "indifferent": "la menzione del termine di deposito successivo alla notificazione; la citazione degli artt. 29 e 41 c.p.a.",
+      "source": "artt. 29 e 41, co. 1 e 2, c.p.a.",
+      "severity": "alta",
+      "raw_text": "B.1 oggetto del termine [issue: I-01] [tipo: qualificazione]\nVerifica  il deliverable afferma che entro la data di scadenza il ricorso va notificato all'amministrazione.\nPass se  compare, riferito alla scadenza, una fra: «notificazione del ricorso», «notifica del ricorso», «il ricorso va notificato».\nFail se  la scadenza è riferita al deposito del ricorso, all'iscrizione a ruolo o al deposito presso il TAR, oppure non è indicato alcun adempimento da compiere entro la scadenza.\nIndifferente  la menzione del termine di deposito successivo alla notificazione; la citazione degli artt. 29 e 41 c.p.a.\n—— non passa al judge ——\nFonte  artt. 29 e 41, co. 1 e 2, c.p.a.    Gravità  alta"
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica l'impugnazione del diniego come azione di annullamento.",
+      "pass_condition": "compare una fra: «azione di annullamento», «ricorso per l'annullamento», «impugnazione per annullamento».",
+      "fail_condition": "l'impugnazione è qualificata come azione avverso il silenzio, come azione di accertamento o come azione di adempimento.",
+      "indifferent": "la menzione della domanda cautelare; la menzione del ricorso straordinario al Presidente della Repubblica come via alternativa.",
+      "source": "art. 29 c.p.a.",
+      "severity": "media",
+      "raw_text": "B.2 azione [issue: I-01] [tipo: qualificazione]\nVerifica  il deliverable qualifica l'impugnazione del diniego come azione di annullamento.\nPass se  compare una fra: «azione di annullamento», «ricorso per l'annullamento», «impugnazione per annullamento».\nFail se  l'impugnazione è qualificata come azione avverso il silenzio, come azione di accertamento o come azione di adempimento.\nIndifferente  la menzione della domanda cautelare; la menzione del ricorso straordinario al Presidente della Repubblica come via alternativa.\n—— non passa al judge ——\nFonte  art. 29 c.p.a.    Gravità  media"
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la decorrenza del termine alla consegna al destinatario della comunicazione del provvedimento a mezzo posta elettronica certificata.",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «ricevuta di avvenuta consegna», «RAC», «consegna della PEC», «comunicazione via PEC del provvedimento».",
+      "fail_condition": "la decorrenza è ricondotta a un altro atto o fatto del fascicolo, oppure il fatto di decorrenza non è indicato.",
+      "indifferent": "l'ora della consegna; la citazione dell'art. 41 c.p.a.",
+      "source": "Allegato 4",
+      "severity": "alta",
+      "raw_text": "B.3 fatto di decorrenza [issue: I-02] [tipo: attribuzione]\nVerifica  il deliverable riconduce la decorrenza del termine alla consegna al destinatario della comunicazione del provvedimento a mezzo posta elettronica certificata.\nPass se  la decorrenza è ricondotta a una fra: «ricevuta di avvenuta consegna», «RAC», «consegna della PEC», «comunicazione via PEC del provvedimento».\nFail se  la decorrenza è ricondotta a un altro atto o fatto del fascicolo, oppure il fatto di decorrenza non è indicato.\nIndifferente  l'ora della consegna; la citazione dell'art. 41 c.p.a.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  alta"
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'email del 23 luglio 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "quell'email non compare come momento di decorrenza né come conoscenza rilevante ai fini del termine.",
+      "fail_condition": "il termine è fatto decorrere dall'email del 23 luglio 2026, dalla sua lettura o dal suo inoltro.",
+      "indifferent": "la menzione dell'email nella ricostruzione dei fatti.",
+      "source": "Allegato 3",
+      "severity": "alta",
+      "raw_text": "B.4 email del 23 luglio [issue: I-03] [tipo: assenza]\nVerifica  il deliverable non indica l'email del 23 luglio 2026 come fatto da cui decorre il termine.\nPass se  quell'email non compare come momento di decorrenza né come conoscenza rilevante ai fini del termine.\nFail se  il termine è fatto decorrere dall'email del 23 luglio 2026, dalla sua lettura o dal suo inoltro.\nIndifferente  la menzione dell'email nella ricostruzione dei fatti.\n—— non passa al judge ——\nFonte  Allegato 3    Gravità  alta"
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la comunicazione dei motivi ostativi del 20 maggio 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "quella comunicazione non compare come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dal 20 maggio 2026.",
+      "indifferent": "la menzione della comunicazione nella ricostruzione del procedimento.",
+      "source": "Allegato 2",
+      "severity": "alta",
+      "raw_text": "B.5 preavviso di rigetto — decorrenza [issue: I-04] [tipo: assenza]\nVerifica  il deliverable non indica la comunicazione dei motivi ostativi del 20 maggio 2026 come fatto da cui decorre il termine.\nPass se  quella comunicazione non compare come momento di decorrenza.\nFail se  il termine è fatto decorrere dal 20 maggio 2026.\nIndifferente  la menzione della comunicazione nella ricostruzione del procedimento.\n—— non passa al judge ——\nFonte  Allegato 2    Gravità  alta"
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la comunicazione dei motivi ostativi del 20 maggio 2026 andava impugnata autonomamente.",
+      "pass_condition": "non compare l'affermazione che quell'atto era impugnabile né che la sua mancata impugnazione preclude l'impugnazione del diniego.",
+      "fail_condition": "l'atto è indicato come autonomamente impugnabile, oppure dalla sua mancata impugnazione è ricavata una preclusione o un'acquiescenza.",
+      "indifferent": "la qualificazione dell'atto come endoprocedimentale.",
+      "source": "art. 10-bis L. 241/1990; Allegato 2",
+      "severity": "alta",
+      "raw_text": "B.6 preavviso di rigetto — impugnabilità [issue: I-04] [tipo: assenza]\nVerifica  il deliverable non afferma che la comunicazione dei motivi ostativi del 20 maggio 2026 andava impugnata autonomamente.\nPass se  non compare l'affermazione che quell'atto era impugnabile né che la sua mancata impugnazione preclude l'impugnazione del diniego.\nFail se  l'atto è indicato come autonomamente impugnabile, oppure dalla sua mancata impugnazione è ricavata una preclusione o un'acquiescenza.\nIndifferente  la qualificazione dell'atto come endoprocedimentale.\n—— non passa al judge ——\nFonte  art. 10-bis L. 241/1990; Allegato 2    Gravità  alta"
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 30 luglio 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "la data del 30 luglio 2026 non compare come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dalla data di adozione o di protocollo del provvedimento.",
+      "indifferent": "la menzione del 30 luglio 2026 come data di adozione dell'atto.",
+      "source": "Allegato 1",
+      "severity": "alta",
+      "raw_text": "B.7 data di adozione [issue: I-05] [tipo: assenza]\nVerifica  il deliverable non indica il 30 luglio 2026 come fatto da cui decorre il termine.\nPass se  la data del 30 luglio 2026 non compare come momento di decorrenza.\nFail se  il termine è fatto decorrere dalla data di adozione o di protocollo del provvedimento.\nIndifferente  la menzione del 30 luglio 2026 come data di adozione dell'atto.\n—— non passa al judge ——\nFonte  Allegato 1    Gravità  alta"
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 10 agosto 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "la data del 10 agosto 2026 non compare come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dalla registrazione in entrata presso la società.",
+      "indifferent": "la menzione del 10 agosto 2026 come data di protocollo interno.",
+      "source": "Allegato 4",
+      "severity": "alta",
+      "raw_text": "B.8 protocollo del destinatario [issue: I-06] [tipo: assenza]\nVerifica  il deliverable non indica il 10 agosto 2026 come fatto da cui decorre il termine.\nPass se  la data del 10 agosto 2026 non compare come momento di decorrenza.\nFail se  il termine è fatto decorrere dalla registrazione in entrata presso la società.\nIndifferente  la menzione del 10 agosto 2026 come data di protocollo interno.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  alta"
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la pubblicazione all'albo o la sua scadenza come fatto da cui decorre il termine.",
+      "pass_condition": "né il 31 luglio 2026 né il 14 agosto 2026 compaiono come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dall'inizio o dalla scadenza della pubblicazione all'albo.",
+      "indifferent": "la menzione della pubblicazione nella ricostruzione dei fatti.",
+      "source": "art. 41, co. 2, seconda parte, c.p.a.; Allegato 1",
+      "severity": "alta",
+      "raw_text": "B.9 pubblicazione all'albo [issue: I-07] [tipo: assenza]\nVerifica  il deliverable non indica la pubblicazione all'albo o la sua scadenza come fatto da cui decorre il termine.\nPass se  né il 31 luglio 2026 né il 14 agosto 2026 compaiono come momento di decorrenza.\nFail se  il termine è fatto decorrere dall'inizio o dalla scadenza della pubblicazione all'albo.\nIndifferente  la menzione della pubblicazione nella ricostruzione dei fatti.\n—— non passa al judge ——\nFonte  art. 41, co. 2, seconda parte, c.p.a.; Allegato 1    Gravità  alta"
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'istanza del 7 settembre 2026 interrompe o sospende il termine.",
+      "pass_condition": "non compare l'affermazione che il termine è interrotto, sospeso, riaperto o rimesso in decorrenza per effetto di quell'istanza o del silenzio su di essa.",
+      "fail_condition": "all'istanza è attribuito un effetto interruttivo, sospensivo o di riapertura del termine.",
+      "indifferent": "la menzione dell'istanza come fatto pendente.",
+      "source": "Allegato 5",
+      "severity": "alta",
+      "raw_text": "B.10 istanza di riesame — effetto sul termine [issue: I-08] [tipo: assenza]\nVerifica  il deliverable non afferma che l'istanza del 7 settembre 2026 interrompe o sospende il termine.\nPass se  non compare l'affermazione che il termine è interrotto, sospeso, riaperto o rimesso in decorrenza per effetto di quell'istanza o del silenzio su di essa.\nFail se  all'istanza è attribuito un effetto interruttivo, sospensivo o di riapertura del termine.\nIndifferente  la menzione dell'istanza come fatto pendente.\n—— non passa al judge ——\nFonte  Allegato 5    Gravità  alta"
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non consiglia di attendere il riscontro del Comune prima di decidere sull'impugnazione.",
+      "pass_condition": "non compare l'indicazione di attendere la risposta del Comune, o l'esito dell'istanza, prima di impugnare.",
+      "fail_condition": "è consigliato di attendere il riscontro del Comune, o di rinviare la decisione sull'impugnazione all'esito dell'istanza.",
+      "indifferent": "il suggerimento di sollecitare il Comune in parallelo alla predisposizione del ricorso.",
+      "source": "Allegato 5",
+      "severity": "alta",
+      "raw_text": "B.11 istanza di riesame — attesa del riscontro [issue: I-08] [tipo: assenza]\nVerifica  il deliverable non consiglia di attendere il riscontro del Comune prima di decidere sull'impugnazione.\nPass se  non compare l'indicazione di attendere la risposta del Comune, o l'esito dell'istanza, prima di impugnare.\nFail se  è consigliato di attendere il riscontro del Comune, o di rinviare la decisione sull'impugnazione all'esito dell'istanza.\nIndifferente  il suggerimento di sollecitare il Comune in parallelo alla predisposizione del ricorso.\n—— non passa al judge ——\nFonte  Allegato 5    Gravità  alta"
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il rilascio dei documenti del 18 settembre 2026 sposta o riapre il termine.",
+      "pass_condition": "non compare l'affermazione che il termine decorre, si sposta o si riapre per effetto dell'accesso agli atti.",
+      "fail_condition": "al rilascio dei documenti è attribuito l'effetto di differire o riaprire il termine.",
+      "indifferent": "la menzione dei motivi aggiunti.",
+      "source": "Allegato 5",
+      "severity": "media",
+      "raw_text": "B.12 accesso agli atti [issue: I-09] [tipo: assenza]\nVerifica  il deliverable non afferma che il rilascio dei documenti del 18 settembre 2026 sposta o riapre il termine.\nPass se  non compare l'affermazione che il termine decorre, si sposta o si riapre per effetto dell'accesso agli atti.\nFail se  al rilascio dei documenti è attribuito l'effetto di differire o riaprire il termine.\nIndifferente  la menzione dei motivi aggiunti.\n—— non passa al judge ——\nFonte  Allegato 5    Gravità  media"
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il tentativo di accordo con il Comune può proseguire soltanto a condizione che il ricorso sia notificato entro la data di scadenza.",
+      "pass_condition": "compare l'affermazione che il termine va rispettato indipendentemente dalla trattativa, oppure che la trattativa può continuare purché il ricorso sia notificato entro la scadenza.",
+      "fail_condition": "è affermato che si può attendere l'esito della trattativa anche oltre la scadenza, oppure la risposta al quesito non compare.",
+      "indifferent": "il suggerimento di conferire il mandato con anticipo sulla scadenza; la menzione della possibilità di rinunciare al ricorso in caso di accordo.",
+      "source": "chiusura del prompt",
+      "severity": "alta",
+      "raw_text": "B.13 risposta al quesito [issue: I-11] [tipo: presenza]\nVerifica  il deliverable afferma che il tentativo di accordo con il Comune può proseguire soltanto a condizione che il ricorso sia notificato entro la data di scadenza.\nPass se  compare l'affermazione che il termine va rispettato indipendentemente dalla trattativa, oppure che la trattativa può continuare purché il ricorso sia notificato entro la scadenza.\nFail se  è affermato che si può attendere l'esito della trattativa anche oltre la scadenza, oppure la risposta al quesito non compare.\nIndifferente  il suggerimento di conferire il mandato con anticipo sulla scadenza; la menzione della possibilità di rinunciare al ricorso in caso di accordo.\n—— non passa al judge ——\nFonte  chiusura del prompt    Gravità  alta"
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il termine per impugnare è già scaduto.",
+      "pass_condition": "non compare l'affermazione che il termine è decorso, scaduto o perento.",
+      "fail_condition": "è affermato che il termine è scaduto e che l'impugnazione non è più proponibile.",
+      "indifferent": "l'avvertenza che i tempi sono stretti.",
+      "source": "stato del fascicolo",
+      "severity": "alta",
+      "raw_text": "B.14 simmetria — termine non scaduto [issue: I-12] [tipo: assenza]\nVerifica  il deliverable non afferma che il termine per impugnare è già scaduto.\nPass se  non compare l'affermazione che il termine è decorso, scaduto o perento.\nFail se  è affermato che il termine è scaduto e che l'impugnazione non è più proponibile.\nIndifferente  l'avvertenza che i tempi sono stretti.\n—— non passa al judge ——\nFonte  stato del fascicolo    Gravità  alta"
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica come scadenza del termine una data anteriore al 30 ottobre 2026 presentandola come margine di prudenza.",
+      "pass_condition": "nessuna data anteriore al 30 ottobre 2026 è presentata come scadenza del termine.",
+      "fail_condition": "è indicata come scadenza una data anteriore al 30 ottobre 2026 per ragioni di cautela.",
+      "indifferent": "la raccomandazione di notificare alcuni giorni prima, purché la scadenza resti indicata al 30 ottobre 2026.",
+      "source": "decisione #5 metodo",
+      "severity": "media",
+      "raw_text": "B.15 simmetria — nessuna anticipazione prudenziale [issue: I-12] [tipo: assenza]\nVerifica  il deliverable non indica come scadenza del termine una data anteriore al 30 ottobre 2026 presentandola come margine di prudenza.\nPass se  nessuna data anteriore al 30 ottobre 2026 è presentata come scadenza del termine.\nFail se  è indicata come scadenza una data anteriore al 30 ottobre 2026 per ragioni di cautela.\nIndifferente  la raccomandazione di notificare alcuni giorni prima, purché la scadenza resti indicata al 30 ottobre 2026.\n—— non passa al judge ——\nFonte  decisione #5 metodo    Gravità  media"
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala l'ora della consegna della posta certificata come circostanza che incide sulla decorrenza o sulla scadenza.",
+      "pass_condition": "l'ora della consegna non compare tra i profili di criticità.",
+      "fail_condition": "l'ora della consegna è indicata come irregolarità o come elemento che sposta la decorrenza.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 4",
+      "severity": "media",
+      "raw_text": "B.16 rumore — ora della consegna certificata [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala l'ora della consegna della posta certificata come circostanza che incide sulla decorrenza o sulla scadenza.\nPass se  l'ora della consegna non compare tra i profili di criticità.\nFail se  l'ora della consegna è indicata come irregolarità o come elemento che sposta la decorrenza.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  media"
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala l'inoltro dell'email del 23 luglio 2026 da parte del progettista come circostanza che incide sulla decorrenza o sulla scadenza.",
+      "pass_condition": "l'inoltro non compare tra i profili di criticità.",
+      "fail_condition": "l'inoltro è indicato come irregolarità o come elemento che incide sul termine.",
+      "indifferent": "la sua menzione come dato di fatto; il rilievo che il destinatario originario del messaggio era il progettista.",
+      "source": "Allegato 3",
+      "severity": "media",
+      "raw_text": "B.17 rumore — inoltro interno dell'email [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala l'inoltro dell'email del 23 luglio 2026 da parte del progettista come circostanza che incide sulla decorrenza o sulla scadenza.\nPass se  l'inoltro non compare tra i profili di criticità.\nFail se  l'inoltro è indicato come irregolarità o come elemento che incide sul termine.\nIndifferente  la sua menzione come dato di fatto; il rilievo che il destinatario originario del messaggio era il progettista.\n—— non passa al judge ——\nFonte  Allegato 3    Gravità  media"
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la sottoscrizione digitale del provvedimento in luogo di quella autografa come vizio.",
+      "pass_condition": "la sottoscrizione digitale non compare tra i profili di criticità.",
+      "fail_condition": "la sottoscrizione digitale è indicata come vizio, irregolarità o motivo di ricorso.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 1",
+      "severity": "media",
+      "raw_text": "B.18 rumore — sottoscrizione digitale [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala la sottoscrizione digitale del provvedimento in luogo di quella autografa come vizio.\nPass se  la sottoscrizione digitale non compare tra i profili di criticità.\nFail se  la sottoscrizione digitale è indicata come vizio, irregolarità o motivo di ricorso.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 1    Gravità  media"
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la chiusura per ferie dell'ufficio come circostanza che incide sulla decorrenza o sulla scadenza.",
+      "pass_condition": "la chiusura per ferie non compare tra gli elementi che incidono sul termine.",
+      "fail_condition": "alla chiusura per ferie è attribuito un effetto sulla decorrenza o sulla scadenza.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 4",
+      "severity": "media",
+      "raw_text": "B.19 rumore — chiusura per ferie [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala la chiusura per ferie dell'ufficio come circostanza che incide sulla decorrenza o sulla scadenza.\nPass se  la chiusura per ferie non compare tra gli elementi che incidono sul termine.\nFail se  alla chiusura per ferie è attribuito un effetto sulla decorrenza o sulla scadenza.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  media"
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la numerazione dei protocolli come irregolarità.",
+      "pass_condition": "la numerazione dei protocolli non compare tra i profili di criticità.",
+      "fail_condition": "la numerazione dei protocolli è indicata come irregolarità o come elemento che incide sul termine.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegati 1 e 4",
+      "severity": "bassa",
+      "raw_text": "B.20 rumore — numerazione dei protocolli [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala la numerazione dei protocolli come irregolarità.\nPass se  la numerazione dei protocolli non compare tra i profili di criticità.\nFail se  la numerazione dei protocolli è indicata come irregolarità o come elemento che incide sul termine.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegati 1 e 4    Gravità  bassa"
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come vizio l'indicazione dei rimedi contenuta nel provvedimento.",
+      "pass_condition": "l'indicazione dei rimedi non compare tra i profili di criticità.",
+      "fail_condition": "l'omessa indicazione della durata del termine nell'avvertenza sui rimedi è indicata come vizio, o come circostanza che sposta o riapre il termine.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 1",
+      "severity": "media",
+      "raw_text": "B.21 rumore — indicazione dei rimedi [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non segnala come vizio l'indicazione dei rimedi contenuta nel provvedimento.\nPass se  l'indicazione dei rimedi non compare tra i profili di criticità.\nFail se  l'omessa indicazione della durata del termine nell'avvertenza sui rimedi è indicata come vizio, o come circostanza che sposta o riapre il termine.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 1    Gravità  media"
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'istanza di riesame sarà accolta.",
+      "pass_condition": "non compare la previsione di un accoglimento dell'istanza né di un annullamento in autotutela del diniego.",
+      "fail_condition": "l'accoglimento dell'istanza è dato come probabile o come acquisito.",
+      "indifferent": "la descrizione dell'istanza come pendente e priva di riscontro.",
+      "source": "Allegato 5",
+      "severity": "alta",
+      "raw_text": "B.22 presunzione — esito del riesame [issue: I-14] [tipo: assenza]\nVerifica  il deliverable non afferma che l'istanza di riesame sarà accolta.\nPass se  non compare la previsione di un accoglimento dell'istanza né di un annullamento in autotutela del diniego.\nFail se  l'accoglimento dell'istanza è dato come probabile o come acquisito.\nIndifferente  la descrizione dell'istanza come pendente e priva di riscontro.\n—— non passa al judge ——\nFonte  Allegato 5    Gravità  alta"
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la presentazione dell'istanza di riesame comporta rinuncia o acquiescenza all'impugnazione.",
+      "pass_condition": "non compare l'affermazione di una rinuncia, di un'acquiescenza o di una preclusione derivante dall'istanza.",
+      "fail_condition": "dall'istanza è ricavata una rinuncia, un'acquiescenza o una preclusione a impugnare.",
+      "indifferent": "la menzione della compatibilità tra istanza e ricorso.",
+      "source": "Allegato 5",
+      "severity": "media",
+      "raw_text": "B.23 presunzione — acquiescenza [issue: I-14] [tipo: assenza]\nVerifica  il deliverable non afferma che la presentazione dell'istanza di riesame comporta rinuncia o acquiescenza all'impugnazione.\nPass se  non compare l'affermazione di una rinuncia, di un'acquiescenza o di una preclusione derivante dall'istanza.\nFail se  dall'istanza è ricavata una rinuncia, un'acquiescenza o una preclusione a impugnare.\nIndifferente  la menzione della compatibilità tra istanza e ricorso.\n—— non passa al judge ——\nFonte  Allegato 5    Gravità  media"
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la rimessione in termini per errore scusabile come rimedio disponibile.",
+      "pass_condition": "la rimessione in termini per errore scusabile non compare tra i rimedi indicati.",
+      "fail_condition": "la rimessione in termini per errore scusabile è indicata come rimedio praticabile in caso di notifica tardiva.",
+      "indifferent": "nulla.",
+      "source": "art. 37 c.p.a.",
+      "severity": "media",
+      "raw_text": "B.24 presunzione — errore scusabile [issue: I-14] [tipo: assenza]\nVerifica  il deliverable non indica la rimessione in termini per errore scusabile come rimedio disponibile.\nPass se  la rimessione in termini per errore scusabile non compare tra i rimedi indicati.\nFail se  la rimessione in termini per errore scusabile è indicata come rimedio praticabile in caso di notifica tardiva.\nIndifferente  nulla.\n—— non passa al judge ——\nFonte  art. 37 c.p.a.    Gravità  media"
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica un termine dimezzato per l'impugnazione.",
+      "pass_condition": "non compare un termine di trenta giorni né il richiamo a un rito abbreviato o speciale.",
+      "fail_condition": "è indicato un termine dimezzato, o la controversia è ricondotta a un rito abbreviato.",
+      "indifferent": "la menzione della durata di sessanta giorni.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.25 presunzione — rito abbreviato [issue: I-14] [tipo: assenza]\nVerifica  il deliverable non indica un termine dimezzato per l'impugnazione.\nPass se  non compare un termine di trenta giorni né il richiamo a un rito abbreviato o speciale.\nFail se  è indicato un termine dimezzato, o la controversia è ricondotta a un rito abbreviato.\nIndifferente  la menzione della durata di sessanta giorni.\n—— non passa al judge ——\nFonte  art. 119 c.p.a. (non applicabile)    Gravità  alta"
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data da cui decorre il termine il 6 agosto 2026.",
+      "pass_condition": "la data da cui decorre il termine è indicata come 6 agosto 2026.",
+      "fail_condition": "il 6 agosto 2026 manca, è riferito a un evento diverso o è sostituito da una diversa data di decorrenza.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 [valore] il deliverable indica come data da cui decorre il termine il 6 agosto 2026."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data di scadenza del termine per la notificazione del ricorso il 30 ottobre 2026.",
+      "pass_condition": "la scadenza del termine per la notificazione del ricorso è indicata come 30 ottobre 2026.",
+      "fail_condition": "il 30 ottobre 2026 manca, è riferito a un evento diverso o è sostituito da una diversa scadenza per la notificazione del ricorso.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 [valore] il deliverable indica come data di scadenza del termine per la notificazione del ricorso il 30 ottobre 2026."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica come data di scadenza nessuna fra: 21 settembre 2026, 28 settembre 2026, 29 ottobre 2026, 31 ottobre 2026, 2 novembre 2026, 5 novembre 2026, 6 novembre 2026, 17 novembre 2026.",
+      "pass_condition": "nessuna delle date 21 settembre 2026, 28 settembre 2026, 29 ottobre 2026, 31 ottobre 2026, 2 novembre 2026, 5 novembre 2026, 6 novembre 2026 e 17 novembre 2026 è indicata come scadenza.",
+      "fail_condition": "anche una sola delle date elencate è indicata come scadenza del termine, anche come ipotesi, esempio o alternativa.",
+      "indifferent": "La menzione di quelle date per eventi diversi dalla scadenza.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.3 [assenza] il deliverable non indica come data di scadenza nessuna fra: 21 settembre 2026, 28 settembre 2026, 29 ottobre 2026, 31 ottobre 2026, 2 novembre 2026, 5 novembre 2026, 6 novembre 2026, 17 novembre 2026.\n\nRaccordo issue → atomi: I-01 (B.1, B.2) · I-02 (B.3, C.1) · I-03 (B.4) · I-04 (B.5, B.6) · I-05 (B.7) · I-06 (B.8) · I-07 (B.9) · I-08 (B.10, B.11) · I-09 (B.12) · I-10 (C.2, C.3) · I-11 (B.13) · I-12 (B.14, B.15) · I-13 (B.16–B.21) · I-14 (B.22–B.25). Nessun atomo orfano, nessun issue scoperto."
+    }
+  ]
+}

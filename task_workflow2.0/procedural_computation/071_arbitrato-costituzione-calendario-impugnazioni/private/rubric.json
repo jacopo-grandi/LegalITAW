@@ -1,0 +1,993 @@
+{
+  "task_id": "WF2-071",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 49,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "la consegna usa i file arbitration_timeline.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file arbitration_timeline.md.\nPASS se: i nomi dei file coincidono con arbitration_timeline.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con arbitration_timeline.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "la parte testuale non supera 2.300 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 2.300 parole.\nPASS se: il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola richiama il Regolamento CAM e fissa Milano come sede.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola richiama il Regolamento CAM e fissa Milano come sede.\nPASS se: afferma: la clausola richiama il Regolamento CAM e fissa Milano come sede; conclude: la clausola richiama il Regolamento CAM e fissa Milano come sede\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; contratto; Regolamento CAM",
+      "pass_condition": "afferma: la clausola richiama il Regolamento CAM e fissa Milano come sede; conclude: la clausola richiama il Regolamento CAM e fissa Milano come sede",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: contratto quadro, clausola 18.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: contratto quadro, clausola 18.\nPASS se: cita 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; indica come riscontro 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; contratto; Regolamento CAM",
+      "pass_condition": "cita 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; indica come riscontro 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato.\nPASS se: espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato; indica come conseguenza: il procedimento e il computo dei termini seguono il regolamento richiamato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; contratto; Regolamento CAM",
+      "pass_condition": "espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato; indica come conseguenza: il procedimento e il computo dei termini seguono il regolamento richiamato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: usare Milano e la disciplina CAM in ogni passaggio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: usare Milano e la disciplina CAM in ogni passaggio.\nPASS se: afferma: la clausola richiama il Regolamento CAM e fissa Milano come sede; conclude: la clausola richiama il Regolamento CAM e fissa Milano come sede\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; contratto; Regolamento CAM",
+      "pass_condition": "afferma: la clausola richiama il Regolamento CAM e fissa Milano come sede; conclude: la clausola richiama il Regolamento CAM e fissa Milano come sede",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca ogni successiva deroga delle parti.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca ogni successiva deroga delle parti.\nPASS se: espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato; indica come conseguenza: il procedimento e il computo dei termini seguono il regolamento richiamato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede; contratto; Regolamento CAM",
+      "pass_condition": "espone l'effetto: il procedimento e il computo dei termini seguono il regolamento richiamato; indica come conseguenza: il procedimento e il computo dei termini seguono il regolamento richiamato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per avvio.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per avvio.\nPASS se: compare «9 gennaio 2029»; compare «2029-01-09»\nFAIL se: non compare ne «9 gennaio 2029» ne «2029-01-09» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; ricevuta CAM; art. 10 Regolamento CAM",
+      "pass_condition": "compare «9 gennaio 2029»; compare «2029-01-09»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ricevuta CAM del 9 gennaio 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ricevuta CAM del 9 gennaio 2029.\nPASS se: cita 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; indica come riscontro 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; ricevuta CAM; art. 10 Regolamento CAM",
+      "pass_condition": "cita 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; indica come riscontro 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: questa è la data di avvio amministrativo da usare.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: questa è la data di avvio amministrativo da usare.\nPASS se: espone l'effetto: questa è la data di avvio amministrativo da usare; indica come conseguenza: questa è la data di avvio amministrativo da usare\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; ricevuta CAM; art. 10 Regolamento CAM",
+      "pass_condition": "espone l'effetto: questa è la data di avvio amministrativo da usare; indica come conseguenza: questa è la data di avvio amministrativo da usare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per avvio.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per avvio.\nPASS se: afferma: la domanda è stata ricevuta dalla Segreteria il 9 gennaio 2029; conclude: la domanda è stata ricevuta dalla Segreteria il 9 gennaio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; ricevuta CAM; art. 10 Regolamento CAM",
+      "pass_condition": "afferma: la domanda è stata ricevuta dalla Segreteria il 9 gennaio 2029; conclude: la domanda è stata ricevuta dalla Segreteria il 9 gennaio 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca prova di un deposito anteriore.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca prova di un deposito anteriore.\nPASS se: espone l'effetto: questa è la data di avvio amministrativo da usare; indica come conseguenza: questa è la data di avvio amministrativo da usare\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio; ricevuta CAM; art. 10 Regolamento CAM",
+      "pass_condition": "espone l'effetto: questa è la data di avvio amministrativo da usare; indica come conseguenza: questa è la data di avvio amministrativo da usare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per risposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per risposta.\nPASS se: compare «8 febbraio 2029»; compare «2029-02-08»\nFAIL se: non compare ne «8 febbraio 2029» ne «2029-02-08» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; artt. 7 e 11 Regolamento CAM",
+      "pass_condition": "compare «8 febbraio 2029»; compare «2029-02-08»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: trasmissione della domanda il 9 gennaio 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: trasmissione della domanda il 9 gennaio 2029.\nPASS se: cita 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; indica come riscontro 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; artt. 7 e 11 Regolamento CAM",
+      "pass_condition": "cita 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; indica come riscontro 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la risposta del 1 febbraio è tempestiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la risposta del 1 febbraio è tempestiva.\nPASS se: espone l'effetto: la risposta del 1 febbraio è tempestiva; indica come conseguenza: la risposta del 1 febbraio è tempestiva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; artt. 7 e 11 Regolamento CAM",
+      "pass_condition": "espone l'effetto: la risposta del 1 febbraio è tempestiva; indica come conseguenza: la risposta del 1 febbraio è tempestiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per risposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per risposta.\nPASS se: afferma: il termine di trenta giorni per la risposta scade l'8 febbraio 2029; conclude: il termine di trenta giorni per la risposta scade l'8 febbraio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; artt. 7 e 11 Regolamento CAM",
+      "pass_condition": "afferma: il termine di trenta giorni per la risposta scade l'8 febbraio 2029; conclude: il termine di trenta giorni per la risposta scade l'8 febbraio 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: nessuna proroga risulta dal fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: nessuna proroga risulta dal fascicolo.\nPASS se: espone l'effetto: la risposta del 1 febbraio è tempestiva; indica come conseguenza: la risposta del 1 febbraio è tempestiva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta; artt. 7 e 11 Regolamento CAM",
+      "pass_condition": "espone l'effetto: la risposta del 1 febbraio è tempestiva; indica come conseguenza: la risposta del 1 febbraio è tempestiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029.\nPASS se: afferma: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029; conclude: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; risposta; art. 11 Regolamento CAM",
+      "pass_condition": "afferma: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029; conclude: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: risposta della convenuta.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: risposta della convenuta.\nPASS se: cita 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; indica come riscontro 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; risposta; art. 11 Regolamento CAM",
+      "pass_condition": "cita 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; indica come riscontro 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: non occorre una nomina sostitutiva della Camera.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: non occorre una nomina sostitutiva della Camera.\nPASS se: espone l'effetto: non occorre una nomina sostitutiva della Camera; indica come conseguenza: non occorre una nomina sostitutiva della Camera\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; risposta; art. 11 Regolamento CAM",
+      "pass_condition": "espone l'effetto: non occorre una nomina sostitutiva della Camera; indica come conseguenza: non occorre una nomina sostitutiva della Camera",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: preservare prova del deposito.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: preservare prova del deposito.\nPASS se: afferma: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029; conclude: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte; risposta; art. 11 Regolamento CAM",
+      "pass_condition": "afferma: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029; conclude: Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per presidente.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per presidente.\nPASS se: compare «19 febbraio 2029»; compare «2029-02-19»\nFAIL se: non compare ne «19 febbraio 2029» ne «2029-02-19» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; comunicazione CAM",
+      "pass_condition": "compare «19 febbraio 2029»; compare «2029-02-19»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: comunicazione di costituzione CAM.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: comunicazione di costituzione CAM.\nPASS se: cita 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; indica come riscontro 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; comunicazione CAM",
+      "pass_condition": "cita 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; indica come riscontro 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il collegio risulta costituito in quella data.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il collegio risulta costituito in quella data.\nPASS se: espone l'effetto: il collegio risulta costituito in quella data; indica come conseguenza: il collegio risulta costituito in quella data\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; comunicazione CAM",
+      "pass_condition": "espone l'effetto: il collegio risulta costituito in quella data; indica come conseguenza: il collegio risulta costituito in quella data",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per presidente.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per presidente.\nPASS se: afferma: la Camera ha confermato la presidente e comunicato la costituzione il 19 febbraio 2029; conclude: la Camera ha confermato la presidente e comunicato la costituzione il 19 febbraio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a presidente; comunicazione CAM",
+      "pass_condition": "afferma: la Camera ha confermato la presidente e comunicato la costituzione il 19 febbraio 2029; conclude: la Camera ha confermato la presidente e comunicato la costituzione il 19 febbraio 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'eccezione di competenza deve essere formulata nella prima difesa utile.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'eccezione di competenza deve essere formulata nella prima difesa utile.\nPASS se: afferma: l'eccezione di competenza deve essere formulata nella prima difesa utile; conclude: l'eccezione di competenza deve essere formulata nella prima difesa utile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; art. 817 c.p.c.",
+      "pass_condition": "afferma: l'eccezione di competenza deve essere formulata nella prima difesa utile; conclude: l'eccezione di competenza deve essere formulata nella prima difesa utile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza di risposta che la riserva senza svolgerla.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza di risposta che la riserva senza svolgerla.\nPASS se: cita 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; indica come riscontro 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; art. 817 c.p.c.",
+      "pass_condition": "cita 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; indica come riscontro 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: una riserva generica espone alla tardività.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: una riserva generica espone alla tardività.\nPASS se: espone l'effetto: una riserva generica espone alla tardività; indica come conseguenza: una riserva generica espone alla tardività\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; art. 817 c.p.c.",
+      "pass_condition": "espone l'effetto: una riserva generica espone alla tardività; indica come conseguenza: una riserva generica espone alla tardività",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: formulare subito oggetto e fondamento dell'eccezione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: formulare subito oggetto e fondamento dell'eccezione.\nPASS se: afferma: l'eccezione di competenza deve essere formulata nella prima difesa utile; conclude: l'eccezione di competenza deve essere formulata nella prima difesa utile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza; art. 817 c.p.c.",
+      "pass_condition": "afferma: l'eccezione di competenza deve essere formulata nella prima difesa utile; conclude: l'eccezione di competenza deve essere formulata nella prima difesa utile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per calendario.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per calendario.\nPASS se: compare «19 marzo 2029»; compare «2029-03-19»\nFAIL se: non compare ne «19 marzo 2029» ne «2029-03-19» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; ordine procedurale n. 1",
+      "pass_condition": "compare «19 marzo 2029»; compare «2029-03-19»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ordine procedurale n. 1.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ordine procedurale n. 1.\nPASS se: cita 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; indica come riscontro 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; ordine procedurale n. 1",
+      "pass_condition": "cita 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; indica come riscontro 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: le due date governano la fase scritta.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le due date governano la fase scritta.\nPASS se: espone l'effetto: le due date governano la fase scritta; indica come conseguenza: le due date governano la fase scritta\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; ordine procedurale n. 1",
+      "pass_condition": "espone l'effetto: le due date governano la fase scritta; indica come conseguenza: le due date governano la fase scritta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per calendario.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per calendario.\nPASS se: afferma: l'ordine procedurale del 19 febbraio prevede memoria il 19 marzo 2029 e replica il 9 aprile 2029; conclude: l'ordine procedurale del 19 febbraio prevede memoria il 19 marzo 2029 e replica il 9 aprile 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario; ordine procedurale n. 1",
+      "pass_condition": "afferma: l'ordine procedurale del 19 febbraio prevede memoria il 19 marzo 2029 e replica il 9 aprile 2029; conclude: l'ordine procedurale del 19 febbraio prevede memoria il 19 marzo 2029 e replica il 9 aprile 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola attribuisce espressamente poteri cautelari agli arbitri.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola attribuisce espressamente poteri cautelari agli arbitri.\nPASS se: afferma: la clausola attribuisce espressamente poteri cautelari agli arbitri; conclude: la clausola attribuisce espressamente poteri cautelari agli arbitri\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; artt. 818 e 818-bis c.p.c.; contratto",
+      "pass_condition": "afferma: la clausola attribuisce espressamente poteri cautelari agli arbitri; conclude: la clausola attribuisce espressamente poteri cautelari agli arbitri",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: clausola 18.6 del contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: clausola 18.6 del contratto.\nPASS se: cita 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; indica come riscontro 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; artt. 818 e 818-bis c.p.c.; contratto",
+      "pass_condition": "cita 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; indica come riscontro 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: dopo l'accettazione la competenza cautelare arbitrale è esclusiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: dopo l'accettazione la competenza cautelare arbitrale è esclusiva.\nPASS se: espone l'effetto: dopo l'accettazione la competenza cautelare arbitrale è esclusiva; indica come conseguenza: dopo l'accettazione la competenza cautelare arbitrale è esclusiva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; artt. 818 e 818-bis c.p.c.; contratto",
+      "pass_condition": "espone l'effetto: dopo l'accettazione la competenza cautelare arbitrale è esclusiva; indica come conseguenza: dopo l'accettazione la competenza cautelare arbitrale è esclusiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: valutare l'istanza davanti al collegio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: valutare l'istanza davanti al collegio.\nPASS se: afferma: la clausola attribuisce espressamente poteri cautelari agli arbitri; conclude: la clausola attribuisce espressamente poteri cautelari agli arbitri\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare; artt. 818 e 818-bis c.p.c.; contratto",
+      "pass_condition": "afferma: la clausola attribuisce espressamente poteri cautelari agli arbitri; conclude: la clausola attribuisce espressamente poteri cautelari agli arbitri",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per termine del lodo.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per termine del lodo.\nPASS se: compare «20 agosto 2029»; compare «2029-08-20»\nFAIL se: non compare ne «20 agosto 2029» ne «2029-08-20» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; artt. 7 e 36 Regolamento CAM",
+      "pass_condition": "compare «20 agosto 2029»; compare «2029-08-20»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: costituzione il 18 febbraio 2029 e scadenza semestrale di sabato 18 agosto.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: costituzione il 18 febbraio 2029 e scadenza semestrale di sabato 18 agosto.\nPASS se: cita 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; indica come riscontro 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; artt. 7 e 36 Regolamento CAM",
+      "pass_condition": "cita 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; indica come riscontro 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il primo giorno lavorativo seguente governa in assenza di proroga.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il primo giorno lavorativo seguente governa in assenza di proroga.\nPASS se: espone l'effetto: il primo giorno lavorativo seguente governa in assenza di proroga; indica come conseguenza: il primo giorno lavorativo seguente governa in assenza di proroga\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; artt. 7 e 36 Regolamento CAM",
+      "pass_condition": "espone l'effetto: il primo giorno lavorativo seguente governa in assenza di proroga; indica come conseguenza: il primo giorno lavorativo seguente governa in assenza di proroga",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per termine del lodo.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per termine del lodo.\nPASS se: afferma: il termine regolamentare del lodo cade domenica 19 agosto e slitta al 20 agosto 2029; conclude: il termine regolamentare del lodo cade domenica 19 agosto e slitta al 20 agosto 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo; artt. 7 e 36 Regolamento CAM",
+      "pass_condition": "afferma: il termine regolamentare del lodo cade domenica 19 agosto e slitta al 20 agosto 2029; conclude: il termine regolamentare del lodo cade domenica 19 agosto e slitta al 20 agosto 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il termine breve di impugnazione dipende dalla notificazione del lodo.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il termine breve di impugnazione dipende dalla notificazione del lodo.\nPASS se: afferma: il termine breve di impugnazione dipende dalla notificazione del lodo; conclude: il termine breve di impugnazione dipende dalla notificazione del lodo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; art. 828 c.p.c.",
+      "pass_condition": "afferma: il termine breve di impugnazione dipende dalla notificazione del lodo; conclude: il termine breve di impugnazione dipende dalla notificazione del lodo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: il fascicolo non contiene ancora un lodo notificato.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: il fascicolo non contiene ancora un lodo notificato.\nPASS se: cita 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; indica come riscontro 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; art. 828 c.p.c.",
+      "pass_condition": "cita 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; indica come riscontro 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: alla data di riferimento non è calcolabile una scadenza breve.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: alla data di riferimento non è calcolabile una scadenza breve.\nPASS se: espone l'effetto: alla data di riferimento non è calcolabile una scadenza breve; indica come conseguenza: alla data di riferimento non è calcolabile una scadenza breve\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; art. 828 c.p.c.",
+      "pass_condition": "espone l'effetto: alla data di riferimento non è calcolabile una scadenza breve; indica come conseguenza: alla data di riferimento non è calcolabile una scadenza breve",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: aprire un controllo alla futura notificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: aprire un controllo alla futura notificazione.\nPASS se: afferma: il termine breve di impugnazione dipende dalla notificazione del lodo; conclude: il termine breve di impugnazione dipende dalla notificazione del lodo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione; art. 828 c.p.c.",
+      "pass_condition": "afferma: il termine breve di impugnazione dipende dalla notificazione del lodo; conclude: il termine breve di impugnazione dipende dalla notificazione del lodo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «forma digitale»: La sottoscrizione digitale del contratto non rende inefficace la clausola arbitrale.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «forma digitale»: La sottoscrizione digitale del contratto non rende inefficace la clausola arbitrale.\nPASS se: non qualifica come criticita forma digitale; esclude espressamente il falso positivo forma digitale\nFAIL se: compare la conclusione vietata «forma digitale costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita forma digitale; esclude espressamente il falso positivo forma digitale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «nazionalita arbitra»: La cittadinanza estera di un'arbitra non determina una sostituzione automatica.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «nazionalita arbitra»: La cittadinanza estera di un'arbitra non determina una sostituzione automatica.\nPASS se: non qualifica come criticita nazionalita arbitra; esclude espressamente il falso positivo nazionalita arbitra\nFAIL se: compare la conclusione vietata «nazionalita arbitra costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita nazionalita arbitra; esclude espressamente il falso positivo nazionalita arbitra",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "arbitration_timeline.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «udienza remota»: La previsione di una possibile udienza da remoto non modifica la sede giuridica di Milano.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «udienza remota»: La previsione di una possibile udienza da remoto non modifica la sede giuridica di Milano.\nPASS se: non qualifica come criticita udienza remota; esclude espressamente il falso positivo udienza remota\nFAIL se: compare la conclusione vietata «udienza remota costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita udienza remota; esclude espressamente il falso positivo udienza remota",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

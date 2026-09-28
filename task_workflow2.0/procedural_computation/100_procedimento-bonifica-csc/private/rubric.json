@@ -1,0 +1,773 @@
+{
+  "task_id": "WF2-100",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente remediation_timeline.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente remediation_timeline.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 27 ottobre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 27 ottobre 2026.\nPASS se: compare «27 ottobre 2026» come data alla quale la timeline è riferita\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «27 ottobre 2026» come data alla quale la timeline è riferita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Ogni termine indica l'evento da cui decorre.",
+      "match_criteria": "Oggetto del criterio: Ogni termine indica l'evento da cui decorre.\nPASS se: ciascun termine riporta l'evento di decorrenza\nFAIL se: uno o più termini non indicano l'evento di decorrenza.\nÈ indifferente: la forma dell'indicazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta l'evento di decorrenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Ogni termine riporta il calcolo seguito.",
+      "match_criteria": "Oggetto del criterio: Ogni termine riporta il calcolo seguito.\nPASS se: ciascun termine riporta il passaggio aritmetico o la regola di computo applicata\nFAIL se: uno o più termini riportano il solo risultato.\nÈ indifferente: il livello di dettaglio del calcolo.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta il passaggio aritmetico o la regola di computo applicata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Ogni termine indica se alla data di riferimento è rispettato, scaduto o non ancora maturato.",
+      "match_criteria": "Oggetto del criterio: Ogni termine indica se alla data di riferimento è rispettato, scaduto o non ancora maturato.\nPASS se: ciascun termine riporta uno dei tre stati\nFAIL se: uno o più termini non riportano alcuno stato.\nÈ indifferente: le etichette usate per i tre stati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta uno dei tre stati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable tiene distinti i termini che hanno una data certa da quelli che dipendono da eventi non ancora avvenuti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable tiene distinti i termini che hanno una data certa da quelli che dipendono da eventi non ancora avvenuti.\nPASS se: le due categorie sono trattate in sezioni separate o comunque distinte termine per termine\nFAIL se: i termini sono elencati senza distinguere le due categorie.\nÈ indifferente: il modo in cui la distinzione è resa graficamente.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "le due categorie sono trattate in sezioni separate o comunque distinte termine per termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Ogni voce indica il documento del fascicolo da cui i dati provengono.",
+      "match_criteria": "Oggetto del criterio: Ogni voce indica il documento del fascicolo da cui i dati provengono.\nPASS se: ciascuna voce riporta il nome di almeno un allegato\nFAIL se: una o più voci non riportano alcun allegato.\nÈ indifferente: il numero degli allegati citati per voce.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta il nome di almeno un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.9",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non cita norme assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme assenti dal reference pack.\nPASS se: Il deliverable non cita norme assenti dal reference pack.\nFAIL se: compare un riferimento a un atto o a un articolo che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola voce.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che le misure di prevenzione e la comunicazione sono state compiute entro ventiquattro ore dall'evento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le misure di prevenzione e la comunicazione sono state compiute entro ventiquattro ore dall'evento.\nPASS se: compare l'affermazione che il termine di ventiquattro ore è rispettato\nFAIL se: il termine è presentato come non rispettato, oppure lo stato del termine non è indicato.\nÈ indifferente: il richiamo alla data delle singole misure adottate.\nFonte di authoring: 01_rapporto_di_intervento_e_messa_in_sicurezza.md; 02_comunicazione_dell_evento.md",
+      "pass_condition": "compare l'affermazione che il termine di ventiquattro ore è rispettato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la comunicazione dell'evento va indirizzata al comune, alla provincia, alla regione e al prefetto, e che il prefetto informa il Ministro dell'ambiente nelle ventiquattro ore successive.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la comunicazione dell'evento va indirizzata al comune, alla provincia, alla regione e al prefetto, e che il prefetto informa il Ministro dell'ambiente nelle ventiquattro ore successive.\nPASS se: compaiono i quattro destinatari e l'informativa del prefetto al Ministro\nFAIL se: manca il prefetto fra i destinatari, oppure i destinatari della comunicazione sono confusi con quelli della notizia di superamento.\nÈ indifferente: l'ordine in cui i destinatari sono elencati.\nFonte di authoring: art. 304, comma 2, del codice dell'ambiente; 02_comunicazione_dell_evento.md",
+      "pass_condition": "compaiono i quattro destinatari e l'informativa del prefetto al Ministro",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la comunicazione, non appena pervenuta al comune, abilita immediatamente l'operatore alla realizzazione degli interventi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la comunicazione, non appena pervenuta al comune, abilita immediatamente l'operatore alla realizzazione degli interventi.\nPASS se: compare l'affermazione dell'effetto abilitante immediato\nFAIL se: la prosecuzione degli interventi è subordinata a un provvedimento di assenso, oppure il punto non è trattato.\nÈ indifferente: il richiamo alla sanzione prevista per l'omessa comunicazione.\nFonte di authoring: art. 304, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione dell'effetto abilitante immediato",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'autocertificazione di ripristino opera soltanto se l'indagine preliminare accerta che le soglie di contaminazione non sono superate, e che nel caso la via è preclusa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'autocertificazione di ripristino opera soltanto se l'indagine preliminare accerta che le soglie di contaminazione non sono superate, e che nel caso la via è preclusa.\nPASS se: compaiono la condizione di operatività e l'affermazione che nel caso è preclusa\nFAIL se: l'autocertificazione è presentata come adempimento mancato, oppure la condizione di operatività non è indicata.\nÈ indifferente: il richiamo al termine di quarantotto ore.\nFonte di authoring: art. 242, comma 2, del codice dell'ambiente",
+      "pass_condition": "compaiono la condizione di operatività e l'affermazione che nel caso è preclusa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza dei trenta giorni per il piano di caratterizzazione alla notizia del superamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza dei trenta giorni per il piano di caratterizzazione alla notizia del superamento.\nPASS se: compare l'affermazione che i trenta giorni decorrono dalla notizia del superamento\nFAIL se: la decorrenza è ricondotta all'evento, alla comunicazione dell'evento o all'emissione del rapporto di prova.\nÈ indifferente: il richiamo alla data della notizia.\nFonte di authoring: 03_notizia_di_superamento.md; art. 242, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che i trenta giorni decorrono dalla notizia del superamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento il termine è scaduto e il piano non risulta presentato, e indica che il piano va presentato al comune, alle province e alla regione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento il termine è scaduto e il piano non risulta presentato, e indica che il piano va presentato al comune, alle province e alla regione.\nPASS se: compaiono lo stato scaduto del termine e i destinatari del piano\nFAIL se: il termine è presentato come pendente, oppure i destinatari del piano non sono indicati o sono indicati in modo diverso.\nÈ indifferente: l'indicazione dei giorni di ritardo.\nFonte di authoring: 07_nota_del_consulente_ambientale.md, punto 3.1; art. 242, comma 3, del codice dell'ambiente",
+      "pass_condition": "compaiono lo stato scaduto del termine e i destinatari del piano",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable qualifica il sito come potenzialmente contaminato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il sito come potenzialmente contaminato.\nPASS se: compare, riferita al sito, una fra: «sito potenzialmente contaminato»; «potenzialmente contaminato in attesa della caratterizzazione e dell'analisi di rischio»\nFAIL se: il sito è qualificato come contaminato, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla differenza fra le due soglie.\nFonte di authoring: art. 240, comma 1, lettere d) ed e), del codice dell'ambiente",
+      "pass_condition": "compare, riferita al sito, una fra: «sito potenzialmente contaminato»; «potenzialmente contaminato in attesa della caratterizzazione e dell'analisi di rischio»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable riconduce i sei mesi per le risultanze della caratterizzazione all'approvazione del piano, e i sessanta giorni per l'approvazione del documento di analisi di rischio alla sua ricezione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce i sei mesi per le risultanze della caratterizzazione all'approvazione del piano, e i sessanta giorni per l'approvazione del documento di analisi di rischio alla sua ricezione.\nPASS se: compaiono entrambe le decorrenze come indicate\nFAIL se: i sei mesi sono fatti decorrere dalla presentazione del piano, oppure i sessanta giorni sono fatti decorrere da un evento diverso dalla ricezione del documento.\nÈ indifferente: il richiamo ai due termini di venti giorni.\nFonte di authoring: art. 242, commi 3 e 4, del codice dell'ambiente",
+      "pass_condition": "compaiono entrambe le decorrenze come indicate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che, se la contaminazione non supera le concentrazioni soglia di rischio, la conferenza di servizi dichiara concluso positivamente il procedimento con l'approvazione del documento di analisi di rischio, e può prescriv",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, se la contaminazione non supera le concentrazioni soglia di rischio, la conferenza di servizi dichiara concluso positivamente il procedimento con l'approvazione del documento di analisi di rischio, e può prescrivere un programma di monitoraggio.\nPASS se: compaiono la dichiarazione di conclusione positiva e l'eventuale programma di monitoraggio\nFAIL se: l'esito negativo non è trattato, oppure è presentata come necessaria la presentazione del progetto operativo.\nÈ indifferente: l'indicazione dei termini del piano di monitoraggio.\nFonte di authoring: art. 242, commi 5 e 6, del codice dell'ambiente",
+      "pass_condition": "compaiono la dichiarazione di conclusione positiva e l'eventuale programma di monitoraggio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che, se le concentrazioni soglia di rischio sono superate, il progetto operativo va presentato nei successivi sei mesi dall'approvazione del documento di analisi di rischio e la regione lo approva entro sessanta giorn",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, se le concentrazioni soglia di rischio sono superate, il progetto operativo va presentato nei successivi sei mesi dall'approvazione del documento di analisi di rischio e la regione lo approva entro sessanta giorni dal ricevimento.\nPASS se: compaiono il termine di sei mesi e quello di sessanta giorni con le rispettive decorrenze\nFAIL se: l'esito positivo non è trattato, oppure una delle due decorrenze è indicata in modo diverso.\nÈ indifferente: il richiamo alle garanzie finanziarie stabilite con il provvedimento di approvazione.\nFonte di authoring: art. 242, comma 7, del codice dell'ambiente",
+      "pass_condition": "compaiono il termine di sei mesi e quello di sessanta giorni con le rispettive decorrenze",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che non esiste un termine complessivo di conclusione del procedimento e indica gli eventi da cui le date successive dipendono.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che non esiste un termine complessivo di conclusione del procedimento e indica gli eventi da cui le date successive dipendono.\nPASS se: compaiono l'assenza di un termine complessivo e l'indicazione degli eventi da cui le date dipendono\nFAIL se: è indicata una data determinata di conclusione del procedimento, oppure la sua indeterminabilità è dichiarata senza indicare da che cosa dipende.\nÈ indifferente: l'esposizione di un calcolo condizionato a un'ipotesi dichiarata.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compaiono l'assenza di un termine complessivo e l'indicazione degli eventi da cui le date dipendono",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il superamento del nichel persiste anche detratta l'incertezza estesa, secondo la regola decisionale dichiarata dal laboratorio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il superamento del nichel persiste anche detratta l'incertezza estesa, secondo la regola decisionale dichiarata dal laboratorio.\nPASS se: compare l'affermazione che il superamento persiste detratta l'incertezza estesa\nFAIL se: è affermato che il superamento è controvertibile sul dato analitico, oppure il punto non è trattato.\nÈ indifferente: il richiamo al giudizio di conformità espresso dal rapporto.\nFonte di authoring: 04_rapporto_di_prova_suolo.md, punti 6 e 7",
+      "pass_condition": "compare l'affermazione che il superamento persiste detratta l'incertezza estesa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che, se il sito ricade in un'area interessata da fenomeni antropici o naturali che hanno determinato il superamento, le soglie si assumono pari al valore di fondo esistente per i parametri superati.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, se il sito ricade in un'area interessata da fenomeni antropici o naturali che hanno determinato il superamento, le soglie si assumono pari al valore di fondo esistente per i parametri superati.\nPASS se: compare l'affermazione della cedevolezza delle soglie rispetto ai valori di fondo\nFAIL se: il confronto con il valore tabellare è presentato come definitivo, oppure è affermato che il superamento viene meno per il solo fatto che nell'area il nichel sia elevato.\nÈ indifferente: il richiamo alla destinazione d'uso industriale dell'area.\nFonte di authoring: art. 240, comma 1, lettera b), del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione della cedevolezza delle soglie rispetto ai valori di fondo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il piano di indagine sui valori di fondo va presentato all'agenzia regionale, che ne definisce i valori, con realizzazione in contraddittorio entro sessanta giorni dalla presentazione, e rileva che nel fascicolo n",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il piano di indagine sui valori di fondo va presentato all'agenzia regionale, che ne definisce i valori, con realizzazione in contraddittorio entro sessanta giorni dalla presentazione, e rileva che nel fascicolo nessun piano risulta presentato.\nPASS se: compaiono l'attribuzione all'agenzia regionale, il termine del contraddittorio e l'assenza del piano nel fascicolo\nFAIL se: la determinazione dei valori di fondo è attribuita al laboratorio, al consulente o alla regione, oppure il termine del contraddittorio non è indicato.\nÈ indifferente: la collocazione dell'iniziativa fra le azioni proposte.\nFonte di authoring: art. 242, comma 13-ter, del codice dell'ambiente; 07_nota_del_consulente_ambientale.md, punto 4.1",
+      "pass_condition": "compaiono l'attribuzione all'agenzia regionale, il termine del contraddittorio e l'assenza del piano nel fascicolo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il piezometro esistente si trova a monte idrogeologico dell'area interessata e che le sue letture non escludono il coinvolgimento delle acque sotterranee.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il piezometro esistente si trova a monte idrogeologico dell'area interessata e che le sue letture non escludono il coinvolgimento delle acque sotterranee.\nPASS se: compaiono la posizione a monte del piezometro e l'inidoneità delle sue letture a escludere il coinvolgimento della falda\nFAIL se: è accolta l'affermazione del rapporto di intervento sulla posizione a valle, oppure dalle letture del piezometro è tratta la conclusione che le acque sotterranee non sono coinvolte.\nÈ indifferente: la proposta di realizzare punti a valle nel piano di caratterizzazione.\nFonte di authoring: 07_nota_del_consulente_ambientale.md, punto 5.5; 01_rapporto_di_intervento_e_messa_in_sicurezza.md, punto 2",
+      "pass_condition": "compaiono la posizione a monte del piezometro e l'inidoneità delle sue letture a escludere il coinvolgimento della falda",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica che le ulteriori lesioni della pavimentazione rilevate fuori dall'area dell'evento vanno considerate nella definizione del perimetro di indagine del piano di caratterizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica che le ulteriori lesioni della pavimentazione rilevate fuori dall'area dell'evento vanno considerate nella definizione del perimetro di indagine del piano di caratterizzazione.\nPASS se: compare l'indicazione che quelle lesioni incidono sul perimetro di indagine\nFAIL se: le ulteriori lesioni sono trattate come irrilevanti, oppure sono qualificate come contaminazione accertata.\nÈ indifferente: l'indicazione della lunghezza rilevata.\nFonte di authoring: 05_verbale_di_sopralluogo_arpa.md, punto 2.6",
+      "pass_condition": "compare l'indicazione che quelle lesioni incidono sul perimetro di indagine",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable riconduce alla provincia l'ordinanza motivata con cui il responsabile della potenziale contaminazione è diffidato a provvedere, e indica che l'ordinanza è comunque notificata anche al proprietario del sito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce alla provincia l'ordinanza motivata con cui il responsabile della potenziale contaminazione è diffidato a provvedere, e indica che l'ordinanza è comunque notificata anche al proprietario del sito.\nPASS se: compaiono l'attribuzione alla provincia e la notifica anche al proprietario\nFAIL se: l'ordinanza è attribuita al comune, alla regione o all'agenzia regionale, oppure la notifica al proprietario non è indicata.\nÈ indifferente: il richiamo alle indagini per identificare il responsabile con oneri a suo carico.\nFonte di authoring: art. 244, commi 2 e 3, del codice dell'ambiente",
+      "pass_condition": "compaiono l'attribuzione alla provincia e la notifica anche al proprietario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica fra le azioni la presentazione immediata del piano di caratterizzazione e afferma che nessuna ordinanza risulta notificata alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni la presentazione immediata del piano di caratterizzazione e afferma che nessuna ordinanza risulta notificata alla data di riferimento.\nPASS se: compaiono l'azione della presentazione immediata e l'assenza di ordinanze notificate\nFAIL se: l'azione non è indicata, oppure è affermato che il ritardo preclude la presentazione del piano.\nÈ indifferente: l'ordine in cui l'azione è collocata.\nFonte di authoring: 07_nota_del_consulente_ambientale.md, punto 3.2",
+      "pass_condition": "compaiono l'azione della presentazione immediata e l'assenza di ordinanze notificate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non indica fra gli adempimenti scaduti l'autocertificazione di ripristino.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica fra gli adempimenti scaduti l'autocertificazione di ripristino.\nPASS se: Il deliverable non indica fra gli adempimenti scaduti l'autocertificazione di ripristino.\nFAIL se: l'autocertificazione di ripristino è indicata fra gli adempimenti mancati o scaduti, oppure alla scadenza di quel termine sono attribuite conseguenze.\nÈ indifferente: la menzione dell'autocertificazione per escluderne l'operatività nel caso.\nFonte di authoring: art. 242, comma 2, del codice dell'ambiente",
+      "pass_condition": "Il deliverable non indica fra gli adempimenti scaduti l'autocertificazione di ripristino.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non indica il piombo fra i parametri in superamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica il piombo fra i parametri in superamento.\nPASS se: Il deliverable non indica il piombo fra i parametri in superamento.\nFAIL se: è affermato che il piombo supera la soglia applicabile, oppure per il piombo è aperta una posizione autonoma nel procedimento.\nÈ indifferente: la menzione del piombo fra i parametri determinati e conformi, o il richiamo alla linea dismessa nel 1994 in altra funzione.\nFonte di authoring: 04_rapporto_di_prova_suolo.md, punto 7",
+      "pass_condition": "Il deliverable non indica il piombo fra i parametri in superamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non qualifica il sito come contaminato alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non qualifica il sito come contaminato alla data di riferimento.\nPASS se: Il deliverable non qualifica il sito come contaminato alla data di riferimento.\nFAIL se: è affermato che il sito è contaminato, oppure che le concentrazioni soglia di rischio sono superate.\nÈ indifferente: la menzione delle concentrazioni soglia di rischio come da determinare.\nFonte di authoring: art. 240, comma 1, lettera e), del codice dell'ambiente",
+      "pass_condition": "Il deliverable non qualifica il sito come contaminato alla data di riferimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non indica una data determinata di conclusione del procedimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica una data determinata di conclusione del procedimento.\nPASS se: Il deliverable non indica una data determinata di conclusione del procedimento.\nFAIL se: è indicata una data di conclusione del procedimento presentata come certa, oppure è affermato che il procedimento si chiude entro un termine complessivo determinato.\nÈ indifferente: l'esposizione di un calcolo condizionato a un'ipotesi dichiarata.\nFonte di authoring: 06_email_del_direttore_di_stabilimento.md",
+      "pass_condition": "Il deliverable non indica una data determinata di conclusione del procedimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non omette gli adempimenti che risultano compiuti nei termini.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non omette gli adempimenti che risultano compiuti nei termini.\nPASS se: Il deliverable non omette gli adempimenti che risultano compiuti nei termini.\nFAIL se: non compare alcuno degli adempimenti compiuti, quali le misure di prevenzione entro ventiquattro ore, la comunicazione dell'evento ai quattro destinatari, la notizia immediata del superamento o il mantenimento delle misure di messa in sicurezza.\nÈ indifferente: quali fra questi adempimenti sono richiamati, purché ne compaia almeno uno.\nFonte di authoring: private/challenge_map.json, controlled non-issue",
+      "pass_condition": "Il deliverable non omette gli adempimenti che risultano compiuti nei termini.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non presume l'esito dell'analisi di rischio né quello del procedimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presume l'esito dell'analisi di rischio né quello del procedimento.\nPASS se: Il deliverable non presume l'esito dell'analisi di rischio né quello del procedimento.\nFAIL se: è affermato che l'analisi di rischio dimostrerà il mancato superamento delle concentrazioni soglia di rischio, o che il procedimento si concluderà positivamente.\nÈ indifferente: l'esposizione di entrambi gli esiti come alternativi.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presume l'esito dell'analisi di rischio né quello del procedimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica il 22 settembre 2026 come scadenza del termine di ventiquattro ore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 22 settembre 2026 come scadenza del termine di ventiquattro ore.\nPASS se: compare la data «22 settembre 2026» riferita al termine di ventiquattro ore\nFAIL se: è indicata una data diversa, oppure il termine non è calcolato.\nÈ indifferente: il richiamo all'ora dell'evento.\nFonte di authoring: art. 242, comma 1, e art. 304, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare la data «22 settembre 2026» riferita al termine di ventiquattro ore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica il 23 ottobre 2026 come scadenza del termine per la presentazione del piano di caratterizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 23 ottobre 2026 come scadenza del termine per la presentazione del piano di caratterizzazione.\nPASS se: compare la data «23 ottobre 2026» riferita al termine per il piano di caratterizzazione\nFAIL se: è indicata una data diversa, oppure il termine non è calcolato.\nÈ indifferente: l'indicazione dei giorni di ritardo.\nFonte di authoring: art. 242, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare la data «23 ottobre 2026» riferita al termine per il piano di caratterizzazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable non computa i trenta giorni dall'evento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa i trenta giorni dall'evento.\nPASS se: Il deliverable non computa i trenta giorni dall'evento.\nFAIL se: compare la data «21 ottobre 2026» come scadenza del termine per il piano di caratterizzazione, oppure i trenta giorni sono computati dall'evento.\nÈ indifferente: la menzione della data dell'evento in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non computa i trenta giorni dall'evento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica in 658 milligrammi per chilogrammo il valore del nichel detratta l'incertezza estesa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 658 milligrammi per chilogrammo il valore del nichel detratta l'incertezza estesa.\nPASS se: compare la misura «658» riferita al nichel detratta l'incertezza estesa\nFAIL se: è indicata una misura diversa, oppure il calcolo non compare.\nÈ indifferente: il modo in cui l'unità di misura è scritta.\nFonte di authoring: 04_rapporto_di_prova_suolo.md, punto 7",
+      "pass_condition": "compare la misura «658» riferita al nichel detratta l'incertezza estesa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica il 26 novembre 2026 come termine per l'autorizzazione del piano di caratterizzazione, assumendo la presentazione alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 26 novembre 2026 come termine per l'autorizzazione del piano di caratterizzazione, assumendo la presentazione alla data di riferimento.\nPASS se: compare la data «26 novembre 2026» riferita all'autorizzazione del piano\nFAIL se: è indicata una data diversa a partire dalla medesima ipotesi, oppure il calcolo condizionato non compare.\nÈ indifferente: il modo in cui l'ipotesi di presentazione è dichiarata.\nFonte di authoring: art. 242, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare la data «26 novembre 2026» riferita all'autorizzazione del piano",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "Il deliverable indica il 26 maggio 2027 come termine per la trasmissione delle risultanze della caratterizzazione, assumendo la presentazione del piano alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 26 maggio 2027 come termine per la trasmissione delle risultanze della caratterizzazione, assumendo la presentazione del piano alla data di riferimento.\nPASS se: compare la data «26 maggio 2027» riferita alla trasmissione delle risultanze della caratterizzazione\nFAIL se: è indicata una data diversa a partire dalla medesima ipotesi, oppure il calcolo condizionato non compare.\nÈ indifferente: il modo in cui l'ipotesi di presentazione è dichiarata.\nFonte di authoring: art. 242, comma 4, del codice dell'ambiente",
+      "pass_condition": "compare la data «26 maggio 2027» riferita alla trasmissione delle risultanze della caratterizzazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

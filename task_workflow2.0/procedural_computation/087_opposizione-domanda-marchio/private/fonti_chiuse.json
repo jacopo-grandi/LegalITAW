@@ -1,0 +1,27 @@
+{
+  "task_id": "WF2-087",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 30/2005, artt. 176-182",
+      "url": "https://www.normattiva.it/eli/id/2005/03/04/005G0055/CONSOLIDATED/20230513",
+      "funzione": "opposizione, conciliazione, prova d'uso, decisione e ricorso",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.M. 13 gennaio 2010, n. 33",
+      "url": "https://www.normattiva.it/eli/id/2010/03/09/010G0044/ORIGINAL",
+      "funzione": "regolamento di attuazione della procedura",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "UIBM - modulistica e istruzioni marchi",
+      "url": "https://uibm.mise.gov.it/index.php/it/marchi",
+      "funzione": "deposito e comunicazioni dell'Ufficio",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

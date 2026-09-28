@@ -1,0 +1,27 @@
+{
+  "task_id": "WF2-088",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 30/2005, artt. 20, 121, 124-126",
+      "url": "https://www.normattiva.it/eli/id/2005/03/04/005G0055/CONSOLIDATED/20230513",
+      "funzione": "diritto esclusivo, onere probatorio, misure e danno",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Direttiva (UE) 2015/2436, artt. 10 e 17",
+      "url": "https://eur-lex.europa.eu/eli/dir/2015/2436/oj",
+      "funzione": "uso nel commercio e rischio di confusione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Regolamento (UE) 1215/2012",
+      "url": "https://eur-lex.europa.eu/eli/reg/2012/1215/oj",
+      "funzione": "competenza giurisdizionale civile",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

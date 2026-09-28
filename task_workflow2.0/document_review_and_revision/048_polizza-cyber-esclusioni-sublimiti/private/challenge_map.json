@@ -1,0 +1,196 @@
+{
+  "task_id": "WF2-048",
+  "lato_assistito": "Solandra E-commerce S.p.A., assicurata",
+  "data_di_riferimento": "2026-08-14",
+  "stato_del_fascicolo": "sinistro denunciato; assicuratore ha chiesto documenti senza assumere posizione definitiva",
+  "fonti_ammesse": [
+    "cc"
+  ],
+  "dati_mancanti": [
+    "chiedere screening del wallet e parere sanzioni",
+    "richiedere margine e costi evitati"
+  ],
+  "calcoli": [
+    "euro 2.000.000",
+    "euro 50.000",
+    "euro 186.000",
+    "euro 250.000",
+    "dodici ore",
+    "euro 600.000",
+    "euro 910.000"
+  ],
+  "errori_bersaglio": [
+    "massimale generale per ogni garanzia",
+    "franchigia su ogni fattura",
+    "ransomware sempre escluso",
+    "attesa di ventiquattro ore",
+    "euro 910.000 come perdita assicurata"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "massimale generale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il massimale aggregato è euro 2.000.000",
+      "evidenza": "scheda, sezione limiti",
+      "azione": "usarlo come tetto esterno dopo i sublimiti",
+      "cautela": "non applicarlo a ogni garanzia separatamente"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "franchigia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la franchigia per evento è euro 50.000",
+      "evidenza": "scheda di polizza",
+      "azione": "applicarla una volta al sinistro salvo diversa qualificazione",
+      "cautela": "non sottrarla da ogni fattura"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "incident response",
+      "gravita": "alta",
+      "affermazione_richiesta": "i costi di forensic e notifica rientrano nella garanzia base",
+      "evidenza": "condizioni 3.1 e fatture per euro 186.000",
+      "azione": "documentare necessità e previo consenso",
+      "cautela": "non confonderli con business interruption"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "riscatto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rimborso del riscatto è soggetto a sublimite euro 250.000 e consenso scritto",
+      "evidenza": "endorsement sostituisce la clausola 3.4",
+      "azione": "verificare il consenso prima del pagamento",
+      "cautela": "non usare il massimale generale"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "sanzioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'esclusione sanzioni opera solo se il pagamento è vietato dalla legge applicabile",
+      "evidenza": "endorsement contiene formulazione condizionata",
+      "azione": "chiedere screening del wallet e parere sanzioni",
+      "cautela": "non trattare ogni ransomware come escluso"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "business interruption",
+      "gravita": "alta",
+      "affermazione_richiesta": "la garanzia opera dopo un periodo di attesa di dodici ore",
+      "evidenza": "scheda modifica le ventiquattro ore delle condizioni",
+      "azione": "calcolare perdite dopo la dodicesima ora",
+      "cautela": "non applicare il testo non aggiornato"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "sublimite BI",
+      "gravita": "alta",
+      "affermazione_richiesta": "il sublimite per business interruption è euro 600.000",
+      "evidenza": "scheda, tabella sublimiti",
+      "azione": "limitare la voce dopo verifica del margine",
+      "cautela": "non sommare ricavi lordi"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "calcolo BI",
+      "gravita": "alta",
+      "affermazione_richiesta": "il prospetto usa ricavi persi di euro 910.000 senza dedurre costi risparmiati",
+      "evidenza": "prospetto CFO",
+      "azione": "richiedere margine e costi evitati",
+      "cautela": "non presentare euro 910.000 come perdita assicurata"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "errore umano",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'esclusione per atti intenzionali non copre automaticamente l'errore del dipendente",
+      "evidenza": "incident report descrive apertura involontaria di un allegato",
+      "azione": "contestare l'estensione dell'esclusione",
+      "cautela": "non qualificare il fatto come intenzionale"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "backup",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola backup richiede test trimestrali ma l'effetto sulla copertura dipende dal nesso",
+      "evidenza": "report indica ultimo test cinque mesi prima e attacco alle credenziali",
+      "azione": "documentare nesso e misure",
+      "cautela": "non assumere decadenza automatica"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "denuncia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la denuncia è stata inviata il giorno successivo alla scoperta",
+      "evidenza": "incident report 4 agosto e PEC 5 agosto",
+      "azione": "marcare tempestività fattuale",
+      "cautela": "non confondere scoperta e inizio dell'attacco"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "riserva assicuratore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta documenti non è un diniego di copertura",
+      "evidenza": "email del 10 agosto parla di riserva di diritti",
+      "azione": "rispondere per punti senza attribuire un esito",
+      "cautela": "non qualificare la pratica come respinta"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "massimale generale per ogni garanzia",
+      "chiave_nel_criterio": "massimale generale per ogni garanzia"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "franchigia su ogni fattura",
+      "chiave_nel_criterio": "franchigia su ogni fattura"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "ransomware sempre escluso",
+      "chiave_nel_criterio": "ransomware sempre escluso"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "attesa di ventiquattro ore",
+      "chiave_nel_criterio": "attesa di ventiquattro ore"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "euro 910.000 come perdita assicurata",
+      "chiave_nel_criterio": "euro 910.000 come perdita assicurata"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_scheda_polizza.pdf",
+      "funzione": "Scheda di polizza"
+    },
+    {
+      "file": "02_condizioni_cyber.pdf",
+      "funzione": "Condizioni cyber"
+    },
+    {
+      "file": "03_endorsement_ransomware.pdf",
+      "funzione": "Endorsement ransomware"
+    },
+    {
+      "file": "04_incident_report.pdf",
+      "funzione": "Incident report"
+    },
+    {
+      "file": "05_fatture_response.pdf",
+      "funzione": "Fatture di incident response"
+    },
+    {
+      "file": "06_prospetto_business_interruption.xlsx",
+      "funzione": "Prospetto business interruption"
+    },
+    {
+      "file": "07_corrispondenza_assicuratore.eml",
+      "funzione": "Corrispondenza con l'assicuratore"
+    }
+  ]
+}

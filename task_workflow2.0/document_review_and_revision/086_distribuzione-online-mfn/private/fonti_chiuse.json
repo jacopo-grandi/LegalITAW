@@ -1,0 +1,27 @@
+{
+  "task_id": "WF2-086",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Art. 101 TFUE",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:12012E101",
+      "funzione": "divieto ed esenzione individuale",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2022/720, artt. 3-5",
+      "url": "https://eur-lex.europa.eu/eli/reg/2022/720/oj",
+      "funzione": "soglie, restrizioni fondamentali ed escluse",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Orientamenti sulle restrizioni verticali 2022/C 248/01",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:52022XC0630(01)",
+      "funzione": "RPM, internet, marketplace, vendite passive e parity",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

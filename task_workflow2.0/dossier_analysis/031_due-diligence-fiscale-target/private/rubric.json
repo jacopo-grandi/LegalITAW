@@ -1,0 +1,1313 @@
+{
+  "task_id": "WF2-031",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 65,
+  "criteria": [
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "ogni riga della matrice della sezione 2 riporta il documento del fascicolo da cui il rilievo deriva.",
+      "match_criteria": "Oggetto del criterio: ogni riga della matrice della sezione 2 riporta il documento del fascicolo da cui il rilievo deriva.\nPASS se: in ciascuna riga la colonna del documento e' compilata\nFAIL se: una o piu' righe non indicano il documento.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "in ciascuna riga la colonna del documento e' compilata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non contiene riferimenti normativi o di prassi diversi da quelli elencati in `03_legal_sources.md`, comprensivi dell'array dei riferimenti richiamati nei documenti del fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene riferimenti normativi o di prassi diversi da quelli elencati in `03_legal_sources.md`, comprensivi dell'array dei riferimenti richiamati nei documenti del fascicolo.\nPASS se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFAIL se: compare un riferimento estraneo all'elenco chiuso.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "per ogni riga della matrice la colonna dell'esposizione stimata riporta un importo in euro oppure la dicitura di importo non determinabile.",
+      "match_criteria": "Oggetto del criterio: per ogni riga della matrice la colonna dell'esposizione stimata riporta un importo in euro oppure la dicitura di importo non determinabile.\nPASS se: nessuna cella della colonna dell'esposizione e' vuota\nFAIL se: una o piu' celle della colonna dell'esposizione sono vuote.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna cella della colonna dell'esposizione e' vuota",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable riconduce la ripresa delle spese di sponsorizzazione al rilievo n. 3 del processo verbale di constatazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la ripresa delle spese di sponsorizzazione al rilievo n. 3 del processo verbale di constatazione.\nPASS se: compare il riferimento al rilievo n. 3 del processo verbale, oppure al rilievo sulle sponsorizzazioni del periodo d'imposta 2023\nFAIL se: la ripresa non e' agganciata ad alcun rilievo del processo verbale.\nFonte di authoring: processo verbale di constatazione, rilievo n. 3",
+      "pass_condition": "compare il riferimento al rilievo n. 3 del processo verbale, oppure al rilievo sulle sponsorizzazioni del periodo d'imposta 2023",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable espone il rilievo sull'imposta sul valore aggiunto come rilievo distinto da quello sull'IRES.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone il rilievo sull'imposta sul valore aggiunto come rilievo distinto da quello sull'IRES.\nPASS se: il rilievo IVA compare come voce autonoma della matrice, con importo proprio\nFAIL se: il rilievo IVA e' fuso con quello IRES in un'unica voce, oppure non compare.\nFonte di authoring: processo verbale di constatazione, rilievo n. 4",
+      "pass_condition": "il rilievo IVA compare come voce autonoma della matrice, con importo proprio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable qualifica il rilievo n. 2 come contestazione di imputazione a un esercizio diverso da quello di competenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il rilievo n. 2 come contestazione di imputazione a un esercizio diverso da quello di competenza.\nPASS se: compare, riferita a quel rilievo, una fra: «rilievo di competenza», «questione di competenza», «imputazione temporale», «differimento della deduzione»\nFAIL se: il rilievo n. 2 e' trattato come indeducibilita' definitiva del costo, oppure non e' qualificato.\nFonte di authoring: processo verbale di constatazione, rilievo n. 2",
+      "pass_condition": "compare, riferita a quel rilievo, una fra: «rilievo di competenza», «questione di competenza», «imputazione temporale», «differimento della deduzione»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che l'esposizione economica del rilievo n. 2 e' limitata a sanzioni e interessi.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'esposizione economica del rilievo n. 2 e' limitata a sanzioni e interessi.\nPASS se: compare l'affermazione che l'esposizione si limita a sanzioni e interessi, oppure che il costo resta deducibile nel periodo d'imposta 2023\nFAIL se: l'esposizione del rilievo n. 2 e' presentata come pari alla maggiore imposta.\nFonte di authoring: art. 109, comma 1, TUIR",
+      "pass_condition": "compare l'affermazione che l'esposizione si limita a sanzioni e interessi, oppure che il costo resta deducibile nel periodo d'imposta 2023",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "nella colonna dell'esposizione stimata della riga relativa al rilievo n. 2 il deliverable non riporta l'importo di euro 81.600,00.",
+      "match_criteria": "Oggetto del criterio: nella colonna dell'esposizione stimata della riga relativa al rilievo n. 2 il deliverable non riporta l'importo di euro 81.600,00.\nPASS se: nella colonna dell'esposizione stimata di quella riga compare un importo diverso da 81.600,00, oppure la dicitura che l'esposizione si limita a sanzioni e interessi\nFAIL se: la colonna dell'esposizione stimata di quella riga riporta euro 81.600,00.\nFonte di authoring: processo verbale di constatazione, rilievo n. 2",
+      "pass_condition": "nella colonna dell'esposizione stimata di quella riga compare un importo diverso da 81.600,00, oppure la dicitura che l'esposizione si limita a sanzioni e interessi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che il fondo per imposte iscritto nel bilancio 2027 non copre l'esposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fondo per imposte iscritto nel bilancio 2027 non copre l'esposizione.\nPASS se: compare una fra: «incapiente», «insufficiente», «non copre», «capienza parziale» riferita al fondo per imposte\nFAIL se: il fondo e' presentato come capiente, oppure la capienza non e' trattata.\nFonte di authoring: bilancio 2027, stato patrimoniale B.2",
+      "pass_condition": "compare una fra: «incapiente», «insufficiente», «non copre», «capienza parziale» riferita al fondo per imposte",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che le spese di rappresentanza del 2026 eccedono il limite di deducibilita'.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le spese di rappresentanza del 2026 eccedono il limite di deducibilita'.\nPASS se: compare l'affermazione che le spese di rappresentanza del 2026 superano il limite, oppure che una parte di esse e' indeducibile\nFAIL se: le spese di rappresentanza sono presentate come integralmente deducibili, oppure non sono trattate.\nFonte di authoring: bilancio 2026, nota integrativa; art. 108, comma 2, TUIR",
+      "pass_condition": "compare l'affermazione che le spese di rappresentanza del 2026 superano il limite, oppure che una parte di esse e' indeducibile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che l'eccedenza non e' stata ripresa a tassazione nella riconciliazione fiscale del bilancio 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'eccedenza non e' stata ripresa a tassazione nella riconciliazione fiscale del bilancio 2026.\nPASS se: compare l'affermazione che la variazione in aumento manca, non e' stata operata oppure non compare nel prospetto di riconciliazione\nFAIL se: il deliverable non collega l'eccedenza alla mancata ripresa a tassazione.\nFonte di authoring: bilancio 2026, prospetto di riconciliazione",
+      "pass_condition": "compare l'affermazione che la variazione in aumento manca, non e' stata operata oppure non compare nel prospetto di riconciliazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che la limitazione al riporto delle perdite presuppone due condizioni che devono ricorrere entrambe.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la limitazione al riporto delle perdite presuppone due condizioni che devono ricorrere entrambe.\nPASS se: compare una fra: «entrambe le condizioni», «condizioni cumulative», «occorre anche», «non basta il trasferimento»\nFAIL se: la limitazione e' presentata come effetto del solo trasferimento delle partecipazioni.\nFonte di authoring: art. 84, comma 3, TUIR",
+      "pass_condition": "compare una fra: «entrambe le condizioni», «condizioni cumulative», «occorre anche», «non basta il trasferimento»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable riconduce la seconda condizione all'acquisizione del ramo d'azienda del 3 luglio 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la seconda condizione all'acquisizione del ramo d'azienda del 3 luglio 2026.\nPASS se: compare il riferimento all'acquisto della Divisione Ricambi, oppure all'acquisizione del ramo d'azienda del 2026, come fatto che integra la modifica dell'attivita'\nFAIL se: la seconda condizione e' agganciata a un fatto diverso, oppure non e' agganciata ad alcun fatto.\nFonte di authoring: atto di cessione di ramo d'azienda del 3 luglio 2026",
+      "pass_condition": "compare il riferimento all'acquisto della Divisione Ricambi, oppure all'acquisizione del ramo d'azienda del 2026, come fatto che integra la modifica dell'attivita'",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non afferma che la limitazione al riporto delle perdite non opera perche' l'attivita' della societa' non cambia.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la limitazione al riporto delle perdite non opera perche' l'attivita' della societa' non cambia.\nPASS se: non compare l'affermazione che l'attivita' resta la stessa e che percio' la limitazione non opera\nFAIL se: il deliverable esclude la limitazione sul presupposto che l'attivita' non muti.\nFonte di authoring: nota del direttore amministrativo; art. 84, comma 3, TUIR",
+      "pass_condition": "non compare l'affermazione che l'attivita' resta la stessa e che percio' la limitazione non opera",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che il test sulle grandezze di conto economico e' superato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il test sulle grandezze di conto economico e' superato.\nPASS se: compare una fra: «il test e' superato», «la soglia e' superata», «la condizione di disapplicazione ricorre»\nFAIL se: il test e' dichiarato non superato, oppure non e' trattato.\nFonte di authoring: art. 84, comma 3-bis, TUIR",
+      "pass_condition": "compare una fra: «il test e' superato», «la soglia e' superata», «la condizione di disapplicazione ricorre»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable verifica il test su entrambe le grandezze, ricavi e spese per prestazioni di lavoro subordinato.",
+      "match_criteria": "Oggetto del criterio: il deliverable verifica il test su entrambe le grandezze, ricavi e spese per prestazioni di lavoro subordinato.\nPASS se: compaiono, riferite al test, sia la grandezza dei ricavi sia quella delle spese per prestazioni di lavoro subordinato\nFAIL se: il test e' verificato su una sola delle due grandezze.\nFonte di authoring: art. 84, comma 3-bis, TUIR",
+      "pass_condition": "compaiono, riferite al test, sia la grandezza dei ricavi sia quella delle spese per prestazioni di lavoro subordinato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che, in assenza di relazione giurata di stima, il tetto al riporto e' dato dal patrimonio netto contabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che, in assenza di relazione giurata di stima, il tetto al riporto e' dato dal patrimonio netto contabile.\nPASS se: compare l'affermazione che si applica il patrimonio netto contabile perche' la relazione giurata di stima non e' stata predisposta o non risulta dal fascicolo\nFAIL se: il tetto e' agganciato al valore economico del patrimonio netto, oppure il presupposto non e' indicato.\nFonte di authoring: art. 84, comma 3-ter, TUIR",
+      "pass_condition": "compare l'affermazione che si applica il patrimonio netto contabile perche' la relazione giurata di stima non e' stata predisposta o non risulta dal fascicolo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che dal patrimonio netto contabile va sottratto il versamento in conto capitale del 18 settembre 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che dal patrimonio netto contabile va sottratto il versamento in conto capitale del 18 settembre 2026.\nPASS se: compare la sottrazione del versamento in conto capitale, oppure l'affermazione che dei versamenti degli ultimi ventiquattro mesi non si tiene conto\nFAIL se: il versamento non e' sottratto, oppure la sottrazione non e' motivata.\nFonte di authoring: bilancio 2026, prospetto delle movimentazioni del patrimonio netto",
+      "pass_condition": "compare la sottrazione del versamento in conto capitale, oppure l'affermazione che dei versamenti degli ultimi ventiquattro mesi non si tiene conto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable qualifica la perdita del riporto come voce che incide sul prezzo e non come passivita' indennizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la perdita del riporto come voce che incide sul prezzo e non come passivita' indennizzabile.\nPASS se: compare, riferita alla perdita del riporto, una fra: «questione di prezzo», «incide sul corrispettivo», «va negoziata nel prezzo», «non e' una Passivita' Fiscale»\nFAIL se: la perdita del riporto e' trattata come voce indennizzabile, oppure non e' qualificata.\nFonte di authoring: bozza di contratto, articoli 1 e 9.1",
+      "pass_condition": "compare, riferita alla perdita del riporto, una fra: «questione di prezzo», «incide sul corrispettivo», «va negoziata nel prezzo», «non e' una Passivita' Fiscale»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non indica la perdita del riporto delle perdite fra gli importi coperti dall'obbligo di indennizzo dell'articolo 9.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica la perdita del riporto delle perdite fra gli importi coperti dall'obbligo di indennizzo dell'articolo 9.\nPASS se: la perdita del riporto non compare fra le voci indennizzabili\nFAIL se: la perdita del riporto e' inserita fra le voci indennizzabili ai sensi dell'articolo 9.\nFonte di authoring: bozza di contratto, articolo 9.1",
+      "pass_condition": "la perdita del riporto non compare fra le voci indennizzabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che la societa' risponde in solido dei debiti tributari riferibili al ramo d'azienda acquistato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la societa' risponde in solido dei debiti tributari riferibili al ramo d'azienda acquistato.\nPASS se: compare l'affermazione della responsabilita' solidale della societa' quale cessionaria del ramo\nFAIL se: la responsabilita' solidale non e' trattata.\nFonte di authoring: art. 14, comma 1, d.lgs. 472/1997",
+      "pass_condition": "compare l'affermazione della responsabilita' solidale della societa' quale cessionaria del ramo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che la responsabilita' e' assistita dal beneficio della preventiva escussione della cedente.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la responsabilita' e' assistita dal beneficio della preventiva escussione della cedente.\nPASS se: compare una fra: «beneficio della preventiva escussione», «previa escussione del cedente», «responsabilita' sussidiaria»\nFAIL se: la responsabilita' e' presentata come solidale senza beneficio di escussione, oppure il punto non e' trattato.\nFonte di authoring: art. 14, comma 1, d.lgs. 472/1997",
+      "pass_condition": "compare una fra: «beneficio della preventiva escussione», «previa escussione del cedente», «responsabilita' sussidiaria»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 1.150.000,00 come limite quantitativo della responsabilita' solidale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 1.150.000,00 come limite quantitativo della responsabilita' solidale.\nPASS se: compare «1.150.000» come limite della responsabilita' solidale\nFAIL se: e' indicato un limite diverso, oppure il limite non e' indicato.\nFonte di authoring: atto di cessione di ramo d'azienda, articolo 5",
+      "pass_condition": "compare «1.150.000» come limite della responsabilita' solidale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che l'importo della responsabilita' solidale non e' determinabile dal fascicolo e indica il certificato dell'ufficio fra i documenti da acquisire.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'importo della responsabilita' solidale non e' determinabile dal fascicolo e indica il certificato dell'ufficio fra i documenti da acquisire.\nPASS se: compare la richiesta del certificato dell'ufficio sui carichi pendenti della cedente\nFAIL se: la richiesta del certificato non compare.\nFonte di authoring: art. 14, comma 3, d.lgs. 472/1997",
+      "pass_condition": "compare la richiesta del certificato dell'ufficio sui carichi pendenti della cedente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non afferma che la garanzia contrattuale rilasciata dalla cedente nell'atto di cessione esclude la responsabilita' verso l'amministrazione finanziaria.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la garanzia contrattuale rilasciata dalla cedente nell'atto di cessione esclude la responsabilita' verso l'amministrazione finanziaria.\nPASS se: non compare l'affermazione che la garanzia dell'articolo 7 dell'atto di cessione elimina la responsabilita' solidale\nFAIL se: la garanzia contrattuale e' presentata come causa di esclusione della responsabilita' verso l'amministrazione finanziaria.\nFonte di authoring: atto di cessione di ramo d'azienda, articolo 7; nota del direttore amministrativo",
+      "pass_condition": "non compare l'affermazione che la garanzia dell'articolo 7 dell'atto di cessione elimina la responsabilita' solidale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che la disapplicazione della sanzione non opera per il periodo d'imposta 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la disapplicazione della sanzione non opera per il periodo d'imposta 2026.\nPASS se: compare una fra: «la penalty protection non opera», «la disapplicazione della sanzione non spetta», «la documentazione non produce l'effetto di esimente»\nFAIL se: la disapplicazione e' presentata come operante, oppure il punto non e' trattato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: art. 1, comma 6, d.lgs. 471/1997",
+      "pass_condition": "compare una fra: «la penalty protection non opera», «la disapplicazione della sanzione non spetta», «la documentazione non produce l'effetto di esimente»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable riconduce il difetto alla marca temporale apposta dopo la presentazione della dichiarazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce il difetto alla marca temporale apposta dopo la presentazione della dichiarazione.\nPASS se: compare il riferimento alla marca temporale del 12 novembre 2027 posteriore alla presentazione della dichiarazione del 29 ottobre 2027\nFAIL se: il difetto e' agganciato a un elemento diverso, oppure non e' agganciato ad alcun elemento.\nFonte di authoring: documentazione nazionale, attestazione di sottoscrizione",
+      "pass_condition": "compare il riferimento alla marca temporale del 12 novembre 2027 posteriore alla presentazione della dichiarazione del 29 ottobre 2027",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non afferma che manchi la comunicazione del possesso della documentazione nella dichiarazione dei redditi.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che manchi la comunicazione del possesso della documentazione nella dichiarazione dei redditi.\nPASS se: non compare l'affermazione che la comunicazione del possesso non sia stata effettuata\nFAIL se: la mancata comunicazione del possesso e' indicata fra i difetti.\nFonte di authoring: nota del direttore amministrativo",
+      "pass_condition": "non compare l'affermazione che la comunicazione del possesso non sia stata effettuata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che la garanzia fiscale della bozza di contratto scade prima dei termini di decadenza di alcuni periodi d'imposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la garanzia fiscale della bozza di contratto scade prima dei termini di decadenza di alcuni periodi d'imposta.\nPASS se: compare l'affermazione che la durata della garanzia e' piu' breve dei termini per l'accertamento, oppure che alcuni periodi restano privi di copertura\nFAIL se: la garanzia e' presentata come coincidente con i termini di decadenza, oppure il punto non e' trattato.\nFonte di authoring: bozza di contratto, articolo 9.4",
+      "pass_condition": "compare l'affermazione che la durata della garanzia e' piu' breve dei termini per l'accertamento, oppure che alcuni periodi restano privi di copertura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che dall'indennizzo si deducono gli importi accantonati nel bilancio di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che dall'indennizzo si deducono gli importi accantonati nel bilancio di riferimento.\nPASS se: compare il riferimento alla deduzione degli importi accantonati dall'indennizzo\nFAIL se: la deduzione non e' trattata.\nFonte di authoring: bozza di contratto, articolo 9.5",
+      "pass_condition": "compare il riferimento alla deduzione degli importi accantonati dall'indennizzo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica fra i documenti da richiedere le dichiarazioni dei redditi dei periodi d'imposta verificati.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra i documenti da richiedere le dichiarazioni dei redditi dei periodi d'imposta verificati.\nPASS se: compare la richiesta delle dichiarazioni dei redditi dei periodi verificati\nFAIL se: la richiesta non compare.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare la richiesta delle dichiarazioni dei redditi dei periodi verificati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non consente di stabilire l'esito dei rilievi.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non consente di stabilire l'esito dei rilievi.\nPASS se: compare una fra: «non e' possibile stabilire», «non e' determinabile allo stato», «resta da verificare», «l'esito dipende da elementi non disponibili» riferito ai rilievi\nFAIL se: il deliverable afferma che i rilievi saranno accolti oppure che saranno respinti.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare una fra: «non e' possibile stabilire», «non e' determinabile allo stato», «resta da verificare», «l'esito dipende da elementi non disponibili» riferito ai rilievi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non afferma che il periodo d'imposta 2021 sia ancora accertabile.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non afferma che il periodo d'imposta 2021 sia ancora accertabile.\nPASS se: non compare l'affermazione che il periodo d'imposta 2021 sia ancora accertabile\nFAIL se: il periodo d'imposta 2021 e' presentato come ancora accertabile.\nFonte di authoring: art. 43 d.P.R. 600/1973",
+      "pass_condition": "non compare l'affermazione che il periodo d'imposta 2021 sia ancora accertabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non inserisce il rilievo n. 1 sul periodo d'imposta 2021 fra le passivita' potenziali della matrice.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non inserisce il rilievo n. 1 sul periodo d'imposta 2021 fra le passivita' potenziali della matrice.\nPASS se: il rilievo n. 1 non compare fra le voci con esposizione stimata\nFAIL se: il rilievo n. 1 e' conteggiato fra le passivita' potenziali.\nFonte di authoring: processo verbale di constatazione, rilievo n. 1",
+      "pass_condition": "il rilievo n. 1 non compare fra le voci con esposizione stimata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non inserisce la comunicazione di irregolarita' del giugno 2027 fra le passivita' aperte.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non inserisce la comunicazione di irregolarita' del giugno 2027 fra le passivita' aperte.\nPASS se: la comunicazione di irregolarita' non compare fra le voci con esposizione stimata\nFAIL se: la comunicazione di irregolarita' e' presentata come passivita' aperta.\nFonte di authoring: comunicazione di irregolarita'; quietanza del modello F24",
+      "pass_condition": "la comunicazione di irregolarita' non compare fra le voci con esposizione stimata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come esposizione per l'acquirente la franchigia dell'articolo 8.3.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come esposizione per l'acquirente la franchigia dell'articolo 8.3.\nPASS se: la franchigia non compare fra i profili sfavorevoli all'acquirente in materia fiscale\nFAIL se: la franchigia e' presentata come limite che riduce la tutela dell'acquirente sulle passivita' fiscali.\nFonte di authoring: bozza di contratto, articolo 9.7",
+      "pass_condition": "la franchigia non compare fra i profili sfavorevoli all'acquirente in materia fiscale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta il limite massimo di indennizzo dell'articolo 9.6 come incapiente rispetto all'esposizione fiscale.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta il limite massimo di indennizzo dell'articolo 9.6 come incapiente rispetto all'esposizione fiscale.\nPASS se: il limite massimo non compare fra i profili di esposizione non coperta\nFAIL se: il limite massimo e' presentato come insufficiente rispetto all'esposizione fiscale.\nFonte di authoring: bozza di contratto, articolo 9.6",
+      "pass_condition": "il limite massimo non compare fra i profili di esposizione non coperta",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non afferma che l'acquirente delle quote risponde in solido quale cessionario d'azienda.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non afferma che l'acquirente delle quote risponde in solido quale cessionario d'azienda.\nPASS se: non compare l'affermazione che l'acquirente delle quote risponda ai sensi della disciplina sulla cessione di azienda\nFAIL se: la responsabilita' solidale e' attribuita all'acquirente delle quote.\nFonte di authoring: bozza di contratto, articolo 2; art. 14 d.lgs. 472/1997",
+      "pass_condition": "non compare l'affermazione che l'acquirente delle quote risponda ai sensi della disciplina sulla cessione di azienda",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come rilievo la congruita' dei prezzi di trasferimento praticati con la controllata spagnola.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come rilievo la congruita' dei prezzi di trasferimento praticati con la controllata spagnola.\nPASS se: la congruita' dei prezzi di trasferimento non compare fra i rilievi\nFAIL se: la congruita' dei prezzi di trasferimento e' segnalata come rilievo.\nFonte di authoring: documentazione nazionale, capitolo 2",
+      "pass_condition": "la congruita' dei prezzi di trasferimento non compare fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che i rilievi del processo verbale saranno annullati in sede di contraddittorio o di ricorso.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che i rilievi del processo verbale saranno annullati in sede di contraddittorio o di ricorso.\nPASS se: non compare l'affermazione che i rilievi saranno annullati\nFAIL se: il deliverable presenta l'annullamento dei rilievi come esito atteso.\nFonte di authoring: composizione del fascicolo alla data di riferimento",
+      "pass_condition": "non compare l'affermazione che i rilievi saranno annullati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 148.800,00 come maggiore IRES del rilievo n. 3.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 148.800,00 come maggiore IRES del rilievo n. 3.\nPASS se: compare «148.800» riferito al rilievo sulle sponsorizzazioni\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: processo verbale di constatazione, rilievo n. 3",
+      "pass_condition": "compare «148.800» riferito al rilievo sulle sponsorizzazioni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 136.400,00 come maggiore IVA del rilievo n. 4.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 136.400,00 come maggiore IVA del rilievo n. 4.\nPASS se: compare «136.400» riferito al rilievo sull'imposta sul valore aggiunto\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: processo verbale di constatazione, rilievo n. 4",
+      "pass_condition": "compare «136.400» riferito al rilievo sull'imposta sul valore aggiunto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica il 31 dicembre 2028 come termine di decadenza del periodo d'imposta 2022.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 31 dicembre 2028 come termine di decadenza del periodo d'imposta 2022.\nPASS se: compare «31 dicembre 2028» oppure «31/12/2028» riferito al periodo d'imposta 2022\nFAIL se: e' indicata una data diversa, oppure la data non e' indicata.\nFonte di authoring: art. 43 d.P.R. 600/1973",
+      "pass_condition": "compare «31 dicembre 2028» oppure «31/12/2028» riferito al periodo d'imposta 2022",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica il 31 dicembre 2029 come termine di decadenza del periodo d'imposta 2023.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 31 dicembre 2029 come termine di decadenza del periodo d'imposta 2023.\nPASS se: compare «31 dicembre 2029» oppure «31/12/2029» riferito al periodo d'imposta 2023\nFAIL se: e' indicata una data diversa, oppure la data non e' indicata.\nFonte di authoring: art. 43 d.P.R. 600/1973",
+      "pass_condition": "compare «31 dicembre 2029» oppure «31/12/2029» riferito al periodo d'imposta 2023",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che il termine di decadenza si computa dall'anno di presentazione della dichiarazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine di decadenza si computa dall'anno di presentazione della dichiarazione.\nPASS se: compare una fra: «dall'anno di presentazione», «dall'anno in cui e' stata presentata la dichiarazione», «quinto anno successivo alla presentazione»\nFAIL se: il passaggio non compare.\nFonte di authoring: art. 43 d.P.R. 600/1973",
+      "pass_condition": "compare una fra: «dall'anno di presentazione», «dall'anno in cui e' stata presentata la dichiarazione», «quinto anno successivo alla presentazione»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non computa il termine di decadenza a partire dall'anno del periodo d'imposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable non computa il termine di decadenza a partire dall'anno del periodo d'imposta.\nPASS se: non compare «31 dicembre 2027» ne' «31/12/2027» come termine di decadenza del periodo d'imposta 2022\nFAIL se: il termine e' calcolato dall'anno del periodo d'imposta anziche' dall'anno di presentazione.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «31 dicembre 2027» ne' «31/12/2027» come termine di decadenza del periodo d'imposta 2022",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 132.000,00 come limite di deducibilita' delle spese di rappresentanza del 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 132.000,00 come limite di deducibilita' delle spese di rappresentanza del 2026.\nPASS se: compare «132.000» come limite di deducibilita'\nFAIL se: e' indicato un limite diverso, oppure il limite non e' indicato.\nFonte di authoring: art. 108, comma 2, TUIR; bilancio 2026",
+      "pass_condition": "compare «132.000» come limite di deducibilita'",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 180.000,00 come eccedenza indeducibile delle spese di rappresentanza del 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 180.000,00 come eccedenza indeducibile delle spese di rappresentanza del 2026.\nPASS se: compare «180.000» come eccedenza indeducibile\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: bilancio 2026, nota integrativa",
+      "pass_condition": "compare «180.000» come eccedenza indeducibile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 43.200,00 come maggiore IRES del periodo d'imposta 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 43.200,00 come maggiore IRES del periodo d'imposta 2026.\nPASS se: compare «43.200» come maggiore IRES del periodo d'imposta 2026\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: art. 77 TUIR",
+      "pass_condition": "compare «43.200» come maggiore IRES del periodo d'imposta 2026",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non indica euro 74.880,00 come maggiore IRES del periodo d'imposta 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica euro 74.880,00 come maggiore IRES del periodo d'imposta 2026.\nPASS se: non compare «74.880»\nFAIL se: compare «74.880» come maggiore imposta del periodo d'imposta 2026, cioe' la maggiore imposta e' calcolata sull'intero importo delle spese di rappresentanza anziche' sull'eccedenza.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «74.880»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 3.600.000,00 come soglia della grandezza dei ricavi.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 3.600.000,00 come soglia della grandezza dei ricavi.\nPASS se: compare «3.600.000» come soglia dei ricavi\nFAIL se: e' indicata una soglia diversa, oppure la soglia non e' indicata.\nFonte di authoring: art. 84, comma 3-bis, TUIR; bilanci 2026 e 2027",
+      "pass_condition": "compare «3.600.000» come soglia dei ricavi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 920.000,00 come soglia della grandezza delle spese per prestazioni di lavoro subordinato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 920.000,00 come soglia della grandezza delle spese per prestazioni di lavoro subordinato.\nPASS se: compare «920.000» come soglia delle spese per prestazioni di lavoro subordinato\nFAIL se: e' indicata una soglia diversa, oppure la soglia non e' indicata.\nFonte di authoring: art. 84, comma 3-bis, TUIR; bilanci 2026 e 2027",
+      "pass_condition": "compare «920.000» come soglia delle spese per prestazioni di lavoro subordinato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable afferma che il confronto si effettua con il quaranta per cento della media dei due esercizi anteriori.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il confronto si effettua con il quaranta per cento della media dei due esercizi anteriori.\nPASS se: compare il riferimento al quaranta per cento della media dei due esercizi anteriori\nFAIL se: il passaggio non compare.\nFonte di authoring: art. 84, comma 3-bis, TUIR",
+      "pass_condition": "compare il riferimento al quaranta per cento della media dei due esercizi anteriori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non confronta i dati del 2027 con la media dei due esercizi anteriori senza applicare il quaranta per cento.",
+      "match_criteria": "Oggetto del criterio: il deliverable non confronta i dati del 2027 con la media dei due esercizi anteriori senza applicare il quaranta per cento.\nPASS se: non compare l'affermazione che il test non e' superato perche' i dati del 2027 sono inferiori alla media dei due esercizi anteriori\nFAIL se: il confronto e' effettuato con la media anziche' con il quaranta per cento della media.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare l'affermazione che il test non e' superato perche' i dati del 2027 sono inferiori alla media dei due esercizi anteriori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non calcola la media di riferimento sugli esercizi 2027 e 2026.",
+      "match_criteria": "Oggetto del criterio: il deliverable non calcola la media di riferimento sugli esercizi 2027 e 2026.\nPASS se: non compare una media calcolata sugli esercizi 2027 e 2026\nFAIL se: la media e' calcolata includendo l'esercizio 2027.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare una media calcolata sugli esercizi 2027 e 2026",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 890.000,00 come importo massimo delle perdite riportabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 890.000,00 come importo massimo delle perdite riportabili.\nPASS se: compare «890.000» come importo massimo riportabile\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: art. 84, comma 3-ter, TUIR; bilancio 2027",
+      "pass_condition": "compare «890.000» come importo massimo riportabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 2.530.000,00 come importo delle perdite non riportabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 2.530.000,00 come importo delle perdite non riportabili.\nPASS se: compare «2.530.000» come importo delle perdite non riportabili\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: art. 84, comma 3-ter, TUIR; bilancio 2027",
+      "pass_condition": "compare «2.530.000» come importo delle perdite non riportabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non indica euro 1.310.000,00 come importo massimo delle perdite riportabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica euro 1.310.000,00 come importo massimo delle perdite riportabili.\nPASS se: non compare «1.310.000» come importo massimo riportabile\nFAIL se: il tetto e' calcolato senza sottrarre il versamento in conto capitale.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «1.310.000» come importo massimo riportabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non indica euro 470.000,00 come importo massimo delle perdite riportabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica euro 470.000,00 come importo massimo delle perdite riportabili.\nPASS se: non compare «470.000» come importo massimo riportabile\nFAIL se: compare «470.000» come importo massimo riportabile, cioe' il tetto e' calcolato sottraendo il doppio dei versamenti in assenza della relazione giurata di stima.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «470.000» come importo massimo riportabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non afferma che le perdite fiscali sono riportabili per l'intero importo di euro 3.420.000,00.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che le perdite fiscali sono riportabili per l'intero importo di euro 3.420.000,00.\nPASS se: non compare l'affermazione che l'intero importo delle perdite resti riportabile\nFAIL se: le perdite sono presentate come integralmente riportabili.\nFonte di authoring: art. 84, commi 3 e 3-ter, TUIR",
+      "pass_condition": "non compare l'affermazione che l'intero importo delle perdite resti riportabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 328.400,00 come esposizione complessiva in imposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 328.400,00 come esposizione complessiva in imposta.\nPASS se: compare «328.400» come esposizione complessiva in imposta\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: processo verbale di constatazione; bilancio 2026",
+      "pass_condition": "compare «328.400» come esposizione complessiva in imposta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica euro 178.400,00 come importo indennizzabile al netto dell'accantonamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 178.400,00 come importo indennizzabile al netto dell'accantonamento.\nPASS se: compare «178.400» come importo indennizzabile al netto dell'accantonamento\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: bozza di contratto, articolo 9.5; bilancio 2027",
+      "pass_condition": "compare «178.400» come importo indennizzabile al netto dell'accantonamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica il 28 aprile 2030 come scadenza della garanzia fiscale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 28 aprile 2030 come scadenza della garanzia fiscale.\nPASS se: compare «28 aprile 2030» oppure «28/04/2030» come scadenza della garanzia fiscale\nFAIL se: e' indicata una data diversa, oppure la data non e' indicata.\nFonte di authoring: bozza di contratto, articoli 4 e 9.4",
+      "pass_condition": "compare «28 aprile 2030» oppure «28/04/2030» come scadenza della garanzia fiscale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "C.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable indica i periodi d'imposta 2024, 2025, 2026 e 2027 come periodi privi di copertura contrattuale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica i periodi d'imposta 2024, 2025, 2026 e 2027 come periodi privi di copertura contrattuale.\nPASS se: compaiono, indicati come periodi privi di copertura, «2024», «2025», «2026» e «2027»\nFAIL se: manca uno dei quattro periodi, oppure l'elenco non e' indicato.\nFonte di authoring: bozza di contratto, articolo 9.4; art. 43 d.P.R. 600/1973",
+      "pass_condition": "compaiono, indicati come periodi privi di copertura, «2024», «2025», «2026» e «2027»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "C.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_fiscali.md"
+      ],
+      "title": "il deliverable non indica il periodo d'imposta 2023 fra i periodi privi di copertura contrattuale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il periodo d'imposta 2023 fra i periodi privi di copertura contrattuale.\nPASS se: il periodo d'imposta 2023 non compare fra i periodi privi di copertura\nFAIL se: il periodo d'imposta 2023 e' indicato fra i periodi scoperti.\nFonte di authoring: art. 43 d.P.R. 600/1973",
+      "pass_condition": "il periodo d'imposta 2023 non compare fra i periodi privi di copertura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

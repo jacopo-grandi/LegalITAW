@@ -1,0 +1,123 @@
+{
+  "task_id": "WF2-088",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "titolarita'",
+      "gravita": "alta",
+      "affermazione_richiesta": "il certificato indica Radianza Outdoor come titolare del marchio italiano",
+      "evidenza": "certificato marchio"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "prodotti protetti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la registrazione copre zaini e borse sportive",
+      "evidenza": "certificato marchio"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "uso del segno",
+      "gravita": "alta",
+      "affermazione_richiesta": "il segno RADIENZA compare sulle etichette dei prodotti offerti",
+      "evidenza": "foto acquisto campione"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "uso nel commercio",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'offerta e la vendita risultano da ordine, fattura e pagamento",
+      "evidenza": "ordine test"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "territorio",
+      "gravita": "media",
+      "affermazione_richiesta": "la consegna e' avvenuta a Torino da un sito in italiano",
+      "evidenza": "tracking e screenshot"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "soggetto venditore",
+      "gravita": "media",
+      "affermazione_richiesta": "fattura e condizioni del sito indicano Selvatica Uno S.r.l.",
+      "evidenza": "fattura e condizioni"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "somiglianza segni",
+      "gravita": "media",
+      "affermazione_richiesta": "RADIANZA e RADIENZA differiscono per una vocale interna e condividono struttura e accento",
+      "evidenza": "riproduzioni dei segni"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "affinita' prodotti",
+      "gravita": "media",
+      "affermazione_richiesta": "entrambi i segni sono usati per zaini da escursionismo",
+      "evidenza": "certificato e campione"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "pubblico e canali",
+      "gravita": "media",
+      "affermazione_richiesta": "i prodotti sono offerti agli stessi consumatori su marketplace outdoor",
+      "evidenza": "screenshot comparativi"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "diffusione",
+      "gravita": "media",
+      "affermazione_richiesta": "il dossier prova un acquisto ma non il volume complessivo delle vendite",
+      "evidenza": "assenza dati vendite"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "danno",
+      "gravita": "media",
+      "affermazione_richiesta": "il margine perso e la retroversione richiedono dati non presenti",
+      "evidenza": "contabilita' cliente e lacune"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "conservazione",
+      "gravita": "media",
+      "affermazione_richiesta": "screenshot, campione e hash devono restare collegati a data, autore e catena di custodia",
+      "evidenza": "verbale acquisizione"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "nome dominio",
+      "oggetto": "nome dominio",
+      "chiave_nel_criterio": "nome dominio",
+      "perche_non_e_issue": "il dominio registrato da solo non prova la vendita del prodotto",
+      "criterio_assenza": "Il deliverable non presenta nome dominio come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "numero follower",
+      "oggetto": "numero follower",
+      "chiave_nel_criterio": "numero follower",
+      "perche_non_e_issue": "i follower non equivalgono a vendite o danno",
+      "criterio_assenza": "Il deliverable non presenta numero follower come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "assenza simbolo registrato",
+      "oggetto": "assenza simbolo registrato",
+      "chiave_nel_criterio": "assenza simbolo registrato",
+      "perche_non_e_issue": "la mancanza del simbolo R non esclude il diritto sul marchio registrato",
+      "criterio_assenza": "Il deliverable non presenta assenza simbolo registrato come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "recensione anonima",
+      "oggetto": "recensione anonima",
+      "chiave_nel_criterio": "recensione anonima",
+      "perche_non_e_issue": "una recensione anonima non prova l'identita' del venditore",
+      "criterio_assenza": "Il deliverable non presenta recensione anonima come rilievo autonomo."
+    }
+  ]
+}

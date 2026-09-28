@@ -1,0 +1,90 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-059",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "evidence_and_liability_memo.md"
+  ],
+  "criteria_total": 38,
+  "proposals_count": 3,
+  "proposals": [
+    {
+      "criterion_id": "B.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 39.000,00",
+        "euro 29.000,00",
+        "39.000,00",
+        "29.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 39.000,00» ed «euro 29.000,00» come le operazioni oltre soglia.; compaiono «39.000,00» e «29.000,00» come le operazioni oltre soglia.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-059-B8",
+        "type": "required_regex",
+        "artifact": "evidence_and_liability_memo.md",
+        "patterns": [
+          "(?:(?<![\\d.,])39[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])29[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])39[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])29[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.17",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "4 febbraio 2031",
+        "04/02/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «4 febbraio 2031» come data della comunicazione di variazione.; compare «04/02/2031» come data della comunicazione di variazione.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-059-B17",
+        "type": "required_regex",
+        "artifact": "evidence_and_liability_memo.md",
+        "patterns": [
+          "(?:(?:4°?\\s+febbraio(?:\\s+2031)?|0?4\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2031|0?4\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*31)|(?:4°?\\s+febbraio(?:\\s+2031)?|0?4\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2031|0?4\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.26",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 148.500,00",
+        "148.500,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 148.500,00» come totale delle operazioni disconosciute.; compare «148.500,00» come totale delle operazioni disconosciute.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-059-B26",
+        "type": "required_regex",
+        "artifact": "evidence_and_liability_memo.md",
+        "patterns": [
+          "(?:(?<![\\d.,])148[.\\s]?500(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])148[.\\s]?500(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

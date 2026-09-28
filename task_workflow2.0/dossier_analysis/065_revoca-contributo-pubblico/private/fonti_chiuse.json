@@ -1,0 +1,14 @@
+{
+  "task_id": "WF2-065",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "Legge 7 agosto 1990, n. 241, artt. 7, 10, 10-bis, 21-quinquies e 21-nonies",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241!vig=",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-095",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "lease_enforcement_timeline.md"
+  ],
+  "criteria_total": 38,
+  "proposals_count": 5,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "6 agosto 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «6 agosto 2026» come data alla quale la ricostruzione è riferita",
+      "combine": "single",
+      "check": {
+        "id": "WF2-095-A3",
+        "type": "required_regex",
+        "artifact": "lease_enforcement_timeline.md",
+        "patterns": [
+          "(?:(?:6°?\\s+agosto(?:\\s+2026)?|0?6\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2026|0?6\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.22",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "novanta giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare il termine di «novanta giorni» riferito alla misura massima del termine assegnabile",
+      "combine": "single",
+      "check": {
+        "id": "WF2-095-B22",
+        "type": "required_regex",
+        "artifact": "lease_enforcement_timeline.md",
+        "patterns": [
+          "(?:(?:90|novanta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "30 luglio 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «30 luglio 2026» riferita alla notificazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-095-C1",
+        "type": "required_regex",
+        "artifact": "lease_enforcement_timeline.md",
+        "patterns": [
+          "(?:(?:30°?\\s+luglio(?:\\s+2026)?|0?30\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*2026|0?30\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "13.086,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «13.086,00» riferito alla morosità intimata",
+      "combine": "single",
+      "check": {
+        "id": "WF2-095-C4",
+        "type": "required_regex",
+        "artifact": "lease_enforcement_timeline.md",
+        "patterns": [
+          "(?:(?<![\\d.,])13[.\\s]?086(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "12.872,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «12.872,00» riferito alla somma non controversa",
+      "combine": "single",
+      "check": {
+        "id": "WF2-095-C6",
+        "type": "required_regex",
+        "artifact": "lease_enforcement_timeline.md",
+        "patterns": [
+          "(?:(?<![\\d.,])12[.\\s]?872(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

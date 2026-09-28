@@ -1,0 +1,260 @@
+{
+  "task_id": "WF2-052",
+  "lato_assistito": "Teleria Monteluce S.r.l., debitrice ingiunta e futura opponente",
+  "data_di_riferimento": "2031-06-18",
+  "stato_fascicolo": "decreto notificato il 20 maggio 2031 e non dichiarato provvisoriamente esecutivo; nessun pignoramento notificato; opposizione non ancora proposta; bozza di citazione del 16 giugno 2031 con notificazione programmata per il 25 giugno 2031 e udienza indicata al 20 ottobre 2031; deposito di euro 276.000,00 autorizzato e non eseguito.",
+  "meccanismi_di_difficolta": [
+    "le regole di computo non stanno nei documenti: durata, proroga per giorno festivo, giorni liberi e termine minimo a comparire vanno ricavati dalla disciplina",
+    "regola abrogata che il modello tende ad applicare: la riduzione a metà dei termini di comparizione, soppressa nel 2011, è scritta come nota interna dello studio",
+    "metodo di calcolo controintuitivo: il calendario che la bozza si è data è internamente insufficiente e lo si scopre solo contando i giorni liberi",
+    "fatti distribuiti: il perimetro del contestabile si ricava incrociando l'estratto delle partite, la determinazione interna e i motivi della bozza",
+    "dichiarazione di parte smentita dai documenti: la bozza chiede la revoca integrale e sviluppa motivi per meno della metà del contestabile",
+    "evidenze incomplete: le note di credito sono ricevute e non accettate, e la documentazione che le sostiene non è nel fascicolo"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "durata e decorrenza del termine di opposizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine per proporre opposizione è di quaranta giorni e decorre dalla notificazione del decreto, avvenuta il 20 maggio 2031",
+      "evidenza": "dispositivo e avvertimento del decreto ingiuntivo; relata di notificazione",
+      "non_deve_affermare": "che il termine decorra dall'emissione del decreto del 12 maggio 2031 o dal deposito del ricorso del 28 aprile 2031"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "scadenza effettiva del termine di opposizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il quarantesimo giorno cade domenica 29 giugno 2031 e il termine è prorogato al primo giorno successivo non festivo, lunedi 30 giugno 2031",
+      "evidenza": "computo dalla notificazione del 20 maggio 2031; calendario 2031",
+      "non_deve_affermare": "che la scadenza sia il 29 giugno 2031"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "tempo residuo alla data di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "al 18 giugno 2031 il termine è aperto e residuano dodici giorni fino al 30 giugno 2031",
+      "evidenza": "data di riferimento e scadenza calcolata",
+      "non_deve_affermare": "che il termine sia scaduto"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "riduzione a meta dei termini di comparizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la riduzione a metà dei termini di comparizione nell'opposizione a decreto ingiuntivo è stata soppressa nel 2011: la nota interna della bozza applica una regola non più vigente",
+      "evidenza": "nota interna della bozza di citazione",
+      "non_deve_affermare": "che i termini di comparizione siano ridotti della metà per il solo fatto che si tratta di opposizione a decreto ingiuntivo"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "termine minimo a comparire",
+      "gravita": "alta",
+      "affermazione_richiesta": "fra la notificazione e l'udienza devono intercorrere termini liberi non inferiori a centoventi giorni se la notificazione avviene in Italia",
+      "evidenza": "disciplina dei termini a comparire nell'atto di citazione",
+      "non_deve_affermare": "che il termine minimo sia di novanta giorni o di sessanta giorni"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "insufficienza del calendario della bozza",
+      "gravita": "alta",
+      "affermazione_richiesta": "fra la notificazione programmata per il 25 giugno 2031 e l'udienza indicata al 20 ottobre 2031 intercorrono centosedici giorni liberi: il calendario che la bozza si è data è inferiore al minimo",
+      "evidenza": "date della notificazione programmata e dell'udienza indicate nella bozza",
+      "non_deve_affermare": "che il calendario sia sufficiente, o che l'insufficienza sia sanabile dopo la notificazione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "rimedio all'insufficienza del calendario",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'insufficienza va corretta prima della notificazione, spostando l'udienza a una data che rispetti il minimo, perché la notificazione con termine inferiore espone l'atto a una nullità che il giudice rileva",
+      "evidenza": "confronto fra il calendario della bozza e il termine minimo",
+      "non_deve_affermare": "che l'opponente possa rimediare con una semplice istanza al giudice dopo la notificazione"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "termine per la costituzione dell'opponente",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'opponente, che assume la veste di attore, si costituisce entro dieci giorni dalla notificazione dell'atto di citazione, depositando originale, procura, documenti e nota di iscrizione a ruolo",
+      "evidenza": "disciplina della costituzione dell'attore",
+      "non_deve_affermare": "che il termine sia di cinque giorni per effetto della riduzione a metà"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "termine per la costituzione dell'opposto",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'opposto si costituisce almeno settanta giorni prima dell'udienza di comparizione",
+      "evidenza": "disciplina della costituzione del convenuto",
+      "non_deve_affermare": "che il termine sia di venti giorni prima dell'udienza"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "scansione delle memorie integrative",
+      "gravita": "alta",
+      "affermazione_richiesta": "il giudizio prevede tre memorie integrative, da depositare almeno quaranta, venti e dieci giorni prima dell'udienza, ciascuna con un contenuto proprio",
+      "evidenza": "disciplina delle memorie integrative",
+      "non_deve_affermare": "che le memorie siano due o che i termini siano liberamente fissati dal giudice"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "stato del titolo alla data di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il decreto non è dichiarato provvisoriamente esecutivo e alla data di riferimento non esiste alcun titolo esecutivo azionabile",
+      "evidenza": "dispositivo del decreto ingiuntivo; punto 4 della determinazione dell'amministratore unico",
+      "non_deve_affermare": "che il decreto sia esecutivo o che l'opposta possa procedere a pignoramento"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "domanda di sospensione priva di presupposto",
+      "gravita": "alta",
+      "affermazione_richiesta": "la domanda di sospensione dell'efficacia esecutiva contenuta nella bozza presuppone che l'esecuzione provvisoria sia stata concessa o iniziata: alla data di riferimento non lo è e la domanda va formulata in via subordinata all'eventuale concessione",
+      "evidenza": "conclusione sub b) della bozza; dispositivo del decreto",
+      "non_deve_affermare": "che la domanda di sospensione sia necessaria allo stato, o che vada semplicemente espunta"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "istanza dell'opposto per la provvisoria esecuzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'opposto può chiedere nel giudizio di opposizione la provvisoria esecuzione del decreto, e la concessione non è automatica né necessariamente per l'intero importo",
+      "evidenza": "disciplina della provvisoria esecuzione nel giudizio di opposizione; composizione documentale del credito",
+      "non_deve_affermare": "che la concessione sia automatica per l'intero importo ingiunto"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "disallineamento fra motivi e conclusioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza chiede la revoca integrale del decreto ma sviluppa motivi per soli euro 126.000,00: conclusioni e motivi vanno allineati",
+      "evidenza": "punto 6 e conclusione sub a) della bozza",
+      "non_deve_affermare": "che la revoca integrale segua dalle sole note di credito e dalla penale"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "acconti versati e non imputati non contestati dalla bozza",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'estratto delle partite riporta due acconti da euro 30.000,00 ciascuno non imputati a riduzione del credito, per complessivi euro 60.000,00, che la bozza non contesta",
+      "evidenza": "righe degli incassi del 15 settembre 2030 e del 18 dicembre 2030 dell'estratto delle partite; punto 3 della determinazione dell'amministratore unico",
+      "non_deve_affermare": "che gli acconti siano stati imputati o che siano compresi nei 126.000,00 contestati"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "perimetro complessivo del contestabile",
+      "gravita": "alta",
+      "affermazione_richiesta": "sulla base dei documenti il contestabile è di euro 210.700,00, somma di euro 144.000,00 in linea capitale, euro 42.000,00 di penale ed euro 24.700,00 di interessi: lo scostamento rispetto al contestato dalla bozza è di euro 84.700,00",
+      "evidenza": "estratto delle partite; punto 6 della bozza",
+      "non_deve_affermare": "che il contestabile coincida con i 126.000,00 della bozza"
+    },
+    {
+      "id": "I-17",
+      "etichetta": "valore probatorio della PEC del 3 aprile 2031",
+      "gravita": "alta",
+      "affermazione_richiesta": "la comunicazione dell'opposta conferma la ricezione delle note di credito e riserva la verifica del loro fondamento, dichiarando che non procederà alla contabilizzazione: non prova l'accettazione delle note",
+      "evidenza": "corpo della PEC del 3 aprile 2031",
+      "non_deve_affermare": "che la comunicazione provi l'accettazione delle note di credito o il riconoscimento del credito dell'opponente"
+    },
+    {
+      "id": "I-18",
+      "etichetta": "onere di provare i resi",
+      "gravita": "alta",
+      "affermazione_richiesta": "la PEC dell'opposta contesta la riscontrabilità delle quantità e la tempestività delle contestazioni di qualità: la documentazione di reso e le contestazioni scritte nel termine contrattuale vanno prodotte",
+      "evidenza": "corpo della PEC del 3 aprile 2031; clausole 9.1 e 10.1 del contratto",
+      "non_deve_affermare": "che le note di credito si provino da sé"
+    },
+    {
+      "id": "I-19",
+      "etichetta": "natura del deposito autorizzato",
+      "gravita": "alta",
+      "affermazione_richiesta": "il deposito di euro 276.000,00 autorizzato dalla determinazione è un atto di disponibilità e non costituisce riconoscimento del debito residuo",
+      "evidenza": "punti 1 e 2 della determinazione dell'amministratore unico",
+      "non_deve_affermare": "che il deposito equivalga a riconoscimento del credito o a confessione giudiziale"
+    },
+    {
+      "id": "I-20",
+      "etichetta": "condizione di procedibilita in materia di somministrazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rapporto dedotto in giudizio è un contratto di somministrazione, materia per la quale il tentativo di mediazione è condizione di procedibilità: la bozza non ne fa menzione e il punto va risolto prima del giudizio",
+      "evidenza": "oggetto del contratto del 9 gennaio 2029; assenza di riferimenti nella bozza",
+      "non_deve_affermare": "che la condizione non operi, o che possa essere ignorata"
+    },
+    {
+      "id": "I-21",
+      "etichetta": "scenari alternativi e conseguenze sul titolo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la mappa deve distinguere revoca integrale, accoglimento parziale, rigetto e concessione della provvisoria esecuzione, associando a ciascuno il titolo, l'importo eseguibile e la prossima istanza utile",
+      "evidenza": "composizione documentale del credito; stato del titolo",
+      "non_deve_affermare": "quale scenario si verificherà"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "ora della consegna della notificazione",
+      "chiave_nel_criterio": "ora della consegna",
+      "perche_non_e_issue": "la ricevuta di avvenuta consegna riporta le 17:42:31, ora anteriore al limite serale oltre il quale la notificazione telematica si considera perfezionata il giorno successivo: la data di perfezionamento resta il 20 maggio 2031. Trattare l'ora come elemento che sposta la decorrenza è errore"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "sospensione feriale sul termine di opposizione",
+      "chiave_nel_criterio": "sospensione feriale sul termine di opposizione",
+      "perche_non_e_issue": "il periodo che va dal 20 maggio al 30 giugno 2031 non interseca la sospensione dei termini processuali del mese di agosto: applicarla al termine di opposizione per spostarne la scadenza è errore"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "clausola penale del contratto",
+      "chiave_nel_criterio": "validita della clausola penale",
+      "perche_non_e_issue": "la clausola 11 del contratto prevede una penale determinata nel suo ammontare e subordinata a contestazione scritta: è una clausola valida, e la contestazione riguarda il suo presupposto e la sua misura, non la sua validità. Affermarne la nullità è sovra-asserzione"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "foro indicato nella bozza",
+      "chiave_nel_criterio": "foro indicato nella bozza",
+      "perche_non_e_issue": "la bozza cita l'opposta davanti al Tribunale di Fontechiusa, che è l'ufficio che ha emesso il decreto e il foro esclusivo pattuito: l'indicazione è esatta. Segnalarla come errore è sovra-segnalazione"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "distrazione delle spese in favore del difensore",
+      "chiave_nel_criterio": "distrazione delle spese",
+      "perche_non_e_issue": "la liquidazione delle spese con distrazione in favore del difensore antistatario è una formula corrente del decreto e non incide sulla posizione dell'opponente. Segnalarla è sovra-segnalazione"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "rinnovo tacito del contratto",
+      "chiave_nel_criterio": "rinnovo tacito del contratto",
+      "perche_non_e_issue": "il rinnovo tacito della clausola 2.2, in assenza di disdetta, è un assetto ordinario e non è controverso fra le parti: la bozza stessa lo riporta come fatto. Segnalarlo come profilo di rischio è sovra-segnalazione"
+    }
+  ],
+  "dati_mancanti": [
+    "documentazione di reso e documenti di trasporto delle partite di novembre e dicembre 2030",
+    "contestazioni scritte di qualità con prova della data di invio",
+    "corrispondenza fra le parti sulle forniture contestate",
+    "contestazione scritta del ritardo prevista dalla clausola 11.2 del contratto",
+    "conteggio analitico degli interessi di mora",
+    "indice dei documenti da 1 a 14 richiamato dalla bozza di citazione",
+    "listino allegato al contratto e suoi aggiornamenti",
+    "prova dell'eventuale avvio del procedimento di mediazione"
+  ],
+  "errori_bersaglio": [
+    "applicare la riduzione a metà dei termini di comparizione",
+    "indicare in cinque giorni il termine per la costituzione dell'opponente",
+    "indicare in venti giorni prima dell'udienza la costituzione dell'opposto",
+    "dichiarare sufficiente il calendario della bozza",
+    "far decorrere il termine di opposizione dall'emissione del decreto",
+    "indicare il 29 giugno 2031 come scadenza, senza applicare la proroga",
+    "attribuire all'ora della consegna della PEC l'effetto di spostare la decorrenza",
+    "applicare la sospensione feriale a un termine che non la interseca",
+    "presentare il decreto come esecutivo o l'esecuzione forzata come possibile",
+    "presentare la domanda di sospensione come necessaria allo stato, o sopprimerla",
+    "affermare che la provvisoria esecuzione sarà concessa per l'intero importo",
+    "far coincidere il contestabile con i 126.000,00 della bozza",
+    "trattare la PEC del 3 aprile 2031 come accettazione delle note di credito",
+    "trattare il deposito autorizzato come riconoscimento del debito",
+    "assumere come pacifica la ripartizione dell'onere di attivare la mediazione",
+    "affermare la nullità della clausola penale",
+    "presumere l'esito del giudizio"
+  ],
+  "funzione_degli_allegati": {
+    "01_decreto_ingiuntivo_412_2031.pdf": "Titolo da opporre. Fissa l'importo ingiunto, il termine di quaranta giorni e nega la provvisoria esecuzione: è la fonte della decorrenza e dello stato del titolo.",
+    "02_relata_notifica_20_maggio_2031.pdf": "Fissa il giorno e l'ora del perfezionamento della notifica. L'ora è il controlled non-issue: è anteriore al limite serale e non sposta la data.",
+    "03_bozza_citazione_in_opposizione.docx": "Documento centrale della revisione procedurale: contiene il disallineamento fra motivi e conclusioni, il calendario insufficiente, la domanda di sospensione priva di presupposto e l'applicazione della riduzione a metà dei termini.",
+    "04_estratto_partite_creditore.csv": "Consente di ricostruire la composizione dell'importo ingiunto e di isolare gli acconti versati e non imputati, che la bozza di citazione non contesta.",
+    "05_pec_opposta_3_aprile_2031.pdf": "Prova la conoscenza delle note di credito da parte del creditore e, al tempo stesso, la riserva sul loro fondamento: il documento non prova l'accettazione contabile.",
+    "06_contratto_somministrazione.pdf": "Fonda la penale e il termine per le contestazioni di qualità, e ospita il controlled non-issue sulla validità della clausola penale.",
+    "07_delibera_amministratore_unico.pdf": "Autorizza il deposito dell'importo non contestato e fissa il perimetro della difesa: è l'atto interno che consente di distinguere l'offerta dal riconoscimento."
+  }
+}

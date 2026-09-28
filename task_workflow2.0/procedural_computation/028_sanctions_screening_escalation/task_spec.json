@@ -1,0 +1,40 @@
+{
+  "schema_version": "2.0.0-draft",
+  "task_id": "WF2-028",
+  "title": "AML. Audit dei termini su una posizione emersa dallo screening sanzionatorio",
+  "use_case_family": "Procedural timeline",
+  "macro_area": [
+    "AML & Financial Crime"
+  ],
+  "source": {
+    "platform": "local_generation",
+    "page_id": "3c8f042e-9f58-81be-b0b2-e481abdcca40",
+    "page_url": "https://app.notion.com/p/3c8f042e9f5881beb0b2e481abdcca40",
+    "database_url": "https://app.notion.com/p/958f0d1646454cd59feef83f87e2063a?v=5fb25588bfac4a22ab31d5375dfbcb9f",
+    "source_date": "2026-08-25",
+    "imported_at": "2026-08-25",
+    "published_at": "2026-08-26"
+  },
+  "public_inputs": {
+    "prompt": "public/01_task.md",
+    "reference_pack": "public/02_reference_pack.md",
+    "legal_sources": "public/03_legal_sources.md",
+    "documents_directory": "public/documents",
+    "original_attachment_count": 10
+  },
+  "private_evaluation": {
+    "atomized_criteria": "private/criteria_atomized.md",
+    "legacy_evaluation_criteria": "private/evaluation_criteria.md",
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md"
+  },
+  "run_output_directory": "runs",
+  "revision_status": "pilot_ready",
+  "local_revision_date": "2026-08-25",
+  "gold_legal_signoff": "pending",
+  "notion_modified": false,
+  "notion_published": true,
+  "notion_attachment_count": 10,
+  "pilot_status": "ready",
+  "normative_freeze_date": "2026-08-25"
+}

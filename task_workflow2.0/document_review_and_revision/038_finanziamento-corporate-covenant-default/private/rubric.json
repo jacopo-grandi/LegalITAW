@@ -1,0 +1,1393 @@
+{
+  "task_id": "WF2-038",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 69,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non contiene testo redatto in forma di clausola contrattuale, di bozza di lettera o di bozza di atto modificativo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene testo redatto in forma di clausola contrattuale, di bozza di lettera o di bozza di atto modificativo.\nPASS se: non compare testo in forma di clausola o di atto da sottoscrivere.\nFAIL se: il deliverable contiene una clausola riscritta, una bozza di lettera o una bozza di atto.\nFonte di authoring: prompt",
+      "pass_condition": "non compare testo in forma di clausola o di atto da sottoscrivere.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPASS se: ogni riferimento normativo citato appartiene all'elenco.\nFAIL se: compare almeno un riferimento normativo fuori elenco.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 3,90x come limite di Leva Finanziaria applicabile alla Data di Verifica del 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 3,90x come limite di Leva Finanziaria applicabile alla Data di Verifica del 31 dicembre 2031.\nPASS se: compare 3,90x, o 3,9x, riferito al limite di quella Data di Verifica.\nFAIL se: compare un limite diverso da 3,90x riferito a quella Data di Verifica, oppure il limite non compare.\nFonte di authoring: Atto Modificativo n. 1, art. 3.1",
+      "pass_condition": "compare 3,90x, o 3,9x, riferito al limite di quella Data di Verifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable riconduce il limite di 3,90x all'atto modificativo del 12 marzo 2031 e non al contratto originario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce il limite di 3,90x all'atto modificativo del 12 marzo 2031 e non al contratto originario.\nPASS se: il limite di 3,90x è ricondotto all'atto modificativo, all'atto modificativo n. 1 o alla modifica del marzo 2031.\nFAIL se: il limite di 3,90x è ricondotto al contratto originario, oppure non è ricondotto ad alcuna fonte.\nÈ indifferente: la citazione del numero di articolo.\nFonte di authoring: Atto Modificativo n. 1, art. 3.1",
+      "pass_condition": "il limite di 3,90x è ricondotto all'atto modificativo, all'atto modificativo n. 1 o alla modifica del marzo 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non indica 3,50x come limite di Leva Finanziaria applicabile alla Data di Verifica del 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica 3,50x come limite di Leva Finanziaria applicabile alla Data di Verifica del 31 dicembre 2031.\nPASS se: 3,50x non compare come limite di quella Data di Verifica.\nFAIL se: 3,50x è indicato come limite applicabile alla Data di Verifica del 31 dicembre 2031.\nÈ indifferente: la menzione di 3,50x come limite che tornerà applicabile dal 30 giugno 2032.\nFonte di authoring: contratto, art. 13.5, lett. A",
+      "pass_condition": "3,50x non compare come limite di quella Data di Verifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che il finanziamento soci del 26 novembre 2031, di 7.830.000 euro, non è postergato ai sensi dell'atto di postergazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il finanziamento soci del 26 novembre 2031, di 7.830.000 euro, non è postergato ai sensi dell'atto di postergazione.\nPASS se: compare l'affermazione che quel finanziamento non è postergato, non è coperto dall'atto di postergazione o non rientra fra i crediti postergati.\nFAIL se: il finanziamento è trattato come postergato, oppure l'affermazione non compare.\nFonte di authoring: Atto di Postergazione, artt. 2 e 6 e Allegato A",
+      "pass_condition": "compare l'affermazione che quel finanziamento non è postergato, non è coperto dall'atto di postergazione o non rientra fra i crediti postergati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable riconduce la mancata postergazione all'assenza dell'atto di adesione previsto per i crediti sorti dopo l'atto di postergazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la mancata postergazione all'assenza dell'atto di adesione previsto per i crediti sorti dopo l'atto di postergazione.\nPASS se: compare il riferimento all'atto di adesione mancante, alla mancata estensione della postergazione ai crediti successivi o al fatto che il credito non figura nell'elenco allegato.\nFAIL se: la mancata postergazione è ricondotta ad altra ragione, oppure non è motivata.\nFonte di authoring: Atto di Postergazione, art. 6",
+      "pass_condition": "compare il riferimento all'atto di adesione mancante, alla mancata estensione della postergazione ai crediti successivi o al fatto che il credito non figura nell'elenco allegato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che quel finanziamento soci rientra nell'Indebitamento Finanziario Netto ai fini del calcolo dell'indice.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che quel finanziamento soci rientra nell'Indebitamento Finanziario Netto ai fini del calcolo dell'indice.\nPASS se: compare l'affermazione che l'importo va incluso, computato o aggiunto nell'Indebitamento Finanziario Netto.\nFAIL se: l'importo resta escluso dall'Indebitamento Finanziario Netto, oppure l'affermazione non compare.\nFonte di authoring: contratto, def. Indebitamento Finanziario Netto, lett. e",
+      "pass_condition": "compare l'affermazione che l'importo va incluso, computato o aggiunto nell'Indebitamento Finanziario Netto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 57.420.000 euro come Indebitamento Finanziario Netto al 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 57.420.000 euro come Indebitamento Finanziario Netto al 31 dicembre 2031.\nPASS se: compare l'importo di 57.420.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: prospetto covenant; contratto, def. Indebitamento Finanziario Netto",
+      "pass_condition": "compare l'importo di 57.420.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 3,96x come Leva Finanziaria al 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 3,96x come Leva Finanziaria al 31 dicembre 2031.\nPASS se: compare 3,96x o 3,96.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: 57.420.000 / 14.500.000",
+      "pass_condition": "compare 3,96x o 3,96.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable qualifica il superamento del limite di Leva Finanziaria come violazione di un impegno finanziario del contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il superamento del limite di Leva Finanziaria come violazione di un impegno finanziario del contratto.\nPASS se: compare, riferita a quel superamento, una fra: «violazione dell'impegno finanziario», «violazione del covenant», «mancato rispetto dell'impegno finanziario», «inadempimento dell'impegno finanziario».\nFAIL se: il superamento non è qualificato, oppure è qualificato direttamente come evento di default.\nFonte di authoring: contratto, art. 13.5, lett. A",
+      "pass_condition": "compare, riferita a quel superamento, una fra: «violazione dell'impegno finanziario», «violazione del covenant», «mancato rispetto dell'impegno finanziario», «inadempimento dell'impegno finanziario».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento la violazione dell'impegno sulla Leva Finanziaria non integra ancora un evento di default.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento la violazione dell'impegno sulla Leva Finanziaria non integra ancora un evento di default.\nPASS se: compare l'affermazione che l'evento di default non si è ancora verificato, non è ancora maturato o non sussiste alla data di riferimento.\nFAIL se: l'affermazione non compare, oppure si afferma che l'evento di default sussiste già.\nFonte di authoring: contratto, art. 14.2, lett. D, come sostituito",
+      "pass_condition": "compare l'affermazione che l'evento di default non si è ancora verificato, non è ancora maturato o non sussiste alla data di riferimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il 26 aprile 2032 come data di scadenza del termine entro il quale la violazione può essere rimediata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 26 aprile 2032 come data di scadenza del termine entro il quale la violazione può essere rimediata.\nPASS se: compare la data del 26 aprile 2032.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 20 Giorni Lavorativi dal 26 marzo 2032; art. 13.10, lett. b",
+      "pass_condition": "compare la data del 26 aprile 2032.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che l'evento di default si produrrà alla scadenza del termine di rimedio se il rimedio non interviene.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'evento di default si produrrà alla scadenza del termine di rimedio se il rimedio non interviene.\nPASS se: compare l'affermazione che l'evento di default matura, sorge o si verifica alla scadenza di quel termine.\nFAIL se: l'affermazione non compare, oppure l'evento di default è collocato alla Data di Verifica o alla data di consegna del certificato.\nFonte di authoring: contratto, art. 14.2, lett. D",
+      "pass_condition": "compare l'affermazione che l'evento di default matura, sorge o si verifica alla scadenza di quel termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che la società si trovi già in evento di default alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la società si trovi già in evento di default alla data di riferimento.\nPASS se: non compare l'affermazione che la società è in default, in evento di default o in inadempimento risolutivo alla data di riferimento.\nFAIL se: compare l'affermazione che la società si trova già in evento di default.\nFonte di authoring: contratto, art. 14.2",
+      "pass_condition": "non compare l'affermazione che la società è in default, in evento di default o in inadempimento risolutivo alla data di riferimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che il rimedio in conto capitale non può essere esercitato per la Data di Verifica del 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il rimedio in conto capitale non può essere esercitato per la Data di Verifica del 31 dicembre 2031.\nPASS se: compare l'affermazione che il rimedio non è esercitabile, non è disponibile o è precluso per quella Data di Verifica.\nFAIL se: l'affermazione non compare, oppure il rimedio è presentato come esercitabile.\nFonte di authoring: art. 13.10, lett. c",
+      "pass_condition": "compare l'affermazione che il rimedio non è esercitabile, non è disponibile o è precluso per quella Data di Verifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable riconduce la preclusione al divieto di esercitare il rimedio a due Date di Verifica consecutive.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la preclusione al divieto di esercitare il rimedio a due Date di Verifica consecutive.\nPASS se: compare il riferimento al divieto di esercizio a due Date di Verifica consecutive o a due verifiche successive.\nFAIL se: la preclusione è ricondotta ad altra ragione, oppure non è motivata.\nFonte di authoring: art. 13.10, lett. c",
+      "pass_condition": "compare il riferimento al divieto di esercizio a due Date di Verifica consecutive o a due verifiche successive.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che il rimedio è già stato esercitato con riferimento alla Data di Verifica del 30 giugno 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il rimedio è già stato esercitato con riferimento alla Data di Verifica del 30 giugno 2031.\nPASS se: compare l'affermazione che il rimedio è stato usato, esercitato o attivato per la Data di Verifica del 30 giugno 2031.\nFAIL se: l'affermazione non compare, oppure l'esercizio precedente è collocato a una diversa Data di Verifica.\nFonte di authoring: lettera dell'Agente, punto 2; verbale del consiglio, terzo punto",
+      "pass_condition": "compare l'affermazione che il rimedio è stato usato, esercitato o attivato per la Data di Verifica del 30 giugno 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non indica l'esercizio del rimedio in conto capitale fra le azioni che la società può compiere per evitare l'evento di default.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'esercizio del rimedio in conto capitale fra le azioni che la società può compiere per evitare l'evento di default.\nPASS se: il rimedio in conto capitale, il versamento in conto capitale o l'aumento di capitale a titolo di rimedio non compaiono fra le azioni proposte.\nFAIL se: il rimedio in conto capitale è indicato fra le azioni che la società può compiere.\nÈ indifferente: la menzione del rimedio nella descrizione della clausola o della storia del rapporto.\nFonte di authoring: art. 13.10, lett. c",
+      "pass_condition": "il rimedio in conto capitale, il versamento in conto capitale o l'aumento di capitale a titolo di rimedio non compaiono fra le azioni proposte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che la decadenza dal beneficio del termine, la risoluzione e il recesso richiedono una dichiarazione dell'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la decadenza dal beneficio del termine, la risoluzione e il recesso richiedono una dichiarazione dell'agente.\nPASS se: compare l'affermazione che occorre una dichiarazione, una comunicazione o una lettera dell'agente perché la conseguenza si produca.\nFAIL se: l'affermazione non compare.\nFonte di authoring: contratto, artt. 14.1 lett. B, 14.2 e 14.4",
+      "pass_condition": "compare l'affermazione che occorre una dichiarazione, una comunicazione o una lettera dell'agente perché la conseguenza si produca.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che l'agente agisce su istruzione della maggioranza delle banche finanziatrici.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'agente agisce su istruzione della maggioranza delle banche finanziatrici.\nPASS se: compare il riferimento all'istruzione della maggioranza delle banche, della maggioranza delle parti finanziatrici o della maggioranza del pool.\nFAIL se: l'affermazione non compare, oppure si afferma che l'agente può agire da solo o che una singola banca può attivare la conseguenza.\nFonte di authoring: contratto, artt. 14.2 e 18.2",
+      "pass_condition": "compare il riferimento all'istruzione della maggioranza delle banche, della maggioranza delle parti finanziatrici o della maggioranza del pool.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il quindicesimo Giorno Lavorativo successivo al ricevimento come momento dal quale la dichiarazione produce effetto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il quindicesimo Giorno Lavorativo successivo al ricevimento come momento dal quale la dichiarazione produce effetto.\nPASS se: compare l'espressione «quindicesimo Giorno Lavorativo» oppure «15 Giorni Lavorativi» riferita all'efficacia della dichiarazione.\nFAIL se: compare un termine diverso, oppure il termine non compare.\nFonte di authoring: contratto, art. 14.1, lett. B",
+      "pass_condition": "compare l'espressione «quindicesimo Giorno Lavorativo» oppure «15 Giorni Lavorativi» riferita all'efficacia della dichiarazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che la decadenza dal beneficio del termine o la risoluzione operino automaticamente o di diritto senza una dichiarazione dell'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la decadenza dal beneficio del termine o la risoluzione operino automaticamente o di diritto senza una dichiarazione dell'agente.\nPASS se: non compare l'affermazione che la conseguenza si produce automaticamente, di diritto o senza necessità di comunicazione.\nFAIL se: compare l'affermazione che la decadenza o la risoluzione operano senza dichiarazione.\nFonte di authoring: contratto, artt. 14.1 lett. B e 14.2",
+      "pass_condition": "non compare l'affermazione che la conseguenza si produce automaticamente, di diritto o senza necessità di comunicazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 42,9% come partecipazione indiretta che la controllante deterrebbe nella società all'esito dell'operazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 42,9% come partecipazione indiretta che la controllante deterrebbe nella società all'esito dell'operazione.\nPASS se: compare il valore 42,9% o 42,90%.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: 55% x 78%; contratto, def. Cambio di Controllo, lett. a",
+      "pass_condition": "compare il valore 42,9% o 42,90%.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable qualifica l'operazione descritta nel term sheet come cambio di controllo ai sensi della definizione contrattuale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica l'operazione descritta nel term sheet come cambio di controllo ai sensi della definizione contrattuale.\nPASS se: compare, riferita a quell'operazione, una fra: «cambio di controllo», «change of control», «ricorre la fattispecie del cambio di controllo».\nFAIL se: l'operazione non è qualificata, oppure è qualificata come non integrante un cambio di controllo.\nFonte di authoring: contratto, def. Cambio di Controllo, lett. a; term sheet, punti 2.2 e 3.2",
+      "pass_condition": "compare, riferita a quell'operazione, una fra: «cambio di controllo», «change of control», «ricorre la fattispecie del cambio di controllo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che il cambio di controllo non ricorre perché la controllante continua a controllare la società di nuova costituzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il cambio di controllo non ricorre perché la controllante continua a controllare la società di nuova costituzione.\nPASS se: non compare l'affermazione che il mantenimento del controllo sulla catena societaria esclude il cambio di controllo.\nFAIL se: compare l'affermazione che il cambio di controllo non ricorre in quanto la controllante mantiene il controllo.\nFonte di authoring: contratto, def. Cambio di Controllo, lett. a",
+      "pass_condition": "non compare l'affermazione che il mantenimento del controllo sulla catena societaria esclude il cambio di controllo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che l'esenzione prevista per le riorganizzazioni consentite non si applica perché la società di nuova costituzione non è interamente controllata dalla controllante.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'esenzione prevista per le riorganizzazioni consentite non si applica perché la società di nuova costituzione non è interamente controllata dalla controllante.\nPASS se: compare l'affermazione che il requisito della società interamente controllata non è soddisfatto, o che il cessionario non è interamente controllato.\nFAIL se: l'affermazione non compare, oppure l'operazione è ricondotta all'esenzione.\nFonte di authoring: contratto, def. Riorganizzazione Consentita, lett. i; term sheet, punto 3.2",
+      "pass_condition": "compare l'affermazione che il requisito della società interamente controllata non è soddisfatto, o che il cessionario non è interamente controllato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 20 Giorni Lavorativi come preavviso che l'esenzione richiede di dare all'agente prima del perfezionamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 20 Giorni Lavorativi come preavviso che l'esenzione richiede di dare all'agente prima del perfezionamento.\nPASS se: compare «20 Giorni Lavorativi» o «venti Giorni Lavorativi» riferito al preavviso.\nFAIL se: compare un termine diverso, oppure il termine non compare.\nFonte di authoring: contratto, def. Riorganizzazione Consentita, lett. ii",
+      "pass_condition": "compare «20 Giorni Lavorativi» o «venti Giorni Lavorativi» riferito al preavviso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable qualifica la conseguenza del cambio di controllo come diritto di ciascuna banca, esercitabile individualmente, di ottenere il rimborso della propria quota.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la conseguenza del cambio di controllo come diritto di ciascuna banca, esercitabile individualmente, di ottenere il rimborso della propria quota.\nPASS se: compare l'affermazione che il diritto spetta a ciascuna banca singolarmente, individualmente o pro quota.\nFAIL se: la conseguenza è presentata come rimborso automatico dell'intero finanziamento, oppure come decisione collettiva del pool, oppure non è qualificata.\nFonte di authoring: contratto, art. 9.2, lett. A",
+      "pass_condition": "compare l'affermazione che il diritto spetta a ciascuna banca singolarmente, individualmente o pro quota.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non qualifica il cambio di controllo come evento di default o come causa di risoluzione del contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non qualifica il cambio di controllo come evento di default o come causa di risoluzione del contratto.\nPASS se: il cambio di controllo non compare fra gli eventi di default o fra le cause di risoluzione.\nFAIL se: il cambio di controllo è qualificato come evento di default, come causa di risoluzione o come causa di recesso.\nFonte di authoring: contratto, artt. 9.2 e 14",
+      "pass_condition": "il cambio di controllo non compare fra gli eventi di default o fra le cause di risoluzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 5 Giorni Lavorativi dal perfezionamento dell'operazione come termine entro cui la società deve comunicare il cambio di controllo all'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 5 Giorni Lavorativi dal perfezionamento dell'operazione come termine entro cui la società deve comunicare il cambio di controllo all'agente.\nPASS se: compare «5 Giorni Lavorativi» o «cinque Giorni Lavorativi» riferito a quella comunicazione.\nFAIL se: compare un termine diverso, oppure il termine non compare.\nFonte di authoring: contratto, art. 9.2, lett. B",
+      "pass_condition": "compare «5 Giorni Lavorativi» o «cinque Giorni Lavorativi» riferito a quella comunicazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il 19 febbraio 2032 come data entro cui la cessione dell'immobile andava comunicata all'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 19 febbraio 2032 come data entro cui la cessione dell'immobile andava comunicata all'agente.\nPASS se: compare la data del 19 febbraio 2032.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 10 Giorni Lavorativi dal 5 febbraio 2032; contratto, art. 9.1, lett. B",
+      "pass_condition": "compare la data del 19 febbraio 2032.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che nel fascicolo non risulta la comunicazione della cessione dell'immobile all'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che nel fascicolo non risulta la comunicazione della cessione dell'immobile all'agente.\nPASS se: compare l'affermazione che la comunicazione non risulta, non è documentata o non è stata effettuata.\nFAIL se: l'affermazione non compare, oppure si afferma che la comunicazione è stata effettuata.\nFonte di authoring: verbale del consiglio, secondo punto; assenza di riscontro nel fascicolo",
+      "pass_condition": "compare l'affermazione che la comunicazione non risulta, non è documentata o non è stata effettuata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable qualifica l'omessa comunicazione come inadempimento di un obbligo del contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica l'omessa comunicazione come inadempimento di un obbligo del contratto.\nPASS se: compare, riferita all'omissione, una fra: «inadempimento», «violazione di un impegno», «violazione di un obbligo informativo».\nFAIL se: l'omissione non è qualificata, oppure è presentata come irregolarità priva di conseguenze.\nFonte di authoring: contratto, artt. 9.1 lett. B, 13.6 e 14.2 lett. C",
+      "pass_condition": "compare, riferita all'omissione, una fra: «inadempimento», «violazione di un impegno», «violazione di un obbligo informativo».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il 5 febbraio 2033 come termine entro cui il corrispettivo della cessione deve essere reinvestito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 5 febbraio 2033 come termine entro cui il corrispettivo della cessione deve essere reinvestito.\nPASS se: compare la data del 5 febbraio 2033.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 12 mesi dal 5 febbraio 2032; contratto, art. 9.1, lett. C",
+      "pass_condition": "compare la data del 5 febbraio 2033.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che l'obbligo di rimborso anticipato è escluso soltanto se il corrispettivo è reinvestito nel termine e il reinvestimento è dimostrato all'agente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'obbligo di rimborso anticipato è escluso soltanto se il corrispettivo è reinvestito nel termine e il reinvestimento è dimostrato all'agente.\nPASS se: compare l'affermazione che serve il reinvestimento nel termine e la sua dimostrazione documentale all'agente.\nFAIL se: l'affermazione non compare, oppure la delibera del consiglio che destina il ricavato agli investimenti è presentata come atto che di per sé esclude l'obbligo.\nFonte di authoring: contratto, art. 9.1, lett. C",
+      "pass_condition": "compare l'affermazione che serve il reinvestimento nel termine e la sua dimostrazione documentale all'agente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 30.000.000 euro come importo massimo garantito che la fideiussione deve avere dopo l'aumento dell'importo totale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 30.000.000 euro come importo massimo garantito che la fideiussione deve avere dopo l'aumento dell'importo totale.\nPASS se: compare l'importo di 30.000.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 50% di 60.000.000; contratto, art. 5.3; Atto Modificativo n. 1, art. 2.2",
+      "pass_condition": "compare l'importo di 30.000.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 5.000.000 euro come differenza fra l'importo massimo garantito richiesto e quello della fideiussione in essere.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 5.000.000 euro come differenza fra l'importo massimo garantito richiesto e quello della fideiussione in essere.\nPASS se: compare l'importo di 5.000.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 30.000.000 - 25.000.000",
+      "pass_condition": "compare l'importo di 5.000.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable qualifica la scopertura della fideiussione come inadempimento dell'impegno di mantenimento delle garanzie.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la scopertura della fideiussione come inadempimento dell'impegno di mantenimento delle garanzie.\nPASS se: compare, riferita alla scopertura, una fra: «inadempimento dell'impegno», «violazione dell'impegno di mantenimento delle garanzie», «violazione dell'obbligo di mantenere la garanzia al livello previsto».\nFAIL se: la scopertura non è qualificata, oppure è presentata come questione da negoziare senza indicare che il contratto è già violato.\nFonte di authoring: contratto, artt. 5.3 e 13.9",
+      "pass_condition": "compare, riferita alla scopertura, una fra: «inadempimento dell'impegno», «violazione dell'impegno di mantenimento delle garanzie», «violazione dell'obbligo di mantenere la garanzia al livello previsto».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il 2 ottobre 2034 come termine entro cui la fideiussione deve essere prorogata o sostituita.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 2 ottobre 2034 come termine entro cui la fideiussione deve essere prorogata o sostituita.\nPASS se: compare la data del 2 ottobre 2034.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 90 giorni prima del 31 dicembre 2034; contratto, art. 13.9",
+      "pass_condition": "compare la data del 2 ottobre 2034.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che la fideiussione cessa di essere efficace prima della scadenza finale del finanziamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la fideiussione cessa di essere efficace prima della scadenza finale del finanziamento.\nPASS se: compare l'affermazione che la garanzia scade prima del finanziamento, che copre solo una parte della durata o che resta un periodo scoperto.\nFAIL se: l'affermazione non compare, oppure si afferma che la garanzia copre l'intera durata.\nFonte di authoring: fideiussione, art. 6.1; contratto, art. 4.1",
+      "pass_condition": "compare l'affermazione che la garanzia scade prima del finanziamento, che copre solo una parte della durata o che resta un periodo scoperto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento la posizione verso il locatore finanziario non integra il presupposto del recesso per inadempimento verso altri finanziatori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento la posizione verso il locatore finanziario non integra il presupposto del recesso per inadempimento verso altri finanziatori.\nPASS se: compare l'affermazione che il cross-default non è maturato, non si è verificato o non sussiste alla data di riferimento.\nFAIL se: l'affermazione non compare, oppure si afferma che il cross-default è già maturato.\nFonte di authoring: contratto, art. 14.3, lett. A; diffida, punti 2 e 3",
+      "pass_condition": "compare l'affermazione che il cross-default non è maturato, non si è verificato o non sussiste alla data di riferimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica il 16 aprile 2032 come data di scadenza del termine assegnato dalla diffida del locatore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 16 aprile 2032 come data di scadenza del termine assegnato dalla diffida del locatore.\nPASS se: compare la data del 16 aprile 2032.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 15 giorni dal 1 aprile 2032; diffida, punto 3",
+      "pass_condition": "compare la data del 16 aprile 2032.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che la risoluzione del contratto di locazione finanziaria renderebbe esigibile un importo superiore alla soglia di rilevanza prevista dal contratto di finanziamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la risoluzione del contratto di locazione finanziaria renderebbe esigibile un importo superiore alla soglia di rilevanza prevista dal contratto di finanziamento.\nPASS se: compare l'affermazione che, risolto il leasing, l'importo esigibile supera la soglia oltre la quale scatta il presupposto del recesso.\nFAIL se: l'affermazione non compare, oppure si afferma che l'importo resterebbe sotto la soglia.\nFonte di authoring: diffida, punto 4; contratto, art. 14.3, lett. A",
+      "pass_condition": "compare l'affermazione che, risolto il leasing, l'importo esigibile supera la soglia oltre la quale scatta il presupposto del recesso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable colloca il pagamento dell'insoluto verso il locatore fra le azioni con la scadenza più ravvicinata rispetto alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable colloca il pagamento dell'insoluto verso il locatore fra le azioni con la scadenza più ravvicinata rispetto alla data di riferimento.\nPASS se: il pagamento dell'insoluto compare fra le azioni da compiere e il relativo termine è indicato come il primo a scadere.\nFAIL se: l'azione non compare, oppure è collocata dopo adempimenti con scadenza successiva.\nÈ indifferente: la posizione della riga nella tabella, purché il termine sia indicato come il primo a scadere.\nFonte di authoring: diffida, punto 3",
+      "pass_condition": "il pagamento dell'insoluto compare fra le azioni da compiere e il relativo termine è indicato come il primo a scadere.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che la lettera dell'agente non contiene alcuna rinuncia e riserva espressamente i diritti delle banche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la lettera dell'agente non contiene alcuna rinuncia e riserva espressamente i diritti delle banche.\nPASS se: compare l'affermazione che la lettera riserva i diritti, non costituisce rinuncia o non produce effetti di tolleranza.\nFAIL se: l'affermazione non compare.\nFonte di authoring: lettera dell'Agente, punto 5; contratto, art. 14.5",
+      "pass_condition": "compare l'affermazione che la lettera riserva i diritti, non costituisce rinuncia o non produce effetti di tolleranza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta la lettera dell'agente come rinuncia, consenso, tolleranza o accettazione della posizione della società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la lettera dell'agente come rinuncia, consenso, tolleranza o accettazione della posizione della società.\nPASS se: non compare l'affermazione che l'agente ha rinunciato, ha acconsentito, ha tollerato o ha accettato.\nFAIL se: compare l'affermazione che la lettera vale come rinuncia, consenso o tolleranza.\nFonte di authoring: lettera dell'Agente, punto 5",
+      "pass_condition": "non compare l'affermazione che l'agente ha rinunciato, ha acconsentito, ha tollerato o ha accettato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti l'atto di adesione con cui il socio avrebbe potuto sottoporre alla postergazione il finanziamento del 26 novembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti l'atto di adesione con cui il socio avrebbe potuto sottoporre alla postergazione il finanziamento del 26 novembre 2031.\nPASS se: compare l'indicazione che quell'atto di adesione manca o non risulta nel fascicolo.\nFAIL se: l'indicazione non compare.\nFonte di authoring: Atto di Postergazione, art. 6 e Allegato B",
+      "pass_condition": "compare l'indicazione che quell'atto di adesione manca o non risulta nel fascicolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti la relazione del soggetto incaricato della revisione legale sul bilancio consolidato al 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti la relazione del soggetto incaricato della revisione legale sul bilancio consolidato al 31 dicembre 2031.\nPASS se: compare l'indicazione che la relazione di revisione manca, non è ancora emessa o non è nel fascicolo.\nFAIL se: l'indicazione non compare.\nFonte di authoring: verbale del consiglio, primo punto; lettera dell'Agente, punto 4",
+      "pass_condition": "compare l'indicazione che la relazione di revisione manca, non è ancora emessa o non è nel fascicolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti il contratto di locazione finanziaria con il locatore che ha inviato la diffida.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti il contratto di locazione finanziaria con il locatore che ha inviato la diffida.\nPASS se: compare l'indicazione che il contratto di locazione finanziaria non è nel fascicolo.\nFAIL se: l'indicazione non compare.\nFonte di authoring: diffida, punti 1 e 4",
+      "pass_condition": "compare l'indicazione che il contratto di locazione finanziaria non è nel fascicolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che la posizione sugli impegni finanziari non sia determinabile sulla base del fascicolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la posizione sugli impegni finanziari non sia determinabile sulla base del fascicolo.\nPASS se: non compare l'affermazione che l'indice non è determinabile, che occorre attendere il bilancio certificato per pronunciarsi o che non è possibile concludere.\nFAIL se: compare l'affermazione che la posizione sugli impegni finanziari non è determinabile.\nFonte di authoring: prospetto covenant; Atto di Postergazione",
+      "pass_condition": "non compare l'affermazione che l'indice non è determinabile, che occorre attendere il bilancio certificato per pronunciarsi o che non è possibile concludere.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta come rischio per la società la facoltà di designare un istituto sostitutivo della banca non consenziente o inadempiente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rischio per la società la facoltà di designare un istituto sostitutivo della banca non consenziente o inadempiente.\nPASS se: quella facoltà non compare fra i rilievi o fra i rischi.\nFAIL se: la facoltà è presentata come rischio, come clausola sfavorevole o come criticità.\nFonte di authoring: contratto, art. 20.4",
+      "pass_condition": "quella facoltà non compare fra i rilievi o fra i rischi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta l'aumento del margine da 215 a 260 punti base come modifica imposta unilateralmente dalle banche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta l'aumento del margine da 215 a 260 punti base come modifica imposta unilateralmente dalle banche.\nPASS se: l'aumento del margine non è descritto come unilaterale, imposto o non concordato.\nFAIL se: l'aumento del margine è presentato come modifica unilaterale o come imposizione.\nFonte di authoring: Atto Modificativo n. 1, art. 6.1; contratto, art. 19.2",
+      "pass_condition": "l'aumento del margine non è descritto come unilaterale, imposto o non concordato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che l'impegno sul DSCR alla Data di Verifica del 31 dicembre 2031 sia violato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'impegno sul DSCR alla Data di Verifica del 31 dicembre 2031 sia violato.\nPASS se: non compare l'affermazione che il DSCR è al di sotto del limite o che l'impegno sul DSCR non è rispettato.\nFAIL se: compare l'affermazione che il DSCR viola il limite contrattuale.\nFonte di authoring: prospetto covenant; contratto, art. 13.5, lett. B",
+      "pass_condition": "non compare l'affermazione che il DSCR è al di sotto del limite o che l'impegno sul DSCR non è rispettato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che la fideiussione sia nulla o invalida per mancata indicazione dell'importo massimo garantito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la fideiussione sia nulla o invalida per mancata indicazione dell'importo massimo garantito.\nPASS se: non compare l'affermazione di nullità o invalidità della fideiussione.\nFAIL se: compare l'affermazione che la fideiussione è nulla, invalida o inefficace per quel motivo.\nFonte di authoring: fideiussione, art. 2.1",
+      "pass_condition": "non compare l'affermazione di nullità o invalidità della fideiussione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non segnala come rischio la decadenza del creditore per mancato esercizio delle istanze contro il debitore nel termine di legge.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non segnala come rischio la decadenza del creditore per mancato esercizio delle istanze contro il debitore nel termine di legge.\nPASS se: quel rischio non compare fra i rilievi.\nFAIL se: il rischio di decadenza per mancato esercizio delle istanze è segnalato come rilievo.\nFonte di authoring: fideiussione, art. 5.1",
+      "pass_condition": "quel rischio non compare fra i rilievi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che i canoni scaduti verso il locatore, per il loro ammontare, integrino il presupposto del recesso per inadempimento verso altri finanziatori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che i canoni scaduti verso il locatore, per il loro ammontare, integrino il presupposto del recesso per inadempimento verso altri finanziatori.\nPASS se: non compare l'affermazione che l'importo dei canoni scaduti supera la soglia di rilevanza.\nFAIL se: compare l'affermazione che i canoni scaduti superano la soglia o integrano il cross-default.\nFonte di authoring: diffida, punto 2; contratto, art. 14.3, lett. A",
+      "pass_condition": "non compare l'affermazione che l'importo dei canoni scaduti supera la soglia di rilevanza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta la sostituzione del consigliere deliberata dal consiglio come rilievo o come evento da comunicare alle banche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la sostituzione del consigliere deliberata dal consiglio come rilievo o come evento da comunicare alle banche.\nPASS se: la sostituzione del consigliere non compare fra i rilievi.\nFAIL se: la sostituzione del consigliere è presentata come rilievo, come rischio o come evento da comunicare.\nFonte di authoring: verbale del consiglio, quinto punto",
+      "pass_condition": "la sostituzione del consigliere non compare fra i rilievi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta come onere per la società il compenso per rimborso anticipato volontario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come onere per la società il compenso per rimborso anticipato volontario.\nPASS se: il compenso per rimborso anticipato volontario non compare fra i rilievi o fra i costi da sostenere.\nFAIL se: il compenso è presentato come onere attuale o come rischio.\nFonte di authoring: contratto, art. 8.1",
+      "pass_condition": "il compenso per rimborso anticipato volontario non compare fra i rilievi o fra i costi da sostenere.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non segnala come mancante o irregolare l'approvazione specifica per iscritto delle clausole in calce al contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non segnala come mancante o irregolare l'approvazione specifica per iscritto delle clausole in calce al contratto.\nPASS se: non compare un rilievo sulla mancanza o sull'irregolarità dell'approvazione specifica.\nFAIL se: compare un rilievo che indica l'approvazione specifica come mancante o irregolare.\nFonte di authoring: contratto, blocco di approvazione in calce",
+      "pass_condition": "non compare un rilievo sulla mancanza o sull'irregolarità dell'approvazione specifica.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che le banche concederanno una rinuncia o che accetteranno di non attivare i rimedi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che le banche concederanno una rinuncia o che accetteranno di non attivare i rimedi.\nPASS se: non compare l'affermazione che la rinuncia sarà concessa o che le banche non agiranno.\nFAIL se: compare l'affermazione che la rinuncia sarà ottenuta o che le banche non attiveranno i rimedi.\nÈ indifferente: l'indicazione della richiesta di rinuncia fra le azioni da compiere.\nFonte di authoring: -",
+      "pass_condition": "non compare l'affermazione che la rinuncia sarà concessa o che le banche non agiranno.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non afferma che l'operazione societaria descritta nel term sheet si perfezionerà.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'operazione societaria descritta nel term sheet si perfezionerà.\nPASS se: non compare l'affermazione che l'operazione si perfezionerà o che il cambio di controllo si è verificato.\nFAIL se: compare l'affermazione che l'operazione si perfezionerà o che il cambio di controllo è già avvenuto.\nFonte di authoring: term sheet, punto 1 e punto 6",
+      "pass_condition": "non compare l'affermazione che l'operazione si perfezionerà o che il cambio di controllo si è verificato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.61",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta come rischio per la società la destinazione a investimenti del ricavato della cessione deliberata dal consiglio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rischio per la società la destinazione a investimenti del ricavato della cessione deliberata dal consiglio.\nPASS se: la destinazione deliberata non compare fra i rischi.\nFAIL se: la destinazione deliberata è presentata come rischio in sé, indipendentemente dalla dimostrazione del reinvestimento.\nFonte di authoring: verbale del consiglio, secondo punto",
+      "pass_condition": "la destinazione deliberata non compare fra i rischi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica 3,42x come Leva Finanziaria dichiarata nel certificato di conformità al 31 dicembre 2031.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 3,42x come Leva Finanziaria dichiarata nel certificato di conformità al 31 dicembre 2031.\nPASS se: compare 3,42x o 3,42 riferito al dato dichiarato.\nFAIL se: compare un valore diverso, oppure il valore dichiarato non è riportato.\nFonte di authoring: certificato al 31 dicembre 2031, punto 2",
+      "pass_condition": "compare 3,42x o 3,42 riferito al dato dichiarato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che la differenza fra l'indice dichiarato e l'indice ricalcolato dipende dall'inclusione del finanziamento soci non postergato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la differenza fra l'indice dichiarato e l'indice ricalcolato dipende dall'inclusione del finanziamento soci non postergato.\nPASS se: compare l'affermazione che lo scostamento deriva dall'inclusione di quel finanziamento soci.\nFAIL se: l'affermazione non compare, oppure lo scostamento è ricondotto ad altra posta.\nFonte di authoring: prospetto covenant, riga 9",
+      "pass_condition": "compare l'affermazione che lo scostamento deriva dall'inclusione di quel finanziamento soci.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable afferma che il limite di 3,90x vale per le sole Date di Verifica dell'anno 2031 e che dalla Data di Verifica del 30 giugno 2032 riprende applicazione la scaletta del contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il limite di 3,90x vale per le sole Date di Verifica dell'anno 2031 e che dalla Data di Verifica del 30 giugno 2032 riprende applicazione la scaletta del contratto.\nPASS se: compare l'affermazione che la deroga è limitata alle Date di Verifica del 2031 e che il limite contrattuale torna ad applicarsi dalla prima Data di Verifica del 2032.\nFAIL se: l'affermazione non compare, oppure la deroga è presentata come permanente.\nFonte di authoring: Atto Modificativo n. 1, artt. 3.1 e 3.2",
+      "pass_condition": "compare l'affermazione che la deroga è limitata alle Date di Verifica del 2031 e che il limite contrattuale torna ad applicarsi dalla prima Data di Verifica del 2032.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta 3,96x come risultato di un calcolo che include nell'indebitamento i finanziamenti soci elencati nell'allegato dell'atto di postergazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta 3,96x come risultato di un calcolo che include nell'indebitamento i finanziamenti soci elencati nell'allegato dell'atto di postergazione.\nPASS se: non compare l'affermazione che l'indice ricalcolato include anche i finanziamenti soci postergati.\nFAIL se: compare l'affermazione che l'indice ricalcolato include i finanziamenti soci postergati elencati nell'allegato.\nFonte di authoring: Atto di Postergazione, Allegato A",
+      "pass_condition": "non compare l'affermazione che l'indice ricalcolato include anche i finanziamenti soci postergati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable non presenta il 26 aprile 2032 come risultato di un computo in giorni di calendario o come termine decorrente dalla Data di Verifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta il 26 aprile 2032 come risultato di un computo in giorni di calendario o come termine decorrente dalla Data di Verifica.\nPASS se: non compare l'indicazione che il termine si computa in giorni di calendario o che decorre dal 31 dicembre 2031.\nFAIL se: il termine è presentato come 20 giorni di calendario, oppure come decorrente dalla Data di Verifica anziché dalla trasmissione del certificato.\nFonte di authoring: art. 13.10, lett. b",
+      "pass_condition": "non compare l'indicazione che il termine si computa in giorni di calendario o che decorre dal 31 dicembre 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "review_memo.md"
+      ],
+      "title": "Il deliverable indica lo scostamento fra la Leva Finanziaria ricalcolata e il limite applicabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica lo scostamento fra la Leva Finanziaria ricalcolata e il limite applicabile.\nPASS se: compare il valore 0,06 riferito allo scostamento fra 3,96x e 3,90x.\nFAIL se: compare un valore diverso, oppure lo scostamento non è indicato.\nFonte di authoring: 3,96 - 3,90",
+      "pass_condition": "compare il valore 0,06 riferito allo scostamento fra 3,96x e 3,90x.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

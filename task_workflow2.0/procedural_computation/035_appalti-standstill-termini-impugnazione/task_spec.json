@@ -1,0 +1,126 @@
+{
+  "task_id": "WF2-035",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Appalti pubblici. Aggiudicazione, comunicazione, accesso, termine dilatorio e termini per impugnare",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2027-11-18",
+  "workflow_family": "procedural_computation",
+  "subtask": "procedural_timeline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "in corso",
+  "legal_area": [
+    "appalti pubblici",
+    "C. Procedural computation",
+    "Compliance & Regulatory",
+    "Contenzioso"
+  ],
+  "document_type": "in corso",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: timeline_rimedi.md.\n\n# Struttura del deliverable\n\nFile da produrre: `timeline_rimedi.md`. Lunghezza massima 1.800 parole.\nSezioni obbligatorie, nell'ordine, con esattamente queste intestazioni:\n\n## 1. Timeline degli adempimenti e dei rimedi\nUna tabella con: adempimento o rimedio, scadenza, condizione da cui la scadenza dipende, documento o\nnorma da cui la scadenza si ricava, stato alla data di riferimento.\n\n## 2. Come ho ricavato ogni scadenza\nPer ciascuna scadenza della tabella: il fatto da cui il termine decorre, il documento che lo attesta e\nil calcolo seguito.\n\n## 3. Adempimenti da compiere e in quale ordine\nLe azioni da compiere, nell'ordine, e la ragione dell'ordine.\n\n## 4. Rimedi non più esperibili\nI rimedi che alla data di riferimento non sono più disponibili, con la ragione.\n\n## 5. Date e valori non determinanti\nLe date e i valori presenti nel fascicolo che non fanno decorrere alcun termine e non impongono alcun\nadempimento, con la ragione.\n\n## 6. Verifica dei conti e delle valutazioni dell'ufficio gare\nPunto per punto, che cosa della nota interna regge e che cosa non regge.\n\n## 7. Che cosa non è determinabile allo stato e che cosa serve\nCiò che il fascicolo non consente di stabilire e i documenti o le informazioni da acquisire.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_determina_di_aggiudicazione.pdf",
+    "public/documents/02_determina_di_nomina_della_commissione.pdf",
+    "public/documents/03_verbale_n4_commissione_giudicatrice.pdf",
+    "public/documents/04_avviso_di_appalto_aggiudicato.pdf",
+    "public/documents/05_comunicazione_di_aggiudicazione_art_90.pdf",
+    "public/documents/06_estratto_registro_di_sistema_piattaforma.pdf",
+    "public/documents/07_provvedimento_sulle_richieste_di_oscuramento.pdf",
+    "public/documents/08_relazione_tecnica_aggiudicataria_oscurata.pdf",
+    "public/documents/09_istanza_di_accesso_agli_atti.pdf",
+    "public/documents/10_nota_interna_ufficio_gare.pdf"
+  ],
+  "expected_deliverable": "timeline_rimedi.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

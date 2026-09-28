@@ -1,0 +1,773 @@
+{
+  "task_id": "WF2-095",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente lease_enforcement_timeline.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente lease_enforcement_timeline.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 6 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 6 agosto 2026.\nPASS se: compare «6 agosto 2026» come data alla quale la ricostruzione è riferita\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «6 agosto 2026» come data alla quale la ricostruzione è riferita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "La cronologia distingue eventi avvenuti, termini calcolati, passaggi futuri condizionati e date non determinabili.",
+      "match_criteria": "Oggetto del criterio: La cronologia distingue eventi avvenuti, termini calcolati, passaggi futuri condizionati e date non determinabili.\nPASS se: ciascuna riga della cronologia porta uno dei quattro stati\nFAIL se: una o più righe non portano alcuno stato, oppure gli stati usati sono meno di quattro.\nÈ indifferente: le etichette usate per i quattro stati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna riga della cronologia porta uno dei quattro stati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Ogni evento della cronologia indica il documento del fascicolo da cui risulta.",
+      "match_criteria": "Oggetto del criterio: Ogni evento della cronologia indica il documento del fascicolo da cui risulta.\nPASS se: ciascuna riga riporta il nome di un allegato\nFAIL se: una o più righe non riportano alcun allegato.\nÈ indifferente: la forma del riferimento al documento.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna riga riporta il nome di un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non cita norme assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme assenti dal reference pack.\nPASS se: Il deliverable non cita norme assenti dal reference pack.\nFAIL se: compare un riferimento a un atto o a un articolo che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola riga.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che dal computo dei venti giorni si escludono sia il giorno della notificazione sia il giorno dell'udienza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che dal computo dei venti giorni si escludono sia il giorno della notificazione sia il giorno dell'udienza.\nPASS se: compare l'affermazione che si tratta di giorni liberi e che entrambi i giorni estremi sono esclusi\nFAIL se: il computo include uno dei due giorni estremi, oppure la natura di giorni liberi non è affermata.\nÈ indifferente: il richiamo alla facoltà di abbreviazione con decreto motivato.\nFonte di authoring: art. 660, comma 4, del codice di procedura civile",
+      "pass_condition": "compare l'affermazione che si tratta di giorni liberi e che entrambi i giorni estremi sono esclusi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il termine di comparizione è rispettato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine di comparizione è rispettato.\nPASS se: compare l'affermazione che il termine di comparizione è rispettato\nFAIL se: è affermato che il termine non è rispettato, oppure l'esito non compare.\nÈ indifferente: l'osservazione che il termine coincide con il minimo di legge.\nFonte di authoring: 04_relazione_di_notificazione.md; 03_intimazione_sfratto.md",
+      "pass_condition": "compare l'affermazione che il termine di comparizione è rispettato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la sospensione feriale non si applica ai procedimenti di sfratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la sospensione feriale non si applica ai procedimenti di sfratto.\nPASS se: compare l'affermazione che la sospensione feriale non si applica alle cause di sfratto\nFAIL se: è affermato che la sospensione si applica, oppure il punto non è trattato.\nÈ indifferente: il richiamo all'elenco delle materie trattate nel periodo feriale.\nFonte di authoring: art. 3 della legge sulla sospensione dei termini; art. 92 dell'ordinamento giudiziario",
+      "pass_condition": "compare l'affermazione che la sospensione feriale non si applica alle cause di sfratto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'udienza del 20 agosto 2026 è validamente fissata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'udienza del 20 agosto 2026 è validamente fissata.\nPASS se: compare l'affermazione che l'udienza è validamente fissata\nFAIL se: è affermato che l'udienza non è valida o che va rifissata.\nÈ indifferente: il tono con cui la posizione del commercialista è smentita.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare l'affermazione che l'udienza è validamente fissata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable qualifica come pattuizioni delle parti la soglia dei venti giorni e quella delle due mensilità richiamate dall'articolo 6 del contratto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica come pattuizioni delle parti la soglia dei venti giorni e quella delle due mensilità richiamate dall'articolo 6 del contratto.\nPASS se: compare, riferita a quelle soglie, una fra: «pattuizione delle parti»; «soglia convenzionale»; «clausola contrattuale e non regola di legge»\nFAIL se: le soglie sono presentate come regole di legge applicabili alla locazione ad uso diverso.\nÈ indifferente: il richiamo alla collocazione della disposizione fra quelle relative alle locazioni abitative.\nFonte di authoring: 01_contratto_locazione.md, art. 6",
+      "pass_condition": "compare, riferita a quelle soglie, una fra: «pattuizione delle parti»; «soglia convenzionale»; «clausola contrattuale e non regola di legge»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la gravità dell'inadempimento va valutata secondo la disciplina generale della risoluzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la gravità dell'inadempimento va valutata secondo la disciplina generale della risoluzione.\nPASS se: compare l'affermazione che la gravità si valuta secondo la disciplina generale, avuto riguardo all'interesse del locatore\nFAIL se: la risoluzione è fatta derivare dal solo decorso della soglia contrattuale.\nÈ indifferente: il richiamo alla soglia contrattuale come elemento della valutazione.\nFonte di authoring: art. 1455 del codice civile",
+      "pass_condition": "compare l'affermazione che la gravità si valuta secondo la disciplina generale, avuto riguardo all'interesse del locatore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable individua la clausola 6.3 del contratto come pattuizione che esclude la concessione di un termine per il pagamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable individua la clausola 6.3 del contratto come pattuizione che esclude la concessione di un termine per il pagamento.\nPASS se: compare l'indicazione della clausola 6.3 come clausola che esclude il termine per il pagamento\nFAIL se: la clausola non è individuata.\nÈ indifferente: il richiamo al suo tenore letterale.\nFonte di authoring: 01_contratto_locazione.md, art. 6.3",
+      "pass_condition": "compare l'indicazione della clausola 6.3 come clausola che esclude il termine per il pagamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la locatrice non può fondarsi sulla clausola 6.3 perché il canone annuo pattuito è inferiore alla soglia oltre la quale le parti possono derogare alle disposizioni di legge.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la locatrice non può fondarsi sulla clausola 6.3 perché il canone annuo pattuito è inferiore alla soglia oltre la quale le parti possono derogare alle disposizioni di legge.\nPASS se: compare l'affermazione che la clausola non è utilizzabile per il mancato superamento della soglia di derogabilità\nFAIL se: la clausola è presentata come utilizzabile, oppure la verifica della soglia non compare.\nÈ indifferente: l'indicazione dell'importo della soglia.\nFonte di authoring: 01_contratto_locazione.md, artt. 4.1 e 6.3; art. 79 della legge sulle locazioni",
+      "pass_condition": "compare l'affermazione che la clausola non è utilizzabile per il mancato superamento della soglia di derogabilità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non presenta la clausola 6.3 come esposizione della locatrice.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la clausola 6.3 come esposizione della locatrice.\nPASS se: Il deliverable non presenta la clausola 6.3 come esposizione della locatrice.\nFAIL se: la clausola 6.3 è indicata fra i rischi o fra le esposizioni del lato assistito.\nÈ indifferente: l'osservazione che la clausola è stata scritta a favore della locatrice.\nFonte di authoring: 01_contratto_locazione.md, art. 6.3",
+      "pass_condition": "Il deliverable non presenta la clausola 6.3 come esposizione della locatrice.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica fra gli adempimenti per l'udienza l'attestazione in giudizio che la morosità persiste.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli adempimenti per l'udienza l'attestazione in giudizio che la morosità persiste.\nPASS se: fra gli adempimenti per l'udienza compare l'attestazione della persistenza della morosità\nFAIL se: l'attestazione non è indicata, oppure la convalida è presentata come conseguenza automatica della mancata opposizione.\nÈ indifferente: il richiamo alla facoltà del giudice di ordinare la prestazione di cauzione.\nFonte di authoring: art. 663, comma 2, del codice di procedura civile",
+      "pass_condition": "fra gli adempimenti per l'udienza compare l'attestazione della persistenza della morosità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la citazione non contiene l'avviso relativo all'istanza per l'ammissione al patrocinio a spese dello Stato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la citazione non contiene l'avviso relativo all'istanza per l'ammissione al patrocinio a spese dello Stato.\nPASS se: compare l'affermazione che l'avviso sul patrocinio a spese dello Stato non è contenuto nell'atto\nFAIL se: l'omissione non è rilevata, oppure è affermato che l'avviso è presente.\nÈ indifferente: l'osservazione che l'avvertimento sulla convalida è invece presente.\nFonte di authoring: 03_intimazione_sfratto.md, punto 15; art. 660, comma 3, del codice di procedura civile",
+      "pass_condition": "compare l'affermazione che l'avviso sul patrocinio a spese dello Stato non è contenuto nell'atto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non afferma che l'atto è nullo per effetto dell'omissione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'atto è nullo per effetto dell'omissione.\nPASS se: Il deliverable non afferma che l'atto è nullo per effetto dell'omissione.\nFAIL se: è affermato che l'atto di intimazione è nullo o inefficace per la mancanza dell'avviso sul patrocinio.\nÈ indifferente: l'indicazione che la conseguenza dell'omissione si atteggia diversamente secondo che l'intimato compaia o no.\nFonte di authoring: art. 660 del codice di procedura civile",
+      "pass_condition": "Il deliverable non afferma che l'atto è nullo per effetto dell'omissione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'atto non è stato notificato in mani proprie e che in tal caso l'ufficiale giudiziario deve spedire avviso a mezzo di lettera raccomandata allegando la ricevuta all'originale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'atto non è stato notificato in mani proprie e che in tal caso l'ufficiale giudiziario deve spedire avviso a mezzo di lettera raccomandata allegando la ricevuta all'originale.\nPASS se: compare l'affermazione che la notificazione non è avvenuta in mani proprie e l'indicazione dell'adempimento ulteriore\nFAIL se: la notificazione è presentata come regolare senza rilevare l'adempimento ulteriore.\nÈ indifferente: l'indicazione della qualifica del soggetto che ha ricevuto l'atto.\nFonte di authoring: 04_relazione_di_notificazione.md; art. 660 del codice di procedura civile",
+      "pass_condition": "compare l'affermazione che la notificazione non è avvenuta in mani proprie e l'indicazione dell'adempimento ulteriore",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la ricevuta di spedizione dell'avviso non risulta allegata all'originale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la ricevuta di spedizione dell'avviso non risulta allegata all'originale.\nPASS se: compare l'affermazione che la ricevuta di spedizione non risulta agli atti\nFAIL se: è affermato che la ricevuta è presente, oppure la lacuna non è dichiarata.\nÈ indifferente: la richiesta di acquisirla dall'ufficio notifiche.\nFonte di authoring: 04_relazione_di_notificazione.md, annotazione di studio",
+      "pass_condition": "compare l'affermazione che la ricevuta di spedizione non risulta agli atti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la conduttrice non contesta i canoni e contesta una quota degli oneri accessori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la conduttrice non contesta i canoni e contesta una quota degli oneri accessori.\nPASS se: compare l'affermazione che la contestazione riguarda una quota degli oneri accessori e non i canoni\nFAIL se: la contestazione è presentata come integrale, oppure il contenuto della contestazione non è esaminato.\nÈ indifferente: il richiamo alla ragione addotta dalla conduttrice.\nFonte di authoring: 06_email_conduttrice.md",
+      "pass_condition": "compare l'affermazione che la contestazione riguarda una quota degli oneri accessori e non i canoni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che, se la conduttrice comparendo nega la morosità contestandone l'ammontare, il giudice può disporre il pagamento della somma non controversa con un termine non superiore a venti giorni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, se la conduttrice comparendo nega la morosità contestandone l'ammontare, il giudice può disporre il pagamento della somma non controversa con un termine non superiore a venti giorni.\nPASS se: compare l'affermazione del possibile ordine di pagamento della somma non controversa con il termine massimo di venti giorni\nFAIL se: il passaggio non è indicato, oppure è indicato un termine diverso.\nÈ indifferente: il richiamo alla convalida e al decreto ingiuntivo in caso di inottemperanza.\nFonte di authoring: art. 666 del codice di procedura civile",
+      "pass_condition": "compare l'affermazione del possibile ordine di pagamento della somma non controversa con il termine massimo di venti giorni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica fra i passaggi possibili l'ordinanza di rilascio con riserva delle eccezioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra i passaggi possibili l'ordinanza di rilascio con riserva delle eccezioni.\nPASS se: compare l'indicazione dell'ordinanza di rilascio con riserva delle eccezioni fra i passaggi possibili\nFAIL se: il passaggio non è indicato.\nÈ indifferente: il richiamo alla subordinazione a cauzione.\nFonte di authoring: art. 665 del codice di procedura civile",
+      "pass_condition": "compare l'indicazione dell'ordinanza di rilascio con riserva delle eccezioni fra i passaggi possibili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'ordinanza di rilascio è pronunciata su istanza del locatore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'ordinanza di rilascio è pronunciata su istanza del locatore.\nPASS se: compare l'affermazione che l'ordinanza richiede l'istanza del locatore\nFAIL se: l'ordinanza è presentata come adottata d'ufficio.\nÈ indifferente: il richiamo al presupposto delle eccezioni non fondate su prova scritta.\nFonte di authoring: art. 665 del codice di procedura civile",
+      "pass_condition": "compare l'affermazione che l'ordinanza richiede l'istanza del locatore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il decreto d'ingiunzione comprende i canoni scaduti e da scadere fino all'esecuzione dello sfratto e le spese dell'intimazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il decreto d'ingiunzione comprende i canoni scaduti e da scadere fino all'esecuzione dello sfratto e le spese dell'intimazione.\nPASS se: compare l'affermazione che l'ingiunzione comprende anche i canoni da scadere fino all'esecuzione dello sfratto\nFAIL se: l'ingiunzione è limitata ai canoni già scaduti alla data dell'atto.\nÈ indifferente: il richiamo all'immediata esecutività del decreto.\nFonte di authoring: art. 664 del codice di procedura civile",
+      "pass_condition": "compare l'affermazione che l'ingiunzione comprende anche i canoni da scadere fino all'esecuzione dello sfratto",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'applicabilità della sanatoria giudiziale alle locazioni ad uso diverso non è risolta dal testo di legge.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'applicabilità della sanatoria giudiziale alle locazioni ad uso diverso non è risolta dal testo di legge.\nPASS se: compare l'affermazione che la questione è controversa o non risolta dal testo\nFAIL se: è affermato senza riserve che il termine di grazia è concedibile, oppure che non lo è.\nÈ indifferente: l'esposizione degli argomenti nei due sensi.\nFonte di authoring: art. 55 della legge sulle locazioni; 06_email_conduttrice.md",
+      "pass_condition": "compare l'affermazione che la questione è controversa o non risolta dal testo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable chiede istruzioni al committente sulla posizione da assumere in udienza sulla richiesta di termine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable chiede istruzioni al committente sulla posizione da assumere in udienza sulla richiesta di termine.\nPASS se: fra le decisioni rimesse al committente compare la posizione da assumere sulla richiesta di termine\nFAIL se: la questione è rilevata senza rimettere alcuna decisione al committente.\nÈ indifferente: il numero delle alternative prospettate.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "fra le decisioni rimesse al committente compare la posizione da assumere sulla richiesta di termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica in novanta giorni il termine massimo assegnabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in novanta giorni il termine massimo assegnabile.\nPASS se: compare il termine di «novanta giorni» riferito alla misura massima del termine assegnabile\nFAIL se: è indicata una misura diversa, oppure la misura non compare.\nÈ indifferente: il richiamo al rinvio dell'udienza a non oltre dieci giorni dalla scadenza.\nFonte di authoring: art. 55, comma 2, della legge sulle locazioni",
+      "pass_condition": "compare il termine di «novanta giorni» riferito alla misura massima del termine assegnabile",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non indica l'esperimento della mediazione fra gli adempimenti mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'esperimento della mediazione fra gli adempimenti mancanti.\nPASS se: Il deliverable non indica l'esperimento della mediazione fra gli adempimenti mancanti.\nFAIL se: la mancata mediazione è indicata come vizio dell'iniziativa o come adempimento da compiere prima dell'udienza.\nÈ indifferente: l'osservazione che la mediazione diventa condizione di procedibilità dopo il mutamento del rito.\nFonte di authoring: art. 5, comma 6, lettera b), del decreto legislativo sulla mediazione",
+      "pass_condition": "Il deliverable non indica l'esperimento della mediazione fra gli adempimenti mancanti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non indica il mancato pagamento degli oneri accessori come motivo autonomo di risoluzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica il mancato pagamento degli oneri accessori come motivo autonomo di risoluzione.\nPASS se: Il deliverable non indica il mancato pagamento degli oneri accessori come motivo autonomo di risoluzione.\nFAIL se: è affermato che la soglia delle due mensilità è superata, o che il mancato pagamento degli oneri accessori costituisce motivo autonomo di risoluzione da azionare.\nÈ indifferente: il confronto fra l'importo degli oneri non pagati e quello di due mensilità.\nFonte di authoring: 01_contratto_locazione.md, art. 6.2; 05_estratto_partitario.csv",
+      "pass_condition": "Il deliverable non indica il mancato pagamento degli oneri accessori come motivo autonomo di risoluzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non indica la registrazione del contratto di locazione fra i documenti da acquisire.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica la registrazione del contratto di locazione fra i documenti da acquisire.\nPASS se: Il deliverable non indica la registrazione del contratto di locazione fra i documenti da acquisire.\nFAIL se: la registrazione del contratto è indicata fra gli adempimenti mancanti o fra i documenti da acquisire.\nÈ indifferente: la menzione degli estremi di registrazione fra gli elementi verificati.\nFonte di authoring: 01_contratto_locazione.md, estremi di registrazione",
+      "pass_condition": "Il deliverable non indica la registrazione del contratto di locazione fra i documenti da acquisire.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non presenta la difficoltà economica dichiarata dalla conduttrice come fatto accertato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la difficoltà economica dichiarata dalla conduttrice come fatto accertato.\nPASS se: Il deliverable non presenta la difficoltà economica dichiarata dalla conduttrice come fatto accertato.\nFAIL se: la chiusura del tratto di strada e la riduzione degli incassi sono riportate come fatti accertati anziché come dichiarazioni della conduttrice.\nÈ indifferente: la menzione della dichiarazione come elemento che il giudice potrà valutare.\nFonte di authoring: 06_email_conduttrice.md",
+      "pass_condition": "Il deliverable non presenta la difficoltà economica dichiarata dalla conduttrice come fatto accertato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non presenta come avvenuta la comparizione della conduttrice né la sua opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come avvenuta la comparizione della conduttrice né la sua opposizione.\nPASS se: Il deliverable non presenta come avvenuta la comparizione della conduttrice né la sua opposizione.\nFAIL se: è affermato che la conduttrice comparirà, che si opporrà o che pagherà, anziché prospettare i passaggi come condizionati.\nÈ indifferente: l'indicazione che la conduttrice ha annunciato di dare mandato a un legale.\nFonte di authoring: 06_email_conduttrice.md",
+      "pass_condition": "Il deliverable non presenta come avvenuta la comparizione della conduttrice né la sua opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica il 30 luglio 2026 come data della notificazione dell'intimazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 30 luglio 2026 come data della notificazione dell'intimazione.\nPASS se: compare la data «30 luglio 2026» riferita alla notificazione\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: l'indicazione dell'ora della consegna.\nFonte di authoring: 04_relazione_di_notificazione.md",
+      "pass_condition": "compare la data «30 luglio 2026» riferita alla notificazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica in venti il numero dei giorni liberi fra notificazione e udienza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in venti il numero dei giorni liberi fra notificazione e udienza.\nPASS se: compare il numero «venti giorni liberi» riferito all'intervallo fra notificazione e udienza\nFAIL se: è indicato un numero diverso, oppure il numero non compare.\nÈ indifferente: l'indicazione dell'intervallo di date corrispondente.\nFonte di authoring: art. 660, comma 4, del codice di procedura civile",
+      "pass_condition": "compare il numero «venti giorni liberi» riferito all'intervallo fra notificazione e udienza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non indica come prima udienza utile una data ottenuta applicando la sospensione feriale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica come prima udienza utile una data ottenuta applicando la sospensione feriale.\nPASS se: Il deliverable non indica come prima udienza utile una data ottenuta applicando la sospensione feriale.\nFAIL se: compare la data «21 settembre 2026» come udienza, oppure il termine di comparizione è computato dal 1 settembre 2026.\nÈ indifferente: la menzione del periodo di sospensione feriale per spiegare perché non si applica.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non indica come prima udienza utile una data ottenuta applicando la sospensione feriale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica in 13.086,00 euro l'importo intimato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 13.086,00 euro l'importo intimato.\nPASS se: compare l'importo «13.086,00» riferito alla morosità intimata\nFAIL se: è indicato un importo diverso, oppure l'importo non compare.\nÈ indifferente: la scomposizione fra canoni e oneri accessori.\nFonte di authoring: 03_intimazione_sfratto.md, punto 12",
+      "pass_condition": "compare l'importo «13.086,00» riferito alla morosità intimata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable non indica come morosità intimata il totale delle partite aperte del partitario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica come morosità intimata il totale delle partite aperte del partitario.\nPASS se: Il deliverable non indica come morosità intimata il totale delle partite aperte del partitario.\nFAIL se: il totale delle partite aperte del partitario è presentato come importo intimato, oppure il canone di agosto 2026 è computato nell'importo dell'atto.\nÈ indifferente: la menzione delle partite aperte per illustrare l'aggravarsi della morosità dopo l'atto.\nFonte di authoring: 05_estratto_partitario.csv",
+      "pass_condition": "Il deliverable non indica come morosità intimata il totale delle partite aperte del partitario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "lease_enforcement_timeline.md"
+      ],
+      "title": "Il deliverable indica in 12.872,00 euro la somma non controversa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 12.872,00 euro la somma non controversa.\nPASS se: compare l'importo «12.872,00» riferito alla somma non controversa\nFAIL se: è indicato un importo diverso, oppure la somma non controversa non è quantificata.\nÈ indifferente: l'esposizione del calcolo in due addendi.\nFonte di authoring: 06_email_conduttrice.md e 05_estratto_partitario.csv",
+      "pass_condition": "compare l'importo «12.872,00» riferito alla somma non controversa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

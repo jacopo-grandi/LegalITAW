@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legalitaw"
+version = "1.0.0"
+description = "LegalITA-W: benchmark agentico di workflow legali italiani (WF2)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = [
+    "anthropic>=0.40,<1.0",
+    "openai>=1.40,<2.0",
+    "pydantic>=2.6,<3.0",
+    "python-dotenv>=1.0,<2.0",
+    "python-docx>=1.1,<2.0",
+    "pypdf>=5.0,<7.0",
+    "lxml>=5.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=8.0",
+    "httpx>=0.28,<1.0",
+]
+
+[project.scripts]
+legalitaw = "legalitaw.cli.v2:main"
+
+[tool.setuptools.packages.find]
+include = ["legalitaw*"]
+
+[tool.setuptools.package-data]
+"legalitaw.agentic" = ["production_skills/*.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

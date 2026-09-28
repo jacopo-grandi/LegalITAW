@@ -1,0 +1,450 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-020",
+  "title": "Data Protection. Nota istruttoria per il riscontro a una richiesta del Garante",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 27,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable tratta separatamente i cinque quesiti della nota del Garante.",
+      "pass_condition": "il deliverable tratta separatamente tutti e cinque i quesiti della nota del Garante.",
+      "fail_condition": "anche uno solo dei cinque quesiti manca o non è trattato separatamente.",
+      "indifferent": "L’ordine e la forma delle cinque sezioni.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 (struttura) il deliverable tratta separatamente i cinque quesiti della nota del Garante."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nessun riferimento normativo estraneo all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "il deliverable cita soltanto GDPR, artt. 5, 6, 12, 13, 15, 21 e 28; D.Lgs. 196/2003, art. 130, comma 4; art. 157 del Codice privacy.",
+      "fail_condition": "compare anche una sola norma o decisione giurisprudenziale fuori dall’elenco, anche come ipotesi o esempio.",
+      "indifferent": "I rinvii ai documenti del fascicolo non sono fonti normative.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 (assenza) nessun riferimento normativo estraneo all'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il riscontro del 21 luglio 2027 come reso oltre il termine.",
+      "pass_condition": "compare, riferita a quel riscontro, una fra: «tardivo», «oltre il termine», «fuori termine», «in ritardo».",
+      "fail_condition": "il riscontro è qualificato come reso nei termini, oppure la qualificazione non compare.",
+      "indifferent": "il numero di giorni di ritardo.",
+      "source": "richiesta 04/05/2027 + riscontro 21/07/2027; art. 12, par. 3 GDPR.",
+      "severity": "alta",
+      "raw_text": "B.1 riscontro tardivo (issue: I-01) (tipo: qualificazione)\nVerifica: il deliverable qualifica il riscontro del 21 luglio 2027 come reso oltre il termine.\nPass se: compare, riferita a quel riscontro, una fra: «tardivo», «oltre il termine», «fuori termine», «in ritardo».\nFail se: il riscontro è qualificato come reso nei termini, oppure la qualificazione non compare.\nIndifferente: il numero di giorni di ritardo.\n—— non passa al judge —— Fonte: richiesta 04/05/2027 + riscontro 21/07/2027; art. 12, par. 3 GDPR. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la nota del 28 maggio 2027 non vale come proroga del termine.",
+      "pass_condition": "compare, riferita a quella nota, una fra: «non è una proroga», «non vale come proroga», «non integra la proroga», «non ha prorogato il termine».",
+      "fail_condition": "la nota è presentata come proroga, oppure non è trattata.",
+      "indifferent": "il richiamo ai motivi del ritardo.",
+      "source": "nota interlocutoria 28/05/2027; art. 12, par. 3 GDPR.",
+      "severity": "alta",
+      "raw_text": "B.2 nota del 28 maggio (issue: I-01) (tipo: presenza)\nVerifica: il deliverable afferma che la nota del 28 maggio 2027 non vale come proroga del termine.\nPass se: compare, riferita a quella nota, una fra: «non è una proroga», «non vale come proroga», «non integra la proroga», «non ha prorogato il termine».\nFail se: la nota è presentata come proroga, oppure non è trattata.\nIndifferente: il richiamo ai motivi del ritardo.\n—— non passa al judge —— Fonte: nota interlocutoria 28/05/2027; art. 12, par. 3 GDPR. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica come non valido il consenso raccolto con il modulo di registrazione.",
+      "pass_condition": "compare, riferito a quel consenso, una fra: «non valido», «non validamente acquisito», «invalido», «non idoneo», «non conforme».",
+      "fail_condition": "il consenso è qualificato come validamente acquisito, oppure la qualificazione non compare.",
+      "indifferent": "il richiamo alla casella relativa all'informativa, che nel modulo non è preselezionata.",
+      "source": "modulo R-2026.2, casella sulle comunicazioni commerciali selezionata per impostazione predefinita.",
+      "severity": "alta",
+      "raw_text": "B.3 consenso (issue: I-02) (tipo: qualificazione)\nVerifica: il deliverable qualifica come non valido il consenso raccolto con il modulo di registrazione.\nPass se: compare, riferito a quel consenso, una fra: «non valido», «non validamente acquisito», «invalido», «non idoneo», «non conforme».\nFail se: il consenso è qualificato come validamente acquisito, oppure la qualificazione non compare.\nIndifferente: il richiamo alla casella relativa all'informativa, che nel modulo non è preselezionata.\n—— non passa al judge —— Fonte: modulo R-2026.2, casella sulle comunicazioni commerciali selezionata per impostazione predefinita. Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come applicabile ai fatti l'informativa nella versione v2.",
+      "pass_condition": "è indicata la versione v2, oppure quella in vigore dal 15 settembre 2026.",
+      "fail_condition": "è indicata la versione v3, oppure quella in vigore dal 1° ottobre 2027.",
+      "indifferent": "il richiamo alle differenze fra le due versioni.",
+      "source": "informative v2 e v3.",
+      "severity": "alta",
+      "raw_text": "B.4 informativa applicabile (issue: I-03) (tipo: valore)\nVerifica: il deliverable indica come applicabile ai fatti l'informativa nella versione v2.\nPass se: è indicata la versione v2, oppure quella in vigore dal 15 settembre 2026.\nFail se: è indicata la versione v3, oppure quella in vigore dal 1° ottobre 2027.\nIndifferente: il richiamo alle differenze fra le due versioni.\n—— non passa al judge —— Fonte: informative v2 e v3. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la scheda di registro e l'informativa applicabile indicano termini di conservazione fra loro diversi.",
+      "pass_condition": "compare l'indicazione di una discordanza, divergenza o difformità fra i due documenti sul periodo di conservazione.",
+      "fail_condition": "è riportato un solo termine senza segnalare la discordanza.",
+      "indifferent": "quale dei due termini sia indicato per primo.",
+      "source": "scheda T-07 (36 mesi) + informativa v2, punto 5 (24 mesi dall'ultimo contatto utile).",
+      "severity": "media",
+      "raw_text": "B.5 divergenza sulla conservazione (issue: I-04) (tipo: presenza)\nVerifica: il deliverable afferma che la scheda di registro e l'informativa applicabile indicano termini di conservazione fra loro diversi.\nPass se: compare l'indicazione di una discordanza, divergenza o difformità fra i due documenti sul periodo di conservazione.\nFail se: è riportato un solo termine senza segnalare la discordanza.\nIndifferente: quale dei due termini sia indicato per primo.\n—— non passa al judge —— Fonte: scheda T-07 (36 mesi) + informativa v2, punto 5 (24 mesi dall'ultimo contatto utile). Gravità: media."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che al reclamante sono state inviate comunicazioni promozionali dopo l'opposizione.",
+      "pass_condition": "compare l'affermazione che vi sono stati invii successivi all'opposizione.",
+      "fail_condition": "il deliverable afferma che non vi sono stati invii successivi, oppure il punto non è trattato.",
+      "indifferent": "il nome delle campagne.",
+      "source": "esportazione Mailtracce, invii del 17/03, 02/04 e 20/04/2027 sul segmento consenso_esplicito.",
+      "severity": "alta",
+      "raw_text": "B.6 invii dopo l'opposizione (issue: I-05) (tipo: presenza)\nVerifica: il deliverable afferma che al reclamante sono state inviate comunicazioni promozionali dopo l'opposizione.\nPass se: compare l'affermazione che vi sono stati invii successivi all'opposizione.\nFail se: il deliverable afferma che non vi sono stati invii successivi, oppure il punto non è trattato.\nIndifferente: il nome delle campagne.\n—— non passa al judge —— Fonte: esportazione Mailtracce, invii del 17/03, 02/04 e 20/04/2027 sul segmento consenso_esplicito. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non riporta come accertata l'affermazione della nota del marketing secondo cui il consenso è sempre stato raccolto.",
+      "pass_condition": "quella affermazione non compare come dato accertato, oppure compare indicata come smentita dagli atti.",
+      "fail_condition": "l'affermazione è riportata come accertata.",
+      "indifferent": null,
+      "source": "nota interna 22/01/2028 vs modulo R-2026.2.",
+      "severity": "alta",
+      "raw_text": "B.7 affermazione sul consenso (issue: I-06) (tipo: assenza)\nVerifica: il deliverable non riporta come accertata l'affermazione della nota del marketing secondo cui il consenso è sempre stato raccolto.\nPass se: quella affermazione non compare come dato accertato, oppure compare indicata come smentita dagli atti.\nFail se: l'affermazione è riportata come accertata.\n—— non passa al judge —— Fonte: nota interna 22/01/2028 vs modulo R-2026.2. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non riporta come accertata l'affermazione secondo cui l'opposizione è stata lavorata subito.",
+      "pass_condition": "quella affermazione non compare come dato accertato, oppure compare indicata come smentita dagli atti.",
+      "fail_condition": "l'affermazione è riportata come accertata.",
+      "indifferent": null,
+      "source": "nota interna vs esportazione Mailtracce.",
+      "severity": "alta",
+      "raw_text": "B.8 affermazione sulla lavorazione (issue: I-06) (tipo: assenza)\nVerifica: il deliverable non riporta come accertata l'affermazione secondo cui l'opposizione è stata lavorata subito.\nPass se: quella affermazione non compare come dato accertato, oppure compare indicata come smentita dagli atti.\nFail se: l'affermazione è riportata come accertata.\n—— non passa al judge —— Fonte: nota interna vs esportazione Mailtracce. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable distingue i fatti documentati dagli atti da quelli soltanto affermati.",
+      "pass_condition": "almeno un elemento è espressamente indicato come non documentato, non riscontrato o non provato dagli atti.",
+      "fail_condition": "tutti gli elementi sono presentati come accertati.",
+      "indifferent": null,
+      "source": "impostazione del deliverable.",
+      "severity": "alta",
+      "raw_text": "B.9 fatti non documentati (issue: I-07) (tipo: presenza)\nVerifica: il deliverable distingue i fatti documentati dagli atti da quelli soltanto affermati.\nPass se: almeno un elemento è espressamente indicato come non documentato, non riscontrato o non provato dagli atti.\nFail se: tutti gli elementi sono presentati come accertati.\n—— non passa al judge —— Fonte: impostazione del deliverable. Gravità: alta."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica l'atto di designazione del fornitore quale elemento da acquisire prima di rispondere.",
+      "pass_condition": "compare l'indicazione che la designazione del fornitore, o il contratto con il fornitore, va acquisita oppure non è agli atti.",
+      "fail_condition": "il fornitore è presentato come regolarmente designato sulla base degli atti, oppure il punto non è trattato.",
+      "indifferent": "il richiamo ad altri elementi mancanti.",
+      "source": "scheda T-07, designazione non presente.",
+      "severity": "media",
+      "raw_text": "B.10 elementi da acquisire (issue: I-08) (tipo: presenza)\nVerifica: il deliverable indica l'atto di designazione del fornitore quale elemento da acquisire prima di rispondere.\nPass se: compare l'indicazione che la designazione del fornitore, o il contratto con il fornitore, va acquisita oppure non è agli atti.\nFail se: il fornitore è presentato come regolarmente designato sulla base degli atti, oppure il punto non è trattato.\nIndifferente: il richiamo ad altri elementi mancanti.\n—— non passa al judge —— Fonte: scheda T-07, designazione non presente. Gravità: media."
+    },
+    {
+      "id": "B.10a",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable richiede la prova operativa della presa in carico dell'opposizione tra il 9 e il 17 marzo 2027, inclusi ticket, log, sincronizzazioni o istruzioni al fornitore.",
+      "pass_condition": "almeno una prova della lavorazione o propagazione dell'opposizione è indicata come mancante e da acquisire.",
+      "fail_condition": "la gestione dell'opposizione è data per provata, oppure la lacuna non è trattata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10a prova della gestione dell'opposizione (issue: I-08) (tipo: presenza)\nVerifica: il deliverable richiede la prova operativa della presa in carico dell'opposizione tra il 9 e il 17 marzo 2027, inclusi ticket, log, sincronizzazioni o istruzioni al fornitore.\nPass se: almeno una prova della lavorazione o propagazione dell'opposizione è indicata come mancante e da acquisire.\nFail se: la gestione dell'opposizione è data per provata, oppure la lacuna non è trattata.\n—— non passa al judge —— Fonte: richiesta di opposizione + esportazione Mailtracce. Gravità: alta.\n\nChiusura obbligatoria"
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come illecito il segmento «prodotti_analoghi» sulla sola base del suo nome, poiché nessuno dei tre invii contestati risulta partito da quel segmento.",
+      "pass_condition": "il segmento è tenuto distinto dai tre invii sul segmento «consenso_esplicito».",
+      "fail_condition": "il segmento «prodotti_analoghi» è indicato come fonte dei tre invii o come illecito senza esaminare le campagne effettive.",
+      "indifferent": "il richiamo alle condizioni dell'art. 130, co. 4 del Codice.",
+      "source": "esportazione Mailtracce; informativa v2, punto 3 lett. b.",
+      "severity": "media",
+      "raw_text": "B.11 segmento «prodotti_analoghi» (issue: N.1) (tipo: assenza)\nVerifica: il deliverable non qualifica come illecito il segmento «prodotti_analoghi» sulla sola base del suo nome, poiché nessuno dei tre invii contestati risulta partito da quel segmento.\nPass se: il segmento è tenuto distinto dai tre invii sul segmento «consenso_esplicito».\nFail se: il segmento «prodotti_analoghi» è indicato come fonte dei tre invii o come illecito senza esaminare le campagne effettive.\nIndifferente: il richiamo alle condizioni dell'art. 130, co. 4 del Codice.\n—— non passa al judge —— Fonte: esportazione Mailtracce; informativa v2, punto 3 lett. b. Gravità: media."
+    },
+    {
+      "id": "B.11a",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non certifica come pienamente lecito l'intero segmento «prodotti_analoghi» senza disporre dei contenuti delle campagne, della prova dell'analogia dei prodotti e dell'opzione di opposizione presente in ciascun messaggio.",
+      "pass_condition": "l'eventuale valutazione favorevole resta limitata all'irrilevanza del segmento per i tre invii contestati o è espressamente condizionata alle prove mancanti.",
+      "fail_condition": "il segmento è dichiarato globalmente conforme sulla base dei soli documenti presenti.",
+      "indifferent": null,
+      "source": "art. 130, co. 4, Codice privacy + fascicolo incompleto sulle campagne.",
+      "severity": "media",
+      "raw_text": "B.11a nessuna certificazione astratta del soft spam (issue: N.1) (tipo: assenza)\nVerifica: il deliverable non certifica come pienamente lecito l'intero segmento «prodotti_analoghi» senza disporre dei contenuti delle campagne, della prova dell'analogia dei prodotti e dell'opzione di opposizione presente in ciascun messaggio.\nPass se: l'eventuale valutazione favorevole resta limitata all'irrilevanza del segmento per i tre invii contestati o è espressamente condizionata alle prove mancanti.\nFail se: il segmento è dichiarato globalmente conforme sulla base dei soli documenti presenti.\n—— non passa al judge —— Fonte: art. 130, co. 4, Codice privacy + fascicolo incompleto sulle campagne. Gravità: media."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la nomina o il contatto del responsabile della protezione dei dati. (N.2)",
+      "pass_condition": "il deliverable non segnala come criticità la nomina o il contatto del responsabile della protezione dei dati.",
+      "fail_condition": "la nomina o il contatto del responsabile della protezione dei dati è presentato come criticità anche una sola volta.",
+      "indifferent": "La descrizione neutra della nomina o del contatto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 (assenza) il deliverable non segnala come criticità la nomina o il contatto del responsabile della protezione dei dati. (N.2)"
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità l'assenza di una valutazione d'impatto. (N.3)",
+      "pass_condition": "il deliverable non segnala come criticità l’assenza di una valutazione d’impatto.",
+      "fail_condition": "l’assenza di una valutazione d’impatto è presentata come criticità anche una sola volta.",
+      "indifferent": "La menzione neutra della valutazione d’impatto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 (assenza) il deliverable non segnala come criticità l'assenza di una valutazione d'impatto. (N.3)"
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala un trasferimento di dati verso paesi terzi. (N.4)",
+      "pass_condition": "il deliverable non segnala un trasferimento di dati verso paesi terzi.",
+      "fail_condition": "il deliverable afferma o prospetta che vi sia un trasferimento verso paesi terzi, anche una sola volta o come ipotesi.",
+      "indifferent": "La menzione di un trasferimento solo per escludere che risulti dagli atti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 (assenza) il deliverable non segnala un trasferimento di dati verso paesi terzi. (N.4)"
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la conservazione dei log di sistema per dodici mesi. (N.5)",
+      "pass_condition": "il deliverable non segnala come criticità la conservazione dei log di sistema per dodici mesi.",
+      "fail_condition": "la conservazione dei log per dodici mesi è presentata come criticità anche una sola volta.",
+      "indifferent": "La menzione neutra del periodo di conservazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 (assenza) il deliverable non segnala come criticità la conservazione dei log di sistema per dodici mesi. (N.5)"
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non colloca l'opposizione del reclamante nel mese di gennaio 2027. (N.6)",
+      "pass_condition": "il deliverable non colloca nel mese di gennaio 2027 l’opposizione del reclamante.",
+      "fail_condition": "l’opposizione del reclamante è collocata anche una sola volta nel mese di gennaio 2027.",
+      "indifferent": "Il richiamo a gennaio 2027 per eventi diversi dall’opposizione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 (assenza) il deliverable non colloca l'opposizione del reclamante nel mese di gennaio 2027. (N.6)"
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il Garante adotterà un provvedimento sanzionatorio. (presunzione dell'esito)",
+      "pass_condition": "il deliverable non afferma che il Garante adotterà un provvedimento sanzionatorio.",
+      "fail_condition": "l’adozione di un provvedimento sanzionatorio è data per certa o prevista come esito, anche una sola volta.",
+      "indifferent": "La valutazione dei rischi senza previsione certa dell’esito.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 (assenza) il deliverable non afferma che il Garante adotterà un provvedimento sanzionatorio. (presunzione dell'esito)"
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica la ricevuta di consegna della nota del Garante come documento mancante necessario per calcolare il termine di risposta.",
+      "pass_condition": "la ricevuta PEC o altra prova di ricezione è richiesta e la scadenza non è inventata.",
+      "fail_condition": "il termine del Garante è dichiarato pendente o scaduto senza una data documentata di ricezione.",
+      "indifferent": null,
+      "source": "nota del Garante + assenza della ricevuta nel fascicolo.",
+      "severity": "alta",
+      "raw_text": "B.18 ricevuta PEC della nota del Garante (issue: I-09) (tipo: presenza)\nVerifica: il deliverable indica la ricevuta di consegna della nota del Garante come documento mancante necessario per calcolare il termine di risposta.\nPass se: la ricevuta PEC o altra prova di ricezione è richiesta e la scadenza non è inventata.\nFail se: il termine del Garante è dichiarato pendente o scaduto senza una data documentata di ricezione.\n—— non passa al judge —— Fonte: nota del Garante + assenza della ricevuta nel fascicolo. Gravità: alta."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone di riconciliare il registro a 36 mesi con l'informativa v2 applicabile, che indicava 24 mesi, e di verificare cancellazione, limitazione o aggiornamento della policy senza applicare retroattivamente la v3.",
+      "pass_condition": "la divergenza è tradotta in un'azione di remediation e non è risolta scegliendo automaticamente la v3.",
+      "fail_condition": "il termine di 36 mesi è dichiarato applicabile ai fatti senza affrontare l'informativa v2.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 rimedio sulla conservazione (issue: I-04) (tipo: presenza)\nVerifica: il deliverable propone di riconciliare il registro a 36 mesi con l'informativa v2 applicabile, che indicava 24 mesi, e di verificare cancellazione, limitazione o aggiornamento della policy senza applicare retroattivamente la v3.\nPass se: la divergenza è tradotta in un'azione di remediation e non è risolta scegliendo automaticamente la v3.\nFail se: il termine di 36 mesi è dichiarato applicabile ai fatti senza affrontare l'informativa v2.\n—— non passa al judge —— Fonte: informativa v2 + v3 + scheda T-07. Gravità: alta."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il 4 giugno 2027 come termine per il riscontro alla richiesta del reclamante.",
+      "pass_condition": "il 4 giugno 2027 è indicato come termine per il riscontro alla richiesta del reclamante.",
+      "fail_condition": "il 4 giugno 2027 manca, è riferito a un evento diverso, oppure è indicata una diversa scadenza per il riscontro.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 (valore) il deliverable indica il 4 giugno 2027 come termine per il riscontro alla richiesta del reclamante."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 4 agosto 2027 come termine per il riscontro.",
+      "pass_condition": "il deliverable non indica il 4 agosto 2027 come termine per il riscontro.",
+      "fail_condition": "il 4 agosto 2027 è indicato come termine di riscontro, anche come ipotesi o alternativa.",
+      "indifferent": "La menzione del 4 agosto 2027 per un evento diverso dal termine di riscontro.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 (assenza) il deliverable non indica il 4 agosto 2027 come termine per il riscontro."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il 9 marzo 2027 come data dell'opposizione.",
+      "pass_condition": "il 9 marzo 2027 è indicato come data dell’opposizione.",
+      "fail_condition": "il 9 marzo 2027 manca, è riferito a un evento diverso o una diversa data è indicata per l’opposizione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 (valore) il deliverable indica il 9 marzo 2027 come data dell'opposizione."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in tre il numero degli invii successivi all'opposizione.",
+      "pass_condition": "il deliverable indica in tre il numero degli invii successivi all’opposizione.",
+      "fail_condition": "il numero tre manca, è attribuito a un evento diverso o viene indicato un numero diverso di invii successivi all’opposizione.",
+      "indifferent": "la forma con cui è espresso il numero (in cifre o in lettere).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 (valore) il deliverable indica in tre il numero degli invii successivi all'opposizione.\n\nNOTA\n\nTermine di riscontro. L'art. 12, par. 3 GDPR fissa il termine in un mese dal ricevimento della richiesta e consente la proroga di due mesi solo se il titolare informa l'interessato della proroga e dei motivi del ritardo entro un mese dal ricevimento. La nota del 28 maggio 2027 annuncia la predisposizione della documentazione senza comunicare né la proroga né i motivi: non integra la proroga, e il termine resta il 4 giugno 2027. Fonda I-01, B.1, B.2, C.1 e il divieto di C.2.\n\nSegmento «prodotti_analoghi». Il fascicolo documenta che nessuno dei tre invii contestati è partito da questo segmento, ma non contiene il contenuto di tutte le campagne, la prova dell'analogia dei prodotti né l'unsubscribe di ciascun messaggio. Il non-issue è limitato all'irrilevanza del segmento per i tre invii contestati; non certifica la liceità astratta di ogni uso futuro.\n\nRapporto fra il segmento e gli invii contestati. Il non-issue non attenua I-05: i tre invii del 17 marzo, 2 aprile e 20 aprile 2027 risultano dall'esportazione come inviati sul segmento «consenso_esplicito», cioè sulla base del consenso raccolto con la casella preselezionata, e sono successivi all'opposizione del 9 marzo 2027 esercitata sullo stesso segmento. Non sono difendibili come soft spam né sotto il profilo della base giuridica né sotto quello dell'opposizione, che copre in ogni caso il marketing diretto. B.6 e B.11 non si sovrappongono e non si elidono.\n\nAltri riscontri sui documenti. Il modulo R-2026.2, in produzione dal 15 settembre 2026, riporta la casella «Acconsento a ricevere comunicazioni commerciali e promozionali» come selezionata per impostazione predefinita: fonda I-02 e B.3. L'informativa v2 indica al punto 5 una conservazione di 24 mesi dall'ultimo contatto utile, che diverge dai 36 mesi della scheda T-07: fonda I-04 e B.5. L'esportazione colloca l'opposizione al 9 marzo 2027 e conta tre invii successivi: fonda C.3, C.4 e il divieto di B.16."
+    }
+  ]
+}

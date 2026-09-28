@@ -1,0 +1,40 @@
+{
+  "schema_version": "2.0.0-draft",
+  "task_id": "WF2-029",
+  "title": "Compliance. Red flag su un terzo che opera verso la pubblica amministrazione",
+  "use_case_family": "Dossier analysis",
+  "macro_area": [
+    "Compliance & Regulatory"
+  ],
+  "source": {
+    "platform": "local_generation",
+    "page_id": "3c8f042e-9f58-8109-ae90-ec12c9c47e94",
+    "page_url": "https://app.notion.com/p/3c8f042e9f588109ae90ec12c9c47e94",
+    "database_url": "https://app.notion.com/p/958f0d1646454cd59feef83f87e2063a?v=5fb25588bfac4a22ab31d5375dfbcb9f",
+    "source_date": "2026-08-25",
+    "imported_at": "2026-08-25",
+    "published_at": "2026-08-26"
+  },
+  "public_inputs": {
+    "prompt": "public/01_task.md",
+    "reference_pack": "public/02_reference_pack.md",
+    "legal_sources": "public/03_legal_sources.md",
+    "documents_directory": "public/documents",
+    "original_attachment_count": 9
+  },
+  "private_evaluation": {
+    "atomized_criteria": "private/criteria_atomized.md",
+    "legacy_evaluation_criteria": "private/evaluation_criteria.md",
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md"
+  },
+  "run_output_directory": "runs",
+  "revision_status": "pilot_ready",
+  "local_revision_date": "2026-08-25",
+  "gold_legal_signoff": "pending",
+  "notion_modified": false,
+  "notion_published": true,
+  "notion_attachment_count": 9,
+  "pilot_status": "ready",
+  "normative_freeze_date": "2026-08-25"
+}

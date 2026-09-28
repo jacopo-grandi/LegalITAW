@@ -1,0 +1,206 @@
+{
+  "task_id": "WF2-034",
+  "data_di_riferimento": "2032-11-12",
+  "tipo_fascicolo": "ex ante",
+  "lato_assistito": "Ilcinara Automazione S.p.A., attraverso la funzione compliance, che sottopone la bozza al consiglio",
+  "meccanismi": [
+    "presenza contro adeguatezza: ogni presidio richiesto da una policy anticorruzione e' presente nella bozza; i difetti stanno nel livello, nella definizione mancante o nell'eccezione che svuota la regola, mai nell'assenza di un capitolo",
+    "gerarchia fra documenti: la bozza confligge su tre punti con il codice etico e con la procedura sulle segnalazioni, entrambi in vigore e approvati dallo stesso organo che dovra' approvare la policy",
+    "soglia esatta: il limite di centocinquanta euro e' fissato per singola erogazione e non per destinatario, e la verifica sul beneficiario delle sponsorizzazioni scatta solo oltre venticinquemila euro: in entrambi i casi la regola si aggira restando dentro la soglia",
+    "ruolo formale contro ruolo sostanziale: la matrice delle autorizzazioni attribuisce l'autorizzazione al medesimo soggetto che propone la spesa, sicche' il controllo esiste sulla carta e non esiste nei fatti",
+    "dichiarazione di parte smentita dai documenti: il messaggio del direttore commerciale rivendica come necessarie due delle clausole difettose e presenta come adeguata la clausola sulle segnalazioni"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "omaggi: manca il limite cumulativo per destinatario",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 5.2 fissa il limite di euro 150,00 per singola erogazione e non prevede alcun limite cumulativo annuo per destinatario: quattro omaggi da euro 140,00 allo stesso soggetto nello stesso anno, per complessivi euro 560,00, restano fuori da ogni autorizzazione",
+      "evidenza": "bozza di policy, articolo 5.2; allegato 1",
+      "non_deve_affermare": "che il limite di euro 150,00 sia di per se' il difetto"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "omaggi a pubblici ufficiali: deroga in conflitto con il codice etico",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 5.3 ammette omaggi di modico valore a pubblici ufficiali e incaricati di pubblico servizio, mentre l'articolo 4 del codice etico in vigore pone un divieto assoluto senza eccezioni: la bozza introduce una deroga a un documento sovraordinato approvato dallo stesso organo",
+      "evidenza": "bozza di policy, articolo 5.3; codice etico, articolo 4",
+      "non_deve_affermare": "che il conflitto si risolva dando prevalenza alla policy in quanto successiva"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "modico valore non definito",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza non definisce il modico valore e non fissa alcun importo: la deroga dell'articolo 5.3 e' priva di un criterio applicabile",
+      "evidenza": "bozza di policy, articoli 3 e 5.3",
+      "non_deve_affermare": "che il limite di euro 150,00 dell'articolo 5.2 valga anche per i pubblici ufficiali"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "ospitalita' estesa agli accompagnatori",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 6.2 ammette il rimborso delle spese di viaggio e di soggiorno dell'accompagnatore del destinatario: si tratta di un'utilita' priva di collegamento con l'attivita' aziendale",
+      "evidenza": "bozza di policy, articolo 6.2",
+      "non_deve_affermare": "che l'ospitalita' in quanto tale sia vietata"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "assenza del divieto nel periodo sensibile",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 6 non vieta l'ospitalita' verso soggetti che stiano decidendo su una gara, un affidamento o un'autorizzazione riguardante la societa': il presidio piu' rilevante manca",
+      "evidenza": "bozza di policy, articolo 6",
+      "non_deve_affermare": "che il limite per pasto o per evento supplisca a tale mancanza"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "sponsorizzazioni: verifica solo oltre soglia",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 7.3 prevede la verifica sul beneficiario solo per importi superiori a euro 25.000,00: una sponsorizzazione di euro 24.000,00 non attiva alcuna verifica, benche' il rischio non dipenda dall'importo",
+      "evidenza": "bozza di policy, articolo 7.3; allegato 1",
+      "non_deve_affermare": "che la soglia vada semplicemente abbassata a un importo diverso"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "sponsorizzazioni: manca la verifica sui collegamenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la verifica prevista dall'articolo 7.3 non comprende l'accertamento di collegamenti fra il beneficiario e i soggetti pubblici o privati che decidono su affari della societa'",
+      "evidenza": "bozza di policy, articolo 7.3",
+      "non_deve_affermare": "che la formalizzazione per iscritto e la delibera del comitato siano sufficienti"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "intermediari: due diligence non rinnovata",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 9.1 colloca la due diligence prima della stipula e non ne prevede il rinnovo periodico ne' al verificarsi di eventi rilevanti: per i rapporti pluriennali la verifica resta ferma alla data iniziale",
+      "evidenza": "bozza di policy, articolo 9.1",
+      "non_deve_affermare": "che manchi la due diligence iniziale"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "intermediari: pagamento a soggetto o in Paese diverso",
+      "gravita": "alta",
+      "affermazione_richiesta": "il secondo periodo dell'articolo 9.4 consente, su richiesta scritta dell'intermediario, il pagamento su conto intestato a soggetto diverso o acceso in un Paese diverso da quello in cui la prestazione e' resa: la clausola va soppressa",
+      "evidenza": "bozza di policy, articolo 9.4; messaggio del direttore commerciale",
+      "non_deve_affermare": "che la richiesta scritta dell'intermediario sia una garanzia sufficiente"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "matrice delle autorizzazioni: difetto di segregazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "nella matrice l'ospitalita' fino a euro 1.000,00 e la sponsorizzazione fino a euro 25.000,00 sono autorizzate dal medesimo soggetto che le propone: il controllo esiste sulla carta e non nei fatti",
+      "evidenza": "allegato 1, matrice delle autorizzazioni",
+      "non_deve_affermare": "che la matrice non preveda alcuna autorizzazione"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "regolarizzazione successiva in caso di urgenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 10 consente di procedere in caso di urgenza e di richiedere l'autorizzazione entro trenta giorni: e' una sanatoria che rende l'autorizzazione preventiva facoltativa",
+      "evidenza": "bozza di policy, articolo 10; messaggio del direttore commerciale",
+      "non_deve_affermare": "che sia sufficiente ridurre il termine di trenta giorni"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "ambito soggettivo ristretto ai dipendenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 2 applica la policy ai soli dipendenti della societa' e delle controllate, mentre l'articolo 2 del codice etico si rivolge anche ad amministratori, consulenti, agenti, distributori e partner commerciali: restano fuori proprio i soggetti attraverso cui il rischio si manifesta",
+      "evidenza": "bozza di policy, articolo 2; codice etico, articolo 2",
+      "non_deve_affermare": "che l'estensione ai terzi sia assicurata dalle clausole contrattuali previste dall'articolo 9.2"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "manca il divieto dei pagamenti di facilitazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza non contiene alcun divieto espresso dei pagamenti destinati ad accelerare o agevolare attivita' di routine di soggetti pubblici",
+      "evidenza": "bozza di policy, testo integrale",
+      "non_deve_affermare": "che il divieto sia implicito nell'articolo 4"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "manca il registro di omaggi e ospitalita'",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza non prevede alcun registro degli omaggi e delle ospitalita' erogati e ricevuti: senza registrazione il limite dell'articolo 5.2 non e' verificabile a posteriori",
+      "evidenza": "bozza di policy, articoli 5, 6 e 14",
+      "non_deve_affermare": "che la conservazione della documentazione per dieci anni supplisca al registro"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "canale di segnalazione non conforme",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 11.1 impone la segnalazione al superiore gerarchico e la trasmissione dell'identita' del segnalante al responsabile della funzione interessata: contrasta con la procedura sulle segnalazioni in vigore, che affida il canale a un ufficio autonomo dedicato, e con la disciplina che impone la riservatezza dell'identita'",
+      "evidenza": "bozza di policy, articolo 11.1; procedura sulle segnalazioni, articoli 3 e 4; artt. 4 e 12 D.Lgs. 24/2023",
+      "non_deve_affermare": "che il divieto di ritorsione dell'articolo 11.2 sani il difetto"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "limiti della review ed elementi mancanti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fascicolo non contiene il modello di organizzazione, gestione e controllo, il sistema di deleghe e procure, i dati sull'applicazione della policy vigente e l'allegato 2 richiamato dall'articolo 7.3: la nota non puo' esprimersi sull'idoneita' complessiva del modello ne' sull'effettiva attuazione dei presidi",
+      "evidenza": "composizione del fascicolo alla data di riferimento",
+      "non_deve_affermare": "che il modello sia idoneo o inidoneo"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "divieto di omaggi in denaro",
+      "oggetto": "bozza di policy, articolo 5.1",
+      "chiave_nel_criterio": "omaggi in denaro",
+      "perche_non_e_issue": "il divieto assoluto di omaggi in denaro e in strumenti equivalenti e' un presidio adeguato: segnalarlo come rilievo e' sovra-segnalazione",
+      "criterio_assenza": "B.30"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "soglia di centocinquanta euro",
+      "oggetto": "bozza di policy, articolo 5.2",
+      "chiave_nel_criterio": "150",
+      "perche_non_e_issue": "il limite per singola erogazione a soggetti privati e' in linea con la prassi: il difetto e' l'assenza del cumulo, non la misura della soglia",
+      "criterio_assenza": "C.1 e B.29"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "formazione biennale",
+      "oggetto": "bozza di policy, articolo 12",
+      "chiave_nel_criterio": "formazione",
+      "perche_non_e_issue": "la formazione obbligatoria con cadenza biennale e verifica dell'apprendimento e' un presidio adeguato",
+      "criterio_assenza": "B.31"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "richiamo al sistema disciplinare",
+      "oggetto": "bozza di policy, articolo 13",
+      "chiave_nel_criterio": "sistema disciplinare",
+      "perche_non_e_issue": "il richiamo espresso al sistema disciplinare e' presente: segnalarne l'assenza e' errore di lettura",
+      "criterio_assenza": "B.32"
+    },
+    {
+      "id": "N-05",
+      "etichetta": "conservazione decennale",
+      "oggetto": "bozza di policy, articolo 14",
+      "chiave_nel_criterio": "dieci anni",
+      "perche_non_e_issue": "il periodo di conservazione della documentazione e' adeguato: il difetto sta nella mancanza del registro, non nella durata della conservazione",
+      "criterio_assenza": "B.33"
+    },
+    {
+      "id": "N-06",
+      "etichetta": "delibera del consiglio per le erogazioni liberali",
+      "oggetto": "bozza di policy, articolo 8; allegato 1",
+      "chiave_nel_criterio": "erogazioni liberali",
+      "perche_non_e_issue": "l'attribuzione al consiglio di amministrazione, senza soglia, e' il presidio piu' rigoroso della bozza",
+      "criterio_assenza": "B.34"
+    },
+    {
+      "id": "N-07",
+      "etichetta": "limite del cinque per cento al compenso degli intermediari",
+      "oggetto": "bozza di policy, articolo 9.3; messaggio del direttore commerciale",
+      "chiave_nel_criterio": "cinque per cento",
+      "perche_non_e_issue": "il limite e' un presidio: la richiesta del direttore commerciale di elevarlo non e' un rilievo della review e accoglierla indebolirebbe la policy",
+      "criterio_assenza": "B.35"
+    }
+  ],
+  "punti_neutri": [
+    "la numerazione o l'ordine con cui i rilievi non bloccanti sono elencati: neutra",
+    "il richiamo o meno alla denominazione inglese degli istituti (gift, hospitality, facilitation payment): neutro",
+    "la scelta di trattare l'articolo 7.1, che ammette sponsorizzazioni solo verso soggetti con almeno tre anni di attivita', come presidio oppure come clausola indifferente: il caso non se ne occupa"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "task_id": "WF2-068",
+  "lato_assistito": "Miralago Acquisition S.p.A., acquirente",
+  "data_di_riferimento": "2030-02-15",
+  "stato_fascicolo": "SPA firmato in bozza, closing non avvenuto",
+  "fonti_ammesse": [
+    "Codice civile, testo consolidato",
+    "D.P.R. 22 dicembre 1986, n. 917, TUIR"
+  ],
+  "calcoli": [
+    "quadrature di importi e sequenze documentali indicate nel gold"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per condotta post-closing: escludere atti fuori ordinaria gestione non imposti",
+    "integrazione necessaria per consolidato fiscale: acquisire accordi 2026-2028"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_tax_schedule_draft.docx",
+      "funzione": "draft"
+    },
+    {
+      "file": "02_spa_estratto_definizioni.pdf",
+      "funzione": "Closing previsto 31 marzo 2030; Locked Box Date 31 dicembre 2029; prezzo EUR 48.000.000; cap generale 20%."
+    },
+    {
+      "file": "03_report_tax_dd.pdf",
+      "funzione": "Verifica IVA 2027 aperta; consolidato fiscale fino al 2028; credito R&S 2026 ancora esposto; nessun avviso definitivo."
+    },
+    {
+      "file": "04_bozza_pvc_iva.pdf",
+      "funzione": "Ripresa IVA EUR 780.000, sanzioni stimate EUR 390.000, interessi da determinare; non notificato alla target."
+    },
+    {
+      "file": "05_polizza_w_and_i.pdf",
+      "funzione": "Copre tax warranties sopra EUR 250.000, esclude rischi noti nel DD e richiede preventiva consultazione dell'assicuratore."
+    },
+    {
+      "file": "06_prospetto_periodo_a_cavallo.xlsx",
+      "funzione": "Ricavi gennaio-marzo 2030 EUR 6.200.000; costi EUR 4.900.000; una plusvalenza del 20 marzo dipende da decisione del venditore."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "perimetro temporale illimitato",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza copre anche periodi post-closing",
+      "azione_richiesta": "limitare a pre-closing e straddle",
+      "conseguenza": "il rischio segue il periodo economico",
+      "evidenza": "doc. 01 clausola 1",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "allocazione straddle",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca criterio per il periodo gennaio-marzo 2030",
+      "azione_richiesta": "usare chiusura contabile al closing con regole per componenti puntuali",
+      "conseguenza": "la plusvalenza del 20 marzo resta pre-closing",
+      "evidenza": "doc. 02 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "plusvalenza disposta dal venditore",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'atto e' deciso prima del closing",
+      "azione_richiesta": "attribuirne imposte ai venditori",
+      "conseguenza": "la data di incasso non sposta la responsabilita'",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "controllo esclusivo acquirente",
+      "gravita": "alta",
+      "affermazione_richiesta": "i venditori pagano senza partecipare",
+      "azione_richiesta": "attribuire informazione e partecipazione",
+      "conseguenza": "il controllo economico segue l'esposizione",
+      "evidenza": "doc. 01 clausola 2",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "consenso alle transazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'acquirente puo' definire creando obblighi per i venditori",
+      "azione_richiesta": "richiedere consenso non irragionevole",
+      "conseguenza": "nessuna parte decide unilateralmente il costo dell'altra",
+      "evidenza": "doc. 01 clausola 2",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "urgenze procedurali",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza PVC richiede reazione anche prima di un atto definitivo",
+      "azione_richiesta": "prevedere avviso rapido e difese conservative",
+      "conseguenza": "la partecipazione non deve causare decadenze",
+      "evidenza": "doc. 03 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "benefici potenziali",
+      "gravita": "alta",
+      "affermazione_richiesta": "si deducono benefici mai realizzati",
+      "azione_richiesta": "dedurre solo benefici effettivi e connessi",
+      "conseguenza": "l'indennizzo non si riduce per ipotesi",
+      "evidenza": "doc. 01 clausola 3",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "gross-up assente",
+      "gravita": "alta",
+      "affermazione_richiesta": "il pagamento potrebbe essere imponibile",
+      "azione_richiesta": "inserire gross-up e meccanismo di rimborso",
+      "conseguenza": "l'acquirente riceve l'importo netto della perdita",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "interessi omessi",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli interessi sono da determinare ma la definizione non li include",
+      "azione_richiesta": "aggiungere interessi e costi ragionevoli",
+      "conseguenza": "la perdita coperta coincide con l'esborso",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "basket generale",
+      "gravita": "media",
+      "affermazione_richiesta": "EUR 1.000.000 assorbirebbe la ripresa IVA",
+      "azione_richiesta": "escludere tax covenant dal basket generale",
+      "conseguenza": "il rimedio fiscale resta autonomo",
+      "evidenza": "doc. 01 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "de minimis elevato",
+      "gravita": "media",
+      "affermazione_richiesta": "EUR 100.000 frammenta pretese omogenee",
+      "azione_richiesta": "ridurre a EUR 25.000 e aggregare fatti connessi",
+      "conseguenza": "la soglia non incentiva artifici",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "cap insufficiente",
+      "gravita": "media",
+      "affermazione_richiesta": "20% del prezzo non riflette passivita' fiscali storiche",
+      "azione_richiesta": "negoziare cap fino al prezzo per imposte pre-closing",
+      "conseguenza": "la responsabilita' resta limitata ma non simbolica",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "termine di 18 mesi",
+      "gravita": "media",
+      "affermazione_richiesta": "puo' scadere prima del potere di accertamento",
+      "azione_richiesta": "legare la survival alla decadenza fiscale piu' 60 giorni",
+      "conseguenza": "la notifica resta possibile durante il rischio",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "recuperi da terzi",
+      "gravita": "media",
+      "affermazione_richiesta": "l'acquirente trattiene doppio beneficio",
+      "azione_richiesta": "riversare recuperi netti fino all'indennizzo",
+      "conseguenza": "il venditore non paga due volte",
+      "evidenza": "doc. 01 clausola 5",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "polizza W&I",
+      "gravita": "media",
+      "affermazione_richiesta": "il rischio IVA noto e' escluso",
+      "azione_richiesta": "non trattare la polizza come recupero certo",
+      "conseguenza": "la copertura non neutralizza il covenant",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "divieto di doppio recupero",
+      "gravita": "media",
+      "affermazione_richiesta": "prezzo, polizza e indennizzo possono sovrapporsi",
+      "azione_richiesta": "inserire ordine di imputazione e rendiconto",
+      "conseguenza": "una perdita produce un solo ristoro",
+      "evidenza": "doc. 02 e doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-17",
+      "etichetta": "condotta post-closing",
+      "gravita": "media",
+      "affermazione_richiesta": "i venditori rispondono di atti volontari dell'acquirente",
+      "azione_richiesta": "escludere atti fuori ordinaria gestione non imposti",
+      "conseguenza": "il covenant non assicura decisioni future",
+      "evidenza": "doc. 01 clausola 6",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-18",
+      "etichetta": "consolidato fiscale",
+      "gravita": "media",
+      "affermazione_richiesta": "il fascicolo non contiene accordo di consolidato e riparto",
+      "azione_richiesta": "acquisire accordi 2026-2028",
+      "conseguenza": "non si alloca la responsabilita' di gruppo senza documenti",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "prezzo EUR 48 milioni",
+      "oggetto": "doc. 02",
+      "chiave_nel_criterio": "EUR 48.000.000",
+      "perche_non_e_issue": "serve al cap ma non prova una perdita",
+      "criterio_assenza": "B.55"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "bozza PVC non notificata",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "non notificato",
+      "perche_non_e_issue": "e' rischio noto, non debito definitivo",
+      "criterio_assenza": "B.56"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "credito R&S 2026",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "credito R&S",
+      "perche_non_e_issue": "manca contestazione specifica e resta punto informativo",
+      "criterio_assenza": "B.57"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "periodo di locked box",
+      "oggetto": "doc. 02",
+      "chiave_nel_criterio": "Locked Box",
+      "perche_non_e_issue": "non sostituisce la data di closing per il tax covenant",
+      "criterio_assenza": "B.58"
+    },
+    {
+      "id": "N-05",
+      "etichetta": "consultazione assicuratore",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "assicuratore",
+      "perche_non_e_issue": "e' obbligo di polizza separato dal controllo della verifica",
+      "criterio_assenza": "B.59"
+    }
+  ]
+}

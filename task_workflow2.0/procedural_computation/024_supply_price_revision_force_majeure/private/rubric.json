@@ -1,0 +1,1186 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-024",
+  "title": "Somministrazione. Audit dei termini fra revisione dei prezzi, forza maggiore e risoluzione",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 73,
+  "criteria": [
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "Ogni termine del quadro è qualificato come scaduto, aperto o futuro.",
+      "pass_condition": "ogni riga del quadro porta una di quelle tre qualificazioni.",
+      "fail_condition": "almeno un termine è privo della qualificazione.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "A.3 stato di ciascun termine\nissue: — · tipo: presenza · gravità: alta · judge: no · fonte: prompt\nVerifica: Ogni termine del quadro è qualificato come scaduto, aperto o futuro.\nPass se: ogni riga del quadro porta una di quelle tre qualificazioni.\nFail se: almeno un termine è privo della qualificazione."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene clausole contrattuali riscritte né la bozza di un atto da inviare.",
+      "pass_condition": "non compare testo di clausola riscritto in forma contrattuale né una bozza di lettera o di atto.",
+      "fail_condition": "il deliverable contiene una clausola riscritta, un contratto modificato o la bozza di un atto.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "A.4 nessuna riscrittura di clausole\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: prompt\nVerifica: Il deliverable non contiene clausole contrattuali riscritte né la bozza di un atto da inviare.\nPass se: non compare testo di clausola riscritto in forma contrattuale né una bozza di lettera o di atto.\nFail se: il deliverable contiene una clausola riscritta, un contratto modificato o la bozza di un atto."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "fail_condition": "compare almeno un riferimento normativo fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": "reference pack",
+      "severity": "alta",
+      "raw_text": "A.5 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento normativo citato appartiene all'elenco.\nFail se: compare almeno un riferimento normativo fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la richiesta di revisione del secondo semestre 2029 è stata inviata dopo la scadenza del termine previsto dall'Allegato B.",
+      "pass_condition": "compare l'affermazione che la richiesta è stata inviata fuori termine, o oltre i trenta giorni dalla pubblicazione.",
+      "fail_condition": "l'affermazione non compare, oppure la richiesta è presentata come tempestiva.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.2; bollettino; PEC di richiesta",
+      "severity": "alta",
+      "raw_text": "B.1 richiesta di revisione fuori termine\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.2; bollettino; PEC di richiesta\nVerifica: Il deliverable afferma che la richiesta di revisione del secondo semestre 2029 è stata inviata dopo la scadenza del termine previsto dall'Allegato B.\nPass se: compare l'affermazione che la richiesta è stata inviata fuori termine, o oltre i trenta giorni dalla pubblicazione.\nFail se: l'affermazione non compare, oppure la richiesta è presentata come tempestiva."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la contestazione del cliente è pervenuta dopo la scadenza del termine di quindici giorni.",
+      "pass_condition": "compare l'affermazione che la contestazione è fuori termine, o tardiva, o decaduta.",
+      "fail_condition": "l'affermazione non compare, oppure la contestazione è presentata come tempestiva.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.5; PEC di contestazione con ricevuta",
+      "severity": "alta",
+      "raw_text": "B.2 contestazione fuori termine\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.5; PEC di contestazione con ricevuta\nVerifica: Il deliverable afferma che la contestazione del cliente è pervenuta dopo la scadenza del termine di quindici giorni.\nPass se: compare l'affermazione che la contestazione è fuori termine, o tardiva, o decaduta.\nFail se: l'affermazione non compare, oppure la contestazione è presentata come tempestiva."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che, in mancanza di contestazione nel termine, la revisione è definitiva fra le parti anche quanto alla tempestività della richiesta, e che il cliente non può più opporre la decadenza del fornitore.",
+      "pass_condition": "compare l'affermazione che la decadenza della richiesta non è più opponibile, o che la revisione è definitiva anche quanto alla tempestività.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.5",
+      "severity": "alta",
+      "raw_text": "B.3 effetto del consolidamento\nissue: I-01 · tipo: qualificazione · gravità: alta · judge: sì · fonte: Allegato B art. 3.5\nVerifica: Il deliverable afferma che, in mancanza di contestazione nel termine, la revisione è definitiva fra le parti anche quanto alla tempestività della richiesta, e che il cliente non può più opporre la decadenza del fornitore.\nPass se: compare l'affermazione che la decadenza della richiesta non è più opponibile, o che la revisione è definitiva anche quanto alla tempestività.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la revisione sia inefficace o inopponibile per il solo fatto che la richiesta era fuori termine.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che la revisione non si applica perché la richiesta era tardiva, o che il cliente può rifiutare il prezzo revisionato per quel motivo.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.5",
+      "severity": "alta",
+      "raw_text": "B.4 divieto di ritenere la revisione inopponibile\nissue: I-01 · tipo: assenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.5\nVerifica: Il deliverable non afferma che la revisione sia inefficace o inopponibile per il solo fatto che la richiesta era fuori termine.\nPass se: quell'affermazione non compare.\nFail se: si afferma che la revisione non si applica perché la richiesta era tardiva, o che il cliente può rifiutare il prezzo revisionato per quel motivo."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la comunicazione di forza maggiore è stata inviata dopo la scadenza del termine di cinque giorni lavorativi dall'evento.",
+      "pass_condition": "compare l'affermazione che la comunicazione è tardiva, o fuori termine.",
+      "fail_condition": "l'affermazione non compare, oppure la comunicazione è presentata come tempestiva.",
+      "indifferent": null,
+      "source": "contratto artt. 12.2 e 20.3; PEC di forza maggiore",
+      "severity": "alta",
+      "raw_text": "B.5 comunicazione di forza maggiore tardiva\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto artt. 12.2 e 20.3; PEC di forza maggiore\nVerifica: Il deliverable afferma che la comunicazione di forza maggiore è stata inviata dopo la scadenza del termine di cinque giorni lavorativi dall'evento.\nPass se: compare l'affermazione che la comunicazione è tardiva, o fuori termine.\nFail se: l'affermazione non compare, oppure la comunicazione è presentata come tempestiva."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che, per effetto del ritardo, l'esonero opera dalla data della comunicazione e non dalla data dell'evento.",
+      "pass_condition": "compare l'affermazione che l'esonero decorre dal 17 gennaio 2030, o dalla comunicazione.",
+      "fail_condition": "l'affermazione non compare, oppure si afferma che l'esonero copre il periodo dall'evento.",
+      "indifferent": null,
+      "source": "contratto art. 12.2",
+      "severity": "alta",
+      "raw_text": "B.6 esonero dalla data della comunicazione\nissue: I-04 · tipo: qualificazione · gravità: alta · judge: sì · fonte: contratto art. 12.2\nVerifica: Il deliverable afferma che, per effetto del ritardo, l'esonero opera dalla data della comunicazione e non dalla data dell'evento.\nPass se: compare l'affermazione che l'esonero decorre dal 17 gennaio 2030, o dalla comunicazione.\nFail se: l'affermazione non compare, oppure si afferma che l'esonero copre il periodo dall'evento."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che le consegne non eseguite del 9 e del 15 gennaio 2030 non sono coperte dall'esonero.",
+      "pass_condition": "compaiono entrambe le date come consegne non coperte.",
+      "fail_condition": "manca una delle due date, oppure le consegne sono presentate come coperte dall'esonero.",
+      "indifferent": null,
+      "source": "registro consegne; contratto art. 12.2",
+      "severity": "alta",
+      "raw_text": "B.7 consegne non coperte dall'esonero\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: registro consegne; contratto art. 12.2\nVerifica: Il deliverable afferma che le consegne non eseguite del 9 e del 15 gennaio 2030 non sono coperte dall'esonero.\nPass se: compaiono entrambe le date come consegne non coperte.\nFail se: manca una delle due date, oppure le consegne sono presentate come coperte dall'esonero."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable attribuisce la consegna non eseguita del 6 settembre 2029 a una causa estranea all'evento del 7 gennaio 2030.",
+      "pass_condition": "la consegna di settembre è contata fra gli inadempimenti e non è ricondotta all'evento di gennaio.",
+      "fail_condition": "la consegna di settembre è ricondotta all'evento di gennaio, oppure è esclusa dal computo degli inadempimenti.",
+      "indifferent": null,
+      "source": "registro consegne",
+      "severity": "media",
+      "raw_text": "B.8 inadempimento estraneo all'evento\nissue: I-05 · tipo: attribuzione · gravità: media · judge: sì · fonte: registro consegne\nVerifica: Il deliverable attribuisce la consegna non eseguita del 6 settembre 2029 a una causa estranea all'evento del 7 gennaio 2030.\nPass se: la consegna di settembre è contata fra gli inadempimenti e non è ricondotta all'evento di gennaio.\nFail se: la consegna di settembre è ricondotta all'evento di gennaio, oppure è esclusa dal computo degli inadempimenti."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la dichiarazione di volersi avvalere della clausola risolutiva espressa, contenuta nella lettera del 26 febbraio 2030, è stata resa dopo la scadenza del termine di trenta giorni.",
+      "pass_condition": "compare l'affermazione che la dichiarazione è fuori termine, o tardiva.",
+      "fail_condition": "l'affermazione non compare, oppure la dichiarazione è presentata come tempestiva.",
+      "indifferent": null,
+      "source": "contratto art. 15.2; diffida",
+      "severity": "alta",
+      "raw_text": "B.9 dichiarazione della clausola risolutiva fuori termine\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto art. 15.2; diffida\nVerifica: Il deliverable afferma che la dichiarazione di volersi avvalere della clausola risolutiva espressa, contenuta nella lettera del 26 febbraio 2030, è stata resa dopo la scadenza del termine di trenta giorni.\nPass se: compare l'affermazione che la dichiarazione è fuori termine, o tardiva.\nFail se: l'affermazione non compare, oppure la dichiarazione è presentata come tempestiva."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la clausola risolutiva espressa non è più invocabile per gli inadempimenti già verificati.",
+      "pass_condition": "compare l'affermazione che il diritto è perduto per quegli inadempimenti.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "contratto art. 15.2",
+      "severity": "alta",
+      "raw_text": "B.10 clausola non più invocabile\nissue: I-06 · tipo: qualificazione · gravità: alta · judge: sì · fonte: contratto art. 15.2\nVerifica: Il deliverable afferma che la clausola risolutiva espressa non è più invocabile per gli inadempimenti già verificati.\nPass se: compare l'affermazione che il diritto è perduto per quegli inadempimenti.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la clausola risolutiva espressa abbia prodotto la risoluzione del contratto.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il contratto è risolto per effetto della clausola risolutiva espressa.",
+      "indifferent": null,
+      "source": "contratto art. 15.2",
+      "severity": "alta",
+      "raw_text": "B.11 divieto di ritenere operata la risoluzione ex clausola\nissue: I-06 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto art. 15.2\nVerifica: Il deliverable non afferma che la clausola risolutiva espressa abbia prodotto la risoluzione del contratto.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il contratto è risolto per effetto della clausola risolutiva espressa."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il termine di dieci giorni assegnato con la diffida è inferiore al termine minimo previsto dalla legge per la diffida ad adempiere.",
+      "pass_condition": "compare l'affermazione che il termine assegnato è inferiore al minimo di legge, o inferiore a quindici giorni.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "diffida; art. 1454, secondo comma, c.c.",
+      "severity": "alta",
+      "raw_text": "B.12 termine della diffida sotto il minimo\nissue: I-07 · tipo: qualificazione · gravità: alta · judge: sì · fonte: diffida; art. 1454, secondo comma, c.c.\nVerifica: Il deliverable afferma che il termine di dieci giorni assegnato con la diffida è inferiore al termine minimo previsto dalla legge per la diffida ad adempiere.\nPass se: compare l'affermazione che il termine assegnato è inferiore al minimo di legge, o inferiore a quindici giorni.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che alla data di riferimento il contratto non è risolto.",
+      "pass_condition": "compare l'affermazione che il contratto è ancora in essere, o che la risoluzione non si è prodotta.",
+      "fail_condition": "l'affermazione non compare, oppure il contratto è presentato come risolto.",
+      "indifferent": null,
+      "source": "diffida; art. 1454 c.c.",
+      "severity": "alta",
+      "raw_text": "B.13 il contratto non è risolto\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: diffida; art. 1454 c.c.\nVerifica: Il deliverable afferma che alla data di riferimento il contratto non è risolto.\nPass se: compare l'affermazione che il contratto è ancora in essere, o che la risoluzione non si è prodotta.\nFail se: l'affermazione non compare, oppure il contratto è presentato come risolto."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta il termine di dieci giorni dell'articolo 16.2 del contratto come pattuizione che legittima il termine assegnato con la diffida.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il termine di dieci giorni è valido perché il contratto lo prevede, o perché le parti lo hanno pattuito.",
+      "indifferent": null,
+      "source": "contratto art. 16.2",
+      "severity": "media",
+      "raw_text": "B.14 divieto di trarre il termine dall'articolo 16.2\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: contratto art. 16.2\nVerifica: Il deliverable non presenta il termine di dieci giorni dell'articolo 16.2 del contratto come pattuizione che legittima il termine assegnato con la diffida.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il termine di dieci giorni è valido perché il contratto lo prevede, o perché le parti lo hanno pattuito."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la diffida sia nulla o inesistente.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che la diffida è nulla, inesistente o priva di qualunque effetto.",
+      "indifferent": "l'indicazione che la diffida vale come costituzione in mora.",
+      "source": "art. 1454 c.c.",
+      "severity": "media",
+      "raw_text": "B.15 divieto di dichiarare nulla la diffida\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: art. 1454 c.c.\nVerifica: Il deliverable non afferma che la diffida sia nulla o inesistente.\nPass se: quell'affermazione non compare.\nFail se: si afferma che la diffida è nulla, inesistente o priva di qualunque effetto.\nIndifferente: l'indicazione che la diffida vale come costituzione in mora."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica come atto da compiere l'invio di una nuova diffida con termine non inferiore a quindici giorni.",
+      "pass_condition": "compare l'indicazione di una nuova diffida con termine di almeno quindici giorni.",
+      "fail_condition": "l'indicazione non compare, oppure si indica una nuova diffida senza precisare il termine minimo.",
+      "indifferent": null,
+      "source": "art. 1454 c.c.",
+      "severity": "alta",
+      "raw_text": "B.16 nuova diffida con termine non inferiore a quindici giorni\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 1454 c.c.\nVerifica: Il deliverable indica come atto da compiere l'invio di una nuova diffida con termine non inferiore a quindici giorni.\nPass se: compare l'indicazione di una nuova diffida con termine di almeno quindici giorni.\nFail se: l'indicazione non compare, oppure si indica una nuova diffida senza precisare il termine minimo."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la risoluzione per inadempimento relativo a singole prestazioni richiede che l'inadempimento sia di notevole importanza e tale da menomare la fiducia nell'esattezza dei successivi adempimenti.",
+      "pass_condition": "compaiono entrambi i requisiti, la notevole importanza e la menomazione della fiducia negli adempimenti successivi.",
+      "fail_condition": "manca uno dei due requisiti, oppure l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 1564 c.c.",
+      "severity": "media",
+      "raw_text": "B.17 misura dell'inadempimento nella somministrazione\nissue: I-08 · tipo: presenza · gravità: media · judge: sì · fonte: art. 1564 c.c.\nVerifica: Il deliverable afferma che la risoluzione per inadempimento relativo a singole prestazioni richiede che l'inadempimento sia di notevole importanza e tale da menomare la fiducia nell'esattezza dei successivi adempimenti.\nPass se: compaiono entrambi i requisiti, la notevole importanza e la menomazione della fiducia negli adempimenti successivi.\nFail se: manca uno dei due requisiti, oppure l'affermazione non compare."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il recesso dalle consegne programmate per impedimento protratto oltre sessanta giorni consecutivi è ancora esercitabile alla data di riferimento.",
+      "pass_condition": "compare l'affermazione che il recesso è aperto, o esercitabile, alla data di riferimento.",
+      "fail_condition": "l'affermazione non compare, oppure il recesso è presentato come non ancora maturato o come perduto.",
+      "indifferent": null,
+      "source": "contratto art. 12.4; registro consegne",
+      "severity": "alta",
+      "raw_text": "B.18 recesso ancora esercitabile\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto art. 12.4; registro consegne\nVerifica: Il deliverable afferma che il recesso dalle consegne programmate per impedimento protratto oltre sessanta giorni consecutivi è ancora esercitabile alla data di riferimento.\nPass se: compare l'affermazione che il recesso è aperto, o esercitabile, alla data di riferimento.\nFail se: l'affermazione non compare, oppure il recesso è presentato come non ancora maturato o come perduto."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica che il recesso va comunicato con preavviso di quindici giorni.",
+      "pass_condition": "compare il preavviso di quindici giorni riferito al recesso.",
+      "fail_condition": "il preavviso non compare, oppure è indicato in misura diversa.",
+      "indifferent": null,
+      "source": "contratto art. 12.4",
+      "severity": "media",
+      "raw_text": "B.19 preavviso del recesso\nissue: I-09 · tipo: valore · gravità: media · judge: sì · fonte: contratto art. 12.4\nVerifica: Il deliverable indica che il recesso va comunicato con preavviso di quindici giorni.\nPass se: compare il preavviso di quindici giorni riferito al recesso.\nFail se: il preavviso non compare, oppure è indicato in misura diversa."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'aumento dei costi energetici invocato nella comunicazione è escluso dalla definizione contrattuale di forza maggiore.",
+      "pass_condition": "compare l'affermazione che quel motivo è escluso dalla definizione, o che non costituisce forza maggiore secondo il contratto.",
+      "fail_condition": "l'affermazione non compare, oppure l'aumento dei costi è trattato come evento esonerante.",
+      "indifferent": null,
+      "source": "contratto art. 12.1; PEC di forza maggiore",
+      "severity": "alta",
+      "raw_text": "B.20 aumento dei costi escluso dalla forza maggiore\nissue: I-10 · tipo: qualificazione · gravità: alta · judge: sì · fonte: contratto art. 12.1; PEC di forza maggiore\nVerifica: Il deliverable afferma che l'aumento dei costi energetici invocato nella comunicazione è escluso dalla definizione contrattuale di forza maggiore.\nPass se: compare l'affermazione che quel motivo è escluso dalla definizione, o che non costituisce forza maggiore secondo il contratto.\nFail se: l'affermazione non compare, oppure l'aumento dei costi è trattato come evento esonerante."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la comunicazione sia priva di effetto anche in relazione all'allagamento dello stabilimento.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che la comunicazione è invalida, o inefficace, per il fatto di contenere un motivo escluso.",
+      "indifferent": null,
+      "source": "contratto art. 12.1; PEC di forza maggiore",
+      "severity": "media",
+      "raw_text": "B.21 la comunicazione resta efficace quanto all'allagamento\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: contratto art. 12.1; PEC di forza maggiore\nVerifica: Il deliverable non afferma che la comunicazione sia priva di effetto anche in relazione all'allagamento dello stabilimento.\nPass se: quell'affermazione non compare.\nFail se: si afferma che la comunicazione è invalida, o inefficace, per il fatto di contenere un motivo escluso."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'eccessiva onerosità sopravvenuta della prestazione consente alla parte che la subisce di domandare la risoluzione del contratto, e non di adeguare il prezzo fuori dal meccanismo dell'Allegato B.",
+      "pass_condition": "compare l'affermazione che la via dell'eccessiva onerosità è la domanda di risoluzione e non l'adeguamento unilaterale del prezzo.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 1467 c.c.",
+      "severity": "bassa",
+      "raw_text": "B.22 via dell'eccessiva onerosità\nissue: I-10 · tipo: presenza · gravità: bassa · judge: sì · fonte: art. 1467 c.c.\nVerifica: Il deliverable afferma che l'eccessiva onerosità sopravvenuta della prestazione consente alla parte che la subisce di domandare la risoluzione del contratto, e non di adeguare il prezzo fuori dal meccanismo dell'Allegato B.\nPass se: compare l'affermazione che la via dell'eccessiva onerosità è la domanda di risoluzione e non l'adeguamento unilaterale del prezzo.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che, in mancanza di disdetta nel termine, il contratto si rinnova per ventiquattro mesi e le condizioni economiche in essere, compresa la revisione divenuta definitiva, si applicano al periodo di rinnovo.",
+      "pass_condition": "compaiono entrambi gli elementi, il rinnovo di ventiquattro mesi e il trascinamento del prezzo revisionato.",
+      "fail_condition": "manca uno dei due elementi, oppure l'affermazione non compare.",
+      "indifferent": null,
+      "source": "contratto artt. 3.2 e 3.3",
+      "severity": "alta",
+      "raw_text": "B.23 effetto della mancata disdetta\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto artt. 3.2 e 3.3\nVerifica: Il deliverable afferma che, in mancanza di disdetta nel termine, il contratto si rinnova per ventiquattro mesi e le condizioni economiche in essere, compresa la revisione divenuta definitiva, si applicano al periodo di rinnovo.\nPass se: compaiono entrambi gli elementi, il rinnovo di ventiquattro mesi e il trascinamento del prezzo revisionato.\nFail se: manca uno dei due elementi, oppure l'affermazione non compare."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable colloca fra i termini futuri la finestra della revisione riferita all'indice di marzo 2030, indicando il limite di pubblicazione del valore e il termine per la richiesta.",
+      "pass_condition": "compaiono il limite di pubblicazione e il termine per la richiesta riferiti al primo semestre 2030.",
+      "fail_condition": "la finestra non è collocata fra i termini futuri, oppure manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "Allegato B artt. 2.3, 3.2 e 3.5",
+      "severity": "media",
+      "raw_text": "B.24 calendario della prossima revisione\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: Allegato B artt. 2.3, 3.2 e 3.5\nVerifica: Il deliverable colloca fra i termini futuri la finestra della revisione riferita all'indice di marzo 2030, indicando il limite di pubblicazione del valore e il termine per la richiesta.\nPass se: compaiono il limite di pubblicazione e il termine per la richiesta riferiti al primo semestre 2030.\nFail se: la finestra non è collocata fra i termini futuri, oppure manca uno dei due elementi."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota interna secondo cui il contratto è risolto dall'8 marzo 2030 è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione della nota è errata, o da correggere.",
+      "fail_condition": "l'indicazione non compare, oppure quell'affermazione della nota è confermata.",
+      "indifferent": null,
+      "source": "nota interna § 4",
+      "severity": "alta",
+      "raw_text": "B.25 affermazione errata sulla risoluzione\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota interna § 4\nVerifica: Il deliverable afferma che l'affermazione della nota interna secondo cui il contratto è risolto dall'8 marzo 2030 è errata.\nPass se: compare l'indicazione che quell'affermazione della nota è errata, o da correggere.\nFail se: l'indicazione non compare, oppure quell'affermazione della nota è confermata."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota interna secondo cui la documentazione di forza maggiore è arrivata fuori termine è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione della nota è errata, o da correggere.",
+      "fail_condition": "l'indicazione non compare, oppure quell'affermazione della nota è confermata.",
+      "indifferent": null,
+      "source": "nota interna § 3; PEC di documentazione",
+      "severity": "alta",
+      "raw_text": "B.26 affermazione errata sulla documentazione\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota interna § 3; PEC di documentazione\nVerifica: Il deliverable afferma che l'affermazione della nota interna secondo cui la documentazione di forza maggiore è arrivata fuori termine è errata.\nPass se: compare l'indicazione che quell'affermazione della nota è errata, o da correggere.\nFail se: l'indicazione non compare, oppure quell'affermazione della nota è confermata."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il conteggio di sei consegne non eseguite come inadempimenti, riportato dalla nota interna e dalla diffida, è errato.",
+      "pass_condition": "compare l'indicazione che quel conteggio è errato, o che gli inadempimenti rilevanti sono meno di sei.",
+      "fail_condition": "l'indicazione non compare, oppure il conteggio di sei inadempimenti è confermato.",
+      "indifferent": null,
+      "source": "nota interna §§ 1 e 4; diffida; registro consegne",
+      "severity": "alta",
+      "raw_text": "B.27 affermazione errata sul numero di inadempimenti\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota interna §§ 1 e 4; diffida; registro consegne\nVerifica: Il deliverable afferma che il conteggio di sei consegne non eseguite come inadempimenti, riportato dalla nota interna e dalla diffida, è errato.\nPass se: compare l'indicazione che quel conteggio è errato, o che gli inadempimenti rilevanti sono meno di sei.\nFail se: l'indicazione non compare, oppure il conteggio di sei inadempimenti è confermato."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta l'affermazione della nota interna secondo cui la contestazione della revisione è stata inviata.",
+      "pass_condition": "quell'affermazione della nota non è presentata come errata.",
+      "fail_condition": "si afferma che la contestazione non è stata inviata, o che l'affermazione della nota sul punto è errata.",
+      "indifferent": null,
+      "source": "nota interna § 2; PEC di contestazione",
+      "severity": "media",
+      "raw_text": "B.28 simmetria: la contestazione è stata inviata\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: nota interna § 2; PEC di contestazione\nVerifica: Il deliverable non contesta l'affermazione della nota interna secondo cui la contestazione della revisione è stata inviata.\nPass se: quell'affermazione della nota non è presentata come errata.\nFail se: si afferma che la contestazione non è stata inviata, o che l'affermazione della nota sul punto è errata."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta l'affermazione secondo cui il fornitore ha confermato il 25 gennaio 2030 il perdurare dell'impedimento.",
+      "pass_condition": "quell'affermazione non è presentata come errata.",
+      "fail_condition": "si afferma che quella conferma non risulta dal fascicolo, o che l'affermazione è errata.",
+      "indifferent": null,
+      "source": "nota interna § 6; PEC di documentazione",
+      "severity": "media",
+      "raw_text": "B.29 simmetria: conferma del perdurare dell'impedimento\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: nota interna § 6; PEC di documentazione\nVerifica: Il deliverable non contesta l'affermazione secondo cui il fornitore ha confermato il 25 gennaio 2030 il perdurare dell'impedimento.\nPass se: quell'affermazione non è presentata come errata.\nFail se: si afferma che quella conferma non risulta dal fascicolo, o che l'affermazione è errata."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica fra gli elementi mancanti la ricevuta di avvenuta consegna della diffida del 26 febbraio 2030, e afferma che senza quella ricevuta la decorrenza del termine assegnato non è verificabile.",
+      "pass_condition": "compaiono entrambi gli elementi, la mancanza della ricevuta e la conseguenza sulla decorrenza del termine.",
+      "fail_condition": "manca uno dei due elementi, oppure la ricevuta non è indicata fra gli elementi mancanti.",
+      "indifferent": null,
+      "source": "diffida; nota interna § 7",
+      "severity": "alta",
+      "raw_text": "B.30 ricevuta di consegna della diffida mancante\nissue: I-16 · tipo: presenza · gravità: alta · judge: sì · fonte: diffida; nota interna § 7\nVerifica: Il deliverable indica fra gli elementi mancanti la ricevuta di avvenuta consegna della diffida del 26 febbraio 2030, e afferma che senza quella ricevuta la decorrenza del termine assegnato non è verificabile.\nPass se: compaiono entrambi gli elementi, la mancanza della ricevuta e la conseguenza sulla decorrenza del termine.\nFail se: manca uno dei due elementi, oppure la ricevuta non è indicata fra gli elementi mancanti."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica fra gli elementi mancanti i valori dell'indice successivi a settembre 2029.",
+      "pass_condition": "compare l'indicazione che il bollettino a fascicolo si arresta a settembre 2029, o che i valori successivi non sono disponibili.",
+      "fail_condition": "l'indicazione non compare.",
+      "indifferent": null,
+      "source": "bollettino",
+      "severity": "bassa",
+      "raw_text": "B.31 valori dell'indice mancanti\nissue: I-16 · tipo: presenza · gravità: bassa · judge: sì · fonte: bollettino\nVerifica: Il deliverable indica fra gli elementi mancanti i valori dell'indice successivi a settembre 2029.\nPass se: compare l'indicazione che il bollettino a fascicolo si arresta a settembre 2029, o che i valori successivi non sono disponibili.\nFail se: l'indicazione non compare."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come esposizione del cliente la facoltà di chiedere la revisione del prezzo.",
+      "pass_condition": "quella facoltà non è presentata come esposizione o come squilibrio a carico del cliente.",
+      "fail_condition": "si presenta la clausola di revisione come attribuita al solo fornitore o come squilibrio a carico del cliente.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.1",
+      "severity": "media",
+      "raw_text": "B.32 simmetria: facoltà di revisione reciproca\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato B art. 3.1\nVerifica: Il deliverable non presenta come esposizione del cliente la facoltà di chiedere la revisione del prezzo.\nPass se: quella facoltà non è presentata come esposizione o come squilibrio a carico del cliente.\nFail se: si presenta la clausola di revisione come attribuita al solo fornitore o come squilibrio a carico del cliente."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come esposizione del cliente il recesso per impedimento prolungato.",
+      "pass_condition": "quel recesso non è presentato come esposizione o come diritto del solo fornitore.",
+      "fail_condition": "si presenta il recesso dell'articolo 12.4 come diritto del solo fornitore o come rischio per il cliente.",
+      "indifferent": null,
+      "source": "contratto art. 12.4",
+      "severity": "media",
+      "raw_text": "B.33 simmetria: recesso reciproco\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: contratto art. 12.4\nVerifica: Il deliverable non presenta come esposizione del cliente il recesso per impedimento prolungato.\nPass se: quel recesso non è presentato come esposizione o come diritto del solo fornitore.\nFail se: si presenta il recesso dell'articolo 12.4 come diritto del solo fornitore o come rischio per il cliente."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come esposizione del cliente la previsione che attribuisce al fornitore la clausola risolutiva espressa per il mancato pagamento di tre fatture.",
+      "pass_condition": "quella previsione non è presentata come esposizione autonoma.",
+      "fail_condition": "si presenta la clausola dell'articolo 15.3 come squilibrio a carico del cliente.",
+      "indifferent": "il richiamo di quella previsione fra i fatti del contratto.",
+      "source": "contratto art. 15.3",
+      "severity": "media",
+      "raw_text": "B.34 simmetria: clausola risolutiva reciproca\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: contratto art. 15.3\nVerifica: Il deliverable non presenta come esposizione del cliente la previsione che attribuisce al fornitore la clausola risolutiva espressa per il mancato pagamento di tre fatture.\nPass se: quella previsione non è presentata come esposizione autonoma.\nFail se: si presenta la clausola dell'articolo 15.3 come squilibrio a carico del cliente.\nIndifferente: il richiamo di quella previsione fra i fatti del contratto."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il fornitore riprenderà le consegne entro aprile 2030.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che le consegne riprenderanno entro aprile, o entro una data determinata.",
+      "indifferent": "il richiamo dell'aspettativa come dichiarazione della nota interna.",
+      "source": "nota interna § 6",
+      "severity": "alta",
+      "raw_text": "B.35 presunzione: ripresa delle consegne\nissue: I-15 · tipo: assenza · gravità: alta · judge: sì · fonte: nota interna § 6\nVerifica: Il deliverable non afferma che il fornitore riprenderà le consegne entro aprile 2030.\nPass se: quell'affermazione non compare.\nFail se: si afferma che le consegne riprenderanno entro aprile, o entro una data determinata.\nIndifferente: il richiamo dell'aspettativa come dichiarazione della nota interna."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che una domanda di risoluzione o di risarcimento proposta dal cliente sarebbe accolta.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il giudice accoglierà la domanda, o che l'esito del giudizio è favorevole al cliente.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "B.36 presunzione: esito di un'iniziativa giudiziale\nissue: I-15 · tipo: assenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: Il deliverable non afferma che una domanda di risoluzione o di risarcimento proposta dal cliente sarebbe accolta.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il giudice accoglierà la domanda, o che l'esito del giudizio è favorevole al cliente."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta la mancata revisione del primo semestre 2029 come termine perduto dal cliente né come revisione dovuta.",
+      "pass_condition": "la vicenda del primo semestre non è presentata come termine perduto né come revisione dovuta.",
+      "fail_condition": "si afferma che una revisione era dovuta per il primo semestre 2029, o che il cliente ha perso un termine su quel semestre.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.3; bollettino",
+      "severity": "alta",
+      "raw_text": "B.37 sovra-segnalazione: soglia di marzo 2029\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.3; bollettino\nVerifica: Il deliverable non presenta la mancata revisione del primo semestre 2029 come termine perduto dal cliente né come revisione dovuta.\nPass se: la vicenda del primo semestre non è presentata come termine perduto né come revisione dovuta.\nFail se: si afferma che una revisione era dovuta per il primo semestre 2029, o che il cliente ha perso un termine su quel semestre."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta la trasmissione della documentazione del 25 gennaio 2030 come fuori termine.",
+      "pass_condition": "quella trasmissione non è presentata come tardiva.",
+      "fail_condition": "si afferma che la documentazione è stata trasmessa fuori termine, o che per questo l'esonero è cessato.",
+      "indifferent": null,
+      "source": "contratto art. 12.3; PEC di documentazione",
+      "severity": "alta",
+      "raw_text": "B.38 sovra-segnalazione: documentazione tardiva\nissue: N-02 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto art. 12.3; PEC di documentazione\nVerifica: Il deliverable non presenta la trasmissione della documentazione del 25 gennaio 2030 come fuori termine.\nPass se: quella trasmissione non è presentata come tardiva.\nFail se: si afferma che la documentazione è stata trasmessa fuori termine, o che per questo l'esonero è cessato."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non conta la consegna eseguita l'8 ottobre 2029 fra gli inadempimenti.",
+      "pass_condition": "quella consegna non è contata fra gli inadempimenti.",
+      "fail_condition": "la consegna dell'8 ottobre 2029 è contata fra gli inadempimenti o presentata come consegna non tempestiva.",
+      "indifferent": null,
+      "source": "contratto art. 5.4; registro consegne",
+      "severity": "alta",
+      "raw_text": "B.39 sovra-segnalazione: consegna dell'8 ottobre 2029\nissue: N-03 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto art. 5.4; registro consegne\nVerifica: Il deliverable non conta la consegna eseguita l'8 ottobre 2029 fra gli inadempimenti.\nPass se: quella consegna non è contata fra gli inadempimenti.\nFail se: la consegna dell'8 ottobre 2029 è contata fra gli inadempimenti o presentata come consegna non tempestiva."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non conta fra gli inadempimenti le consegne non eseguite dal 4 febbraio 2030 e non fa decorrere da esse un nuovo termine della clausola risolutiva espressa.",
+      "pass_condition": "quelle consegne non sono contate fra gli inadempimenti e non fanno decorrere un nuovo termine.",
+      "fail_condition": "una di quelle consegne è contata fra gli inadempimenti, oppure si afferma che il termine della clausola risolutiva espressa è ricominciato a decorrere.",
+      "indifferent": null,
+      "source": "contratto art. 12.2; registro consegne",
+      "severity": "alta",
+      "raw_text": "B.40 sovra-segnalazione: consegne dal 4 febbraio 2030\nissue: N-04 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto art. 12.2; registro consegne\nVerifica: Il deliverable non conta fra gli inadempimenti le consegne non eseguite dal 4 febbraio 2030 e non fa decorrere da esse un nuovo termine della clausola risolutiva espressa.\nPass se: quelle consegne non sono contate fra gli inadempimenti e non fanno decorrere un nuovo termine.\nFail se: una di quelle consegne è contata fra gli inadempimenti, oppure si afferma che il termine della clausola risolutiva espressa è ricominciato a decorrere."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come esposizione del cliente l'obbligo di corrispondere il trenta per cento sul quantitativo non ritirato durante la sospensione.",
+      "pass_condition": "quell'obbligo non è presentato come esposizione per il periodo di sospensione.",
+      "fail_condition": "si afferma che il cliente deve il trenta per cento sui volumi non consegnati durante la sospensione, o che il rischio resta aperto.",
+      "indifferent": null,
+      "source": "contratto artt. 6.2 e 6.3",
+      "severity": "alta",
+      "raw_text": "B.41 sovra-segnalazione: minimo garantito\nissue: N-05 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto artt. 6.2 e 6.3\nVerifica: Il deliverable non presenta come esposizione del cliente l'obbligo di corrispondere il trenta per cento sul quantitativo non ritirato durante la sospensione.\nPass se: quell'obbligo non è presentato come esposizione per il periodo di sospensione.\nFail se: si afferma che il cliente deve il trenta per cento sui volumi non consegnati durante la sospensione, o che il rischio resta aperto."
+    },
+    {
+      "id": "B.42",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta l'indicazione di Predalba Logistica S.r.l. come vettore nei documenti di trasporto come circostanza che incide sull'imputazione degli inadempimenti o sui termini.",
+      "pass_condition": "quella indicazione non è presentata come circostanza che incide su imputazione o termini.",
+      "fail_condition": "si afferma che l'indicazione del vettore sposta l'obbligazione, o che rende necessarie contestazioni verso un soggetto diverso, o che apre un termine autonomo.",
+      "indifferent": null,
+      "source": "registro consegne; contratto art. 5.1",
+      "severity": "media",
+      "raw_text": "B.42 sovra-segnalazione: vettore\nissue: N-06 · tipo: assenza · gravità: media · judge: sì · fonte: registro consegne; contratto art. 5.1\nVerifica: Il deliverable non presenta l'indicazione di Predalba Logistica S.r.l. come vettore nei documenti di trasporto come circostanza che incide sull'imputazione degli inadempimenti o sui termini.\nPass se: quella indicazione non è presentata come circostanza che incide su imputazione o termini.\nFail se: si afferma che l'indicazione del vettore sposta l'obbligazione, o che rende necessarie contestazioni verso un soggetto diverso, o che apre un termine autonomo."
+    },
+    {
+      "id": "B.43",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta il cambio di indirizzo di posta elettronica certificata del fornitore come vizio delle comunicazioni scambiate.",
+      "pass_condition": "il cambio di indirizzo non è presentato come vizio.",
+      "fail_condition": "si afferma che le comunicazioni inviate al nuovo indirizzo, o provenienti da esso, sono invalide o inopponibili. C. DATE E VALORI CALCOLATI",
+      "indifferent": null,
+      "source": "contratto art. 20.2; nota interna § 5",
+      "severity": "media",
+      "raw_text": "B.43 sovra-segnalazione: cambio di indirizzo PEC\nissue: N-07 · tipo: assenza · gravità: media · judge: sì · fonte: contratto art. 20.2; nota interna § 5\nVerifica: Il deliverable non presenta il cambio di indirizzo di posta elettronica certificata del fornitore come vizio delle comunicazioni scambiate.\nPass se: il cambio di indirizzo non è presentato come vizio.\nFail se: si afferma che le comunicazioni inviate al nuovo indirizzo, o provenienti da esso, sono invalide o inopponibili."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 20 dicembre 2029 come termine per l'invio della richiesta di revisione riferita all'indice di settembre 2029.",
+      "pass_condition": "compare la data del 20 dicembre 2029 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.2; bollettino",
+      "severity": "alta",
+      "raw_text": "C.1 termine per la richiesta di revisione\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: Allegato B art. 3.2; bollettino\nVerifica: Il deliverable indica il 20 dicembre 2029 come termine per l'invio della richiesta di revisione riferita all'indice di settembre 2029.\nPass se: compare la data del 20 dicembre 2029 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine della richiesta come trenta giorni dalla pubblicazione del bollettino del 20 novembre 2029 e riferisce il termine alla data di invio della richiesta.",
+      "pass_condition": "compaiono entrambi gli elementi, i trenta giorni dalla pubblicazione e il riferimento alla data di invio.",
+      "fail_condition": "manca uno dei due elementi, oppure il termine è riferito alla data di ricevimento della richiesta.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.2",
+      "severity": "alta",
+      "raw_text": "C.2 passaggio: trenta giorni dalla pubblicazione, misurati sull'invio\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.2\nVerifica: Il deliverable espone il termine della richiesta come trenta giorni dalla pubblicazione del bollettino del 20 novembre 2029 e riferisce il termine alla data di invio della richiesta.\nPass se: compaiono entrambi gli elementi, i trenta giorni dalla pubblicazione e il riferimento alla data di invio.\nFail se: manca uno dei due elementi, oppure il termine è riferito alla data di ricevimento della richiesta."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 12 gennaio 2030 come termine per la contestazione della richiesta di revisione.",
+      "pass_condition": "compare la data del 12 gennaio 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.5",
+      "severity": "alta",
+      "raw_text": "C.3 termine per la contestazione\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: Allegato B art. 3.5\nVerifica: Il deliverable indica il 12 gennaio 2030 come termine per la contestazione della richiesta di revisione.\nPass se: compare la data del 12 gennaio 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine della contestazione come quindici giorni dal ricevimento della richiesta, avvenuto il 28 dicembre 2029.",
+      "pass_condition": "compaiono i quindici giorni e la decorrenza dal ricevimento del 28 dicembre 2029.",
+      "fail_condition": "il termine è fatto decorrere dalla data di invio del 27 dicembre 2029, oppure la decorrenza non è esposta.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.5; contratto art. 20.1",
+      "severity": "alta",
+      "raw_text": "C.4 passaggio: quindici giorni dal ricevimento\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.5; contratto art. 20.1\nVerifica: Il deliverable espone il termine della contestazione come quindici giorni dal ricevimento della richiesta, avvenuto il 28 dicembre 2029.\nPass se: compaiono i quindici giorni e la decorrenza dal ricevimento del 28 dicembre 2029.\nFail se: il termine è fatto decorrere dalla data di invio del 27 dicembre 2029, oppure la decorrenza non è esposta."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica il 14 gennaio 2030 come termine per la contestazione.",
+      "pass_condition": "quella data non compare come termine della contestazione.",
+      "fail_condition": "compare il 14 gennaio 2030 come termine della contestazione, o si afferma che il termine è prorogato perché scadeva di sabato.",
+      "indifferent": null,
+      "source": "art. 2963, terzo comma, c.c.",
+      "severity": "media",
+      "raw_text": "C.5 derivazione errata: proroga di una scadenza cadente di sabato\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: art. 2963, terzo comma, c.c.\nVerifica: Il deliverable non indica il 14 gennaio 2030 come termine per la contestazione.\nPass se: quella data non compare come termine della contestazione.\nFail se: compare il 14 gennaio 2030 come termine della contestazione, o si afferma che il termine è prorogato perché scadeva di sabato."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 1° febbraio 2030 come data dalla quale si applica il prezzo revisionato.",
+      "pass_condition": "compare la data del 1° febbraio 2030 riferita alla decorrenza del prezzo revisionato.",
+      "fail_condition": "compare una data diversa, oppure la decorrenza non è indicata.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.4",
+      "severity": "alta",
+      "raw_text": "C.6 decorrenza del prezzo revisionato\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: Allegato B art. 3.4\nVerifica: Il deliverable indica il 1° febbraio 2030 come data dalla quale si applica il prezzo revisionato.\nPass se: compare la data del 1° febbraio 2030 riferita alla decorrenza del prezzo revisionato.\nFail se: compare una data diversa, oppure la decorrenza non è indicata."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica il 1° gennaio 2030 come decorrenza del prezzo revisionato.",
+      "pass_condition": "quella data non compare come decorrenza.",
+      "fail_condition": "compare il 1° gennaio 2030 come decorrenza, o si afferma che il prezzo si applica dal mese successivo a quello di ricevimento.",
+      "indifferent": null,
+      "source": "Allegato B art. 3.4",
+      "severity": "alta",
+      "raw_text": "C.7 derivazione errata: primo mese successivo\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: Allegato B art. 3.4\nVerifica: Il deliverable non indica il 1° gennaio 2030 come decorrenza del prezzo revisionato.\nPass se: quella data non compare come decorrenza.\nFail se: compare il 1° gennaio 2030 come decorrenza, o si afferma che il prezzo si applica dal mese successivo a quello di ricevimento."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 6,87% come variazione dell'indice rilevante per la revisione.",
+      "pass_condition": "compare il valore 6,87% riferito alla variazione dell'indice.",
+      "fail_condition": "compare un valore diverso, oppure la variazione non è indicata.",
+      "indifferent": null,
+      "source": "Allegato B artt. 2.2 e 3.3; bollettino",
+      "severity": "alta",
+      "raw_text": "C.8 variazione dell'indice\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: Allegato B artt. 2.2 e 3.3; bollettino\nVerifica: Il deliverable indica 6,87% come variazione dell'indice rilevante per la revisione.\nPass se: compare il valore 6,87% riferito alla variazione dell'indice.\nFail se: compare un valore diverso, oppure la variazione non è indicata."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone la variazione come rapporto fra l'indice di settembre 2029, pari a 122,9, e il Valore Base di 115,0 fissato dall'Allegato B.",
+      "pass_condition": "compaiono entrambi i valori, 122,9 e 115,0, come termini del confronto.",
+      "fail_condition": "manca uno dei due valori, oppure il confronto è costruito su un termine diverso.",
+      "indifferent": null,
+      "source": "Allegato B artt. 2.2 e 3.3",
+      "severity": "alta",
+      "raw_text": "C.9 passaggio: variazione sul Valore Base\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato B artt. 2.2 e 3.3\nVerifica: Il deliverable espone la variazione come rapporto fra l'indice di settembre 2029, pari a 122,9, e il Valore Base di 115,0 fissato dall'Allegato B.\nPass se: compaiono entrambi i valori, 122,9 e 115,0, come termini del confronto.\nFail se: manca uno dei due valori, oppure il confronto è costruito su un termine diverso."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 662,59 euro per tonnellata come prezzo revisionato.",
+      "pass_condition": "compare il valore 662,59 riferito al prezzo revisionato.",
+      "fail_condition": "compare un valore diverso, oppure il prezzo revisionato non è indicato.",
+      "indifferent": null,
+      "source": "Allegato B artt. 1.1 e 3.3",
+      "severity": "alta",
+      "raw_text": "C.10 prezzo revisionato\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: Allegato B artt. 1.1 e 3.3\nVerifica: Il deliverable indica 662,59 euro per tonnellata come prezzo revisionato.\nPass se: compare il valore 662,59 riferito al prezzo revisionato.\nFail se: compare un valore diverso, oppure il prezzo revisionato non è indicato."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica 2,76% come variazione rilevante per la revisione.",
+      "pass_condition": "quel valore non compare come variazione rilevante.",
+      "fail_condition": "compare il 2,76% come variazione da applicare, o si conclude che la soglia non è superata.",
+      "indifferent": null,
+      "source": "bollettino",
+      "severity": "alta",
+      "raw_text": "C.11 derivazione errata: variazione sul semestre precedente\nissue: I-03 · tipo: assenza · gravità: alta · judge: sì · fonte: bollettino\nVerifica: Il deliverable non indica 2,76% come variazione rilevante per la revisione.\nPass se: quel valore non compare come variazione rilevante.\nFail se: compare il 2,76% come variazione da applicare, o si conclude che la soglia non è superata."
+    },
+    {
+      "id": "C.12",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica 6,13% come variazione rilevante per la revisione.",
+      "pass_condition": "quel valore non compare come variazione rilevante.",
+      "fail_condition": "compare il 6,13% come variazione da applicare, o si utilizza la variazione tendenziale del bollettino.",
+      "indifferent": null,
+      "source": "bollettino",
+      "severity": "media",
+      "raw_text": "C.12 derivazione errata: variazione tendenziale\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: bollettino\nVerifica: Il deliverable non indica 6,13% come variazione rilevante per la revisione.\nPass se: quel valore non compare come variazione rilevante.\nFail se: compare il 6,13% come variazione da applicare, o si utilizza la variazione tendenziale del bollettino."
+    },
+    {
+      "id": "C.13",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 14 gennaio 2030 come termine per la comunicazione di forza maggiore.",
+      "pass_condition": "compare la data del 14 gennaio 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "contratto artt. 12.2 e 20.3",
+      "severity": "alta",
+      "raw_text": "C.13 termine per la comunicazione di forza maggiore\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: contratto artt. 12.2 e 20.3\nVerifica: Il deliverable indica il 14 gennaio 2030 come termine per la comunicazione di forza maggiore.\nPass se: compare la data del 14 gennaio 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.14",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine come cinque giorni lavorativi decorrenti dall'evento del 7 gennaio 2030.",
+      "pass_condition": "compaiono i cinque giorni lavorativi e la decorrenza dall'evento del 7 gennaio 2030.",
+      "fail_condition": "il termine è esposto in giorni di calendario, oppure la decorrenza non è esposta.",
+      "indifferent": null,
+      "source": "contratto artt. 12.2 e 20.3",
+      "severity": "alta",
+      "raw_text": "C.14 passaggio: cinque giorni lavorativi dall'evento\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto artt. 12.2 e 20.3\nVerifica: Il deliverable espone il termine come cinque giorni lavorativi decorrenti dall'evento del 7 gennaio 2030.\nPass se: compaiono i cinque giorni lavorativi e la decorrenza dall'evento del 7 gennaio 2030.\nFail se: il termine è esposto in giorni di calendario, oppure la decorrenza non è esposta."
+    },
+    {
+      "id": "C.15",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 14 febbraio 2030 come termine per dichiarare di volersi avvalere della clausola risolutiva espressa.",
+      "pass_condition": "compare la data del 14 febbraio 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "contratto art. 15.2",
+      "severity": "alta",
+      "raw_text": "C.15 termine della clausola risolutiva espressa\nissue: I-06 · tipo: valore · gravità: alta · judge: no · fonte: contratto art. 15.2\nVerifica: Il deliverable indica il 14 febbraio 2030 come termine per dichiarare di volersi avvalere della clausola risolutiva espressa.\nPass se: compare la data del 14 febbraio 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.16",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine come trenta giorni decorrenti dall'inadempimento del 15 gennaio 2030, terzo dei tre che integrano la fattispecie.",
+      "pass_condition": "compaiono i trenta giorni e la decorrenza dal 15 gennaio 2030.",
+      "fail_condition": "il termine è fatto decorrere da una data diversa, oppure la decorrenza non è esposta.",
+      "indifferent": null,
+      "source": "contratto art. 15.2; registro consegne",
+      "severity": "alta",
+      "raw_text": "C.16 passaggio: trenta giorni dall'ultimo inadempimento\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto art. 15.2; registro consegne\nVerifica: Il deliverable espone il termine come trenta giorni decorrenti dall'inadempimento del 15 gennaio 2030, terzo dei tre che integrano la fattispecie.\nPass se: compaiono i trenta giorni e la decorrenza dal 15 gennaio 2030.\nFail se: il termine è fatto decorrere da una data diversa, oppure la decorrenza non è esposta."
+    },
+    {
+      "id": "C.17",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica tre come numero delle consegne non eseguite che integrano la fattispecie della clausola risolutiva espressa.",
+      "pass_condition": "compare il numero tre riferito agli inadempimenti rilevanti.",
+      "fail_condition": "compare un numero diverso, oppure il numero non è indicato.",
+      "indifferent": null,
+      "source": "registro consegne; contratto artt. 5.4 e 12.2",
+      "severity": "alta",
+      "raw_text": "C.17 numero di inadempimenti rilevanti\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: registro consegne; contratto artt. 5.4 e 12.2\nVerifica: Il deliverable indica tre come numero delle consegne non eseguite che integrano la fattispecie della clausola risolutiva espressa.\nPass se: compare il numero tre riferito agli inadempimenti rilevanti.\nFail se: compare un numero diverso, oppure il numero non è indicato."
+    },
+    {
+      "id": "C.18",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica sei come numero degli inadempimenti rilevanti.",
+      "pass_condition": "quel numero non compare come numero degli inadempimenti rilevanti.",
+      "fail_condition": "compare il numero sei riferito agli inadempimenti rilevanti.",
+      "indifferent": "il richiamo delle sei consegne non eseguite come dato del registro.",
+      "source": "registro consegne",
+      "severity": "alta",
+      "raw_text": "C.18 derivazione errata: sei inadempimenti\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: registro consegne\nVerifica: Il deliverable non indica sei come numero degli inadempimenti rilevanti.\nPass se: quel numero non compare come numero degli inadempimenti rilevanti.\nFail se: compare il numero sei riferito agli inadempimenti rilevanti.\nIndifferente: il richiamo delle sei consegne non eseguite come dato del registro."
+    },
+    {
+      "id": "C.19",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica l'8 marzo 2030 come sessantesimo giorno dall'evento di forza maggiore.",
+      "pass_condition": "compare la data dell'8 marzo 2030 riferita al sessantesimo giorno.",
+      "fail_condition": "compare una data diversa, oppure il sessantesimo giorno non è indicato.",
+      "indifferent": null,
+      "source": "contratto art. 12.4",
+      "severity": "alta",
+      "raw_text": "C.19 sessantesimo giorno dall'evento\nissue: I-09 · tipo: valore · gravità: alta · judge: no · fonte: contratto art. 12.4\nVerifica: Il deliverable indica l'8 marzo 2030 come sessantesimo giorno dall'evento di forza maggiore.\nPass se: compare la data dell'8 marzo 2030 riferita al sessantesimo giorno.\nFail se: compare una data diversa, oppure il sessantesimo giorno non è indicato."
+    },
+    {
+      "id": "C.20",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica l'8 aprile 2030 come termine ultimo per comunicare il recesso.",
+      "pass_condition": "compare la data dell'8 aprile 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "contratto art. 12.4",
+      "severity": "alta",
+      "raw_text": "C.20 termine per esercitare il recesso\nissue: I-09 · tipo: valore · gravità: alta · judge: no · fonte: contratto art. 12.4\nVerifica: Il deliverable indica l'8 aprile 2030 come termine ultimo per comunicare il recesso.\nPass se: compare la data dell'8 aprile 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.21",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine del recesso come trenta giorni dal sessantesimo giorno e indica che la scadenza del 7 aprile 2030 cade di domenica ed è prorogata al giorno successivo.",
+      "pass_condition": "compaiono i trenta giorni dal sessantesimo giorno e la proroga della scadenza domenicale.",
+      "fail_condition": "manca la proroga, oppure il termine è esposto senza il riferimento al sessantesimo giorno.",
+      "indifferent": null,
+      "source": "contratto art. 12.4; art. 2963, terzo comma, c.c.",
+      "severity": "alta",
+      "raw_text": "C.21 passaggio: trenta giorni dal sessantesimo, con proroga\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto art. 12.4; art. 2963, terzo comma, c.c.\nVerifica: Il deliverable espone il termine del recesso come trenta giorni dal sessantesimo giorno e indica che la scadenza del 7 aprile 2030 cade di domenica ed è prorogata al giorno successivo.\nPass se: compaiono i trenta giorni dal sessantesimo giorno e la proroga della scadenza domenicale.\nFail se: manca la proroga, oppure il termine è esposto senza il riferimento al sessantesimo giorno."
+    },
+    {
+      "id": "C.22",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica il 17 aprile 2030 come termine per il recesso.",
+      "pass_condition": "quella data non compare come termine del recesso.",
+      "fail_condition": "compare il 17 aprile 2030 come termine del recesso, o si fanno decorrere i sessanta giorni dalla comunicazione del 17 gennaio 2030.",
+      "indifferent": null,
+      "source": "contratto art. 12.4",
+      "severity": "alta",
+      "raw_text": "C.22 derivazione errata: sessanta giorni dalla comunicazione\nissue: I-09 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto art. 12.4\nVerifica: Il deliverable non indica il 17 aprile 2030 come termine per il recesso.\nPass se: quella data non compare come termine del recesso.\nFail se: compare il 17 aprile 2030 come termine del recesso, o si fanno decorrere i sessanta giorni dalla comunicazione del 17 gennaio 2030."
+    },
+    {
+      "id": "C.23",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 28 gennaio 2030 come termine per la trasmissione della documentazione di forza maggiore.",
+      "pass_condition": "compare la data del 28 gennaio 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "contratto art. 12.3",
+      "severity": "media",
+      "raw_text": "C.23 termine per la documentazione\nissue: I-04 · tipo: valore · gravità: media · judge: no · fonte: contratto art. 12.3\nVerifica: Il deliverable indica il 28 gennaio 2030 come termine per la trasmissione della documentazione di forza maggiore.\nPass se: compare la data del 28 gennaio 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.24",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 27 marzo 2030 come scadenza del termine di una nuova diffida inviata alla data di riferimento.",
+      "pass_condition": "compare la data del 27 marzo 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure la scadenza non è indicata.",
+      "indifferent": null,
+      "source": "art. 1454 c.c.",
+      "severity": "alta",
+      "raw_text": "C.24 scadenza di una nuova diffida\nissue: I-07 · tipo: valore · gravità: alta · judge: no · fonte: art. 1454 c.c.\nVerifica: Il deliverable indica il 27 marzo 2030 come scadenza del termine di una nuova diffida inviata alla data di riferimento.\nPass se: compare la data del 27 marzo 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure la scadenza non è indicata."
+    },
+    {
+      "id": "C.25",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica l'8 marzo 2030 come data in cui il contratto si è risolto.",
+      "pass_condition": "quella data non compare come data di risoluzione del contratto.",
+      "fail_condition": "compare l'8 marzo 2030 come data di risoluzione del contratto.",
+      "indifferent": "il richiamo dell'8 marzo come termine indicato dalla diffida o come data affermata dalla nota interna.",
+      "source": "diffida; art. 1454 c.c.",
+      "severity": "alta",
+      "raw_text": "C.25 derivazione errata: risoluzione all'8 marzo 2030\nissue: I-07 · tipo: assenza · gravità: alta · judge: sì · fonte: diffida; art. 1454 c.c.\nVerifica: Il deliverable non indica l'8 marzo 2030 come data in cui il contratto si è risolto.\nPass se: quella data non compare come data di risoluzione del contratto.\nFail se: compare l'8 marzo 2030 come data di risoluzione del contratto.\nIndifferente: il richiamo dell'8 marzo come termine indicato dalla diffida o come data affermata dalla nota interna."
+    },
+    {
+      "id": "C.26",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 30 settembre 2030 come ultimo giorno utile per comunicare la disdetta del contratto quadro.",
+      "pass_condition": "compare la data del 30 settembre 2030 riferita alla disdetta.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "contratto art. 3.2",
+      "severity": "alta",
+      "raw_text": "C.26 ultimo giorno utile per la disdetta\nissue: I-11 · tipo: valore · gravità: alta · judge: no · fonte: contratto art. 3.2\nVerifica: Il deliverable indica il 30 settembre 2030 come ultimo giorno utile per comunicare la disdetta del contratto quadro.\nPass se: compare la data del 30 settembre 2030 riferita alla disdetta.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.27",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 24 giugno 2030 come termine ultimo per l'invio della richiesta di revisione riferita all'indice di marzo 2030.",
+      "pass_condition": "compare la data del 24 giugno 2030 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "Allegato B artt. 2.3 e 3.2",
+      "severity": "media",
+      "raw_text": "C.27 termine ultimo per la richiesta di revisione del primo semestre 2030\nissue: I-12 · tipo: valore · gravità: media · judge: no · fonte: Allegato B artt. 2.3 e 3.2\nVerifica: Il deliverable indica il 24 giugno 2030 come termine ultimo per l'invio della richiesta di revisione riferita all'indice di marzo 2030.\nPass se: compare la data del 24 giugno 2030 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    }
+  ]
+}

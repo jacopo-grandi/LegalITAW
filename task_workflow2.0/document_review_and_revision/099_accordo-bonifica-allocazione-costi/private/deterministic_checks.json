@@ -1,0 +1,134 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-099",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "remediation_agreement_redline.docx",
+    "issue_note.md"
+  ],
+  "criteria_total": 35,
+  "proposals_count": 5,
+  "proposals": [
+    {
+      "criterion_id": "A.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "9 dicembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «9 dicembre 2026» come data alla quale la nota è riferita",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-099-A4",
+        "type": "required_regex",
+        "artifact": "remediation_agreement_redline.docx",
+        "patterns": [
+          "(?:(?:9°?\\s+dicembre(?:\\s+2026)?|0?9\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2026|0?9\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "740.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «740.000» riferito al costo base",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-099-C1",
+        "type": "required_regex",
+        "artifact": "remediation_agreement_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])740[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "111.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «111.000» riferito all'alea",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-099-C2",
+        "type": "required_regex",
+        "artifact": "remediation_agreement_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])111[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "851.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare l'importo «851.000» riferito alla somma di costo base e alea",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-099-C3",
+        "type": "required_regex",
+        "artifact": "remediation_agreement_redline.docx",
+        "patterns": [
+          "(?:(?<![\\d.,])851[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "27 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «27 ottobre 2026» riferita al termine di avvio dei lavori",
+      "combine": "any_of_deliverables",
+      "check": {
+        "id": "WF2-099-C4",
+        "type": "required_regex",
+        "artifact": "remediation_agreement_redline.docx",
+        "patterns": [
+          "(?:(?:27°?\\s+ottobre(?:\\s+2026)?|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,206 @@
+{
+  "task_id": "WF2-065",
+  "lato_assistito": "Vallescura Circolare S.r.l., beneficiaria",
+  "data_di_riferimento": "2029-01-18",
+  "stato_fascicolo": "preavviso di recupero ricevuto, termine partecipativo aperto",
+  "fonti_ammesse": [
+    "Legge 7 agosto 1990, n. 241"
+  ],
+  "calcoli": [
+    "osservazioni: 12/01/2029 + 10 giorni = 22/01/2029",
+    "40% di EUR 2.630.000 = EUR 1.052.000",
+    "scarto rispetto a EUR 1.050.000 = EUR 2.000"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per dichiarazione da contestualizzare: ricostruire istruttoria e conoscenza",
+    "integrazione necessaria per tutela dopo il provvedimento: preservare motivi e prova senza descrivere come gia' adottato il recupero"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_decreto_concessione.pdf",
+      "funzione": "Contributo massimo EUR 1.200.000, pari al 40% dei costi ammissibili; milestone occupazionale 18 addetti entro il 30 giugno 2028; obbligo di apporto proprio EUR 1.800.000."
+    },
+    {
+      "file": "02_domanda_e_dichiarazioni.pdf",
+      "funzione": "Vallescura dichiara apporto proprio integralmente disponibile e assenza di altri aiuti sui medesimi costi."
+    },
+    {
+      "file": "03_relazione_controllo.pdf",
+      "funzione": "Al 30 giugno risultano 16 addetti; EUR 220.000 di apporto provengono da finanziamento agevolato regionale; il controllore propone recupero integrale."
+    },
+    {
+      "file": "04_rendiconto_spese.xlsx",
+      "funzione": "Costi sostenuti EUR 2.850.000; costi non contestati EUR 2.630.000; contributo erogato EUR 1.050.000."
+    },
+    {
+      "file": "05_preavviso_recupero.pdf",
+      "funzione": "Ricevuto il 12 gennaio 2029; dieci giorni per osservazioni; richiama revoca per mutamento dell'interesse pubblico ma contesta inadempimenti e dichiarazioni."
+    },
+    {
+      "file": "06_corrispondenza_agenzia.eml",
+      "funzione": "Nel maggio 2028 l'Agenzia ha autorizzato lo slittamento di due assunzioni al 30 settembre; non ha esaminato la fonte dell'apporto proprio."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "qualificazione incoerente del potere",
+      "gravita": "alta",
+      "affermazione_richiesta": "il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni",
+      "azione_richiesta": "chiedere individuazione della base e dei presupposti",
+      "conseguenza": "difesa e conseguenze economiche dipendono dalla qualificazione",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "milestone modificata",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'autorizzazione sposta due assunzioni al 30 settembre",
+      "azione_richiesta": "opporre il provvedimento autorizzativo al dato del 30 giugno",
+      "conseguenza": "il deficit apparente non giustifica recupero integrale",
+      "evidenza": "doc. 01, doc. 03 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "apporto proprio parzialmente agevolato",
+      "gravita": "alta",
+      "affermazione_richiesta": "EUR 220.000 non provengono da risorse libere",
+      "azione_richiesta": "verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione",
+      "conseguenza": "la contestazione resta circoscritta alla fonte dei fondi",
+      "evidenza": "doc. 02 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "cumulo non dimostrato",
+      "gravita": "alta",
+      "affermazione_richiesta": "il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi",
+      "azione_richiesta": "acquisire contratto e tracciatura per costo",
+      "conseguenza": "non presumere cumulo vietato",
+      "evidenza": "doc. 02 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "recupero integrale non proporzionato",
+      "gravita": "alta",
+      "affermazione_richiesta": "EUR 2.630.000 di costi non sono contestati",
+      "azione_richiesta": "costruire scenario di riduzione proporzionale e motivazione",
+      "conseguenza": "l'importo recuperabile non coincide automaticamente con EUR 1.050.000",
+      "evidenza": "doc. 03 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "tetto del 40%",
+      "gravita": "alta",
+      "affermazione_richiesta": "il 40% di EUR 2.630.000 e' EUR 1.052.000",
+      "azione_richiesta": "confrontare il contributo erogato di EUR 1.050.000",
+      "conseguenza": "sui costi non contestati non emerge sovra-compensazione",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "partecipazione procedimentale",
+      "gravita": "media",
+      "affermazione_richiesta": "il termine assegnato scade il 22 gennaio 2029",
+      "azione_richiesta": "depositare osservazioni e richiesta di accesso entro la data",
+      "conseguenza": "il contraddittorio va usato prima del provvedimento finale",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "affidamento sull'autorizzazione",
+      "gravita": "media",
+      "affermazione_richiesta": "la beneficiaria ha pianificato assunzioni sullo slittamento scritto",
+      "azione_richiesta": "documentare costi e decisioni conseguenti",
+      "conseguenza": "l'affidamento rileva nella motivazione e nell'eventuale indennizzo se vera revoca",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "competenza del firmatario",
+      "gravita": "media",
+      "affermazione_richiesta": "il preavviso e' firmato dal responsabile controllo e non indica delega al recupero",
+      "azione_richiesta": "acquisire atto organizzativo",
+      "conseguenza": "non concludere per incompetenza senza la delega",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "interessi non calcolabili",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano tasso, decorrenza e base",
+      "azione_richiesta": "chiedere prospetto di calcolo",
+      "conseguenza": "il debito accessorio resta indeterminato",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "dichiarazione da contestualizzare",
+      "gravita": "media",
+      "affermazione_richiesta": "la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere",
+      "azione_richiesta": "ricostruire istruttoria e conoscenza",
+      "conseguenza": "mendacio e inesattezza non sono sinonimi",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "tutela dopo il provvedimento",
+      "gravita": "media",
+      "affermazione_richiesta": "oggi esiste soltanto preavviso",
+      "azione_richiesta": "preservare motivi e prova senza descrivere come gia' adottato il recupero",
+      "conseguenza": "termini di impugnazione non sono ancora decorsi",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "cambio di amministratore",
+      "oggetto": "visura richiamata nel doc. 03",
+      "chiave_nel_criterio": "amministratore",
+      "perche_non_e_issue": "non modifica il beneficiario",
+      "criterio_assenza": "B.38"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "rinomina del progetto",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "rinomina",
+      "perche_non_e_issue": "il CUP e il perimetro restano gli stessi",
+      "criterio_assenza": "B.39"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "scarto di EUR 2.000",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "EUR 2.000",
+      "perche_non_e_issue": "il contributo erogato resta sotto il 40% dei costi non contestati",
+      "criterio_assenza": "B.40"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "due assunzioni differite",
+      "oggetto": "doc. 06",
+      "chiave_nel_criterio": "30 settembre",
+      "perche_non_e_issue": "sono coperte da autorizzazione scritta fino al 30 settembre",
+      "criterio_assenza": "B.41"
+    }
+  ]
+}

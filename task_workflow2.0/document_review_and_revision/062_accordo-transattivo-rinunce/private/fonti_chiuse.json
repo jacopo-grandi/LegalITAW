@@ -1,0 +1,21 @@
+{
+  "task_id": "WF2-062",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "Codice civile, artt. 1372, 1453, 1965 e 1966",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262!vig=",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    },
+    {
+      "id": "F2",
+      "riferimento": "Codice di procedura civile, art. 306",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443!vig=",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    }
+  ]
+}

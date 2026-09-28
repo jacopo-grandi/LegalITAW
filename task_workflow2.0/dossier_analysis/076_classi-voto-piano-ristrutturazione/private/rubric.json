@@ -1,0 +1,1393 @@
+{
+  "task_id": "WF2-076",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 69,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "la consegna usa i file class_and_vote_matrix.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file class_and_vote_matrix.md.\nPASS se: i nomi dei file coincidono con class_and_vote_matrix.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con class_and_vote_matrix.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "la parte testuale non supera 3.000 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 3.000 parole.\nPASS se: il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la bozza dichiara un piano di ristrutturazione soggetto a omologazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la bozza dichiara un piano di ristrutturazione soggetto a omologazione.\nPASS se: afferma: la bozza dichiara un piano di ristrutturazione soggetto a omologazione; conclude: la bozza dichiara un piano di ristrutturazione soggetto a omologazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "afferma: la bozza dichiara un piano di ristrutturazione soggetto a omologazione; conclude: la bozza dichiara un piano di ristrutturazione soggetto a omologazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: term sheet del 3 settembre.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: term sheet del 3 settembre.\nPASS se: cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi.\nPASS se: espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi; indica come conseguenza: il test di approvazione richiede il voto favorevole di tutte le classi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi; indica come conseguenza: il test di approvazione richiede il voto favorevole di tutte le classi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: mantenere distinto il percorso alternativo di concordato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: mantenere distinto il percorso alternativo di concordato.\nPASS se: afferma: la bozza dichiara un piano di ristrutturazione soggetto a omologazione; conclude: la bozza dichiara un piano di ristrutturazione soggetto a omologazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "afferma: la bozza dichiara un piano di ristrutturazione soggetto a omologazione; conclude: la bozza dichiara un piano di ristrutturazione soggetto a omologazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la versione definitiva della proposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la versione definitiva della proposta.\nPASS se: espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi; indica come conseguenza: il test di approvazione richiede il voto favorevole di tutte le classi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "espone l'effetto: il test di approvazione richiede il voto favorevole di tutte le classi; indica come conseguenza: il test di approvazione richiede il voto favorevole di tutte le classi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: applicare automaticamente la maggioranza per classi del concordato.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: applicare automaticamente la maggioranza per classi del concordato.\nPASS se: indica l'azione: mantenere distinto il percorso alternativo di concordato; propone: mantenere distinto il percorso alternativo di concordato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "indica l'azione: mantenere distinto il percorso alternativo di concordato; propone: mantenere distinto il percorso alternativo di concordato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: art. 64-bis CCII.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: art. 64-bis CCII.\nPASS se: cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; art. 64-bis CCII",
+      "pass_condition": "cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a strumento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza.\nPASS se: afferma: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza; conclude: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "afferma: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza; conclude: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: perizia immobile e piano.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: perizia immobile e piano.\nPASS se: cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: le due porzioni hanno posizione giuridica diversa.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le due porzioni hanno posizione giuridica diversa.\nPASS se: espone l'effetto: le due porzioni hanno posizione giuridica diversa; indica come conseguenza: le due porzioni hanno posizione giuridica diversa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "espone l'effetto: le due porzioni hanno posizione giuridica diversa; indica come conseguenza: le due porzioni hanno posizione giuridica diversa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: separare esposizione e trattamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: separare esposizione e trattamento.\nPASS se: afferma: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza; conclude: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "afferma: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza; conclude: la classe A comprende banca ipotecaria per la parte capiente e chirografaria per l'incapienza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il valore di liquidazione definitivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il valore di liquidazione definitivo.\nPASS se: espone l'effetto: le due porzioni hanno posizione giuridica diversa; indica come conseguenza: le due porzioni hanno posizione giuridica diversa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "espone l'effetto: le due porzioni hanno posizione giuridica diversa; indica come conseguenza: le due porzioni hanno posizione giuridica diversa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: collocare tutto il credito in una sola classe.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: collocare tutto il credito in una sola classe.\nPASS se: indica l'azione: separare esposizione e trattamento; propone: separare esposizione e trattamento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "indica l'azione: separare esposizione e trattamento; propone: separare esposizione e trattamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: artt. 64-bis e 85 CCII.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: artt. 64-bis e 85 CCII.\nPASS se: cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; artt. 64-bis e 85 CCII",
+      "pass_condition": "cita 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari; indica come riscontro 01_term_sheet_piano_ristrutturazione.pdf, contenuto pertinente a ipotecari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: IVA e ritenute sono inserite nella stessa classe dei fornitori.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: IVA e ritenute sono inserite nella stessa classe dei fornitori.\nPASS se: afferma: IVA e ritenute sono inserite nella stessa classe dei fornitori; conclude: IVA e ritenute sono inserite nella stessa classe dei fornitori\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "afferma: IVA e ritenute sono inserite nella stessa classe dei fornitori; conclude: IVA e ritenute sono inserite nella stessa classe dei fornitori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: matrice proposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: matrice proposta.\nPASS se: cita 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; indica come riscontro 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "cita 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; indica come riscontro 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata.\nPASS se: espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata; indica come conseguenza: la posizione pubblicistica e il trattamento proposto richiedono verifica separata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata; indica come conseguenza: la posizione pubblicistica e il trattamento proposto richiedono verifica separata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: creare classe autonoma e quantificare voto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: creare classe autonoma e quantificare voto.\nPASS se: afferma: IVA e ritenute sono inserite nella stessa classe dei fornitori; conclude: IVA e ritenute sono inserite nella stessa classe dei fornitori\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "afferma: IVA e ritenute sono inserite nella stessa classe dei fornitori; conclude: IVA e ritenute sono inserite nella stessa classe dei fornitori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca attestazione sul trattamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca attestazione sul trattamento.\nPASS se: espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata; indica come conseguenza: la posizione pubblicistica e il trattamento proposto richiedono verifica separata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "espone l'effetto: la posizione pubblicistica e il trattamento proposto richiedono verifica separata; indica come conseguenza: la posizione pubblicistica e il trattamento proposto richiedono verifica separata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: assimilare il credito fiscale ai trade.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: assimilare il credito fiscale ai trade.\nPASS se: indica l'azione: creare classe autonoma e quantificare voto; propone: creare classe autonoma e quantificare voto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "indica l'azione: creare classe autonoma e quantificare voto; propone: creare classe autonoma e quantificare voto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: artt. 85 e 88 CCII.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: artt. 85 e 88 CCII.\nPASS se: cita 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; indica come riscontro 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; artt. 85 e 88 CCII",
+      "pass_condition": "cita 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario; indica come riscontro 02_elenco_creditori_riconciliato.xlsx, contenuto pertinente a erario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per fornitori strategici.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per fornitori strategici.\nPASS se: compare «55 per cento»; compare «55%»\nFAIL se: non compare ne «55 per cento» ne «55%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "compare «55 per cento»; compare «55%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: piano industriale e matrice.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: piano industriale e matrice.\nPASS se: cita 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; indica come riscontro 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "cita 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; indica come riscontro 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: la diversità economica può sostenere classi separate se documentata.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la diversità economica può sostenere classi separate se documentata.\nPASS se: espone l'effetto: la diversità economica può sostenere classi separate se documentata; indica come conseguenza: la diversità economica può sostenere classi separate se documentata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "espone l'effetto: la diversità economica può sostenere classi separate se documentata; indica come conseguenza: la diversità economica può sostenere classi separate se documentata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per fornitori strategici.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per fornitori strategici.\nPASS se: afferma: i fornitori strategici ricevono il 55 per cento e i fornitori ordinari il 28 per cento; conclude: i fornitori strategici ricevono il 55 per cento e i fornitori ordinari il 28 per cento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "afferma: i fornitori strategici ricevono il 55 per cento e i fornitori ordinari il 28 per cento; conclude: i fornitori strategici ricevono il 55 per cento e i fornitori ordinari il 28 per cento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'elenco dei contratti essenziali.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'elenco dei contratti essenziali.\nPASS se: espone l'effetto: la diversità economica può sostenere classi separate se documentata; indica come conseguenza: la diversità economica può sostenere classi separate se documentata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "espone l'effetto: la diversità economica può sostenere classi separate se documentata; indica come conseguenza: la diversità economica può sostenere classi separate se documentata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: dividere le classi solo per ottenere voti.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: dividere le classi solo per ottenere voti.\nPASS se: indica l'azione: legare strategicità a continuità e sostituibilità; propone: legare strategicità a continuità e sostituibilità\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a fornitori strategici; art. 85 CCII",
+      "pass_condition": "indica l'azione: legare strategicità a continuità e sostituibilità; propone: legare strategicità a continuità e sostituibilità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il credito del socio finanziatore è collocato con le banche chirografarie.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il credito del socio finanziatore è collocato con le banche chirografarie.\nPASS se: afferma: il credito del socio finanziatore è collocato con le banche chirografarie; conclude: il credito del socio finanziatore è collocato con le banche chirografarie\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "afferma: il credito del socio finanziatore è collocato con le banche chirografarie; conclude: il credito del socio finanziatore è collocato con le banche chirografarie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: elenco creditori.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: elenco creditori.\nPASS se: cita 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; indica come riscontro 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "cita 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; indica come riscontro 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi.\nPASS se: espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi; indica come conseguenza: il rapporto di correlazione altera l'omogeneità degli interessi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi; indica come conseguenza: il rapporto di correlazione altera l'omogeneità degli interessi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: isolare il socio e verificare postergazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: isolare il socio e verificare postergazione.\nPASS se: afferma: il credito del socio finanziatore è collocato con le banche chirografarie; conclude: il credito del socio finanziatore è collocato con le banche chirografarie\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "afferma: il credito del socio finanziatore è collocato con le banche chirografarie; conclude: il credito del socio finanziatore è collocato con le banche chirografarie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la delibera del finanziamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la delibera del finanziamento.\nPASS se: espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi; indica come conseguenza: il rapporto di correlazione altera l'omogeneità degli interessi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "espone l'effetto: il rapporto di correlazione altera l'omogeneità degli interessi; indica come conseguenza: il rapporto di correlazione altera l'omogeneità degli interessi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: contare il socio come banca indipendente.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: contare il socio come banca indipendente.\nPASS se: indica l'azione: isolare il socio e verificare postergazione; propone: isolare il socio e verificare postergazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_trattamenti_e_classamento.eml, contenuto pertinente a correlati; art. 85 CCII; elenco",
+      "pass_condition": "indica l'azione: isolare il socio e verificare postergazione; propone: isolare il socio e verificare postergazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per voto per classe.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per voto per classe.\nPASS se: compare «62 per cento»; compare «62%»\nFAIL se: non compare ne «62 per cento» ne «62%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "compare «62 per cento»; compare «62%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: tabella voti.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: tabella voti.\nPASS se: cita 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; indica come riscontro 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "cita 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; indica come riscontro 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante.\nPASS se: espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante; indica come conseguenza: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante; indica come conseguenza: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per voto per classe.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per voto per classe.\nPASS se: afferma: il foglio calcola il 62 per cento sul totale della classe C; conclude: il foglio calcola il 62 per cento sul totale della classe C\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "afferma: il foglio calcola il 62 per cento sul totale della classe C; conclude: il foglio calcola il 62 per cento sul totale della classe C",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano tre schede di voto.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano tre schede di voto.\nPASS se: espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante; indica come conseguenza: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "espone l'effetto: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante; indica come conseguenza: va verificata anche la regola alternativa dei due terzi dei votanti quando rilevante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: usare il numero dei creditori.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: usare il numero dei creditori.\nPASS se: indica l'azione: esporre denominatore, votanti e favorevoli; propone: esporre denominatore, votanti e favorevoli\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_computo_adesioni.pdf, contenuto pertinente a voto per classe; art. 109 CCII",
+      "pass_condition": "indica l'azione: esporre denominatore, votanti e favorevoli; propone: esporre denominatore, votanti e favorevoli",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per classe dissenziente.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per classe dissenziente.\nPASS se: compare «71 per cento»; compare «71%»\nFAIL se: non compare ne «71 per cento» ne «71%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "compare «71 per cento»; compare «71%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale provvisorio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale provvisorio.\nPASS se: cita 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; indica come riscontro 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "cita 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; indica come riscontro 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: il piano non è approvato da tutte le classi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il piano non è approvato da tutte le classi.\nPASS se: espone l'effetto: il piano non è approvato da tutte le classi; indica come conseguenza: il piano non è approvato da tutte le classi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "espone l'effetto: il piano non è approvato da tutte le classi; indica come conseguenza: il piano non è approvato da tutte le classi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per classe dissenziente.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per classe dissenziente.\nPASS se: afferma: la classe E vota contro con il 71 per cento dei crediti; conclude: la classe E vota contro con il 71 per cento dei crediti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "afferma: la classe E vota contro con il 71 per cento dei crediti; conclude: la classe E vota contro con il 71 per cento dei crediti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il voto definitivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il voto definitivo.\nPASS se: espone l'effetto: il piano non è approvato da tutte le classi; indica come conseguenza: il piano non è approvato da tutte le classi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "espone l'effetto: il piano non è approvato da tutte le classi; indica come conseguenza: il piano non è approvato da tutte le classi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: ignorare la classe perché di piccolo importo.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: ignorare la classe perché di piccolo importo.\nPASS se: indica l'azione: preparare il test di ristrutturazione trasversale; propone: preparare il test di ristrutturazione trasversale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a classe dissenziente; artt. 64-bis e 112 CCII",
+      "pass_condition": "indica l'azione: preparare il test di ristrutturazione trasversale; propone: preparare il test di ristrutturazione trasversale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata.\nPASS se: afferma: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata; conclude: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "afferma: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata; conclude: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: raffronto perizia e waterfall.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: raffronto perizia e waterfall.\nPASS se: cita 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; indica come riscontro 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "cita 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; indica come riscontro 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: il test del miglior soddisfacimento non risulta superato.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il test del miglior soddisfacimento non risulta superato.\nPASS se: espone l'effetto: il test del miglior soddisfacimento non risulta superato; indica come conseguenza: il test del miglior soddisfacimento non risulta superato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "espone l'effetto: il test del miglior soddisfacimento non risulta superato; indica come conseguenza: il test del miglior soddisfacimento non risulta superato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: correggere distribuzione o perizia con attestazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: correggere distribuzione o perizia con attestazione.\nPASS se: afferma: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata; conclude: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "afferma: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata; conclude: il piano attribuisce alla classe dissenziente meno della stima di liquidazione allegata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano costi e tempi di liquidazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano costi e tempi di liquidazione.\nPASS se: espone l'effetto: il test del miglior soddisfacimento non risulta superato; indica come conseguenza: il test del miglior soddisfacimento non risulta superato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "espone l'effetto: il test del miglior soddisfacimento non risulta superato; indica come conseguenza: il test del miglior soddisfacimento non risulta superato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: usare il solo valore contabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: usare il solo valore contabile.\nPASS se: indica l'azione: correggere distribuzione o perizia con attestazione; propone: correggere distribuzione o perizia con attestazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_advisor_classi_chirografarie.pdf, contenuto pertinente a valore di liquidazione; art. 112 CCII",
+      "pass_condition": "indica l'azione: correggere distribuzione o perizia con attestazione; propone: correggere distribuzione o perizia con attestazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per priorità.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per priorità.\nPASS se: compare «900.000 euro»; compare «euro 900.000»\nFAIL se: non compare ne «900.000 euro» ne «euro 900.000» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "compare «900.000 euro»; compare «euro 900.000»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: waterfall del piano.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: waterfall del piano.\nPASS se: cita 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; indica come riscontro 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "cita 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; indica come riscontro 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: serve verificare la regola di priorità applicabile e i consensi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: serve verificare la regola di priorità applicabile e i consensi.\nPASS se: espone l'effetto: serve verificare la regola di priorità applicabile e i consensi; indica come conseguenza: serve verificare la regola di priorità applicabile e i consensi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "espone l'effetto: serve verificare la regola di priorità applicabile e i consensi; indica come conseguenza: serve verificare la regola di priorità applicabile e i consensi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per priorità.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per priorità.\nPASS se: afferma: la waterfall distribuisce 900.000 euro ai soci mentre una classe dissenziente non è pagata integralmente; conclude: la waterfall distribuisce 900.000 euro ai soci mentre una classe dissenziente non è pagata integralmente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "afferma: la waterfall distribuisce 900.000 euro ai soci mentre una classe dissenziente non è pagata integralmente; conclude: la waterfall distribuisce 900.000 euro ai soci mentre una classe dissenziente non è pagata integralmente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca una classe favorevole in-the-money.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca una classe favorevole in-the-money.\nPASS se: espone l'effetto: serve verificare la regola di priorità applicabile e i consensi; indica come conseguenza: serve verificare la regola di priorità applicabile e i consensi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "espone l'effetto: serve verificare la regola di priorità applicabile e i consensi; indica come conseguenza: serve verificare la regola di priorità applicabile e i consensi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: assumere libertà distributiva assoluta.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: assumere libertà distributiva assoluta.\nPASS se: indica l'azione: produrre scenari senza distribuzione ai soci; propone: produrre scenari senza distribuzione ai soci\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 06_prospetto_ripartizione_valore.xlsx, contenuto pertinente a priorità; art. 112 CCII",
+      "pass_condition": "indica l'azione: produrre scenari senza distribuzione ai soci; propone: produrre scenari senza distribuzione ai soci",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento.\nPASS se: afferma: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento; conclude: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "afferma: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento; conclude: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable collega il dato al documento: term sheet equity.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: term sheet equity.\nPASS se: cita 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; indica come riscontro 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "cita 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; indica come riscontro 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate.\nPASS se: espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate; indica come conseguenza: la posizione dei soci deve entrare nell'analisi delle parti interessate\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate; indica come conseguenza: la posizione dei soci deve entrare nell'analisi delle parti interessate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.61",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable indica l'azione: mappare diritti, valore e voto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: mappare diritti, valore e voto.\nPASS se: afferma: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento; conclude: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "afferma: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento; conclude: l'aumento di capitale modifica i diritti dei soci senza separare il loro trattamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.62",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca lo statuto vigente.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca lo statuto vigente.\nPASS se: espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate; indica come conseguenza: la posizione dei soci deve entrare nell'analisi delle parti interessate\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "espone l'effetto: la posizione dei soci deve entrare nell'analisi delle parti interessate; indica come conseguenza: la posizione dei soci deve entrare nell'analisi delle parti interessate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.63",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: trattare l'equity come estraneo.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: trattare l'equity come estraneo.\nPASS se: indica l'azione: mappare diritti, valore e voto; propone: mappare diritti, valore e voto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 07_verbale_cda_17_settembre.pdf, contenuto pertinente a soci; art. 120-ter CCII",
+      "pass_condition": "indica l'azione: mappare diritti, valore e voto; propone: mappare diritti, valore e voto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «numero creditori»: Il numero delle teste non sostituisce gli importi ammessi nel test di voto.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «numero creditori»: Il numero delle teste non sostituisce gli importi ammessi nel test di voto.\nPASS se: non qualifica come criticita numero creditori; esclude espressamente il falso positivo numero creditori\nFAIL se: compare la conclusione vietata «numero creditori costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita numero creditori; esclude espressamente il falso positivo numero creditori",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «etichetta strategico»: La sola etichetta strategico non giustifica una classe senza dati di continuità e sostituibilità.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «etichetta strategico»: La sola etichetta strategico non giustifica una classe senza dati di continuità e sostituibilità.\nPASS se: non qualifica come criticita etichetta strategico; esclude espressamente il falso positivo etichetta strategico\nFAIL se: compare la conclusione vietata «etichetta strategico costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita etichetta strategico; esclude espressamente il falso positivo etichetta strategico",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "class_and_vote_matrix.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «valore contabile»: Il valore contabile dell'immobile non sostituisce lo scenario di liquidazione.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «valore contabile»: Il valore contabile dell'immobile non sostituisce lo scenario di liquidazione.\nPASS se: non qualifica come criticita valore contabile; esclude espressamente il falso positivo valore contabile\nFAIL se: compare la conclusione vietata «valore contabile costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita valore contabile; esclude espressamente il falso positivo valore contabile",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

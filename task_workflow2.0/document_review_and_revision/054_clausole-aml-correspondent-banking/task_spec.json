@@ -1,0 +1,120 @@
+{
+  "task_id": "WF2-054",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Clausole antiriciclaggio nell'accordo di corrispondenza bancaria",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2031-07-22",
+  "workflow_family": "document_review_and_revision",
+  "subtask": "review_and_redline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "medium",
+  "legal_area": [
+    "AML & Financial Crime",
+    "A. Document review and revision",
+    "Compliance & Regulatory"
+  ],
+  "document_type": "medium",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "document_review_and_revision",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: agreement_redline.docx. Per i DOCX di redline usa [[DEL:testo soppresso]], [[INS:testo inserito]] e [[NOTE:motivazione]].\n\n# WF2-054 - Struttura del deliverable\n\nProdurre due file: `agreement_redline.docx` e `risk_note.md`. Limite complessivo per `risk_note.md`: 2200 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Esito della revisione\nConclusione sull'apertura del rapporto, classe di rischio e sintesi delle condizioni.\n\n### 2. Allocazione degli obblighi\nIndividuazione del cliente della Banca, obblighi non trasferibili, filtri autonomi, diritto di verifica e comunicazioni alle autorità.\n\n### 3. Rilievi di livello\nTabella dei valori previsti dalla bozza e dei valori ammessi dalla policy interna, con la clausola e il paragrafo di riferimento.\n\n### 4. Clausole contraddette dal questionario\nDiscrepanze fra le dichiarazioni che l'accordo fa rendere alla controparte e il questionario compilato da questa.\n\n### 5. Soggetti, screening e istruttoria\nAssetto proprietario, esiti dello screening, elementi dell'istruttoria mancanti e provenienza delle clausole difettose.\n\n### 6. Elementi che non richiedono modifica\nElementi che sembrano problematici e non lo sono, con la ragione.\n\n### 7. Azioni\nAdempimenti da compiere prima della sottoscrizione, con il soggetto onerato.\n\nIl redline va prodotto come documento con revisioni tracciate, non con marcatori nel testo. Le fonti normative sono soltanto quelle del reference pack; la policy interna e il questionario non sono fonti normative.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "legal_correctness",
+      "redline_quality"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_bozza_accordo_di_corrispondenza.docx",
+    "public/documents/02_policy_interna_rapporti_di_corrispondenza.pdf",
+    "public/documents/03_questionario_due_diligence_controparte.pdf",
+    "public/documents/04_scheda_rischio_paese.pdf",
+    "public/documents/05_nota_unita_pagamenti_esteri.pdf",
+    "public/documents/06_screening_controparte_e_soggetti.csv"
+  ],
+  "expected_deliverable": "agreement_redline.docx",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "legal_correctness",
+    "redline_quality",
+    "scope_discipline",
+    "artifact_conformity"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "docx_redline",
+  "document_preset": "contract_negotiation_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

@@ -1,0 +1,182 @@
+{
+  "task_id": "WF2-045",
+  "lato_assistito": "Banca Querceto S.p.A., soggetto obbligato",
+  "data_di_riferimento": "2026-08-12",
+  "stato_del_fascicolo": "policy in revisione prima dell'approvazione; nessuna decisione sul cliente campione",
+  "fonti_ammesse": [
+    "aml"
+  ],
+  "dati_mancanti": [
+    "richiedere documento sul rapporto con il terzo"
+  ],
+  "calcoli": [
+    "euro 280.000",
+    "71%"
+  ],
+  "errori_bersaglio": [
+    "rifiuto automatico delle PEP",
+    "apertura provvisoria per trenta giorni",
+    "approvazione del gestore commerciale",
+    "declassamento al giorno 366",
+    "match provider definitivo"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "definizione PEP",
+      "gravita": "alta",
+      "affermazione_richiesta": "la policy deve includere cariche, familiari e soggetti con stretti legami",
+      "evidenza": "la bozza considera soltanto il cliente titolare di carica",
+      "azione": "ampliare la definizione e i trigger",
+      "cautela": "non classificare il campione senza verifica"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "approccio basato sul rischio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico",
+      "evidenza": "risk appetite ammette PEP con controlli e approvazione",
+      "azione": "eliminare il divieto assoluto",
+      "cautela": "non trasformare il rischio elevato in esito automatico"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "approvazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'autorizzazione deve precedere avvio o prosecuzione del rapporto",
+      "evidenza": "bozza consente apertura provvisoria per trenta giorni",
+      "azione": "bloccare l'operatività fino all'approvazione",
+      "cautela": "non approvare retroattivamente"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "soggetto approvatore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo",
+      "evidenza": "deleghe approvative, riga PEP",
+      "azione": "allineare la policy alla delega",
+      "cautela": "non assegnare il potere al gestore commerciale"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "origine patrimonio",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi",
+      "evidenza": "la bozza usa un solo campo per entrambe",
+      "azione": "creare due campi e prove separate",
+      "cautela": "non accettare una formula unica"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "origine fondi",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi",
+      "evidenza": "scheda campione indica bonifico da società terza senza causale",
+      "azione": "richiedere documento sul rapporto con il terzo",
+      "cautela": "non assumere provenienza lecita"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "monitoraggio rafforzato",
+      "gravita": "alta",
+      "affermazione_richiesta": "frequenza e indicatori del monitoraggio devono essere definiti in base al rischio",
+      "evidenza": "bozza rinvia a controlli periodici senza cadenza",
+      "azione": "stabilire revisione almeno annuale e trigger evento",
+      "cautela": "non fissare una cadenza uguale per tutti"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "cessazione carica",
+      "gravita": "alta",
+      "affermazione_richiesta": "dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato",
+      "evidenza": "provider segnala carica cessata quattordici mesi prima",
+      "azione": "prevedere valutazione documentata e non declassamento automatico",
+      "cautela": "non chiudere il rischio al giorno 366"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "screening",
+      "gravita": "alta",
+      "affermazione_richiesta": "un match del provider è un indicatore da verificare e non un esito definitivo",
+      "evidenza": "nota provider assegna affidabilità 71% e richiede confronto identificativo",
+      "azione": "prevedere verifica manuale",
+      "cautela": "non dichiarare confermata la corrispondenza"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "titolare effettivo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il flusso PEP deve coprire anche il titolare effettivo",
+      "evidenza": "scheda campione mostra partecipazione indiretta non ricostruita",
+      "azione": "completare la catena partecipativa",
+      "cautela": "non limitare lo screening all'intestatario"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "conservazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la policy deve indicare quali evidenze e decisioni sono conservate",
+      "evidenza": "bozza conserva il report provider ma non motivazione e approvazione",
+      "azione": "aggiungere dossier decisionale",
+      "cautela": "non conservare soltanto lo screenshot"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "segnalazione sospetta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la qualifica PEP non equivale a presupposto automatico di segnalazione",
+      "evidenza": "bozza invia ogni PEP alla funzione segnalazioni",
+      "azione": "prevedere valutazione separata degli elementi di sospetto",
+      "cautela": "non inventare l'esito della valutazione"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "rifiuto automatico delle PEP",
+      "chiave_nel_criterio": "rifiuto automatico delle PEP"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "apertura provvisoria per trenta giorni",
+      "chiave_nel_criterio": "apertura provvisoria per trenta giorni"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "approvazione del gestore commerciale",
+      "chiave_nel_criterio": "approvazione del gestore commerciale"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "declassamento al giorno 366",
+      "chiave_nel_criterio": "declassamento al giorno 366"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "match provider definitivo",
+      "chiave_nel_criterio": "match provider definitivo"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_bozza_policy_kyc_edd.pdf",
+      "funzione": "Bozza policy KYC/EDD"
+    },
+    {
+      "file": "02_risk_appetite.pdf",
+      "funzione": "Risk appetite AML"
+    },
+    {
+      "file": "03_deleghe_approvative.pdf",
+      "funzione": "Matrice delle deleghe"
+    },
+    {
+      "file": "04_scheda_cliente_campione.pdf",
+      "funzione": "Scheda cliente campione"
+    },
+    {
+      "file": "05_nota_provider_screening.pdf",
+      "funzione": "Nota del provider di screening"
+    }
+  ]
+}

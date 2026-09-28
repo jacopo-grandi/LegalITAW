@@ -1,0 +1,21 @@
+{
+  "task_id": "WF2-064",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "Codice civile, artt. 1882, 1892, 1893 e 1917",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262!vig=",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    },
+    {
+      "id": "F2",
+      "riferimento": "IVASS, Le assicurazioni della responsabilita' civile, guida n. 5",
+      "url": "https://www.ivass.it/pubblicazioni-e-statistiche/pubblicazioni/altre-pubblicazioni/2022/guide-assicurative-5/index.html",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale dell'autorita'"
+    }
+  ]
+}

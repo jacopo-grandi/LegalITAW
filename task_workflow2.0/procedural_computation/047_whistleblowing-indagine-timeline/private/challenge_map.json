@@ -1,0 +1,218 @@
+{
+  "task_id": "WF2-047",
+  "lato_assistito": "Cobalto Servizi Ambientali S.p.A., gestore del canale e datore di lavoro",
+  "data_di_riferimento": "2026-08-28",
+  "stato_del_fascicolo": "segnalazione ricevuta e presa in carico; indagine aperta, riscontro non ancora scaduto",
+  "fonti_ammesse": [
+    "whistle",
+    "gdpr"
+  ],
+  "dati_mancanti": [
+    "acquisire ordini, offerte e approvazioni"
+  ],
+  "calcoli": [],
+  "errori_bersaglio": [
+    "avviso tardivo",
+    "termine decorrente dal 4 agosto",
+    "obbligo di chiudere l'indagine entro tre mesi",
+    "condivisione integrale col direttore acquisti",
+    "nome nei calendari",
+    "ritorsione già accertata",
+    "conservazione illimitata"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "ricezione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la segnalazione è stata ricevuta il 3 agosto 2026 alle 18:42",
+      "evidenza": "log del canale W-17",
+      "azione": "fissare da tale data i termini esterni",
+      "cautela": "non usare la data di apertura del file"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "avviso ricevimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'avviso di ricevimento è stato inviato il 7 agosto entro sette giorni",
+      "evidenza": "log uscita 7 agosto ore 10:14",
+      "azione": "marcare l'adempimento come completato",
+      "cautela": "non descriverlo come tardivo"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "riscontro",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di riscontro cade il 7 novembre 2026 prendendo a riferimento l'avviso",
+      "evidenza": "policy e log rendono disponibile la data dell'avviso",
+      "azione": "calendarizzare una bozza entro il 30 ottobre",
+      "cautela": "non promettere la chiusura dell'indagine entro quella data"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "presa in carico",
+      "gravita": "alta",
+      "affermazione_richiesta": "la responsabile del canale ha aperto il fascicolo il 4 agosto",
+      "evidenza": "log interno",
+      "azione": "distinguere apertura interna e avviso al segnalante",
+      "cautela": "non far decorrere il termine dall'apertura"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "conflitto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il direttore acquisti nominato nella segnalazione non può partecipare all'indagine",
+      "evidenza": "segnalazione e organigramma della policy",
+      "azione": "formalizzare l'esclusione dagli accessi",
+      "cautela": "non inoltrargli la segnalazione integrale"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "identità",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'identità è accessibile solo alla responsabile del canale e non al team investigativo",
+      "evidenza": "policy prevede token W-17 per gli atti di indagine",
+      "azione": "usare il token in interviste e memo",
+      "cautela": "non inserire il nome nei calendari"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "perimetro",
+      "gravita": "alta",
+      "affermazione_richiesta": "la segnalazione riguarda tre affidamenti a Ripa Chiara Facility tra marzo e luglio",
+      "evidenza": "segnalazione elenca ordini 441, 508 e 611",
+      "azione": "acquisire ordini, offerte e approvazioni",
+      "cautela": "non estendere senza base a tutti i fornitori"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "conservazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il legal hold copre email acquisti, messaggi e versioni delle offerte",
+      "evidenza": "avviso del 6 agosto",
+      "azione": "verificare conferme dei custodi",
+      "cautela": "non cancellare dati per scadenza ordinaria"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "interviste",
+      "gravita": "alta",
+      "affermazione_richiesta": "il segnalato va intervistato dopo la messa in sicurezza dei documenti",
+      "evidenza": "piano prevede il contrario il 1 settembre",
+      "azione": "invertire la sequenza",
+      "cautela": "non rivelare al segnalato l'identità della fonte"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "ritorsione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il cambio mansioni proposto da HR dopo la segnalazione è un red flag da sospendere e valutare",
+      "evidenza": "email HR del 19 agosto riguarda il possibile segnalante",
+      "azione": "congelare la decisione e documentare ragioni pregresse",
+      "cautela": "non concludere automaticamente che sia ritorsione"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "feedback",
+      "gravita": "alta",
+      "affermazione_richiesta": "il riscontro può descrivere attività svolte e seguito previsto senza rivelare dati riservati",
+      "evidenza": "nota stato indagine elenca acquisizioni e interviste programmate",
+      "azione": "preparare un riscontro sostanziale sul seguito",
+      "cautela": "non limitarsi a dire che l'indagine è in corso"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "esito",
+      "gravita": "alta",
+      "affermazione_richiesta": "al 28 agosto non esiste un esito conclusivo",
+      "evidenza": "due interviste non svolte e dati contabili in acquisizione",
+      "azione": "marcare le ipotesi come aperte",
+      "cautela": "non qualificare i fatti come accertati"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "data retention",
+      "gravita": "alta",
+      "affermazione_richiesta": "la conservazione quinquennale opera nei limiti necessari alla gestione",
+      "evidenza": "policy replica la durata ma non prevede chiusura e minimizzazione",
+      "azione": "aggiungere review alla chiusura",
+      "cautela": "non conservare copie duplicate fuori dal canale"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "tracciabilità",
+      "gravita": "alta",
+      "affermazione_richiesta": "ogni accesso al fascicolo deve risultare dal log",
+      "evidenza": "nota stato segnala un download non giustificato del consulente",
+      "azione": "verificare e revocare copie locali",
+      "cautela": "non sanare il download con una nota retroattiva"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "avviso tardivo",
+      "chiave_nel_criterio": "avviso tardivo"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "termine decorrente dal 4 agosto",
+      "chiave_nel_criterio": "termine decorrente dal 4 agosto"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "obbligo di chiudere l'indagine entro tre mesi",
+      "chiave_nel_criterio": "obbligo di chiudere l'indagine entro tre mesi"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "condivisione integrale col direttore acquisti",
+      "chiave_nel_criterio": "condivisione integrale col direttore acquisti"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "nome nei calendari",
+      "chiave_nel_criterio": "nome nei calendari"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "ritorsione già accertata",
+      "chiave_nel_criterio": "ritorsione già accertata"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "conservazione illimitata",
+      "chiave_nel_criterio": "conservazione illimitata"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_segnalazione.pdf",
+      "funzione": "Segnalazione W-17"
+    },
+    {
+      "file": "02_log_canale.md",
+      "funzione": "Log del canale"
+    },
+    {
+      "file": "03_policy_whistleblowing.pdf",
+      "funzione": "Policy interna"
+    },
+    {
+      "file": "04_piano_interviste.md",
+      "funzione": "Piano interviste"
+    },
+    {
+      "file": "05_legal_hold.pdf",
+      "funzione": "Avviso di conservazione"
+    },
+    {
+      "file": "06_email_hr.eml",
+      "funzione": "Email HR su cambio mansioni"
+    },
+    {
+      "file": "07_nota_stato_indagine.md",
+      "funzione": "Nota sullo stato dell'indagine"
+    }
+  ]
+}

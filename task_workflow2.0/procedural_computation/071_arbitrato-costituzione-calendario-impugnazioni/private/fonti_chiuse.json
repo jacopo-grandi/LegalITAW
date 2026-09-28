@@ -1,0 +1,18 @@
+{
+  "task_id": "WF2-071",
+  "freeze_normativo": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Codice di procedura civile, artt. 806-840, inclusi art. 817 c.p.c. e art. 828 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Regolamento arbitrale CAM in vigore dal 1 marzo 2023",
+      "url": "https://www.camera-arbitrale.it/upload/documenti/arbitrato/regolamento%20arbitrale%20CAM%202023.pdf",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

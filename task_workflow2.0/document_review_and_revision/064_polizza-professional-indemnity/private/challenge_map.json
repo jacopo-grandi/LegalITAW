@@ -1,0 +1,215 @@
+{
+  "task_id": "WF2-064",
+  "lato_assistito": "Studio Moreschi Architettura Associato, assicurato",
+  "data_di_riferimento": "2028-10-02",
+  "stato_fascicolo": "rinnovo prima della scadenza, due circostanze note",
+  "fonti_ammesse": [
+    "Codice civile, testo consolidato",
+    "IVASS - Guida alle assicurazioni della responsabilita' civile"
+  ],
+  "calcoli": [
+    "quadrature di importi e sequenze documentali indicate nel gold"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per aggregazione richieste: definire fatti e progetto che rendono correlate le Richieste",
+    "integrazione necessaria per periodo di osservazione assente: inserire trentasei mesi"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_bozza_polizza_pi.docx",
+      "funzione": "draft"
+    },
+    {
+      "file": "02_certificato_polizza_precedente.pdf",
+      "funzione": "Copertura ininterrotta dal 1 ottobre 2019; retroattivita' illimitata; massimale EUR 3.000.000 oltre spese di difesa."
+    },
+    {
+      "file": "03_questionario_rinnovo.pdf",
+      "funzione": "Segnalati reclamo Biblioteca Celsa del 18 settembre 2028 e ritardo cantiere Ansedonia; nessuna domanda giudiziale notificata."
+    },
+    {
+      "file": "04_lettera_broker.pdf",
+      "funzione": "Il broker descrive la bozza come continuita' integrale, ma la retroattivita' e' fissata al 1 ottobre 2026 e i costi erodono il massimale."
+    },
+    {
+      "file": "05_contratto_collaboratore_bim.pdf",
+      "funzione": "Il collaboratore opera sotto direzione dello Studio; la bozza esclude tutti i consulenti esterni, nominati o meno."
+    },
+    {
+      "file": "06_schema_sinistri_e_massimali.xlsx",
+      "funzione": "Due richieste 2027 sono collegate allo stesso progetto e hanno consumato EUR 640.000; aggregato residuo dichiarato dal broker: EUR 2.360.000."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "retroattivita' accorciata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la data 2026 crea un vuoto rispetto alla continuita' dal 2019",
+      "azione_richiesta": "ripristinare 1 ottobre 2019 o retroattivita' illimitata",
+      "conseguenza": "gli incarichi 2019-2026 restano assicurabili",
+      "evidenza": "doc. 01 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "circostanze senza deeming",
+      "gravita": "alta",
+      "affermazione_richiesta": "la notifica non aggancia le richieste future",
+      "azione_richiesta": "introdurre clausola di collegamento alla data della circostanza",
+      "conseguenza": "la denuncia cautelativa conserva copertura",
+      "evidenza": "doc. 01 art. 3",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "reclamo Celsa da notificare",
+      "gravita": "alta",
+      "affermazione_richiesta": "il reclamo scritto e' almeno circostanza specifica",
+      "azione_richiesta": "notificarlo prima della scadenza",
+      "conseguenza": "la continuita' non sostituisce l'avviso",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "ritardo Ansedonia da qualificare",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca una pretesa o minaccia identificata",
+      "azione_richiesta": "acquisire corrispondenza prima di dichiararlo sinistro",
+      "conseguenza": "non ogni ritardo e' una Richiesta",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "esclusione cyber eccessiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "la formula espelle anche errori professionali con componente informatica",
+      "azione_richiesta": "limitare l'esclusione al rischio cyber autonomo",
+      "conseguenza": "resta coperta la responsabilita' professionale",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "esclusione contrattuale senza carve-back",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca la responsabilita' che esisterebbe anche senza contratto",
+      "azione_richiesta": "aggiungere carve-back",
+      "conseguenza": "l'assicurazione non dipende dall'etichetta della domanda",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "consulenti esterni esclusi",
+      "gravita": "media",
+      "affermazione_richiesta": "l'esclusione comprende chi opera sotto direzione",
+      "azione_richiesta": "coprire collaboratori nominati e sotto controllo",
+      "conseguenza": "la struttura reale dello Studio entra nel rischio",
+      "evidenza": "doc. 01 e doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "disonesta' non accertata",
+      "gravita": "media",
+      "affermazione_richiesta": "una mera contestazione espelle la copertura",
+      "azione_richiesta": "richiedere accertamento definitivo e separabilita'",
+      "conseguenza": "gli assicurati innocenti restano protetti",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "controllo della difesa",
+      "gravita": "media",
+      "affermazione_richiesta": "l'assicurato non partecipa a scelta e strategia",
+      "azione_richiesta": "prevedere consultazione e scelta concordata",
+      "conseguenza": "la difesa considera reputazione e conflitti",
+      "evidenza": "doc. 01 art. 7",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "transazione senza consenso",
+      "gravita": "media",
+      "affermazione_richiesta": "l'assicuratore puo' imporre ammissioni",
+      "azione_richiesta": "richiedere consenso per obblighi non monetari",
+      "conseguenza": "la liquidazione non crea oneri estranei",
+      "evidenza": "doc. 01 art. 7",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "costi entro massimale",
+      "gravita": "media",
+      "affermazione_richiesta": "la bozza riduce il capitale disponibile",
+      "azione_richiesta": "collocare costi oltre limite almeno al 25%",
+      "conseguenza": "il confronto col rinnovo e' trasparente",
+      "evidenza": "doc. 01, doc. 02 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "aggregazione richieste",
+      "gravita": "media",
+      "affermazione_richiesta": "le due richieste 2027 consumano un unico aggregato ma il fascicolo non prova il criterio di collegamento",
+      "azione_richiesta": "definire fatti e progetto che rendono correlate le Richieste",
+      "conseguenza": "il residuo di EUR 2.360.000 va confermato",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "periodo di osservazione assente",
+      "gravita": "media",
+      "affermazione_richiesta": "la cessazione lascia senza finestra di denuncia",
+      "azione_richiesta": "inserire trentasei mesi",
+      "conseguenza": "le richieste tardive su atti pregressi restano denunciabili",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "assenza di domanda giudiziale",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "domanda giudiziale",
+      "perche_non_e_issue": "non esclude una circostanza ma impedisce di descriverla come citazione",
+      "criterio_assenza": "B.36"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "continuita' dei premi",
+      "oggetto": "doc. 02",
+      "chiave_nel_criterio": "1 ottobre 2019",
+      "perche_non_e_issue": "e' provata e sostiene la retroattivita'",
+      "criterio_assenza": "B.37"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "due sinistri collegati",
+      "oggetto": "doc. 06",
+      "chiave_nel_criterio": "EUR 2.360.000",
+      "perche_non_e_issue": "il residuo aritmetico e' coerente se il collegamento viene confermato",
+      "criterio_assenza": "B.38"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "attivita' del collaboratore BIM",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "BIM",
+      "perche_non_e_issue": "rientra nell'attivita' professionale dichiarata",
+      "criterio_assenza": "B.39"
+    }
+  ]
+}

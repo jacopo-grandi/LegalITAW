@@ -1,0 +1,63 @@
+{
+  "task_id": "WF2-054",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 21 novembre 2007, n. 231 - art. 17",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231",
+      "regola_sostenuta": "obblighi di verifica della clientela commisurati al rischio e fattori da considerare nella valutazione del rischio",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 21 novembre 2007, n. 231 - art. 35",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231",
+      "regola_sostenuta": "obbligo di segnalazione delle operazioni sospette",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 21 novembre 2007, n. 231 - art. 39",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2007-11-21;231",
+      "regola_sostenuta": "divieto di comunicazione dell'avvenuta segnalazione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Banca d'Italia - Disposizioni in materia di adeguata verifica della clientela per il contrasto del riciclaggio e del finanziamento del terrorismo",
+      "url": "https://www.bancaditalia.it/compiti/vigilanza/normativa/archivio-norme/disposizioni/adeguata-verifica/index.html",
+      "regola_sostenuta": "obblighi rafforzati e presidi richiesti per i rapporti di corrispondenza con controparti di Stati terzi",
+      "verificata_il": "2026-09-02",
+      "tipo": "disposizioni di vigilanza dell'autorità di settore"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2024/1624",
+      "url": "https://eur-lex.europa.eu/eli/reg/2024/1624/oj",
+      "regola_sostenuta": "quadro dell'Unione in materia di prevenzione dell'uso del sistema finanziario a fini di riciclaggio, applicabile dalla data ivi indicata",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "D.Lgs. 1 settembre 1993, n. 385 - art. 53",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1993-09-01;385",
+      "regola_sostenuta": "vigilanza regolamentare sull'organizzazione amministrativa e contabile e sui controlli interni delle banche",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1375 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "esecuzione del contratto secondo buona fede",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Camera Arbitrale di Milano - clausola compromissoria tipo",
+      "url": "https://www.camera-arbitrale.it/it/arbitrato/clausole-arbitrali.php",
+      "regola_sostenuta": "wording istituzionale della clausola arbitrale riprodotta nella clausola 16.2 dell'accordo sintetico",
+      "verificata_il": "2026-09-02",
+      "tipo": "modello istituzionale, ancoraggio di wording"
+    }
+  ]
+}

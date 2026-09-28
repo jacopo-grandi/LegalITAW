@@ -1,0 +1,1138 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-026",
+  "title": "Data protection. Red-flag report su scoring e trasferimento extra-SEE",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 70,
+  "criteria": [
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "Ogni rilievo è qualificato come bloccante o non bloccante rispetto alla data di avvio prevista.",
+      "pass_condition": "ogni rilievo porta una delle due qualificazioni.",
+      "fail_condition": "almeno un rilievo è privo della qualificazione.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "A.2 qualificazione bloccante o non bloccante\nissue: — · tipo: presenza · gravità: alta · judge: no · fonte: prompt\nVerifica: Ogni rilievo è qualificato come bloccante o non bloccante rispetto alla data di avvio prevista.\nPass se: ogni rilievo porta una delle due qualificazioni.\nFail se: almeno un rilievo è privo della qualificazione."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "Ogni rilievo indica l'azione richiesta e il soggetto che la deve compiere.",
+      "pass_condition": "ogni rilievo porta azione e soggetto.",
+      "fail_condition": "almeno un rilievo è privo dell'azione o del soggetto.",
+      "indifferent": null,
+      "source": "public/01_task.md",
+      "severity": "alta",
+      "raw_text": "A.3 azione e responsabile per ciascun rilievo\nissue: — · tipo: struttura · gravità: alta · judge: no · fonte: public/01_task.md\nVerifica: Ogni rilievo indica l'azione richiesta e il soggetto che la deve compiere.\nPass se: ogni rilievo porta azione e soggetto.\nFail se: almeno un rilievo è privo dell'azione o del soggetto."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "Ogni rilievo indica il documento del pacchetto da cui deriva.",
+      "pass_condition": "ogni rilievo contiene il nome di un documento del pacchetto o il riferimento a una sua sezione.",
+      "fail_condition": "almeno un rilievo è privo di riferimento documentale.",
+      "indifferent": null,
+      "source": "public/01_task.md",
+      "severity": "alta",
+      "raw_text": "A.4 ancoraggio documentale\nissue: — · tipo: struttura · gravità: alta · judge: no · fonte: public/01_task.md\nVerifica: Ogni rilievo indica il documento del pacchetto da cui deriva.\nPass se: ogni rilievo contiene il nome di un documento del pacchetto o il riferimento a una sua sezione.\nFail se: almeno un rilievo è privo di riferimento documentale."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene clausole riscritte, bozze di documenti da firmare o una valutazione d'impatto riscritta.",
+      "pass_condition": "non compare testo redatto in forma di clausola, di informativa o di valutazione d'impatto.",
+      "fail_condition": "il deliverable contiene una clausola riscritta, una bozza di informativa o una valutazione d'impatto riscritta.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "A.5 nessuna riscrittura di documenti\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: prompt\nVerifica: Il deliverable non contiene clausole riscritte, bozze di documenti da firmare o una valutazione d'impatto riscritta.\nPass se: non compare testo redatto in forma di clausola, di informativa o di valutazione d'impatto.\nFail se: il deliverable contiene una clausola riscritta, una bozza di informativa o una valutazione d'impatto riscritta."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "fail_condition": "compare almeno un riferimento normativo fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": "reference pack",
+      "severity": "alta",
+      "raw_text": "A.6 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento normativo citato appartiene all'elenco.\nFail se: compare almeno un riferimento normativo fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la valutazione d'impatto non copre la finalità di punteggio di propensione all'abbandono prevista dalla specifica funzionale.",
+      "pass_condition": "compare l'affermazione che quella finalità non è valutata, o che l'ambito della valutazione è più stretto del trattamento.",
+      "fail_condition": "l'affermazione non compare, oppure si afferma che la valutazione copre tutte le finalità.",
+      "indifferent": null,
+      "source": "DPIA § 2.1; specifica funzionale § 1.3",
+      "severity": "alta",
+      "raw_text": "B.1 finalità non valutata\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: DPIA § 2.1; specifica funzionale § 1.3\nVerifica: Il deliverable afferma che la valutazione d'impatto non copre la finalità di punteggio di propensione all'abbandono prevista dalla specifica funzionale.\nPass se: compare l'affermazione che quella finalità non è valutata, o che l'ambito della valutazione è più stretto del trattamento.\nFail se: l'affermazione non compare, oppure si afferma che la valutazione copre tutte le finalità."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il punteggio di propensione è calcolato dal medesimo modello e con le medesime variabili del punteggio di rischio.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "specifica funzionale § 1.3",
+      "severity": "media",
+      "raw_text": "B.2 identità del modello fra le finalità\nissue: I-01 · tipo: presenza · gravità: media · judge: sì · fonte: specifica funzionale § 1.3\nVerifica: Il deliverable afferma che il punteggio di propensione è calcolato dal medesimo modello e con le medesime variabili del punteggio di rischio.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la specifica funzionale ha aggiunto, dopo l'approvazione della valutazione, gli indicatori di comportamento di pagamento acquisiti da una fonte esterna.",
+      "pass_condition": "compare l'affermazione che quella categoria di dati è stata aggiunta dopo l'approvazione della valutazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "specifica funzionale § 2 e cronologia delle versioni; DPIA § 2.3",
+      "severity": "alta",
+      "raw_text": "B.3 categoria di dati aggiunta dopo l'approvazione\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: specifica funzionale § 2 e cronologia delle versioni; DPIA § 2.3\nVerifica: Il deliverable afferma che la specifica funzionale ha aggiunto, dopo l'approvazione della valutazione, gli indicatori di comportamento di pagamento acquisiti da una fonte esterna.\nPass se: compare l'affermazione che quella categoria di dati è stata aggiunta dopo l'approvazione della valutazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la valutazione d'impatto va riesaminata perché sono insorte variazioni del rischio.",
+      "pass_condition": "compare l'indicazione di riesaminare la valutazione a fronte della modifica.",
+      "fail_condition": "l'indicazione non compare.",
+      "indifferent": null,
+      "source": "art. 35, par. 11",
+      "severity": "alta",
+      "raw_text": "B.4 obbligo di riesame\nissue: I-02 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 35, par. 11\nVerifica: Il deliverable afferma che la valutazione d'impatto va riesaminata perché sono insorte variazioni del rischio.\nPass se: compare l'indicazione di riesaminare la valutazione a fronte della modifica.\nFail se: l'indicazione non compare."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la sezione della valutazione su necessità e proporzionalità contiene affermazioni conclusive e non una valutazione, e che non considera alternative meno intrusive.",
+      "pass_condition": "compaiono entrambi gli elementi, il carattere conclusivo della sezione e l'assenza di alternative considerate.",
+      "fail_condition": "manca uno dei due elementi, oppure la sezione è presentata come conforme.",
+      "indifferent": null,
+      "source": "DPIA § 4; art. 35, par. 7, lett. b)",
+      "severity": "alta",
+      "raw_text": "B.5 necessità e proporzionalità non valutate\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: DPIA § 4; art. 35, par. 7, lett. b)\nVerifica: Il deliverable afferma che la sezione della valutazione su necessità e proporzionalità contiene affermazioni conclusive e non una valutazione, e che non considera alternative meno intrusive.\nPass se: compaiono entrambi gli elementi, il carattere conclusivo della sezione e l'assenza di alternative considerate.\nFail se: manca uno dei due elementi, oppure la sezione è presentata come conforme."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable riporta i dati del collaudo sul riesame manuale, indicando la quota di conferme e il tempo medio.",
+      "pass_condition": "compaiono entrambi i dati, la quota di conferme e il tempo medio.",
+      "fail_condition": "manca uno dei due dati.",
+      "indifferent": null,
+      "source": "procedura di riesame § 5",
+      "severity": "alta",
+      "raw_text": "B.6 dati del collaudo sul riesame\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura di riesame § 5\nVerifica: Il deliverable riporta i dati del collaudo sul riesame manuale, indicando la quota di conferme e il tempo medio.\nPass se: compaiono entrambi i dati, la quota di conferme e il tempo medio.\nFail se: manca uno dei due dati."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il riesame, per come è organizzato e per come ha funzionato nel collaudo, non assicura l'intervento umano e non consente di escludere che la decisione sia basata unicamente sul trattamento automatizzato.",
+      "pass_condition": "compare l'affermazione che l'esclusione operata dalla valutazione non è sostenuta, o che il riesame non integra l'intervento umano.",
+      "fail_condition": "l'affermazione non compare, oppure si afferma che la presenza del riesame esclude la disciplina delle decisioni automatizzate.",
+      "indifferent": null,
+      "source": "procedura di riesame §§ 4 e 5; DPIA § 5; art. 22",
+      "severity": "alta",
+      "raw_text": "B.7 il riesame non assicura l'intervento umano\nissue: I-04 · tipo: qualificazione · gravità: alta · judge: sì · fonte: procedura di riesame §§ 4 e 5; DPIA § 5; art. 22\nVerifica: Il deliverable afferma che il riesame, per come è organizzato e per come ha funzionato nel collaudo, non assicura l'intervento umano e non consente di escludere che la decisione sia basata unicamente sul trattamento automatizzato.\nPass se: compare l'affermazione che l'esclusione operata dalla valutazione non è sostenuta, o che il riesame non integra l'intervento umano.\nFail se: l'affermazione non compare, oppure si afferma che la presenza del riesame esclude la disciplina delle decisioni automatizzate."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'operatore non ha accesso alla logica di formazione del punteggio e non può chiederne il ricalcolo.",
+      "pass_condition": "compare almeno uno dei due limiti.",
+      "fail_condition": "nessuno dei due limiti compare.",
+      "indifferent": null,
+      "source": "procedura di riesame § 4.3",
+      "severity": "media",
+      "raw_text": "B.8 limiti dell'operatore\nissue: I-04 · tipo: presenza · gravità: media · judge: sì · fonte: procedura di riesame § 4.3\nVerifica: Il deliverable afferma che l'operatore non ha accesso alla logica di formazione del punteggio e non può chiederne il ricalcolo.\nPass se: compare almeno uno dei due limiti.\nFail se: nessuno dei due limiti compare."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica che vanno individuati la base che consente la decisione e le garanzie a tutela dell'interessato, fra cui il diritto di ottenere l'intervento umano, di esprimere la propria opinione e di contestare la decisione.",
+      "pass_condition": "compaiono la base che consente la decisione e almeno una delle tre garanzie.",
+      "fail_condition": "l'indicazione non compare.",
+      "indifferent": null,
+      "source": "art. 22, parr. 2 e 3",
+      "severity": "alta",
+      "raw_text": "B.9 garanzie richieste per la decisione automatizzata\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 22, parr. 2 e 3\nVerifica: Il deliverable indica che vanno individuati la base che consente la decisione e le garanzie a tutela dell'interessato, fra cui il diritto di ottenere l'intervento umano, di esprimere la propria opinione e di contestare la decisione.\nPass se: compaiono la base che consente la decisione e almeno una delle tre garanzie.\nFail se: l'indicazione non compare."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il registro dei rischi contiene rischi di livello alto la cui misura non è attuata, con data obiettivo successiva alla data di avvio prevista.",
+      "pass_condition": "compaiono entrambi gli elementi, i rischi alti con misura non attuata e la collocazione delle date obiettivo dopo l'avvio.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "registro dei rischi, righe R2, R4 e R6",
+      "severity": "alta",
+      "raw_text": "B.10 rischi alti con misura non attuata\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: registro dei rischi, righe R2, R4 e R6\nVerifica: Il deliverable afferma che il registro dei rischi contiene rischi di livello alto la cui misura non è attuata, con data obiettivo successiva alla data di avvio prevista.\nPass se: compaiono entrambi gli elementi, i rischi alti con misura non attuata e la collocazione delle date obiettivo dopo l'avvio.\nFail se: manca uno dei due elementi."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il rischio residuo dichiarato dalla valutazione non corrisponde a quello che il registro dei rischi calcola.",
+      "pass_condition": "compare l'affermazione che il residuo dichiarato non è sostenuto dal registro, o che i due documenti dicono cose diverse.",
+      "fail_condition": "l'affermazione non compare, oppure il residuo dichiarato è presentato come sostenuto.",
+      "indifferent": null,
+      "source": "registro dei rischi, riepilogo; DPIA § 7",
+      "severity": "alta",
+      "raw_text": "B.11 contraddizione sul rischio residuo\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: registro dei rischi, riepilogo; DPIA § 7\nVerifica: Il deliverable afferma che il rischio residuo dichiarato dalla valutazione non corrisponde a quello che il registro dei rischi calcola.\nPass se: compare l'affermazione che il residuo dichiarato non è sostenuto dal registro, o che i due documenti dicono cose diverse.\nFail se: l'affermazione non compare, oppure il residuo dichiarato è presentato come sostenuto."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il titolare deve consultare l'autorità di controllo prima di procedere se la valutazione indica un rischio elevato in assenza di misure di attenuazione.",
+      "pass_condition": "compare l'affermazione del presupposto della consultazione preventiva.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 36, par. 1",
+      "severity": "alta",
+      "raw_text": "B.12 presupposto della consultazione preventiva\nissue: I-06 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 36, par. 1\nVerifica: Il deliverable afferma che il titolare deve consultare l'autorità di controllo prima di procedere se la valutazione indica un rischio elevato in assenza di misure di attenuazione.\nPass se: compare l'affermazione del presupposto della consultazione preventiva.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica che la valutazione va prima riesaminata e integrata, e che la consultazione dell'autorità va valutata sull'esito del riesame.",
+      "pass_condition": "compare quella sequenza.",
+      "fail_condition": "la sequenza non compare, oppure la consultazione è indicata come alternativa alla correzione.",
+      "indifferent": null,
+      "source": "DPIA § 7; art. 36",
+      "severity": "alta",
+      "raw_text": "B.13 ordine fra correzione e consultazione\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: DPIA § 7; art. 36\nVerifica: Il deliverable indica che la valutazione va prima riesaminata e integrata, e che la consultazione dell'autorità va valutata sull'esito del riesame.\nPass se: compare quella sequenza.\nFail se: la sequenza non compare, oppure la consultazione è indicata come alternativa alla correzione."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'allegato tecnico consente al fornitore di utilizzare i dati per addestrare e migliorare i propri modelli, messi a disposizione anche di altri clienti.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, allegato tecnico § 4",
+      "severity": "alta",
+      "raw_text": "B.14 uso dei dati per i modelli del fornitore\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: accordo sul trattamento, allegato tecnico § 4\nVerifica: Il deliverable afferma che l'allegato tecnico consente al fornitore di utilizzare i dati per addestrare e migliorare i propri modelli, messi a disposizione anche di altri clienti.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che per quell'attività il fornitore determina finalità e mezzi ed è perciò considerato titolare del trattamento, e che il modulo di clausole adottato non la copre.",
+      "pass_condition": "compaiono entrambi gli elementi, la qualificazione come titolare per quell'attività e l'inadeguatezza del modulo adottato.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "art. 28, par. 10; accordo sul trattamento, allegato tecnico § 4",
+      "severity": "alta",
+      "raw_text": "B.15 qualificazione del fornitore per quell'attività\nissue: I-07 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 28, par. 10; accordo sul trattamento, allegato tecnico § 4\nVerifica: Il deliverable afferma che per quell'attività il fornitore determina finalità e mezzi ed è perciò considerato titolare del trattamento, e che il modulo di clausole adottato non la copre.\nPass se: compaiono entrambi gli elementi, la qualificazione come titolare per quell'attività e l'inadeguatezza del modulo adottato.\nFail se: manca uno dei due elementi."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica come azione l'esclusione di quell'uso dalle istruzioni al fornitore, oppure la sua copertura con lo strumento previsto per il trasferimento fra titolari.",
+      "pass_condition": "compare almeno una delle due azioni.",
+      "fail_condition": "nessuna delle due azioni compare.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, allegato tecnico § 4",
+      "severity": "alta",
+      "raw_text": "B.16 azione richiesta sul perimetro d'uso\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: accordo sul trattamento, allegato tecnico § 4\nVerifica: Il deliverable indica come azione l'esclusione di quell'uso dalle istruzioni al fornitore, oppure la sua copertura con lo strumento previsto per il trasferimento fra titolari.\nPass se: compare almeno una delle due azioni.\nFail se: nessuna delle due azioni compare."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che un sub-responsabile stabilito in un paese terzo diverso da quello dell'importatore accede agli ambienti di produzione.",
+      "pass_condition": "compare quell'affermazione, con l'indicazione del paese.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, appendice D; specifica funzionale § 3.2",
+      "severity": "alta",
+      "raw_text": "B.17 sub-responsabile in un paese terzo ulteriore\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: accordo sul trattamento, appendice D; specifica funzionale § 3.2\nVerifica: Il deliverable afferma che un sub-responsabile stabilito in un paese terzo diverso da quello dell'importatore accede agli ambienti di produzione.\nPass se: compare quell'affermazione, con l'indicazione del paese.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che le appendici dell'accordo di trasferimento descrivono il solo trasferimento verso il paese dell'importatore e dichiarano l'assenza di sub-responsabili, e che il trasferimento successivo non è quindi coperto.",
+      "pass_condition": "compaiono entrambi gli elementi, il contenuto delle appendici e la conseguente mancanza di copertura.",
+      "fail_condition": "manca uno dei due elementi, oppure il trasferimento successivo è presentato come coperto.",
+      "indifferent": null,
+      "source": "accordo di trasferimento, appendici B e D; art. 44",
+      "severity": "alta",
+      "raw_text": "B.18 il trasferimento successivo non è coperto\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: accordo di trasferimento, appendici B e D; art. 44\nVerifica: Il deliverable afferma che le appendici dell'accordo di trasferimento descrivono il solo trasferimento verso il paese dell'importatore e dichiarano l'assenza di sub-responsabili, e che il trasferimento successivo non è quindi coperto.\nPass se: compaiono entrambi gli elementi, il contenuto delle appendici e la conseguente mancanza di copertura.\nFail se: manca uno dei due elementi, oppure il trasferimento successivo è presentato come coperto."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la disciplina dei trasferimenti si applica anche ai trasferimenti successivi da un paese terzo verso un altro paese terzo.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 44",
+      "severity": "media",
+      "raw_text": "B.19 la disciplina si applica ai trasferimenti successivi\nissue: I-08 · tipo: qualificazione · gravità: media · judge: sì · fonte: art. 44\nVerifica: Il deliverable afferma che la disciplina dei trasferimenti si applica anche ai trasferimenti successivi da un paese terzo verso un altro paese terzo.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'unico elemento su cui la valutazione sul trasferimento si fonda è una dichiarazione del fornitore.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare, oppure la valutazione è presentata come fondata su elementi indipendenti.",
+      "indifferent": null,
+      "source": "valutazione sul trasferimento § 3",
+      "severity": "alta",
+      "raw_text": "B.20 la valutazione sul trasferimento poggia su una dichiarazione\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: valutazione sul trasferimento § 3\nVerifica: Il deliverable afferma che l'unico elemento su cui la valutazione sul trasferimento si fonda è una dichiarazione del fornitore.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare, oppure la valutazione è presentata come fondata su elementi indipendenti."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la valutazione sul trasferimento non contiene l'esame del quadro normativo del paese di destinazione e non valuta misure supplementari.",
+      "pass_condition": "compaiono entrambe le mancanze.",
+      "fail_condition": "manca una delle due.",
+      "indifferent": null,
+      "source": "valutazione sul trasferimento §§ 3 e 4",
+      "severity": "alta",
+      "raw_text": "B.21 assenza dell'esame del quadro normativo\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: valutazione sul trasferimento §§ 3 e 4\nVerifica: Il deliverable afferma che la valutazione sul trasferimento non contiene l'esame del quadro normativo del paese di destinazione e non valuta misure supplementari.\nPass se: compaiono entrambe le mancanze.\nFail se: manca una delle due."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la certificazione di sicurezza del fornitore non è uno strumento che fonda il trasferimento.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare, oppure la certificazione è presentata come strumento o garanzia del trasferimento.",
+      "indifferent": null,
+      "source": "valutazione sul trasferimento § 4",
+      "severity": "media",
+      "raw_text": "B.22 la certificazione non è uno strumento di trasferimento\nissue: I-09 · tipo: qualificazione · gravità: media · judge: sì · fonte: valutazione sul trasferimento § 4\nVerifica: Il deliverable afferma che la certificazione di sicurezza del fornitore non è uno strumento che fonda il trasferimento.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare, oppure la certificazione è presentata come strumento o garanzia del trasferimento."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la valutazione sul trasferimento non riguarda il paese del sub-responsabile.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "valutazione sul trasferimento; accordo sul trattamento, appendice D",
+      "severity": "alta",
+      "raw_text": "B.23 la valutazione non copre il secondo paese\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: valutazione sul trasferimento; accordo sul trattamento, appendice D\nVerifica: Il deliverable afferma che la valutazione sul trasferimento non riguarda il paese del sub-responsabile.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la scheda del registro delle attività di trattamento non riporta il nuovo trattamento e dichiara l'assenza di trasferimenti verso paesi terzi.",
+      "pass_condition": "compaiono entrambi gli elementi.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "scheda del trattamento; art. 30, par. 1",
+      "severity": "alta",
+      "raw_text": "B.24 il registro non copre il nuovo trattamento\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: scheda del trattamento; art. 30, par. 1\nVerifica: Il deliverable afferma che la scheda del registro delle attività di trattamento non riporta il nuovo trattamento e dichiara l'assenza di trasferimenti verso paesi terzi.\nPass se: compaiono entrambi gli elementi.\nFail se: manca uno dei due elementi."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'informativa in uso non contiene la finalità di punteggio né il trasferimento verso paesi terzi, e che dichiara il contrario di quanto il progetto prevede.",
+      "pass_condition": "compaiono entrambi gli elementi, le mancanze e la presenza di dichiarazioni contrarie.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "informativa §§ 5 e 9; artt. 13 e 22",
+      "severity": "alta",
+      "raw_text": "B.25 l'informativa non copre il punteggio né il trasferimento\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: informativa §§ 5 e 9; artt. 13 e 22\nVerifica: Il deliverable afferma che l'informativa in uso non contiene la finalità di punteggio né il trasferimento verso paesi terzi, e che dichiara il contrario di quanto il progetto prevede.\nPass se: compaiono entrambi gli elementi, le mancanze e la presenza di dichiarazioni contrarie.\nFail se: manca uno dei due elementi."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la finestra di addestramento del modello eccede il termine di conservazione dichiarato dalla valutazione.",
+      "pass_condition": "compare quell'affermazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "DPIA § 3; specifica funzionale §§ 4.1 e 4.2",
+      "severity": "alta",
+      "raw_text": "B.26 incoerenza fra conservazione e addestramento\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: DPIA § 3; specifica funzionale §§ 4.1 e 4.2\nVerifica: Il deliverable afferma che la finestra di addestramento del modello eccede il termine di conservazione dichiarato dalla valutazione.\nPass se: compare quell'affermazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable collega l'incoerenza sulla conservazione al rischio censito nel registro sulla conservazione oltre il termine negli ambienti di addestramento.",
+      "pass_condition": "compare il collegamento fra l'incoerenza e quella riga del registro.",
+      "fail_condition": "il collegamento non compare.",
+      "indifferent": null,
+      "source": "registro dei rischi, riga R6",
+      "severity": "media",
+      "raw_text": "B.27 conferma dell'incoerenza nel registro dei rischi\nissue: I-11 · tipo: attribuzione · gravità: media · judge: sì · fonte: registro dei rischi, riga R6\nVerifica: Il deliverable collega l'incoerenza sulla conservazione al rischio censito nel registro sulla conservazione oltre il termine negli ambienti di addestramento.\nPass se: compare il collegamento fra l'incoerenza e quella riga del registro.\nFail se: il collegamento non compare."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il responsabile della protezione dei dati non è stato consultato durante lo svolgimento della valutazione e che il suo parere non risulta.",
+      "pass_condition": "compaiono entrambi gli elementi.",
+      "fail_condition": "manca uno dei due elementi, oppure la consultazione è presentata come avvenuta.",
+      "indifferent": null,
+      "source": "DPIA, frontespizio; messaggio del DPO; art. 35, par. 2",
+      "severity": "alta",
+      "raw_text": "B.28 il responsabile della protezione dei dati non è stato consultato\nissue: I-12 · tipo: presenza · gravità: alta · judge: sì · fonte: DPIA, frontespizio; messaggio del DPO; art. 35, par. 2\nVerifica: Il deliverable afferma che il responsabile della protezione dei dati non è stato consultato durante lo svolgimento della valutazione e che il suo parere non risulta.\nPass se: compaiono entrambi gli elementi.\nFail se: manca uno dei due elementi, oppure la consultazione è presentata come avvenuta."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la messa a disposizione del documento sul repository condiviso equivale alla consultazione del responsabile della protezione dei dati.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che la messa a disposizione del documento ha assolto l'obbligo di consultazione.",
+      "indifferent": null,
+      "source": "nota del responsabile di progetto § 5",
+      "severity": "media",
+      "raw_text": "B.29 divieto di ritenere sanata la consultazione\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: nota del responsabile di progetto § 5\nVerifica: Il deliverable non afferma che la messa a disposizione del documento sul repository condiviso equivale alla consultazione del responsabile della protezione dei dati.\nPass se: quell'affermazione non compare.\nFail se: si afferma che la messa a disposizione del documento ha assolto l'obbligo di consultazione."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota secondo cui la valutazione d'impatto copre l'intero progetto è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione è errata o da correggere.",
+      "fail_condition": "l'indicazione non compare, oppure l'affermazione è confermata.",
+      "indifferent": null,
+      "source": "nota del responsabile di progetto § 1",
+      "severity": "alta",
+      "raw_text": "B.30 correzione: ambito della valutazione\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del responsabile di progetto § 1\nVerifica: Il deliverable afferma che l'affermazione della nota secondo cui la valutazione d'impatto copre l'intero progetto è errata.\nPass se: compare l'indicazione che quell'affermazione è errata o da correggere.\nFail se: l'indicazione non compare, oppure l'affermazione è confermata."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota secondo cui la presenza della revisione umana esclude la disciplina delle decisioni automatizzate è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione è errata o da correggere.",
+      "fail_condition": "l'indicazione non compare, oppure l'affermazione è confermata.",
+      "indifferent": null,
+      "source": "nota del responsabile di progetto § 2",
+      "severity": "alta",
+      "raw_text": "B.31 correzione: effetto della revisione umana\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del responsabile di progetto § 2\nVerifica: Il deliverable afferma che l'affermazione della nota secondo cui la presenza della revisione umana esclude la disciplina delle decisioni automatizzate è errata.\nPass se: compare l'indicazione che quell'affermazione è errata o da correggere.\nFail se: l'indicazione non compare, oppure l'affermazione è confermata."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota secondo cui le clausole firmate coprono tutti i trasferimenti è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione è errata o da correggere.",
+      "fail_condition": "l'indicazione non compare, oppure l'affermazione è confermata.",
+      "indifferent": null,
+      "source": "nota del responsabile di progetto § 3",
+      "severity": "alta",
+      "raw_text": "B.32 correzione: copertura dei trasferimenti\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del responsabile di progetto § 3\nVerifica: Il deliverable afferma che l'affermazione della nota secondo cui le clausole firmate coprono tutti i trasferimenti è errata.\nPass se: compare l'indicazione che quell'affermazione è errata o da correggere.\nFail se: l'indicazione non compare, oppure l'affermazione è confermata."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione della nota secondo cui il termine per opporsi al sub-responsabile non è ancora decorso è errata.",
+      "pass_condition": "compare l'indicazione che quell'affermazione è errata, o che il termine è scaduto.",
+      "fail_condition": "l'indicazione non compare, oppure l'affermazione è confermata.",
+      "indifferent": null,
+      "source": "nota del responsabile di progetto § 4; accordo sul trattamento, art. 5.2",
+      "severity": "alta",
+      "raw_text": "B.33 correzione: termine di opposizione\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del responsabile di progetto § 4; accordo sul trattamento, art. 5.2\nVerifica: Il deliverable afferma che l'affermazione della nota secondo cui il termine per opporsi al sub-responsabile non è ancora decorso è errata.\nPass se: compare l'indicazione che quell'affermazione è errata, o che il termine è scaduto.\nFail se: l'indicazione non compare, oppure l'affermazione è confermata."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta l'affermazione secondo cui la comunicazione del sub-responsabile ha rispettato il preavviso di trenta giorni.",
+      "pass_condition": "quell'affermazione non è presentata come errata.",
+      "fail_condition": "si afferma che il preavviso non è stato rispettato.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, art. 5.2; nota del responsabile di progetto § 4",
+      "severity": "media",
+      "raw_text": "B.34 simmetria: preavviso rispettato\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: accordo sul trattamento, art. 5.2; nota del responsabile di progetto § 4\nVerifica: Il deliverable non contesta l'affermazione secondo cui la comunicazione del sub-responsabile ha rispettato il preavviso di trenta giorni.\nPass se: quell'affermazione non è presentata come errata.\nFail se: si afferma che il preavviso non è stato rispettato."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica fra gli elementi mancanti il parere del responsabile della protezione dei dati e la descrizione della logica di formazione del punteggio.",
+      "pass_condition": "compaiono entrambe le voci fra gli elementi mancanti.",
+      "fail_condition": "manca una delle due voci.",
+      "indifferent": null,
+      "source": "messaggio del DPO; specifica funzionale § 2",
+      "severity": "alta",
+      "raw_text": "B.35 elementi mancanti: parere e logica del punteggio\nissue: I-16 · tipo: presenza · gravità: alta · judge: sì · fonte: messaggio del DPO; specifica funzionale § 2\nVerifica: Il deliverable indica fra gli elementi mancanti il parere del responsabile della protezione dei dati e la descrizione della logica di formazione del punteggio.\nPass se: compaiono entrambe le voci fra gli elementi mancanti.\nFail se: manca una delle due voci."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable indica fra gli elementi mancanti il contratto con la fonte esterna degli indicatori e la documentazione del quadro normativo dei paesi di destinazione.",
+      "pass_condition": "compaiono entrambe le voci fra gli elementi mancanti.",
+      "fail_condition": "manca una delle due voci.",
+      "indifferent": null,
+      "source": "specifica funzionale § 2; valutazione sul trasferimento § 3",
+      "severity": "media",
+      "raw_text": "B.36 elementi mancanti: fonte esterna e quadro normativo\nissue: I-16 · tipo: presenza · gravità: media · judge: sì · fonte: specifica funzionale § 2; valutazione sul trasferimento § 3\nVerifica: Il deliverable indica fra gli elementi mancanti il contratto con la fonte esterna degli indicatori e la documentazione del quadro normativo dei paesi di destinazione.\nPass se: compaiono entrambe le voci fra gli elementi mancanti.\nFail se: manca una delle due voci."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come rilievo il fatto che il fornitore non sia stabilito nell'Unione europea.",
+      "pass_condition": "quel fatto non è presentato come rilievo.",
+      "fail_condition": "si afferma che la mancanza di stabilimento nell'Unione è un difetto del pacchetto.",
+      "indifferent": null,
+      "source": "accordo di trasferimento, appendice A",
+      "severity": "media",
+      "raw_text": "B.37 simmetria: fornitore non stabilito nell'Unione\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: accordo di trasferimento, appendice A\nVerifica: Il deliverable non presenta come rilievo il fatto che il fornitore non sia stabilito nell'Unione europea.\nPass se: quel fatto non è presentato come rilievo.\nFail se: si afferma che la mancanza di stabilimento nell'Unione è un difetto del pacchetto."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che l'autorità di controllo vieterebbe il trattamento o irrogherebbe una sanzione.",
+      "pass_condition": "nessuna delle due affermazioni compare.",
+      "fail_condition": "si afferma che l'autorità vieterebbe il trattamento o irrogherebbe una sanzione.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "B.38 presunzione: esito davanti all'autorità\nissue: I-15 · tipo: assenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: Il deliverable non afferma che l'autorità di controllo vieterebbe il trattamento o irrogherebbe una sanzione.\nPass se: nessuna delle due affermazioni compare.\nFail se: si afferma che l'autorità vieterebbe il trattamento o irrogherebbe una sanzione."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il fornitore accetterà le modifiche richieste né che i dati sono già stati oggetto di accesso da parte di autorità del paese di destinazione.",
+      "pass_condition": "nessuna delle due affermazioni compare.",
+      "fail_condition": "si afferma che il fornitore accetterà le modifiche, o che gli accessi si sono già verificati.",
+      "indifferent": null,
+      "source": "prompt; valutazione sul trasferimento § 3",
+      "severity": "alta",
+      "raw_text": "B.39 presunzione: condotta del fornitore e accessi avvenuti\nissue: I-15 · tipo: assenza · gravità: alta · judge: sì · fonte: prompt; valutazione sul trasferimento § 3\nVerifica: Il deliverable non afferma che il fornitore accetterà le modifiche richieste né che i dati sono già stati oggetto di accesso da parte di autorità del paese di destinazione.\nPass se: nessuna delle due affermazioni compare.\nFail se: si afferma che il fornitore accetterà le modifiche, o che gli accessi si sono già verificati."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta la certificazione di sicurezza del fornitore come difetto del pacchetto.",
+      "pass_condition": "la certificazione non compare fra i rilievi.",
+      "fail_condition": "la certificazione è presentata come difetto o come elemento insufficiente in se'.",
+      "indifferent": null,
+      "source": "accordo di trasferimento, appendice C",
+      "severity": "alta",
+      "raw_text": "B.40 sovra-segnalazione: certificazione di sicurezza\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: accordo di trasferimento, appendice C\nVerifica: Il deliverable non presenta la certificazione di sicurezza del fornitore come difetto del pacchetto.\nPass se: la certificazione non compare fra i rilievi.\nFail se: la certificazione è presentata come difetto o come elemento insufficiente in se'."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come rilievo la scala qualitativa di valutazione del rischio adottata dal registro.",
+      "pass_condition": "la metodologia di valutazione non compare fra i rilievi.",
+      "fail_condition": "si rileva che la scala qualitativa è inadatta o che serve una valutazione quantitativa.",
+      "indifferent": null,
+      "source": "registro dei rischi",
+      "severity": "alta",
+      "raw_text": "B.41 sovra-segnalazione: scala qualitativa del rischio\nissue: N-02 · tipo: assenza · gravità: alta · judge: sì · fonte: registro dei rischi\nVerifica: Il deliverable non presenta come rilievo la scala qualitativa di valutazione del rischio adottata dal registro.\nPass se: la metodologia di valutazione non compare fra i rilievi.\nFail se: si rileva che la scala qualitativa è inadatta o che serve una valutazione quantitativa."
+    },
+    {
+      "id": "B.42",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come rilievo la comunicazione con cui il fornitore ha aggiunto il sub-responsabile.",
+      "pass_condition": "la comunicazione non compare fra i rilievi.",
+      "fail_condition": "si rileva che la comunicazione era irregolare, tardiva o priva di effetto.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, art. 5.2 e appendice D",
+      "severity": "alta",
+      "raw_text": "B.42 sovra-segnalazione: comunicazione del sub-responsabile\nissue: N-03 · tipo: assenza · gravità: alta · judge: sì · fonte: accordo sul trattamento, art. 5.2 e appendice D\nVerifica: Il deliverable non presenta come rilievo la comunicazione con cui il fornitore ha aggiunto il sub-responsabile.\nPass se: la comunicazione non compare fra i rilievi.\nFail se: si rileva che la comunicazione era irregolare, tardiva o priva di effetto."
+    },
+    {
+      "id": "B.43",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non qualifica i dati di misura oraria del consumo come categoria particolare di dati.",
+      "pass_condition": "quella qualificazione non compare.",
+      "fail_condition": "si afferma che i dati di misura oraria sono categorie particolari di dati o rientrano nell'articolo 9.",
+      "indifferent": null,
+      "source": "DPIA § 2.4; art. 9",
+      "severity": "alta",
+      "raw_text": "B.43 sovra-segnalazione: dati di misura come categoria particolare\nissue: N-04 · tipo: assenza · gravità: alta · judge: sì · fonte: DPIA § 2.4; art. 9\nVerifica: Il deliverable non qualifica i dati di misura oraria del consumo come categoria particolare di dati.\nPass se: quella qualificazione non compare.\nFail se: si afferma che i dati di misura oraria sono categorie particolari di dati o rientrano nell'articolo 9."
+    },
+    {
+      "id": "B.44",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la valutazione d'impatto non fosse dovuta né che la valutazione della soglia sia errata.",
+      "pass_condition": "nessuna delle due affermazioni compare.",
+      "fail_condition": "si afferma che la valutazione d'impatto non era richiesta, o che l'analisi della soglia è sbagliata.",
+      "indifferent": null,
+      "source": "DPIA § 1",
+      "severity": "alta",
+      "raw_text": "B.44 sovra-segnalazione: necessità della valutazione\nissue: N-05 · tipo: assenza · gravità: alta · judge: sì · fonte: DPIA § 1\nVerifica: Il deliverable non afferma che la valutazione d'impatto non fosse dovuta né che la valutazione della soglia sia errata.\nPass se: nessuna delle due affermazioni compare.\nFail se: si afferma che la valutazione d'impatto non era richiesta, o che l'analisi della soglia è sbagliata."
+    },
+    {
+      "id": "B.45",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come rilievo la scelta di non raccogliere il parere degli interessati.",
+      "pass_condition": "quella scelta non compare fra i rilievi.",
+      "fail_condition": "si rileva che il parere degli interessati andava raccolto.",
+      "indifferent": null,
+      "source": "DPIA § 8; art. 35, par. 9",
+      "severity": "alta",
+      "raw_text": "B.45 sovra-segnalazione: parere degli interessati\nissue: N-06 · tipo: assenza · gravità: alta · judge: sì · fonte: DPIA § 8; art. 35, par. 9\nVerifica: Il deliverable non presenta come rilievo la scelta di non raccogliere il parere degli interessati.\nPass se: quella scelta non compare fra i rilievi.\nFail se: si rileva che il parere degli interessati andava raccolto."
+    },
+    {
+      "id": "B.46",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta come rilievo autonomo la circostanza che il fornitore sia stabilito in un paese terzo.",
+      "pass_condition": "quella circostanza non compare fra i rilievi.",
+      "fail_condition": "si rileva che il fornitore non poteva essere designato responsabile perché stabilito fuori dall'Unione. C. DATE E VALORI CALCOLATI",
+      "indifferent": null,
+      "source": "accordo di trasferimento, appendice A",
+      "severity": "media",
+      "raw_text": "B.46 sovra-segnalazione: stabilimento del fornitore\nissue: N-07 · tipo: assenza · gravità: media · judge: sì · fonte: accordo di trasferimento, appendice A\nVerifica: Il deliverable non presenta come rilievo autonomo la circostanza che il fornitore sia stabilito in un paese terzo.\nPass se: quella circostanza non compare fra i rilievi.\nFail se: si rileva che il fornitore non poteva essere designato responsabile perché stabilito fuori dall'Unione."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica due come numero delle finalità valutate dalla valutazione d'impatto e tre come numero delle finalità previste dalla specifica funzionale.",
+      "pass_condition": "compaiono entrambi i numeri, due e tre, riferiti rispettivamente alla valutazione e alla specifica.",
+      "fail_condition": "manca uno dei due numeri, oppure sono indicati numeri diversi.",
+      "indifferent": null,
+      "source": "DPIA § 2.1; specifica funzionale § 1",
+      "severity": "alta",
+      "raw_text": "C.1 finalità valutate e finalità previste\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: DPIA § 2.1; specifica funzionale § 1\nVerifica: Il deliverable indica due come numero delle finalità valutate dalla valutazione d'impatto e tre come numero delle finalità previste dalla specifica funzionale.\nPass se: compaiono entrambi i numeri, due e tre, riferiti rispettivamente alla valutazione e alla specifica.\nFail se: manca uno dei due numeri, oppure sono indicati numeri diversi."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica sette come numero dei gruppi di variabili in ingresso previsti dalla specifica funzionale 2.1.",
+      "pass_condition": "compare il numero sette riferito ai gruppi di variabili della specifica.",
+      "fail_condition": "compare un numero diverso, oppure il numero non è indicato.",
+      "indifferent": null,
+      "source": "specifica funzionale § 2",
+      "severity": "alta",
+      "raw_text": "C.2 categorie di dati della specifica funzionale\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: specifica funzionale § 2\nVerifica: Il deliverable indica sette come numero dei gruppi di variabili in ingresso previsti dalla specifica funzionale 2.1.\nPass se: compare il numero sette riferito ai gruppi di variabili della specifica.\nFail se: compare un numero diverso, oppure il numero non è indicato."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica sei come numero dei gruppi di variabili previsti dalla specifica funzionale 2.1.",
+      "pass_condition": "quel numero non compare come perimetro della specifica funzionale 2.1.",
+      "fail_condition": "compare il numero sei come perimetro della specifica funzionale 2.1.",
+      "indifferent": "il richiamo di sei categorie come perimetro della valutazione d'impatto.",
+      "source": "DPIA § 2.3; specifica funzionale § 2",
+      "severity": "media",
+      "raw_text": "C.3 derivazione errata: sei categorie\nissue: I-02 · tipo: assenza · gravità: media · judge: sì · fonte: DPIA § 2.3; specifica funzionale § 2\nVerifica: Il deliverable non indica sei come numero dei gruppi di variabili previsti dalla specifica funzionale 2.1.\nPass se: quel numero non compare come perimetro della specifica funzionale 2.1.\nFail se: compare il numero sei come perimetro della specifica funzionale 2.1.\nIndifferente: il richiamo di sei categorie come perimetro della valutazione d'impatto."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica cinquantasei come numero di giorni fra l'approvazione della valutazione d'impatto e la specifica funzionale 2.1.",
+      "pass_condition": "compare il numero cinquantasei riferito a quell'intervallo.",
+      "fail_condition": "compare un numero diverso, oppure l'intervallo non è quantificato.",
+      "indifferent": "l'espressione dell'intervallo in mesi accanto al numero di giorni.",
+      "source": "DPIA, frontespizio; specifica funzionale, cronologia",
+      "severity": "media",
+      "raw_text": "C.4 giorni fra approvazione e modifica\nissue: I-02 · tipo: valore · gravità: media · judge: no · fonte: DPIA, frontespizio; specifica funzionale, cronologia\nVerifica: Il deliverable indica cinquantasei come numero di giorni fra l'approvazione della valutazione d'impatto e la specifica funzionale 2.1.\nPass se: compare il numero cinquantasei riferito a quell'intervallo.\nFail se: compare un numero diverso, oppure l'intervallo non è quantificato.\nIndifferente: l'espressione dell'intervallo in mesi accanto al numero di giorni."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 97,4% come quota dei punteggi confermati dall'operatore nel collaudo.",
+      "pass_condition": "compare il valore 97,4% riferito alle conferme.",
+      "fail_condition": "compare un valore diverso, oppure la quota non è indicata.",
+      "indifferent": null,
+      "source": "procedura di riesame § 5",
+      "severity": "alta",
+      "raw_text": "C.5 quota di conferme del riesame\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: procedura di riesame § 5\nVerifica: Il deliverable indica 97,4% come quota dei punteggi confermati dall'operatore nel collaudo.\nPass se: compare il valore 97,4% riferito alle conferme.\nFail se: compare un valore diverso, oppure la quota non è indicata."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone la quota di conferme come rapporto fra 12.126 conferme e 12.450 punteggi sopra soglia.",
+      "pass_condition": "compaiono entrambi i valori come termini del rapporto.",
+      "fail_condition": "manca uno dei due valori.",
+      "indifferent": null,
+      "source": "procedura di riesame § 5",
+      "severity": "alta",
+      "raw_text": "C.6 passaggio: conferme su punteggi\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura di riesame § 5\nVerifica: Il deliverable espone la quota di conferme come rapporto fra 12.126 conferme e 12.450 punteggi sopra soglia.\nPass se: compaiono entrambi i valori come termini del rapporto.\nFail se: manca uno dei due valori."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica quarantuno secondi come tempo medio di riesame rilevato nel collaudo.",
+      "pass_condition": "compare il valore quarantuno secondi riferito al tempo medio.",
+      "fail_condition": "compare un valore diverso, oppure il tempo medio non è indicato.",
+      "indifferent": null,
+      "source": "procedura di riesame § 5",
+      "severity": "alta",
+      "raw_text": "C.7 tempo medio di riesame\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: procedura di riesame § 5\nVerifica: Il deliverable indica quarantuno secondi come tempo medio di riesame rilevato nel collaudo.\nPass se: compare il valore quarantuno secondi riferito al tempo medio.\nFail se: compare un valore diverso, oppure il tempo medio non è indicato."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable confronta il tempo medio rilevato con il termine di quattro ore lavorative previsto dalla procedura.",
+      "pass_condition": "compaiono entrambi i termini del confronto.",
+      "fail_condition": "il confronto non compare.",
+      "indifferent": null,
+      "source": "procedura di riesame §§ 3 e 5",
+      "severity": "alta",
+      "raw_text": "C.8 confronto fra tempo previsto e tempo rilevato\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura di riesame §§ 3 e 5\nVerifica: Il deliverable confronta il tempo medio rilevato con il termine di quattro ore lavorative previsto dalla procedura.\nPass se: compaiono entrambi i termini del confronto.\nFail se: il confronto non compare."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica tre come numero dei rischi di livello alto censiti nel registro.",
+      "pass_condition": "compare il numero tre riferito ai rischi di livello alto.",
+      "fail_condition": "compare un numero diverso, oppure il numero non è indicato.",
+      "indifferent": null,
+      "source": "registro dei rischi",
+      "severity": "alta",
+      "raw_text": "C.9 rischi di livello alto\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: registro dei rischi\nVerifica: Il deliverable indica tre come numero dei rischi di livello alto censiti nel registro.\nPass se: compare il numero tre riferito ai rischi di livello alto.\nFail se: compare un numero diverso, oppure il numero non è indicato."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica due come numero dei rischi di livello alto.",
+      "pass_condition": "quel numero non compare come numero dei rischi alti.",
+      "fail_condition": "compare il numero due come numero dei rischi di livello alto.",
+      "indifferent": null,
+      "source": "registro dei rischi",
+      "severity": "media",
+      "raw_text": "C.10 derivazione errata: due rischi alti\nissue: I-05 · tipo: assenza · gravità: media · judge: sì · fonte: registro dei rischi\nVerifica: Il deliverable non indica due come numero dei rischi di livello alto.\nPass se: quel numero non compare come numero dei rischi alti.\nFail se: compare il numero due come numero dei rischi di livello alto."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica «alto» come livello residuo atteso più elevato risultante dal registro dei rischi.",
+      "pass_condition": "compare il livello alto riferito al residuo calcolato dal registro.",
+      "fail_condition": "compare un livello diverso, oppure il livello residuo del registro non è indicato.",
+      "indifferent": null,
+      "source": "registro dei rischi, riepilogo",
+      "severity": "alta",
+      "raw_text": "C.11 livello residuo calcolato dal registro\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: registro dei rischi, riepilogo\nVerifica: Il deliverable indica «alto» come livello residuo atteso più elevato risultante dal registro dei rischi.\nPass se: compare il livello alto riferito al residuo calcolato dal registro.\nFail se: compare un livello diverso, oppure il livello residuo del registro non è indicato."
+    },
+    {
+      "id": "C.12",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 21 febbraio 2031 come termine per l'opposizione al sub-responsabile.",
+      "pass_condition": "compare la data del 21 febbraio 2031 riferita a quel termine.",
+      "fail_condition": "compare una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, art. 5.2; appendice D",
+      "severity": "alta",
+      "raw_text": "C.12 termine di opposizione al sub-responsabile\nissue: I-13 · tipo: valore · gravità: alta · judge: no · fonte: accordo sul trattamento, art. 5.2; appendice D\nVerifica: Il deliverable indica il 21 febbraio 2031 come termine per l'opposizione al sub-responsabile.\nPass se: compare la data del 21 febbraio 2031 riferita a quel termine.\nFail se: compare una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.13",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine come trenta giorni dalla comunicazione del 22 gennaio 2031.",
+      "pass_condition": "compaiono i trenta giorni e la decorrenza dal 22 gennaio 2031.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "accordo sul trattamento, art. 5.2",
+      "severity": "alta",
+      "raw_text": "C.13 passaggio: trenta giorni dalla comunicazione\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: accordo sul trattamento, art. 5.2\nVerifica: Il deliverable espone il termine come trenta giorni dalla comunicazione del 22 gennaio 2031.\nPass se: compaiono i trenta giorni e la decorrenza dal 22 gennaio 2031.\nFail se: manca uno dei due elementi."
+    },
+    {
+      "id": "C.14",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica ventiquattro mesi come conservazione dichiarata e sessanta mesi come finestra di addestramento.",
+      "pass_condition": "compaiono entrambi i valori, ventiquattro e sessanta mesi, riferiti rispettivamente alla conservazione e all'addestramento.",
+      "fail_condition": "manca uno dei due valori.",
+      "indifferent": null,
+      "source": "DPIA § 3; specifica funzionale § 4.1",
+      "severity": "alta",
+      "raw_text": "C.14 conservazione dichiarata e finestra di addestramento\nissue: I-11 · tipo: valore · gravità: alta · judge: no · fonte: DPIA § 3; specifica funzionale § 4.1\nVerifica: Il deliverable indica ventiquattro mesi come conservazione dichiarata e sessanta mesi come finestra di addestramento.\nPass se: compaiono entrambi i valori, ventiquattro e sessanta mesi, riferiti rispettivamente alla conservazione e all'addestramento.\nFail se: manca uno dei due valori."
+    },
+    {
+      "id": "C.15",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica trentasei come numero di mesi di cui la finestra di addestramento eccede la conservazione dichiarata.",
+      "pass_condition": "compare il numero trentasei riferito a quell'eccedenza.",
+      "fail_condition": "compare un numero diverso, oppure l'eccedenza non è quantificata.",
+      "indifferent": null,
+      "source": "calcolo",
+      "severity": "media",
+      "raw_text": "C.15 eccedenza in mesi\nissue: I-11 · tipo: valore · gravità: media · judge: no · fonte: calcolo\nVerifica: Il deliverable indica trentasei come numero di mesi di cui la finestra di addestramento eccede la conservazione dichiarata.\nPass se: compare il numero trentasei riferito a quell'eccedenza.\nFail se: compare un numero diverso, oppure l'eccedenza non è quantificata."
+    },
+    {
+      "id": "C.16",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica ventisei come numero di giorni fra la data di riferimento e l'avvio in produzione previsto.",
+      "pass_condition": "compare il numero ventisei riferito a quell'intervallo.",
+      "fail_condition": "compare un numero diverso, oppure l'intervallo non è quantificato.",
+      "indifferent": "l'espressione dell'intervallo in settimane accanto al numero di giorni.",
+      "source": "prompt; nota del responsabile di progetto",
+      "severity": "media",
+      "raw_text": "C.16 giorni fra data di riferimento e avvio previsto\nissue: I-06 · tipo: valore · gravità: media · judge: no · fonte: prompt; nota del responsabile di progetto\nVerifica: Il deliverable indica ventisei come numero di giorni fra la data di riferimento e l'avvio in produzione previsto.\nPass se: compare il numero ventisei riferito a quell'intervallo.\nFail se: compare un numero diverso, oppure l'intervallo non è quantificato.\nIndifferente: l'espressione dell'intervallo in settimane accanto al numero di giorni."
+    },
+    {
+      "id": "C.17",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 4 aprile 2029 come data della versione di informativa in uso.",
+      "pass_condition": "compare la data del 4 aprile 2029 riferita all'informativa.",
+      "fail_condition": "compare una data diversa, oppure la data non è indicata.",
+      "indifferent": null,
+      "source": "informativa",
+      "severity": "media",
+      "raw_text": "C.17 età dell'informativa in uso\nissue: I-11 · tipo: valore · gravità: media · judge: no · fonte: informativa\nVerifica: Il deliverable indica il 4 aprile 2029 come data della versione di informativa in uso.\nPass se: compare la data del 4 aprile 2029 riferita all'informativa.\nFail se: compare una data diversa, oppure la data non è indicata."
+    },
+    {
+      "id": "C.18",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica due come numero dei paesi terzi verso cui i dati sono trasferiti o resi accessibili.",
+      "pass_condition": "compare il numero due riferito ai paesi terzi coinvolti.",
+      "fail_condition": "compare un numero diverso, oppure il numero non è indicato.",
+      "indifferent": null,
+      "source": "accordo di trasferimento, appendice B; accordo sul trattamento, appendice D",
+      "severity": "alta",
+      "raw_text": "C.18 paesi terzi coinvolti\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: accordo di trasferimento, appendice B; accordo sul trattamento, appendice D\nVerifica: Il deliverable indica due come numero dei paesi terzi verso cui i dati sono trasferiti o resi accessibili.\nPass se: compare il numero due riferito ai paesi terzi coinvolti.\nFail se: compare un numero diverso, oppure il numero non è indicato."
+    },
+    {
+      "id": "C.19",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che nessuno dei due paesi terzi coinvolti è coperto da una decisione di adeguatezza della Commissione europea.",
+      "pass_condition": "compare quell'affermazione riferita a entrambi i paesi.",
+      "fail_condition": "l'affermazione non compare, oppure è riferita a uno solo dei due paesi.",
+      "indifferent": null,
+      "source": "valutazione sul trasferimento § 2",
+      "severity": "alta",
+      "raw_text": "C.19 assenza di decisione di adeguatezza\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: valutazione sul trasferimento § 2\nVerifica: Il deliverable afferma che nessuno dei due paesi terzi coinvolti è coperto da una decisione di adeguatezza della Commissione europea.\nPass se: compare quell'affermazione riferita a entrambi i paesi.\nFail se: l'affermazione non compare, oppure è riferita a uno solo dei due paesi."
+    }
+  ]
+}

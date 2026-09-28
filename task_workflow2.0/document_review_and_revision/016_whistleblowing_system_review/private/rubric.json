@@ -1,0 +1,530 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-016",
+  "title": "Compliance. Riesame del sistema di segnalazione interna",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 32,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable è un unico documento di testo che contiene una sezione di rilievi.",
+      "pass_condition": "è presente un unico documento di testo con una sezione di rilievi.",
+      "fail_condition": "manca il documento, oppure i rilievi non sono raccolti in una sezione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 nota dei rilievi consegnata\nissue: — · tipo: presenza · gravità: alta · judge: no · fonte: prompt\nVerifica: il deliverable è un unico documento di testo che contiene una sezione di rilievi.\nPass se: è presente un unico documento di testo con una sezione di rilievi.\nFail se: manca il documento, oppure i rilievi non sono raccolti in una sezione."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "i rilievi sono presentati in ordine di priorità.",
+      "pass_condition": "l'ordine dei rilievi è dichiarato, per numerazione o per etichette di gravità.",
+      "fail_condition": "i rilievi compaiono senza ordine dichiarato.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 ordine di priorità\nissue: — · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: i rilievi sono presentati in ordine di priorità.\nPass se: l'ordine dei rilievi è dichiarato, per numerazione o per etichette di gravità.\nFail se: i rilievi compaiono senza ordine dichiarato."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni rilievo riporta un riferimento a un paragrafo della procedura PG-14 o al titolo di uno dei tre documenti allegati.",
+      "pass_condition": "in ciascun rilievo compare uno dei due riferimenti.",
+      "fail_condition": "almeno un rilievo è privo di riferimento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 ancoraggio di ogni rilievo\nissue: — · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: ogni rilievo riporta un riferimento a un paragrafo della procedura PG-14 o al titolo di uno dei tre documenti allegati.\nPass se: in ciascun rilievo compare uno dei due riferimenti.\nFail se: almeno un rilievo è privo di riferimento."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contiene testo emendato della procedura.",
+      "pass_condition": "nessun paragrafo della procedura è riprodotto in versione riscritta.",
+      "fail_condition": "almeno un paragrafo è riprodotto in versione riscritta.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 nessun testo emendato\nissue: — · tipo: assenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: il deliverable non contiene testo emendato della procedura.\nPass se: nessun paragrafo della procedura è riprodotto in versione riscritta.\nFail se: almeno un paragrafo è riprodotto in versione riscritta."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento appartiene all'elenco.",
+      "fail_condition": "compare almeno un riferimento fuori elenco.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento appartiene all'elenco.\nFail se: compare almeno un riferimento fuori elenco."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la nota usa e cita procedura, verbale del Consiglio e modulo di segnalazione.",
+      "pass_condition": "ciascuno dei tre documenti è richiamato almeno in un rilievo o in una verifica espressa.",
+      "fail_condition": "almeno uno dei tre documenti non è considerato. B. MERITO",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.6 copertura dei tre documenti\nissue: A-06 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: la nota usa e cita procedura, verbale del Consiglio e modulo di segnalazione.\nPass se: ciascuno dei tre documenti è richiamato almeno in un rilievo o in una verifica espressa.\nFail se: almeno uno dei tre documenti non è considerato."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la legittimazione a segnalare non può essere limitata ai lavoratori subordinati.",
+      "pass_condition": "la limitazione ai lavoratori subordinati è rilevata, con riferimento al § 4 della procedura. Varianti accettate: «la platea è troppo ristretta», «la limitazione ai lavoratori subordinati va rimossa», «devono poter segnalare anche soggetti non subordinati».",
+      "fail_condition": "il § 4 è indicato come privo di rilievi, oppure la limitazione non è menzionata.",
+      "indifferent": "la citazione dell'art. 3 del decreto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.1 platea dei segnalanti\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 4\nVerifica: il deliverable afferma che la legittimazione a segnalare non può essere limitata ai lavoratori subordinati.\nPass se: la limitazione ai lavoratori subordinati è rilevata, con riferimento al § 4 della procedura.\nVarianti accettate: «la platea è troppo ristretta», «la limitazione ai lavoratori subordinati va rimossa», «devono poter segnalare anche soggetti non subordinati».\nFail se: il § 4 è indicato come privo di rilievi, oppure la limitazione non è menzionata.\nIndifferente: la citazione dell'art. 3 del decreto."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable nomina almeno una categoria di persone da ammettere alla segnalazione oltre ai lavoratori subordinati.",
+      "pass_condition": "compare almeno una delle categorie ammesse. Varianti accettate: «lavoratori autonomi», «collaboratori», «liberi professionisti», «consulenti», «tirocinanti», «volontari», «azionisti», «persone con funzioni di amministrazione, direzione o controllo».",
+      "fail_condition": "nessuna di queste espressioni compare.",
+      "indifferent": "l'ordine e il numero delle categorie citate oltre alla prima.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.2 categorie da includere\nissue: I-01 · tipo: presenza · gravità: alta · judge: no · fonte: procedura, § 4\nVerifica: il deliverable nomina almeno una categoria di persone da ammettere alla segnalazione oltre ai lavoratori subordinati.\nPass se: compare almeno una delle categorie ammesse.\nVarianti accettate: «lavoratori autonomi», «collaboratori», «liberi professionisti», «consulenti», «tirocinanti», «volontari», «azionisti», «persone con funzioni di amministrazione, direzione o controllo».\nFail se: nessuna di queste espressioni compare.\nIndifferente: l'ordine e il numero delle categorie citate oltre alla prima."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il sistema deve consentire di segnalare anche in forma orale.",
+      "pass_condition": "la necessità della segnalazione orale è affermata. Varianti accettate: «segnalazione orale», «forma orale», «canale orale», «incontro diretto».",
+      "fail_condition": "il deliverable indica la sola forma scritta come sufficiente, oppure la forma orale non è menzionata.",
+      "indifferent": "la modalità tecnica suggerita (linea telefonica, messaggistica vocale, colloquio).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.3 forma orale\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 5\nVerifica: il deliverable afferma che il sistema deve consentire di segnalare anche in forma orale.\nPass se: la necessità della segnalazione orale è affermata.\nVarianti accettate: «segnalazione orale», «forma orale», «canale orale», «incontro diretto».\nFail se: il deliverable indica la sola forma scritta come sufficiente, oppure la forma orale non è menzionata.\nIndifferente: la modalità tecnica suggerita (linea telefonica, messaggistica vocale, colloquio)."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica sette giorni come termine per comunicare al segnalante il ricevimento della segnalazione.",
+      "pass_condition": "compare «sette giorni» oppure «7 giorni».",
+      "fail_condition": "compare un termine diverso, oppure nessun termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.4 avviso di ricevimento: valore atteso\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: procedura, § 8 lett. a); modulo MS-01\nVerifica: il deliverable indica sette giorni come termine per comunicare al segnalante il ricevimento della segnalazione.\nPass se: compare «sette giorni» oppure «7 giorni».\nFail se: compare un termine diverso, oppure nessun termine."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il termine di quindici giorni previsto dalla procedura va ridotto.",
+      "pass_condition": "quel termine è messo in discussione. Varianti accettate: «quindici giorni è troppo», «va portato a sette», «il termine va ridotto».",
+      "fail_condition": "il termine di quindici giorni non è messo in discussione.",
+      "indifferent": "il rilievo sulla ripetizione del termine nel modulo MS-01.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.5 avviso di ricevimento: rilievo\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 8 lett. a)\nVerifica: il deliverable afferma che il termine di quindici giorni previsto dalla procedura va ridotto.\nPass se: quel termine è messo in discussione.\nVarianti accettate: «quindici giorni è troppo», «va portato a sette», «il termine va ridotto».\nFail se: il termine di quindici giorni non è messo in discussione.\nIndifferente: il rilievo sulla ripetizione del termine nel modulo MS-01."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica tre mesi come termine per il riscontro al segnalante.",
+      "pass_condition": "compare «tre mesi» oppure «3 mesi».",
+      "fail_condition": "compare un termine diverso, oppure nessun termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.6 riscontro: valore atteso\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: procedura, § 8 lett. d)\nVerifica: il deliverable indica tre mesi come termine per il riscontro al segnalante.\nPass se: compare «tre mesi» oppure «3 mesi».\nFail se: compare un termine diverso, oppure nessun termine."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il termine di sei mesi previsto dalla procedura eccede quello di legge e va ridotto.",
+      "pass_condition": "l'eccedenza rispetto al termine di legge è rilevata, comunque formulata. Varianti accettate: «sei mesi eccedono i tre mesi di legge», «va riportato a tre mesi», «il termine della procedura è più lungo di quello previsto dal decreto».",
+      "fail_condition": "il termine di sei mesi non è messo in discussione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.7 riscontro: rilievo sul termine della procedura\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 8 lett. d)\nVerifica: il deliverable afferma che il termine di sei mesi previsto dalla procedura eccede quello di legge e va ridotto.\nPass se: l'eccedenza rispetto al termine di legge è rilevata, comunque formulata.\nVarianti accettate: «sei mesi eccedono i tre mesi di legge», «va riportato a tre mesi», «il termine della procedura è più lungo di quello previsto dal decreto».\nFail se: il termine di sei mesi non è messo in discussione."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che lo scadere del termine per il riscontro estingue l'obbligo di riscontro o preclude l'istruttoria.",
+      "pass_condition": "riferita a quel termine non compare alcuna espressione di perentorietà o di decadenza.",
+      "fail_condition": "compare una fra «termine perentorio», «a pena di decadenza», «la segnalazione decade», «l'istruttoria non può proseguire».",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.8 riscontro: non perentorietà\nissue: I-04 · tipo: assenza · gravità: media · judge: sì · fonte: procedura, § 8 lett. d)\nVerifica: il deliverable non afferma che lo scadere del termine per il riscontro estingue l'obbligo di riscontro o preclude l'istruttoria.\nPass se: riferita a quel termine non compare alcuna espressione di perentorietà o di decadenza.\nFail se: compare una fra «termine perentorio», «a pena di decadenza», «la segnalazione decade», «l'istruttoria non può proseguire»."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica cinque anni come limite di conservazione delle segnalazioni.",
+      "pass_condition": "compare «cinque anni» oppure «5 anni».",
+      "fail_condition": "compare un limite diverso, oppure nessun limite.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.9 conservazione: valore atteso\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: procedura, § 12\nVerifica: il deliverable indica cinque anni come limite di conservazione delle segnalazioni.\nPass se: compare «cinque anni» oppure «5 anni».\nFail se: compare un limite diverso, oppure nessun limite."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il limite di conservazione decorre dalla comunicazione al segnalante dell'esito finale.",
+      "pass_condition": "la decorrenza è ricondotta alla comunicazione dell'esito finale. Varianti accettate: «dalla comunicazione dell'esito finale», «dall'esito finale della procedura», «dalla comunicazione dell'esito al segnalante».",
+      "fail_condition": "la decorrenza è ricondotta al ricevimento della segnalazione o alla chiusura dell'istruttoria, oppure non è indicata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10 conservazione: decorrenza\nissue: I-05 · tipo: presenza · gravità: media · judge: sì · fonte: procedura, § 12\nVerifica: il deliverable afferma che il limite di conservazione decorre dalla comunicazione al segnalante dell'esito finale.\nPass se: la decorrenza è ricondotta alla comunicazione dell'esito finale.\nVarianti accettate: «dalla comunicazione dell'esito finale», «dall'esito finale della procedura», «dalla comunicazione dell'esito al segnalante».\nFail se: la decorrenza è ricondotta al ricevimento della segnalazione o alla chiusura dell'istruttoria, oppure non è indicata."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le comunicazioni prive dei dati identificativi del mittente devono essere registrate e conservate.",
+      "pass_condition": "riferita a quelle comunicazioni, la registrazione o la conservazione è affermata come dovuta. Varianti accettate: «vanno conservate», «vanno registrate», «la cancellazione immediata è un difetto», «non possono essere cancellate al ricevimento».",
+      "fail_condition": "il deliverable conferma la cancellazione immediata, oppure la previsione non è menzionata.",
+      "indifferent": "il richiamo alla possibilità di ritorsioni contro il segnalante identificato in seguito.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.11 anonime: registrazione e conservazione\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 12\nVerifica: il deliverable afferma che le comunicazioni prive dei dati identificativi del mittente devono essere registrate e conservate.\nPass se: riferita a quelle comunicazioni, la registrazione o la conservazione è affermata come dovuta.\nVarianti accettate: «vanno conservate», «vanno registrate», «la cancellazione immediata è un difetto», «non possono essere cancellate al ricevimento».\nFail se: il deliverable conferma la cancellazione immediata, oppure la previsione non è menzionata.\nIndifferente: il richiamo alla possibilità di ritorsioni contro il segnalante identificato in seguito."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'identità del segnalante non può essere indicata nella contestazione dell'addebito senza il consenso espresso del segnalante.",
+      "pass_condition": "riferito a quella comunicazione, il consenso del segnalante è richiesto. Varianti accettate: «consenso espresso del segnalante», «previo consenso del segnalante», «senza il consenso del segnalante non può essere rivelata».",
+      "fail_condition": "il § 9 è indicato come privo di rilievi, oppure il consenso non è menzionato.",
+      "indifferent": "il richiamo alla disciplina sui dati personali.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 identità nel procedimento disciplinare\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 9\nVerifica: il deliverable afferma che l'identità del segnalante non può essere indicata nella contestazione dell'addebito senza il consenso espresso del segnalante.\nPass se: riferito a quella comunicazione, il consenso del segnalante è richiesto.\nVarianti accettate: «consenso espresso del segnalante», «previo consenso del segnalante», «senza il consenso del segnalante non può essere rivelata».\nFail se: il § 9 è indicato come privo di rilievi, oppure il consenso non è menzionato.\nIndifferente: il richiamo alla disciplina sui dati personali."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, in mancanza del consenso, la segnalazione non è utilizzabile ai fini del procedimento disciplinare.",
+      "pass_condition": "l'inutilizzabilità è affermata. Varianti accettate: «non utilizzabile», «inutilizzabile», «non può essere posta a fondamento della contestazione».",
+      "fail_condition": "la conseguenza non compare.",
+      "indifferent": "la distinzione fra contestazione fondata sulla segnalazione e contestazione fondata su accertamenti ulteriori.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 conseguenza sull'utilizzabilità\nissue: I-07 · tipo: presenza · gravità: media · judge: sì · fonte: procedura, § 9\nVerifica: il deliverable afferma che, in mancanza del consenso, la segnalazione non è utilizzabile ai fini del procedimento disciplinare.\nPass se: l'inutilizzabilità è affermata.\nVarianti accettate: «non utilizzabile», «inutilizzabile», «non può essere posta a fondamento della contestazione».\nFail se: la conseguenza non compare.\nIndifferente: la distinzione fra contestazione fondata sulla segnalazione e contestazione fondata su accertamenti ulteriori."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la partecipazione del Direttore Risorse Umane al comitato disciplinare come rischio concreto di conflitto da presidiare, senza presentarla necessariamente come incompatibilità automatica.",
+      "pass_condition": "sono richiamati entrambi i ruoli e sono richieste misure di autonomia, astensione o gestione alternativa. Varianti accettate: «conflitto di interessi», «rischio per l'autonomia», «astensione», «gestore alternativo».",
+      "fail_condition": "la posizione non è esaminata, oppure è dichiarata automaticamente incompatibile senza valutare presidi e sostituzione.",
+      "indifferent": "la proposta di affidare la gestione a un soggetto esterno.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 autonomia del gestore\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, § 5; verbale del 18/03/2025, punto 3)\nVerifica: il deliverable qualifica la partecipazione del Direttore Risorse Umane al comitato disciplinare come rischio concreto di conflitto da presidiare, senza presentarla necessariamente come incompatibilità automatica.\nPass se: sono richiamati entrambi i ruoli e sono richieste misure di autonomia, astensione o gestione alternativa.\nVarianti accettate: «conflitto di interessi», «rischio per l'autonomia», «astensione», «gestore alternativo».\nFail se: la posizione non è esaminata, oppure è dichiarata automaticamente incompatibile senza valutare presidi e sostituzione.\nIndifferente: la proposta di affidare la gestione a un soggetto esterno."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la composizione del comitato disciplinare al verbale del Consiglio del 18 marzo 2025.",
+      "pass_condition": "il rilievo sul gestore richiama il verbale del 18 marzo 2025 o il punto 3) del suo ordine del giorno.",
+      "fail_condition": "il rilievo è ricondotto alla sola procedura.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 fonte del conflitto\nissue: I-08 · tipo: attribuzione · gravità: media · judge: sì · fonte: verbale del 18/03/2025, punto 3)\nVerifica: il deliverable riconduce la composizione del comitato disciplinare al verbale del Consiglio del 18 marzo 2025.\nPass se: il rilievo sul gestore richiama il verbale del 18 marzo 2025 o il punto 3) del suo ordine del giorno.\nFail se: il rilievo è ricondotto alla sola procedura."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che va individuato un sostituto del gestore per i casi in cui questi si trovi in conflitto di interessi.",
+      "pass_condition": "la necessità di un sostituto è affermata. Varianti accettate: «sostituto del gestore», «gestore supplente», «va previsto un sostituto».",
+      "fail_condition": "la mancanza del sostituto non è rilevata.",
+      "indifferent": "l'indicazione di chi debba essere il sostituto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 sostituto del gestore\nissue: I-08 · tipo: presenza · gravità: media · judge: sì · fonte: procedura, § 5 (omissione)\nVerifica: il deliverable afferma che va individuato un sostituto del gestore per i casi in cui questi si trovi in conflitto di interessi.\nPass se: la necessità di un sostituto è affermata.\nVarianti accettate: «sostituto del gestore», «gestore supplente», «va previsto un sostituto».\nFail se: la mancanza del sostituto non è rilevata.\nIndifferente: l'indicazione di chi debba essere il sostituto."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come difetto la scelta, prevista al § 7 della procedura, di non dare seguito alle segnalazioni anonime.",
+      "pass_condition": "la scelta di non trattare le anonime non compare fra i rilievi.",
+      "fail_condition": "quella scelta è indicata come difetto o come non conforme.",
+      "indifferent": "il rilievo, distinto, sulla loro conservazione (B.11).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 controlled non-issue: trattazione delle anonime\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: procedura, § 7\nVerifica: il deliverable non segnala come difetto la scelta, prevista al § 7 della procedura, di non dare seguito alle segnalazioni anonime.\nPass se: la scelta di non trattare le anonime non compare fra i rilievi.\nFail se: quella scelta è indicata come difetto o come non conforme.\nIndifferente: il rilievo, distinto, sulla loro conservazione (B.11)."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come difetto la sanzione disciplinare prevista al § 11 a carico del segnalante nei casi di responsabilità accertata per diffamazione o calunnia.",
+      "pass_condition": "quella sanzione non compare fra i rilievi.",
+      "fail_condition": "è indicata come ritorsiva, illegittima o da rimuovere.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 controlled non-issue: sanzione al segnalante\nissue: N-02 · tipo: assenza · gravità: alta · judge: sì · fonte: procedura, § 11\nVerifica: il deliverable non segnala come difetto la sanzione disciplinare prevista al § 11 a carico del segnalante nei casi di responsabilità accertata per diffamazione o calunnia.\nPass se: quella sanzione non compare fra i rilievi.\nFail se: è indicata come ritorsiva, illegittima o da rimuovere."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come difetto l'archiviazione della segnalazione, con motivazione comunicata al segnalante, in mancanza delle integrazioni richieste.",
+      "pass_condition": "quella previsione non compare fra i rilievi.",
+      "fail_condition": "è indicata come difetto.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 controlled non-issue: archiviazione motivata\nissue: N-03 · tipo: assenza · gravità: media · judge: sì · fonte: procedura, § 8 lett. c)\nVerifica: il deliverable non segnala come difetto l'archiviazione della segnalazione, con motivazione comunicata al segnalante, in mancanza delle integrazioni richieste.\nPass se: quella previsione non compare fra i rilievi.\nFail se: è indicata come difetto."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come difetto l'esclusione, prevista al § 3, delle contestazioni attinenti esclusivamente al rapporto individuale di lavoro.",
+      "pass_condition": "quell'esclusione non compare fra i rilievi.",
+      "fail_condition": "è indicata come restrizione indebita dell'ambito.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 controlled non-issue: rivendicazioni personali\nissue: N-04 · tipo: assenza · gravità: media · judge: sì · fonte: procedura, § 3\nVerifica: il deliverable non segnala come difetto l'esclusione, prevista al § 3, delle contestazioni attinenti esclusivamente al rapporto individuale di lavoro.\nPass se: quell'esclusione non compare fra i rilievi.\nFail se: è indicata come restrizione indebita dell'ambito."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il sistema di segnalazione è a norma nel suo complesso.",
+      "pass_condition": "la conformità complessiva non è affermata.",
+      "fail_condition": "compare una fra «il sistema è conforme», «la procedura è allineata alla normativa», «non emergono profili di non conformità».",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 simmetria del controllo\nissue: S-01 · tipo: assenza · gravità: alta · judge: sì · fonte: trasversale\nVerifica: il deliverable non afferma che il sistema di segnalazione è a norma nel suo complesso.\nPass se: la conformità complessiva non è affermata.\nFail se: compare una fra «il sistema è conforme», «la procedura è allineata alla normativa», «non emergono profili di non conformità»."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'ANAC ha avviato o avvierà un procedimento sanzionatorio nei confronti della Società.",
+      "pass_condition": "non compare l'affermazione di un procedimento ANAC in corso o certo.",
+      "fail_condition": "compare.",
+      "indifferent": "il richiamo al rischio sanzionatorio in termini ipotetici.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.22 divieto di presunzione dell'esito\nissue: S-02 · tipo: assenza · gravità: media · judge: sì · fonte: trasversale\nVerifica: il deliverable non afferma che l'ANAC ha avviato o avvierà un procedimento sanzionatorio nei confronti della Società.\nPass se: non compare l'affermazione di un procedimento ANAC in corso o certo.\nFail se: compare.\nIndifferente: il richiamo al rischio sanzionatorio in termini ipotetici."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega l'applicabilità del canale interno ai fatti pubblici sulla natura privata della società, sugli 87 lavoratori e sul modello 231.",
+      "pass_condition": "almeno la soglia occupazionale e l'esistenza del modello 231 sono richiamate nella premessa o nell'analisi.",
+      "fail_condition": "l'applicabilità è affermata senza alcun ancoraggio ai fatti del caso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.23 applicabilità al caso\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt + art. 3 D.Lgs. 24/2023\nVerifica: il deliverable collega l'applicabilità del canale interno ai fatti pubblici sulla natura privata della società, sugli 87 lavoratori e sul modello 231.\nPass se: almeno la soglia occupazionale e l'esistenza del modello 231 sono richiamate nella premessa o nell'analisi.\nFail se: l'applicabilità è affermata senza alcun ancoraggio ai fatti del caso."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che codice fiscale, documento di identità e dati anagrafici completi non devono essere tutti obbligatori per presentare una segnalazione sufficientemente circostanziata.",
+      "pass_condition": "è proposta la rimozione dell'obbligatorietà generalizzata o una raccolta graduata ai dati necessari.",
+      "fail_condition": "il modulo è trattato come conforme senza esaminare quei campi obbligatori.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.24 minimizzazione dei dati nel modulo\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: modulo MS-01\nVerifica: il deliverable rileva che codice fiscale, documento di identità e dati anagrafici completi non devono essere tutti obbligatori per presentare una segnalazione sufficientemente circostanziata.\nPass se: è proposta la rimozione dell'obbligatorietà generalizzata o una raccolta graduata ai dati necessari.\nFail se: il modulo è trattato come conforme senza esaminare quei campi obbligatori."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable verifica che il canale sia concretamente accessibile anche alle categorie esterne incluse nella platea, non soltanto ai dipendenti con accesso all'area riservata.",
+      "pass_condition": "è richiesta una modalità di accesso effettiva per consulenti, fornitori, candidati e altri soggetti esterni.",
+      "fail_condition": "l'area riservata è trattata come sufficiente senza affrontare l'accesso degli esterni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.25 accessibilità del canale\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: procedura, §§ 4-6 + modulo MS-01\nVerifica: il deliverable verifica che il canale sia concretamente accessibile anche alle categorie esterne incluse nella platea, non soltanto ai dipendenti con accesso all'area riservata.\nPass se: è richiesta una modalità di accesso effettiva per consulenti, fornitori, candidati e altri soggetti esterni.\nFail se: l'area riservata è trattata come sufficiente senza affrontare l'accesso degli esterni."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che una segnalazione è ricevibile soltanto se corredata da documento d'identità e codice fiscale.",
+      "pass_condition": "tali allegati non sono presentati come condizione assoluta di ricevibilità.",
+      "fail_condition": "la nota conferma la loro obbligatorietà per ogni segnalazione. C. VALORI CALCOLATI Assente. Il caso non computa termini né soglie: li confronta con quelli previsti dalla procedura. I valori attesi sono verificati come atomi di tipo valore in sezione B (B.4, B.6, B.9).",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.26 identità non necessaria come condizione di ricevibilità\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: modulo MS-01 + linee guida ANAC n. 1/2025\nVerifica: il deliverable non afferma che una segnalazione è ricevibile soltanto se corredata da documento d'identità e codice fiscale.\nPass se: tali allegati non sono presentati come condizione assoluta di ricevibilità.\nFail se: la nota conferma la loro obbligatorietà per ogni segnalazione."
+    }
+  ]
+}

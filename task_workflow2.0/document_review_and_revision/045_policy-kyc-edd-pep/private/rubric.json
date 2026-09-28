@@ -1,0 +1,673 @@
+{
+  "task_id": "WF2-045",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 33,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non cita fonti estranee al reference pack chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti estranee al reference pack chiuso.\nPASS se: ogni fonte normativa appartiene al reference pack\nFAIL se: Fallisce se una regola decisiva è fondata su una fonte normativa assente dal reference pack.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni fonte normativa appartiene al reference pack",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: la policy deve includere cariche, familiari e soggetti con stretti legami.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la policy deve includere cariche, familiari e soggetti con stretti legami.\nPASS se: Il testo afferma: la policy deve includere cariche, familiari e soggetti con stretti legami.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la bozza considera soltanto il cliente titolare di carica",
+      "pass_condition": "Il testo afferma: la policy deve includere cariche, familiari e soggetti con stretti legami.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «la policy deve includere cariche, familiari e soggetti con stretti legami» (I-01) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la policy deve includere cariche, familiari e soggetti con stretti legami» (I-01) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.\nPASS se: il deliverable enuncia la conclusione «la policy deve includere cariche, familiari e soggetti con stretti legami» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la policy deve includere cariche, familiari e soggetti con stretti legami» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico.\nPASS se: Il testo afferma: la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: risk appetite ammette PEP con controlli e approvazione",
+      "pass_condition": "Il testo afferma: la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico» (I-02) è attribuita al documento 02_risk_appetite.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico» (I-02) è attribuita al documento 02_risk_appetite.pdf.\nPASS se: il deliverable enuncia la conclusione «la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_risk_appetite.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_risk_appetite.pdf = «Risk appetite AML»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_risk_appetite.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la qualifica PEP attiva misure rafforzate ma non un rifiuto automatico» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_risk_appetite.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: l'autorizzazione deve precedere avvio o prosecuzione del rapporto.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'autorizzazione deve precedere avvio o prosecuzione del rapporto.\nPASS se: Il testo afferma: l'autorizzazione deve precedere avvio o prosecuzione del rapporto.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: bozza consente apertura provvisoria per trenta giorni",
+      "pass_condition": "Il testo afferma: l'autorizzazione deve precedere avvio o prosecuzione del rapporto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «l'autorizzazione deve precedere avvio o prosecuzione del rapporto» (I-03) è attribuita ai documenti 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'autorizzazione deve precedere avvio o prosecuzione del rapporto» (I-03) è attribuita ai documenti 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.\nPASS se: il deliverable enuncia la conclusione «l'autorizzazione deve precedere avvio o prosecuzione del rapporto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»; 02_risk_appetite.pdf = «Risk appetite AML»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf + 02_risk_appetite.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'autorizzazione deve precedere avvio o prosecuzione del rapporto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo.\nPASS se: Il testo afferma: la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: deleghe approvative, riga PEP",
+      "pass_condition": "Il testo afferma: la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo» (I-04) è attribuita al documento 03_deleghe_approvative.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo» (I-04) è attribuita al documento 03_deleghe_approvative.pdf.\nPASS se: il deliverable enuncia la conclusione «la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_deleghe_approvative.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_deleghe_approvative.pdf = «Matrice delle deleghe»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_deleghe_approvative.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la matrice attribuisce l'approvazione al Direttore Compliance o al suo delegato nominativo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_deleghe_approvative.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi.\nPASS se: Il testo afferma: l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la bozza usa un solo campo per entrambe",
+      "pass_condition": "Il testo afferma: l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi» (I-05) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi» (I-05) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.\nPASS se: il deliverable enuncia la conclusione «l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'origine del patrimonio richiede ricostruzione distinta dall'origine dei fondi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi.\nPASS se: compare \"euro 280.000\" nel contesto di origine fondi\nFAIL se: Nel contesto di origine fondi il valore è assente, diverso da \"euro 280.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: scheda campione indica bonifico da società terza senza causale",
+      "pass_condition": "compare \"euro 280.000\" nel contesto di origine fondi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi» (I-06) è attribuita al documento 04_scheda_cliente_campione.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi» (I-06) è attribuita al documento 04_scheda_cliente_campione.pdf.\nPASS se: il deliverable enuncia la conclusione «l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_cliente_campione.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_scheda_cliente_campione.pdf = «Scheda cliente campione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_scheda_cliente_campione.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'operazione iniziale di euro 280.000 richiede riscontro sulla provenienza dei fondi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_cliente_campione.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: frequenza e indicatori del monitoraggio devono essere definiti in base al rischio.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: frequenza e indicatori del monitoraggio devono essere definiti in base al rischio.\nPASS se: Il testo afferma: frequenza e indicatori del monitoraggio devono essere definiti in base al rischio.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: bozza rinvia a controlli periodici senza cadenza",
+      "pass_condition": "Il testo afferma: frequenza e indicatori del monitoraggio devono essere definiti in base al rischio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «frequenza e indicatori del monitoraggio devono essere definiti in base al rischio» (I-07) è attribuita ai documenti 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «frequenza e indicatori del monitoraggio devono essere definiti in base al rischio» (I-07) è attribuita ai documenti 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.\nPASS se: il deliverable enuncia la conclusione «frequenza e indicatori del monitoraggio devono essere definiti in base al rischio» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»; 02_risk_appetite.pdf = «Risk appetite AML»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf + 02_risk_appetite.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «frequenza e indicatori del monitoraggio devono essere definiti in base al rischio» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_bozza_policy_kyc_edd.pdf e 02_risk_appetite.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato.\nPASS se: Il testo afferma: dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: provider segnala carica cessata quattordici mesi prima",
+      "pass_condition": "Il testo afferma: dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato» (I-08) è attribuita al documento 05_nota_provider_screening.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato» (I-08) è attribuita al documento 05_nota_provider_screening.pdf.\nPASS se: il deliverable enuncia la conclusione «dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_nota_provider_screening.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_nota_provider_screening.pdf = «Nota del provider di screening»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_nota_provider_screening.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «dopo un anno dalla cessazione resta necessaria una valutazione del rischio elevato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_nota_provider_screening.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: un match del provider è un indicatore da verificare e non un esito definitivo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: un match del provider è un indicatore da verificare e non un esito definitivo.\nPASS se: compare \"un match del provider è un indicatore da verificare e non un esito definitivo\" nel contesto di screening\nFAIL se: Nel contesto di screening il valore è assente, diverso da \"un match del provider è un indicatore da verificare e non un esito definitivo\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota provider assegna affidabilità 71% e richiede confronto identificativo",
+      "pass_condition": "compare \"un match del provider è un indicatore da verificare e non un esito definitivo\" nel contesto di screening",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «un match del provider è un indicatore da verificare e non un esito definitivo» (I-09) è attribuita al documento 05_nota_provider_screening.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «un match del provider è un indicatore da verificare e non un esito definitivo» (I-09) è attribuita al documento 05_nota_provider_screening.pdf.\nPASS se: il deliverable enuncia la conclusione «un match del provider è un indicatore da verificare e non un esito definitivo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_nota_provider_screening.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_nota_provider_screening.pdf = «Nota del provider di screening»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_nota_provider_screening.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «un match del provider è un indicatore da verificare e non un esito definitivo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_nota_provider_screening.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: il flusso PEP deve coprire anche il titolare effettivo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il flusso PEP deve coprire anche il titolare effettivo.\nPASS se: Il testo afferma: il flusso PEP deve coprire anche il titolare effettivo.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: scheda campione mostra partecipazione indiretta non ricostruita",
+      "pass_condition": "Il testo afferma: il flusso PEP deve coprire anche il titolare effettivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «il flusso PEP deve coprire anche il titolare effettivo» (I-10) è attribuita al documento 04_scheda_cliente_campione.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il flusso PEP deve coprire anche il titolare effettivo» (I-10) è attribuita al documento 04_scheda_cliente_campione.pdf.\nPASS se: il deliverable enuncia la conclusione «il flusso PEP deve coprire anche il titolare effettivo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_cliente_campione.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_scheda_cliente_campione.pdf = «Scheda cliente campione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_scheda_cliente_campione.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il flusso PEP deve coprire anche il titolare effettivo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_scheda_cliente_campione.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: la policy deve indicare quali evidenze e decisioni sono conservate.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la policy deve indicare quali evidenze e decisioni sono conservate.\nPASS se: Il testo afferma: la policy deve indicare quali evidenze e decisioni sono conservate.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: bozza conserva il report provider ma non motivazione e approvazione",
+      "pass_condition": "Il testo afferma: la policy deve indicare quali evidenze e decisioni sono conservate.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «la policy deve indicare quali evidenze e decisioni sono conservate» (I-11) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la policy deve indicare quali evidenze e decisioni sono conservate» (I-11) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.\nPASS se: il deliverable enuncia la conclusione «la policy deve indicare quali evidenze e decisioni sono conservate» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la policy deve indicare quali evidenze e decisioni sono conservate» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Verifica una sola conclusione: la qualifica PEP non equivale a presupposto automatico di segnalazione.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la qualifica PEP non equivale a presupposto automatico di segnalazione.\nPASS se: Il testo afferma: la qualifica PEP non equivale a presupposto automatico di segnalazione.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: bozza invia ogni PEP alla funzione segnalazioni",
+      "pass_condition": "Il testo afferma: la qualifica PEP non equivale a presupposto automatico di segnalazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "La conclusione «la qualifica PEP non equivale a presupposto automatico di segnalazione» (I-12) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la qualifica PEP non equivale a presupposto automatico di segnalazione» (I-12) è attribuita al documento 01_bozza_policy_kyc_edd.pdf.\nPASS se: il deliverable enuncia la conclusione «la qualifica PEP non equivale a presupposto automatico di segnalazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_bozza_policy_kyc_edd.pdf = «Bozza policy KYC/EDD»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_bozza_policy_kyc_edd.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la qualifica PEP non equivale a presupposto automatico di segnalazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_bozza_policy_kyc_edd.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: rifiuto automatico delle PEP.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: rifiuto automatico delle PEP.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: rifiuto automatico delle PEP.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: apertura provvisoria per trenta giorni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: apertura provvisoria per trenta giorni.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: apertura provvisoria per trenta giorni.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: approvazione del gestore commerciale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: approvazione del gestore commerciale.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: approvazione del gestore commerciale.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: declassamento al giorno 366.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: declassamento al giorno 366.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: declassamento al giorno 366.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: match provider definitivo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: match provider definitivo.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: match provider definitivo.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.\nPASS se: sono trattati fatti di entrambi i segni\nFAIL se: una delle due direzioni è sistematicamente omessa.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "sono trattati fatti di entrambi i segni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable evita la sovra-segnalazione dei rischi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la sovra-segnalazione dei rischi.\nPASS se: gli elementi neutri sono mantenuti distinti dai rischi\nFAIL se: Fallisce se almeno un elemento neutro o favorevole è qualificato come rischio concreto senza un fatto o una regola che lo sostenga.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "gli elementi neutri sono mantenuti distinti dai rischi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_review.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito su dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito su dati mancanti.\nPASS se: le lacune restano esplicite\nFAIL se: Fallisce se almeno una lacuna dichiarata nel fascicolo è colmata con un fatto dato per certo.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "le lacune restano esplicite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

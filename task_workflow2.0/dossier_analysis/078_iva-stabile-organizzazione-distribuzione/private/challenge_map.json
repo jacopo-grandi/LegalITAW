@@ -1,0 +1,174 @@
+{
+  "task_id": "WF2-078",
+  "lato_assistito": "Lindevaart B.V., produttore olandese che opera in Italia tramite Garrano Distribuzione S.r.l.",
+  "data_di_riferimento": "2029-12-03",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Flusso beni",
+      "gravita": "alta",
+      "affermazione_richiesta": "la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano",
+      "evidenza": "01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni",
+      "conseguenza": "il distributore non opera come puro buy-sell sui beni in deposito",
+      "azione": "ricostruire passaggio proprietà e fatture",
+      "dato_mancante": "mancano Incoterms per due clienti",
+      "errore_bersaglio": "descrivere sempre una rivendita locale",
+      "fonte": "contratto; registro"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Luogo fisso",
+      "gravita": "alta",
+      "affermazione_richiesta": "Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona",
+      "evidenza": "01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso",
+      "conseguenza": "il requisito di disponibilità materiale richiede analisi",
+      "azione": "verificare accessi, durata e poteri",
+      "dato_mancante": "manca il registro accessi",
+      "errore_bersaglio": "escludere il luogo perché intestato a Garrano",
+      "fonte": "art. 162 TUIR"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Attività ausiliaria",
+      "gravita": "alta",
+      "affermazione_richiesta": "nel magazzino si svolgono anche configurazione e collaudo pre-consegna",
+      "evidenza": "02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria",
+      "conseguenza": "le attività eccedono il solo deposito descritto dal contratto",
+      "azione": "valutare il complesso unitario delle funzioni",
+      "dato_mancante": "manca il tempo-uomo per attività",
+      "errore_bersaglio": "qualificare tutto come deposito",
+      "fonte": "art. 162 TUIR"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Agente dipendente",
+      "gravita": "alta",
+      "affermazione_richiesta": "il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi",
+      "evidenza": "02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente",
+      "conseguenza": "la prassi è rilevante per la stabile personale",
+      "azione": "campionare contratti e scostamenti",
+      "dato_mancante": "mancano deleghe formali",
+      "errore_bersaglio": "guardare solo alla firma finale",
+      "fonte": "art. 162 TUIR"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Indipendenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "Garrano ricava l'82 per cento dei compensi dal gruppo Lindevaart",
+      "evidenza": "03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza",
+      "conseguenza": "dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale",
+      "azione": "analizzare rischio e autonomia",
+      "dato_mancante": "mancano clienti alternativi aggiornati",
+      "errore_bersaglio": "ritenere decisivo il nome distributore indipendente",
+      "fonte": "art. 162 TUIR; bilancio"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Anti-frammentazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello",
+      "evidenza": "03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione",
+      "conseguenza": "le attività combinate vanno considerate insieme",
+      "azione": "mappare funzioni complementari",
+      "dato_mancante": "manca il contratto marketing",
+      "errore_bersaglio": "valutare ogni funzione isolatamente",
+      "fonte": "art. 162 TUIR"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Stabile IVA",
+      "gravita": "alta",
+      "affermazione_richiesta": "sei tecnici e il sistema locale sono usati stabilmente per configurare le forniture",
+      "evidenza": "04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva",
+      "conseguenza": "mezzi umani e tecnici possono integrare una struttura IVA",
+      "azione": "distinguere ricezione di servizi e intervento nelle vendite",
+      "dato_mancante": "manca l'allocazione delle ore",
+      "errore_bersaglio": "dedurre la stabile IVA dalla sola partita IVA",
+      "fonte": "art. 11 Reg. UE 282/2011"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Intervento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese",
+      "evidenza": "04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento",
+      "conseguenza": "occorre stabilire se le risorse intervengono nella specifica operazione",
+      "azione": "tracciare attività prima e durante la fornitura",
+      "dato_mancante": "mancano log per ordine",
+      "errore_bersaglio": "ritenere decisiva la contabilità locale",
+      "fonte": "art. 53 Reg. UE 282/2011"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Servizi ricevuti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona",
+      "evidenza": "05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti",
+      "conseguenza": "destinazione e uso richiedono il test degli artt. 21 e 22",
+      "azione": "documentare natura, ordine, pagamento e uso",
+      "dato_mancante": "manca la fattura del fornitore",
+      "errore_bersaglio": "usare solo l'indirizzo contrattuale",
+      "fonte": "artt. 21-22 Reg. UE 282/2011"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Assenza di automatismo",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA",
+      "evidenza": "05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo",
+      "conseguenza": "le conclusioni sulle imposte dirette e IVA restano autonome",
+      "azione": "esporre due test separati",
+      "dato_mancante": "manca il motivo storico dell'identificazione",
+      "errore_bersaglio": "far coincidere identificazione, stabile IVA e stabile reddituale",
+      "fonte": "art. 11 Reg. UE 282/2011"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "partita iva",
+      "chiave_nel_criterio": "partita iva",
+      "regola": "La partita IVA italiana non prova da sola una struttura stabile ai fini IVA o reddituali."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "intestazione magazzino",
+      "chiave_nel_criterio": "intestazione magazzino",
+      "regola": "L'intestazione del contratto a Garrano non esclude da sola la disponibilità dell'area per Lindevaart."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "firma olandese",
+      "chiave_nel_criterio": "firma olandese",
+      "regola": "La firma finale nei Paesi Bassi non esaurisce l'esame della prassi negoziale italiana."
+    }
+  ],
+  "calcoli": [
+    "2029-12-03"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_contratto_distribuzione_logistica_italia.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_operativo_centro_verona.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_dati_gestionali_garrano.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_relazione_tecnico_organizzativa_verona.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_studio_bissoli_posizione_italiana.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

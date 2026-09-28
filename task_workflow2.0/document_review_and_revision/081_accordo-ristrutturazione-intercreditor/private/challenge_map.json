@@ -1,0 +1,123 @@
+{
+  "task_id": "WF2-081",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "adesioni insufficienti",
+      "gravita": "alta",
+      "affermazione_richiesta": "le adesioni documentate sono EUR 58 milioni su EUR 100 milioni e non raggiungono la soglia del sessanta per cento",
+      "evidenza": "prospetto esposizioni e lettere di adesione"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "creditori estranei",
+      "gravita": "alta",
+      "affermazione_richiesta": "il piano deve rendere disponibili risorse per pagare integralmente i creditori estranei entro i termini applicabili",
+      "evidenza": "piano di tesoreria e art. 57"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "perimetro finanziario",
+      "gravita": "alta",
+      "affermazione_richiesta": "il ceto finanziario vale EUR 82 milioni e va distinto dai fornitori e dall'Erario",
+      "evidenza": "prospetto esposizioni"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "standstill scaduto",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo standstill intercreditor e' scaduto il 10 marzo 2031 e la bozza non lo rinnova espressamente",
+      "evidenza": "accordo intercreditor"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "enforcement bilaterale",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola consente a Banca Ferrata di accelerare senza coordinamento con l'agente",
+      "evidenza": "bozza articolo 12"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "nuova finanza condizionata",
+      "gravita": "media",
+      "affermazione_richiesta": "la linea ponte di EUR 6 milioni non e' ancora erogata e dipende dall'autorizzazione richiesta",
+      "evidenza": "term sheet linea ponte"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "prededuzione non automatica",
+      "gravita": "media",
+      "affermazione_richiesta": "la bozza non puo' attribuire per contratto la prededuzione alla linea ponte",
+      "evidenza": "bozza articolo 9 e art. 99"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "condizioni di efficacia",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano adesioni, attestazione finale e prova della linea ponte tra le condizioni di efficacia",
+      "evidenza": "bozza articolo 4"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "waterfall incoerente",
+      "gravita": "media",
+      "affermazione_richiesta": "la waterfall paga la tranche junior prima degli interessi maturati sulla super senior",
+      "evidenza": "intercreditor articolo 7"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "waiver e maggioranze",
+      "gravita": "media",
+      "affermazione_richiesta": "la modifica delle scadenze richiede il voto della maggioranza qualificata e non del solo agente",
+      "evidenza": "intercreditor articolo 10"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "reporting di cassa",
+      "gravita": "media",
+      "affermazione_richiesta": "il reporting mensile parte dopo l'omologazione e lascia scoperta la fase ponte",
+      "evidenza": "bozza articolo 15"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "assenza di previsione sull'esito",
+      "gravita": "media",
+      "affermazione_richiesta": "il fascicolo consente una review, non di affermare che l'omologazione sara' concessa",
+      "evidenza": "stato incompleto del fascicolo"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "garanzia esistente",
+      "oggetto": "garanzia esistente",
+      "chiave_nel_criterio": "garanzia esistente",
+      "perche_non_e_issue": "la garanzia ipotecaria e' gia' perfezionata e non va presentata come nuova garanzia",
+      "criterio_assenza": "Il deliverable non presenta garanzia esistente come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "fornitore omonimo",
+      "oggetto": "fornitore omonimo",
+      "chiave_nel_criterio": "fornitore omonimo",
+      "perche_non_e_issue": "la fattura Nova Corda S.r.l. riguarda un soggetto terzo e non la debitrice",
+      "criterio_assenza": "Il deliverable non presenta fornitore omonimo come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "tasso Euribor",
+      "oggetto": "tasso Euribor",
+      "chiave_nel_criterio": "tasso Euribor",
+      "perche_non_e_issue": "il parametro Euribor della linea esistente non e' oggetto della ristrutturazione",
+      "criterio_assenza": "Il deliverable non presenta tasso Euribor come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "firma del consulente",
+      "oggetto": "firma del consulente",
+      "chiave_nel_criterio": "firma del consulente",
+      "perche_non_e_issue": "la firma del consulente sul prospetto non costituisce adesione del creditore",
+      "criterio_assenza": "Il deliverable non presenta firma del consulente come rilievo autonomo."
+    }
+  ]
+}

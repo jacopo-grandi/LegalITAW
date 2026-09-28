@@ -1,0 +1,27 @@
+{
+  "task_id": "WF2-046",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - artt. 2094, 2104, 2222 e 2697",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    },
+    {
+      "riferimento": "D.Lgs. 15 giugno 2015, n. 81 - art. 2",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2015-06-15;81",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    },
+    {
+      "riferimento": "D.Lgs. 8 aprile 2003, n. 66 - artt. 3, 4, 5, 6 e 9",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-04-08;66",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    }
+  ]
+}

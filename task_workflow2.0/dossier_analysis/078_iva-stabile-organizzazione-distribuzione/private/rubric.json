@@ -1,0 +1,1393 @@
+{
+  "task_id": "WF2-078",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 69,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "la consegna usa i file tax_position_memo.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file tax_position_memo.md.\nPASS se: i nomi dei file coincidono con tax_position_memo.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con tax_position_memo.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "la parte testuale non supera 3.000 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 3.000 parole.\nPASS se: il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano.\nPASS se: afferma: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano; conclude: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "afferma: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano; conclude: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: contratto e registro magazzino.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: contratto e registro magazzino.\nPASS se: cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito.\nPASS se: espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito; indica come conseguenza: il distributore non opera come puro buy-sell sui beni in deposito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito; indica come conseguenza: il distributore non opera come puro buy-sell sui beni in deposito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: ricostruire passaggio proprietà e fatture.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: ricostruire passaggio proprietà e fatture.\nPASS se: afferma: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano; conclude: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "afferma: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano; conclude: la merce resta di proprietà di Lindevaart fino alla vendita al cliente italiano",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano Incoterms per due clienti.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano Incoterms per due clienti.\nPASS se: espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito; indica come conseguenza: il distributore non opera come puro buy-sell sui beni in deposito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "espone l'effetto: il distributore non opera come puro buy-sell sui beni in deposito; indica come conseguenza: il distributore non opera come puro buy-sell sui beni in deposito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: descrivere sempre una rivendita locale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: descrivere sempre una rivendita locale.\nPASS se: indica l'azione: ricostruire passaggio proprietà e fatture; propone: ricostruire passaggio proprietà e fatture\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "indica l'azione: ricostruire passaggio proprietà e fatture; propone: ricostruire passaggio proprietà e fatture",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: contratto; registro.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: contratto; registro.\nPASS se: cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; contratto; registro",
+      "pass_condition": "cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a flusso beni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona.\nPASS se: afferma: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona; conclude: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "afferma: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona; conclude: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: contratto logistico e planimetria.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: contratto logistico e planimetria.\nPASS se: cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: il requisito di disponibilità materiale richiede analisi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il requisito di disponibilità materiale richiede analisi.\nPASS se: espone l'effetto: il requisito di disponibilità materiale richiede analisi; indica come conseguenza: il requisito di disponibilità materiale richiede analisi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: il requisito di disponibilità materiale richiede analisi; indica come conseguenza: il requisito di disponibilità materiale richiede analisi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: verificare accessi, durata e poteri.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: verificare accessi, durata e poteri.\nPASS se: afferma: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona; conclude: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "afferma: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona; conclude: Lindevaart dispone in via continuativa di un'area esclusiva nel magazzino di Verona",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il registro accessi.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il registro accessi.\nPASS se: espone l'effetto: il requisito di disponibilità materiale richiede analisi; indica come conseguenza: il requisito di disponibilità materiale richiede analisi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: il requisito di disponibilità materiale richiede analisi; indica come conseguenza: il requisito di disponibilità materiale richiede analisi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: escludere il luogo perché intestato a Garrano.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: escludere il luogo perché intestato a Garrano.\nPASS se: indica l'azione: verificare accessi, durata e poteri; propone: verificare accessi, durata e poteri\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "indica l'azione: verificare accessi, durata e poteri; propone: verificare accessi, durata e poteri",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: art. 162 TUIR.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: art. 162 TUIR.\nPASS se: cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; art. 162 TUIR",
+      "pass_condition": "cita 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso; indica come riscontro 01_contratto_distribuzione_logistica_italia.pdf, contenuto pertinente a luogo fisso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: nel magazzino si svolgono anche configurazione e collaudo pre-consegna.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: nel magazzino si svolgono anche configurazione e collaudo pre-consegna.\nPASS se: afferma: nel magazzino si svolgono anche configurazione e collaudo pre-consegna; conclude: nel magazzino si svolgono anche configurazione e collaudo pre-consegna\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "afferma: nel magazzino si svolgono anche configurazione e collaudo pre-consegna; conclude: nel magazzino si svolgono anche configurazione e collaudo pre-consegna",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: manuale operativo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: manuale operativo.\nPASS se: cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: le attività eccedono il solo deposito descritto dal contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le attività eccedono il solo deposito descritto dal contratto.\nPASS se: espone l'effetto: le attività eccedono il solo deposito descritto dal contratto; indica come conseguenza: le attività eccedono il solo deposito descritto dal contratto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: le attività eccedono il solo deposito descritto dal contratto; indica come conseguenza: le attività eccedono il solo deposito descritto dal contratto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: valutare il complesso unitario delle funzioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: valutare il complesso unitario delle funzioni.\nPASS se: afferma: nel magazzino si svolgono anche configurazione e collaudo pre-consegna; conclude: nel magazzino si svolgono anche configurazione e collaudo pre-consegna\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "afferma: nel magazzino si svolgono anche configurazione e collaudo pre-consegna; conclude: nel magazzino si svolgono anche configurazione e collaudo pre-consegna",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il tempo-uomo per attività.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il tempo-uomo per attività.\nPASS se: espone l'effetto: le attività eccedono il solo deposito descritto dal contratto; indica come conseguenza: le attività eccedono il solo deposito descritto dal contratto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: le attività eccedono il solo deposito descritto dal contratto; indica come conseguenza: le attività eccedono il solo deposito descritto dal contratto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: qualificare tutto come deposito.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: qualificare tutto come deposito.\nPASS se: indica l'azione: valutare il complesso unitario delle funzioni; propone: valutare il complesso unitario delle funzioni\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "indica l'azione: valutare il complesso unitario delle funzioni; propone: valutare il complesso unitario delle funzioni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: art. 162 TUIR.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: art. 162 TUIR.\nPASS se: cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; art. 162 TUIR",
+      "pass_condition": "cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a attività ausiliaria",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi.\nPASS se: afferma: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi; conclude: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "afferma: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi; conclude: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: email di approvazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: email di approvazione.\nPASS se: cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "cita 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; indica come riscontro 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: la prassi è rilevante per la stabile personale.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la prassi è rilevante per la stabile personale.\nPASS se: espone l'effetto: la prassi è rilevante per la stabile personale; indica come conseguenza: la prassi è rilevante per la stabile personale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: la prassi è rilevante per la stabile personale; indica come conseguenza: la prassi è rilevante per la stabile personale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: campionare contratti e scostamenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: campionare contratti e scostamenti.\nPASS se: afferma: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi; conclude: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "afferma: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi; conclude: il country manager negozia prezzo e condizioni chiuse poi approvate senza modifiche nei Paesi Bassi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano deleghe formali.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano deleghe formali.\nPASS se: espone l'effetto: la prassi è rilevante per la stabile personale; indica come conseguenza: la prassi è rilevante per la stabile personale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: la prassi è rilevante per la stabile personale; indica come conseguenza: la prassi è rilevante per la stabile personale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: guardare solo alla firma finale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: guardare solo alla firma finale.\nPASS se: indica l'azione: campionare contratti e scostamenti; propone: campionare contratti e scostamenti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_operativo_centro_verona.xlsx, contenuto pertinente a agente dipendente; art. 162 TUIR",
+      "pass_condition": "indica l'azione: campionare contratti e scostamenti; propone: campionare contratti e scostamenti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per indipendenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per indipendenza.\nPASS se: compare «82 per cento»; compare «82%»\nFAIL se: non compare ne «82 per cento» ne «82%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "compare «82 per cento»; compare «82%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bilancio gestionale.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bilancio gestionale.\nPASS se: cita 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; indica come riscontro 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "cita 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; indica come riscontro 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale.\nPASS se: espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale; indica come conseguenza: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale; indica come conseguenza: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per indipendenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per indipendenza.\nPASS se: afferma: Garrano ricava l'82 per cento dei compensi dal gruppo Lindevaart; conclude: Garrano ricava l'82 per cento dei compensi dal gruppo Lindevaart\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "afferma: Garrano ricava l'82 per cento dei compensi dal gruppo Lindevaart; conclude: Garrano ricava l'82 per cento dei compensi dal gruppo Lindevaart",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano clienti alternativi aggiornati.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano clienti alternativi aggiornati.\nPASS se: espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale; indica come conseguenza: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "espone l'effetto: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale; indica come conseguenza: dipendenza economica e istruzioni riducono il peso dell'etichetta contrattuale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: ritenere decisivo il nome distributore indipendente.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: ritenere decisivo il nome distributore indipendente.\nPASS se: indica l'azione: analizzare rischio e autonomia; propone: analizzare rischio e autonomia\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a indipendenza; art. 162 TUIR; bilancio",
+      "pass_condition": "indica l'azione: analizzare rischio e autonomia; propone: analizzare rischio e autonomia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello.\nPASS se: afferma: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello; conclude: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "afferma: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello; conclude: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: organigramma e contratti infragruppo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: organigramma e contratti infragruppo.\nPASS se: cita 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; indica come riscontro 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "cita 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; indica come riscontro 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: le attività combinate vanno considerate insieme.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le attività combinate vanno considerate insieme.\nPASS se: espone l'effetto: le attività combinate vanno considerate insieme; indica come conseguenza: le attività combinate vanno considerate insieme\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: le attività combinate vanno considerate insieme; indica come conseguenza: le attività combinate vanno considerate insieme",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: mappare funzioni complementari.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: mappare funzioni complementari.\nPASS se: afferma: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello; conclude: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "afferma: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello; conclude: logistica, marketing e negoziazione sono divisi fra entità correlate nello stesso modello",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il contratto marketing.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il contratto marketing.\nPASS se: espone l'effetto: le attività combinate vanno considerate insieme; indica come conseguenza: le attività combinate vanno considerate insieme\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "espone l'effetto: le attività combinate vanno considerate insieme; indica come conseguenza: le attività combinate vanno considerate insieme",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: valutare ogni funzione isolatamente.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: valutare ogni funzione isolatamente.\nPASS se: indica l'azione: mappare funzioni complementari; propone: mappare funzioni complementari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dati_gestionali_garrano.eml, contenuto pertinente a anti-frammentazione; art. 162 TUIR",
+      "pass_condition": "indica l'azione: mappare funzioni complementari; propone: mappare funzioni complementari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per stabile iva.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per stabile iva.\nPASS se: compare «sei tecnici»; compare «6 tecnici»\nFAIL se: non compare ne «sei tecnici» ne «6 tecnici» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "compare «sei tecnici»; compare «6 tecnici»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: roster e inventario IT.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: roster e inventario IT.\nPASS se: cita 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; indica come riscontro 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "cita 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; indica come riscontro 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA.\nPASS se: espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA; indica come conseguenza: mezzi umani e tecnici possono integrare una struttura IVA\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA; indica come conseguenza: mezzi umani e tecnici possono integrare una struttura IVA",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per stabile iva.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per stabile iva.\nPASS se: afferma: sei tecnici e il sistema locale sono usati stabilmente per configurare le forniture; conclude: sei tecnici e il sistema locale sono usati stabilmente per configurare le forniture\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "afferma: sei tecnici e il sistema locale sono usati stabilmente per configurare le forniture; conclude: sei tecnici e il sistema locale sono usati stabilmente per configurare le forniture",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'allocazione delle ore.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'allocazione delle ore.\nPASS se: espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA; indica come conseguenza: mezzi umani e tecnici possono integrare una struttura IVA\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: mezzi umani e tecnici possono integrare una struttura IVA; indica come conseguenza: mezzi umani e tecnici possono integrare una struttura IVA",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: dedurre la stabile IVA dalla sola partita IVA.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: dedurre la stabile IVA dalla sola partita IVA.\nPASS se: indica l'azione: distinguere ricezione di servizi e intervento nelle vendite; propone: distinguere ricezione di servizi e intervento nelle vendite\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a stabile iva; art. 11 Reg. UE 282/2011",
+      "pass_condition": "indica l'azione: distinguere ricezione di servizi e intervento nelle vendite; propone: distinguere ricezione di servizi e intervento nelle vendite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese.\nPASS se: afferma: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese; conclude: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "afferma: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese; conclude: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: workflow ordini.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: workflow ordini.\nPASS se: cita 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; indica come riscontro 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "cita 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; indica come riscontro 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione.\nPASS se: espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione; indica come conseguenza: occorre stabilire se le risorse intervengono nella specifica operazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione; indica come conseguenza: occorre stabilire se le risorse intervengono nella specifica operazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: tracciare attività prima e durante la fornitura.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: tracciare attività prima e durante la fornitura.\nPASS se: afferma: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese; conclude: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "afferma: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese; conclude: il personale italiano prepara i beni prima della consegna ma la fatturazione resta olandese",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano log per ordine.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano log per ordine.\nPASS se: espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione; indica come conseguenza: occorre stabilire se le risorse intervengono nella specifica operazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: occorre stabilire se le risorse intervengono nella specifica operazione; indica come conseguenza: occorre stabilire se le risorse intervengono nella specifica operazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: ritenere decisiva la contabilità locale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: ritenere decisiva la contabilità locale.\nPASS se: indica l'azione: tracciare attività prima e durante la fornitura; propone: tracciare attività prima e durante la fornitura\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_tecnico_organizzativa_verona.pdf, contenuto pertinente a intervento; art. 53 Reg. UE 282/2011",
+      "pass_condition": "indica l'azione: tracciare attività prima e durante la fornitura; propone: tracciare attività prima e durante la fornitura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona.\nPASS se: afferma: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona; conclude: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "afferma: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona; conclude: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ordine cloud e utenze.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ordine cloud e utenze.\nPASS se: cita 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; indica come riscontro 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "cita 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; indica come riscontro 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22.\nPASS se: espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22; indica come conseguenza: destinazione e uso richiedono il test degli artt. 21 e 22\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22; indica come conseguenza: destinazione e uso richiedono il test degli artt. 21 e 22",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: documentare natura, ordine, pagamento e uso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: documentare natura, ordine, pagamento e uso.\nPASS se: afferma: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona; conclude: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "afferma: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona; conclude: il contratto cloud indica la sede olandese ma gli utenti principali sono a Verona",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la fattura del fornitore.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la fattura del fornitore.\nPASS se: espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22; indica come conseguenza: destinazione e uso richiedono il test degli artt. 21 e 22\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: destinazione e uso richiedono il test degli artt. 21 e 22; indica come conseguenza: destinazione e uso richiedono il test degli artt. 21 e 22",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: usare solo l'indirizzo contrattuale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: usare solo l'indirizzo contrattuale.\nPASS se: indica l'azione: documentare natura, ordine, pagamento e uso; propone: documentare natura, ordine, pagamento e uso\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a servizi ricevuti; artt. 21-22 Reg. UE 282/2011",
+      "pass_condition": "indica l'azione: documentare natura, ordine, pagamento e uso; propone: documentare natura, ordine, pagamento e uso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA.\nPASS se: afferma: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA; conclude: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "afferma: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA; conclude: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: certificato di identificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: certificato di identificazione.\nPASS se: cita 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; indica come riscontro 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "cita 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; indica come riscontro 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome.\nPASS se: espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome; indica come conseguenza: le conclusioni sulle imposte dirette e IVA restano autonome\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome; indica come conseguenza: le conclusioni sulle imposte dirette e IVA restano autonome",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.61",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: esporre due test separati.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: esporre due test separati.\nPASS se: afferma: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA; conclude: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "afferma: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA; conclude: l'identificazione IVA italiana non prova da sola una stabile organizzazione IVA",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.62",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il motivo storico dell'identificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il motivo storico dell'identificazione.\nPASS se: espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome; indica come conseguenza: le conclusioni sulle imposte dirette e IVA restano autonome\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "espone l'effetto: le conclusioni sulle imposte dirette e IVA restano autonome; indica come conseguenza: le conclusioni sulle imposte dirette e IVA restano autonome",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.63",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: far coincidere identificazione, stabile IVA e stabile reddituale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: far coincidere identificazione, stabile IVA e stabile reddituale.\nPASS se: indica l'azione: esporre due test separati; propone: esporre due test separati\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_studio_bissoli_posizione_italiana.pdf, contenuto pertinente a assenza di automatismo; art. 11 Reg. UE 282/2011",
+      "pass_condition": "indica l'azione: esporre due test separati; propone: esporre due test separati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «partita iva»: La partita IVA italiana non prova da sola una struttura stabile ai fini IVA o reddituali.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «partita iva»: La partita IVA italiana non prova da sola una struttura stabile ai fini IVA o reddituali.\nPASS se: non qualifica come criticita partita iva; esclude espressamente il falso positivo partita iva\nFAIL se: compare la conclusione vietata «partita iva costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita partita iva; esclude espressamente il falso positivo partita iva",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «intestazione magazzino»: L'intestazione del contratto a Garrano non esclude da sola la disponibilità dell'area per Lindevaart.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «intestazione magazzino»: L'intestazione del contratto a Garrano non esclude da sola la disponibilità dell'area per Lindevaart.\nPASS se: non qualifica come criticita intestazione magazzino; esclude espressamente il falso positivo intestazione magazzino\nFAIL se: compare la conclusione vietata «intestazione magazzino costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita intestazione magazzino; esclude espressamente il falso positivo intestazione magazzino",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_position_memo.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «firma olandese»: La firma finale nei Paesi Bassi non esaurisce l'esame della prassi negoziale italiana.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «firma olandese»: La firma finale nei Paesi Bassi non esaurisce l'esame della prassi negoziale italiana.\nPASS se: non qualifica come criticita firma olandese; esclude espressamente il falso positivo firma olandese\nFAIL se: compare la conclusione vietata «firma olandese costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita firma olandese; esclude espressamente il falso positivo firma olandese",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

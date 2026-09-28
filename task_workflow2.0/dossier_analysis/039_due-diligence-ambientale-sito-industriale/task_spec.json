@@ -1,0 +1,126 @@
+{
+  "task_id": "WF2-039",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Due diligence ambientale. Matrice dei red flag e delle azioni pre-closing sull'acquisizione di un sito industriale",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2033-04-05",
+  "workflow_family": "dossier_analysis",
+  "subtask": "due_diligence_memo",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "whole_matter",
+  "legal_area": [
+    "Environmental / ESG - environmental due diligence",
+    "B. Dossier analysis",
+    "Compliance & Regulatory",
+    "Corporate / M&A"
+  ],
+  "document_type": "dossier_analysis_matter",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "dossier_analysis",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: red_flag_matrix.md.\n\n# WF2-039 — Struttura attesa del deliverable\n\n> Non è un modulo da compilare alla lettera: è la struttura contro cui sono scritti i criteri di forma. Un deliverable che raggiunge lo stesso risultato con intestazioni diverse non è penalizzato, purché le parti siano presenti e distinte.\n\n**Formato:** un solo file di testo, `red_flag_matrix.md`, non superiore a 2.800 parole. Nessuna bozza di clausola, di lettera o di atto.\n\n## 1. Sintesi per il consiglio\n\nChe cosa è accertato, che cosa non lo è ancora, che cosa va risolto prima del closing.\n\n## 2. Matrice dei red flag ambientali\n\nUna tabella. Una riga per rilievo. Colonne: rilievo; documento o fonte da cui deriva; **stato del fatto** (accertato dal fascicolo, dichiarato da una parte, non ancora determinato); che cosa comporta per il compratore; su chi grava; gravità (alta, media, bassa).\n\n## 3. Qualificazione del sito e posizione del compratore\n\nCome si qualifica il sito alla data di riferimento e perché; che cosa è obbligo e che cosa è facoltà per il compratore una volta divenuto proprietario; a chi spetta accertare la responsabilità della contaminazione e a che punto è.\n\n## 4. Azioni pre-closing\n\nUna tabella. Una riga per azione. Colonne: azione; a chi spetta; entro quando; che cosa succede se non viene compiuta.\n\n## 5. Date, quantità e importi con il calcolo\n\nPer ciascun termine: la data, il punto di partenza del computo e la fonte. Per ciascuna quantità: il valore, il limite di riferimento e la fonte.\n\n## 6. Che cosa non è un red flag\n\nGli elementi del fascicolo che, esaminati, non danno luogo a un rilievo, con la ragione.\n\n## 7. Che cosa manca dal fascicolo\n\nPer ciascun elemento: perché serve e a chi chiederlo.\n\n## 8. La risposta al consiglio sull'obbligo di bonificare\n\n---\n\nOgni riga della matrice e ogni riga delle azioni pre-closing riporta il documento o la fonte da cui deriva.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "cross_document_reasoning",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_contratto_preliminare_cessione_ramo.docx",
+    "public/documents/02_autorizzazione_integrata_ambientale.pdf",
+    "public/documents/03_relazione_indagine_ambientale_fase_II.pdf",
+    "public/documents/04_determinazione_approvazione_piano_caratterizzazione.pdf",
+    "public/documents/05_comunicazione_superamento_csc.pdf",
+    "public/documents/06_verbale_conferenza_di_servizi.pdf",
+    "public/documents/07_attestazione_rimozione_serbatoi.pdf",
+    "public/documents/08_registro_carico_scarico_rifiuti.xlsx",
+    "public/documents/09_certificato_iscrizione_albo_gestori.pdf",
+    "public/documents/10_relazione_amianto.pdf",
+    "public/documents/11_nota_arpa_verifica_ispettiva.pdf"
+  ],
+  "expected_deliverable": "red_flag_matrix.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "cross_document_reasoning",
+    "legal_correctness",
+    "false_positive_control",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

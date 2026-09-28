@@ -1,0 +1,125 @@
+From: Marta Salvioni <m.salvioni@cobaltsensorlabs.it>
+To: Davide Ferraroni <d.ferraroni@eterearobotics.it>
+Cc: Renato Ambrosini <r.ambrosini@cobaltsensorlabs.it>,
+ Luca Berengario <l.berengario@cobaltsensorlabs.it>,
+ Anna Loriga <a.loriga@eterearobotics.it>
+Date: Mon, 12 Nov 2029 11:58:00 +0100
+Subject: R: R: ADAPT - domanda di brevetto controllo adattivo e open day del
+ 20 dicembre
+Message-ID: <4989d2181f7f@cobaltsensorlabs.it>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Davide,
+
+grazie del riscontro, rispondo per punti cos=C3=AC restiamo allineati.
+
+Sul deposito: ad oggi non abbiamo depositato nulla. Il testo =C3=A8 ancora un=
+a bozza presso lo studio Vergnani, che conta di consegnarci la versione da ri=
+vedere entro la prima settimana di dicembre. Quando avremo il testo definitiv=
+o ve lo mandiamo per conoscenza. Ovviamente non siamo in grado di dire adesso=
+ come andr=C3=A0 l'esame n=C3=A9 in quali Paesi la tutela sar=C3=A0 effettiva=
+mente ottenuta: sono cose che si vedranno fra due o tre anni, e il mandatario=
+ stesso ci ha raccomandato di non dare nulla per acquisito.
+
+Sull'open day: la data del 20 dicembre =C3=A8 in agenda da settembre, gli inv=
+iti sono partiti la settimana scorsa e abbiamo ventidue clienti confermati. L=
+a demo che presentiamo =C3=A8 quella del banco di Reggio, con il Cobalt-S mon=
+tato sull'azionamento e la schermata di stima dell'usura. Sinceramente non ve=
+do come spostarla a questo punto; se avete un problema specifico su cosa most=
+riamo, ditemi quali schermate togliere e le togliamo.
+
+Sul resto (procedura per le decisioni di deposito, costi, subentro) ne parlia=
+mo volentieri nella riunione del 19 novembre, portateci pure una proposta scr=
+itta. Vi anticipo per=C3=B2 che sull'assetto dell'articolo 5 la nostra posizi=
+one non =C3=A8 cambiata.
+
+Buona giornata,
+Marta
+
+--
+ing. Marta Salvioni
+Responsabile tecnico di progetto
+Cobalt Sensor Labs S.r.l. - Via Fratelli Cervi 22/B, 42124 Reggio Emilia
+tel. 0522 41 88 20 - m.salvioni@cobaltsensorlabs.it
+
+
+Il giorno lun 12 nov 2029 alle ore 09:41 Davide Ferraroni <d.ferraroni@eterea=
+robotics.it> ha scritto:
+
+> Marta, buongiorno.
+>
+> Ho letto la tua di venerd=C3=AC e ne ho parlato con la direzione. Ti riassu=
+mo la nostra posizione, poi la formalizziamo nella riunione del 19.
+>
+> Il metodo che descrivi - adattamento dei parametri di controllo sulla base =
+della stima dell'usura - =C3=A8 esattamente l'oggetto del WP2 del piano di la=
+voro che abbiamo chiuso venerd=C3=AC. Il WP2 =C3=A8 assegnato a una squadra m=
+ista: Berengario e la dott.ssa Velluti da parte vostra, Sacchi e Bertuzzi da =
+parte nostra, con le sessioni di prova svolte insieme sul banco di Reggio. =
+=C3=88 anche il work package su cui =C3=A8 concentrata la quota maggiore del =
+nostro finanziamento. Un deposito a nome della sola Cobalt, deciso e gestito =
+unilateralmente, non ci sembra compatibile con questo assetto, e comunque non=
+ =C3=A8 una cosa che possiamo prendere per buona sulla base di una ricostruzi=
+one fatta a voce: prima di qualsiasi passo ci serve capire su carta chi ha fa=
+tto cosa.
+>
+> Nel merito ti chiedo due cose.
+>
+> 1) Nessuna divulgazione dei contenuti tecnici del metodo - articolo, presen=
+tazione, demo pubblica, materiale commerciale - prima che sia stata fatta la =
+revisione brevettuale del testo insieme ai nostri consulenti. L'open day del =
+20 dicembre cade prima di quella revisione, e per come =C3=A8 impostata la de=
+mo mostra proprio il funzionamento del modulo di stima. Ti chiedo quindi di t=
+enerla sospesa, o almeno di espungere quella parte, finch=C3=A9 la revisione =
+non =C3=A8 chiusa.
+>
+> 2) Una procedura scritta per il seguito: chi decide il deposito e in quali =
+Paesi, come si ripartiscono i costi di deposito, estensione e mantenimento, e=
+ cosa succede se una delle due decide di abbandonare o di non rinnovare - in =
+quel caso l'altra deve poter subentrare. Oggi la bozza dell'articolo 7 non pr=
+evede niente di tutto questo e lascia la decisione a voi soli.
+>
+> Ti mando in giornata anche i commenti sull'articolo 5.
+>
+> Grazie,
+> Davide
+>
+> --
+> ing. Davide Ferraroni
+> Direzione Tecnica - Eterea Robotics S.p.A.
+> Via dell'Arcoveggio 128, 40129 Bologna - tel. 051 63 92 114
+>
+>
+> Il giorno ven 9 nov 2029 alle ore 16:52 Marta Salvioni <m.salvioni@cobaltse=
+nsorlabs.it> ha scritto:
+>
+>> Ciao Davide,
+>>
+>> ti aggiorno su due cose prima del fine settimana.
+>>
+>> La prima. Abbiamo definito con lo studio Vergnani di Modena l'impostazione=
+ di una domanda di brevetto sul metodo di controllo adattivo con stima dell'u=
+sura, quello che poi svilupperemo nel WP2. Il titolo provvisorio =C3=A8 "Meto=
+do di controllo adattivo di un azionamento elettrico con stima dell'usura dei=
+ componenti meccanici". Depositiamo a nome Cobalt Sensor Labs, come del resto=
+ prevede l'articolo 5 della bozza che vi abbiamo mandato gioved=C3=AC: prima =
+deposito italiano, poi valutiamo noi entro i dodici mesi se andare in PCT e s=
+u quali Paesi. I costi restano a carico nostro.
+>>
+>> La seconda. Il 20 dicembre facciamo l'open day in sede, con i clienti e du=
+e riviste di settore. Presentiamo il prototipo di banco con il Cobalt-S e fac=
+ciamo vedere in funzione la schermata di stima dell'usura. Sarebbe la prima u=
+scita pubblica del progetto e ci teniamo parecchio.
+>>
+>> Se avete osservazioni fatemi sapere entro luned=C3=AC, cos=C3=AC chiudo co=
+n il mandatario.
+>>
+>> Buon fine settimana,
+>> Marta
+>>
+>> --
+>> ing. Marta Salvioni
+>> Responsabile tecnico di progetto
+>> Cobalt Sensor Labs S.r.l.

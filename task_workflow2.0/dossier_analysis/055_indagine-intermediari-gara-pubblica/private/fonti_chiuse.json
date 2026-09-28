@@ -1,0 +1,70 @@
+{
+  "task_id": "WF2-055",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 8 giugno 2001, n. 231 - artt. 5, 6 e 7",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-06-08;231",
+      "regola_sostenuta": "responsabilità dell'ente per i reati commessi nel suo interesse o a suo vantaggio; efficacia esimente del modello e vigilanza dell'organismo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 8 giugno 2001, n. 231 - art. 25",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2001-06-08;231",
+      "regola_sostenuta": "reati di concussione, induzione indebita e corruzione fra i reati presupposto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 19 ottobre 1930, n. 1398 - art. 353 c.p.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1930-10-19;1398",
+      "regola_sostenuta": "turbata libertà degli incanti",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 19 ottobre 1930, n. 1398 - art. 353-bis c.p.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1930-10-19;1398",
+      "regola_sostenuta": "turbata libertà del procedimento di scelta del contraente",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 marzo 2023, n. 36 - art. 16",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36",
+      "regola_sostenuta": "conflitto di interessi nelle procedure di affidamento e obbligo di astensione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 marzo 2023, n. 36 - art. 93",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36",
+      "regola_sostenuta": "commissione giudicatrice e requisiti dei componenti",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 2381 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "poteri e doveri degli organi delegati e informativa al consiglio",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 2403 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "doveri di vigilanza dell'organo di controllo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 20 maggio 1970, n. 300 - art. 7",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300",
+      "regola_sostenuta": "procedimento disciplinare e contestazione dell'addebito, per il caso in cui l'indagine coinvolga personale dipendente",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

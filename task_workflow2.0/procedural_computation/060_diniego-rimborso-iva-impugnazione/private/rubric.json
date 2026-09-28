@@ -1,0 +1,773 @@
+{
+  "task_id": "WF2-060",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable è prodotto come file `tax_deadline_audit.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `tax_deadline_audit.md`.\nPASS se: il file consegnato ha nome `tax_deadline_audit.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `tax_deadline_audit.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non supera il limite di 1800 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 1800 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 1800.\nFAIL se: il corpo del deliverable supera 1800 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 1800.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "ogni data indicata nella cronologia porta il riferimento al documento del fascicolo da cui è ricavata.",
+      "match_criteria": "Oggetto del criterio: ogni data indicata nella cronologia porta il riferimento al documento del fascicolo da cui è ricavata.\nPASS se: accanto a ciascuna data compare il rinvio a uno dei quattro allegati.\nFAIL se: almeno una data della cronologia non porta alcun rinvio a un allegato.\nÈ indifferente: la forma del rinvio, numero di documento o titolo; per le date calcolate basta il rinvio all'allegato da cui parte il calcolo; la data di riferimento indicata nella consegna, che non richiede fonte.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascuna data compare il rinvio a uno dei quattro allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il calcolo della scadenza è esposto nei passaggi, con giorno iniziale, durata e risultato.",
+      "match_criteria": "Oggetto del criterio: il calcolo della scadenza è esposto nei passaggi, con giorno iniziale, durata e risultato.\nPASS se: nella sezione del computo compaiono il giorno di decorrenza, la durata del termine e la data di scadenza come passaggi distinti.\nFAIL se: la scadenza è indicata senza esporre i passaggi del computo.\nÈ indifferente: la forma tabellare o discorsiva del computo.\nFonte di authoring: public/01_task.md, richiesta sul percorso",
+      "pass_condition": "nella sezione del computo compaiono il giorno di decorrenza, la durata del termine e la data di scadenza come passaggi distinti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo ai protocolli e ai numeri di provvedimento del fascicolo.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica il provvedimento del 6 maggio 2031 come atto autonomamente impugnabile in quanto rifiuto espresso della restituzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il provvedimento del 6 maggio 2031 come atto autonomamente impugnabile in quanto rifiuto espresso della restituzione.\nPASS se: compare, riferita al provvedimento, una fra: «rifiuto espresso della restituzione», «diniego espresso di rimborso», «atto autonomamente impugnabile».\nFAIL se: l'atto è qualificato come non impugnabile, oppure la qualificazione non compare.\nÈ indifferente: l'indicazione della lettera dell'elenco degli atti impugnabili.\nFonte di authoring: dispositivo del provvedimento di diniego",
+      "pass_condition": "compare, riferita al provvedimento, una fra: «rifiuto espresso della restituzione», «diniego espresso di rimborso», «atto autonomamente impugnabile».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica la richiesta di documentazione del 12 febbraio 2031 come l'atto da impugnare.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica la richiesta di documentazione del 12 febbraio 2031 come l'atto da impugnare.\nPASS se: il deliverable non indica la richiesta di documentazione del 12 febbraio 2031 come l'atto da impugnare.\nFAIL se: la richiesta del 12 febbraio 2031 è indicata come atto da impugnare.\nÈ indifferente: la menzione della richiesta nella cronologia.\nFonte di authoring: richiesta del 12 febbraio 2031",
+      "pass_condition": "il deliverable non indica la richiesta di documentazione del 12 febbraio 2031 come l'atto da impugnare.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il 6 maggio 2031 come giorno da cui decorre il termine di impugnazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 6 maggio 2031 come giorno da cui decorre il termine di impugnazione.\nPASS se: compare «6 maggio 2031» come giorno di decorrenza del termine.; compare «06/05/2031» come giorno di decorrenza del termine.\nFAIL se: è indicato un giorno di decorrenza diverso, oppure la decorrenza non è indicata.\nÈ indifferente: l'indicazione dell'ora della consegna.\nFonte di authoring: ricevuta di avvenuta consegna; date_verificate.md",
+      "pass_condition": "compare «6 maggio 2031» come giorno di decorrenza del termine.; compare «06/05/2031» come giorno di decorrenza del termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable riconduce la decorrenza alla ricevuta di avvenuta consegna del provvedimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la decorrenza alla ricevuta di avvenuta consegna del provvedimento.\nPASS se: la decorrenza è ricondotta a una fra: «ricevuta di avvenuta consegna», «consegna della posta elettronica certificata», «notificazione del provvedimento».\nFAIL se: la decorrenza è ricondotta alla data apposta sul provvedimento, al numero di protocollo, oppure l'atto di decorrenza non è indicato.\nÈ indifferente: la menzione del gestore del servizio.\nFonte di authoring: ricevuta di avvenuta consegna",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «ricevuta di avvenuta consegna», «consegna della posta elettronica certificata», «notificazione del provvedimento».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica il 29 aprile 2031 come giorno da cui decorre il termine.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 29 aprile 2031 come giorno da cui decorre il termine.\nPASS se: il deliverable non indica il 29 aprile 2031 come giorno da cui decorre il termine.\nFAIL se: il 29 aprile 2031 è indicato come giorno di decorrenza del termine.\nÈ indifferente: la menzione del 29 aprile 2031 come data apposta sul provvedimento.\nFonte di authoring: intestazione del provvedimento",
+      "pass_condition": "il deliverable non indica il 29 aprile 2031 come giorno da cui decorre il termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica in sessanta giorni la durata del termine per proporre ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in sessanta giorni la durata del termine per proporre ricorso.\nPASS se: compare «sessanta giorni» come durata del termine.; compare «60 giorni» come durata del termine.\nFAIL se: è indicata una durata diversa, oppure la durata non è indicata.\nÈ indifferente: il richiamo all'articolo che fissa il termine.\nFonte di authoring: disciplina del processo tributario",
+      "pass_condition": "compare «sessanta giorni» come durata del termine.; compare «60 giorni» come durata del termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il giorno di notificazione non si computa nel termine.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il giorno di notificazione non si computa nel termine.\nPASS se: compare l'affermazione che il giorno iniziale non si computa.; compare l'affermazione che il termine decorre dal giorno successivo alla notificazione.\nFAIL se: il termine è computato includendo il 6 maggio 2031, oppure la regola di computo non compare.\nÈ indifferente: la citazione della norma sul computo dei termini.\nFonte di authoring: disciplina sul computo dei termini processuali",
+      "pass_condition": "compare l'affermazione che il giorno iniziale non si computa.; compare l'affermazione che il termine decorre dal giorno successivo alla notificazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il 7 luglio 2031 come scadenza del termine per proporre ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 7 luglio 2031 come scadenza del termine per proporre ricorso.\nPASS se: compare «7 luglio 2031» come scadenza del termine.; compare «07/07/2031» come scadenza del termine.\nFAIL se: è indicata una data di scadenza diversa, oppure la scadenza non è indicata.\nÈ indifferente: l'indicazione dell'ora entro cui l'atto va notificato.\nFonte di authoring: computo verificato; date_verificate.md",
+      "pass_condition": "compare «7 luglio 2031» come scadenza del termine.; compare «07/07/2031» come scadenza del termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il sessantesimo giorno cade di sabato e che il termine è prorogato al primo giorno successivo non festivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il sessantesimo giorno cade di sabato e che il termine è prorogato al primo giorno successivo non festivo.\nPASS se: compare l'indicazione che la scadenza nominale cade di sabato e che opera la proroga al giorno non festivo successivo.\nFAIL se: la proroga non è affermata, oppure è affermata senza indicare il fatto che la determina.\nÈ indifferente: la citazione della norma sulla proroga.\nFonte di authoring: calendario 2031; disciplina sulla proroga dei termini processuali",
+      "pass_condition": "compare l'indicazione che la scadenza nominale cade di sabato e che opera la proroga al giorno non festivo successivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica il 5 luglio 2031 come scadenza del termine per proporre ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 5 luglio 2031 come scadenza del termine per proporre ricorso.\nPASS se: il deliverable non indica il 5 luglio 2031 come scadenza del termine per proporre ricorso.\nFAIL se: il 5 luglio 2031 è indicato come data entro cui il ricorso va proposto.\nÈ indifferente: la menzione del 5 luglio 2031 come sessantesimo giorno nominale.\nFonte di authoring: computo verificato",
+      "pass_condition": "il deliverable non indica il 5 luglio 2031 come scadenza del termine per proporre ricorso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica in sette il numero dei giorni che residuano alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in sette il numero dei giorni che residuano alla data di riferimento.\nPASS se: compare «sette giorni» come tempo residuo.; compare «7 giorni» come tempo residuo.\nFAIL se: è indicato un numero diverso di giorni residui, oppure il tempo residuo non è indicato.\nÈ indifferente: l'indicazione dei giorni lavorativi residui.\nFonte di authoring: data di riferimento e scadenza calcolata",
+      "pass_condition": "compare «sette giorni» come tempo residuo.; compare «7 giorni» come tempo residuo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica la richiesta del 12 febbraio 2031 come atto istruttorio non compreso fra quelli autonomamente impugnabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la richiesta del 12 febbraio 2031 come atto istruttorio non compreso fra quelli autonomamente impugnabili.\nPASS se: compare, riferita a quella richiesta, una fra: «atto istruttorio», «non autonomamente impugnabile», «non rientra fra gli atti impugnabili».\nFAIL se: la richiesta è qualificata come autonomamente impugnabile, oppure la qualificazione non compare.\nÈ indifferente: il rilievo che la richiesta stessa dichiara di non essere un provvedimento.\nFonte di authoring: richiesta del 12 febbraio 2031",
+      "pass_condition": "compare, riferita a quella richiesta, una fra: «atto istruttorio», «non autonomamente impugnabile», «non rientra fra gli atti impugnabili».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il 18 febbraio 2030 come giorno in cui si è compiuto il decorso dei novanta giorni dall'istanza di rimborso.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 18 febbraio 2030 come giorno in cui si è compiuto il decorso dei novanta giorni dall'istanza di rimborso.\nPASS se: compare «18 febbraio 2030» come compimento dei novanta giorni.; compare «18/02/2030» come compimento dei novanta giorni.\nFAIL se: è indicata una data diversa, oppure il decorso dei novanta giorni non è collocato nel tempo.\nÈ indifferente: l'indicazione del giorno della settimana.\nFonte di authoring: istanza del 20 novembre 2029; date_verificate.md",
+      "pass_condition": "compare «18 febbraio 2030» come compimento dei novanta giorni.; compare «18/02/2030» come compimento dei novanta giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il rifiuto tacito formatosi per decorso dei novanta giorni era impugnabile senza termine di decadenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il rifiuto tacito formatosi per decorso dei novanta giorni era impugnabile senza termine di decadenza.\nPASS se: compare l'indicazione che l'impugnazione del rifiuto tacito non era soggetta a un termine di decadenza.\nFAIL se: è affermato che il rifiuto tacito andava impugnato entro un termine di decadenza, oppure la questione non è trattata.\nÈ indifferente: il richiamo al termine di prescrizione del diritto al rimborso.\nFonte di authoring: disciplina del processo tributario sul rifiuto tacito",
+      "pass_condition": "compare l'indicazione che l'impugnazione del rifiuto tacito non era soggetta a un termine di decadenza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non afferma che il diritto al rimborso è decaduto per non aver impugnato il rifiuto tacito.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il diritto al rimborso è decaduto per non aver impugnato il rifiuto tacito.\nPASS se: il deliverable non afferma che il diritto al rimborso è decaduto per non aver impugnato il rifiuto tacito.\nFAIL se: compare l'affermazione che la mancata impugnazione del rifiuto tacito ha prodotto decadenza o inammissibilità del ricorso attuale.\nÈ indifferente: il rilievo sul tempo trascorso fra l'istanza e il provvedimento.\nFonte di authoring: disciplina del processo tributario sul rifiuto tacito",
+      "pass_condition": "il deliverable non afferma che il diritto al rimborso è decaduto per non aver impugnato il rifiuto tacito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica come organo giurisdizionale competente la corte di giustizia tributaria di primo grado.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come organo giurisdizionale competente la corte di giustizia tributaria di primo grado.\nPASS se: compare «corte di giustizia tributaria di primo grado» come organo davanti al quale proporre il ricorso.\nFAIL se: è indicato un altro organo, oppure l'organo competente non è indicato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione della sede territoriale.\nFonte di authoring: avvertenze del provvedimento; riforma della giustizia tributaria",
+      "pass_condition": "compare «corte di giustizia tributaria di primo grado» come organo davanti al quale proporre il ricorso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica la commissione tributaria provinciale come organo davanti al quale proporre il ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica la commissione tributaria provinciale come organo davanti al quale proporre il ricorso.\nPASS se: il deliverable non indica la commissione tributaria provinciale come organo davanti al quale proporre il ricorso.\nFAIL se: la commissione tributaria provinciale è indicata come organo competente.\nÈ indifferente: il richiamo alla denominazione previgente con la qualificazione di denominazione storica.\nFonte di authoring: riforma della giustizia tributaria",
+      "pass_condition": "il deliverable non indica la commissione tributaria provinciale come organo davanti al quale proporre il ricorso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il provvedimento di diniego non contiene iscrizione a ruolo ne intimazione di pagamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il provvedimento di diniego non contiene iscrizione a ruolo ne intimazione di pagamento.\nPASS se: compare l'indicazione che l'atto non contiene iscrizione a ruolo o intimazione di pagamento.\nFAIL se: è affermato che l'atto impone un pagamento, oppure la questione non è trattata.\nÈ indifferente: il rilievo che il credito resta esposto in dichiarazione.\nFonte di authoring: dispositivo del provvedimento di diniego",
+      "pass_condition": "compare l'indicazione che l'atto non contiene iscrizione a ruolo o intimazione di pagamento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il contributo unificato come adempimento da assolvere e documentare al momento della costituzione in giudizio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il contributo unificato come adempimento da assolvere e documentare al momento della costituzione in giudizio.\nPASS se: compare l'indicazione che il contributo unificato va versato e documentato alla costituzione in giudizio.\nFAIL se: l'adempimento non compare, oppure è presentato come non dovuto.\nÈ indifferente: l'indicazione della modalità di versamento.\nFonte di authoring: disciplina sul contributo unificato",
+      "pass_condition": "compare l'indicazione che il contributo unificato va versato e documentato alla costituzione in giudizio.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica un importo determinato del contributo unificato.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica un importo determinato del contributo unificato.\nPASS se: il deliverable non indica un importo determinato del contributo unificato.\nFAIL se: compare un importo in euro presentato come contributo unificato dovuto per questa controversia.\nÈ indifferente: l'indicazione che l'importo dipende dallo scaglione di valore e va verificato sulle tabelle vigenti.\nFonte di authoring: disciplina sul contributo unificato",
+      "pass_condition": "il deliverable non indica un importo determinato del contributo unificato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica in euro 318.400,00 il valore della controversia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 318.400,00 il valore della controversia.\nPASS se: compare «euro 318.400,00» come valore della controversia.; compare «318.400,00» come valore della controversia.\nFAIL se: è indicato un valore diverso, oppure il valore della controversia non è indicato.\nÈ indifferente: l'indicazione degli interessi maturati sul credito.\nFonte di authoring: dispositivo del provvedimento; prospetto della destinazione del credito",
+      "pass_condition": "compare «euro 318.400,00» come valore della controversia.; compare «318.400,00» come valore della controversia.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non contiene il messaggio del 10 marzo 2031 ne la documentazione con esso trasmessa.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non contiene il messaggio del 10 marzo 2031 ne la documentazione con esso trasmessa.\nPASS se: compare, riferita alla trasmissione del 10 marzo 2031, una fra: «non è nel fascicolo», «non risulta dagli atti disponibili», «il contenuto non è verificabile sui documenti presenti».\nFAIL se: la trasmissione è data per verificata nel contenuto, oppure la lacuna non è dichiarata.\nÈ indifferente: il rilievo che la trasmissione è riferita dall'ufficio.\nFonte di authoring: punto 3 della motivazione; composizione del fascicolo",
+      "pass_condition": "compare, riferita alla trasmissione del 10 marzo 2031, una fra: «non è nel fascicolo», «non risulta dagli atti disponibili», «il contenuto non è verificabile sui documenti presenti».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica quali documenti occorrono per verificare la ricostruzione dell'ufficio sulla documentazione trasmessa.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali documenti occorrono per verificare la ricostruzione dell'ufficio sulla documentazione trasmessa.\nPASS se: compare l'indicazione di almeno un documento fra il messaggio del 10 marzo 2031, le sue ricevute e le dichiarazioni doganali di esportazione.\nFAIL se: la lacuna è dichiarata senza indicare che cosa serve per colmarla.\nÈ indifferente: il numero di documenti elencati.\nFonte di authoring: public/01_task.md, richiesta sui dati mancanti",
+      "pass_condition": "compare l'indicazione di almeno un documento fra il messaggio del 10 marzo 2031, le sue ricevute e le dichiarazioni doganali di esportazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable indica in euro 1.020.000,00 l'ammontare delle operazioni la cui qualificazione l'ufficio dichiara di non avere riscontrato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 1.020.000,00 l'ammontare delle operazioni la cui qualificazione l'ufficio dichiara di non avere riscontrato.\nPASS se: compare «euro 1.020.000,00» come ammontare delle operazioni contestate.; compare «1.020.000,00» come ammontare delle operazioni contestate.\nFAIL se: è indicato un ammontare diverso, oppure l'ammontare contestato non è isolato.\nÈ indifferente: l'indicazione della percentuale di incidenza rideterminata.\nFonte di authoring: punto 4 della motivazione; prospetto della dichiarazione",
+      "pass_condition": "compare «euro 1.020.000,00» come ammontare delle operazioni contestate.; compare «1.020.000,00» come ammontare delle operazioni contestate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non afferma che la contestazione dell'ufficio riguarda le cessioni intracomunitarie dichiarate per euro 3.148.000,00.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la contestazione dell'ufficio riguarda le cessioni intracomunitarie dichiarate per euro 3.148.000,00.\nPASS se: il deliverable non afferma che la contestazione dell'ufficio riguarda le cessioni intracomunitarie dichiarate per euro 3.148.000,00.\nFAIL se: le cessioni intracomunitarie per euro 3.148.000,00 sono indicate fra le operazioni contestate dall'ufficio.\nÈ indifferente: la menzione delle cessioni intracomunitarie nella descrizione della dichiarazione.\nFonte di authoring: punti 3 e 4 della motivazione",
+      "pass_condition": "il deliverable non afferma che la contestazione dell'ufficio riguarda le cessioni intracomunitarie dichiarate per euro 3.148.000,00.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta il 7 luglio 2031 come risultato di un termine decorrente dal 29 aprile 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il 7 luglio 2031 come risultato di un termine decorrente dal 29 aprile 2031.\nPASS se: il deliverable non presenta il 7 luglio 2031 come risultato di un termine decorrente dal 29 aprile 2031.\nFAIL se: il 7 luglio 2031 è ricavato da un computo che parte dal 29 aprile 2031.\nÈ indifferente: la menzione del 29 aprile 2031 come data del provvedimento.\nFonte di authoring: computo verificato",
+      "pass_condition": "il deliverable non presenta il 7 luglio 2031 come risultato di un termine decorrente dal 29 aprile 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non applica la sospensione feriale dei termini al periodo che va dal 6 maggio al 7 luglio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non applica la sospensione feriale dei termini al periodo che va dal 6 maggio al 7 luglio 2031.\nPASS se: il deliverable non applica la sospensione feriale dei termini al periodo che va dal 6 maggio al 7 luglio 2031.\nFAIL se: la sospensione feriale è applicata per spostare la scadenza oltre il 7 luglio 2031.\nÈ indifferente: la menzione della sospensione feriale con l'indicazione che il periodo non la interseca.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non applica la sospensione feriale dei termini al periodo che va dal 6 maggio al 7 luglio 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica il reclamo e mediazione come fase da percorrere prima del ricorso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il reclamo e mediazione come fase da percorrere prima del ricorso.\nPASS se: il deliverable non indica il reclamo e mediazione come fase da percorrere prima del ricorso.\nFAIL se: il reclamo e mediazione compare come adempimento necessario o come termine da computare.\nÈ indifferente: la menzione dell'istituto con l'indicazione che non è più applicabile.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non indica il reclamo e mediazione come fase da percorrere prima del ricorso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non indica l'istanza di sospensione dell'atto impugnato come passaggio necessario.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica l'istanza di sospensione dell'atto impugnato come passaggio necessario.\nPASS se: il deliverable non indica l'istanza di sospensione dell'atto impugnato come passaggio necessario.\nFAIL se: l'istanza cautelare di sospensione compare fra gli adempimenti necessari o fra i profili di rischio.\nÈ indifferente: la menzione del rimedio cautelare con l'indicazione che l'atto non produce effetti esecutivi.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non indica l'istanza di sospensione dell'atto impugnato come passaggio necessario.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "il deliverable non qualifica come perentorio il termine di trenta giorni assegnato dalla richiesta del 12 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non qualifica come perentorio il termine di trenta giorni assegnato dalla richiesta del 12 febbraio 2031.\nPASS se: il deliverable non qualifica come perentorio il termine di trenta giorni assegnato dalla richiesta del 12 febbraio 2031.\nFAIL se: il termine di trenta giorni della richiesta istruttoria è qualificato come perentorio o come decadenziale.\nÈ indifferente: la menzione del termine di trenta giorni come termine assegnato dall'ufficio.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non qualifica come perentorio il termine di trenta giorni assegnato dalla richiesta del 12 febbraio 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provata la trasmissione parziale del 10 marzo 2031 mentre tratta come non provata la documentazione mancante.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provata la trasmissione parziale del 10 marzo 2031 mentre tratta come non provata la documentazione mancante.\nPASS se: simmetria del controllo: il deliverable non tratta come provata la trasmissione parziale del 10 marzo 2031 mentre tratta come non provata la documentazione mancante.\nFAIL se: il contenuto della trasmissione del 10 marzo 2031 è dato per accertato e nello stesso deliverable la documentazione mancante è dichiarata non verificabile.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: punto 3 della motivazione; composizione del fascicolo",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provata la trasmissione parziale del 10 marzo 2031 mentre tratta come non provata la documentazione mancante.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il ricorso contro il diniego sarà accolto.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il ricorso contro il diniego sarà accolto.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che il ricorso contro il diniego sarà accolto.\nFAIL se: compare l'affermazione che il ricorso sarà accolto o che il rimborso sarà riconosciuto.\nÈ indifferente: l'indicazione dei documenti da produrre in giudizio.\nFonte di authoring: motivazione del provvedimento",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che il ricorso contro il diniego sarà accolto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tax_deadline_audit.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il tempo trascorso fra l'istanza del 20 novembre 2029 e la richiesta del 12 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio il tempo trascorso fra l'istanza del 20 novembre 2029 e la richiesta del 12 febbraio 2031.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio il tempo trascorso fra l'istanza del 20 novembre 2029 e la richiesta del 12 febbraio 2031.\nFAIL se: la durata dell'istruttoria compare fra i profili di rischio o fra le irregolarità che incidono sulla proponibilità del ricorso.\nÈ indifferente: la menzione della durata dell'istruttoria nella cronologia.\nFonte di authoring: cronologia degli atti",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il tempo trascorso fra l'istanza del 20 novembre 2029 e la richiesta del 12 febbraio 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

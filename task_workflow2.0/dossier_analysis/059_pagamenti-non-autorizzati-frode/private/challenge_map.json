@@ -1,0 +1,156 @@
+{
+  "task_id": "WF2-059",
+  "lato_assistito": "Officine Pratosolco S.r.l., cliente del servizio di pagamento",
+  "data_di_riferimento": "2031-03-27",
+  "stato_fascicolo": "sei operazioni disconosciute il 12 marzo 2031; credenziali bloccate; reclamo rigettato il 20 marzo 2031; documentazione tecnica richiesta e non trasmessa; nessun rientro delle somme documentato.",
+  "meccanismi_di_difficolta": [
+    "i presupposti di applicazione si deducono: la deroga contrattuale è ammessa solo se il cliente non è consumatore né microimpresa, e i requisiti dimensionali della nozione non sono scritti nel documento",
+    "fatti distribuiti: la difformità dal mandato riguarda due delle sei operazioni e la mancata autenticazione forte quattro, e l'insieme si ricava solo incrociando le colonne dell'estratto conto con le clausole del mandato",
+    "dichiarazione di parte smentita dai documenti: la lettera della banca presenta la deroga come esonero integrale e la tempestività del disconoscimento come tardiva",
+    "presenza contro adeguatezza: la clausola di deroga esiste ed è valida, il difetto sta nel perimetro che essa non copre"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "qualificazione del cliente e ambito della deroga",
+      "gravita": "alta",
+      "affermazione_richiesta": "il cliente non è consumatore e non ha i requisiti dimensionali della microimpresa, avendo 34 dipendenti ed euro 9.840.000,00 di fatturato: la deroga pattuita alla clausola 18.2 è quindi ammessa",
+      "evidenza": "sezione II delle condizioni di conto; clausola 18.1 e 18.2",
+      "non_deve_affermare": "che la deroga sia inefficace, o che il cliente goda della tutela riservata al consumatore o alla microimpresa"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "perimetro chiuso della deroga",
+      "gravita": "alta",
+      "affermazione_richiesta": "la deroga copre l'onere della prova dell'autenticazione e la responsabilità per l'utilizzo non autorizzato, ma non si estende all'obbligo di rimborso del prestatore né al termine di comunicazione, che le parti non possono escludere",
+      "evidenza": "clausola 18.2 e 18.4 delle condizioni di conto",
+      "non_deve_affermare": "che la deroga esoneri la Banca da ogni obbligo relativo alle operazioni contestate"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "l'affermazione della Banca sul proprio esonero integrale non regge",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'affermazione del punto 1 della lettera del 20 marzo 2031, secondo cui nessun obbligo di rimborso grava sulla Banca, eccede il contenuto della deroga",
+      "evidenza": "punto 1 della lettera del 20 marzo 2031, letto con la clausola 18.4",
+      "non_deve_affermare": "che la posizione della Banca sul proprio esonero sia fondata"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "violazione della soglia di doppia firma",
+      "gravita": "alta",
+      "affermazione_richiesta": "due delle sei operazioni, quella di euro 39.000,00 del 6 marzo 2031 e quella di euro 29.000,00 del 7 marzo 2031, superano la soglia di euro 25.000,00 e risultano disposte con una sola firma, in difformità dalle clausole 5.3 e 5.4",
+      "evidenza": "clausole 5.2, 5.3 e 5.4; colonne importo_eur e numero_firme dell'estratto",
+      "non_deve_affermare": "che tutte e sei le operazioni violino la soglia di doppia firma"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "le quattro operazioni sotto soglia non violano il mandato",
+      "gravita": "alta",
+      "affermazione_richiesta": "le operazioni di euro 24.500,00, 18.000,00, 22.000,00 e 16.000,00 sono di importo inferiore alla soglia e la loro esecuzione a firma singola è conforme al mandato: il vizio, per esse, sta altrove",
+      "evidenza": "clausola 5.2; colonne importo_eur e numero_firme dell'estratto",
+      "non_deve_affermare": "che l'esecuzione a firma singola di queste quattro operazioni violi il mandato"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "autenticazione forte non applicata a quattro operazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "quattro delle sei operazioni, disposte con l'utenza vertegno.a da dispositivo non censito, risultano eseguite senza autenticazione forte",
+      "evidenza": "colonne utenza_disponente, dispositivo e autenticazione_forte dell'estratto",
+      "non_deve_affermare": "che l'autenticazione forte sia stata applicata a tutte le operazioni contestate"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "la registrazione non prova l'autorizzazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'affermazione del punto 2 della lettera del 20 marzo 2031, secondo cui la regolarità della registrazione è elemento sufficiente, non è sostenibile: la registrazione dell'uso dello strumento non dimostra da sé che l'operazione sia stata autorizzata",
+      "evidenza": "punto 2 della lettera del 20 marzo 2031",
+      "non_deve_affermare": "che la registrazione contabile dell'operazione ne provi l'autorizzazione"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "mancato funzionamento dell'avviso e variazione comunicata",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'avviso via SMS previsto dalla clausola 8.1, lettera a), non è stato ricevuto e la variazione del numero censito era stata comunicata per iscritto il 4 febbraio 2031, prima delle operazioni",
+      "evidenza": "clausole 7.3 e 8.1, lettera a); PEC del 12 marzo 2031",
+      "non_deve_affermare": "che il cliente non avesse comunicato la variazione del numero di telefono"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "concorso della condotta del cliente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la comunicazione di identificativo, codice segreto e codice temporaneo a terzi il 27 febbraio 2031 e il mancato avviso alla Banca sono fatti provati dal fascicolo e rilevano come concorso nella produzione del danno, la cui misura non è determinabile con i dati disponibili",
+      "evidenza": "PEC del 12 marzo 2031, paragrafo sulla circostanza segnalata; clausola 7.2",
+      "non_deve_affermare": "che la condotta del cliente escluda in radice ogni pretesa, o che sia irrilevante"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "documentazione tecnica non trasmessa",
+      "gravita": "media",
+      "affermazione_richiesta": "la Banca non ha trasmesso la documentazione tecnica sull'autenticazione delle singole operazioni né l'elenco dei dispositivi abilitati, e il rifiuto è motivato con la natura interna del documento",
+      "evidenza": "punto 5 della lettera del 20 marzo 2031; richiesta contenuta nella PEC del 12 marzo",
+      "non_deve_affermare": "che la documentazione sia stata prodotta o che il cliente non l'abbia richiesta"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "matrice delle evidenze e fatti non provati",
+      "gravita": "alta",
+      "affermazione_richiesta": "per ciascuna operazione il fascicolo prova importo, canale, utenza, dispositivo, esito dell'autenticazione e numero di firme, ma non prova chi abbia materialmente impartito la disposizione",
+      "evidenza": "colonne dell'estratto conto; assenza di log di sessione e di indirizzi di collegamento",
+      "non_deve_affermare": "che l'autore materiale delle disposizioni risulti dagli atti"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "destino dell'importo e rientro",
+      "gravita": "media",
+      "affermazione_richiesta": "il fascicolo non documenta alcun rientro delle somme: la riga del 13 marzo 2031 riporta un importo pari a zero",
+      "evidenza": "riga del 13 marzo 2031 dell'estratto conto",
+      "non_deve_affermare": "che una parte dell'importo sia stata recuperata"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "tempestivita della comunicazione del disconoscimento",
+      "chiave_nel_criterio": "tempestivita della comunicazione",
+      "perche_non_e_issue": "il disconoscimento è stato inviato il 12 marzo 2031, cinque giorni dopo l'ultima operazione e lo stesso giorno in cui il cliente ne ha avuto conoscenza in sede di riconciliazione, ampiamente entro il termine massimo non derogabile. Il rilievo del punto 4 della lettera della Banca non è fondato e riprenderlo è errore"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "bonifico stipendi del 3 marzo 2031",
+      "chiave_nel_criterio": "bonifico stipendi",
+      "perche_non_e_issue": "il bonifico di euro 96.420,00 del 3 marzo 2031 è di importo superiore alla soglia ma risulta disposto con due firme e con autenticazione forte applicata da dispositivo censito: è conforme al mandato e non è fra le operazioni disconosciute. Includerlo fra le operazioni contestate è sovra-segnalazione"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "termine di sessanta giorni per la risposta al reclamo",
+      "chiave_nel_criterio": "termine di risposta al reclamo",
+      "perche_non_e_issue": "la Banca ha risposto il 20 marzo 2031 a un reclamo del 12 marzo 2031, entro il termine di sessanta giorni della clausola 19. Segnalare un ritardo nella risposta è errore"
+    }
+  ],
+  "dati_mancanti": [
+    "log di sessione e indirizzi di collegamento delle sei disposizioni",
+    "identificativo completo del dispositivo DEV-019 e data del suo primo utilizzo",
+    "tracciato di generazione e consumo dei codici temporanei",
+    "elenco dei dispositivi abilitati alla data del 5 marzo 2031",
+    "configurazione della soglia di doppia firma nei sistemi della banca al 6 marzo 2031",
+    "ricevuta di ritorno della raccomandata del 4 febbraio 2031, annunciata e non allegata",
+    "documentazione interna del cliente sull'episodio del 27 febbraio 2031"
+  ],
+  "errori_bersaglio": [
+    "estendere a tutte e sei le operazioni la violazione della soglia di doppia firma",
+    "trattare la deroga della clausola 18.2 come esonero integrale della banca",
+    "ritenere inefficace la deroga qualificando il cliente come microimpresa",
+    "riprendere il rilievo della banca sulla tardività del disconoscimento",
+    "presentare la registrazione contabile come prova dell'autorizzazione",
+    "addebitare al cliente l'omessa comunicazione della variazione del numero di telefono",
+    "far derivare dalla condotta del 27 febbraio l'esclusione integrale della pretesa, oppure quantificarne l'incidenza sui soli atti",
+    "affermare che il rimborso è dovuto",
+    "includere il bonifico stipendi fra le operazioni contestate"
+  ],
+  "funzione_degli_allegati": {
+    "01_condizioni_conto_corrente_e_mandato.pdf": "Porta la soglia di doppia firma di euro 25.000,00, la clausola di deroga per il cliente non consumatore, i canali di comunicazione pattuiti e la scheda anagrafica d'impresa da cui si ricavano dipendenti e fatturato. Non contiene le soglie di legge della nozione di microimpresa, che vanno dedotte.",
+    "02_estratto_conto_e_log_marzo_2031.csv": "Traccia le sei operazioni contestate con importo, canale, dispositivo, esito dell'autenticazione forte e utenza disponente. Consente di stabilire che soltanto due operazioni superano la soglia di doppia firma e che l'autenticazione forte non è stata applicata a quattro di esse.",
+    "03_pec_disconoscimento_12_marzo_2031.pdf": "Fissa la data della comunicazione e il contenuto del disconoscimento. Serve a verificare il rispetto del termine non derogabile e a collocare l'ammissione sull'episodio di phishing, che è il fatto su cui la Banca costruisce la difesa.",
+    "04_lettera_banca_20_marzo_2031.pdf": "Contiene la posizione della Banca e i due errori-bersaglio che essa induce: la deroga presentata come esonero integrale da ogni obbligo e la violazione del mandato riferita a tutte le operazioni. Non allega la documentazione tecnica richiesta."
+  }
+}

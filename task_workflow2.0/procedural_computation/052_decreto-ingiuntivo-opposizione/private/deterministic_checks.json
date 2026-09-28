@@ -1,0 +1,313 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-052",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "procedural_map.md"
+  ],
+  "criteria_total": 73,
+  "proposals_count": 12,
+  "proposals": [
+    {
+      "criterion_id": "B.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "quaranta giorni",
+        "40 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «quaranta giorni» come durata del termine di opposizione.; compare «40 giorni» come durata del termine di opposizione.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B1",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:40|quaranta)\\s+giorn[oaei]|(?:40|quaranta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "20 maggio 2031",
+        "20/05/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «20 maggio 2031» come giorno di decorrenza.; compare «20/05/2031» come giorno di decorrenza.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B2",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:20°?\\s+maggio(?:\\s+2031)?|0?20\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2031|0?20\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*31)|(?:20°?\\s+maggio(?:\\s+2031)?|0?20\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2031|0?20\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "30 giugno 2031",
+        "30/06/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «30 giugno 2031» come scadenza del termine di opposizione.; compare «30/06/2031» come scadenza del termine di opposizione.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B5",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:30°?\\s+giugno(?:\\s+2031)?|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*2031|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*31)|(?:30°?\\s+giugno(?:\\s+2031)?|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*2031|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "dodici giorni",
+        "12 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «dodici giorni» come tempo residuo.; compare «12 giorni» come tempo residuo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B8",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:12|dodici)\\s+giorn[oaei]|(?:12|dodici)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.12",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "centoventi giorni",
+        "120 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «centoventi giorni» come termine minimo a comparire.; compare «120 giorni» come termine minimo a comparire.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B12",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:120|centoventi)\\s+giorn[oaei]|(?:120|centoventi)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.18",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "dieci giorni",
+        "10 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «dieci giorni» come termine per la costituzione dell'opponente.; compare «10 giorni» come termine per la costituzione dell'opponente.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B18",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:10|dieci)\\s+giorn[oaei]|(?:10|dieci)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.22",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "settanta giorni",
+        "70 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «settanta giorni» come termine per la costituzione dell'opposto.; compare «70 giorni» come termine per la costituzione dell'opposto.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B22",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?:70|settanta)\\s+giorn[oaei]|(?:70|settanta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.35",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 126.000,00",
+        "126.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 126.000,00» come importo contestato dalla bozza.; compare «126.000,00» come importo contestato dalla bozza.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B35",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?<![\\d.,])126[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])126[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.37",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 60.000,00",
+        "60.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 60.000,00» come ammontare degli acconti non imputati.; compare «60.000,00» come ammontare degli acconti non imputati.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B37",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?<![\\d.,])60[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])60[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.40",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 210.700,00",
+        "210.700,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 210.700,00» come importo complessivamente contestabile.; compare «210.700,00» come importo complessivamente contestabile.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B40",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?<![\\d.,])210[.\\s]?700(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])210[.\\s]?700(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.41",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 84.700,00",
+        "84.700,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 84.700,00» come scostamento.; compare «84.700,00» come scostamento.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B41",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?<![\\d.,])84[.\\s]?700(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])84[.\\s]?700(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.49",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 276.000,00",
+        "276.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 276.000,00» come importo del deposito autorizzato.; compare «276.000,00» come importo del deposito autorizzato.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-052-B49",
+        "type": "required_regex",
+        "artifact": "procedural_map.md",
+        "patterns": [
+          "(?:(?<![\\d.,])276[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])276[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

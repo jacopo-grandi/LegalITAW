@@ -1,0 +1,802 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-013",
+  "title": "Distribuzione. Revisione della bozza di contratto del fornitore prima della firma",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 49,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "sono prodotti due file: la bozza con le modifiche segnate sul testo e la nota delle modifiche.",
+      "pass_condition": "sono prodotti due file distinti: la bozza con le modifiche segnate sul testo e la nota delle modifiche.",
+      "fail_condition": "manca uno dei due file o bozza e nota non sono prodotti come file distinti.",
+      "indifferent": "I nomi e i formati dei due file.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [valore] sono prodotti due file: la bozza con le modifiche segnate sul testo e la nota delle modifiche."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni rilievo della nota riporta un riferimento a un articolo della bozza, a un allegato o a un documento del fascicolo.",
+      "pass_condition": "ogni rilievo della nota riporta un riferimento a un articolo della bozza, a un allegato o a un documento del fascicolo.",
+      "fail_condition": "anche un solo rilievo non è ancorato a uno degli articoli, allegati o documenti indicati.",
+      "indifferent": "La forma del riferimento, purché la fonte si identifichi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] ogni rilievo della nota riporta un riferimento a un articolo della bozza, a un allegato o a un documento del fascicolo."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni rilievo della nota porta tre elementi distinti: esposizione, clausola di origine, modifica proposta.",
+      "pass_condition": "ogni rilievo della nota contiene separatamente esposizione, clausola di origine e modifica proposta.",
+      "fail_condition": "anche un solo rilievo manca di uno dei tre elementi o li presenta in modo non distinguibile.",
+      "indifferent": "Il formato grafico o la posizione dei tre elementi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [presenza] ogni rilievo della nota porta tre elementi distinti: esposizione, clausola di origine, modifica proposta."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nessun riferimento normativo fuori dall'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "il deliverable cita soltanto art. 101 TFUE; Regolamento (UE) 2022/720, artt. 3, 4 e 5; Linee guida verticali 2022.",
+      "fail_condition": "compare anche una sola fonte normativa o giurisprudenziale fuori dall’elenco, anche come ipotesi o esempio.",
+      "indifferent": "I rinvii alle clausole, agli allegati e agli altri documenti del fascicolo non sono norme.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.4 [assenza] nessun riferimento normativo fuori dall'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'obbligo di non comunicare al pubblico prezzi inferiori al 95% del prezzo consigliato equivale a imposizione del prezzo di rivendita.",
+      "pass_condition": "compare, riferita all'art. 8.3, una fra: «prezzo di rivendita imposto», «imposizione del prezzo di rivendita», «prezzo minimo imposto», «restrizione fondamentale sul prezzo».",
+      "fail_condition": "l'art. 8.3 è trattato come limite di comunicazione lecito, oppure il rilievo non compare.",
+      "indifferent": "la citazione del regolamento sugli accordi verticali.",
+      "source": "bozza art. 8.3.",
+      "severity": "alta",
+      "raw_text": "B.1 prezzo minimo pubblicizzabile [issue: I-01] [tipo: presenza]\nVerifica: il deliverable afferma che l'obbligo di non comunicare al pubblico prezzi inferiori al 95% del prezzo consigliato equivale a imposizione del prezzo di rivendita.\nPass se: compare, riferita all'art. 8.3, una fra: «prezzo di rivendita imposto», «imposizione del prezzo di rivendita», «prezzo minimo imposto», «restrizione fondamentale sul prezzo».\nFail se: l'art. 8.3 è trattato come limite di comunicazione lecito, oppure il rilievo non compare.\nIndifferente: la citazione del regolamento sugli accordi verticali.\n—— non passa al judge —— Fonte: bozza art. 8.3. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce l'imposizione del prezzo anche al bonus del 3% subordinato al rispetto della politica di prezzo.",
+      "pass_condition": "il rilievo sul prezzo richiama l'art. 8.4 della bozza o il punto 2 della circolare del 15 gennaio 2027.",
+      "fail_condition": "il rilievo sul prezzo richiama soltanto l'art. 8.3.",
+      "indifferent": null,
+      "source": "bozza art. 8.4; circolare punto 2.",
+      "severity": "alta",
+      "raw_text": "B.2 bonus condizionato [issue: I-01] [tipo: attribuzione]\nVerifica: il deliverable riconduce l'imposizione del prezzo anche al bonus del 3% subordinato al rispetto della politica di prezzo.\nPass se: il rilievo sul prezzo richiama l'art. 8.4 della bozza o il punto 2 della circolare del 15 gennaio 2027.\nFail se: il rilievo sul prezzo richiama soltanto l'art. 8.3.\n—— non passa al judge —— Fonte: bozza art. 8.4; circolare punto 2. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che indicare un prezzo al pubblico consigliato è di per sé vietato.",
+      "pass_condition": "non compare la richiesta di eliminare il prezzo consigliato dell'Allegato A in quanto tale.",
+      "fail_condition": "il prezzo consigliato è indicato come clausola da espungere o come illecita.",
+      "indifferent": null,
+      "source": "Allegato A.",
+      "severity": "media",
+      "raw_text": "B.3 prezzo consigliato ammesso [issue: I-01] [tipo: assenza]\nVerifica: il deliverable non afferma che indicare un prezzo al pubblico consigliato è di per sé vietato.\nPass se: non compare la richiesta di eliminare il prezzo consigliato dell'Allegato A in quanto tale.\nFail se: il prezzo consigliato è indicato come clausola da espungere o come illecita.\n—— non passa al judge —— Fonte: Allegato A. Gravità: media."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il divieto assoluto di trasmettere prezzi ai servizi di comparazione come clausola non ammissibile.",
+      "pass_condition": "compare, riferita all'art. 9.4, una fra: «restrizione fondamentale», «clausola non esentabile», «divieto non ammissibile», «preclude un intero canale pubblicitario».",
+      "fail_condition": "l'art. 9.4 è trattato come restrizione lecita di modalità di vendita, oppure non è rilevato.",
+      "indifferent": null,
+      "source": "bozza art. 9.4; circolare punto 4.",
+      "severity": "alta",
+      "raw_text": "B.4 comparatori di prezzo [issue: I-02] [tipo: qualificazione]\nVerifica: il deliverable qualifica il divieto assoluto di trasmettere prezzi ai servizi di comparazione come clausola non ammissibile.\nPass se: compare, riferita all'art. 9.4, una fra: «restrizione fondamentale», «clausola non esentabile», «divieto non ammissibile», «preclude un intero canale pubblicitario».\nFail se: l'art. 9.4 è trattato come restrizione lecita di modalità di vendita, oppure non è rilevato.\n—— non passa al judge —— Fonte: bozza art. 9.4; circolare punto 4. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone di consentire i comparatori almeno in parte, indicando come ammissibile la limitazione a singoli servizi o a requisiti di qualità.",
+      "pass_condition": "compare una proposta che consente l'uso dei comparatori con requisiti o con esclusione di servizi determinati.",
+      "fail_condition": "la proposta si limita a chiedere la cancellazione dell'articolo senza indicare che cosa resta consentito al Fornitore.",
+      "indifferent": null,
+      "source": "bozza art. 9.4.",
+      "severity": "media",
+      "raw_text": "B.5 comparatori — perimetro del rilievo [issue: I-02] [tipo: presenza]\nVerifica: il deliverable propone di consentire i comparatori almeno in parte, indicando come ammissibile la limitazione a singoli servizi o a requisiti di qualità.\nPass se: compare una proposta che consente l'uso dei comparatori con requisiti o con esclusione di servizi determinati.\nFail se: la proposta si limita a chiedere la cancellazione dell'articolo senza indicare che cosa resta consentito al Fornitore.\n—— non passa al judge —— Fonte: bozza art. 9.4. Gravità: media."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica l'obbligo di non dare seguito alle richieste non sollecitate da fuori Territorio come restrizione delle vendite passive.",
+      "pass_condition": "compare, riferita all'art. 4.4, l'espressione «vendite passive» oppure «ordini non sollecitati» insieme a «restrizione fondamentale», «clausola non ammissibile» o «da espungere».",
+      "fail_condition": "l'art. 4.4 è trattato come protezione territoriale lecita, oppure non è rilevato.",
+      "indifferent": "il giudizio sul compenso dell'1% previsto dalla stessa clausola.",
+      "source": "bozza art. 4.4.",
+      "severity": "alta",
+      "raw_text": "B.6 vendite passive [issue: I-03] [tipo: qualificazione]\nVerifica: il deliverable qualifica l'obbligo di non dare seguito alle richieste non sollecitate da fuori Territorio come restrizione delle vendite passive.\nPass se: compare, riferita all'art. 4.4, l'espressione «vendite passive» oppure «ordini non sollecitati» insieme a «restrizione fondamentale», «clausola non ammissibile» o «da espungere».\nFail se: l'art. 4.4 è trattato come protezione territoriale lecita, oppure non è rilevato.\nIndifferente: il giudizio sul compenso dell'1% previsto dalla stessa clausola.\n—— non passa al judge —— Fonte: bozza art. 4.4. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non chiede l'eliminazione del divieto di promozione e sollecitazione fuori dal Territorio.",
+      "pass_condition": "gli artt. 4.1, 4.2 e 4.3 non figurano tra le clausole da espungere o da qualificare come illecite.",
+      "fail_condition": "il divieto di vendite attive fuori Territorio è indicato come illecito o da eliminare.",
+      "indifferent": null,
+      "source": "bozza artt. 4.1-4.3.",
+      "severity": "alta",
+      "raw_text": "B.7 vendite attive [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non chiede l'eliminazione del divieto di promozione e sollecitazione fuori dal Territorio.\nPass se: gli artt. 4.1, 4.2 e 4.3 non figurano tra le clausole da espungere o da qualificare come illecite.\nFail se: il divieto di vendite attive fuori Territorio è indicato come illecito o da eliminare.\n—— non passa al judge —— Fonte: bozza artt. 4.1-4.3. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la quota di mercato del Fornitore al dato dell'osservatorio di settore.",
+      "pass_condition": "la quota attribuita a ERGAVIA è ricondotta all'osservatorio, o al suo § 2.",
+      "fail_condition": "la quota è affermata senza ancoraggio documentale, oppure è ricondotta a un altro documento del fascicolo.",
+      "indifferent": "il valore esatto della quota, verificato in C.1.",
+      "source": "osservatorio § 2.",
+      "severity": "media",
+      "raw_text": "B.8 quota del fornitore — ancoraggio [issue: I-04] [tipo: attribuzione]\nVerifica: il deliverable riconduce la quota di mercato del Fornitore al dato dell'osservatorio di settore.\nPass se: la quota attribuita a ERGAVIA è ricondotta all'osservatorio, o al suo § 2.\nFail se: la quota è affermata senza ancoraggio documentale, oppure è ricondotta a un altro documento del fascicolo.\nIndifferente: il valore esatto della quota, verificato in C.1.\n—— non passa al judge —— Fonte: osservatorio § 2. Gravità: media."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non attribuisce a una delle Parti la quota del 31,2%.",
+      "pass_condition": "il 31,2% non è riferito né al Fornitore né al Distributore.",
+      "fail_condition": "il 31,2% è usato come quota di una delle Parti.",
+      "indifferent": null,
+      "source": "osservatorio § 2, Molveno Bike.",
+      "severity": "media",
+      "raw_text": "B.9 quota del leader [issue: I-04] [tipo: assenza]\nVerifica: il deliverable non attribuisce a una delle Parti la quota del 31,2%.\nPass se: il 31,2% non è riferito né al Fornitore né al Distributore.\nFail se: il 31,2% è usato come quota di una delle Parti.\n—— non passa al judge —— Fonte: osservatorio § 2, Molveno Bike. Gravità: media."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le clausole rilevate sottraggono l'intero contratto all'esenzione a prescindere dalle quote di mercato.",
+      "pass_condition": "compare, in relazione alle clausole su prezzo, comparatori o vendite passive, una fra: «l'intero accordo perde l'esenzione», «l'esenzione non si applica al contratto», «il beneficio dell'esenzione viene meno per tutto il contratto».",
+      "fail_condition": "il deliverable afferma che il contratto resta esente perché le quote sono sotto soglia, oppure la conseguenza non compare.",
+      "indifferent": null,
+      "source": "sintesi di I-01 a I-03.",
+      "severity": "alta",
+      "raw_text": "B.10 perdita dell'esenzione [issue: I-04] [tipo: presenza]\nVerifica: il deliverable afferma che le clausole rilevate sottraggono l'intero contratto all'esenzione a prescindere dalle quote di mercato.\nPass se: compare, in relazione alle clausole su prezzo, comparatori o vendite passive, una fra: «l'intero accordo perde l'esenzione», «l'esenzione non si applica al contratto», «il beneficio dell'esenzione viene meno per tutto il contratto».\nFail se: il deliverable afferma che il contratto resta esente perché le quote sono sotto soglia, oppure la conseguenza non compare.\n—— non passa al judge —— Fonte: sintesi di I-01 a I-03. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il contratto è nullo per intero o che è accertata una violazione della concorrenza.",
+      "pass_condition": "non compare «contratto nullo», «nullità dell'intero contratto» né «violazione accertata» riferiti al contratto nel suo insieme.",
+      "fail_condition": "compare una di quelle affermazioni.",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.11 perdita dell'esenzione — portata [issue: I-04] [tipo: assenza]\nVerifica: il deliverable non afferma che il contratto è nullo per intero o che è accertata una violazione della concorrenza.\nPass se: non compare «contratto nullo», «nullità dell'intero contratto» né «violazione accertata» riferiti al contratto nel suo insieme.\nFail se: compare una di quelle affermazioni.\n—— non passa al judge —— Gravità: alta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'obbligo di acquisto esclusivo non può eccedere i cinque anni e va ricondotto entro quel limite.",
+      "pass_condition": "compare il limite dei cinque anni riferito all'obbligo di acquisto esclusivo dell'art. 6.1, con la richiesta di ricondurvi la durata pattuita.",
+      "fail_condition": "la durata settennale è presentata come ammissibile, oppure il limite non compare.",
+      "indifferent": "la data esatta in cui il quinquennio matura, verificata in C.4.",
+      "source": "bozza artt. 6.1 e 15.1.",
+      "severity": "alta",
+      "raw_text": "B.12 limite quinquennale [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che l'obbligo di acquisto esclusivo non può eccedere i cinque anni e va ricondotto entro quel limite.\nPass se: compare il limite dei cinque anni riferito all'obbligo di acquisto esclusivo dell'art. 6.1, con la richiesta di ricondurvi la durata pattuita.\nFail se: la durata settennale è presentata come ammissibile, oppure il limite non compare.\nIndifferente: la data esatta in cui il quinquennio matura, verificata in C.4.\n—— non passa al judge —— Fonte: bozza artt. 6.1 e 15.1. Gravità: alta."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la conseguenza dell'obbligo settennale come riguardante la sola clausola.",
+      "pass_condition": "compare, riferita all'art. 6.1, una fra: «cade la sola clausola», «la clausola non è esentabile ma il contratto resta», «restrizione esclusa», «clausola separabile».",
+      "fail_condition": "l'art. 6.1 è presentato come clausola che travolge l'esenzione dell'intero contratto, oppure come clausola indifferente.",
+      "indifferent": null,
+      "source": "bozza art. 6.1.",
+      "severity": "alta",
+      "raw_text": "B.13 conseguenza sull'acquisto esclusivo [issue: I-05] [tipo: qualificazione]\nVerifica: il deliverable qualifica la conseguenza dell'obbligo settennale come riguardante la sola clausola.\nPass se: compare, riferita all'art. 6.1, una fra: «cade la sola clausola», «la clausola non è esentabile ma il contratto resta», «restrizione esclusa», «clausola separabile».\nFail se: l'art. 6.1 è presentato come clausola che travolge l'esenzione dell'intero contratto, oppure come clausola indifferente.\n—— non passa al judge —— Fonte: bozza art. 6.1. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'esclusiva è svuotata dalle eccezioni dell'Allegato B.",
+      "pass_condition": "compare, riferita all'Allegato B o all'art. 3.1, una fra: «esclusiva solo nominale», «esclusiva svuotata», «esclusiva priva di contenuto effettivo», «l'esclusiva non protegge il Distributore».",
+      "fail_condition": "l'esclusiva è presentata come tutela acquisita, oppure il rilievo non compare.",
+      "indifferent": null,
+      "source": "bozza art. 3.1 e Allegato B.",
+      "severity": "alta",
+      "raw_text": "B.14 esclusiva svuotata [issue: I-06] [tipo: presenza]\nVerifica: il deliverable afferma che l'esclusiva è svuotata dalle eccezioni dell'Allegato B.\nPass se: compare, riferita all'Allegato B o all'art. 3.1, una fra: «esclusiva solo nominale», «esclusiva svuotata», «esclusiva priva di contenuto effettivo», «l'esclusiva non protegge il Distributore».\nFail se: l'esclusiva è presentata come tutela acquisita, oppure il rilievo non compare.\n—— non passa al judge —— Fonte: bozza art. 3.1 e Allegato B. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce lo svuotamento dell'esclusiva anche alla riserva delle vendite dal negozio online del Fornitore nel Territorio.",
+      "pass_condition": "il rilievo sull'esclusiva richiama il negozio online del Fornitore o il punto corrispondente dell'Allegato B.",
+      "fail_condition": "il rilievo richiama soltanto i gruppi d'acquisto o le catene.",
+      "indifferent": null,
+      "source": "Allegato B, ultima riga.",
+      "severity": "media",
+      "raw_text": "B.15 negozio online del fornitore [issue: I-06] [tipo: attribuzione]\nVerifica: il deliverable riconduce lo svuotamento dell'esclusiva anche alla riserva delle vendite dal negozio online del Fornitore nel Territorio.\nPass se: il rilievo sull'esclusiva richiama il negozio online del Fornitore o il punto corrispondente dell'Allegato B.\nFail se: il rilievo richiama soltanto i gruppi d'acquisto o le catene.\n—— non passa al judge —— Fonte: Allegato B, ultima riga. Gravità: media."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la riserva di clienti al Fornitore è illecita o nulla.",
+      "pass_condition": "la riserva di clienti dell'Allegato B non è qualificata come illecita, vietata o nulla.",
+      "fail_condition": "compare quella qualificazione.",
+      "indifferent": "la richiesta di ridurre il perimetro riservato o di ottenere un compenso sulle vendite riservate.",
+      "source": "Allegato B.",
+      "severity": "alta",
+      "raw_text": "B.16 riserva di clienti — validità [issue: I-06] [tipo: assenza]\nVerifica: il deliverable non afferma che la riserva di clienti al Fornitore è illecita o nulla.\nPass se: la riserva di clienti dell'Allegato B non è qualificata come illecita, vietata o nulla.\nFail se: compare quella qualificazione.\nIndifferente: la richiesta di ridurre il perimetro riservato o di ottenere un compenso sulle vendite riservate.\n—— non passa al judge —— Fonte: Allegato B. Gravità: alta."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable mette a confronto l'obiettivo di acquisto del primo anno con gli acquisti dell'ultimo anno pieno e ne rileva lo scostamento.",
+      "pass_condition": "il confronto fra i due dati è esplicito e lo scostamento è segnalato come rilievo.",
+      "fail_condition": "l'obiettivo è riportato senza confronto con lo storico, oppure il rilievo non compare.",
+      "indifferent": "gli importi esatti e la percentuale dello scostamento, verificati in C.5.",
+      "source": "Allegato C; nota interna § 1.",
+      "severity": "alta",
+      "raw_text": "B.17 obiettivo del primo anno [issue: I-07] [tipo: presenza]\nVerifica: il deliverable mette a confronto l'obiettivo di acquisto del primo anno con gli acquisti dell'ultimo anno pieno e ne rileva lo scostamento.\nPass se: il confronto fra i due dati è esplicito e lo scostamento è segnalato come rilievo.\nFail se: l'obiettivo è riportato senza confronto con lo storico, oppure il rilievo non compare.\nIndifferente: gli importi esatti e la percentuale dello scostamento, verificati in C.5.\n—— non passa al judge —— Fonte: Allegato C; nota interna § 1. Gravità: alta."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che lo scostamento oltre il 5% comporta la perdita dell'esclusiva senza contestazione né termine per rimediare.",
+      "pass_condition": "compare, riferito all'Allegato C punto 3, «automatica», «senza preavviso», «senza contestazione» o «senza possibilità di rimediare».",
+      "fail_condition": "il meccanismo è descritto come facoltà da esercitare, oppure il rilievo non compare.",
+      "indifferent": null,
+      "source": "Allegato C punto 3.",
+      "severity": "alta",
+      "raw_text": "B.18 decadenza automatica dell'esclusiva [issue: I-07] [tipo: presenza]\nVerifica: il deliverable afferma che lo scostamento oltre il 5% comporta la perdita dell'esclusiva senza contestazione né termine per rimediare.\nPass se: compare, riferito all'Allegato C punto 3, «automatica», «senza preavviso», «senza contestazione» o «senza possibilità di rimediare».\nFail se: il meccanismo è descritto come facoltà da esercitare, oppure il rilievo non compare.\n—— non passa al judge —— Fonte: Allegato C punto 3. Gravità: alta."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il diritto di recesso è attribuito al solo Fornitore mentre il Distributore resta vincolato fino alla scadenza.",
+      "pass_condition": "compare l'asimmetria fra art. 16.2 e art. 16.3, con una fra: «asimmetrico», «unilaterale», «solo il Fornitore può recedere».",
+      "fail_condition": "il recesso è descritto come reciproco, oppure il rilievo non compare.",
+      "indifferent": null,
+      "source": "bozza artt. 16.2 e 16.3.",
+      "severity": "alta",
+      "raw_text": "B.19 recesso asimmetrico [issue: I-08] [tipo: presenza]\nVerifica: il deliverable afferma che il diritto di recesso è attribuito al solo Fornitore mentre il Distributore resta vincolato fino alla scadenza.\nPass se: compare l'asimmetria fra art. 16.2 e art. 16.3, con una fra: «asimmetrico», «unilaterale», «solo il Fornitore può recedere».\nFail se: il recesso è descritto come reciproco, oppure il rilievo non compare.\n—— non passa al judge —— Fonte: bozza artt. 16.2 e 16.3. Gravità: alta."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la clausola di recesso è nulla.",
+      "pass_condition": "l'art. 16.2 non è qualificato come «nullo», «invalido» o «inefficace».",
+      "fail_condition": "compare una di quelle qualificazioni.",
+      "indifferent": "il richiamo all'abuso di dipendenza economica come profilo da valutare.",
+      "source": "bozza art. 16.2.",
+      "severity": "alta",
+      "raw_text": "B.20 recesso — nullità non affermata [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non afferma che la clausola di recesso è nulla.\nPass se: l'art. 16.2 non è qualificato come «nullo», «invalido» o «inefficace».\nFail se: compare una di quelle qualificazioni.\nIndifferente: il richiamo all'abuso di dipendenza economica come profilo da valutare.\n—— non passa al judge —— Fonte: bozza art. 16.2. Gravità: alta."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable quantifica l'investimento per l'allestimento richiamando il preventivo agli atti.",
+      "pass_condition": "la quantificazione dell'allestimento è ricondotta al preventivo 118/2027.",
+      "fail_condition": "l'investimento è trattato senza quantificazione, oppure la cifra è affermata senza ancoraggio documentale.",
+      "indifferent": "l'importo esatto, verificato in C.7; l'indicazione dell'IVA o del totale lordo.",
+      "source": "preventivo 118/2027.",
+      "severity": "media",
+      "raw_text": "B.21 investimento richiesto — ancoraggio [issue: I-09] [tipo: attribuzione]\nVerifica: il deliverable quantifica l'investimento per l'allestimento richiamando il preventivo agli atti.\nPass se: la quantificazione dell'allestimento è ricondotta al preventivo 118/2027.\nFail se: l'investimento è trattato senza quantificazione, oppure la cifra è affermata senza ancoraggio documentale.\nIndifferente: l'importo esatto, verificato in C.7; l'indicazione dell'IVA o del totale lordo.\n—— non passa al judge —— Fonte: preventivo 118/2027. Gravità: media."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'investimento resta a carico del Distributore senza rimborso in caso di cessazione anticipata e chiede il riconoscimento del residuo.",
+      "pass_condition": "il rilievo richiama l'art. 7.2 e contiene una richiesta di rimborso, indennizzo, riconoscimento del residuo o partecipazione al costo.",
+      "fail_condition": "il rilievo si limita a descrivere l'obbligo di allestimento senza la richiesta.",
+      "indifferent": null,
+      "source": "bozza art. 7.2; Allegato D.",
+      "severity": "media",
+      "raw_text": "B.22 investimenti senza tutela [issue: I-09] [tipo: presenza]\nVerifica: il deliverable afferma che l'investimento resta a carico del Distributore senza rimborso in caso di cessazione anticipata e chiede il riconoscimento del residuo.\nPass se: il rilievo richiama l'art. 7.2 e contiene una richiesta di rimborso, indennizzo, riconoscimento del residuo o partecipazione al costo.\nFail se: il rilievo si limita a descrivere l'obbligo di allestimento senza la richiesta.\n—— non passa al judge —— Fonte: bozza art. 7.2; Allegato D. Gravità: media."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il contratto non prevede il riacquisto delle scorte e dei ricambi alla cessazione e chiede di introdurlo.",
+      "pass_condition": "compare la richiesta di una clausola di riacquisto, ritiro o ricollocazione di scorte o ricambi.",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "bozza artt. 6.3 e 16.4.",
+      "severity": "media",
+      "raw_text": "B.23 scorte alla cessazione [issue: I-10] [tipo: presenza]\nVerifica: il deliverable afferma che il contratto non prevede il riacquisto delle scorte e dei ricambi alla cessazione e chiede di introdurlo.\nPass se: compare la richiesta di una clausola di riacquisto, ritiro o ricollocazione di scorte o ricambi.\nFail se: il rilievo non compare.\n—— non passa al judge —— Fonte: bozza artt. 6.3 e 16.4. Gravità: media."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le condizioni generali prevalgono sul corpo del contratto e chiede di invertire l'ordine di prevalenza.",
+      "pass_condition": "il rilievo richiama l'art. 2.3 della bozza e contiene la richiesta che il contratto prevalga sulle condizioni generali.",
+      "fail_condition": "il rapporto fra i due documenti non è rilevato, oppure la richiesta manca.",
+      "indifferent": null,
+      "source": "bozza art. 2.3; CGV art. 15.1.",
+      "severity": "alta",
+      "raw_text": "B.24 prevalenza delle condizioni generali [issue: I-11] [tipo: presenza]\nVerifica: il deliverable afferma che le condizioni generali prevalgono sul corpo del contratto e chiede di invertire l'ordine di prevalenza.\nPass se: il rilievo richiama l'art. 2.3 della bozza e contiene la richiesta che il contratto prevalga sulle condizioni generali.\nFail se: il rapporto fra i due documenti non è rilevato, oppure la richiesta manca.\n—— non passa al judge —— Fonte: bozza art. 2.3; CGV art. 15.1. Gravità: alta."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce il contrasto sulla consegna alla differenza fra l'art. 5.1 della bozza e le condizioni generali.",
+      "pass_condition": "il rilievo nomina la consegna al magazzino del Distributore e la resa franco fabbrica delle condizioni generali.",
+      "fail_condition": "il rilievo cita uno solo dei due documenti.",
+      "indifferent": "il rilievo autonomo sulla riserva di proprietà.",
+      "source": "bozza art. 5.1; CGV artt. 4 e 7.",
+      "severity": "alta",
+      "raw_text": "B.25 resa e rischio [issue: I-11] [tipo: attribuzione]\nVerifica: il deliverable riconduce il contrasto sulla consegna alla differenza fra l'art. 5.1 della bozza e le condizioni generali.\nPass se: il rilievo nomina la consegna al magazzino del Distributore e la resa franco fabbrica delle condizioni generali.\nFail se: il rilievo cita uno solo dei due documenti.\nIndifferente: il rilievo autonomo sulla riserva di proprietà.\n—— non passa al judge —— Fonte: bozza art. 5.1; CGV artt. 4 e 7. Gravità: alta."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il rinvio alle politiche di rete rende il contratto modificabile per atto unilaterale del Fornitore.",
+      "pass_condition": "il rilievo richiama l'art. 2.4 e chiede di circoscriverlo o di subordinare le modifiche all'accordo scritto.",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "bozza artt. 2.4 e 17.1.",
+      "severity": "media",
+      "raw_text": "B.26 modifica unilaterale [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che il rinvio alle politiche di rete rende il contratto modificabile per atto unilaterale del Fornitore.\nPass se: il rilievo richiama l'art. 2.4 e chiede di circoscriverlo o di subordinare le modifiche all'accordo scritto.\nFail se: il rilievo non compare.\n—— non passa al judge —— Fonte: bozza artt. 2.4 e 17.1. Gravità: media."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la variazione del listino si applica anche agli ordini già confermati e chiede di escluderli.",
+      "pass_condition": "il rilievo richiama l'art. 3.2 delle condizioni generali e la richiesta di salvaguardare gli ordini confermati.",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "CGV art. 3.2.",
+      "severity": "media",
+      "raw_text": "B.27 listino sugli ordini confermati [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che la variazione del listino si applica anche agli ordini già confermati e chiede di escluderli.\nPass se: il rilievo richiama l'art. 3.2 delle condizioni generali e la richiesta di salvaguardare gli ordini confermati.\nFail se: il rilievo non compare.\n—— non passa al judge —— Fonte: CGV art. 3.2. Gravità: media."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contraddice l'affermazione della nota interna secondo cui l'esclusiva protegge dagli altri rivenditori della zona.",
+      "pass_condition": "compare l'indicazione che quell'affermazione è errata, non esatta o da correggere.",
+      "fail_condition": "l'affermazione è recepita, oppure non è presa in considerazione.",
+      "indifferent": null,
+      "source": "nota interna § 2.",
+      "severity": "media",
+      "raw_text": "B.28 nota interna — esclusiva [issue: I-13] [tipo: presenza]\nVerifica: il deliverable contraddice l'affermazione della nota interna secondo cui l'esclusiva protegge dagli altri rivenditori della zona.\nPass se: compare l'indicazione che quell'affermazione è errata, non esatta o da correggere.\nFail se: l'affermazione è recepita, oppure non è presa in considerazione.\n—— non passa al judge —— Fonte: nota interna § 2. Gravità: media."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contraddice l'affermazione della nota interna secondo cui l'assenza dai marketplace non crea problemi.",
+      "pass_condition": "quell'affermazione non è indicata come errata.",
+      "fail_condition": "il deliverable la corregge o la contesta.",
+      "indifferent": null,
+      "source": "nota interna § 3.",
+      "severity": "media",
+      "raw_text": "B.29 nota interna — marketplace [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non contraddice l'affermazione della nota interna secondo cui l'assenza dai marketplace non crea problemi.\nPass se: quell'affermazione non è indicata come errata.\nFail se: il deliverable la corregge o la contesta.\n—— non passa al judge —— Fonte: nota interna § 3. Gravità: media."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come punti su cui non cedere le clausole su prezzo, comparatori o vendite passive e il blocco recesso/investimenti.",
+      "pass_condition": "la sintesi finale nomina almeno una clausola fra artt. 8.3, 9.4 e 4.4 e almeno una fra artt. 16.2 e 7.2.",
+      "fail_condition": "la sintesi nomina soltanto clausole diverse da queste.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.30 priorità [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica come punti su cui non cedere le clausole su prezzo, comparatori o vendite passive e il blocco recesso/investimenti.\nPass se: la sintesi finale nomina almeno una clausola fra artt. 8.3, 9.4 e 4.4 e almeno una fra artt. 16.2 e 7.2.\nFail se: la sintesi nomina soltanto clausole diverse da queste.\n—— non passa al judge —— Fonte: chiusura del prompt. Gravità: media.\n\n—— CHIUSURA OBBLIGATORIA ——"
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "simmetria — il deliverable non segnala come sfavorevole al Distributore l'art. 3.1 nella parte in cui il Fornitore si obbliga a non nominare altri distributori nel Territorio.",
+      "pass_condition": "il deliverable non segnala come sfavorevole al Distributore l’obbligo del Fornitore, nell’art. 3.1, di non nominare altri distributori nel Territorio.",
+      "fail_condition": "l’obbligo favorevole al Distributore è descritto anche una sola volta come sfavorevole o problematico per esso.",
+      "indifferent": "La trattazione di altri profili dell’art. 3.1.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.31 [assenza] simmetria — il deliverable non segnala come sfavorevole al Distributore l'art. 3.1 nella parte in cui il Fornitore si obbliga a non nominare altri distributori nel Territorio."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come problematico il divieto di vendere su mercati online di terzi (art. 9.2; circolare punto 3).",
+      "pass_condition": "il deliverable non segnala come problematico il divieto di vendere su mercati online di terzi dell’art. 9.2, richiamato al punto 3 della circolare.",
+      "fail_condition": "quel divieto è indicato anche una sola volta come problematico, da rinegoziare o illecito.",
+      "indifferent": "La menzione descrittiva del divieto senza qualificarlo negativamente.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.32 [assenza] il deliverable non segnala come problematico il divieto di vendere su mercati online di terzi (art. 9.2; circolare punto 3)."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come problematico il listino di acquisto differenziato per canale (Allegato A; circolare punto 5).",
+      "pass_condition": "il deliverable non segnala come problematico il listino di acquisto differenziato per canale dell’Allegato A, richiamato al punto 5 della circolare.",
+      "fail_condition": "il listino differenziato per canale è indicato anche una sola volta come problematico, da rinegoziare o illecito.",
+      "indifferent": "La menzione descrittiva del listino senza qualificarlo negativamente.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.33 [assenza] il deliverable non segnala come problematico il listino di acquisto differenziato per canale (Allegato A; circolare punto 5)."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come problematici gli standard di showroom, officina e formazione dell'Allegato D in quanto tali.",
+      "pass_condition": "il deliverable non segnala come problematici, in quanto tali, gli standard di showroom, officina e formazione dell’Allegato D.",
+      "fail_condition": "anche uno di questi standard è indicato come problematico per il solo fatto di essere previsto nell’Allegato D.",
+      "indifferent": "Rilievi su profili autonomi dell’Allegato D diversi dagli standard nominati.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.34 [assenza] il deliverable non segnala come problematici gli standard di showroom, officina e formazione dell'Allegato D in quanto tali."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come problematici la scorta minima permanente (art. 6.3) e il reporting mensile (art. 10.1).",
+      "pass_condition": "il deliverable non segnala come problematiche né la scorta minima permanente dell’art. 6.3 né il reporting mensile dell’art. 10.1.",
+      "fail_condition": "anche uno solo dei due obblighi è indicato come problematico, da rinegoziare o illecito.",
+      "indifferent": "La menzione descrittiva di uno dei due obblighi senza qualificarlo negativamente.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.35 [assenza] il deliverable non segnala come problematici la scorta minima permanente (art. 6.3) e il reporting mensile (art. 10.1)."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il rapporto come agenzia e non chiede un'indennità di fine rapporto.",
+      "pass_condition": "il deliverable non qualifica il rapporto come agenzia e non chiede un’indennità di fine rapporto.",
+      "fail_condition": "il rapporto è qualificato anche una sola volta come agenzia oppure è richiesta un’indennità di fine rapporto.",
+      "indifferent": "La descrizione della distribuzione senza la qualificazione o la richiesta vietate.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.36 [assenza] il deliverable non qualifica il rapporto come agenzia e non chiede un'indennità di fine rapporto."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "divieto di presunzione dell'esito — il deliverable non afferma che il Fornitore accetterà le modifiche proposte né che il contratto sarà firmato nella versione modificata.",
+      "pass_condition": "il deliverable non afferma che il Fornitore accetterà le modifiche proposte o che il contratto sarà firmato nella versione modificata.",
+      "fail_condition": "una delle due eventualità è affermata come certa o già concordata, anche in una frase di sintesi o a titolo di esempio.",
+      "indifferent": "La raccomandazione di chiedere modifiche, purché non se ne dia per certo l’accoglimento.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.37 [assenza] divieto di presunzione dell'esito — il deliverable non afferma che il Fornitore accetterà le modifiche proposte né che il contratto sarà firmato nella versione modificata."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "quota del Fornitore sul segmento: 23,4% (osservatorio § 2)",
+      "pass_condition": "la quota del Fornitore sul segmento è indicata come 23,4%.",
+      "fail_condition": "manca 23,4%, il dato è attribuito a un soggetto diverso o una diversa quota è indicata per il Fornitore sul segmento.",
+      "indifferent": "Il formato di presentazione della percentuale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 [valore] quota del Fornitore sul segmento: 23,4% (osservatorio § 2)"
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "quota d'acquisto del Distributore: 4,1% (osservatorio § 3)",
+      "pass_condition": "la quota d’acquisto del Distributore è indicata come 4,1%.",
+      "fail_condition": "manca 4,1%, il dato è attribuito a un soggetto diverso o una diversa quota è indicata per il Distributore.",
+      "indifferent": "Il formato di presentazione della percentuale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 [valore] quota d'acquisto del Distributore: 4,1% (osservatorio § 3)"
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "decorrenza 1° aprile 2027 — scadenza 31 marzo 2034 (bozza art. 15.1)",
+      "pass_condition": "sono indicate la decorrenza del 1° aprile 2027 e la scadenza del 31 marzo 2034.",
+      "fail_condition": "manca anche una sola delle due date o una diversa data è attribuita alla decorrenza o alla scadenza.",
+      "indifferent": "Il formato grafico delle date.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 [valore] decorrenza 1° aprile 2027 — scadenza 31 marzo 2034 (bozza art. 15.1)"
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "limite dell'acquisto esclusivo: 31 marzo 2032 (calcolo)",
+      "pass_condition": "il limite dell’acquisto esclusivo è indicato come 31 marzo 2032.",
+      "fail_condition": "il 31 marzo 2032 manca o una diversa data è indicata come limite dell’acquisto esclusivo.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 [valore] limite dell'acquisto esclusivo: 31 marzo 2032 (calcolo)"
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "obiettivo anno 1: euro 1.400.000 — acquisti 2026: euro 1.060.000 (All. C; nota interna)",
+      "pass_condition": "sono indicati l’obiettivo dell’anno 1 di euro 1.400.000 e gli acquisti 2026 di euro 1.060.000.",
+      "fail_condition": "manca anche uno dei due importi o un importo è associato al dato sbagliato.",
+      "indifferent": "Il formato di scrittura degli importi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 [valore] obiettivo anno 1: euro 1.400.000 — acquisti 2026: euro 1.060.000 (All. C; nota interna)"
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "soglia di decadenza dell'esclusiva: euro 1.330.000 (All. C punto 3)",
+      "pass_condition": "la soglia di decadenza dell’esclusiva è indicata come euro 1.330.000.",
+      "fail_condition": "euro 1.330.000 manca o una diversa cifra è indicata come soglia di decadenza.",
+      "indifferent": "Il formato di scrittura dell’importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 [valore] soglia di decadenza dell'esclusiva: euro 1.330.000 (All. C punto 3)"
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "investimento richiesto: euro 148.000 (preventivo 118/2027)",
+      "pass_condition": "l’investimento richiesto è indicato come euro 148.000.",
+      "fail_condition": "euro 148.000 manca o una diversa cifra è indicata come investimento richiesto.",
+      "indifferent": "Il formato di scrittura dell’importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 [valore] investimento richiesto: euro 148.000 (preventivo 118/2027)"
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il limite dei cinque anni non è presentato come coincidente con la scadenza del contratto.",
+      "pass_condition": "il limite quinquennale dell’acquisto esclusivo è distinto dalla scadenza del contratto.",
+      "fail_condition": "il limite dei cinque anni è presentato come coincidente con la scadenza del contratto.",
+      "indifferent": "Non occorre trasformare il limite quinquennale in una data di calendario in questo criterio.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.8 [assenza] il limite dei cinque anni non è presentato come coincidente con la scadenza del contratto."
+    }
+  ]
+}

@@ -1,0 +1,95 @@
+{
+  "task_id": "WF2-090",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "scadenza titolo",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'autorizzazione alle emissioni scade il 30 settembre 2030",
+      "evidenza": "provvedimento 2015"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "istanza tempestiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'istanza di rinnovo e' stata presentata il 20 settembre 2029, oltre un anno prima",
+      "evidenza": "ricevuta SUAP"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "integrazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta del 15 novembre 2029 e' stata riscontrata il 10 dicembre 2029",
+      "evidenza": "PEC e ricevuta"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "completezza contestata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la Provincia sostiene che manchi il quadro emissivo E7 mentre il deposito contiene un allegato E7 privo di firma",
+      "evidenza": "indice e richiesta"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "continuita'",
+      "gravita": "media",
+      "affermazione_richiesta": "nelle more della decisione la prosecuzione oltre la scadenza dipende dai presupposti della domanda tempestiva",
+      "evidenza": "art. 269, comma 7"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "nessun silenzio-assenso",
+      "gravita": "media",
+      "affermazione_richiesta": "la pendenza non va trasformata in rinnovo tacito",
+      "evidenza": "procedimento e titolo"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "preavviso negativo",
+      "gravita": "media",
+      "affermazione_richiesta": "un eventuale preavviso richiede osservazioni nel termine indicato prima del diniego",
+      "evidenza": "L. 241/1990"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "ricorso",
+      "gravita": "media",
+      "affermazione_richiesta": "un diniego notificato apre il termine di impugnazione e richiede calcolo dalla conoscenza dell'atto",
+      "evidenza": "codice processo amministrativo"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "AIA",
+      "oggetto": "AIA",
+      "chiave_nel_criterio": "AIA",
+      "perche_non_e_issue": "lo stabilimento non e' assoggettato ad AIA secondo il provvedimento e non va applicata quella timeline",
+      "criterio_assenza": "Il deliverable non presenta AIA come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "voltura",
+      "oggetto": "voltura",
+      "chiave_nel_criterio": "voltura",
+      "perche_non_e_issue": "non vi e' cambio del gestore e la voltura non e' un adempimento",
+      "criterio_assenza": "Il deliverable non presenta voltura come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "ispezione ordinaria",
+      "oggetto": "ispezione ordinaria",
+      "chiave_nel_criterio": "ispezione ordinaria",
+      "perche_non_e_issue": "il sopralluogo programmato non sospende da solo il procedimento",
+      "criterio_assenza": "Il deliverable non presenta ispezione ordinaria come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "bollettino regionale",
+      "oggetto": "bollettino regionale",
+      "chiave_nel_criterio": "bollettino regionale",
+      "perche_non_e_issue": "la pubblicazione di un altro impianto omonimo non riguarda Ecopiana",
+      "criterio_assenza": "Il deliverable non presenta bollettino regionale come rilievo autonomo."
+    }
+  ]
+}

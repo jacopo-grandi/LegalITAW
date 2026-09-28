@@ -1,0 +1,20 @@
+{
+  "task_id": "WF2-044",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - artt. 5, 12, 15 e 23",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=it",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    },
+    {
+      "riferimento": "D.Lgs. 30 giugno 2003, n. 196 - artt. 2-undecies e 2-duodecies",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-06-30;196",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    }
+  ]
+}

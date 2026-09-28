@@ -1,0 +1,1393 @@
+{
+  "task_id": "WF2-039",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 69,
+  "criteria": [
+    {
+      "id": "A.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "La matrice dei red flag è resa in forma di tabella e ciascuna riga indica il rilievo, il documento o la fonte, lo stato del fatto, la conseguenza per il compratore, il soggetto su cui grava e la gravità.",
+      "match_criteria": "Oggetto del criterio: La matrice dei red flag è resa in forma di tabella e ciascuna riga indica il rilievo, il documento o la fonte, lo stato del fatto, la conseguenza per il compratore, il soggetto su cui grava e la gravità.\nPASS se: la tabella è presente e ogni riga porta i sei dati.\nFAIL se: la matrice non è in forma di tabella, oppure almeno una riga è priva di uno dei sei dati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "la tabella è presente e ogni riga porta i sei dati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Ogni riga della matrice qualifica lo stato del fatto come accertato dal fascicolo, dichiarato da una parte oppure non ancora determinato.",
+      "match_criteria": "Oggetto del criterio: Ogni riga della matrice qualifica lo stato del fatto come accertato dal fascicolo, dichiarato da una parte oppure non ancora determinato.\nPASS se: ogni riga porta una delle tre qualificazioni.\nFAIL se: almeno una riga è priva della qualificazione, oppure si usa una scala che non distingue il fatto accertato da quello dichiarato.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ogni riga porta una delle tre qualificazioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Le azioni pre-closing sono rese in forma di tabella e ciascuna riga indica l'azione, il soggetto cui spetta, il termine e la conseguenza dell'omissione.",
+      "match_criteria": "Oggetto del criterio: Le azioni pre-closing sono rese in forma di tabella e ciascuna riga indica l'azione, il soggetto cui spetta, il termine e la conseguenza dell'omissione.\nPASS se: la tabella è presente e ogni riga porta i quattro dati.\nFAIL se: le azioni non sono in forma di tabella, oppure almeno una riga è priva di uno dei quattro dati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "la tabella è presente e ogni riga porta i quattro dati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non contiene testo redatto in forma di clausola contrattuale, di lettera o di atto amministrativo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene testo redatto in forma di clausola contrattuale, di lettera o di atto amministrativo.\nPASS se: non compare testo in forma di clausola, di lettera o di provvedimento.\nFAIL se: il deliverable contiene una clausola, una bozza di lettera o una bozza di atto.\nFonte di authoring: prompt",
+      "pass_condition": "non compare testo in forma di clausola, di lettera o di provvedimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPASS se: ogni riferimento normativo citato appartiene all'elenco.\nFAIL se: compare almeno un riferimento normativo fuori elenco.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica il sito, alla data di riferimento, come sito potenzialmente contaminato e non come sito contaminato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il sito, alla data di riferimento, come sito potenzialmente contaminato e non come sito contaminato.\nPASS se: compare, riferita al sito o all'area B, l'espressione «sito potenzialmente contaminato» oppure «potenzialmente contaminato».\nFAIL se: il sito è qualificato come sito contaminato, oppure la qualificazione non compare.\nFonte di authoring: art. 240; relazione Fase II, § 7",
+      "pass_condition": "compare, riferita al sito o all'area B, l'espressione «sito potenzialmente contaminato» oppure «potenzialmente contaminato».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la qualificazione come sito contaminato dipende dal superamento delle concentrazioni soglia di rischio determinate dall'analisi di rischio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la qualificazione come sito contaminato dipende dal superamento delle concentrazioni soglia di rischio determinate dall'analisi di rischio.\nPASS se: compare l'affermazione che occorre il superamento delle concentrazioni soglia di rischio, o delle CSR, perché il sito sia contaminato.\nFAIL se: l'affermazione non compare, oppure il superamento delle concentrazioni soglia di contaminazione è presentato come bastante alla qualificazione.\nFonte di authoring: art. 240",
+      "pass_condition": "compare l'affermazione che occorre il superamento delle concentrazioni soglia di rischio, o delle CSR, perché il sito sia contaminato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che il sito sia un sito contaminato ai sensi della definizione di legge.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il sito sia un sito contaminato ai sensi della definizione di legge.\nPASS se: non compare l'affermazione che il sito è contaminato, che la contaminazione è accertata o che il sito va bonificato in quanto contaminato.\nFAIL se: compare l'affermazione che il sito è un sito contaminato.\nFonte di authoring: art. 240",
+      "pass_condition": "non compare l'affermazione che il sito è contaminato, che la contaminazione è accertata o che il sito va bonificato in quanto contaminato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che per l'area A l'analisi di rischio approvata ha concluso per il non superamento delle concentrazioni soglia di rischio e che il procedimento è chiuso per quell'area.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che per l'area A l'analisi di rischio approvata ha concluso per il non superamento delle concentrazioni soglia di rischio e che il procedimento è chiuso per quell'area.\nPASS se: compare l'affermazione che per l'area A le CSR non sono superate e che il procedimento è concluso, chiuso o positivamente definito per quell'area.\nFAIL se: l'affermazione non compare, oppure l'area A è presentata come ancora in procedimento.\nFonte di authoring: verbale della conferenza di servizi, punti 4 e 5",
+      "pass_condition": "compare l'affermazione che per l'area A le CSR non sono superate e che il procedimento è concluso, chiuso o positivamente definito per quell'area.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica 4.400 milligrammi per chilogrammo come concentrazione soglia di rischio determinata per il cromo totale nel suolo dell'area A.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 4.400 milligrammi per chilogrammo come concentrazione soglia di rischio determinata per il cromo totale nel suolo dell'area A.\nPASS se: compare il valore 4.400.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 4",
+      "pass_condition": "compare il valore 4.400.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non indica l'area A fra le aree che richiedono interventi di bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'area A fra le aree che richiedono interventi di bonifica.\nPASS se: l'area A non compare fra le aree da bonificare.\nFAIL se: l'area A è indicata come area da bonificare o come area contaminata.\nFonte di authoring: verbale della conferenza di servizi, punto 5",
+      "pass_condition": "l'area A non compare fra le aree da bonificare.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento non è stato adottato alcun atto di individuazione del responsabile della contaminazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento non è stato adottato alcun atto di individuazione del responsabile della contaminazione.\nPASS se: compare l'affermazione che il responsabile non è stato individuato, che il procedimento di individuazione è in corso o che non esiste un atto di individuazione.\nFAIL se: l'affermazione non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 6",
+      "pass_condition": "compare l'affermazione che il responsabile non è stato individuato, che il procedimento di individuazione è in corso o che non esiste un atto di individuazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable riconduce alla provincia l'accertamento del responsabile della contaminazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce alla provincia l'accertamento del responsabile della contaminazione.\nPASS se: compare l'indicazione che l'individuazione del responsabile spetta alla provincia o all'autorità amministrativa competente.\nFAIL se: l'accertamento è attribuito ad altro soggetto, oppure non è attribuito.\nFonte di authoring: art. 244, comma 2",
+      "pass_condition": "compare l'indicazione che l'individuazione del responsabile spetta alla provincia o all'autorità amministrativa competente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che il venditore sia il responsabile della contaminazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il venditore sia il responsabile della contaminazione.\nPASS se: non compare l'affermazione che il venditore è il responsabile, né che lo è in quanto ha esercitato l'attività industriale sul sito.\nFAIL se: compare l'affermazione che il venditore è il responsabile della contaminazione.\nÈ indifferente: l'indicazione del venditore come soggetto verso cui il compratore può rivalersi in via contrattuale.\nFonte di authoring: comunicazione del 9 dicembre 2031, punto 5; verbale, punto 6",
+      "pass_condition": "non compare l'affermazione che il venditore è il responsabile, né che lo è in quanto ha esercitato l'attività industriale sul sito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il compratore, divenuto proprietario non responsabile, non è obbligato a eseguire la bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il compratore, divenuto proprietario non responsabile, non è obbligato a eseguire la bonifica.\nPASS se: compare l'affermazione che l'esecuzione della bonifica non è un obbligo del proprietario non responsabile, oppure che per lui è una facoltà.\nFAIL se: l'affermazione non compare, oppure si afferma che il compratore erediterà l'obbligo di bonificare.\nFonte di authoring: art. 245",
+      "pass_condition": "compare l'affermazione che l'esecuzione della bonifica non è un obbligo del proprietario non responsabile, oppure che per lui è una facoltà.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che sul proprietario o gestore gravano l'obbligo di comunicare il superamento delle concentrazioni soglia di contaminazione e quello di attuare le misure di prevenzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che sul proprietario o gestore gravano l'obbligo di comunicare il superamento delle concentrazioni soglia di contaminazione e quello di attuare le misure di prevenzione.\nPASS se: compaiono entrambi gli obblighi, quello di comunicazione e quello di prevenzione.\nFAIL se: manca uno dei due obblighi, oppure nessuno dei due compare.\nFonte di authoring: art. 245, comma 2",
+      "pass_condition": "compaiono entrambi gli obblighi, quello di comunicazione e quello di prevenzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che l'acquisto del sito comporti per il compratore l'obbligo di eseguire la bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'acquisto del sito comporti per il compratore l'obbligo di eseguire la bonifica.\nPASS se: non compare l'affermazione che il compratore subentra nell'obbligo di bonifica o che lo eredita con la proprietà.\nFAIL se: compare l'affermazione che il compratore è o sarà obbligato a bonificare.\nFonte di authoring: art. 245",
+      "pass_condition": "non compare l'affermazione che il compratore subentra nell'obbligo di bonifica o che lo eredita con la proprietà.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'onere reale e il privilegio speciale presuppongono che gli interventi siano stati eseguiti d'ufficio dall'amministrazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'onere reale e il privilegio speciale presuppongono che gli interventi siano stati eseguiti d'ufficio dall'amministrazione.\nPASS se: compare l'affermazione che l'onere reale sorge se e quando l'amministrazione esegue gli interventi in via sostitutiva o d'ufficio.\nFAIL se: l'affermazione non compare, oppure l'onere reale è presentato come già gravante sul sito alla data di riferimento.\nFonte di authoring: art. 253, comma 1",
+      "pass_condition": "compare l'affermazione che l'onere reale sorge se e quando l'amministrazione esegue gli interventi in via sostitutiva o d'ufficio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il recupero delle spese nei confronti del proprietario non responsabile è contenuto nel limite del valore di mercato dell'area determinato dopo l'esecuzione degli interventi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il recupero delle spese nei confronti del proprietario non responsabile è contenuto nel limite del valore di mercato dell'area determinato dopo l'esecuzione degli interventi.\nPASS se: compare il riferimento al limite del valore di mercato dell'area dopo gli interventi.\nFAIL se: l'affermazione non compare, oppure si afferma che il proprietario risponde per l'intero costo.\nFonte di authoring: art. 253, comma 4",
+      "pass_condition": "compare il riferimento al limite del valore di mercato dell'area dopo gli interventi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il recupero verso il proprietario non responsabile richiede un provvedimento motivato dell'autorità sull'impossibilità di individuare il responsabile o di agire in rivalsa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il recupero verso il proprietario non responsabile richiede un provvedimento motivato dell'autorità sull'impossibilità di individuare il responsabile o di agire in rivalsa.\nPASS se: compare il riferimento al provvedimento motivato o alla motivazione sull'impossibilità di escutere il responsabile.\nFAIL se: l'affermazione non compare.\nFonte di authoring: art. 253, comma 3",
+      "pass_condition": "compare il riferimento al provvedimento motivato o alla motivazione sull'impossibilità di escutere il responsabile.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 10 agosto 2032 come data di scadenza del termine per presentare l'analisi di rischio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 10 agosto 2032 come data di scadenza del termine per presentare l'analisi di rischio.\nPASS se: compare la data del 10 agosto 2032.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 6 mesi dal 10 febbraio 2032; art. 242, comma 4",
+      "pass_condition": "compare la data del 10 agosto 2032.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza del termine per l'analisi di rischio all'approvazione del piano di caratterizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza del termine per l'analisi di rischio all'approvazione del piano di caratterizzazione.\nPASS se: compare l'indicazione che il termine decorre dall'approvazione del piano di caratterizzazione.\nFAIL se: il termine è fatto decorrere dalla comunicazione, dalla scoperta della contaminazione o da altra data, oppure la decorrenza non è indicata.\nFonte di authoring: art. 242, comma 4",
+      "pass_condition": "compare l'indicazione che il termine decorre dall'approvazione del piano di caratterizzazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che uno dei quattro serbatoi interrati censiti non risulta né rimosso né documentato come messo in sicurezza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che uno dei quattro serbatoi interrati censiti non risulta né rimosso né documentato come messo in sicurezza.\nPASS se: compare l'affermazione che il serbatoio S4, o il quarto serbatoio, non è coperto dall'attestazione di rimozione o non è documentato.\nFAIL se: l'affermazione non compare, oppure si afferma che tutti i serbatoi sono stati rimossi.\nFonte di authoring: AIA, Allegato A, punto A.7; attestazione, punto 2",
+      "pass_condition": "compare l'affermazione che il serbatoio S4, o il quarto serbatoio, non è coperto dall'attestazione di rimozione o non è documentato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable riconduce la lacuna al confronto fra la planimetria che censisce quattro serbatoi e l'attestazione che ne copre tre.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la lacuna al confronto fra la planimetria che censisce quattro serbatoi e l'attestazione che ne copre tre.\nPASS se: compare l'indicazione che i serbatoi censiti sono quattro e quelli attestati come rimossi sono tre.\nFAIL se: il confronto non compare.\nFonte di authoring: AIA, punto A.7; attestazione, punti 2 e 6",
+      "pass_condition": "compare l'indicazione che i serbatoi censiti sono quattro e quelli attestati come rimossi sono tre.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica 34,2 metri cubi come volume complessivo dei rifiuti in deposito al 31 marzo 2033.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 34,2 metri cubi come volume complessivo dei rifiuti in deposito al 31 marzo 2033.\nPASS se: compare il valore 34,2.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: prospetto delle giacenze",
+      "pass_condition": "compare il valore 34,2.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica 11,6 metri cubi come volume dei rifiuti pericolosi in deposito al 31 marzo 2033.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 11,6 metri cubi come volume dei rifiuti pericolosi in deposito al 31 marzo 2033.\nPASS se: compare il valore 11,6.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: prospetto delle giacenze",
+      "pass_condition": "compare il valore 11,6.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che sono superati sia il limite complessivo di 30 metri cubi sia quello di 10 metri cubi per i rifiuti pericolosi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che sono superati sia il limite complessivo di 30 metri cubi sia quello di 10 metri cubi per i rifiuti pericolosi.\nPASS se: compaiono entrambi i superamenti, quello del limite complessivo e quello del limite dei rifiuti pericolosi.\nFAIL se: è indicato un solo superamento, oppure nessuno dei due.\nFonte di authoring: art. 185-bis, comma 1",
+      "pass_condition": "compaiono entrambi i superamenti, quello del limite complessivo e quello del limite dei rifiuti pericolosi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che, superati i limiti, il deposito non è più deposito temporaneo prima della raccolta e richiede un titolo abilitativo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, superati i limiti, il deposito non è più deposito temporaneo prima della raccolta e richiede un titolo abilitativo.\nPASS se: compare l'affermazione che viene meno la qualificazione di deposito temporaneo, oppure che il deposito diventa soggetto ad autorizzazione.\nFAIL se: l'affermazione non compare, oppure il superamento è presentato come mera irregolarità formale.\nFonte di authoring: art. 185-bis; art. 208",
+      "pass_condition": "compare l'affermazione che viene meno la qualificazione di deposito temporaneo, oppure che il deposito diventa soggetto ad autorizzazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che due conferimenti sono avvenuti dopo la scadenza dell'iscrizione all'Albo del trasportatore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che due conferimenti sono avvenuti dopo la scadenza dell'iscrizione all'Albo del trasportatore.\nPASS se: compare l'affermazione che i conferimenti del 9 febbraio 2033 e del 16 marzo 2033 sono successivi alla scadenza dell'iscrizione.\nFAIL se: l'affermazione non compare, oppure è indicato un numero diverso di conferimenti successivi alla scadenza.\nFonte di authoring: certificato di iscrizione; registro",
+      "pass_condition": "compare l'affermazione che i conferimenti del 9 febbraio 2033 e del 16 marzo 2033 sono successivi alla scadenza dell'iscrizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 14 gennaio 2033 come data fino alla quale l'iscrizione all'Albo del trasportatore è efficace.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 14 gennaio 2033 come data fino alla quale l'iscrizione all'Albo del trasportatore è efficace.\nPASS se: compare la data del 14 gennaio 2033.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: certificato di iscrizione",
+      "pass_condition": "compare la data del 14 gennaio 2033.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'esclusione della responsabilità del produttore presuppone il conferimento a soggetti autorizzati e che per quei due conferimenti non opera.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'esclusione della responsabilità del produttore presuppone il conferimento a soggetti autorizzati e che per quei due conferimenti non opera.\nPASS se: compare l'affermazione che la responsabilità del produttore non è esclusa per quei conferimenti.\nFAIL se: l'affermazione non compare, oppure si afferma che la responsabilità è comunque esclusa.\nFonte di authoring: art. 188, comma 4",
+      "pass_condition": "compare l'affermazione che la responsabilità del produttore non è esclusa per quei conferimenti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la relazione di riferimento prescritta dall'autorizzazione non risulta trasmessa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la relazione di riferimento prescritta dall'autorizzazione non risulta trasmessa.\nPASS se: compare l'affermazione che la relazione di riferimento manca, non risulta trasmessa o non è nel fascicolo.\nFAIL se: l'affermazione non compare.\nFonte di authoring: AIA, Allegato B, prescrizione 11",
+      "pass_condition": "compare l'affermazione che la relazione di riferimento manca, non risulta trasmessa o non è nel fascicolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 17 settembre 2030 come termine entro cui la relazione di riferimento andava trasmessa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 17 settembre 2030 come termine entro cui la relazione di riferimento andava trasmessa.\nPASS se: compare la data del 17 settembre 2030.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 12 mesi dal 17 settembre 2029; AIA, prescrizione 11",
+      "pass_condition": "compare la data del 17 settembre 2030.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il campionamento semestrale delle acque sotterranee dovuto dopo il 18 maggio 2032 non è stato eseguito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il campionamento semestrale delle acque sotterranee dovuto dopo il 18 maggio 2032 non è stato eseguito.\nPASS se: compare l'affermazione che il campionamento semestrale successivo è stato omesso o non è stato trasmesso.\nFAIL se: l'affermazione non compare.\nFonte di authoring: nota di ARPA, punto 3; AIA, prescrizione 7",
+      "pass_condition": "compare l'affermazione che il campionamento semestrale successivo è stato omesso o non è stato trasmesso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che le attività del procedimento di bonifica non sostituiscono gli autocontrolli prescritti dall'autorizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le attività del procedimento di bonifica non sostituiscono gli autocontrolli prescritti dall'autorizzazione.\nPASS se: compare l'affermazione che i due obblighi restano distinti, o che il procedimento di bonifica non esonera dagli autocontrolli.\nFAIL se: l'affermazione non compare.\nFonte di authoring: nota di ARPA, punto 3",
+      "pass_condition": "compare l'affermazione che i due obblighi restano distinti, o che il procedimento di bonifica non esonera dagli autocontrolli.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il subentro nell'autorizzazione integrata ambientale si perfeziona con la comunicazione del vecchio e del nuovo gestore all'autorità competente entro trenta giorni dal trasferimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il subentro nell'autorizzazione integrata ambientale si perfeziona con la comunicazione del vecchio e del nuovo gestore all'autorità competente entro trenta giorni dal trasferimento.\nPASS se: compare l'affermazione che occorre una comunicazione congiunta entro trenta giorni dal trasferimento.\nFAIL se: l'affermazione non compare.\nFonte di authoring: art. 29-nonies, comma 4",
+      "pass_condition": "compare l'affermazione che occorre una comunicazione congiunta entro trenta giorni dal trasferimento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che il closing non possa perfezionarsi prima della voltura dell'autorizzazione o che occorra il rilascio di una nuova autorizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il closing non possa perfezionarsi prima della voltura dell'autorizzazione o che occorra il rilascio di una nuova autorizzazione.\nPASS se: non compare l'affermazione che la voltura è condizione del closing, né che serve una nuova autorizzazione.\nFAIL se: compare l'affermazione che il closing è subordinato alla voltura o che occorre una nuova autorizzazione.\nÈ indifferente: l'indicazione della comunicazione di subentro fra le azioni da programmare.\nFonte di authoring: art. 29-nonies, comma 4",
+      "pass_condition": "non compare l'affermazione che la voltura è condizione del closing, né che serve una nuova autorizzazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica 1.400.000 euro come differenza fra la stima degli interventi e il massimale dell'indennizzo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 1.400.000 euro come differenza fra la stima degli interventi e il massimale dell'indennizzo.\nPASS se: compare l'importo di 1.400.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 2.900.000 - 1.500.000",
+      "pass_condition": "compare l'importo di 1.400.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il massimale dell'indennizzo è inferiore alla stima degli interventi riportata nella relazione di indagine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il massimale dell'indennizzo è inferiore alla stima degli interventi riportata nella relazione di indagine.\nPASS se: compare l'affermazione che il massimale non copre la stima, o che è inferiore a essa.\nFAIL se: l'affermazione non compare, oppure il massimale è presentato come capiente.\nFonte di authoring: contratto preliminare, art. 9.3, lett. c; relazione Fase II, § 8",
+      "pass_condition": "compare l'affermazione che il massimale non copre la stima, o che è inferiore a essa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 30 giugno 2035 come termine entro cui l'indennizzo ambientale può essere fatto valere.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 30 giugno 2035 come termine entro cui l'indennizzo ambientale può essere fatto valere.\nPASS se: compare la data del 30 giugno 2035.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 24 mesi dal closing del 30 giugno 2033; contratto preliminare, art. 9.4",
+      "pass_condition": "compare la data del 30 giugno 2035.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la durata dell'indennizzo è più breve del tempo necessario a concludere il procedimento di bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la durata dell'indennizzo è più breve del tempo necessario a concludere il procedimento di bonifica.\nPASS se: compare l'affermazione che l'indennizzo scade prima della conclusione del procedimento o prima della certificazione dell'autorità.\nFAIL se: l'affermazione non compare.\nFonte di authoring: contratto preliminare, art. 9.4; artt. 242 e 248",
+      "pass_condition": "compare l'affermazione che l'indennizzo scade prima della conclusione del procedimento o prima della certificazione dell'autorità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che, decorso il termine, il venditore è liberato anche in relazione a fatti verificatisi prima della scadenza e non ancora noti al compratore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, decorso il termine, il venditore è liberato anche in relazione a fatti verificatisi prima della scadenza e non ancora noti al compratore.\nPASS se: compare l'affermazione che la liberazione opera anche per i fatti non ancora noti.\nFAIL se: l'affermazione non compare.\nFonte di authoring: contratto preliminare, art. 9.4",
+      "pass_condition": "compare l'affermazione che la liberazione opera anche per i fatti non ancora noti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'indennizzo copre soltanto la contaminazione descritta nella relazione di indagine allegata e non la contaminazione che dovesse emergere in seguito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'indennizzo copre soltanto la contaminazione descritta nella relazione di indagine allegata e non la contaminazione che dovesse emergere in seguito.\nPASS se: compare l'affermazione che il perimetro dell'indennizzo è ancorato alla relazione allegata e che quanto emergerà oltre quel perimetro resta escluso.\nFAIL se: l'affermazione non compare, oppure l'indennizzo è presentato come esteso a ogni contaminazione preesistente.\nFonte di authoring: contratto preliminare, artt. 1.2 e 9.2",
+      "pass_condition": "compare l'affermazione che il perimetro dell'indennizzo è ancorato alla relazione allegata e che quanto emergerà oltre quel perimetro resta escluso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che le dichiarazioni e garanzie ambientali sono rese nei limiti della conoscenza del venditore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le dichiarazioni e garanzie ambientali sono rese nei limiti della conoscenza del venditore.\nPASS se: compare l'affermazione che le garanzie ambientali sono limitate a quanto a conoscenza del venditore, o che contengono un knowledge qualifier.\nFAIL se: l'affermazione non compare, oppure le garanzie sono presentate come incondizionate.\nFonte di authoring: contratto preliminare, art. 8.1, lett. b e c",
+      "pass_condition": "compare l'affermazione che le garanzie ambientali sono limitate a quanto a conoscenza del venditore, o che contengono un knowledge qualifier.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la garanzia di gestione conforme alle prescrizioni dell'autorizzazione è smentita da prescrizioni non adempiute.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la garanzia di gestione conforme alle prescrizioni dell'autorizzazione è smentita da prescrizioni non adempiute.\nPASS se: compare l'affermazione che la dichiarazione di conformità non regge a fronte delle prescrizioni non adempiute.\nFAIL se: l'affermazione non compare.\nFonte di authoring: contratto preliminare, art. 8.1, lett. b; AIA, prescrizioni 7 e 11",
+      "pass_condition": "compare l'affermazione che la dichiarazione di conformità non regge a fronte delle prescrizioni non adempiute.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti l'analisi di rischio relativa all'area B.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti l'analisi di rischio relativa all'area B.\nPASS se: compare l'indicazione che l'analisi di rischio dell'area B manca o non è stata presentata.\nFAIL se: l'indicazione non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 3",
+      "pass_condition": "compare l'indicazione che l'analisi di rischio dell'area B manca o non è stata presentata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti l'atto della provincia sull'individuazione del responsabile della contaminazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti l'atto della provincia sull'individuazione del responsabile della contaminazione.\nPASS se: compare l'indicazione che quell'atto manca o non è stato adottato.\nFAIL se: l'indicazione non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 6",
+      "pass_condition": "compare l'indicazione che quell'atto manca o non è stato adottato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti la documentazione di dismissione del quarto serbatoio interrato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti la documentazione di dismissione del quarto serbatoio interrato.\nPASS se: compare l'indicazione che quella documentazione manca.\nFAIL se: l'indicazione non compare.\nFonte di authoring: attestazione, punto 6; relazione Fase II, § 9.4",
+      "pass_condition": "compare l'indicazione che quella documentazione manca.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che l'operazione non sia valutabile prima della conclusione del procedimento di bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'operazione non sia valutabile prima della conclusione del procedimento di bonifica.\nPASS se: non compare l'affermazione che non è possibile valutare l'operazione, che occorre attendere la chiusura del procedimento o che nulla può essere concluso.\nFAIL se: compare l'affermazione che l'operazione non è valutabile.\nFonte di authoring: relazione Fase II; verbale della conferenza di servizi",
+      "pass_condition": "non compare l'affermazione che non è possibile valutare l'operazione, che occorre attendere la chiusura del procedimento o che nulla può essere concluso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni pre-closing l'acquisizione dell'analisi di rischio dell'area B, ovvero la sua presentazione come condizione del closing.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni pre-closing l'acquisizione dell'analisi di rischio dell'area B, ovvero la sua presentazione come condizione del closing.\nPASS se: compare l'azione di ottenere il documento di analisi di rischio dell'area B o di subordinarvi il closing.\nFAIL se: l'azione non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 3",
+      "pass_condition": "compare l'azione di ottenere il documento di analisi di rischio dell'area B o di subordinarvi il closing.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni pre-closing la modifica del massimale dell'indennizzo, ovvero l'esclusione della contaminazione preesistente dal massimale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni pre-closing la modifica del massimale dell'indennizzo, ovvero l'esclusione della contaminazione preesistente dal massimale.\nPASS se: compare l'azione di innalzare il massimale, di escluderne la contaminazione preesistente o di prevedere un indennizzo specifico senza limite.\nFAIL se: l'azione non compare.\nFonte di authoring: contratto preliminare, art. 9.3",
+      "pass_condition": "compare l'azione di innalzare il massimale, di escluderne la contaminazione preesistente o di prevedere un indennizzo specifico senza limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni pre-closing l'allineamento della durata dell'indennizzo alla conclusione del procedimento di bonifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni pre-closing l'allineamento della durata dell'indennizzo alla conclusione del procedimento di bonifica.\nPASS se: compare l'azione di estendere o di ancorare la durata dell'indennizzo alla certificazione dell'autorità o alla chiusura del procedimento.\nFAIL se: l'azione non compare.\nFonte di authoring: contratto preliminare, art. 9.4",
+      "pass_condition": "compare l'azione di estendere o di ancorare la durata dell'indennizzo alla certificazione dell'autorità o alla chiusura del procedimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni pre-closing la costituzione di una garanzia o di un deposito vincolato a copertura dell'obbligo di indennizzo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni pre-closing la costituzione di una garanzia o di un deposito vincolato a copertura dell'obbligo di indennizzo.\nPASS se: compare l'azione di costituire un deposito vincolato, una garanzia bancaria o assicurativa o un trattenimento di prezzo.\nFAIL se: l'azione non compare.\nFonte di authoring: contratto preliminare, art. 9",
+      "pass_condition": "compare l'azione di costituire un deposito vincolato, una garanzia bancaria o assicurativa o un trattenimento di prezzo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni pre-closing la regolarizzazione del deposito dei rifiuti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni pre-closing la regolarizzazione del deposito dei rifiuti.\nPASS se: compare l'azione di avviare a recupero o smaltimento le giacenze eccedenti, o di riportare il deposito nei limiti.\nFAIL se: l'azione non compare.\nFonte di authoring: prospetto delle giacenze",
+      "pass_condition": "compare l'azione di avviare a recupero o smaltimento le giacenze eccedenti, o di riportare il deposito nei limiti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come rischio per il compratore l'obbligo del venditore di completare a proprie spese la messa in sicurezza d'emergenza fuori dal massimale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rischio per il compratore l'obbligo del venditore di completare a proprie spese la messa in sicurezza d'emergenza fuori dal massimale.\nPASS se: quella clausola non compare fra i red flag o fra i rischi.\nFAIL se: la clausola è presentata come rischio, come criticità o come clausola sfavorevole.\nFonte di authoring: contratto preliminare, art. 9.6",
+      "pass_condition": "quella clausola non compare fra i red flag o fra i rischi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come rilievo la pendenza o l'approssimarsi del riesame dell'autorizzazione integrata ambientale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rilievo la pendenza o l'approssimarsi del riesame dell'autorizzazione integrata ambientale.\nPASS se: il riesame non compare fra i red flag.\nFAIL se: il riesame è indicato come red flag o come rischio.\nFonte di authoring: AIA, articolo 5",
+      "pass_condition": "il riesame non compare fra i red flag.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che al sito si applichi il regime dei siti di interesse nazionale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che al sito si applichi il regime dei siti di interesse nazionale.\nPASS se: non compare l'affermazione che il sito è ricompreso nel perimetro di un sito di interesse nazionale o che la competenza è ministeriale.\nFAIL se: compare l'affermazione che si applica il regime dei siti di interesse nazionale.\nFonte di authoring: relazione Fase II, § 2; determinazione n. 1187",
+      "pass_condition": "non compare l'affermazione che il sito è ricompreso nel perimetro di un sito di interesse nazionale o che la competenza è ministeriale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non indica la rimozione delle coperture in cemento-amianto come obbligo o come azione dovuta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica la rimozione delle coperture in cemento-amianto come obbligo o come azione dovuta.\nPASS se: non compare l'affermazione che le coperture devono essere rimosse.\nFAIL se: compare l'affermazione che la rimozione dell'amianto è obbligatoria o dovuta.\nÈ indifferente: l'indicazione della rimozione come opzione economica futura, purché non presentata come obbligo.\nFonte di authoring: relazione amianto, punti 5 e 7; D.M. 6 settembre 1994",
+      "pass_condition": "non compare l'affermazione che le coperture devono essere rimosse.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non indica fra i rilievi aperti la diffida di ARPA relativa al punto di emissione E7.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica fra i rilievi aperti la diffida di ARPA relativa al punto di emissione E7.\nPASS se: quella diffida non compare fra i red flag aperti.\nFAIL se: la diffida è indicata come rilievo aperto o come procedimento pendente.\nFonte di authoring: nota di ARPA, punto 2",
+      "pass_condition": "quella diffida non compare fra i red flag aperti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non attribuisce all'attività dello stabilimento il superamento riscontrato nel piezometro a monte idrogeologico.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce all'attività dello stabilimento il superamento riscontrato nel piezometro a monte idrogeologico.\nPASS se: non compare l'affermazione che il dato del piezometro di monte è riconducibile al sito o che costituisce prova della contaminazione.\nFAIL se: compare l'affermazione che il superamento nel piezometro di monte è attribuibile allo stabilimento.\nFonte di authoring: relazione Fase II, § 7",
+      "pass_condition": "non compare l'affermazione che il dato del piezometro di monte è riconducibile al sito o che costituisce prova della contaminazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come red flag la prescrizione di monitoraggio disposta per l'area A dalla conferenza di servizi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come red flag la prescrizione di monitoraggio disposta per l'area A dalla conferenza di servizi.\nPASS se: quella prescrizione non compare fra i red flag.\nFAIL se: la prescrizione di monitoraggio dell'area A è indicata come red flag.\nÈ indifferente: la sua indicazione fra gli adempimenti che il compratore erediterà.\nFonte di authoring: verbale della conferenza di servizi, punto 5, lett. c",
+      "pass_condition": "quella prescrizione non compare fra i red flag.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che l'analisi di rischio dell'area B concluderà per il superamento delle concentrazioni soglia di rischio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'analisi di rischio dell'area B concluderà per il superamento delle concentrazioni soglia di rischio.\nPASS se: non compare l'affermazione che le CSR dell'area B risulteranno superate.\nFAIL se: compare l'affermazione che l'analisi di rischio concluderà per il superamento.\nFonte di authoring: verbale della conferenza di servizi, punto 3",
+      "pass_condition": "non compare l'affermazione che le CSR dell'area B risulteranno superate.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta la stima di 2.900.000 euro come costo certo degli interventi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la stima di 2.900.000 euro come costo certo degli interventi.\nPASS se: non compare l'affermazione che il costo degli interventi è pari a 2.900.000 euro.\nFAIL se: compare l'affermazione che gli interventi costeranno 2.900.000 euro.\nÈ indifferente: l'uso della stima come termine di confronto con il massimale, purché indicata come stima.\nFonte di authoring: relazione Fase II, § 8",
+      "pass_condition": "non compare l'affermazione che il costo degli interventi è pari a 2.900.000 euro.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che la provincia individuerà il responsabile nel venditore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la provincia individuerà il responsabile nel venditore.\nPASS se: non compare l'affermazione che la provincia individuerà il venditore come responsabile.\nFAIL se: compare quell'affermazione.\nFonte di authoring: verbale della conferenza di servizi, punto 6",
+      "pass_condition": "non compare l'affermazione che la provincia individuerà il venditore come responsabile.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica 940 milligrammi per chilogrammo come concentrazione rappresentativa alla sorgente determinata per l'area A.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 940 milligrammi per chilogrammo come concentrazione rappresentativa alla sorgente determinata per l'area A.\nPASS se: compare il valore 940.\nFAIL se: compare un valore diverso, oppure il valore non compare.\nFonte di authoring: verbale della conferenza di servizi, punto 4",
+      "pass_condition": "compare il valore 940.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il ritardo maturato alla data di riferimento sul termine per l'analisi di rischio dell'area B.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il ritardo maturato alla data di riferimento sul termine per l'analisi di rischio dell'area B.\nPASS se: compare il valore 238 riferito ai giorni di ritardo.\nFAIL se: compare un valore diverso, oppure il ritardo non è quantificato.\nFonte di authoring: dal 10 agosto 2032 al 5 aprile 2033",
+      "pass_condition": "compare il valore 238 riferito ai giorni di ritardo.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta il termine per l'analisi di rischio come decorrente dalla comunicazione del 9 dicembre 2031 o dalla data della relazione di indagine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta il termine per l'analisi di rischio come decorrente dalla comunicazione del 9 dicembre 2031 o dalla data della relazione di indagine.\nPASS se: non compare l'indicazione che il termine decorre dalla comunicazione o dalla relazione di indagine.\nFAIL se: il termine è fatto decorrere dalla comunicazione del 9 dicembre 2031 o dalla relazione dell'11 novembre 2032.\nFonte di authoring: art. 242, comma 4",
+      "pass_condition": "non compare l'indicazione che il termine decorre dalla comunicazione o dalla relazione di indagine.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica la quota della stima coperta dal massimale dell'indennizzo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica la quota della stima coperta dal massimale dell'indennizzo.\nPASS se: compare il valore 51,72 per cento, oppure 51,72%.\nFAIL se: compare un valore diverso, oppure la quota non è indicata.\nFonte di authoring: 1.500.000 / 2.900.000",
+      "pass_condition": "compare il valore 51,72 per cento, oppure 51,72%.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non fonda un obbligo di bonifica del compratore sulla circostanza che l'attività industriale è stata esercitata sul sito o sulla circostanza che il compratore ne diverrà proprietario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non fonda un obbligo di bonifica del compratore sulla circostanza che l'attività industriale è stata esercitata sul sito o sulla circostanza che il compratore ne diverrà proprietario.\nPASS se: non compare un ragionamento che ricavi l'obbligo di bonifica dalla titolarità dell'immobile o dalla storia industriale del sito.\nFAIL se: compare l'affermazione che il compratore risponde della bonifica in quanto proprietario o in quanto subentrante nell'attività.\nFonte di authoring: artt. 244 e 245",
+      "pass_condition": "non compare un ragionamento che ricavi l'obbligo di bonifica dalla titolarità dell'immobile o dalla storia industriale del sito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

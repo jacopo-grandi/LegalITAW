@@ -1,0 +1,190 @@
+{
+  "task_id": "WF2-031",
+  "data_di_riferimento": "2028-03-09",
+  "tipo_fascicolo": "in corso",
+  "lato_assistito": "Anselvieri Partecipazioni S.p.A., acquirente dell'intera partecipazione nella target",
+  "meccanismi": [
+    "fatti distribuiti: l'atto di cessione del ramo d'azienda del 3 luglio 2026 alimenta due rilievi indipendenti (responsabilita' solidale della target come cessionaria e integrazione della seconda condizione del riporto delle perdite); nessuno dei due e' leggibile da quel solo documento",
+    "metodo di calcolo controintuitivo: il riporto delle perdite non si decide sul cambio di controllo, ma su una sequenza a tre passaggi (condizioni cumulative, test di vitalita' sulle grandezze di conto economico dei due esercizi anteriori, tetto sul patrimonio netto contabile ridotto dei versamenti degli ultimi ventiquattro mesi); ogni scorciatoia produce un numero diverso e plausibile",
+    "presenza contro adeguatezza: la documentazione sui prezzi di trasferimento esiste, e' completa nella struttura e comunicata in dichiarazione, ma la marca temporale e' successiva alla presentazione della dichiarazione; la garanzia fiscale esiste ma dura meno dei termini di decadenza; il fondo per imposte esiste ma non copre l'esposizione",
+    "dichiarazione di parte smentita dai documenti: la nota del direttore amministrativo della target presenta come coperti tre profili che il fascicolo mostra scoperti",
+    "evidenze incomplete: la responsabilita' solidale come cessionaria del ramo e' certa nell'an e non quantificabile nel quantum, perche' manca il certificato dell'ufficio"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "rilievo sulle sponsorizzazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rilievo n. 3 del processo verbale di constatazione, sul periodo d'imposta 2023, espone la societa' a una maggiore IRES di euro 148.800,00 su un imponibile ripreso di euro 620.000,00; il periodo e' ancora accertabile",
+      "evidenza": "processo verbale di constatazione del 17 maggio 2027, rilievo n. 3",
+      "non_deve_affermare": "che il rilievo sia gia' definito o che il periodo sia chiuso"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "rilievo IVA 2023",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rilievo n. 4 espone la societa' a una maggiore IVA di euro 136.400,00 sul periodo d'imposta 2023",
+      "evidenza": "processo verbale di constatazione, rilievo n. 4",
+      "non_deve_affermare": "che il rilievo IVA sia assorbito dal rilievo IRES"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "natura di competenza del rilievo n. 2",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rilievo n. 2 contesta la deduzione di un costo in un esercizio diverso da quello di competenza: il costo resta deducibile nell'esercizio corretto e l'esposizione economica non e' pari alla maggiore imposta del 2022, ma alle sole sanzioni e agli interessi",
+      "evidenza": "processo verbale di constatazione, rilievo n. 2",
+      "non_deve_affermare": "che l'esposizione del rilievo n. 2 sia pari a euro 81.600,00 di imposta definitivamente perduta"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "termini di decadenza dei periodi con rilievi",
+      "gravita": "alta",
+      "affermazione_richiesta": "per il periodo d'imposta 2022 il termine di decadenza scade il 31 dicembre 2028 e per il 2023 il 31 dicembre 2029: entrambi i periodi sono ancora accertabili alla data di riferimento",
+      "evidenza": "art. 43 DPR 600/1973; anni di presentazione delle dichiarazioni indicati nel processo verbale di constatazione",
+      "non_deve_affermare": "che i periodi verificati siano tutti ancora accertabili"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "incapienza del fondo per imposte",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fondo per imposte iscritto nel bilancio 2027 e' di euro 150.000,00 a fronte di un'esposizione in imposta di euro 328.400,00: lo scoperto e' di euro 178.400,00, oltre a sanzioni e interessi",
+      "evidenza": "bilancio 2027, stato patrimoniale B.2 e nota integrativa; processo verbale di constatazione",
+      "non_deve_affermare": "che l'accantonamento sia sufficiente"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "spese di rappresentanza eccedenti il limite di deducibilita'",
+      "gravita": "alta",
+      "affermazione_richiesta": "le spese di rappresentanza del 2026, pari a euro 312.000,00, eccedono per euro 180.000,00 il limite di deducibilita' di euro 132.000,00, pari all'1,5 per cento dei ricavi della gestione caratteristica di euro 8.800.000,00; l'eccedenza non compare fra le variazioni in aumento della riconciliazione fiscale del bilancio 2026 e ne deriva una maggiore IRES di euro 43.200,00 sul periodo d'imposta 2026",
+      "evidenza": "bilancio 2026, conto economico B.14 e nota integrativa, dettaglio degli oneri diversi di gestione e prospetto di riconciliazione fra onere fiscale teorico ed effettivo; art. 108, comma 2, TUIR",
+      "non_deve_affermare": "che le spese di rappresentanza siano integralmente deducibili, ne' che l'intero importo di euro 312.000,00 sia indeducibile"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "le due condizioni del riporto delle perdite ricorrono entrambe",
+      "gravita": "alta",
+      "affermazione_richiesta": "la limitazione al riporto delle perdite opera perche' al trasferimento della maggioranza dei diritti di voto si affianca l'acquisizione del ramo d'azienda del 3 luglio 2026, che cade nel periodo d'imposta anteriore rilevante",
+      "evidenza": "atto di cessione di ramo d'azienda del 3 luglio 2026; contratto di compravendita di quote; art. 84, comma 3, TUIR",
+      "non_deve_affermare": "che la limitazione operi per il solo effetto del cambio di controllo"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "test di vitalita'",
+      "gravita": "alta",
+      "affermazione_richiesta": "il test sulle grandezze del conto economico e' superato: i ricavi 2027 di euro 3.780.000,00 eccedono euro 3.600.000,00, pari al 40 per cento della media 2026-2025 di euro 9.000.000,00, e le spese per prestazioni di lavoro subordinato e relativi contributi del 2027, pari a euro 1.010.000,00, eccedono euro 920.000,00, pari al 40 per cento della media di euro 2.300.000,00",
+      "evidenza": "bilancio 2027 e bilancio 2026, conto economico A.1 e B.9 lettere a) e b); art. 84, comma 3-bis, TUIR",
+      "non_deve_affermare": "che il test sia superato sulla sola grandezza dei ricavi, ne' che il confronto vada fatto con la media anziche' con il quaranta per cento della media"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "tetto al riporto delle perdite",
+      "gravita": "alta",
+      "affermazione_richiesta": "in assenza di relazione giurata di stima le perdite sono riportabili nel limite del patrimonio netto contabile al 31 dicembre 2027, pari a euro 1.310.000,00, senza tenere conto del versamento in conto capitale di euro 420.000,00 del 18 settembre 2026: il limite e' quindi di euro 890.000,00 su perdite di euro 3.420.000,00",
+      "evidenza": "bilancio 2027, patrimonio netto e prospetto delle movimentazioni; art. 84, comma 3-ter, TUIR",
+      "non_deve_affermare": "che il limite sia pari al patrimonio netto senza deduzione, ne' che vada dedotto il doppio dei versamenti in assenza della relazione di stima"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "il mancato riporto non e' una passivita' indennizzabile",
+      "gravita": "alta",
+      "affermazione_richiesta": "la perdita del riporto per euro 2.530.000,00 non rientra nella definizione contrattuale di Passivita' Fiscale, che comprende imposte, sanzioni e interessi dovuti: e' una voce di prezzo e va trattata nella negoziazione del corrispettivo, non nella garanzia",
+      "evidenza": "contratto di compravendita di quote, articolo 9.2",
+      "non_deve_affermare": "che l'importo sia indennizzabile ai sensi dell'articolo 9"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "responsabilita' solidale come cessionaria del ramo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la target risponde in solido con Orbilene Ricambi S.r.l. per imposte e sanzioni riferibili alle violazioni commesse nell'anno della cessione e nei due precedenti, con beneficio della preventiva escussione del cedente ed entro il limite del valore del ramo, pari a euro 1.150.000,00; l'importo non e' determinabile dal fascicolo perche' manca il certificato dell'ufficio",
+      "evidenza": "atto di cessione di ramo d'azienda del 3 luglio 2026; art. 14 D.Lgs. 472/1997",
+      "non_deve_affermare": "che la garanzia contrattuale rilasciata dal cedente escluda la responsabilita' verso l'amministrazione finanziaria"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "marca temporale della documentazione sui prezzi di trasferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la Documentazione Nazionale relativa al periodo d'imposta 2026 porta marca temporale del 12 novembre 2027, successiva alla presentazione della dichiarazione del 29 ottobre 2027: la disapplicazione della sanzione non opera per quel periodo",
+      "evidenza": "documentazione nazionale sui prezzi di trasferimento, attestazione di firma; nota del direttore amministrativo",
+      "non_deve_affermare": "che manchi la comunicazione del possesso della documentazione in dichiarazione"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "durata della garanzia fiscale piu' breve dei termini di decadenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "la garanzia fiscale scade il 28 aprile 2030, mentre i termini di decadenza dei periodi d'imposta 2024, 2025, 2026 e 2027 scadono dopo quella data: quei quattro periodi restano privi di copertura contrattuale",
+      "evidenza": "contratto di compravendita di quote, articolo 9.4; art. 43 DPR 600/1973",
+      "non_deve_affermare": "che la garanzia copra tutti i periodi ancora accertabili"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "deduzione degli importi accantonati dall'indennizzo",
+      "gravita": "media",
+      "affermazione_richiesta": "l'articolo 9.5 deduce dall'indennizzo gli importi accantonati nel bilancio di riferimento: sull'esposizione di euro 328.400,00 l'importo contrattualmente indennizzabile scende a euro 178.400,00",
+      "evidenza": "contratto di compravendita di quote, articolo 9.5; bilancio 2027",
+      "non_deve_affermare": "che l'intera esposizione sia recuperabile in via di indennizzo"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "elementi mancanti e divieto di presumere l'esito",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fascicolo non contiene le dichiarazioni dei redditi dei periodi verificati, il certificato dell'ufficio sui carichi pendenti del cedente del ramo, le eventuali osservazioni presentate al processo verbale e la relazione giurata di stima: sono i documenti da richiedere, e allo stato non e' possibile affermare quale sara' l'esito dei rilievi",
+      "evidenza": "composizione del fascicolo alla data di riferimento",
+      "non_deve_affermare": "che i rilievi saranno accolti o respinti"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "comunicazione di irregolarita' gia' definita",
+      "oggetto": "comunicazione di irregolarita' del 21 giugno 2027; quietanza del modello F24 del 15 luglio 2027",
+      "chiave_nel_criterio": "comunicazione di irregolarita",
+      "perche_non_e_issue": "la comunicazione e' stata pagata per intero e la quietanza e' agli atti: non e' una passivita' aperta e non va inserita fra i rilievi",
+      "criterio_assenza": "B.32"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "franchigia non applicabile alla materia fiscale",
+      "oggetto": "contratto di compravendita di quote, articolo 9.7",
+      "chiave_nel_criterio": "franchigia",
+      "perche_non_e_issue": "l'esclusione della franchigia generale per le garanzie fiscali e' una clausola a favore dell'acquirente: segnalarla come esposizione e' errore di lato",
+      "criterio_assenza": "B.33"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "periodo d'imposta 2021 decaduto",
+      "oggetto": "processo verbale di constatazione, rilievo n. 1; art. 43 DPR 600/1973",
+      "chiave_nel_criterio": "2021",
+      "perche_non_e_issue": "il termine per l'accertamento del periodo 2021 e' scaduto il 31 dicembre 2027, prima della data di riferimento: il rilievo n. 1 non e' piu' una passivita' potenziale",
+      "criterio_assenza": "B.30 e B.31"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "capienza del limite massimo di indennizzo",
+      "oggetto": "contratto di compravendita di quote, articolo 9.6",
+      "chiave_nel_criterio": "limite massimo",
+      "perche_non_e_issue": "il limite massimo di euro 930.000,00 eccede l'esposizione in imposta di euro 328.400,00: l'incapienza del limite non e' un rilievo",
+      "criterio_assenza": "B.34"
+    },
+    {
+      "id": "N-05",
+      "etichetta": "responsabilita' solidale in capo all'acquirente delle quote",
+      "oggetto": "contratto di compravendita di quote; atto di cessione di ramo d'azienda",
+      "chiave_nel_criterio": "acquirente delle quote",
+      "perche_non_e_issue": "l'operazione in corso e' una compravendita di partecipazioni: la responsabilita' solidale del cessionario d'azienda non si estende a chi acquista le quote, e attribuirgliela e' errore di fattispecie",
+      "criterio_assenza": "B.35"
+    },
+    {
+      "id": "N-06",
+      "etichetta": "ripresa dell'accantonamento al fondo per imposte 2027",
+      "oggetto": "documentazione nazionale sui prezzi di trasferimento, capitolo 2",
+      "chiave_nel_criterio": "congruita' dei prezzi di trasferimento",
+      "perche_non_e_issue": "la riconciliazione del bilancio 2027 riporta gia' la variazione in aumento di euro 150.000,00 relativa all'accantonamento al fondo per imposte: per quel periodo non vi e' alcun rilievo",
+      "criterio_assenza": "B.36"
+    }
+  ],
+  "punti_neutri": [
+    "la classificazione del versamento soci come riserva in conto capitale anziche' come finanziamento: coincidenza di drafting neutra, ne' premiata ne' penalizzata",
+    "l'inclusione o l'esclusione della voce A.5 altri ricavi e proventi nel calcolo dei ricavi dell'attivita' caratteristica: entrambi i trattamenti conducono al superamento della soglia e il punto resta neutro",
+    "l'inclusione o l'esclusione delle voci B.9 lettere c) ed e) nel calcolo delle spese per prestazioni di lavoro: entrambi i trattamenti conducono al superamento della soglia"
+  ]
+}

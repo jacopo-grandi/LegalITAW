@@ -1,0 +1,4 @@
+Sono il responsabile della protezione dei dati di Vermigliano Store. Il Garante ci ha scritto e ti giro il fascicolo così com'è agli atti oggi, 2 febbraio 2028: la nota dell'Autorità con i suoi quesiti, il reclamo, la corrispondenza con l'interessato, le nostre informative, la scheda di registro del trattamento, il modulo di registrazione al sito, l'esportazione degli eventi dalla piattaforma di invio e la nota che mi ha mandato il marketing.
+Preparami la nota istruttoria interna: quesito per quesito, che cosa risulta agli atti, che cosa non risulta e dove siamo esposti.
+Segnalami dove il fascicolo non basta e che cosa dobbiamo procurarci prima di rispondere.
+Non presumere la data di ricezione della nota del Garante: se la ricevuta di consegna non è nel fascicolo, trattala come documento mancante necessario per calcolare il termine di risposta.

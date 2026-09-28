@@ -1,0 +1,181 @@
+{
+  "task_id": "WF2-071",
+  "lato_assistito": "Livenza Meccanica S.p.A., convenuta nell'arbitrato promosso da Fosnera Components S.r.l.",
+  "data_di_riferimento": "2029-02-19",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Regolamento e sede",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola richiama il Regolamento CAM e fissa Milano come sede",
+      "evidenza": "01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a regolamento e sede",
+      "conseguenza": "il procedimento e il computo dei termini seguono il regolamento richiamato",
+      "azione": "usare Milano e la disciplina CAM in ogni passaggio",
+      "dato_mancante": "manca ogni successiva deroga delle parti",
+      "errore_bersaglio": "applicare un arbitrato ad hoc",
+      "fonte": "contratto; Regolamento CAM"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Avvio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la domanda è stata ricevuta dalla Segreteria il 9 gennaio 2029",
+      "evidenza": "01_estratto_contratto_e_ricevuta_cam.pdf, contenuto pertinente a avvio",
+      "conseguenza": "questa è la data di avvio amministrativo da usare",
+      "azione": "ancorare la prima riga al 9 gennaio 2029",
+      "dato_mancante": "manca prova di un deposito anteriore",
+      "errore_bersaglio": "usare la data 8 gennaio 2029 della firma",
+      "fonte": "ricevuta CAM; art. 10 Regolamento CAM"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Risposta",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di trenta giorni per la risposta scade l'8 febbraio 2029",
+      "evidenza": "02_registro_segreteria_cam.xlsx, contenuto pertinente a risposta",
+      "conseguenza": "la risposta del 1 febbraio è tempestiva",
+      "azione": "registrare 8 febbraio 2029 come scadenza",
+      "dato_mancante": "nessuna proroga risulta dal fascicolo",
+      "errore_bersaglio": "scadenza il 9 febbraio 2029",
+      "fonte": "artt. 7 e 11 Regolamento CAM"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Nomina di parte",
+      "gravita": "media",
+      "affermazione_richiesta": "Livenza ha nominato l'arbitra nella risposta del 1 febbraio 2029",
+      "evidenza": "02_registro_segreteria_cam.xlsx, contenuto pertinente a nomina di parte",
+      "conseguenza": "non occorre una nomina sostitutiva della Camera",
+      "azione": "preservare prova del deposito",
+      "dato_mancante": "manca l'accettazione separata dell'arbitra",
+      "errore_bersaglio": "trattare la nomina come omessa",
+      "fonte": "risposta; art. 11 Regolamento CAM"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Presidente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la Camera ha confermato la presidente e comunicato la costituzione il 19 febbraio 2029",
+      "evidenza": "03_email_nomine_e_competenza.eml, contenuto pertinente a presidente",
+      "conseguenza": "il collegio risulta costituito in quella data",
+      "azione": "usare il 19 febbraio 2029 come data costitutiva",
+      "dato_mancante": "non risulta una ricusazione",
+      "errore_bersaglio": "far decorrere il collegio dalla proposta del 12 febbraio",
+      "fonte": "comunicazione CAM"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Eccezione di competenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'eccezione di competenza deve essere formulata nella prima difesa utile",
+      "evidenza": "03_email_nomine_e_competenza.eml, contenuto pertinente a eccezione di competenza",
+      "conseguenza": "una riserva generica espone alla tardività",
+      "azione": "formulare subito oggetto e fondamento dell'eccezione",
+      "dato_mancante": "manca il testo definitivo della risposta",
+      "errore_bersaglio": "rinviare l'eccezione alla memoria istruttoria",
+      "fonte": "art. 817 c.p.c."
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Calendario",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'ordine procedurale del 19 febbraio prevede memoria il 19 marzo 2029 e replica il 9 aprile 2029",
+      "evidenza": "04_ordine_procedurale_n1.pdf, contenuto pertinente a calendario",
+      "conseguenza": "le due date governano la fase scritta",
+      "azione": "calendarizzare il 19 marzo e il 9 aprile 2029",
+      "dato_mancante": "manca decisione sulle prove orali",
+      "errore_bersaglio": "sostituire le date con stime",
+      "fonte": "ordine procedurale n. 1"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Cautelare",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola attribuisce espressamente poteri cautelari agli arbitri",
+      "evidenza": "04_ordine_procedurale_n1.pdf, contenuto pertinente a cautelare",
+      "conseguenza": "dopo l'accettazione la competenza cautelare arbitrale è esclusiva",
+      "azione": "valutare l'istanza davanti al collegio",
+      "dato_mancante": "manca una domanda cautelare già pendente",
+      "errore_bersaglio": "rivolgersi sempre al tribunale ordinario",
+      "fonte": "artt. 818 e 818-bis c.p.c.; contratto"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Termine del lodo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine regolamentare del lodo cade domenica 19 agosto e slitta al 20 agosto 2029",
+      "evidenza": "05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a termine del lodo",
+      "conseguenza": "il primo giorno lavorativo seguente governa in assenza di proroga",
+      "azione": "monitorare il 20 agosto 2029, oltre a proroghe e sospensioni",
+      "dato_mancante": "manca un provvedimento di proroga",
+      "errore_bersaglio": "indicare il 18 agosto senza correzione",
+      "fonte": "artt. 7 e 36 Regolamento CAM"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Impugnazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine breve di impugnazione dipende dalla notificazione del lodo",
+      "evidenza": "05_nota_scadenze_studio_eridano.pdf, contenuto pertinente a impugnazione",
+      "conseguenza": "alla data di riferimento non è calcolabile una scadenza breve",
+      "azione": "aprire un controllo alla futura notificazione",
+      "dato_mancante": "manca la data di notificazione del lodo",
+      "errore_bersaglio": "far decorrere l'impugnazione dal deposito CAM",
+      "fonte": "art. 828 c.p.c."
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "forma digitale",
+      "chiave_nel_criterio": "forma digitale",
+      "regola": "La sottoscrizione digitale del contratto non rende inefficace la clausola arbitrale."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "nazionalita arbitra",
+      "chiave_nel_criterio": "nazionalita arbitra",
+      "regola": "La cittadinanza estera di un'arbitra non determina una sostituzione automatica."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "udienza remota",
+      "chiave_nel_criterio": "udienza remota",
+      "regola": "La previsione di una possibile udienza da remoto non modifica la sede giuridica di Milano."
+    }
+  ],
+  "calcoli": [
+    "2029-01-09",
+    "2029-02-01",
+    "2029-02-08",
+    "2029-02-19",
+    "2029-03-19",
+    "2029-04-09",
+    "2029-08-19",
+    "2029-08-20"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_estratto_contratto_e_ricevuta_cam.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_segreteria_cam.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_nomine_e_competenza.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_ordine_procedurale_n1.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_scadenze_studio_eridano.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

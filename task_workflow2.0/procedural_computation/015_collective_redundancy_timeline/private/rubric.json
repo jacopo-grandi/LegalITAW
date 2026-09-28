@@ -1,0 +1,962 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-015",
+  "title": "Lavoro. Calendario della procedura di riduzione del personale",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 59,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contiene due parti distinte: il calendario della procedura e la checklist degli adempimenti.",
+      "pass_condition": "il deliverable contiene due parti distinte: calendario della procedura e checklist degli adempimenti.",
+      "fail_condition": "manca una delle due parti oppure calendario e checklist non sono distinti.",
+      "indifferent": "La collocazione delle parti nel file.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [valore] il deliverable contiene due parti distinte: il calendario della procedura e la checklist degli adempimenti."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata nel calendario è accompagnata da un riferimento a un documento del fascicolo.",
+      "pass_condition": "ogni data ripresa dal fascicolo è accompagnata dal riferimento all'atto da cui è ricavata, e ogni data calcolata indica l'atto da cui parte il calcolo.",
+      "fail_condition": "anche una sola data ripresa dal fascicolo o calcolata è priva del riferimento all'atto.",
+      "indifferent": "la forma del rinvio (nome del file, numero o titolo del documento) e la sua collocazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] ogni data indicata nel calendario è accompagnata da un riferimento a un documento del fascicolo."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata nel calendario è accompagnata da un riferimento normativo con articolo e comma.",
+      "pass_condition": "ogni scadenza o termine indicato riporta la norma su cui si basa, con articolo e, se l'articolo è diviso in commi, comma.",
+      "fail_condition": "anche un solo termine è privo della norma, oppure la norma è citata senza articolo o senza comma.",
+      "indifferent": "le date di puro fatto (per esempio una ricezione o una comunicazione), che non si basano su una norma; la forma della citazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] ogni data indicata nel calendario è accompagnata da un riferimento normativo con articolo e comma."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni voce della checklist riporta il termine e il destinatario.",
+      "pass_condition": "ogni voce della checklist riporta sia il termine sia il destinatario.",
+      "fail_condition": "anche una sola voce è priva del termine o del destinatario.",
+      "indifferent": "L’ordine e la forma di esposizione del termine e del destinatario.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] ogni voce della checklist riporta il termine e il destinatario."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "per ogni termine calcolato il deliverable riporta il calcolo seguito.",
+      "pass_condition": "per ciascun termine calcolato il deliverable mostra il calcolo seguito.",
+      "fail_condition": "anche un solo termine calcolato è riportato senza il relativo calcolo.",
+      "indifferent": "I termini trascritti direttamente da un documento, senza essere calcolati.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 [struttura] per ogni termine calcolato il deliverable riporta il calcolo seguito."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nessun riferimento normativo o giurisprudenziale fuori dall'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "il deliverable cita soltanto L. 223/1991, artt. 24 e 4, commi 2-9 e 12.",
+      "fail_condition": "compare anche una sola norma o decisione giurisprudenziale fuori da questo elenco, anche come ipotesi o esempio.",
+      "indifferent": "I rinvii a documenti e passaggi del fascicolo non sono fonti normative.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.6 [assenza] nessun riferimento normativo o giurisprudenziale fuori dall'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "A.7",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni passaggio del calendario indica il soggetto che deve attivarsi.",
+      "pass_condition": "tutte le righe operative hanno un attore o responsabile identificato.",
+      "fail_condition": "almeno un passaggio è privo dell'attore.",
+      "indifferent": null,
+      "source": "prompt.",
+      "severity": "alta",
+      "raw_text": "A.7 [struttura] attore di ciascun passaggio\nVerifica: ogni passaggio del calendario indica il soggetto che deve attivarsi.\nPass se: tutte le righe operative hanno un attore o responsabile identificato.\nFail se: almeno un passaggio è privo dell'attore.\nFonte: prompt. Gravità: alta."
+    },
+    {
+      "id": "A.8",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il calendario indica, per ciascun passaggio non iniziale, l'evento o l'adempimento da cui dipende.",
+      "pass_condition": "le dipendenze tra comunicazione, richiesta sindacale, esame congiunto, fase amministrativa e recessi sono esplicite.",
+      "fail_condition": "il calendario è una sequenza di date senza rapporti di dipendenza.",
+      "indifferent": null,
+      "source": "prompt.",
+      "severity": "alta",
+      "raw_text": "A.8 [struttura] dipendenze della procedura\nVerifica: il calendario indica, per ciascun passaggio non iniziale, l'evento o l'adempimento da cui dipende.\nPass se: le dipendenze tra comunicazione, richiesta sindacale, esame congiunto, fase amministrativa e recessi sono esplicite.\nFail se: il calendario è una sequenza di date senza rapporti di dipendenza.\nFonte: prompt. Gravità: alta."
+    },
+    {
+      "id": "A.9",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable mostra il conteggio degli addetti interessati a partire dall'elenco del personale.",
+      "pass_condition": "compare il percorso che porta a dieci lavoratori e il confronto con i nove indicati nel verbale.",
+      "fail_condition": "compare soltanto il risultato senza derivazione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.9 [struttura] derivazione del numero degli esuberi\nVerifica: il deliverable mostra il conteggio degli addetti interessati a partire dall'elenco del personale.\nPass se: compare il percorso che porta a dieci lavoratori e il confronto con i nove indicati nel verbale.\nFail se: compare soltanto il risultato senza derivazione.\nFonte: All. 1 + All. 2. Gravità: alta."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la riduzione del personale del reparto stampaggio come licenziamento collettivo.",
+      "pass_condition": "compare, riferita a questa riduzione, una fra: «licenziamento collettivo», «procedura di licenziamento collettivo», «riduzione di personale ai sensi della legge 223/1991».",
+      "fail_condition": "la riduzione è ricondotta a licenziamenti individuali per giustificato motivo oggettivo, oppure la qualificazione non compare.",
+      "indifferent": "il richiamo alla direttiva europea in materia di licenziamenti collettivi.",
+      "source": "All. 1 (delibera) e All. 2 (organico); art. 24, co. 1, L. 223/1991",
+      "severity": "alta",
+      "raw_text": "B.1  qualificazione dell'operazione                    [issue: I-01]  [tipo: qualificazione]\nVerifica      il deliverable qualifica la riduzione del personale del reparto stampaggio come licenziamento collettivo.\nPass se       compare, riferita a questa riduzione, una fra: «licenziamento collettivo», «procedura di licenziamento collettivo», «riduzione di personale ai sensi della legge 223/1991».\nFail se       la riduzione è ricondotta a licenziamenti individuali per giustificato motivo oggettivo, oppure la qualificazione non compare.\nIndifferente  il richiamo alla direttiva europea in materia di licenziamenti collettivi.\n—— non passa al judge ——\nFonte         All. 1 (delibera) e All. 2 (organico); art. 24, co. 1, L. 223/1991     Gravità  alta"
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'impresa occupa più di quindici dipendenti.",
+      "pass_condition": "compare l'affermazione che l'organico complessivo supera i quindici dipendenti.",
+      "fail_condition": "l'affermazione non compare, oppure il deliverable afferma che l'impresa non supera i quindici dipendenti.",
+      "indifferent": "l'indicazione del numero esatto dell'organico; il computo o il mancato computo dei dirigenti in quel numero.",
+      "source": "All. 2; art. 24, co. 1",
+      "severity": "media",
+      "raw_text": "B.2  requisito dimensionale                            [issue: I-01]  [tipo: presenza]\nVerifica      il deliverable afferma che l'impresa occupa più di quindici dipendenti.\nPass se       compare l'affermazione che l'organico complessivo supera i quindici dipendenti.\nFail se       l'affermazione non compare, oppure il deliverable afferma che l'impresa non supera i quindici dipendenti.\nIndifferente  l'indicazione del numero esatto dell'organico; il computo o il mancato computo dei dirigenti in quel numero.\n—— non passa al judge ——\nFonte         All. 2; art. 24, co. 1     Gravità  media"
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che i licenziamenti previsti nelle unità produttive di Thiene e di Sarcedo si computano insieme perché le due unità si trovano nella stessa provincia.",
+      "pass_condition": "compare l'affermazione che le due unità si sommano, con la menzione della stessa provincia oppure di Vicenza.",
+      "fail_condition": "il computo è riferito alla singola unità produttiva, oppure l'affermazione non compare.",
+      "indifferent": "l'indicazione degli indirizzi delle unità produttive.",
+      "source": "All. 1, delibera; All. 2; art. 24, co. 1",
+      "severity": "alta",
+      "raw_text": "B.3  somma delle unità produttive                      [issue: I-02]  [tipo: presenza]\nVerifica      il deliverable afferma che i licenziamenti previsti nelle unità produttive di Thiene e di Sarcedo si computano insieme perché le due unità si trovano nella stessa provincia.\nPass se       compare l'affermazione che le due unità si sommano, con la menzione della stessa provincia oppure di Vicenza.\nFail se       il computo è riferito alla singola unità produttiva, oppure l'affermazione non compare.\nIndifferente  l'indicazione degli indirizzi delle unità produttive.\n—— non passa al judge ——\nFonte         All. 1, delibera; All. 2; art. 24, co. 1     Gravità  alta"
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la procedura riguarda soltanto l'unità produttiva di Thiene.",
+      "pass_condition": "non compare l'affermazione che la riduzione o il computo riguardano la sola unità di Thiene.",
+      "fail_condition": "il deliverable circoscrive la procedura o il computo all'unità di Thiene.",
+      "indifferent": null,
+      "source": "All. 1, delibera",
+      "severity": "alta",
+      "raw_text": "B.4  perimetro non limitato a una sola unità            [issue: I-02]  [tipo: assenza]\nVerifica      il deliverable non afferma che la procedura riguarda soltanto l'unità produttiva di Thiene.\nPass se       non compare l'affermazione che la riduzione o il computo riguardano la sola unità di Thiene.\nFail se       il deliverable circoscrive la procedura o il computo all'unità di Thiene.\n—— non passa al judge ——\nFonte         All. 1, delibera     Gravità  alta"
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in dieci il numero dei lavoratori interessati dalla riduzione.",
+      "pass_condition": "compare «dieci» oppure «10» come numero dei lavoratori interessati o degli esuberi.",
+      "fail_condition": "compare un numero diverso da dieci, oppure il numero non compare.",
+      "indifferent": "l'elenco nominativo dei dieci lavoratori.",
+      "source": "All. 2",
+      "severity": "alta",
+      "raw_text": "B.5  numero dei lavoratori interessati                 [issue: I-03]  [tipo: valore]\nVerifica      il deliverable indica in dieci il numero dei lavoratori interessati dalla riduzione.\nPass se       compare «dieci» oppure «10» come numero dei lavoratori interessati o degli esuberi.\nFail se       compare un numero diverso da dieci, oppure il numero non compare.\nIndifferente  l'elenco nominativo dei dieci lavoratori.\n—— non passa al judge —— verifica meccanica\nFonte         All. 2     Gravità  alta"
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'indicazione di nove addetti in esubero contenuta nel verbale del consiglio non è esatta.",
+      "pass_condition": "compare, riferita a quell'indicazione, una fra: «errata», «non corretta», «inesatta», «da rettificare», «da correggere».",
+      "fail_condition": "il deliverable non contiene alcuna affermazione sull'inesattezza di quell'indicazione.",
+      "indifferent": "la spiegazione della ragione dell'errore del consiglio.",
+      "source": "All. 1, primo punto all'ordine del giorno",
+      "severity": "media",
+      "raw_text": "B.6  rettifica dell'indicazione del verbale            [issue: I-03]  [tipo: presenza]\nVerifica      il deliverable afferma che l'indicazione di nove addetti in esubero contenuta nel verbale del consiglio non è esatta.\nPass se       compare, riferita a quell'indicazione, una fra: «errata», «non corretta», «inesatta», «da rettificare», «da correggere».\nFail se       il deliverable non contiene alcuna affermazione sull'inesattezza di quell'indicazione.\nIndifferente  la spiegazione della ragione dell'errore del consiglio.\n—— non passa al judge ——\nFonte         All. 1, primo punto all'ordine del giorno     Gravità  media"
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica in nove il numero dei lavoratori interessati dalla riduzione.",
+      "pass_condition": "il numero nove non compare come numero dei lavoratori interessati o degli esuberi.",
+      "fail_condition": "il deliverable adotta nove come numero dei lavoratori interessati o degli esuberi.",
+      "indifferent": "la citazione del numero nove come indicazione del verbale da rettificare.",
+      "source": "All. 1",
+      "severity": "alta",
+      "raw_text": "B.7  numero indicato dal consiglio non recepito        [issue: I-03]  [tipo: assenza]\nVerifica      il deliverable non indica in nove il numero dei lavoratori interessati dalla riduzione.\nPass se       il numero nove non compare come numero dei lavoratori interessati o degli esuberi.\nFail se       il deliverable adotta nove come numero dei lavoratori interessati o degli esuberi.\nIndifferente  la citazione del numero nove come indicazione del verbale da rettificare.\n—— non passa al judge ——\nFonte         All. 1     Gravità  alta"
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il rapporto a tempo determinato con scadenza il 26 febbraio 2027 non entra nel computo dei lavoratori interessati.",
+      "pass_condition": "compare l'esclusione di quel rapporto dal computo, con la menzione della scadenza del contratto o del rapporto a tempo determinato.",
+      "fail_condition": "quel rapporto è computato fra i lavoratori interessati, oppure l'esclusione non compare.",
+      "indifferent": "l'indicazione della matricola o del nominativo.",
+      "source": "All. 2, matricola 0208; art. 24, co. 4, e art. 4, co. 14",
+      "severity": "alta",
+      "raw_text": "B.8  rapporto a tempo determinato escluso              [issue: I-04]  [tipo: presenza]\nVerifica      il deliverable afferma che il rapporto a tempo determinato con scadenza il 26 febbraio 2027 non entra nel computo dei lavoratori interessati.\nPass se       compare l'esclusione di quel rapporto dal computo, con la menzione della scadenza del contratto o del rapporto a tempo determinato.\nFail se       quel rapporto è computato fra i lavoratori interessati, oppure l'esclusione non compare.\nIndifferente  l'indicazione della matricola o del nominativo.\n—— non passa al judge ——\nFonte         All. 2, matricola 0208; art. 24, co. 4, e art. 4, co. 14     Gravità  alta"
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la cessazione del rapporto a tempo determinato con scadenza il 26 febbraio 2027 fra i licenziamenti da intimare.",
+      "pass_condition": "quella cessazione non compare nell'elenco dei licenziamenti o degli adempimenti della procedura.",
+      "fail_condition": "quella cessazione è trattata come uno dei licenziamenti della procedura.",
+      "indifferent": null,
+      "source": "All. 2, matricola 0208",
+      "severity": "media",
+      "raw_text": "B.9  scadenza del termine non qualificata licenziamento [issue: I-04]  [tipo: assenza]\nVerifica      il deliverable non indica la cessazione del rapporto a tempo determinato con scadenza il 26 febbraio 2027 fra i licenziamenti da intimare.\nPass se       quella cessazione non compare nell'elenco dei licenziamenti o degli adempimenti della procedura.\nFail se       quella cessazione è trattata come uno dei licenziamenti della procedura.\n—— non passa al judge ——\nFonte         All. 2, matricola 0208     Gravità  media"
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la cessazione per dimissioni con ultimo giorno di lavoro il 31 gennaio 2027 non entra nel computo dei lavoratori interessati.",
+      "pass_condition": "compare l'esclusione di quella cessazione dal computo, con la menzione delle dimissioni.",
+      "fail_condition": "quella cessazione è computata fra i lavoratori interessati, oppure l'esclusione non compare.",
+      "indifferent": "l'indicazione della matricola o del nominativo.",
+      "source": "All. 2, matricola 0211",
+      "severity": "alta",
+      "raw_text": "B.10 dimissioni escluse dal computo                    [issue: I-05]  [tipo: presenza]\nVerifica      il deliverable afferma che la cessazione per dimissioni con ultimo giorno di lavoro il 31 gennaio 2027 non entra nel computo dei lavoratori interessati.\nPass se       compare l'esclusione di quella cessazione dal computo, con la menzione delle dimissioni.\nFail se       quella cessazione è computata fra i lavoratori interessati, oppure l'esclusione non compare.\nIndifferente  l'indicazione della matricola o del nominativo.\n—— non passa al judge ——\nFonte         All. 2, matricola 0211     Gravità  alta"
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che i termini della procedura non si riducono alla metà.",
+      "pass_condition": "compare una fra: «i termini non sono ridotti alla metà», «non si applica la riduzione alla metà dei termini», «i termini non sono dimezzati», «i termini restano pieni».",
+      "fail_condition": "il deliverable applica termini dimezzati, oppure l'affermazione non compare.",
+      "indifferent": "la citazione del comma.",
+      "source": "art. 4, co. 8",
+      "severity": "alta",
+      "raw_text": "B.11 termini non ridotti alla metà                     [issue: I-06]  [tipo: presenza]\nVerifica      il deliverable afferma che i termini della procedura non si riducono alla metà.\nPass se       compare una fra: «i termini non sono ridotti alla metà», «non si applica la riduzione alla metà dei termini», «i termini non sono dimezzati», «i termini restano pieni».\nFail se       il deliverable applica termini dimezzati, oppure l'affermazione non compare.\nIndifferente  la citazione del comma.\n—— non passa al judge ——\nFonte         art. 4, co. 8     Gravità  alta"
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la riduzione dei termini opera solo se i lavoratori interessati sono meno di dieci.",
+      "pass_condition": "compare l'affermazione che la riduzione richiede un numero inferiore a dieci.",
+      "fail_condition": "compare l'affermazione che la riduzione opera fino a dieci lavoratori o con dieci lavoratori, oppure l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 8",
+      "severity": "alta",
+      "raw_text": "B.12 lettura della soglia                              [issue: I-06]  [tipo: presenza]\nVerifica      il deliverable afferma che la riduzione dei termini opera solo se i lavoratori interessati sono meno di dieci.\nPass se       compare l'affermazione che la riduzione richiede un numero inferiore a dieci.\nFail se       compare l'affermazione che la riduzione opera fino a dieci lavoratori o con dieci lavoratori, oppure l'affermazione non compare.\n—— non passa al judge ——\nFonte         art. 4, co. 8     Gravità  alta"
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la comunicazione preventiva va data per iscritto alla rappresentanza sindacale aziendale e alle associazioni di categoria.",
+      "pass_condition": "compaiono entrambi i destinatari, la rappresentanza sindacale aziendale e le associazioni di categoria.",
+      "fail_condition": "compare uno solo dei due destinatari, oppure l'adempimento non compare.",
+      "indifferent": "la menzione delle confederazioni per esteso; l'indicazione della facoltà di trasmettere per il tramite dell'associazione dei datori di lavoro.",
+      "source": "art. 4, co. 2",
+      "severity": "alta",
+      "raw_text": "B.13 destinatari della comunicazione preventiva        [issue: I-07]  [tipo: presenza]\nVerifica      il deliverable afferma che la comunicazione preventiva va data per iscritto alla rappresentanza sindacale aziendale e alle associazioni di categoria.\nPass se       compaiono entrambi i destinatari, la rappresentanza sindacale aziendale e le associazioni di categoria.\nFail se       compare uno solo dei due destinatari, oppure l'adempimento non compare.\nIndifferente  la menzione delle confederazioni per esteso; l'indicazione della facoltà di trasmettere per il tramite dell'associazione dei datori di lavoro.\n—— non passa al judge ——\nFonte         art. 4, co. 2     Gravità  alta"
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che per l'unità produttiva di Sarcedo, dove la rappresentanza sindacale aziendale non è costituita, la comunicazione va fatta alle associazioni di categoria.",
+      "pass_condition": "compare, riferita all'unità di Sarcedo o all'unità priva di rappresentanza, l'indicazione delle associazioni di categoria come destinatarie.",
+      "fail_condition": "l'indicazione non compare, oppure il deliverable afferma che per quell'unità non va fatta alcuna comunicazione.",
+      "indifferent": null,
+      "source": "All. 1, riferito dalla direttrice del personale; art. 4, co. 2",
+      "severity": "media",
+      "raw_text": "B.14 unità priva di rappresentanza aziendale           [issue: I-07]  [tipo: presenza]\nVerifica      il deliverable afferma che per l'unità produttiva di Sarcedo, dove la rappresentanza sindacale aziendale non è costituita, la comunicazione va fatta alle associazioni di categoria.\nPass se       compare, riferita all'unità di Sarcedo o all'unità priva di rappresentanza, l'indicazione delle associazioni di categoria come destinatarie.\nFail se       l'indicazione non compare, oppure il deliverable afferma che per quell'unità non va fatta alcuna comunicazione.\n—— non passa al judge ——\nFonte         All. 1, riferito dalla direttrice del personale; art. 4, co. 2     Gravità  media"
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che copia della comunicazione va inviata all'ufficio pubblico competente contestualmente all'invio alle organizzazioni sindacali.",
+      "pass_condition": "compare, riferita a quell'invio, una fra: «contestualmente», «nello stesso momento», «lo stesso giorno», «contemporaneamente».",
+      "fail_condition": "la copia all'ufficio è collocata in un momento successivo con un termine proprio, oppure l'adempimento non compare.",
+      "indifferent": "la denominazione dell'ufficio destinatario; il riferimento al versamento all'istituto previdenziale o al contributo di licenziamento.",
+      "source": "art. 4, co. 4",
+      "severity": "alta",
+      "raw_text": "B.15 copia all'ufficio pubblico, contestuale           [issue: I-08]  [tipo: presenza]\nVerifica      il deliverable afferma che copia della comunicazione va inviata all'ufficio pubblico competente contestualmente all'invio alle organizzazioni sindacali.\nPass se       compare, riferita a quell'invio, una fra: «contestualmente», «nello stesso momento», «lo stesso giorno», «contemporaneamente».\nFail se       la copia all'ufficio è collocata in un momento successivo con un termine proprio, oppure l'adempimento non compare.\nIndifferente  la denominazione dell'ufficio destinatario; il riferimento al versamento all'istituto previdenziale o al contributo di licenziamento.\n—— non passa al judge ——\nFonte         art. 4, co. 4     Gravità  alta"
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'esame congiunto si svolge su richiesta della rappresentanza sindacale aziendale e delle associazioni di categoria.",
+      "pass_condition": "compare l'affermazione che l'esame congiunto ha luogo su richiesta delle organizzazioni sindacali.",
+      "fail_condition": "l'affermazione non compare, oppure l'esame congiunto è presentato come automatico.",
+      "indifferent": "l'indicazione della sede o delle modalità dell'incontro.",
+      "source": "art. 4, co. 5",
+      "severity": "media",
+      "raw_text": "B.16 esame congiunto su richiesta                      [issue: I-09]  [tipo: presenza]\nVerifica      il deliverable afferma che l'esame congiunto si svolge su richiesta della rappresentanza sindacale aziendale e delle associazioni di categoria.\nPass se       compare l'affermazione che l'esame congiunto ha luogo su richiesta delle organizzazioni sindacali.\nFail se       l'affermazione non compare, oppure l'esame congiunto è presentato come automatico.\nIndifferente  l'indicazione della sede o delle modalità dell'incontro.\n—— non passa al judge ——\nFonte         art. 4, co. 5     Gravità  media"
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'azienda deve convocare l'esame congiunto entro sette giorni.",
+      "pass_condition": "non compare un adempimento a carico dell'azienda consistente nel convocare o fissare l'esame congiunto entro sette giorni.",
+      "fail_condition": "il deliverable pone a carico dell'azienda la convocazione dell'esame congiunto entro sette giorni.",
+      "indifferent": "l'indicazione che l'azienda deve rendersi disponibile all'incontro se richiesto.",
+      "source": "art. 4, co. 5",
+      "severity": "media",
+      "raw_text": "B.17 iniziativa dell'esame congiunto                   [issue: I-09]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'azienda deve convocare l'esame congiunto entro sette giorni.\nPass se       non compare un adempimento a carico dell'azienda consistente nel convocare o fissare l'esame congiunto entro sette giorni.\nFail se       il deliverable pone a carico dell'azienda la convocazione dell'esame congiunto entro sette giorni.\nIndifferente  l'indicazione che l'azienda deve rendersi disponibile all'incontro se richiesto.\n—— non passa al judge ——\nFonte         art. 4, co. 5     Gravità  media"
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, se l'accordo sindacale è raggiunto prima della scadenza del termine della fase sindacale, i recessi possono essere intimati prima di quella scadenza.",
+      "pass_condition": "compare l'affermazione che con l'accordo si può procedere ai recessi prima della scadenza del termine.",
+      "fail_condition": "il deliverable afferma che occorre in ogni caso attendere la scadenza del termine, oppure l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 6 e 9",
+      "severity": "alta",
+      "raw_text": "B.18 termine massimo, non periodo di attesa            [issue: I-10]  [tipo: presenza]\nVerifica      il deliverable afferma che, se l'accordo sindacale è raggiunto prima della scadenza del termine della fase sindacale, i recessi possono essere intimati prima di quella scadenza.\nPass se       compare l'affermazione che con l'accordo si può procedere ai recessi prima della scadenza del termine.\nFail se       il deliverable afferma che occorre in ogni caso attendere la scadenza del termine, oppure l'affermazione non compare.\n—— non passa al judge ——\nFonte         art. 4, co. 6 e 9     Gravità  alta"
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la fase amministrativa si apre solo se l'accordo sindacale non è raggiunto.",
+      "pass_condition": "compare l'affermazione che la fase davanti all'ufficio pubblico è subordinata al mancato accordo.",
+      "fail_condition": "la fase amministrativa è presentata come passaggio necessario in ogni caso, oppure l'affermazione non compare.",
+      "indifferent": "la denominazione dell'ufficio che convoca le parti.",
+      "source": "art. 4, co. 7",
+      "severity": "alta",
+      "raw_text": "B.19 eventualità della fase amministrativa             [issue: I-11]  [tipo: presenza]\nVerifica      il deliverable afferma che la fase amministrativa si apre solo se l'accordo sindacale non è raggiunto.\nPass se       compare l'affermazione che la fase davanti all'ufficio pubblico è subordinata al mancato accordo.\nFail se       la fase amministrativa è presentata come passaggio necessario in ogni caso, oppure l'affermazione non compare.\nIndifferente  la denominazione dell'ufficio che convoca le parti.\n—— non passa al judge ——\nFonte         art. 4, co. 7     Gravità  alta"
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce all'ufficio pubblico competente la convocazione delle parti nella fase amministrativa.",
+      "pass_condition": "la convocazione è attribuita all'ufficio pubblico competente.",
+      "fail_condition": "la convocazione è attribuita all'azienda o alle organizzazioni sindacali, oppure l'attribuzione non compare.",
+      "indifferent": "la denominazione dell'ufficio.",
+      "source": "art. 4, co. 7",
+      "severity": "media",
+      "raw_text": "B.20 chi promuove la fase amministrativa               [issue: I-11]  [tipo: attribuzione]\nVerifica      il deliverable riconduce all'ufficio pubblico competente la convocazione delle parti nella fase amministrativa.\nPass se       la convocazione è attribuita all'ufficio pubblico competente.\nFail se       la convocazione è attribuita all'azienda o alle organizzazioni sindacali, oppure l'attribuzione non compare.\nIndifferente  la denominazione dell'ufficio.\n—— non passa al judge ——\nFonte         art. 4, co. 7     Gravità  media"
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il termine di trenta giorni della fase amministrativa decorre dal ricevimento, da parte dell'ufficio, della comunicazione dell'impresa sull'esito della consultazione.",
+      "pass_condition": "compare quella decorrenza, riferita alla comunicazione dell'impresa sull'esito della consultazione.",
+      "fail_condition": "la decorrenza indicata è diversa, oppure non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 6 e 7",
+      "severity": "alta",
+      "raw_text": "B.21 decorrenza dei trenta giorni                      [issue: I-12]  [tipo: presenza]\nVerifica      il deliverable afferma che il termine di trenta giorni della fase amministrativa decorre dal ricevimento, da parte dell'ufficio, della comunicazione dell'impresa sull'esito della consultazione.\nPass se       compare quella decorrenza, riferita alla comunicazione dell'impresa sull'esito della consultazione.\nFail se       la decorrenza indicata è diversa, oppure non compare.\n—— non passa al judge ——\nFonte         art. 4, co. 6 e 7     Gravità  alta"
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non fa decorrere il termine di trenta giorni dalla scadenza del termine della fase sindacale.",
+      "pass_condition": "non compare l'affermazione che i trenta giorni decorrono dalla scadenza dei quarantacinque giorni.",
+      "fail_condition": "i trenta giorni sono fatti decorrere dalla scadenza del termine della fase sindacale.",
+      "indifferent": null,
+      "source": "art. 4, co. 7",
+      "severity": "media",
+      "raw_text": "B.22 decorrenze errate dei trenta giorni               [issue: I-12]  [tipo: assenza]\nVerifica      il deliverable non fa decorrere il termine di trenta giorni dalla scadenza del termine della fase sindacale.\nPass se       non compare l'affermazione che i trenta giorni decorrono dalla scadenza dei quarantacinque giorni.\nFail se       i trenta giorni sono fatti decorrere dalla scadenza del termine della fase sindacale.\n—— non passa al judge ——\nFonte         art. 4, co. 7     Gravità  media"
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che i recessi possono essere intimati solo dopo l'accordo sindacale o l'esaurimento della procedura.",
+      "pass_condition": "compare l'affermazione che l'intimazione dei recessi presuppone l'accordo o l'esaurimento della procedura.",
+      "fail_condition": "l'affermazione non compare, oppure il deliverable colloca i recessi in un momento anteriore.",
+      "indifferent": null,
+      "source": "art. 4, co. 9",
+      "severity": "alta",
+      "raw_text": "B.23 momento in cui si può licenziare                  [issue: I-13]  [tipo: presenza]\nVerifica      il deliverable afferma che i recessi possono essere intimati solo dopo l'accordo sindacale o l'esaurimento della procedura.\nPass se       compare l'affermazione che l'intimazione dei recessi presuppone l'accordo o l'esaurimento della procedura.\nFail se       l'affermazione non compare, oppure il deliverable colloca i recessi in un momento anteriore.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  alta"
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il recesso va comunicato per iscritto a ciascun lavoratore.",
+      "pass_condition": "compare l'indicazione della forma scritta della comunicazione al singolo lavoratore.",
+      "fail_condition": "l'indicazione non compare.",
+      "indifferent": "la menzione della raccomandata, della consegna a mano o della posta elettronica certificata.",
+      "source": "art. 4, co. 9",
+      "severity": "media",
+      "raw_text": "B.24 forma della comunicazione di recesso              [issue: I-13]  [tipo: presenza]\nVerifica      il deliverable afferma che il recesso va comunicato per iscritto a ciascun lavoratore.\nPass se       compare l'indicazione della forma scritta della comunicazione al singolo lavoratore.\nFail se       l'indicazione non compare.\nIndifferente  la menzione della raccomandata, della consegna a mano o della posta elettronica certificata.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  media"
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'elenco dei lavoratori licenziati va trasmesso entro sette giorni dalla comunicazione dei recessi.",
+      "pass_condition": "compare il termine di sette giorni con decorrenza dalla comunicazione dei recessi.",
+      "fail_condition": "il termine indicato è diverso, la decorrenza indicata è diversa, oppure l'adempimento non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 9",
+      "severity": "alta",
+      "raw_text": "B.25 comunicazione finale, termine                     [issue: I-14]  [tipo: presenza]\nVerifica      il deliverable afferma che l'elenco dei lavoratori licenziati va trasmesso entro sette giorni dalla comunicazione dei recessi.\nPass se       compare il termine di sette giorni con decorrenza dalla comunicazione dei recessi.\nFail se       il termine indicato è diverso, la decorrenza indicata è diversa, oppure l'adempimento non compare.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  alta"
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la comunicazione finale indica le modalità con cui sono stati applicati i criteri di scelta.",
+      "pass_condition": "compare l'indicazione delle modalità di applicazione dei criteri di scelta come contenuto della comunicazione finale.",
+      "fail_condition": "l'indicazione non compare.",
+      "indifferent": "l'elenco degli altri dati dei lavoratori.",
+      "source": "art. 4, co. 9",
+      "severity": "media",
+      "raw_text": "B.26 comunicazione finale, contenuto                   [issue: I-14]  [tipo: presenza]\nVerifica      il deliverable afferma che la comunicazione finale indica le modalità con cui sono stati applicati i criteri di scelta.\nPass se       compare l'indicazione delle modalità di applicazione dei criteri di scelta come contenuto della comunicazione finale.\nFail se       l'indicazione non compare.\nIndifferente  l'elenco degli altri dati dei lavoratori.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  media"
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'intimazione dei recessi entro il 28 febbraio 2027 è possibile soltanto se entro quella data è raggiunto l'accordo sindacale.",
+      "pass_condition": "compare la subordinazione di quella data al raggiungimento dell'accordo.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "All. 1 + prompt",
+      "severity": "alta",
+      "raw_text": "B.27 calendario dell'amministratore delegato           [issue: I-15]  [tipo: presenza]\nVerifica      il deliverable afferma che l'intimazione dei recessi entro il 28 febbraio 2027 è possibile soltanto se entro quella data è raggiunto l'accordo sindacale.\nPass se       compare la subordinazione di quella data al raggiungimento dell'accordo.\nFail se       l'affermazione non compare.\n—— non passa al judge ——\nFonte         All. 1 + prompt     Gravità  alta"
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, in mancanza di accordo, i recessi non possono essere intimati entro il 28 febbraio 2027.",
+      "pass_condition": "compare l'affermazione che senza accordo quella data non è rispettabile.",
+      "fail_condition": "l'affermazione non compare, oppure il deliverable afferma che la data è rispettabile anche senza accordo.",
+      "indifferent": null,
+      "source": "art. 4, co. 7 e 9",
+      "severity": "alta",
+      "raw_text": "B.28 calendario dell'AD, non praticabile senza accordo [issue: I-15]  [tipo: presenza]\nVerifica      il deliverable afferma che, in mancanza di accordo, i recessi non possono essere intimati entro il 28 febbraio 2027.\nPass se       compare l'affermazione che senza accordo quella data non è rispettabile.\nFail se       l'affermazione non compare, oppure il deliverable afferma che la data è rispettabile anche senza accordo.\n—— non passa al judge ——\nFonte         art. 4, co. 7 e 9     Gravità  alta"
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'intimazione dei recessi entro il 28 febbraio 2027 è preclusa in ogni caso.",
+      "pass_condition": "non compare l'affermazione che quella data è impossibile o preclusa senza distinguere l'ipotesi dell'accordo.",
+      "fail_condition": "il deliverable dichiara quella data preclusa in ogni caso.",
+      "indifferent": null,
+      "source": "art. 4, co. 9",
+      "severity": "alta",
+      "raw_text": "B.29 calendario dell'AD, nessuna preclusione assoluta  [issue: I-15]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'intimazione dei recessi entro il 28 febbraio 2027 è preclusa in ogni caso.\nPass se       non compare l'affermazione che quella data è impossibile o preclusa senza distinguere l'ipotesi dell'accordo.\nFail se       il deliverable dichiara quella data preclusa in ogni caso.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  alta"
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la durata del preavviso non è ricavabile dal fascicolo.",
+      "pass_condition": "compare l'affermazione che il fascicolo non consente di determinare la durata del preavviso, con la menzione del contratto collettivo mancante o dell'assenza del dato.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "All. 2 (nessun contratto collettivo allegato)",
+      "severity": "media",
+      "raw_text": "B.30 preavviso non ricavabile                          [issue: I-16]  [tipo: presenza]\nVerifica      il deliverable afferma che la durata del preavviso non è ricavabile dal fascicolo.\nPass se       compare l'affermazione che il fascicolo non consente di determinare la durata del preavviso, con la menzione del contratto collettivo mancante o dell'assenza del dato.\nFail se       l'affermazione non compare.\n—— non passa al judge ——\nFonte         All. 2 (nessun contratto collettivo allegato)     Gravità  media"
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica una data di cessazione dei rapporti di lavoro.",
+      "pass_condition": "nessuna data di calendario è presentata come data di cessazione dei rapporti di lavoro.",
+      "fail_condition": "il deliverable indica una data di cessazione dei rapporti di lavoro.",
+      "indifferent": null,
+      "source": "All. 2",
+      "severity": "media",
+      "raw_text": "B.31 nessuna data di cessazione                        [issue: I-16]  [tipo: assenza]\nVerifica      il deliverable non indica una data di cessazione dei rapporti di lavoro.\nPass se       nessuna data di calendario è presentata come data di cessazione dei rapporti di lavoro.\nFail se       il deliverable indica una data di cessazione dei rapporti di lavoro.\n—— non passa al judge ——\nFonte         All. 2     Gravità  media"
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'unità produttiva di Legnago è interessata dalla riduzione del personale.",
+      "pass_condition": "l'unità di Legnago non compare fra le unità interessate dalla riduzione o dal computo dei lavoratori interessati.",
+      "fail_condition": "l'unità di Legnago è indicata fra quelle interessate dalla riduzione o inclusa nel computo dei lavoratori interessati.",
+      "indifferent": "la menzione dei dipendenti di Legnago nel computo dell'organico complessivo.",
+      "source": "All. 1, delibera; All. 2",
+      "severity": "media",
+      "raw_text": "B.32 non-issue: unità di Legnago                       [issue: N-01]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'unità produttiva di Legnago è interessata dalla riduzione del personale.\nPass se       l'unità di Legnago non compare fra le unità interessate dalla riduzione o dal computo dei lavoratori interessati.\nFail se       l'unità di Legnago è indicata fra quelle interessate dalla riduzione o inclusa nel computo dei lavoratori interessati.\nIndifferente  la menzione dei dipendenti di Legnago nel computo dell'organico complessivo.\n—— non passa al judge ——\nFonte         All. 1, delibera; All. 2     Gravità  media"
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'assenza della rappresentanza sindacale aziendale nell'unità di Sarcedo impedisce o ritarda l'avvio della procedura.",
+      "pass_condition": "non compare l'affermazione che occorre costituire una rappresentanza sindacale aziendale o attendere prima di avviare la procedura.",
+      "fail_condition": "il deliverable presenta quell'assenza come impedimento, come vizio o come adempimento preliminare da sanare.",
+      "indifferent": null,
+      "source": "art. 4, co. 2",
+      "severity": "media",
+      "raw_text": "B.33 non-issue: assenza di rappresentanza a Sarcedo    [issue: N-02]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'assenza della rappresentanza sindacale aziendale nell'unità di Sarcedo impedisce o ritarda l'avvio della procedura.\nPass se       non compare l'affermazione che occorre costituire una rappresentanza sindacale aziendale o attendere prima di avviare la procedura.\nFail se       il deliverable presenta quell'assenza come impedimento, come vizio o come adempimento preliminare da sanare.\n—— non passa al judge ——\nFonte         art. 4, co. 2     Gravità  media"
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'azienda deve dare una comunicazione almeno novanta giorni prima dell'avvio della procedura.",
+      "pass_condition": "il termine di novanta giorni non compare fra gli adempimenti dell'azienda.",
+      "fail_condition": "il deliverable pone a carico dell'azienda la comunicazione preventiva di novanta giorni o il piano prevista per i datori con almeno duecentocinquanta dipendenti.",
+      "indifferent": "la menzione di quella disciplina accompagnata dall'affermazione che non si applica.",
+      "source": "art. 1, co. 224 ss., L. 234/2021; All. 2",
+      "severity": "alta",
+      "raw_text": "B.34 non-issue: procedura delle grandi imprese         [issue: N-03]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'azienda deve dare una comunicazione almeno novanta giorni prima dell'avvio della procedura.\nPass se       il termine di novanta giorni non compare fra gli adempimenti dell'azienda.\nFail se       il deliverable pone a carico dell'azienda la comunicazione preventiva di novanta giorni o il piano prevista per i datori con almeno duecentocinquanta dipendenti.\nIndifferente  la menzione di quella disciplina accompagnata dall'affermazione che non si applica.\n—— non passa al judge ——\nFonte         art. 1, co. 224 ss., L. 234/2021; All. 2     Gravità  alta"
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il 1° marzo 2027 come termine da rispettare nella procedura.",
+      "pass_condition": "il 1° marzo 2027 non compare fra i termini della procedura.",
+      "fail_condition": "il 1° marzo 2027 è indicato come termine della procedura o come scadenza da cui dipendono gli adempimenti.",
+      "indifferent": "la menzione di quella data come data di avvio delle consegne del fornitore.",
+      "source": "All. 1, primo punto all'ordine del giorno",
+      "severity": "media",
+      "raw_text": "B.35 non-issue: avvio della fornitura esterna          [issue: N-04]  [tipo: assenza]\nVerifica      il deliverable non presenta il 1° marzo 2027 come termine da rispettare nella procedura.\nPass se       il 1° marzo 2027 non compare fra i termini della procedura.\nFail se       il 1° marzo 2027 è indicato come termine della procedura o come scadenza da cui dipendono gli adempimenti.\nIndifferente  la menzione di quella data come data di avvio delle consegne del fornitore.\n—— non passa al judge ——\nFonte         All. 1, primo punto all'ordine del giorno     Gravità  media"
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il lavoratore in aspettativa non retribuita è escluso dal computo dei lavoratori interessati.",
+      "pass_condition": "non compare l'esclusione di quel lavoratore dal computo.",
+      "fail_condition": "il deliverable esclude quel lavoratore dal computo dei lavoratori interessati.",
+      "indifferent": "la menzione dell'aspettativa fra le circostanze da considerare nella gestione della procedura.",
+      "source": "All. 2, matricola 0141",
+      "severity": "alta",
+      "raw_text": "B.36 non-issue: lavoratore in aspettativa              [issue: N-05]  [tipo: assenza]\nVerifica      il deliverable non afferma che il lavoratore in aspettativa non retribuita è escluso dal computo dei lavoratori interessati.\nPass se       non compare l'esclusione di quel lavoratore dal computo.\nFail se       il deliverable esclude quel lavoratore dal computo dei lavoratori interessati.\nIndifferente  la menzione dell'aspettativa fra le circostanze da considerare nella gestione della procedura.\n—— non passa al judge ——\nFonte         All. 2, matricola 0141     Gravità  alta"
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'affidamento della lavorazione al fornitore esterno costituisce un trasferimento di ramo d'azienda.",
+      "pass_condition": "non compare la qualificazione dell'operazione come trasferimento d'azienda o di ramo d'azienda.",
+      "fail_condition": "il deliverable qualifica l'operazione come trasferimento d'azienda o di ramo d'azienda, oppure pone a carico dell'azienda i relativi obblighi di informazione e consultazione.",
+      "indifferent": null,
+      "source": "All. 1 (nessun passaggio di impianti, contratti o personale; presse destinate alla dismissione)",
+      "severity": "alta",
+      "raw_text": "B.37 non-issue: esternalizzazione                      [issue: N-06]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'affidamento della lavorazione al fornitore esterno costituisce un trasferimento di ramo d'azienda.\nPass se       non compare la qualificazione dell'operazione come trasferimento d'azienda o di ramo d'azienda.\nFail se       il deliverable qualifica l'operazione come trasferimento d'azienda o di ramo d'azienda, oppure pone a carico dell'azienda i relativi obblighi di informazione e consultazione.\n—— non passa al judge ——\nFonte         All. 1 (nessun passaggio di impianti, contratti o personale; presse destinate alla dismissione)     Gravità  alta"
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la delibera del consiglio di amministrazione del 14 gennaio 2027 è viziata o inefficace.",
+      "pass_condition": "non compare l'affermazione che quella delibera è nulla, annullabile, viziata o inefficace.",
+      "fail_condition": "il deliverable qualifica quella delibera come viziata, nulla o inefficace.",
+      "indifferent": "il rilievo che l'indicazione di nove addetti in esubero va rettificata.",
+      "source": "All. 1",
+      "severity": "media",
+      "raw_text": "B.38 simmetria del controllo                           [issue: N-07]  [tipo: assenza]\nVerifica      il deliverable non afferma che la delibera del consiglio di amministrazione del 14 gennaio 2027 è viziata o inefficace.\nPass se       non compare l'affermazione che quella delibera è nulla, annullabile, viziata o inefficace.\nFail se       il deliverable qualifica quella delibera come viziata, nulla o inefficace.\nIndifferente  il rilievo che l'indicazione di nove addetti in esubero va rettificata.\n—— non passa al judge ——\nFonte         All. 1     Gravità  media"
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'accordo sindacale sarà raggiunto.",
+      "pass_condition": "non compare l'affermazione che l'accordo sarà raggiunto o che la fase sindacale si chiuderà con un accordo.",
+      "fail_condition": "il deliverable dà per raggiunto l'accordo sindacale.",
+      "indifferent": "la costruzione del calendario in due rami, con accordo e senza accordo.",
+      "source": "data di riferimento del prompt",
+      "severity": "alta",
+      "raw_text": "B.39 divieto di presunzione dell'esito, accordo        [issue: N-08]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'accordo sindacale sarà raggiunto.\nPass se       non compare l'affermazione che l'accordo sarà raggiunto o che la fase sindacale si chiuderà con un accordo.\nFail se       il deliverable dà per raggiunto l'accordo sindacale.\nIndifferente  la costruzione del calendario in due rami, con accordo e senza accordo.\n—— non passa al judge ——\nFonte         data di riferimento del prompt     Gravità  alta"
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'accordo sindacale non sarà raggiunto.",
+      "pass_condition": "non compare l'affermazione che l'accordo non sarà raggiunto o che la fase sindacale si chiuderà senza accordo.",
+      "fail_condition": "il deliverable dà per mancato l'accordo sindacale.",
+      "indifferent": "la costruzione del calendario in due rami, con accordo e senza accordo.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.40 divieto di presunzione dell'esito, mancato accordo [issue: N-08]  [tipo: assenza]\nVerifica      il deliverable non afferma che l'accordo sindacale non sarà raggiunto.\nPass se       non compare l'affermazione che l'accordo non sarà raggiunto o che la fase sindacale si chiuderà senza accordo.\nFail se       il deliverable dà per mancato l'accordo sindacale.\nIndifferente  la costruzione del calendario in due rami, con accordo e senza accordo.\n—— non passa al judge ——\nFonte         data di riferimento del prompt     Gravità  alta"
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 22 gennaio 2027 come data di decorrenza dei termini della procedura.",
+      "pass_condition": "compare il 22 gennaio 2027 come data dalla quale i termini decorrono.",
+      "fail_condition": "compare una data di decorrenza diversa, oppure la decorrenza non compare.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "C.1  decorrenza                                        [issue: C-01]  [tipo: valore]\nVerifica      il deliverable indica il 22 gennaio 2027 come data di decorrenza dei termini della procedura.\nPass se       compare il 22 gennaio 2027 come data dalla quale i termini decorrono.\nFail se       compare una data di decorrenza diversa, oppure la decorrenza non compare.\n—— non passa al judge —— verifica meccanica\nFonte         prompt     Gravità  alta"
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il giorno del ricevimento della comunicazione non si computa nel termine.",
+      "pass_condition": "compare l'affermazione che il computo inizia dal giorno successivo al ricevimento.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "disciplina generale del computo dei termini",
+      "severity": "media",
+      "raw_text": "C.2  giorno iniziale non computato                     [issue: C-01]  [tipo: presenza]\nVerifica      il deliverable afferma che il giorno del ricevimento della comunicazione non si computa nel termine.\nPass se       compare l'affermazione che il computo inizia dal giorno successivo al ricevimento.\nFail se       l'affermazione non compare.\n—— non passa al judge ——\nFonte         disciplina generale del computo dei termini     Gravità  media"
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 29 gennaio 2027 come termine per la richiesta di esame congiunto.",
+      "pass_condition": "compare il 29 gennaio 2027 riferito a quel termine.",
+      "fail_condition": "compare una data diversa, oppure la data non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 5; sette giorni dal 22 gennaio 2027",
+      "severity": "alta",
+      "raw_text": "C.3  termine per la richiesta di esame congiunto       [issue: C-02]  [tipo: valore]\nVerifica      il deliverable indica il 29 gennaio 2027 come termine per la richiesta di esame congiunto.\nPass se       compare il 29 gennaio 2027 riferito a quel termine.\nFail se       compare una data diversa, oppure la data non compare.\n—— non passa al judge —— verifica meccanica\nFonte         art. 4, co. 5; sette giorni dal 22 gennaio 2027     Gravità  alta"
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica l'8 marzo 2027 come termine ultimo di esaurimento della fase sindacale.",
+      "pass_condition": "compare l'8 marzo 2027 riferito a quel termine.",
+      "fail_condition": "compare una data diversa, oppure la data non compare.",
+      "indifferent": null,
+      "source": "art. 4, co. 6 e 8; quarantacinque giorni dal 22 gennaio 2027",
+      "severity": "alta",
+      "raw_text": "C.4  termine massimo della fase sindacale              [issue: C-03]  [tipo: valore]\nVerifica      il deliverable indica l'8 marzo 2027 come termine ultimo di esaurimento della fase sindacale.\nPass se       compare l'8 marzo 2027 riferito a quel termine.\nFail se       compare una data diversa, oppure la data non compare.\n—— non passa al judge —— verifica meccanica\nFonte         art. 4, co. 6 e 8; quarantacinque giorni dal 22 gennaio 2027     Gravità  alta"
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 7 aprile 2027 come data entro cui si esaurisce la fase amministrativa nell'ipotesi in cui la comunicazione sull'esito negativo sia ricevuta dall'ufficio l'8 marzo 2027.",
+      "pass_condition": "compare il 7 aprile 2027 riferito a quella ipotesi.",
+      "fail_condition": "compare una data diversa, oppure la data non compare.",
+      "indifferent": "l'indicazione del primo giorno utile per l'intimazione dei recessi in quella ipotesi.",
+      "source": "art. 4, co. 7; trenta giorni dall'8 marzo 2027",
+      "severity": "alta",
+      "raw_text": "C.5  chiusura nell'ipotesi di mancato accordo          [issue: C-04]  [tipo: valore]\nVerifica      il deliverable indica il 7 aprile 2027 come data entro cui si esaurisce la fase amministrativa nell'ipotesi in cui la comunicazione sull'esito negativo sia ricevuta dall'ufficio l'8 marzo 2027.\nPass se       compare il 7 aprile 2027 riferito a quella ipotesi.\nFail se       compare una data diversa, oppure la data non compare.\nIndifferente  l'indicazione del primo giorno utile per l'intimazione dei recessi in quella ipotesi.\n—— non passa al judge —— verifica meccanica\nFonte         art. 4, co. 7; trenta giorni dall'8 marzo 2027     Gravità  alta"
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica il 13 febbraio 2027 come termine di esaurimento della fase sindacale.",
+      "pass_condition": "il 13 febbraio 2027 non compare come termine della fase sindacale.",
+      "fail_condition": "il 13 febbraio 2027 è indicato come termine della fase sindacale.",
+      "indifferent": null,
+      "source": "derivazione da termini dimezzati",
+      "severity": "alta",
+      "raw_text": "C.6  derivazione errata, termini dimezzati (22 giorni) [issue: C-05]  [tipo: assenza]\nVerifica      il deliverable non indica il 13 febbraio 2027 come termine di esaurimento della fase sindacale.\nPass se       il 13 febbraio 2027 non compare come termine della fase sindacale.\nFail se       il 13 febbraio 2027 è indicato come termine della fase sindacale.\n—— non passa al judge ——\nFonte         derivazione da termini dimezzati     Gravità  alta"
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica il 14 febbraio 2027 come termine di esaurimento della fase sindacale.",
+      "pass_condition": "il 14 febbraio 2027 non compare come termine della fase sindacale.",
+      "fail_condition": "il 14 febbraio 2027 è indicato come termine della fase sindacale.",
+      "indifferent": null,
+      "source": "derivazione da termini dimezzati con arrotondamento",
+      "severity": "alta",
+      "raw_text": "C.7  derivazione errata, termini dimezzati (23 giorni) [issue: C-05]  [tipo: assenza]\nVerifica      il deliverable non indica il 14 febbraio 2027 come termine di esaurimento della fase sindacale.\nPass se       il 14 febbraio 2027 non compare come termine della fase sindacale.\nFail se       il 14 febbraio 2027 è indicato come termine della fase sindacale.\n—— non passa al judge ——\nFonte         derivazione da termini dimezzati con arrotondamento     Gravità  alta"
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica il 7 marzo 2027 come termine di esaurimento della fase sindacale.",
+      "pass_condition": "il 7 marzo 2027 non compare come termine della fase sindacale.",
+      "fail_condition": "il 7 marzo 2027 è indicato come termine della fase sindacale.",
+      "indifferent": null,
+      "source": "computo che include il giorno del ricevimento",
+      "severity": "media",
+      "raw_text": "C.8  derivazione errata, giorno iniziale computato     [issue: C-05]  [tipo: assenza]\nVerifica      il deliverable non indica il 7 marzo 2027 come termine di esaurimento della fase sindacale.\nPass se       il 7 marzo 2027 non compare come termine della fase sindacale.\nFail se       il 7 marzo 2027 è indicato come termine della fase sindacale.\n—— non passa al judge ——\nFonte         computo che include il giorno del ricevimento     Gravità  media"
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non presenta l'8 marzo 2027 come data a partire dalla quale i recessi possono essere intimati.",
+      "pass_condition": "l'8 marzo 2027 non compare come data di inizio della facoltà di intimare i recessi.",
+      "fail_condition": "l'8 marzo 2027 è presentato come data a partire dalla quale i recessi possono essere intimati.",
+      "indifferent": "l'indicazione dell'8 marzo 2027 come termine ultimo della fase sindacale.",
+      "source": "art. 4, co. 6 e 9",
+      "severity": "alta",
+      "raw_text": "C.9  termine massimo non confuso con attesa minima     [issue: C-05]  [tipo: assenza]\nVerifica      il deliverable non presenta l'8 marzo 2027 come data a partire dalla quale i recessi possono essere intimati.\nPass se       l'8 marzo 2027 non compare come data di inizio della facoltà di intimare i recessi.\nFail se       l'8 marzo 2027 è presentato come data a partire dalla quale i recessi possono essere intimati.\nIndifferente  l'indicazione dell'8 marzo 2027 come termine ultimo della fase sindacale.\n—— non passa al judge ——\nFonte         art. 4, co. 6 e 9     Gravità  alta"
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica una data di calendario come data della comunicazione finale dell'elenco dei lavoratori licenziati.",
+      "pass_condition": "nessuna data di calendario è presentata come data della comunicazione finale.",
+      "fail_condition": "il deliverable indica una data di calendario per la comunicazione finale.",
+      "indifferent": "l'indicazione del termine di sette giorni decorrente dalla comunicazione dei recessi.",
+      "source": "art. 4, co. 9",
+      "severity": "media",
+      "raw_text": "C.10 date non determinabili ex ante                    [issue: C-06]  [tipo: assenza]\nVerifica      il deliverable non indica una data di calendario come data della comunicazione finale dell'elenco dei lavoratori licenziati.\nPass se       nessuna data di calendario è presentata come data della comunicazione finale.\nFail se       il deliverable indica una data di calendario per la comunicazione finale.\nIndifferente  l'indicazione del termine di sette giorni decorrente dalla comunicazione dei recessi.\n—— non passa al judge ——\nFonte         art. 4, co. 9     Gravità  media"
+    }
+  ]
+}

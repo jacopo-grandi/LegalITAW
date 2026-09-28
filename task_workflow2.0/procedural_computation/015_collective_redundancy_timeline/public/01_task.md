@@ -1,0 +1,6 @@
+Sono la direttrice del personale di Torbolina Meccanica S.p.A. Il consiglio di amministrazione ha deliberato la chiusura del reparto stampaggio degli stabilimenti di Thiene e di Sarcedo e mi ha dato mandato di avviare gli adempimenti verso i sindacati e gli uffici: ti allego il verbale della seduta e l'elenco del personale in forza che mi ha trasmesso il consulente del lavoro. Oggi è lunedì 18 gennaio 2027, non ho ancora comunicato nulla a nessuno e la comunicazione alle organizzazioni sindacali partirà via PEC venerdì 22 gennaio 2027.
+Costruiscimi il calendario della procedura a partire da quella trasmissione: ogni passaggio con la sua data o il suo termine, chi deve attivarsi e che cosa dipende da che cosa. Per ogni data indicami il documento da cui la ricavi e la norma su cui ti basi, con articolo e comma.
+A partire dall'elenco del personale, verifica anche quanti sono davvero gli addetti interessati dalla riduzione, mostra il conteggio e segnala se il numero indicato nel verbale del consiglio è corretto.
+Aggiungimi la checklist degli adempimenti che restano a carico dell'azienda, con il termine di ciascuno e il destinatario.
+Dimmi anche entro quando si chiude la procedura se l'accordo non si raggiunge e i termini si consumano per intero.
+Infine valuta se il calendario operativo ipotizzato nel verbale del consiglio è praticabile e a quali condizioni.

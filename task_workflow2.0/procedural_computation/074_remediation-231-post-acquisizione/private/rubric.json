@@ -1,0 +1,1393 @@
+{
+  "task_id": "WF2-074",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 69,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "la consegna usa i file remediation_timeline.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file remediation_timeline.md.\nPASS se: i nomi dei file coincidono con remediation_timeline.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con remediation_timeline.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "la parte testuale non supera 3.000 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 3.000 parole.\nPASS se: il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 3.000; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite.\nPASS se: afferma: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite; conclude: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite; conclude: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: elenco destinatari del legal hold.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: elenco destinatari del legal hold.\nPASS se: cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: una fonte centrale resta esposta a cancellazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: una fonte centrale resta esposta a cancellazione.\nPASS se: espone l'effetto: una fonte centrale resta esposta a cancellazione; indica come conseguenza: una fonte centrale resta esposta a cancellazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: una fonte centrale resta esposta a cancellazione; indica come conseguenza: una fonte centrale resta esposta a cancellazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: estendere immediatamente il hold e bloccare l'autodeletion.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: estendere immediatamente il hold e bloccare l'autodeletion.\nPASS se: afferma: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite; conclude: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite; conclude: il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'immagine del telefono.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'immagine del telefono.\nPASS se: espone l'effetto: una fonte centrale resta esposta a cancellazione; indica come conseguenza: una fonte centrale resta esposta a cancellazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: una fonte centrale resta esposta a cancellazione; indica come conseguenza: una fonte centrale resta esposta a cancellazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: attendere la conclusione delle interviste.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: attendere la conclusione delle interviste.\nPASS se: indica l'azione: estendere immediatamente il hold e bloccare l'autodeletion; propone: estendere immediatamente il hold e bloccare l'autodeletion\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: estendere immediatamente il hold e bloccare l'autodeletion; propone: estendere immediatamente il hold e bloccare l'autodeletion",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: legal hold; art. 6 D.Lgs. 231/2001.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: legal hold; art. 6 D.Lgs. 231/2001.\nPASS se: cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; legal hold; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'indagine è affidata al responsabile che approvava gli intermediari.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'indagine è affidata al responsabile che approvava gli intermediari.\nPASS se: afferma: l'indagine è affidata al responsabile che approvava gli intermediari; conclude: l'indagine è affidata al responsabile che approvava gli intermediari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: l'indagine è affidata al responsabile che approvava gli intermediari; conclude: l'indagine è affidata al responsabile che approvava gli intermediari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: delibera del 6 febbraio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: delibera del 6 febbraio.\nPASS se: cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il mandato presenta un conflitto operativo.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il mandato presenta un conflitto operativo.\nPASS se: espone l'effetto: il mandato presenta un conflitto operativo; indica come conseguenza: il mandato presenta un conflitto operativo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il mandato presenta un conflitto operativo; indica come conseguenza: il mandato presenta un conflitto operativo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: rimettere supervisione al comitato indipendente.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: rimettere supervisione al comitato indipendente.\nPASS se: afferma: l'indagine è affidata al responsabile che approvava gli intermediari; conclude: l'indagine è affidata al responsabile che approvava gli intermediari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: l'indagine è affidata al responsabile che approvava gli intermediari; conclude: l'indagine è affidata al responsabile che approvava gli intermediari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca una disclosure del conflitto.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca una disclosure del conflitto.\nPASS se: espone l'effetto: il mandato presenta un conflitto operativo; indica come conseguenza: il mandato presenta un conflitto operativo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il mandato presenta un conflitto operativo; indica come conseguenza: il mandato presenta un conflitto operativo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: lasciare invariata la catena di riporto.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: lasciare invariata la catena di riporto.\nPASS se: indica l'azione: rimettere supervisione al comitato indipendente; propone: rimettere supervisione al comitato indipendente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: rimettere supervisione al comitato indipendente; propone: rimettere supervisione al comitato indipendente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: delibera; art. 6 D.Lgs. 231/2001.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: delibera; art. 6 D.Lgs. 231/2001.\nPASS se: cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; delibera; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza; indica come riscontro 01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili.\nPASS se: afferma: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili; conclude: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili; conclude: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale OdV dell'8 febbraio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale OdV dell'8 febbraio.\nPASS se: cita 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la vigilanza non dispone delle evidenze sottostanti.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la vigilanza non dispone delle evidenze sottostanti.\nPASS se: espone l'effetto: la vigilanza non dispone delle evidenze sottostanti; indica come conseguenza: la vigilanza non dispone delle evidenze sottostanti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la vigilanza non dispone delle evidenze sottostanti; indica come conseguenza: la vigilanza non dispone delle evidenze sottostanti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: aprire accesso controllato al fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: aprire accesso controllato al fascicolo.\nPASS se: afferma: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili; conclude: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili; conclude: l'OdV ha ricevuto solo una sintesi priva degli allegati contabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il protocollo dei flussi.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il protocollo dei flussi.\nPASS se: espone l'effetto: la vigilanza non dispone delle evidenze sottostanti; indica come conseguenza: la vigilanza non dispone delle evidenze sottostanti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la vigilanza non dispone delle evidenze sottostanti; indica come conseguenza: la vigilanza non dispone delle evidenze sottostanti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: rinviare gli allegati al report finale.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: rinviare gli allegati al report finale.\nPASS se: indica l'azione: aprire accesso controllato al fascicolo; propone: aprire accesso controllato al fascicolo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: aprire accesso controllato al fascicolo; propone: aprire accesso controllato al fascicolo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable usa la fonte indicata: verbale OdV; art. 6 D.Lgs. 231/2001.",
+      "match_criteria": "Oggetto del criterio: il deliverable usa la fonte indicata: verbale OdV; art. 6 D.Lgs. 231/2001.\nPASS se: cita 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; verbale OdV; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la mappa rischi della target non considera intermediari commerciali esteri.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la mappa rischi della target non considera intermediari commerciali esteri.\nPASS se: afferma: la mappa rischi della target non considera intermediari commerciali esteri; conclude: la mappa rischi della target non considera intermediari commerciali esteri\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: la mappa rischi della target non considera intermediari commerciali esteri; conclude: la mappa rischi della target non considera intermediari commerciali esteri",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: risk assessment 2027.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: risk assessment 2027.\nPASS se: cita 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; indica come riscontro 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il modello non copre il processo da cui nasce la segnalazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il modello non copre il processo da cui nasce la segnalazione.\nPASS se: espone l'effetto: il modello non copre il processo da cui nasce la segnalazione; indica come conseguenza: il modello non copre il processo da cui nasce la segnalazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il modello non copre il processo da cui nasce la segnalazione; indica come conseguenza: il modello non copre il processo da cui nasce la segnalazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: eseguire gap analysis per processo e paese.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: eseguire gap analysis per processo e paese.\nPASS se: afferma: la mappa rischi della target non considera intermediari commerciali esteri; conclude: la mappa rischi della target non considera intermediari commerciali esteri\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: la mappa rischi della target non considera intermediari commerciali esteri; conclude: la mappa rischi della target non considera intermediari commerciali esteri",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il censimento degli agenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il censimento degli agenti.\nPASS se: espone l'effetto: il modello non copre il processo da cui nasce la segnalazione; indica come conseguenza: il modello non copre il processo da cui nasce la segnalazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il modello non copre il processo da cui nasce la segnalazione; indica come conseguenza: il modello non copre il processo da cui nasce la segnalazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: aggiornare solo l'organigramma.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: aggiornare solo l'organigramma.\nPASS se: indica l'azione: eseguire gap analysis per processo e paese; propone: eseguire gap analysis per processo e paese\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment; risk assessment; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: eseguire gap analysis per processo e paese; propone: eseguire gap analysis per processo e paese",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per poteri e spesa.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per poteri e spesa.\nPASS se: compare «180.000 euro»; compare «euro 180.000»\nFAIL se: non compare ne «180.000 euro» ne «euro 180.000» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "compare «180.000 euro»; compare «euro 180.000»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: matrice procure.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: matrice procure.\nPASS se: cita 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; indica come riscontro 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; indica come riscontro 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il controllo autorizzativo è disallineato dal rischio.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il controllo autorizzativo è disallineato dal rischio.\nPASS se: espone l'effetto: il controllo autorizzativo è disallineato dal rischio; indica come conseguenza: il controllo autorizzativo è disallineato dal rischio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il controllo autorizzativo è disallineato dal rischio; indica come conseguenza: il controllo autorizzativo è disallineato dal rischio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per poteri e spesa.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per poteri e spesa.\nPASS se: afferma: le procure consentono pagamenti a consulenti senza doppia firma fino a 180.000 euro; conclude: le procure consentono pagamenti a consulenti senza doppia firma fino a 180.000 euro\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: le procure consentono pagamenti a consulenti senza doppia firma fino a 180.000 euro; conclude: le procure consentono pagamenti a consulenti senza doppia firma fino a 180.000 euro",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'elenco dei delegati attivi.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'elenco dei delegati attivi.\nPASS se: espone l'effetto: il controllo autorizzativo è disallineato dal rischio; indica come conseguenza: il controllo autorizzativo è disallineato dal rischio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: il controllo autorizzativo è disallineato dal rischio; indica come conseguenza: il controllo autorizzativo è disallineato dal rischio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: lasciare la soglia invariata.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: lasciare la soglia invariata.\nPASS se: indica l'azione: introdurre doppia approvazione e verifica beneficiario; propone: introdurre doppia approvazione e verifica beneficiario\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa; matrice procure; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: introdurre doppia approvazione e verifica beneficiario; propone: introdurre doppia approvazione e verifica beneficiario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: due agenti non hanno due diligence né clausola di audit.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: due agenti non hanno due diligence né clausola di audit.\nPASS se: afferma: due agenti non hanno due diligence né clausola di audit; conclude: due agenti non hanno due diligence né clausola di audit\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "afferma: due agenti non hanno due diligence né clausola di audit; conclude: due agenti non hanno due diligence né clausola di audit",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: registro intermediari.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: registro intermediari.\nPASS se: cita 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; indica come riscontro 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "cita 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; indica come riscontro 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate.\nPASS se: espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate; indica come conseguenza: il rapporto va sospeso o sottoposto a misure rafforzate\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate; indica come conseguenza: il rapporto va sospeso o sottoposto a misure rafforzate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: bloccare nuovi pagamenti e completare la verifica.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: bloccare nuovi pagamenti e completare la verifica.\nPASS se: afferma: due agenti non hanno due diligence né clausola di audit; conclude: due agenti non hanno due diligence né clausola di audit\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "afferma: due agenti non hanno due diligence né clausola di audit; conclude: due agenti non hanno due diligence né clausola di audit",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano titolari effettivi e referenze.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano titolari effettivi e referenze.\nPASS se: espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate; indica come conseguenza: il rapporto va sospeso o sottoposto a misure rafforzate\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "espone l'effetto: il rapporto va sospeso o sottoposto a misure rafforzate; indica come conseguenza: il rapporto va sospeso o sottoposto a misure rafforzate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: rinnovare automaticamente gli incarichi.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: rinnovare automaticamente gli incarichi.\nPASS se: indica l'azione: bloccare nuovi pagamenti e completare la verifica; propone: bloccare nuovi pagamenti e completare la verifica\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti; registro; modello 231",
+      "pass_condition": "indica l'azione: bloccare nuovi pagamenti e completare la verifica; propone: bloccare nuovi pagamenti e completare la verifica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il regolamento della target non sanziona l'elusione dei controlli 231.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il regolamento della target non sanziona l'elusione dei controlli 231.\nPASS se: afferma: il regolamento della target non sanziona l'elusione dei controlli 231; conclude: il regolamento della target non sanziona l'elusione dei controlli 231\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il regolamento della target non sanziona l'elusione dei controlli 231; conclude: il regolamento della target non sanziona l'elusione dei controlli 231",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: regolamento personale.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: regolamento personale.\nPASS se: cita 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; indica come riscontro 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "cita 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; indica come riscontro 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa.\nPASS se: espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa; indica come conseguenza: l'aggiornamento del modello richiede una leva disciplinare espressa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa; indica come conseguenza: l'aggiornamento del modello richiede una leva disciplinare espressa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: coordinare modifica, informativa e formazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: coordinare modifica, informativa e formazione.\nPASS se: afferma: il regolamento della target non sanziona l'elusione dei controlli 231; conclude: il regolamento della target non sanziona l'elusione dei controlli 231\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il regolamento della target non sanziona l'elusione dei controlli 231; conclude: il regolamento della target non sanziona l'elusione dei controlli 231",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il testo del CCNL applicato.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il testo del CCNL applicato.\nPASS se: espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa; indica come conseguenza: l'aggiornamento del modello richiede una leva disciplinare espressa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: l'aggiornamento del modello richiede una leva disciplinare espressa; indica come conseguenza: l'aggiornamento del modello richiede una leva disciplinare espressa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: limitarsi a una comunicazione etica.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: limitarsi a una comunicazione etica.\nPASS se: indica l'azione: coordinare modifica, informativa e formazione; propone: coordinare modifica, informativa e formazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare; art. 6 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: coordinare modifica, informativa e formazione; propone: coordinare modifica, informativa e formazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per formazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per formazione.\nPASS se: compare «41 per cento»; compare «41%»\nFAIL se: non compare ne «41 per cento» ne «41%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "compare «41 per cento»; compare «41%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: report LMS del 28 febbraio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: report LMS del 28 febbraio.\nPASS se: cita 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; indica come riscontro 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "cita 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; indica come riscontro 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la misura non risulta attuata per il gruppo esposto.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la misura non risulta attuata per il gruppo esposto.\nPASS se: espone l'effetto: la misura non risulta attuata per il gruppo esposto; indica come conseguenza: la misura non risulta attuata per il gruppo esposto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la misura non risulta attuata per il gruppo esposto; indica come conseguenza: la misura non risulta attuata per il gruppo esposto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per formazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per formazione.\nPASS se: afferma: il 41 per cento della forza vendita non ha completato il corso; conclude: il 41 per cento della forza vendita non ha completato il corso\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il 41 per cento della forza vendita non ha completato il corso; conclude: il 41 per cento della forza vendita non ha completato il corso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: mancano dati sui neoassunti.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: mancano dati sui neoassunti.\nPASS se: espone l'effetto: la misura non risulta attuata per il gruppo esposto; indica come conseguenza: la misura non risulta attuata per il gruppo esposto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la misura non risulta attuata per il gruppo esposto; indica come conseguenza: la misura non risulta attuata per il gruppo esposto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: chiudere l'azione alla pubblicazione del corso.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: chiudere l'azione alla pubblicazione del corso.\nPASS se: indica l'azione: assegnare recupero e test con escalation; propone: assegnare recupero e test con escalation\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione; report LMS; art. 7 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: assegnare recupero e test con escalation; propone: assegnare recupero e test con escalation",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il piano non prevede ristoro del danno né messa a disposizione del profitto.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il piano non prevede ristoro del danno né messa a disposizione del profitto.\nPASS se: afferma: il piano non prevede ristoro del danno né messa a disposizione del profitto; conclude: il piano non prevede ristoro del danno né messa a disposizione del profitto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il piano non prevede ristoro del danno né messa a disposizione del profitto; conclude: il piano non prevede ristoro del danno né messa a disposizione del profitto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza remediation del 7 marzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza remediation del 7 marzo.\nPASS se: cita 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; indica come riscontro 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "cita 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; indica come riscontro 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie.\nPASS se: espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie; indica come conseguenza: mancano due elementi da valutare ai fini delle condizioni riparatorie\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie; indica come conseguenza: mancano due elementi da valutare ai fini delle condizioni riparatorie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: quantificare danno, restituzioni e profitto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: quantificare danno, restituzioni e profitto.\nPASS se: afferma: il piano non prevede ristoro del danno né messa a disposizione del profitto; conclude: il piano non prevede ristoro del danno né messa a disposizione del profitto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "afferma: il piano non prevede ristoro del danno né messa a disposizione del profitto; conclude: il piano non prevede ristoro del danno né messa a disposizione del profitto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la stima finanziaria.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la stima finanziaria.\nPASS se: espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie; indica come conseguenza: mancano due elementi da valutare ai fini delle condizioni riparatorie\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: mancano due elementi da valutare ai fini delle condizioni riparatorie; indica come conseguenza: mancano due elementi da valutare ai fini delle condizioni riparatorie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: confondere l'aggiornamento del modello con tutte le condotte riparatorie.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: confondere l'aggiornamento del modello con tutte le condotte riparatorie.\nPASS se: indica l'azione: quantificare danno, restituzioni e profitto; propone: quantificare danno, restituzioni e profitto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione; art. 17 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: quantificare danno, restituzioni e profitto; propone: quantificare danno, restituzioni e profitto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la chiusura è subordinata a test dei controlli e report al consiglio.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la chiusura è subordinata a test dei controlli e report al consiglio.\nPASS se: afferma: la chiusura è subordinata a test dei controlli e report al consiglio; conclude: la chiusura è subordinata a test dei controlli e report al consiglio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "afferma: la chiusura è subordinata a test dei controlli e report al consiglio; conclude: la chiusura è subordinata a test dei controlli e report al consiglio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: mandato del comitato controllo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: mandato del comitato controllo.\nPASS se: cita 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; indica come riscontro 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "cita 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; indica come riscontro 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la sola approvazione documentale non chiude la remediation.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la sola approvazione documentale non chiude la remediation.\nPASS se: espone l'effetto: la sola approvazione documentale non chiude la remediation; indica come conseguenza: la sola approvazione documentale non chiude la remediation\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la sola approvazione documentale non chiude la remediation; indica come conseguenza: la sola approvazione documentale non chiude la remediation",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.61",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable indica l'azione: eseguire test a 30 e 90 giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: eseguire test a 30 e 90 giorni.\nPASS se: afferma: la chiusura è subordinata a test dei controlli e report al consiglio; conclude: la chiusura è subordinata a test dei controlli e report al consiglio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "afferma: la chiusura è subordinata a test dei controlli e report al consiglio; conclude: la chiusura è subordinata a test dei controlli e report al consiglio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.62",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il proprietario di due controlli.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il proprietario di due controlli.\nPASS se: espone l'effetto: la sola approvazione documentale non chiude la remediation; indica come conseguenza: la sola approvazione documentale non chiude la remediation\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "espone l'effetto: la sola approvazione documentale non chiude la remediation; indica come conseguenza: la sola approvazione documentale non chiude la remediation",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.63",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "il deliverable esclude la conclusione bersaglio: dichiarare chiuso il piano alla delibera.",
+      "match_criteria": "Oggetto del criterio: il deliverable esclude la conclusione bersaglio: dichiarare chiuso il piano alla delibera.\nPASS se: indica l'azione: eseguire test a 30 e 90 giorni; propone: eseguire test a 30 e 90 giorni\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura; mandato; artt. 6 e 7 D.Lgs. 231/2001",
+      "pass_condition": "indica l'azione: eseguire test a 30 e 90 giorni; propone: eseguire test a 30 e 90 giorni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «brand policy»: Il cambio di intestazione della policy non prova l'attuazione dei controlli.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «brand policy»: Il cambio di intestazione della policy non prova l'attuazione dei controlli.\nPASS se: non qualifica come criticita brand policy; esclude espressamente il falso positivo brand policy\nFAIL se: compare la conclusione vietata «brand policy costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita brand policy; esclude espressamente il falso positivo brand policy",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «corso pubblicato»: La pubblicazione del corso non equivale al completamento da parte degli addetti.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «corso pubblicato»: La pubblicazione del corso non equivale al completamento da parte degli addetti.\nPASS se: non qualifica come criticita corso pubblicato; esclude espressamente il falso positivo corso pubblicato\nFAIL se: compare la conclusione vietata «corso pubblicato costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita corso pubblicato; esclude espressamente il falso positivo corso pubblicato",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "remediation_timeline.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «verbale senza allegati»: La ricezione di una sintesi non dimostra che l'OdV abbia avuto accesso agli allegati.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «verbale senza allegati»: La ricezione di una sintesi non dimostra che l'OdV abbia avuto accesso agli allegati.\nPASS se: non qualifica come criticita verbale senza allegati; esclude espressamente il falso positivo verbale senza allegati\nFAIL se: compare la conclusione vietata «verbale senza allegati costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita verbale senza allegati; esclude espressamente il falso positivo verbale senza allegati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

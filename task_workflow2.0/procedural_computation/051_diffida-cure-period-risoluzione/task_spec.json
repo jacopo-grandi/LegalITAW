@@ -1,0 +1,117 @@
+{
+  "task_id": "WF2-051",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Diffida, termine di rimedio e risoluzione della fornitura",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2031-03-14",
+  "workflow_family": "procedural_computation",
+  "subtask": "deadline_chain",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "small",
+  "legal_area": [
+    "Commercial Contracts",
+    "C. Procedural computation",
+    "Contrattualistica"
+  ],
+  "document_type": "small",
+  "difficulty": "low",
+  "estimated_completion_minutes": 60,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "short",
+    "estimated_minutes": 60,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: contract_deadline_audit.md.\n\n# WF2-051 - Struttura del deliverable\n\nProdurre `contract_deadline_audit.md`. Limite complessivo: 1800 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Esito alla data di riferimento\nStato del contratto al 14 marzo 2031 e ragione dello stato, con rinvio ai documenti.\n\n### 2. Cronologia verificata\nTabella dei fatti con data, oggetto e documento di provenienza; per ogni scadenza il calcolo seguito e l'atto da cui decorre.\n\n### 3. Confronto fra i due termini\nTrattazione separata delle due sequenze aperte dalla contestazione e degli effetti che il decorso di ciascuna può produrre.\n\n### 4. Effetti e restituzioni\nSospensione del corrispettivo, sorte dell'acconto e presupposti delle domande restitutorie.\n\n### 5. Azioni e dati mancanti\nAzioni da compiere con il soggetto onerato; dati che il fascicolo non contiene e documenti necessari per colmarli; elementi che non costituiscono profili di rischio.\n\nOgni conclusione distingue il fatto documentato, l'inferenza, la lacuna e l'azione. Le fonti normative sono soltanto quelle del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_contratto_fornitura_linea_C17.pdf",
+    "public/documents/02_verbale_collaudo_24_febbraio_2031.pdf",
+    "public/documents/03_pec_contestazione_3_marzo_2031.pdf"
+  ],
+  "expected_deliverable": "contract_deadline_audit.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

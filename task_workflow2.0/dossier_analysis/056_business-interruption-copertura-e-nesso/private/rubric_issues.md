@@ -1,0 +1,75 @@
+# WF2-056 - Criteri di valutazione (rubrica in prosa)
+
+Lato assistito: Cartiera Valmoranda S.p.A., contraente e assicurato.
+Data di riferimento: 2031-09-30.
+Stato del fascicolo: sinistro dell'11 gennaio 2031 denunciato il 14 gennaio 2031; ripresa parziale dal 24 marzo 2031 e ripresa a regime dal 18 agosto 2031; periodo di indennizzo ancora aperto; perizia di parte del 24 settembre 2031; lettera di riserva dell'assicuratore del 26 settembre 2031; nessun acconto corrisposto; dati gestionali da settembre 2031 non definitivi.
+
+## Issue di merito
+
+**I-01. operativita della garanzia dei danni indiretti** [gravita: alta] - la garanzia della sezione B opera perché il danno materiale è indennizzabile ai sensi della sezione A, indipendentemente dall'importo liquidato: la macchina continua è ricompresa nella partita macchinario, attrezzature e impianti (clausola 1.2 delle condizioni particolari; partite della sezione A nella scheda di polizza; rapporto dei vigili del fuoco sull'estensione del danno). Non deve affermare: che l'operatività dipenda dall'elencazione specifica del bene nella scheda o dall'importo liquidato in sezione A
+
+**I-02. tesi dell'assicuratore sull'elencazione del bene** [gravita: alta] - la tesi del punto 1 della lettera di riserva non regge: la scheda assicura la partita macchinario, attrezzature e impianti e non elenca i singoli beni (punto 1 della lettera di riserva; sezione A della scheda di polizza). Non deve affermare: che la tesi dell'assicuratore sia fondata
+
+**I-03. tesi dell'assicuratore sul provvedimento dell'autorita** [gravita: alta] - la tesi del punto 7 della lettera di riserva non regge: l'interdizione ha riguardato l'area del reparto e non l'attività dello stabilimento, e l'esclusione riguarda i provvedimenti non connessi al danno materiale (punto 6 del rapporto dei vigili del fuoco; clausola 12.1, lettera a), delle condizioni particolari). Non deve affermare: che l'interruzione sia conseguenza di un provvedimento dell'autorità e ricada nell'esclusione
+
+**I-04. decorrenza e scadenza del periodo di indennizzo** [gravita: alta] - il periodo di indennizzo decorre dal giorno del sinistro, l'11 gennaio 2031, e scade l'11 gennaio 2032 (clausola 3.1 delle condizioni particolari; periodo indicato nella scheda di polizza). Non deve affermare: che il periodo decorra dalla denuncia o dalla data di ripresa parziale
+
+**I-05. la scadenza del periodo di indennizzo non si proroga** [gravita: alta] - l'11 gennaio 2032 cade di domenica ma è un termine convenzionale di durata della copertura e non un termine per l'adempimento di un'obbligazione: non si proroga al giorno seguente non festivo (clausola 3.3 delle condizioni particolari; calendario 2032). Non deve affermare: che la scadenza si sposti al 12 gennaio 2032
+
+**I-06. stato del periodo di indennizzo alla data di riferimento** [gravita: alta] - al 30 settembre 2031 il periodo di indennizzo è ancora aperto, sebbene l'attività sia ripresa a regime il 18 agosto 2031: la garanzia opera per la perdita che si manifesta entro il periodo, anche se l'attività riprende prima (clausola 3.2 delle condizioni particolari; relazione di stabilimento). Non deve affermare: che il periodo si chiuda con la ripresa a regime, o che la perdita successiva sia automaticamente indennizzabile
+
+**I-07. margine di contribuzione di riferimento** [gravita: alta] - il margine di contribuzione dell'esercizio anteriore al sinistro è di euro 6.750.000,00, quale risulta dal conto economico 2030 come differenza fra valore della produzione e costi variabili di produzione (conto economico 2030, righe del totale valore della produzione e del totale costi variabili; clausole 2.1 e 4.1 delle condizioni particolari). Non deve affermare: che il margine di riferimento sia quello dichiarato in polizza
+
+**I-08. margine giornaliero e base convenzionale di computo** [gravita: alta] - il margine giornaliero è di euro 18.750,00, ottenuto dividendo per trecentosessanta il margine di contribuzione dell'esercizio 2030 come previsto dalle condizioni particolari (clausola 4.1 delle condizioni particolari; conto economico 2030). Non deve affermare: che la base di computo sia trecentosessantacinque giorni o i giorni lavorativi
+
+**I-09. durata dei due periodi di riduzione dell'attivita** [gravita: alta] - il fermo totale dura settantadue giorni, dall'11 gennaio al 23 marzo 2031, e il periodo di capacità ridotta centoquarantasette giorni, dal 24 marzo al 17 agosto 2031 (cronologia e tabella della capacità della relazione di stabilimento). Non deve affermare: che il periodo di riduzione si chiuda con la ripresa parziale del 24 marzo 2031
+
+**I-10. perdita nel periodo di capacita ridotta** [gravita: alta] - nel periodo di capacità ridotta la perdita si determina applicando al margine giornaliero la percentuale di riduzione della capacità, pari al quarantacinque per cento, e non l'intero margine (clausola 4.2 delle condizioni particolari; capacità del cinquantacinque per cento indicata dalla relazione di stabilimento). Non deve affermare: che nel periodo di capacità ridotta la perdita sia pari all'intero margine giornaliero
+
+**I-11. perdita lorda** [gravita: alta] - la perdita lorda è di euro 2.590.312,50, somma di euro 1.350.000,00 per il fermo totale e di euro 1.240.312,50 per il periodo di capacità ridotta (computo verificato dai dati della relazione di stabilimento e del conto economico). Non deve affermare: che la perdita lorda coincida con il margine dei mesi interessati risultante dalla situazione gestionale
+
+**I-12. modalita di detrazione della franchigia** [gravita: alta] - la franchigia è espressa in giorni e si detrae moltiplicando i dieci giorni per il margine giornaliero, per euro 187.500,00: la perdita al netto della franchigia è di euro 2.402.812,50 (clausola 6.1 delle condizioni particolari; franchigia indicata nella scheda di polizza). Non deve affermare: che la franchigia sia un importo fisso o che si detragga dai giorni di fermo prima del calcolo della capacità ridotta
+
+**I-13. segno della rettifica per l'andamento dell'attivita** [gravita: alta] - la rettifica per l'andamento opera in diminuzione: il portafoglio ordini era in flessione nei quattro trimestri anteriori al sinistro e la relazione di stabilimento stima una contrazione del margine del sei per cento in assenza del sinistro (clausole 5.1 e 5.2 delle condizioni particolari; paragrafi 4 e 5 della relazione di stabilimento). Non deve affermare: che la rettifica operi in aumento, o che non si applichi
+
+**I-14. quantificazione della rettifica e perdita rettificata** [gravita: alta] - applicata la rettifica del sei per cento in diminuzione, la perdita rettificata è di euro 2.258.643,75 (computo verificato sulla perdita al netto della franchigia). Non deve affermare: che la perdita rettificata sia di euro 2.498.925,00, importo che deriva da una rettifica in aumento del quattro per cento
+
+**I-15. errore della perizia di parte sul segno della rettifica** [gravita: alta] - il paragrafo 5 della perizia di parte applica una rettifica in aumento del quattro per cento motivandola con una ripresa della domanda di settore, in contrasto con i dati di portafoglio ordini dello stesso assicurato (paragrafo 5 della perizia di parte; paragrafi 4 e 5 della relazione di stabilimento). Non deve affermare: che la motivazione della perizia sia sostenuta dai documenti del fascicolo
+
+**I-16. sottoassicurazione e regola proporzionale** [gravita: alta] - il margine di contribuzione annuo assicurato dichiarato in polizza, euro 5.400.000,00, è inferiore a quello effettivo dell'esercizio anteriore, euro 6.750.000,00: la sottoassicurazione è del venti per cento e l'indennizzo si riduce in proporzione, essendo la quota indennizzabile pari all'ottanta per cento (scheda di polizza, margine dichiarato; conto economico 2030; clausola 8.3 delle condizioni particolari; articolo 8.1 delle condizioni generali). Non deve affermare: che la regola proporzionale non operi perché l'indennizzo resta entro la somma assicurata
+
+**I-17. errore della perizia di parte sulla regola proporzionale** [gravita: alta] - l'osservazione del paragrafo 8 della perizia di parte, secondo cui lo scostamento del margine dichiarato non incide perché l'importo è contenuto entro la somma assicurata, confonde il limite massimo di indennizzo con il parametro su cui la proporzione si calcola (paragrafo 8 della perizia di parte; clausole 8.1 e 8.3 delle condizioni particolari). Non deve affermare: che l'osservazione della perizia sia fondata
+
+**I-18. indennizzo sulla perdita di margine** [gravita: alta] - applicata la quota indennizzabile dell'ottanta per cento alla perdita rettificata, l'indennizzo sulla perdita di margine è di euro 1.806.915,00 (computo verificato). Non deve affermare: che l'indennizzo sulla perdita di margine coincida con la perdita rettificata
+
+**I-19. maggiori costi di esercizio e sublimite** [gravita: alta] - i maggiori costi richiesti per euro 340.000,00 eccedono il sublimite di euro 200.000,00 previsto dalla scheda di polizza, e il sublimite è a sua volta soggetto alla regola proporzionale: l'importo indennizzabile è di euro 160.000,00 (paragrafo 6 della perizia di parte; sublimite nella scheda di polizza; clausola 8.3 delle condizioni particolari). Non deve affermare: che i maggiori costi siano indennizzabili per l'intero importo richiesto
+
+**I-20. condizione di indennizzabilita dei maggiori costi** [gravita: media] - i maggiori costi sono indennizzabili nella misura in cui hanno evitato una perdita di margine di importo non inferiore, e il fascicolo non contiene la documentazione di dettaglio né il raffronto (clausola 7.2 delle condizioni particolari; paragrafo 6 della relazione di stabilimento, che dichiara la documentazione in corso di raccolta). Non deve affermare: che la condizione sia soddisfatta, o che i maggiori costi siano esclusi
+
+**I-21. indennizzo complessivo e limite della somma assicurata** [gravita: alta] - l'indennizzo complessivo è di euro 1.966.915,00, somma dell'indennizzo sulla perdita di margine e dei maggiori costi indennizzabili, importo contenuto entro la somma assicurata di euro 6.000.000,00 (computo verificato; somma assicurata nella scheda di polizza). Non deve affermare: che il limite della somma assicurata renda superflua la verifica dei singoli passaggi
+
+**I-22. scostamento rispetto alla perizia di parte** [gravita: alta] - la perizia di parte quantifica il danno in euro 2.838.925,00: lo scostamento rispetto all'indennizzo verificato è di euro 872.010,00 e deriva dal segno della rettifica, dalla mancata applicazione della regola proporzionale e dal superamento del sublimite (paragrafo 7 della perizia di parte; computo verificato). Non deve affermare: che lo scostamento derivi da una sola delle tre cause
+
+**I-23. valore della perizia di parte** [gravita: alta] - la perizia è stata predisposta su incarico dell'assicurato e non vincola l'assicuratore; le condizioni particolari prevedono, in caso di mancato accordo, la nomina di due periti e l'eventuale terzo perito, con determinazione vincolante per le parti (clausole 10.2 e 10.3 delle condizioni particolari; intestazione della perizia di parte; punto 2 della lettera di riserva). Non deve affermare: che la perizia di parte vincoli l'assicuratore, o che il rifiuto di vincolatività della lettera di riserva sia infondato
+
+**I-24. acconto sull'indennizzo** [gravita: alta] - le condizioni particolari prevedono un acconto fino al cinquanta per cento dell'importo non contestato, trascorsi sessanta giorni dalla denuncia: il rifiuto del punto 6 della lettera di riserva va contestato quanto meno sulla parte non contestata (clausola 11.2 delle condizioni particolari; punto 6 della lettera di riserva; data della denuncia). Non deve affermare: che l'acconto presupponga la determinazione definitiva del danno
+
+**I-25. dati mancanti per la chiusura della quantificazione** [gravita: alta] - la quantificazione non è definitiva: mancano i dati gestionali dei mesi da settembre a dicembre 2031, la rilevazione analitica dei costi variabili non sostenuti e la documentazione di dettaglio dei maggiori costi (paragrafo 6 della relazione di stabilimento; riga di settembre della situazione gestionale, con dati non definitivi). Non deve affermare: che la quantificazione sia definitiva, o che i dati mancanti impediscano ogni quantificazione
+
+## Controlled non-issue
+
+**N-01. tempestivita della denuncia di sinistro** - non è un rilievo: la denuncia è stata inviata il 14 gennaio 2031 e l'assicurato ha avuto conoscenza del sinistro il giorno 11: il termine di cinque giorni previsto dalle condizioni particolari è rispettato. Segnalare una decadenza per tardiva denuncia è errore
+
+**N-02. ora e giorno del sinistro** - non è un rilievo: il sinistro si è verificato di notte, durante un fermo programmato di fine settimana: la circostanza non incide sull'operatività della garanzia né sulla decorrenza del periodo di indennizzo. Trattarla come elemento di esclusione o come fatto che sposta la decorrenza è errore
+
+**N-03. procedura di nomina dei periti** - non è un rilievo: la clausola 10.2 delle condizioni particolari prevede due periti nominati uno per parte e l'eventuale terzo perito: è l'assetto ordinario per l'accertamento dell'ammontare del danno. Segnalarla come clausola vessatoria o come ostacolo è sovra-segnalazione
+
+**N-04. somme assicurate distinte fra sezione A e sezione B** - non è un rilievo: le somme assicurate della sezione A e della sezione B sono distinte e autonome: la circostanza non integra alcuna carenza di copertura. Presentarla come sottoassicurazione della sezione B è errore, perché la sottoassicurazione riguarda il margine dichiarato e non il rapporto fra le due sezioni
+
+**N-05. affidamento in lavorazione esterna** - non è un rilievo: l'affidamento delle commesse a un trasformatore terzo dal 24 marzo 2031 è una misura di contenimento della perdita, che le condizioni impongono all'assicurato: è fonte dei maggiori costi, non un inadempimento. Presentarla come violazione degli obblighi dell'assicurato è errore
+
+**N-06. franchigia della sezione A** - non è un rilievo: le franchigie in euro previste per le partite della sezione A operano sui danni materiali diretti e sono distinte dalla franchigia in giorni della sezione B. Cumularle o applicarle alla quantificazione dei danni indiretti è errore
+
+**N-07. fermo programmato di quindici giorni nel mese di luglio** - non è un rilievo: il fermo programmato registrato dalla situazione gestionale nel mese di luglio 2031 è un fermo ordinario che si sarebbe verificato anche in assenza del sinistro: rientra nella rettifica per l'andamento e non è una causa autonoma di riduzione dell'indennizzo. Trattarlo come periodo da escludere dal computo è errore
+
+**N-08. quietanza del premio dell'annualita in corso** - non è un rilievo: il premio dell'annualità in corso risulta quietanzato il 28 giugno 2031 e la garanzia non è sospesa: segnalare un profilo di operatività legato al pagamento del premio è errore

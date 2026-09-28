@@ -1,0 +1,34 @@
+{
+  "task_id": "WF2-083",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Regolamento ACF",
+      "url": "https://www.acf.consob.it/web/guest/regolamento",
+      "funzione": "presupposti, termini e procedimento ACF",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "ACF - il reclamo all'intermediario",
+      "url": "https://www.acf.consob.it/il-reclamo",
+      "funzione": "identita' delle doglianze e funzione del reclamo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "ABF - disposizioni sui sistemi di risoluzione stragiudiziale",
+      "url": "https://www.arbitrobancariofinanziario.it/abf/normativa/index.html",
+      "funzione": "ambito delle controversie bancarie e finanziarie",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 58/1998",
+      "url": "https://www.normattiva.it/eli/stato/DECRETO_LEGISLATIVO/1998/02/24/58/CONSOLIDATED",
+      "funzione": "servizi di investimento e tutela giudiziale",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

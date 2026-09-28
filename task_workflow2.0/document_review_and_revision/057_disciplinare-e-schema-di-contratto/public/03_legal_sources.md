@@ -1,0 +1,18 @@
+# Fonti primarie ufficiali
+
+Verificate il 2026-09-02. Le fonti secondarie non sostengono criteri valutati.
+
+| Fonte | Perimetro | URL |
+|---|---|---|
+| D.Lgs. 31 marzo 2023, n. 36 - art. 60 | obbligatorietà delle clausole di revisione prezzi nei documenti di gara iniziali; per i lavori la revisione opera al superamento del 3 per cento dell'importo complessivo e riconosce il 90 per cento dell'eccedenza; per servizi e forniture le misure sono 5 per cento e 80 per cento; rinvio all'allegato II.2-bis per le modalità di applicazione | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 126 | penale giornaliera compresa fra lo 0,5 e l'1,5 per mille dell'ammontare netto contrattuale, complessivamente non superiore al 10 per cento; premio di accelerazione obbligatorio negli appalti di lavori, determinato con le risorse della voce imprevisti e con quota del ribasso d'asta | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 94 | cause di esclusione automatica | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 95 | cause di esclusione non automatica, fra cui il grave illecito professionale, che richiedono la valutazione della stazione appaltante | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 92 | termini minimi per la ricezione delle offerte nelle procedure aperte | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 106 | garanzia provvisoria: misura, durata e impegno al rinnovo | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 108 | criteri di aggiudicazione | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 119 | subappalto e limiti alla sua estensione | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| D.Lgs. 31 marzo 2023, n. 36 - art. 125 | anticipazione del prezzo | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-03-31;36 |
+| L. 7 agosto 1990, n. 241 - artt. 22 e seguenti | accesso ai documenti amministrativi e casi di differimento | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-08-07;241 |
+| D.Lgs. 2 luglio 2010, n. 104 - art. 133 | materie di giurisdizione esclusiva del giudice amministrativo, comprese le procedure di affidamento | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2010-07-02;104 |
+| Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1382 c.c. | clausola penale e sua funzione | https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262 |

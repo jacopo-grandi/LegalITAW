@@ -1,0 +1,21 @@
+{
+  "task_id": "WF2-069",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "AGCM, soglie di fatturato per le concentrazioni dal 16 marzo 2026",
+      "url": "https://www.agcm.it/media-e-comunicazione/dettaglio-notizia?id=51b72094-7cfe-40d2-ae19-46b7ee52d0b5",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale dell'autorita'"
+    },
+    {
+      "id": "F2",
+      "riferimento": "Legge 10 ottobre 1990, n. 287, artt. 5 e 16",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-10-10;287!vig=",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    }
+  ]
+}

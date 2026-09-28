@@ -1,0 +1,220 @@
+{
+  "task_id": "WF2-050",
+  "lato_assistito": "Cartiera Boscalto S.p.A., debitrice in negoziazione",
+  "data_di_riferimento": "2026-08-25",
+  "stato_del_fascicolo": "bozza circolata; nessuna firma, nessuna misura protettiva giudiziale e liquidità per otto settimane",
+  "fonti_ammesse": [
+    "cc",
+    "ccii"
+  ],
+  "dati_mancanti": [],
+  "calcoli": [
+    "euro 1.460.000",
+    "75%",
+    "euro 620.000"
+  ],
+  "errori_bersaglio": [
+    "protezione erga omnes",
+    "moratoria per creditori non aderenti",
+    "waiver generale",
+    "rinuncia definitiva ai rimedi",
+    "prededuzione promessa",
+    "firma già autorizzata",
+    "reporting eliminato"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "durata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la moratoria proposta dura dal 1 settembre al 31 ottobre 2026",
+      "evidenza": "clausola 2 della bozza",
+      "azione": "definire data e ora di cessazione",
+      "cautela": "non usare una durata aperta"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "creditori aderenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza vincola solo Banca Salina e Credito Murgia",
+      "evidenza": "frontespizio e firme",
+      "azione": "limitare gli effetti alle parti",
+      "cautela": "non estendere ai fornitori o ad altri finanziatori"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "debiti coperti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la moratoria copre capitale e interessi scaduti dei due finanziamenti identificati",
+      "evidenza": "allegato A della bozza",
+      "azione": "escludere crediti non elencati",
+      "cautela": "non usare la formula ogni indebitamento"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "waiver",
+      "gravita": "alta",
+      "affermazione_richiesta": "il waiver riguarda soltanto i covenant al 30 giugno e non i futuri",
+      "evidenza": "clausola 3.2",
+      "azione": "aggiungere elenco chiuso degli eventi rinunciati",
+      "cautela": "non qualificare come rinuncia generale"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "riserva diritti",
+      "gravita": "alta",
+      "affermazione_richiesta": "i diritti non esercitati restano riservati alla cessazione",
+      "evidenza": "clausola 4.1",
+      "azione": "mantenere la riserva con divieto di azioni durante la moratoria",
+      "cautela": "non cancellare definitivamente i rimedi"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "enforcement",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza consente escussione delle garanzie su preavviso di un giorno, svuotando la moratoria",
+      "evidenza": "clausola 4.3",
+      "azione": "vietare enforcement sui debiti coperti durante lo standstill",
+      "cautela": "non lasciare una carve-out discrezionale"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "pagamenti consentiti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il forecast richiede pagamenti a fornitori strategici per euro 1.460.000",
+      "evidenza": "forecast settimane 36-43",
+      "azione": "creare permitted payments nominativi e con budget",
+      "cautela": "non vietare ogni pagamento non finanziario"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "nuova finanza",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca una disciplina per nuova finanza di emergenza",
+      "evidenza": "forecast mostra cassa negativa dal 9 ottobre senza linea ponte",
+      "azione": "inserire processo di consenso e priorità da negoziare",
+      "cautela": "non promettere prededuzione o priorità non esistenti"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "maggioranze",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'intercreditor richiede il 75% per istruzioni comuni ma lo standstill pretende unanimità per ogni modifica",
+      "evidenza": "clausola 12 intercreditor e clausola 8 bozza",
+      "azione": "allineare modifiche ordinarie al 75% e riservare materie fondamentali",
+      "cautela": "non importare la maggioranza senza verificare le materie"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "informativa",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza richiede report giornalieri non sostenibili rispetto al forecast settimanale",
+      "evidenza": "clausola 5 e nota CFO",
+      "azione": "proporre reporting settimanale con eventi immediati",
+      "cautela": "non eliminare l'informativa"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "cessazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la cessazione automatica per ogni inesattezza anche non rilevante è sproporzionata",
+      "evidenza": "clausola 6.1(c)",
+      "azione": "aggiungere materialità e termine di rimedio",
+      "cautela": "non rendere sanabili frode o insolvenza"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "cross-default",
+      "gravita": "alta",
+      "affermazione_richiesta": "il default notice riguarda euro 620.000 ma la bozza include cross-default senza soglia",
+      "evidenza": "notice del 12 agosto",
+      "azione": "inserire soglia e debiti finanziari definiti",
+      "cautela": "non attivare per una fattura contestata"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "misure protettive",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo standstill contrattuale non vincola creditori non aderenti e non equivale a misura protettiva",
+      "evidenza": "nessuna istanza o provvedimento nel fascicolo",
+      "azione": "dichiarare il limite e valutare separatamente strumenti concorsuali",
+      "cautela": "non promettere protezione erga omnes"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "governance",
+      "gravita": "alta",
+      "affermazione_richiesta": "il CdA autorizza negoziazione ma richiede nuova delibera per la firma",
+      "evidenza": "verbale del 20 agosto",
+      "azione": "inserire la delibera finale come condizione",
+      "cautela": "non attribuire al CFO potere di firma già conferito"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "protezione erga omnes",
+      "chiave_nel_criterio": "protezione erga omnes"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "moratoria per creditori non aderenti",
+      "chiave_nel_criterio": "moratoria per creditori non aderenti"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "waiver generale",
+      "chiave_nel_criterio": "waiver generale"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "rinuncia definitiva ai rimedi",
+      "chiave_nel_criterio": "rinuncia definitiva ai rimedi"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "prededuzione promessa",
+      "chiave_nel_criterio": "prededuzione promessa"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "firma già autorizzata",
+      "chiave_nel_criterio": "firma già autorizzata"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "reporting eliminato",
+      "chiave_nel_criterio": "reporting eliminato"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_bozza_standstill.docx",
+      "funzione": "Bozza standstill"
+    },
+    {
+      "file": "02_facility_agreement.pdf",
+      "funzione": "Contratto di finanziamento"
+    },
+    {
+      "file": "03_intercreditor.pdf",
+      "funzione": "Accordo intercreditorio"
+    },
+    {
+      "file": "04_default_notice.pdf",
+      "funzione": "Default notice"
+    },
+    {
+      "file": "05_forecast_liquidita.xlsx",
+      "funzione": "Forecast di liquidità"
+    },
+    {
+      "file": "06_verbale_cda.pdf",
+      "funzione": "Verbale del CdA"
+    },
+    {
+      "file": "07_posizione_fornitori.xlsx",
+      "funzione": "Posizione dei fornitori strategici"
+    }
+  ]
+}

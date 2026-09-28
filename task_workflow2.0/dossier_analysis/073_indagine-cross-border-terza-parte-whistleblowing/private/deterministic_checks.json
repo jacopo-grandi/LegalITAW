@@ -1,0 +1,38 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-073",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "cross_border_investigation_memo.md"
+  ],
+  "criteria_total": 51,
+  "proposals_count": 1,
+  "proposals": [
+    {
+      "criterion_id": "B.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "tre giorni",
+        "3 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «tre giorni»; compare «3 giorni»",
+      "combine": "single",
+      "check": {
+        "id": "WF2-073-B6",
+        "type": "required_regex",
+        "artifact": "cross_border_investigation_memo.md",
+        "patterns": [
+          "(?:(?:3|tre)\\s+giorn[oaei]|(?:3|tre)\\s+giorn[oaei])"
+        ]
+      }
+    }
+  ]
+}

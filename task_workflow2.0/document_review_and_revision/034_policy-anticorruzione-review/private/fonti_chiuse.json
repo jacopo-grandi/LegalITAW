@@ -1,0 +1,13 @@
+{
+  "task_id": "WF2-034",
+  "freeze_normativo": "2026-08-28",
+  "nota": "Elenco chiuso delle fonti del reference pack, visibile al modello in public/03_legal_sources.md.",
+  "fonti": [
+    {"id": "F1", "riferimento": "art. 6 D.Lgs. 231/2001", "testo_breve": "condizioni di esonero della responsabilita' dell'ente; i modelli devono individuare le attivita' a rischio, prevedere specifici protocolli, individuare modalita' di gestione delle risorse finanziarie, prevedere obblighi di informazione verso l'organismo di vigilanza e introdurre un sistema disciplinare", "url": "https://www.codiceappalti.it/dlgs_231_2001/art__6__soggetti_in_posizione_apicale_e_modelli_di_organizzazione_dell'ente/6154", "verificata_il": "2026-08-28"},
+    {"id": "F2", "riferimento": "art. 7 D.Lgs. 231/2001", "testo_breve": "il modello prevede misure idonee a garantire lo svolgimento dell'attivita' nel rispetto della legge e a scoprire ed eliminare tempestivamente situazioni di rischio; l'efficace attuazione richiede verifica periodica e sistema disciplinare", "url": "https://www.codiceappalti.it/dlgs_231_2001/Art__7__Soggetti_sottoposti_all'altrui_direzione_e_modelli_di_organizzazione_dell'ente/6155", "verificata_il": "2026-08-28"},
+    {"id": "F3", "riferimento": "art. 2635 c.c.", "testo_breve": "corruzione tra privati: e' punito chi sollecita o riceve denaro o altra utilita' non dovuti per compiere o omettere un atto in violazione degli obblighi del proprio ufficio o degli obblighi di fedelta', e chi li offre, promette o da'", "url": "https://www.giurisprudenzapenale.com/2017/03/31/modifiche-alla-disciplina-della-corruzione-tra-privati-pubblicato-in-g-u-il-decreto-legislativo-15-marzo-2017-n-38/", "verificata_il": "2026-08-28"},
+    {"id": "F4", "riferimento": "art. 4 D.Lgs. 24/2023", "testo_breve": "i canali di segnalazione interna garantiscono la riservatezza dell'identita' della persona segnalante; la gestione e' affidata a una persona o a un ufficio interno autonomo dedicato con personale specificamente formato, ovvero a un soggetto esterno", "url": "https://i2.res.24o.it/pdf2010/Editrice/ILSOLE24ORE/QUOTIDIANI_VERTICALI/Online/_Oggetti_Embedded/Documenti/2023/07/13/Dlgs%2024-2023.pdf", "verificata_il": "2026-08-28"},
+    {"id": "F5", "riferimento": "art. 12 D.Lgs. 24/2023", "testo_breve": "l'identita' della persona segnalante e ogni informazione da cui possa evincersi non possono essere rivelate senza il suo consenso espresso a persone diverse da quelle competenti a ricevere o a dare seguito alle segnalazioni", "url": "https://i2.res.24o.it/pdf2010/Editrice/ILSOLE24ORE/QUOTIDIANI_VERTICALI/Online/_Oggetti_Embedded/Documenti/2023/07/13/Dlgs%2024-2023.pdf", "verificata_il": "2026-08-28"}
+  ],
+  "riferimenti_dei_documenti": []
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-053",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "policy_redline.docx"
+  ],
+  "criteria_total": 52,
+  "proposals_count": 2,
+  "proposals": [
+    {
+      "criterion_id": "B.12",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "180 giorni",
+        "centottanta giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «180 giorni» come periodo previsto dalla bozza.; compare «centottanta giorni» come periodo previsto dalla bozza.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-053-B12",
+        "type": "required_regex",
+        "artifact": "policy_redline.docx",
+        "patterns": [
+          "(?:(?:180|centottanta)\\s+giorn[oaei]|(?:180|centottanta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.18",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "12 mesi",
+        "dodici mesi"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «12 mesi» come periodo previsto dalla bozza per i log di navigazione.; compare «dodici mesi» come periodo previsto dalla bozza per i log di navigazione.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-053-B18",
+        "type": "required_regex",
+        "artifact": "policy_redline.docx",
+        "patterns": [
+          "(?:(?:12|dodici)\\s+mes[oaei]|(?:12|dodici)\\s+mes[oaei])"
+        ]
+      }
+    }
+  ]
+}

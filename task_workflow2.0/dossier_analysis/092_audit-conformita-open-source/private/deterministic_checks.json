@@ -1,0 +1,85 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-092",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "open_source_audit.md"
+  ],
+  "criteria_total": 52,
+  "proposals_count": 3,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "5 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «5 novembre 2026» come data alla quale l'analisi è riferita",
+      "combine": "single",
+      "check": {
+        "id": "WF2-092-A3",
+        "type": "required_regex",
+        "artifact": "open_source_audit.md",
+        "patterns": [
+          "(?:(?:5°?\\s+novembre(?:\\s+2026)?|0?5\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?5\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "26 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «26 novembre 2026» riferita al rilascio",
+      "combine": "single",
+      "check": {
+        "id": "WF2-092-C4",
+        "type": "required_regex",
+        "artifact": "open_source_audit.md",
+        "patterns": [
+          "(?:(?:26°?\\s+novembre(?:\\s+2026)?|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "21 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «21 ottobre 2026» riferita alla richiesta del cliente",
+      "combine": "single",
+      "check": {
+        "id": "WF2-092-C5",
+        "type": "required_regex",
+        "artifact": "open_source_audit.md",
+        "patterns": [
+          "(?:(?:21°?\\s+ottobre(?:\\s+2026)?|0?21\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?21\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "task_id": "WF2-058",
+  "lato_assistito": "Fonderia Castelbruno S.r.l., imprenditore istante",
+  "data_di_riferimento": "2031-04-15",
+  "stato_fascicolo": "istanza trasmessa il 27 marzo 2031; esperto nominato il 2 aprile 2031 e incarico accettato l'8 aprile 2031; istanza e accettazione pubblicate l'8 aprile 2031; nessun decreto del tribunale e nessuna iscrizione del numero di ruolo risultano dagli atti; una banca ha sospeso le linee e annunciato la revoca degli affidamenti.",
+  "meccanismi_di_difficolta": [
+    "le regole di computo e di efficacia non stanno nei documenti: nessun allegato dice da quando le misure operano né quali termini decorrono dalla pubblicazione",
+    "termini dipendenti da più eventi: tre scadenze decorrono da fatti diversi, con conseguenze diverse in caso di inosservanza",
+    "fatti distribuiti: il difetto di anzianità della situazione patrimoniale emerge solo mettendo in relazione la data del documento e la data di pubblicazione",
+    "dichiarazione di parte smentita dai documenti: la banca afferma che la revoca non dipende dall'iscrizione, ma la motivazione che adduce nomina rate anteriori",
+    "presenza contro adeguatezza: la documentazione richiesta è tutta depositata, il difetto sta nell'aggiornamento di uno dei documenti"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "efficacia delle misure protettive dalla pubblicazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "le misure protettive operano dall'8 aprile 2031, data di pubblicazione dell'istanza nel Registro delle Imprese, e non dalla conferma del tribunale",
+      "evidenza": "iscrizione prot. 2031/0455 della visura dell'8 aprile 2031",
+      "non_deve_affermare": "che le misure operino dal decreto di conferma, dalla nomina dell'esperto o dalla trasmissione dell'istanza del 27 marzo 2031"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "termine per il ricorso al tribunale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il ricorso per la conferma delle misure va depositato entro il giorno successivo alla pubblicazione, cioè entro il 9 aprile 2031",
+      "evidenza": "data di pubblicazione dell'8 aprile 2031; istanza di conferma contenuta al punto 5",
+      "non_deve_affermare": "che il termine sia di trenta giorni, di dieci giorni o assente"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "termine per l'iscrizione del numero di ruolo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il numero di ruolo del procedimento va richiesto in iscrizione nel Registro delle Imprese entro venti giorni dalla pubblicazione, cioè entro il 28 aprile 2031, e l'inosservanza rende inefficaci le misure",
+      "evidenza": "data di pubblicazione dell'8 aprile 2031; assenza di ulteriori iscrizioni nella visura",
+      "non_deve_affermare": "che l'iscrizione del numero di ruolo sia facoltativa o che la sua omissione produca una sanzione diversa dall'inefficacia"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "termine per la fissazione dell'udienza",
+      "gravita": "alta",
+      "affermazione_richiesta": "il tribunale fissa l'udienza entro dieci giorni dal deposito del ricorso e l'inosservanza incide sull'efficacia delle misure",
+      "evidenza": "deposito del ricorso; assenza di provvedimenti nella visura all'8 aprile 2031",
+      "non_deve_affermare": "che il termine per la fissazione dell'udienza sia libero o che la sua inosservanza sia priva di conseguenze"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "durata iniziale del provvedimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il tribunale determina la durata delle misure in un periodo non inferiore a trenta e non superiore a centoventi giorni",
+      "evidenza": "istanza di conferma; disciplina delle misure protettive",
+      "non_deve_affermare": "che la durata iniziale possa essere fissata oltre centoventi giorni o senza limite minimo"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "durata massima complessiva con le proroghe",
+      "gravita": "alta",
+      "affermazione_richiesta": "la durata complessiva delle misure, comprese le proroghe, non può superare duecentoquaranta giorni",
+      "evidenza": "disciplina delle misure protettive",
+      "non_deve_affermare": "che le misure possano essere prorogate per l'intera durata della composizione negoziata"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "anzianita della situazione patrimoniale depositata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la situazione patrimoniale depositata è aggiornata al 31 gennaio 2031 e alla data di pubblicazione dell'8 aprile 2031 ha un'anzianità superiore al limite di sessanta giorni previsto per il deposito",
+      "evidenza": "punto 4, numero 3, dell'istanza; data di pubblicazione della visura",
+      "non_deve_affermare": "che il documento depositato sia conforme al requisito di aggiornamento"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "esclusione dei crediti dei lavoratori dalle misure",
+      "gravita": "alta",
+      "affermazione_richiesta": "i crediti dei lavoratori, pari a euro 410.000,00 per retribuzioni e ratei, sono esclusi dalle misure protettive",
+      "evidenza": "voce dei debiti verso dipendenti della situazione patrimoniale; elenco delle categorie di creditori nell'istanza",
+      "non_deve_affermare": "che le misure protettive coprano anche i crediti dei lavoratori"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "sospensione delle linee da parte della banca",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sospensione dell'utilizzo delle linee comunicata dalla banca è consentita nella finestra che va dalla pubblicazione alla conferma delle misure, e non oltre",
+      "evidenza": "punto 1 della lettera del 10 aprile 2031; date di pubblicazione e di conferma",
+      "non_deve_affermare": "che la sospensione sia in ogni caso illegittima o che possa proseguire senza limite dopo la conferma"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "annuncio di revoca degli affidamenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la revoca degli affidamenti annunciata al punto 2 della lettera è motivata con il mancato pagamento di rate anteriori e come tale ricade nel divieto di revoca fondata sui soli debiti pregressi",
+      "evidenza": "punto 2 della lettera del 10 aprile 2031, che nomina le rate scadute il 31 gennaio e il 28 febbraio 2031",
+      "non_deve_affermare": "che la revoca sia legittima perché la banca ne ha addotto una diversa motivazione"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "decreto ingiuntivo anteriore alla pubblicazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il decreto ingiuntivo notificato il 10 marzo 2031 resta valido e le misure protettive non lo travolgono: incidono sull'inizio o sulla prosecuzione delle azioni esecutive e cautelari, non sul titolo",
+      "evidenza": "punto 6 dell'istanza; assenza di pignoramenti notificati",
+      "non_deve_affermare": "che il decreto ingiuntivo sia divenuto inefficace o nullo per effetto della pubblicazione"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "misura cautelare specifica sugli impianti in locazione",
+      "gravita": "media",
+      "affermazione_richiesta": "l'inibitoria del ritiro degli impianti richiesta contro il locatore è una misura cautelare specifica, distinta dalle misure protettive, e va chiesta e motivata separatamente nel ricorso",
+      "evidenza": "punto 5 dell'istanza; voce dei canoni di locazione operativa nell'elenco dei creditori",
+      "non_deve_affermare": "che l'inibitoria sia un effetto automatico della pubblicazione"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "stato del procedimento alla data di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "al 15 aprile 2031 il fascicolo non contiene il decreto del tribunale ne l'iscrizione del numero di ruolo: la conferma delle misure non risulta intervenuta",
+      "evidenza": "visura dell'8 aprile 2031; assenza di atti successivi nel fascicolo",
+      "non_deve_affermare": "che la conferma sia intervenuta o che le misure siano già state revocate"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "revoca o abbreviazione delle misure",
+      "gravita": "media",
+      "affermazione_richiesta": "il tribunale può revocare o abbreviare le misure in ogni momento, anche su segnalazione dell'esperto, quando non assolvono alla funzione di sostenere le trattative o pregiudicano i creditori in misura sproporzionata",
+      "evidenza": "disciplina del procedimento sulle misure protettive",
+      "non_deve_affermare": "che le misure, una volta confermate, siano intangibili fino alla scadenza"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "indipendenza dell'esperto nominato",
+      "chiave_nel_criterio": "indipendenza dell'esperto",
+      "perche_non_e_issue": "la dichiarazione di accettazione contiene tutte le attestazioni sull'assenza di rapporti personali e professionali, sull'assenza di incarichi negli ultimi cinque anni e sull'assenza di interessi nell'impresa: non presenta profili di difetto. Segnalarla come criticità è sovra-segnalazione"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "assenza di richiesta di limitazione della pubblicita",
+      "chiave_nel_criterio": "limitazione della pubblicita",
+      "perche_non_e_issue": "la scelta di non chiedere alcuna limitazione della pubblicita legale dell'istanza è una facoltà dell'imprenditore e una condizione di operatività delle misure verso i terzi: trattarla come omissione è errore"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "partecipazione della banca agli incontri",
+      "chiave_nel_criterio": "partecipazione agli incontri",
+      "perche_non_e_issue": "la disponibilità della banca a partecipare agli incontri convocati dall'esperto, espressa al punto 4 della lettera, è conforme al dovere di leale collaborazione: segnalarla come profilo di rischio è sovra-segnalazione"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "perdita del periodo di gennaio 2031",
+      "chiave_nel_criterio": "perdita del periodo",
+      "perche_non_e_issue": "la perdita di euro 341.000,00 del solo mese di gennaio 2031 è un dato della situazione patrimoniale, coerente con la condizione di squilibrio dichiarata nell'istanza: presentarla come fatto che preclude l'accesso alla composizione negoziata è errore"
+    }
+  ],
+  "dati_mancanti": [
+    "ricevuta di deposito del ricorso al tribunale",
+    "decreto di fissazione dell'udienza",
+    "visura aggiornata successiva all'8 aprile 2031",
+    "situazione patrimoniale aggiornata entro il limite di anzianità richiesto",
+    "documenti su cui la banca fonda la motivazione alternativa del punto 3 della lettera",
+    "contratto di locazione operativa degli impianti e stato dei canoni"
+  ],
+  "errori_bersaglio": [
+    "far decorrere gli effetti delle misure dal decreto di conferma del tribunale",
+    "far decorrere gli effetti dalla trasmissione dell'istanza del 27 marzo 2031",
+    "far decorrere i termini del procedimento dalla nomina dell'esperto",
+    "presentare l'iscrizione del numero di ruolo come adempimento facoltativo",
+    "estendere le misure protettive ai crediti dei lavoratori",
+    "trattare il decreto ingiuntivo anteriore come inefficace per effetto della pubblicazione",
+    "presentare l'inibitoria sugli impianti come effetto automatico della pubblicazione",
+    "ritenere la sospensione delle linee illegittima in ogni caso, o consentita senza limite",
+    "non rilevare il difetto di anzianità della situazione patrimoniale",
+    "segnalare come criticità l'indipendenza dell'esperto, la mancata limitazione della pubblicita, la disponibilità della banca agli incontri o la perdita del periodo",
+    "presumere che il tribunale confermerà le misure"
+  ],
+  "funzione_degli_allegati": {
+    "01_istanza_composizione_negoziata.pdf": "Atto di apertura. Elenca la documentazione depositata e porta la data della situazione patrimoniale, dalla quale si ricava per relazione il difetto di anzianità.",
+    "02_visura_registro_imprese_8_aprile_2031.pdf": "Prova la data di pubblicazione dell'istanza e dell'accettazione dell'esperto, che è il fatto da cui decorrono sia l'efficacia delle misure sia i due termini del procedimento. Non contiene alcuna regola.",
+    "03_nomina_ed_accettazione_esperto.pdf": "Fissa la data della nomina e la dichiarazione di indipendenza. È la sede del controlled non-issue sull'indipendenza, che risulta regolare.",
+    "04_situazione_patrimoniale_31_gennaio_2031.csv": "Documento depositato con l'istanza. La sua data è il termine di confronto per il difetto di anzianità: va messa in relazione con la data di deposito, non letta da sola. Fornisce anche i dati sul debito verso i dipendenti.",
+    "05_lettera_banca_sospensione_linee.pdf": "Contiene la posizione del creditore finanziario dopo la pubblicazione, con l'annuncio di revoca delle linee e la richiesta di rientro: è l'atto su cui si misurano gli effetti delle misure protettive verso banche e intermediari."
+  }
+}

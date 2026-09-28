@@ -1,0 +1,18 @@
+{
+  "task_id": "WF2-077",
+  "freeze_normativo": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Codice civile, obbligazioni, garanzie e locazione, incluso art. 1232 c.c.",
+      "url": "https://www.normattiva.it/eli/id/1942/04/04/042U0262/CONSOLIDATED/20260614",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 1 settembre 1993, n. 385",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1993-09-01;385",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

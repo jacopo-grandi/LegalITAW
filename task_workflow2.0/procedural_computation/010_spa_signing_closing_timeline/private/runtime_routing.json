@@ -1,0 +1,589 @@
+{
+  "schema_version": "workflow2_runtime_routing_v1",
+  "task_id": "WF2-010",
+  "criteria_count": 97,
+  "criteria": {
+    "A.1": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.2": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.3": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.4": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.5": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.6": {
+      "verification_class": "deterministic",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "A.7": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.1": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.2": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.3": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.4": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.5": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.6": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.7": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.8": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.9": {
+      "verification_class": "scansione",
+      "criterion_logic": "conditional_if_mentioned",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.10": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.11": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.12": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.13": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.14": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.15": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.16": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.17": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.18": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.19": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.20": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.21": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.22": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.23": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.24": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.25": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.26": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.27": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.28": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.29": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.30": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.31": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.32": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.33": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.34": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.35": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.36": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.37": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.38": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.39": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.40": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.41": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.42": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.43": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.44": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.45": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.46": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.47": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.48": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.49": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.50": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.51": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.52": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.53": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.53a": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.54": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.55": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.56": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.57": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.58": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.59": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.60": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.61": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.62": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.63": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.64": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.65": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.66": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.67": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.68": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.69": {
+      "verification_class": "span",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.70": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.71": {
+      "verification_class": "scansione",
+      "criterion_logic": "conditional_if_mentioned",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.72": {
+      "verification_class": "scansione",
+      "criterion_logic": "conditional_if_mentioned",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.73": {
+      "verification_class": "scansione",
+      "criterion_logic": "conditional_if_mentioned",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "B.74": {
+      "verification_class": "scansione",
+      "criterion_logic": "conditional_if_mentioned",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.1": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.2": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.3": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.4": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.5": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.5b": {
+      "verification_class": "judge",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.6": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.7": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.8": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.9": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.10": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.11": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.12": {
+      "verification_class": "deterministic",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.12b": {
+      "verification_class": "judge",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    },
+    "C.13": {
+      "verification_class": "scansione",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "scope_locator": null
+    }
+  }
+}

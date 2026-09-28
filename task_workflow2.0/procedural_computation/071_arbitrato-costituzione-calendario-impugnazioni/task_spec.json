@@ -1,0 +1,148 @@
+{
+  "task_id": "WF2-071",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Arbitrato amministrato: costituzione, calendario e impugnazioni",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2029-02-19",
+  "workflow_family": "procedural_computation",
+  "subtask": "procedural_timeline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "in corso",
+  "legal_area": [
+    "Litigation & Arbitration",
+    "C. Procedural computation",
+    "Contenzioso",
+    "Contrattualistica"
+  ],
+  "document_type": "in corso",
+  "difficulty": "medium",
+  "estimated_completion_minutes": 90,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "medium",
+    "estimated_minutes": 90,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: arbitration_timeline.md.\n\n# Template di risposta - WF2-071\n\nLimite della parte testuale: 2.300 parole.\n\nConsegna un solo file denominato `arbitration_timeline.md`.\n\n## 1. Esito operativo\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]\n\n## 2. Cronologia verificata\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]\n\n## 3. Costituzione del tribunale\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]\n\n## 4. Eccezioni e calendario\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]\n\n## 5. Lodo e impugnazioni\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]\n\n## 6. Azioni e dati mancanti\n\n[Sviluppare con rinvii puntuali ai documenti e alle fonti ammesse.]",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_estratto_contratto_e_ricevuta_cam.pdf",
+    "public/documents/02_registro_segreteria_cam.xlsx",
+    "public/documents/03_email_nomine_e_competenza.eml",
+    "public/documents/04_ordine_procedurale_n1.pdf",
+    "public/documents/05_nota_scadenze_studio_eridano.pdf"
+  ],
+  "expected_deliverable": "arbitration_timeline.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "documents_rewrite": {
+    "date": "2026-09-21",
+    "status": "verified_and_integrated",
+    "artifact_count": 5,
+    "renames": [
+      {
+        "from": "01_strumento_governante.md",
+        "to": "01_estratto_contratto_e_ricevuta_cam.pdf"
+      },
+      {
+        "from": "02_registro_eventi.md",
+        "to": "02_registro_segreteria_cam.xlsx"
+      },
+      {
+        "from": "03_corrispondenza_operativa.md",
+        "to": "03_email_nomine_e_competenza.eml"
+      },
+      {
+        "from": "04_report_tecnico.md",
+        "to": "04_ordine_procedurale_n1.pdf"
+      },
+      {
+        "from": "05_nota_consulente.md",
+        "to": "05_nota_scadenze_studio_eridano.pdf"
+      }
+    ],
+    "backup": "wf2_rewrite_wip/integration_backup_remaining21_20260921/procedural_computation/071_arbitrato-costituzione-calendario-impugnazioni",
+    "provenance": "source/authoring/documents_rewrite_20260921/"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

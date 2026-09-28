@@ -1,0 +1,34 @@
+# Sinaldo Data Room - registro accessi ed eventi
+# Esportazione richiesta da: Direzione Affari Legali Tramontina
+# Periodo: 2026-09-28 / 2026-10-13 - Fuso: Europe/Rome
+# Piattaforma: sala documentale gestita da Metrica Partners S.r.l.
+timestamp,utenza,gruppo_di_appartenenza,evento,oggetto,classificazione_oggetto,esito,indirizzo_ip
+2026-09-28T09:12:04,VESTRINI.I,CT-LEAD,accesso,/,-,consentito,10.42.7.11
+2026-09-28T09:14:37,VESTRINI.I,CT-LEAD,download,/01_Finanziario/bilanci_2023_2025.pdf,CT-STANDARD,consentito,10.42.7.11
+2026-09-29T11:02:19,SARTORIO.I,CT-ADVISER,accesso,/,-,consentito,93.51.204.66
+2026-09-29T11:20:55,SARTORIO.I,CT-ADVISER,download,/03_Commerciale-riservato/costo_venduto_2024.xlsx,CT-RESTRICTED,consentito,93.51.204.66
+2026-09-29T15:48:02,GHILARDELLI.C,CT-ADVISER,accesso,/,-,consentito,93.51.204.66
+2026-09-30T08:31:44,MALVASI.R,CT-ALL,accesso,/,-,consentito,10.42.7.58
+2026-09-30T08:33:10,MALVASI.R,CT-ALL,visualizzazione,/02_Industriale/capacita_stabilimenti_2025.pdf,CT-STANDARD,consentito,10.42.7.58
+2026-10-01T10:07:26,TODESCHINI.B,CT-ALL,visualizzazione,/02_Industriale/layout_montaggio.pdf,CT-STANDARD,consentito,10.42.7.33
+2026-10-02T14:55:13,SARTORIO.I,CT-ADVISER,download,/03_Commerciale-riservato/marginalita_2024.xlsx,CT-RESTRICTED,consentito,93.51.204.66
+2026-10-05T17:22:41,MALVASI.R,CT-ALL,visualizzazione,/03_Commerciale-riservato/,CT-RESTRICTED,consentito,10.42.7.58
+2026-10-05T17:26:08,MALVASI.R,CT-ALL,visualizzazione,/03_Commerciale-riservato/marginalita_top10_2026.xlsx,CT-RESTRICTED,consentito,10.42.7.58
+2026-10-05T17:31:52,MALVASI.R,CT-ALL,download,/03_Commerciale-riservato/marginalita_top10_2026.xlsx,CT-RESTRICTED,consentito,10.42.7.58
+2026-10-05T17:34:20,MALVASI.R,CT-ALL,download,/03_Commerciale-riservato/volumi_cliente_2026.xlsx,CT-RESTRICTED,consentito,10.42.7.58
+2026-10-06T09:11:35,VESTRINI.I,CT-LEAD,accesso,/,-,consentito,10.42.7.11
+2026-10-06T09:15:02,VESTRINI.I,CT-LEAD,esportazione registro,periodo 2026-09-28/2026-10-06,-,consentito,10.42.7.11
+2026-10-07T10:44:18,SARTORIO.I,CT-ADVISER,download,/01_Finanziario/situazione_30062026.xlsx,CT-STANDARD,consentito,93.51.204.66
+2026-10-08T16:03:57,ROATTA.C,CT-ALL,accesso,/,-,consentito,10.42.7.61
+2026-10-08T16:05:22,ROATTA.C,CT-ALL,ricerca,"query: marginalità cliente",-,consentito,10.42.7.61
+2026-10-08T16:05:49,ROATTA.C,CT-ALL,visualizzazione,/03_Commerciale-riservato/,CT-RESTRICTED,consentito,10.42.7.61
+2026-10-09T11:38:04,SARTORIO.I,CT-ADVISER,caricamento,/04_Modello/modello_finanziario_v3.xlsx,CT-RESTRICTED,consentito,93.51.204.66
+2026-10-12T09:02:11,VESTRINI.I,CT-LEAD,accesso,/,-,consentito,10.42.7.11
+2026-10-13T08:47:29,VESTRINI.I,CT-LEAD,esportazione registro,periodo 2026-09-28/2026-10-13,-,consentito,10.42.7.11
+# Matrice dei gruppi configurata sulla piattaforma alla data di esportazione
+# gruppo,cartelle leggibili,download consentito
+# CT-LEAD,tutte,si
+# CT-ADVISER,tutte,si
+# CT-ALL,tutte,si
+# Nessuna revoca di utenza, sospensione di gruppo o segnalazione di incidente
+# risulta registrata nel periodo.

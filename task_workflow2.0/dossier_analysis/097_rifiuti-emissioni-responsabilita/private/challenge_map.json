@@ -1,0 +1,427 @@
+{
+  "task_id": "WF2-097",
+  "lato_assistito": "Fonderia Alsemio S.p.A., destinataria del verbale di prescrizioni",
+  "committente": "presidente del consiglio di amministrazione di Fonderia Alsemio S.p.A.",
+  "data_di_riferimento": "2026-09-10",
+  "stato_fascicolo": "verbale di prescrizioni ricevuto il 3 settembre 2026 e termini non ancora scaduti; nessuna domanda di rinnovo dell'autorizzazione presentata; intervento sul sistema di abbattimento avviato e non concluso; nessun procedimento sanzionatorio amministrativo avviato",
+  "meccanismi_di_difficolta": [
+    "gerarchia fra documenti: il verbale contesta una sola violazione, mentre le altre emergono dal confronto fra le prescrizioni dell'autorizzazione e la sequenza degli autocontrolli e delle manutenzioni",
+    "regola generale da dedurre: la distinzione fra superamento del valore limite e violazione delle prescrizioni comporta regimi sanzionatori diversi e nessun documento la enuncia",
+    "fatti distribuiti: le date di annotazione stanno nel registro, le date di produzione nella procedura interna, e il confronto fra le due serie non è scritto in alcun documento",
+    "data del documento contro data di efficacia: i termini delle prescrizioni decorrono dal ricevimento del verbale e non dal sopralluogo, che è l'altra data disponibile",
+    "termini in giorni lavorativi accanto a termini in giorni di calendario, nello stesso fascicolo e sullo stesso oggetto",
+    "soglia composta: il sotto-limite dei rifiuti pericolosi è interno al totale e il totale è costruito appena sotto la soglia complessiva",
+    "unità di misura doppia: la procedura interna espone volumi e pesi e la soglia di legge è espressa in una sola delle due",
+    "convenzione documentale contro regola di legge: la regola decisionale del laboratorio è nel rapporto di prova perché è una scelta del laboratorio, e non diventa per questo una regola di legge",
+    "ruolo formale contro ruolo sostanziale: il gestore è individuato dal potere decisionale, e l'autorizzazione e la procura indicano soggetti diversi",
+    "dichiarazione di parte da smentire: la mail del direttore dello stabilimento contiene cinque affermazioni, di cui quattro da correggere e una da confermare",
+    "evidenze incomplete: la nota del consulente chiude l'elenco della documentazione non reperita, e da quell'elenco dipende ciò che non è concludibile"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "termine per la domanda di rinnovo",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'autorizzazione alle emissioni ha durata di quindici anni dal rilascio del 22 marzo 2012 e scade il 22 marzo 2027; la domanda di rinnovo va presentata almeno un anno prima della scadenza, cioè entro il 22 marzo 2026: alla data di riferimento il termine è decorso da 172 giorni e nel fascicolo non risulta alcuna domanda",
+      "evidenza": "01_autorizzazione_emissioni_in_atmosfera.md; 09_nota_del_consulente_ambientale.md, punto 5.3",
+      "errore_bersaglio": "collocare la scadenza a quindici anni da un evento diverso dal rilascio, oppure trattare il termine per la domanda come non ancora decorso"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "stato dell'autorizzazione e rischio dell'esercizio",
+      "gravita": "alta",
+      "affermazione_richiesta": "alla data di riferimento l'autorizzazione è ancora efficace e l'esercizio è legittimo; l'esercizio continuato con autorizzazione scaduta è penalmente sanzionato, quindi l'obiettivo operativo è ottenere il provvedimento sulla domanda di rinnovo prima del 22 marzo 2027",
+      "evidenza": "01_autorizzazione_emissioni_in_atmosfera.md; art. 279, comma 1, del codice dell'ambiente",
+      "errore_bersaglio": "affermare che alla data di riferimento la società esercita con autorizzazione scaduta, oppure che il ritardo nella domanda ha già prodotto la decadenza del titolo"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "superamento del valore limite al punto E2",
+      "gravita": "alta",
+      "affermazione_richiesta": "il superamento del valore limite di emissione stabilito dall'autorizzazione per il punto E2 integra una contravvenzione punita con pena alternativa, non un illecito amministrativo",
+      "evidenza": "03_rapporto_di_prova_emissioni.md; 02_verbale_di_prescrizioni.md; art. 279, comma 2, del codice dell'ambiente",
+      "errore_bersaglio": "qualificare il superamento del valore limite come illecito amministrativo, o trattarlo come inadempimento contrattuale verso l'autorità"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "violazione delle prescrizioni dell'autorizzazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il mancato autocontrollo del primo semestre 2026 e la mancata sostituzione del corredo filtrante del punto E2 entro trentasei mesi dal 14 settembre 2019 sono violazioni di prescrizioni dell'autorizzazione, assoggettate a sanzione amministrativa pecuniaria irrogata dall'autorità competente, e non a sanzione penale",
+      "evidenza": "01_autorizzazione_emissioni_in_atmosfera.md, Allegato tecnico e prescrizione 5.2; 09_nota_del_consulente_ambientale.md, punti 3 e 4; art. 279, comma 2-bis, del codice dell'ambiente",
+      "errore_bersaglio": "trattare la violazione delle prescrizioni come reato, oppure ometterla perché il verbale non la contesta"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "aggravante e responsabilità dell'ente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la pena dell'arresto si applica sempre se il superamento dei valori limite di emissione determina anche il superamento dei valori limite di qualità dell'aria, e soltanto quella ipotesi è reato presupposto della responsabilità dell'ente; il fascicolo non contiene dati di qualità dell'aria, quindi il presupposto non è verificabile e va indicato che cosa serve acquisire",
+      "evidenza": "art. 279, comma 5, del codice dell'ambiente; art. 25-undecies, comma 2, lettera h), del decreto sulla responsabilità degli enti; 09_nota_del_consulente_ambientale.md, punto 5.6",
+      "errore_bersaglio": "affermare che il superamento espone la società a responsabilità da reato, oppure escludere l'esposizione dell'ente senza indicare da che cosa dipende"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "presupposto della procedura estintiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "la procedura estintiva si applica alle ipotesi contravvenzionali che non hanno cagionato danno o pericolo concreto e attuale di danno alle risorse protette: il verbale di prescrizioni ne presuppone la sussistenza, e il presupposto è il perimetro entro cui la procedura opera",
+      "evidenza": "art. 318-bis del codice dell'ambiente; 02_verbale_di_prescrizioni.md",
+      "errore_bersaglio": "presentare la procedura estintiva come applicabile a qualunque violazione ambientale, oppure ometterne il presupposto"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "decorrenza e distinzione dei due termini",
+      "gravita": "alta",
+      "affermazione_richiesta": "i termini delle due prescrizioni decorrono dal ricevimento del verbale, avvenuto il 3 settembre 2026, e non dal sopralluogo del 27 agosto: la prescrizione 1 scade il 13 ottobre 2026 e la prescrizione 2 il 23 settembre 2026",
+      "evidenza": "02_verbale_di_prescrizioni.md, prescrizioni 1 e 2 e relata di notifica",
+      "errore_bersaglio": "computare i termini dal sopralluogo, oppure trattare le due prescrizioni come soggette a un unico termine"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "proroga del termine di regolarizzazione",
+      "gravita": "media",
+      "affermazione_richiesta": "il termine può essere prorogato per una sola volta, su richiesta del contravventore, per un periodo non superiore a sei mesi, in presenza di specifiche e documentate circostanze non imputabili al contravventore, con provvedimento motivato comunicato immediatamente al pubblico ministero",
+      "evidenza": "art. 318-ter, comma 1, del codice dell'ambiente; 02_verbale_di_prescrizioni.md, avvertenza b)",
+      "errore_bersaglio": "presentare la proroga come rinnovabile o come concedibile su semplice richiesta, oppure ometterne le condizioni"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "meccanismo di estinzione della contravvenzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "in caso di adempimento il contravventore è ammesso a pagare in sede amministrativa, entro trenta giorni, una somma pari a un quarto del massimo dell'ammenda stabilita per la contravvenzione, cioè 2.500 euro sul massimo di 10.000, e il pagamento è ciò che estingue il reato; la verifica dell'adempimento avviene entro sessanta giorni dalla scadenza del termine fissato nella prescrizione, la comunicazione dell'adempimento al pubblico ministero entro centoventi giorni e quella dell'inadempimento entro novanta giorni dalla medesima scadenza",
+      "evidenza": "art. 318-quater, commi 1, 2 e 3, del codice dell'ambiente; 02_verbale_di_prescrizioni.md, contestazione 1 e avvertenze c), d) e f)",
+      "errore_bersaglio": "indicare come somma il minimo o l'intero massimo dell'ammenda, presentare il solo adempimento come causa di estinzione, oppure far decorrere i termini dell'organo accertatore dalla comunicazione della società anziché dalla scadenza del termine fissato nella prescrizione"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "sotto-limite dei rifiuti pericolosi in deposito",
+      "gravita": "alta",
+      "affermazione_richiesta": "la soglia volumetrica è di 30 metri cubi complessivi di cui al massimo 10 metri cubi di rifiuti pericolosi: i 11,8 metri cubi di rifiuti pericolosi in deposito superano il sotto-limite di 1,8 metri cubi, e il superamento del sotto-limite è sufficiente, indipendentemente dal totale",
+      "evidenza": "06_procedura_deposito_temporaneo.md, punto 6; art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "errore_bersaglio": "leggere la soglia come 30 metri cubi di non pericolosi più 10 metri cubi di pericolosi, oppure concludere che il deposito è regolare perché il totale è sotto i 30 metri cubi"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "conseguenza del superamento del sotto-limite",
+      "gravita": "alta",
+      "affermazione_richiesta": "il deposito temporaneo non necessita di autorizzazione soltanto alle condizioni di legge: venuta meno una di quelle condizioni, il deposito non è più coperto da quella previsione, e la posizione va sanata riportando il quantitativo entro il sotto-limite",
+      "evidenza": "art. 185-bis, commi 2 e 3, del codice dell'ambiente; 06_procedura_deposito_temporaneo.md, punto 6",
+      "errore_bersaglio": "trattare il superamento come irregolarità meramente formale, oppure attribuire al superamento una qualificazione sanzionatoria che il reference pack non consente di verificare"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "alternatività delle modalità di avvio",
+      "gravita": "media",
+      "affermazione_richiesta": "le due modalità di avvio a recupero o smaltimento sono alternative e a scelta del produttore: la società ha scelto la modalità volumetrica con la revisione 2 della procedura interna, e il passaggio alla cadenza almeno trimestrale, che prescinde dalle quantità in deposito, è una scelta disponibile",
+      "evidenza": "06_procedura_deposito_temporaneo.md, punto 4; art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "errore_bersaglio": "presentare la cadenza trimestrale come obbligo cumulativo con la soglia volumetrica, oppure non rilevare che la modalità è stata scelta dalla società"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "unità di misura della soglia",
+      "gravita": "media",
+      "affermazione_richiesta": "la soglia è espressa in metri cubi: i pesi riportati dalla procedura interna non sono il termine di confronto e non vanno usati per verificare il rispetto della soglia",
+      "evidenza": "06_procedura_deposito_temporaneo.md, punto 6; art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "errore_bersaglio": "verificare la soglia sui pesi in chilogrammi o in tonnellate"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "annotazione tardiva sul registro",
+      "gravita": "media",
+      "affermazione_richiesta": "il produttore annota almeno entro dieci giorni lavorativi dalla produzione del rifiuto: il rifiuto prodotto il 24 agosto 2026 andava annotato entro il 7 settembre 2026 ed è stato annotato l'8 settembre, con un giorno di ritardo",
+      "evidenza": "06_procedura_deposito_temporaneo.md, punto 7; 04_registro_cronologico_carico_scarico.md, registrazione n. 118; art. 190, comma 3, del codice dell'ambiente",
+      "errore_bersaglio": "computare i dieci giorni come giorni di calendario, oppure assumere che la data di annotazione coincida con la data di produzione perché il registro riporta una sola data"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "esclusione della responsabilità sul conferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la consegna dei rifiuti non esclude automaticamente la responsabilità: per il conferimento del 26 agosto 2026 l'esclusione richiede la ricezione della copia controfirmata e datata in arrivo dal destinatario entro tre mesi, cioè entro il 26 novembre 2026, ovvero, alla scadenza, la comunicazione della mancata ricezione alle autorità competenti; il termine non è scaduto e la copia non è tornata",
+      "evidenza": "05_formulario_identificazione_rifiuti.md, quarta sezione; 09_nota_del_consulente_ambientale.md, punto 5.5; art. 188, comma 4, del codice dell'ambiente",
+      "errore_bersaglio": "trattare la mancata restituzione come irregolarità già consumata, oppure omettere l'alternativa della comunicazione alle autorità competenti"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "posizione di gestore e potere decisionale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il gestore è chi ha potere decisionale circa l'installazione o l'esercizio dello stabilimento ed è responsabile dell'applicazione dei limiti e delle prescrizioni, e lo stabilimento è sottoposto al potere decisionale di un unico gestore; l'autorizzazione individua il gestore nel legale rappresentante pro tempore, mentre la procura attribuisce al direttore dello stabilimento poteri ampi ma riserva al consiglio di amministrazione l'approvazione dei piani di investimento e le spese straordinarie relative agli impianti di abbattimento; la questione di chi sia il gestore non è risolvibile sul fascicolo e va indicato che cosa serve acquisire; la variazione del gestore va comunicata dal nuovo gestore entro dieci giorni dalla data in cui essa acquista efficacia, nessuna comunicazione risulta nel fascicolo e la data da cui il termine decorrerebbe non è determinabile",
+      "evidenza": "01_autorizzazione_emissioni_in_atmosfera.md, articolo 1 e articolo 5; 07_procura_speciale_direttore_stabilimento.md, lettere c), d) e f) e riserve finali; 08_email_direttore_di_stabilimento.md; 09_nota_del_consulente_ambientale.md, punti 5.2, 5.8 e 6.1; art. 269, commi 11-bis, e art. 268, comma 1, lettere h) e n), del codice dell'ambiente",
+      "errore_bersaglio": "accogliere l'affermazione del direttore dello stabilimento e attribuirgli la posizione di gestore sulla base della sola procura, oppure escluderla sulla base della sola indicazione contenuta nell'autorizzazione, senza esporre gli elementi e senza indicare la documentazione mancante"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "formato cartaceo del formulario",
+      "chiave_nel_criterio": "formato cartaceo del formulario",
+      "ragione": "il formulario può continuare a essere emesso in formato cartaceo fino al 15 settembre 2026: il formulario del 26 agosto 2026 è emesso nel periodo in cui il formato cartaceo è ammesso e non è irregolare; dal 15 settembre 2026 si applicano le sanzioni per la mancata o incompleta trasmissione dei dati dei formulari, e il passaggio va preparato",
+      "errore_bersaglio": "indicare il formulario del 26 agosto 2026 come irregolare perché emesso in formato cartaceo"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "soglia complessiva dei trenta metri cubi",
+      "chiave_nel_criterio": "soglia complessiva di trenta metri cubi",
+      "ragione": "il volume complessivo in deposito è di 29,0 metri cubi e resta sotto la soglia complessiva: la soglia complessiva non è superata, ed è superato soltanto il sotto-limite dei rifiuti pericolosi",
+      "errore_bersaglio": "affermare che il deposito supera la soglia complessiva di trenta metri cubi"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "esonero dalla tenuta del registro",
+      "chiave_nel_criterio": "esonero dalla tenuta del registro",
+      "ragione": "l'esonero riguarda i soli rifiuti non pericolosi e le imprese che non hanno più di dieci dipendenti: l'unità locale ne conta 148 e la società produce rifiuti pericolosi, quindi l'obbligo sussiste in ogni caso",
+      "errore_bersaglio": "accogliere l'affermazione del direttore dello stabilimento secondo cui l'esonero si applica perché ciascun reparto conta meno di dieci addetti"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "punto di emissione E4",
+      "chiave_nel_criterio": "punto di emissione E4",
+      "ragione": "il valore misurato al punto E4 è inferiore al valore limite e il rapporto di prova dichiara la conformità applicando la regola decisionale che il laboratorio stesso dichiara; la somma dell'incertezza estesa al valore misurato non è la regola decisionale adottata e non è una regola di legge",
+      "errore_bersaglio": "indicare un secondo superamento al punto E4 sommando l'incertezza estesa al valore misurato"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "perdita di carico differenziale",
+      "chiave_nel_criterio": "perdita di carico differenziale",
+      "ragione": "la prescrizione fissa due condizioni di sostituzione del corredo filtrante, la periodicità di trentasei mesi e il superamento di 180 millimetri di colonna d'acqua: la perdita di carico rilevata è di 174 millimetri e quella seconda condizione non è integrata, mentre la prima lo è",
+      "errore_bersaglio": "fondare la violazione della prescrizione sul superamento della perdita di carico"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "iscrizione della società all'Albo dei gestori ambientali",
+      "chiave_nel_criterio": "iscrizione della società all'Albo",
+      "ragione": "l'iscrizione è requisito per lo svolgimento delle attività di raccolta e trasporto: la società non effettua raccolta né trasporto di rifiuti, non dispone di mezzi adibiti a tale scopo e affida il trasporto a operatore iscritto",
+      "errore_bersaglio": "indicare l'iscrizione della società all'Albo fra gli adempimenti mancanti"
+    }
+  ],
+  "dati_mancanti": [
+    "i dati di qualità dell'aria nell'area circostante lo stabilimento, senza i quali il presupposto dell'aggravante e della responsabilità dell'ente non è verificabile",
+    "la deliberazione del consiglio di amministrazione sulla ripartizione delle competenze in materia ambientale e sui poteri di spesa in materia di impianti di abbattimento, senza la quale l'individuazione di chi ha il potere decisionale resta incompleta",
+    "il modello di organizzazione, gestione e controllo, che il fascicolo non contiene",
+    "la valutazione sulla sussistenza o insussistenza di danno o di pericolo concreto e attuale di danno, che il verbale presuppone e non motiva",
+    "la legge regionale che individua l'autorità competente al rilascio dell'autorizzazione alle emissioni per il territorio interessato",
+    "la data in cui l'eventuale variazione del gestore avrebbe acquistato efficacia, da cui dipenderebbe il termine di dieci giorni per la comunicazione",
+    "l'esito della verifica analitica del destinatario sul conferimento del 26 agosto 2026"
+  ],
+  "fonti_ammesse": [
+    "D.Lgs. 152/2006, artt. 183, 184, 185-bis, 188, 190, 193, 212",
+    "D.Lgs. 152/2006, artt. 268, 269, 271, 279",
+    "D.Lgs. 152/2006, artt. 318-bis, 318-ter, 318-quater",
+    "art. 13, comma 5-bis, del decreto-legge 200/2025",
+    "D.Lgs. 231/2001, art. 25-undecies"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "10 settembre 2026",
+      "calcolo": "giovedì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "rilascio dell'autorizzazione alle emissioni",
+      "valore": "22 marzo 2012",
+      "calcolo": "giovedì",
+      "fonte": "01_autorizzazione_emissioni_in_atmosfera.md"
+    },
+    {
+      "milestone": "scadenza dell'autorizzazione alle emissioni",
+      "valore": "22 marzo 2027",
+      "calcolo": "quindici anni dal rilascio",
+      "fonte": "art. 269, comma 7, del codice dell'ambiente"
+    },
+    {
+      "milestone": "termine per la domanda di rinnovo",
+      "valore": "22 marzo 2026",
+      "calcolo": "almeno un anno prima della scadenza; alla data di riferimento il termine è decorso da 172 giorni e nel fascicolo non risulta alcuna domanda",
+      "fonte": "art. 269, comma 7, del codice dell'ambiente"
+    },
+    {
+      "milestone": "stato dell'autorizzazione alla data di riferimento",
+      "valore": "efficace",
+      "calcolo": "la scadenza è successiva di 193 giorni alla data di riferimento: alla data di riferimento non vi è esercizio con autorizzazione scaduta",
+      "fonte": "01_autorizzazione_emissioni_in_atmosfera.md"
+    },
+    {
+      "milestone": "punto di emissione E2, polveri totali",
+      "valore": "68 mg/Nm3 contro il limite di 50 mg/Nm3",
+      "calcolo": "superamento di 18 mg/Nm3; anche detratta l'incertezza estesa di 7 mg/Nm3 il valore resta a 61 mg/Nm3, sopra il limite",
+      "fonte": "03_rapporto_di_prova_emissioni.md"
+    },
+    {
+      "milestone": "punto di emissione E4, carbonio organico totale",
+      "valore": "47 mg/Nm3 contro il limite di 50 mg/Nm3",
+      "calcolo": "il valore è inferiore al limite di 3 mg/Nm3 e il rapporto di prova dichiara la conformità del punto applicando la regola decisionale semplice; sommando l'incertezza estesa di 5 mg/Nm3 si otterrebbero 52 mg/Nm3, ma la somma non è la regola decisionale dichiarata dal laboratorio",
+      "fonte": "03_rapporto_di_prova_emissioni.md"
+    },
+    {
+      "milestone": "scadenza dell'autocontrollo semestrale del primo semestre 2026",
+      "valore": "30 giugno 2026",
+      "calcolo": "l'autocontrollo semestrale va eseguito una volta in ciascun semestre solare; nel fascicolo non risulta alcun rapporto di prova del primo semestre 2026 e alla data di riferimento il termine è decorso da 72 giorni",
+      "fonte": "01_autorizzazione_emissioni_in_atmosfera.md, Allegato tecnico"
+    },
+    {
+      "milestone": "ultima sostituzione integrale del corredo filtrante del punto E2",
+      "valore": "14 settembre 2019",
+      "calcolo": "unica sostituzione integrale annotata sul registro delle manutenzioni",
+      "fonte": "09_nota_del_consulente_ambientale.md, punto 4"
+    },
+    {
+      "milestone": "termine della sostituzione periodica del corredo filtrante",
+      "valore": "14 settembre 2022",
+      "calcolo": "periodicità non superiore a trentasei mesi fissata dalla prescrizione 5.2; alla data di riferimento il termine è decorso da 1457 giorni",
+      "fonte": "01_autorizzazione_emissioni_in_atmosfera.md, prescrizione 5.2"
+    },
+    {
+      "milestone": "perdita di carico differenziale rilevata al punto E2",
+      "valore": "174 mm di colonna d'acqua contro la soglia di 180 mm",
+      "calcolo": "la soglia fissata dalla prescrizione 5.2 come seconda condizione di sostituzione non è raggiunta: la condizione integrata è quella temporale",
+      "fonte": "09_nota_del_consulente_ambientale.md, punto 4"
+    },
+    {
+      "milestone": "sopralluogo e verbale di accertamento",
+      "valore": "27 agosto 2026",
+      "calcolo": "giovedì; il verbale di prescrizioni è atto successivo e distinto",
+      "fonte": "02_verbale_di_prescrizioni.md"
+    },
+    {
+      "milestone": "ricevimento del verbale di prescrizioni",
+      "valore": "3 settembre 2026",
+      "calcolo": "giovedì; i termini delle prescrizioni decorrono dal ricevimento e non dal sopralluogo",
+      "fonte": "02_verbale_di_prescrizioni.md"
+    },
+    {
+      "milestone": "scadenza della prescrizione 1",
+      "valore": "13 ottobre 2026",
+      "calcolo": "quaranta giorni dal ricevimento del verbale, come fissati nel verbale; martedì; alla data di riferimento mancano 33 giorni",
+      "fonte": "02_verbale_di_prescrizioni.md"
+    },
+    {
+      "milestone": "scadenza della prescrizione 2",
+      "valore": "23 settembre 2026",
+      "calcolo": "venti giorni dal ricevimento del verbale, come fissati nel verbale; mercoledì; alla data di riferimento mancano 13 giorni",
+      "fonte": "02_verbale_di_prescrizioni.md"
+    },
+    {
+      "milestone": "derivazione errata: termini computati dal sopralluogo",
+      "valore": "6 ottobre 2026 e 16 settembre 2026",
+      "calcolo": "i termini non decorrono dalla data del sopralluogo",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "proroga massima del termine di regolarizzazione",
+      "valore": "sei mesi",
+      "calcolo": "per una sola volta, su richiesta, per specifiche e documentate circostanze non imputabili al contravventore",
+      "fonte": "art. 318-ter, comma 1, del codice dell'ambiente"
+    },
+    {
+      "milestone": "verifica dell'adempimento alla prescrizione 1",
+      "valore": "12 dicembre 2026",
+      "calcolo": "entro sessanta giorni dalla scadenza del termine fissato nella prescrizione",
+      "fonte": "art. 318-quater, comma 1, del codice dell'ambiente"
+    },
+    {
+      "milestone": "comunicazione al pubblico ministero dell'adempimento",
+      "valore": "10 febbraio 2027",
+      "calcolo": "entro centoventi giorni dalla scadenza del termine fissato nella prescrizione",
+      "fonte": "art. 318-quater, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "comunicazione al pubblico ministero dell'inadempimento",
+      "valore": "11 gennaio 2027",
+      "calcolo": "entro novanta giorni dalla scadenza del termine fissato nella prescrizione",
+      "fonte": "art. 318-quater, comma 3, del codice dell'ambiente"
+    },
+    {
+      "milestone": "somma da pagare in sede amministrativa per l'estinzione",
+      "valore": "2.500 euro",
+      "calcolo": "un quarto del massimo dell'ammenda stabilita per la contravvenzione: 10.000 / 4 = 2.500 euro; il pagamento va effettuato entro trenta giorni dall'ammissione",
+      "fonte": "art. 318-quater, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "volume in deposito temporaneo",
+      "valore": "29,0 mc complessivi, di cui 11,8 mc pericolosi",
+      "calcolo": "17,2 + 11,8 = 29,0 mc: il totale resta sotto i 30 mc, mentre i pericolosi (11,8 mc) superano di 1,8 mc il sotto-limite di 10 mc previsto dalla stessa lettera",
+      "fonte": "06_procedura_deposito_temporaneo.md, punto 6"
+    },
+    {
+      "milestone": "peso corrispondente ai volumi in deposito",
+      "valore": "25.250 kg",
+      "calcolo": "dato riportato dalla procedura interna; la soglia di legge è espressa in metri cubi e non in unità di peso, quindi il peso non è il termine di confronto",
+      "fonte": "06_procedura_deposito_temporaneo.md, punto 6"
+    },
+    {
+      "milestone": "produzione del rifiuto da annotare",
+      "valore": "24 agosto 2026",
+      "calcolo": "lunedì",
+      "fonte": "06_procedura_deposito_temporaneo.md, punto 7"
+    },
+    {
+      "milestone": "termine di annotazione sul registro",
+      "valore": "7 settembre 2026",
+      "calcolo": "dieci giorni lavorativi dalla produzione del rifiuto; lunedì",
+      "fonte": "art. 190, comma 3, del codice dell'ambiente"
+    },
+    {
+      "milestone": "annotazione effettivamente eseguita",
+      "valore": "8 settembre 2026",
+      "calcolo": "martedì; successiva al termine di 1 giorno di calendario",
+      "fonte": "04_registro_cronologico_carico_scarico.md, registrazione n. 118"
+    },
+    {
+      "milestone": "derivazione errata: dieci giorni di calendario dalla produzione",
+      "valore": "3 settembre 2026",
+      "calcolo": "il termine di annotazione è espresso in giorni lavorativi",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "dipendenti dell'unità locale",
+      "valore": "148",
+      "calcolo": "l'esonero dalla tenuta del registro riguarda, per i soli rifiuti non pericolosi, le imprese con non più di dieci dipendenti",
+      "fonte": "06_procedura_deposito_temporaneo.md, punto 2"
+    },
+    {
+      "milestone": "emissione del formulario di identificazione",
+      "valore": "26 agosto 2026",
+      "calcolo": "mercoledì; anteriore di 20 giorni al termine finale per il formato cartaceo",
+      "fonte": "05_formulario_identificazione_rifiuti.md"
+    },
+    {
+      "milestone": "termine finale per l'emissione del formulario cartaceo",
+      "valore": "15 settembre 2026",
+      "calcolo": "la data di riferimento precede il termine di 5 giorni; dalla stessa data si applicano le sanzioni per la mancata o incompleta trasmissione dei dati dei formulari",
+      "fonte": "art. 13, comma 5-bis, del decreto-legge 200/2025"
+    },
+    {
+      "milestone": "termine per la ricezione della copia controfirmata del formulario",
+      "valore": "26 novembre 2026",
+      "calcolo": "tre mesi dal conferimento dei rifiuti al trasportatore; alla data di riferimento il termine non è scaduto e mancano 77 giorni",
+      "fonte": "art. 188, comma 4, del codice dell'ambiente"
+    },
+    {
+      "milestone": "procura speciale al direttore di stabilimento",
+      "valore": "15 gennaio 2024",
+      "calcolo": "successiva al rilascio dell'autorizzazione, che indica come gestore il legale rappresentante pro tempore",
+      "fonte": "07_procura_speciale_direttore_stabilimento.md"
+    },
+    {
+      "milestone": "termine per la comunicazione della variazione del gestore",
+      "valore": "dieci giorni dalla data in cui la variazione acquista efficacia",
+      "calcolo": "la comunicazione è a carico del nuovo gestore; nel fascicolo non risulta alcuna comunicazione",
+      "fonte": "art. 269, comma 11-bis, del codice dell'ambiente"
+    },
+    {
+      "milestone": "autonomia di spesa attribuita al procuratore",
+      "valore": "150.000 euro per singolo contratto",
+      "calcolo": "dato dell'atto di procura; le spese straordinarie relative agli impianti di abbattimento sono riservate al consiglio di amministrazione indipendentemente dall'importo",
+      "fonte": "07_procura_speciale_direttore_stabilimento.md"
+    }
+  ],
+  "funzione_allegati": {
+    "01_autorizzazione_emissioni_in_atmosfera.md": "individua il gestore, fissa i valori limite e le prescrizioni gestionali con la loro periodicità, e porta la data di rilascio da cui dipendono durata e termine di rinnovo; non contiene alcuna data di scadenza",
+    "02_verbale_di_prescrizioni.md": "delimita ciò che è contestato, fissa due termini distinti decorrenti dal ricevimento e non dal sopralluogo, e riporta la cornice edittale della contravvenzione contestata",
+    "03_rapporto_di_prova_emissioni.md": "documenta il superamento al punto E2 e la conformità al punto E4, e dichiara la regola decisionale del laboratorio, che è una convenzione del laboratorio e non una regola di legge",
+    "04_registro_cronologico_carico_scarico.md": "porta le date di annotazione; le date di produzione dei rifiuti stanno soltanto nella procedura interna, e il confronto fra le due serie è a carico di chi legge",
+    "05_formulario_identificazione_rifiuti.md": "fissa la data di conferimento al trasportatore da cui decorre il termine di tre mesi, e mostra la sezione riservata al destinatario non compilata",
+    "06_procedura_deposito_temporaneo.md": "contiene la scelta della modalità di avvio, che è una scelta della società, i volumi e i pesi in deposito, il numero dei dipendenti e le date di produzione dei rifiuti",
+    "07_procura_speciale_direttore_stabilimento.md": "è la fonte dei poteri del direttore dello stabilimento e contiene le riserve al consiglio di amministrazione: è il documento su cui si misura chi ha il potere decisionale",
+    "08_email_direttore_di_stabilimento.md": "porta le affermazioni di parte da verificare e da smentire, e la richiesta di riferire la posizione di gestore al direttore",
+    "09_nota_del_consulente_ambientale.md": "chiude l'elenco della documentazione non reperita e fornisce la sequenza degli autocontrolli e delle manutenzioni: delimita ciò che il fascicolo non consente di concludere"
+  }
+}

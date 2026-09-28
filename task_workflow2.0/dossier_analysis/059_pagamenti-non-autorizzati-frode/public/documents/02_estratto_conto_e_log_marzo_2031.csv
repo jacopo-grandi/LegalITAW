@@ -1,0 +1,13 @@
+data_valuta;data_contabile;descrizione;beneficiario;importo_eur;segno;canale;utenza_disponente;dispositivo;autenticazione_forte;numero_firme;saldo_progressivo_eur
+2031-03-03;2031-03-03;bonifico stipendi febbraio;dipendenti - distinta 0231;-96.420,00;D;servizio a distanza;baldiselva.r;DEV-004 censito;applicata;2;412.660,00
+2031-03-04;2031-03-04;incasso fattura 118/2031;Meccanotherm S.r.l.;+61.250,00;A;bonifico in entrata;-;-;-;-;473.910,00
+2031-03-05;2031-03-05;bonifico a favore ORBITEC LP;ORBITEC LP - conto estero;-24.500,00;D;servizio a distanza;vertegno.a;DEV-019 non censito;non applicata;1;449.410,00
+2031-03-05;2031-03-05;bonifico a favore ORBITEC LP;ORBITEC LP - conto estero;-18.000,00;D;servizio a distanza;vertegno.a;DEV-019 non censito;non applicata;1;431.410,00
+2031-03-06;2031-03-06;bonifico a favore KESTRA TRADE OU;KESTRA TRADE OU - conto estero;-39.000,00;D;servizio a distanza;baldiselva.r;DEV-004 censito;applicata;1;392.410,00
+2031-03-06;2031-03-06;bonifico a favore ORBITEC LP;ORBITEC LP - conto estero;-22.000,00;D;servizio a distanza;vertegno.a;DEV-019 non censito;non applicata;1;370.410,00
+2031-03-07;2031-03-07;bonifico a favore KESTRA TRADE OU;KESTRA TRADE OU - conto estero;-16.000,00;D;servizio a distanza;vertegno.a;DEV-019 non censito;non applicata;1;354.410,00
+2031-03-07;2031-03-07;bonifico a favore KESTRA TRADE OU;KESTRA TRADE OU - conto estero;-29.000,00;D;servizio a distanza;baldiselva.r;DEV-004 censito;applicata;1;325.410,00
+2031-03-10;2031-03-10;addebito utenze;Enerlinea S.p.A. - SDD;-8.140,00;D;addebito diretto;-;-;-;-;317.270,00
+2031-03-11;2031-03-11;incasso fattura 121/2031;Rettifiche Ausonio S.r.l.;+34.900,00;A;bonifico in entrata;-;-;-;-;352.170,00
+2031-03-12;2031-03-12;blocco delle credenziali su richiesta del cliente;-;0,00;-;numero verde;-;-;-;-;352.170,00
+2031-03-13;2031-03-13;richiamo bonifici ORBITEC LP - esito negativo, nessun rientro;ORBITEC LP - conto estero;0,00;-;-;-;-;-;-;352.170,00

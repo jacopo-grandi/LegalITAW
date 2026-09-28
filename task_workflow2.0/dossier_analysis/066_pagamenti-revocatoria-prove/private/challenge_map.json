@@ -1,0 +1,206 @@
+{
+  "task_id": "WF2-066",
+  "lato_assistito": "curatela di Litoriva Componenti S.p.A.",
+  "data_di_riferimento": "2029-04-12",
+  "stato_fascicolo": "istruttoria precontenziosa",
+  "fonti_ammesse": [
+    "D.lgs. 12 gennaio 2019, n. 14, artt. 166-170"
+  ],
+  "calcoli": [
+    "30/11/2028 e' 14 giorni prima della domanda",
+    "18/04/2028 e' entro l'anno anteriore alla domanda",
+    "pretesa massima senza duplicazioni: EUR 180.000 + EUR 260.000 = EUR 440.000"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per quantificazione della pretesa: separare EUR 180.000 e EUR 260.000",
+    "integrazione necessaria per prova bancaria mancante: acquisire flussi bancari e beneficiario effettivo"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_sentenza_apertura_liquidazione.pdf",
+      "funzione": "Domanda depositata il 14 dicembre 2028; liquidazione giudiziale aperta il 20 febbraio 2029; curatore nominato."
+    },
+    {
+      "file": "02_estratto_pagamenti.xlsx",
+      "funzione": "Bonifico Grisolara EUR 180.000 il 30 novembre 2028; cessione di macchinario in pagamento EUR 260.000 il 18 aprile 2028; utenze EUR 42.000 mensili; pagamento fornitura anticipata EUR 75.000."
+    },
+    {
+      "file": "03_corrispondenza_grisolara.eml",
+      "funzione": "Il 12 novembre Grisolara scrive che gli stipendi sono in ritardo e minaccia sospensione; il 29 novembre chiede pagamento immediato con bonifico."
+    },
+    {
+      "file": "04_piano_attestato.pdf",
+      "funzione": "Piano pubblicato il 2 maggio 2028; individua espressamente i pagamenti utenze e fornitura anticipata, non il bonifico Grisolara ne' la cessione del macchinario."
+    },
+    {
+      "file": "05_atto_pegno_tardivo.pdf",
+      "funzione": "Il 10 ottobre 2028 Litoriva costituisce pegno su macchinario a garanzia di debito Grisolara sorto nel 2027."
+    },
+    {
+      "file": "06_contabilita_e_scadenzario.xlsx",
+      "funzione": "Il bonifico estingue fatture scadute; la cessione sostituisce denaro; le utenze seguono termini usuali; la fornitura anticipata riceve merce equivalente il 5 dicembre."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "periodo di sei mesi",
+      "gravita": "alta",
+      "affermazione_richiesta": "il bonifico 30 novembre cade nei sei mesi anteriori alla domanda del 14 dicembre",
+      "azione_richiesta": "valutarlo nel regime con prova della conoscenza a carico del curatore",
+      "conseguenza": "la data di apertura non e' l'unico riferimento",
+      "evidenza": "doc. 01 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "pagamento normale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il bonifico usa denaro per debiti scaduti",
+      "azione_richiesta": "non applicare la categoria dei mezzi anormali",
+      "conseguenza": "resta possibile la revoca con prova della scientia decoctionis",
+      "evidenza": "doc. 02 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "indizi di conoscenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "ritardo stipendi e minaccia di sospensione precedono il bonifico",
+      "azione_richiesta": "usare la mail come indizio e cercare ulteriori riscontri",
+      "conseguenza": "un singolo indizio non equivale a prova conclusiva",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "cessione in pagamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il macchinario sostituisce denaro per debito scaduto",
+      "azione_richiesta": "qualificare mezzo anormale e verificare il periodo annuale",
+      "conseguenza": "l'onere sulla mancata conoscenza si sposta al convenuto",
+      "evidenza": "doc. 02 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "valore del macchinario",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca perizia indipendente sul valore EUR 260.000",
+      "azione_richiesta": "acquisire stima alla data dell'atto",
+      "conseguenza": "non si puo' quantificare la sproporzione",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "pegno per debito preesistente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la garanzia del 10 ottobre assiste debito del 2027",
+      "azione_richiesta": "trattare separatamente costituzione e pagamento",
+      "conseguenza": "la garanzia tardiva ha una categoria propria",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "piano attestato non copre Grisolara",
+      "gravita": "media",
+      "affermazione_richiesta": "bonifico e cessione non sono individuati dal piano",
+      "azione_richiesta": "non estendere automaticamente l'esenzione",
+      "conseguenza": "la pubblicazione del piano non immunizza ogni atto",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "utenze previste dal piano",
+      "gravita": "media",
+      "affermazione_richiesta": "i pagamenti mensili sono nominati e seguono termini d'uso",
+      "azione_richiesta": "classificarli come esenti salvo prova contraria specifica",
+      "conseguenza": "la continuita' operativa e' documentata",
+      "evidenza": "doc. 04 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "fornitura anticipata con nuova utilita'",
+      "gravita": "media",
+      "affermazione_richiesta": "il pagamento e' previsto e la merce arriva per valore equivalente",
+      "azione_richiesta": "preservare prova di consegna",
+      "conseguenza": "non emerge depauperamento",
+      "evidenza": "doc. 04 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "domanda e apertura distinte",
+      "gravita": "media",
+      "affermazione_richiesta": "14 dicembre 2028 e 20 febbraio 2029 svolgono funzioni diverse",
+      "azione_richiesta": "riportare entrambe nella timeline",
+      "conseguenza": "fondere le date altera periodi e decadenze",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "quantificazione della pretesa",
+      "gravita": "media",
+      "affermazione_richiesta": "il massimo teorico e' EUR 440.000 ma dipende da due azioni distinte",
+      "azione_richiesta": "separare EUR 180.000 e EUR 260.000",
+      "conseguenza": "evitare doppio conteggio del pegno",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "prova bancaria mancante",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano causali estese e contabile completa",
+      "azione_richiesta": "acquisire flussi bancari e beneficiario effettivo",
+      "conseguenza": "l'estratto contabile non chiude la prova",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "utenze ordinarie",
+      "oggetto": "doc. 04 e doc. 06",
+      "chiave_nel_criterio": "utenze",
+      "perche_non_e_issue": "sono previste dal piano e pagate nei termini d'uso",
+      "criterio_assenza": "B.38"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "fornitura anticipata",
+      "oggetto": "doc. 06",
+      "chiave_nel_criterio": "EUR 75.000",
+      "perche_non_e_issue": "la merce equivalente e' stata consegnata",
+      "criterio_assenza": "B.39"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "ritardo stipendi come indizio",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "stipendi",
+      "perche_non_e_issue": "e' indizio di conoscenza, non atto revocabile",
+      "criterio_assenza": "B.40"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "pegno senza pagamento",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "pegno",
+      "perche_non_e_issue": "la costituzione va analizzata separatamente e non sommata due volte",
+      "criterio_assenza": "B.41"
+    }
+  ]
+}

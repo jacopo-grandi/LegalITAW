@@ -1,0 +1,4 @@
+Sono il DPO di Trebbia Formazione S.r.l. Il fornitore che gestisce la nostra piattaforma di iscrizione ai corsi ci ha comunicato un accesso non autorizzato ai suoi sistemi, e ti giro il fascicolo così com'è agli atti oggi, mercoledì 9 dicembre 2026, ore 10:00: il report del monitoraggio, il ticket del fornitore, la sua comunicazione, il verbale del comitato di crisi, la bozza di notifica che abbiamo predisposto, il registro delle violazioni, il contratto di trattamento, lo scambio di email di fine novembre e il referto dell'analisi preliminare.
+Fammi l'elenco degli adempimenti che questa vicenda ci impone, con il termine di ciascuno e lo stato alla data di oggi. Per ogni termine indicami il documento da cui deriva la decorrenza e il calcolo che hai seguito.
+Dimmi che cosa dobbiamo fare adesso, adempimento per adempimento.
+Il comitato mi chiederà se dobbiamo scrivere agli iscritti e a quali: preparami la risposta.

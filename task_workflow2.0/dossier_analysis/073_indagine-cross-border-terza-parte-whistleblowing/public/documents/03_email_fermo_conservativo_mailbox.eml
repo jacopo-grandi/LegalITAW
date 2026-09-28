@@ -1,0 +1,128 @@
+From: Davide Sarti <d.sarti@brumaltopharma.it>
+To: Giulia Ranieri <g.ranieri@brumaltopharma.it>
+Cc: Chiara Bonomi <c.bonomi@brumaltopharma.it>,
+ Service Desk ICT <servicedesk@brumaltopharma.it>
+Date: Wed, 24 Oct 2029 12:10:44 +0200
+Subject: Re: Fermo conservativo mailbox - pratica WB-2029-44 (era: Kestrel,
+ margini Q4 e nota indennizzo)
+Message-ID: <a1b3529cf0ba@brumaltopharma.it>
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+
+Buongiorno avvocato,
+
+fatto. Alle 11:40 ho attivato il blocco di conservazione sulle sei caselle de=
+ll'elenco: i messaggi non sono pi=C3=B9 cancellabili in via definitiva dagli =
+utenti e la regola di svuotamento automatico della cartella Posta eliminata d=
+opo 90 giorni =C3=A8 sospesa per quelle caselle fino a revoca. Ticket di rife=
+rimento TCK-ICT-44190, aperto sul mio nome.
+
+Due cose. la prima: sull'elenco non c'=C3=A8 la casella di funzione ordini.ex=
+port@brumaltopharma.it, che per=C3=B2 =C3=A8 delegata a due delle utenze indi=
+cate; se serve la aggiungo con la stessa impostazione, ditemi voi. La seconda=
+: se il vostro studio chiede l'esportazione, possiamo produrre i file .pst pe=
+r singola casella con un ordine di lavoro firmato dalla Direzione affari lega=
+li, tempo tecnico  due giorni lavorativi per casella.
+
+Per la parte HR: nessuna dismissione di utenze in corso, ho messo un flag sul=
+le sei posizioni in modo che il service desk non chiuda nulla per errore.
+
+Buon lavoro,
+
+Davide Sarti
+ICT Operations - Infrastrutture e postazioni
+Brumalto Pharma S.p.A. - tel. 02 4471 2318
+
+-----Messaggio originale-----
+Da: Giulia Ranieri <g.ranieri@brumaltopharma.it>
+Inviato: mercoled=C3=AC 24 ottobre 2029 08:52
+A: Davide Sarti <d.sarti@brumaltopharma.it>; Chiara Bonomi <c.bonomi@brumalto=
+pharma.it>
+Cc: Sabrina Pellizzari <s.pellizzari@brumaltopharma.it>; Andrea Marchetti <a.=
+marchetti@brumaltopharma.it>
+Oggetto: Fermo conservativo mailbox - pratica WB-2029-44 (era: Kestrel, margi=
+ni Q4 e nota indennizzo)
+
+Buongiorno,
+
+rispondo su questo messaggio perch=C3=A9 contiene i riferimenti della vicenda=
+ e resti tutto nello stesso filo.
+
+Con la presente la Direzione affari legali dispone, con effetto immediato, il=
+ fermo conservativo della posta elettronica delle caselle sotto elencate, ind=
+ividuate sull'anagrafica utenti Exchange alla data odierna:
+
+- g.terzi@brumaltopharma.it (responsabile export area APAC)
+- a.marchetti@brumaltopharma.it (direttore commerciale)
+- e.vigorelli@brumaltopharma.it (supply chain e spedizioni)
+- e.tagliavini@brumaltopharma.it (amministrazione fornitori)
+- m.bassani@brumaltopharma.it (amministrazione fornitori)
+- amministrazione.fornitori@brumaltopharma.it (casella di funzione)
+
+Per le caselle elencate: sospendere la regola di cancellazione automatica a 9=
+0 giorni, inibire la cancellazione definitiva da parte degli utenti, non cons=
+entire spostamenti in archivi locali. Il fermo riguarda i messaggi dal 1=C2=
+=B0 gennaio 2029 alla data odierna e quelli successivi, fino a nuova comunica=
+zione scritta di questa Direzione. Nessuna esportazione senza nostra autorizz=
+azione.
+
+Alla Direzione risorse umane chiedo di non avviare procedure di chiusura o ri=
+assegnazione delle utenze indicate.
+
+Chiedo a ICT Operations conferma scritta dell'attivazione entro domani, 25 ot=
+tobre, con indicazione dell'ora e del ticket. Il presente avviso =C3=A8 conse=
+rvato al protocollo AL/2029/0904 e sar=C3=A0 richiamato nella corrispondenza =
+con lo studio incaricato.
+
+Cordiali saluti,
+
+Avv. Giulia Ranieri
+Responsabile contenzioso e compliance - Direzione affari legali
+Brumalto Pharma S.p.A.
+Via Anselmo Fossati 14, 20139 Milano - tel. 02 4471 2245
+
+-----Messaggio originale-----
+Da: Sabrina Pellizzari <s.pellizzari@brumaltopharma.it>
+Inviato: luned=C3=AC 22 ottobre 2029 18:37
+A: Andrea Marchetti <a.marchetti@brumaltopharma.it>
+Cc: Elena Vigorelli <e.vigorelli@brumaltopharma.it>; Gianluca Terzi <g.terzi@=
+brumaltopharma.it>; Giulia Ranieri <g.ranieri@brumaltopharma.it>
+Oggetto: Re: Kestrel, margini Q4 e nota indennizzo
+
+Andrea,
+
+riprendo il punto che mi hai girato venerd=C3=AC e provo a chiudere sia la pa=
+rte legale sia quella operativa, cos=C3=AC non ci scriviamo altre tre volte.
+
+Sul contratto di distribuzione del 2 aprile 2028: la clausola 14.3 obbliga Ke=
+strel a comunicarci per iscritto e in via preventiva l'incarico di terzi, e l=
+a clausola 22.2 ci consente il recesso con preavviso di sessanta giorni per i=
+nadempimento agli obblighi informativi. La mia valutazione, per ora, =C3=A8 c=
+he una contestazione formale scritta prima di avere le carte contabili ci ind=
+ebolisca: se contestiamo e poi non riusciamo a provare il rapporto con l'inte=
+rmediario, la richiesta di indennizzo che loro hanno gi=C3=A0 anticipato per =
+iscritto (lettera del 3 ottobre) trova un appoggio. Quindi nessuna diffida in=
+ uscita senza il mio visto. Preparo io il quesito allo studio esterno sulla t=
+enuta della clausola 14.3 e sulla quantificazione dell'indennizzo.
+
+Nel frattempo, per la parte commerciale, procedete cos=C3=AC: sospendete lo s=
+conto quantit=C3=A0 del 4% previsto sul listino Q4 per Kestrel; non confermat=
+e l'ordine KM-ORD-2211 (lotto 4431) prima del 15 novembre; il prezzo di cessi=
+one per i codici 8891 e 8892 resta fissato a 11,80 EUR/confezione, non scende=
+te oltre. Elena, ho gi=C3=A0 detto a te a voce di trattenere la spedizione de=
+l 5 novembre: tienila ferma e non mandare avvisi al cliente, al massimo un ri=
+tardo tecnico di magazzino.
+
+Gianluca, mandami l'elenco dei pagamenti 2029 alla controparte e a chiunque a=
+ltro sia stato pagato per quelle fatture, in un unico file, non a pezzi.
+
+Grazie,
+Sabrina
+
+Avv. Sabrina Pellizzari
+Direzione affari legali - Brumalto Pharma S.p.A.
+tel. 02 4471 2241 - s.pellizzari@brumaltopharma.it
+
+Comunicazione riservata: corrispondenza con l'ufficio legale, coperta da rise=
+rvatezza professionale. Ne =C3=A8 vietata la diffusione a terzi.

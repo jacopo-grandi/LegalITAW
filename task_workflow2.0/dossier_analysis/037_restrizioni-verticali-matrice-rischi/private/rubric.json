@@ -1,0 +1,1113 @@
+{
+  "task_id": "WF2-037",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 55,
+  "criteria": [
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "ogni riga della matrice riporta il documento e la clausola da cui l'elemento risulta.",
+      "match_criteria": "Oggetto del criterio: ogni riga della matrice riporta il documento e la clausola da cui l'elemento risulta.\nPASS se: nessuna riga della matrice ha vuota la colonna del documento e della clausola\nFAIL se: almeno una riga non riporta il documento oppure non riporta la clausola.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna riga della matrice ha vuota la colonna del documento e della clausola",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "in ogni riga della matrice la colonna della qualificazione riporta una sola fra le cinque etichette dell'elenco chiuso: restrizione fondamentale, restrizione esclusa, coperta dall'esenzione, fuori dall'esenzione da valutare, non restrittiva",
+      "match_criteria": "Oggetto del criterio: in ogni riga della matrice la colonna della qualificazione riporta una sola fra le cinque etichette dell'elenco chiuso: restrizione fondamentale, restrizione esclusa, coperta dall'esenzione, fuori dall'esenzione da valutare, non restrittiva.\nPASS se: ogni riga porta esattamente una delle cinque etichette e nessuna riga porta un'etichetta diversa\nFAIL se: compare un'etichetta estranea all'elenco chiuso, oppure una riga ne porta più di una, oppure una riga non ne porta alcuna.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ogni riga porta esattamente una delle cinque etichette e nessuna riga porta un'etichetta diversa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "ogni riga della matrice riporta la colonna dei presupposti da cui la qualificazione dipende.",
+      "match_criteria": "Oggetto del criterio: ogni riga della matrice riporta la colonna dei presupposti da cui la qualificazione dipende.\nPASS se: nessuna riga della matrice ha vuota la colonna dei presupposti\nFAIL se: almeno una riga non riporta i presupposti.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna riga della matrice ha vuota la colonna dei presupposti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "ogni riga della matrice riporta un'azione.",
+      "match_criteria": "Oggetto del criterio: ogni riga della matrice riporta un'azione.\nPASS se: nessuna riga della matrice ha vuota la colonna dell'azione\nFAIL se: almeno una riga non riporta un'azione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nessuna riga della matrice ha vuota la colonna dell'azione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non contiene riferimenti normativi, di soft law o giurisprudenziali diversi da quelli elencati nella tabella dell'elenco chiuso di 03_legal_sources.md.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene riferimenti normativi, di soft law o giurisprudenziali diversi da quelli elencati nella tabella dell'elenco chiuso di 03_legal_sources.md.\nPASS se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFAIL se: compare un riferimento estraneo all'elenco chiuso.\nFonte di authoring: 03_legal_sources.md",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica come restrizione fondamentale la politica di prezzo al pubblico risultante dalla circolare alla Rete e dall'email dell'Area Manager.",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica come restrizione fondamentale la politica di prezzo al pubblico risultante dalla circolare alla Rete e dall'email dell'Area Manager.\nPASS se: nella riga relativa a quella politica compare l'etichetta «restrizione fondamentale»\nFAIL se: quella politica è qualificata con una delle altre quattro etichette, oppure non compare nella matrice.\nÈ indifferente: l'uso dell'espressione «imposizione dei prezzi di rivendita» accanto all'etichetta.\nFonte di authoring: documenti 04 e 05; art. 4, lett. a), reg. (UE) 2022/720",
+      "pass_condition": "nella riga relativa a quella politica compare l'etichetta «restrizione fondamentale»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable riconduce la qualificazione della politica di prezzo alla combinazione fra la circolare e la minaccia contenuta nell'email dell'Area Manager.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la qualificazione della politica di prezzo alla combinazione fra la circolare e la minaccia contenuta nell'email dell'Area Manager.\nPASS se: la qualificazione è agganciata a entrambi i documenti: la circolare alla Rete e l'email dell'Area Manager\nFAIL se: la qualificazione è agganciata a uno solo dei due documenti, oppure a nessuno.\nÈ indifferente: il richiamo anche dell'obbligo di segnalazione degli scostamenti.\nFonte di authoring: documenti 04 e 05",
+      "pass_condition": "la qualificazione è agganciata a entrambi i documenti: la circolare alla Rete e l'email dell'Area Manager",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non fonda la qualificazione della politica di prezzo sulla sola raccomandazione dei prezzi di rivendita.",
+      "match_criteria": "Oggetto del criterio: il deliverable non fonda la qualificazione della politica di prezzo sulla sola raccomandazione dei prezzi di rivendita.\nPASS se: non compare l'affermazione che la raccomandazione dei prezzi sia, in sé, un'imposizione dei prezzi di rivendita\nFAIL se: la qualificazione è fondata sulla sola esistenza di prezzi raccomandati.\nFonte di authoring: art. 4, lett. a), reg. (UE) 2022/720; Orientamenti, punto (188)",
+      "pass_condition": "non compare l'affermazione che la raccomandazione dei prezzi sia, in sé, un'imposizione dei prezzi di rivendita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che la qualificazione come restrizione fondamentale non dipende dalla quota di mercato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la qualificazione come restrizione fondamentale non dipende dalla quota di mercato.\nPASS se: compare l'affermazione che la restrizione fondamentale elimina il beneficio dell'esenzione a prescindere dalla quota; compare l'affermazione che la soglia del 30 per cento non rileva per le restrizioni fondamentali; compare l'affermazione che la questione della definizione del mercato non incide su quella qualificazione\nFAIL se: il deliverable subordina la qualificazione alla verifica della soglia, oppure il punto non è trattato.\nFonte di authoring: art. 4 reg. (UE) 2022/720",
+      "pass_condition": "compare l'affermazione che la restrizione fondamentale elimina il beneficio dell'esenzione a prescindere dalla quota; compare l'affermazione che la soglia del 30 per cento non rileva per le restrizioni fondamentali; compare l'affermazione che la questione della definizione del mercato non incide su quella qualificazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che la comunicazione sugli accordi di importanza minore non si applica agli accordi che hanno per oggetto di restringere la concorrenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la comunicazione sugli accordi di importanza minore non si applica agli accordi che hanno per oggetto di restringere la concorrenza.\nPASS se: compare l'affermazione che il de minimis non copre le restrizioni per oggetto; compare l'affermazione che la soglia del 15 per cento non è invocabile per le restrizioni fondamentali\nFAIL se: il punto non è trattato, oppure il deliverable ammette il de minimis per quella condotta.\nFonte di authoring: comunicazione de minimis, punti 2 e 13",
+      "pass_condition": "compare l'affermazione che il de minimis non copre le restrizioni per oggetto; compare l'affermazione che la soglia del 15 per cento non è invocabile per le restrizioni fondamentali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica come restrizione fondamentale la clausola del contratto di distribuzione esclusiva che vieta al distributore di dare seguito agli ordini provenienti da fuori territorio.",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica come restrizione fondamentale la clausola del contratto di distribuzione esclusiva che vieta al distributore di dare seguito agli ordini provenienti da fuori territorio.\nPASS se: nella riga relativa a quella clausola compare l'etichetta «restrizione fondamentale»\nFAIL se: quella clausola è qualificata con una delle altre quattro etichette, oppure non compare nella matrice.\nÈ indifferente: l'uso dell'espressione «vendite passive» accanto all'etichetta.\nFonte di authoring: documento 02, art. 4, comma 3; art. 4, lett. b), reg. (UE) 2022/720",
+      "pass_condition": "nella riga relativa a quella clausola compare l'etichetta «restrizione fondamentale»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che l'eccezione prevista per la distribuzione esclusiva copre le sole vendite attive.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'eccezione prevista per la distribuzione esclusiva copre le sole vendite attive.\nPASS se: compare l'affermazione che l'eccezione riguarda le vendite attive e non le passive; compare l'affermazione che le vendite passive non possono essere restrette\nFAIL se: il punto non è trattato.\nFonte di authoring: art. 4, lett. b), punto i), reg. (UE) 2022/720",
+      "pass_condition": "compare l'affermazione che l'eccezione riguarda le vendite attive e non le passive; compare l'affermazione che le vendite passive non possono essere restrette",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica come restrizione fondamentale la clausola del contratto di distribuzione selettiva che vieta ai Rivenditori Autorizzati di cedere i Prodotti ad altri Rivenditori Autorizzati.",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica come restrizione fondamentale la clausola del contratto di distribuzione selettiva che vieta ai Rivenditori Autorizzati di cedere i Prodotti ad altri Rivenditori Autorizzati.\nPASS se: nella riga relativa a quella clausola compare l'etichetta «restrizione fondamentale»\nFAIL se: quella clausola è qualificata con una delle altre quattro etichette, oppure non compare nella matrice.\nÈ indifferente: l'uso dell'espressione «forniture incrociate» accanto all'etichetta.\nFonte di authoring: documento 01, art. 7, comma 2; art. 4, lett. c), punto ii), reg. (UE) 2022/720",
+      "pass_condition": "nella riga relativa a quella clausola compare l'etichetta «restrizione fondamentale»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable riconduce quella qualificazione all'articolo 7, comma 2, del contratto di distribuzione selettiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce quella qualificazione all'articolo 7, comma 2, del contratto di distribuzione selettiva.\nPASS se: la qualificazione è agganciata all'articolo 7, comma 2, del contratto di distribuzione selettiva; la qualificazione è agganciata alla clausola del documento 01 che vieta le cessioni fra Rivenditori Autorizzati\nFAIL se: la qualificazione non è agganciata ad alcuna clausola determinata.\nFonte di authoring: documento 01, art. 7, comma 2",
+      "pass_condition": "la qualificazione è agganciata all'articolo 7, comma 2, del contratto di distribuzione selettiva; la qualificazione è agganciata alla clausola del documento 01 che vieta le cessioni fra Rivenditori Autorizzati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica la maggiorazione del prezzo all'ingrosso per le unità destinate al canale online con una delle due etichette «coperta dall'esenzione» o «fuori dall'esenzione, da valutare».",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica la maggiorazione del prezzo all'ingrosso per le unità destinate al canale online con una delle due etichette «coperta dall'esenzione» o «fuori dall'esenzione, da valutare».\nPASS se: nella riga relativa alla maggiorazione compare una fra le etichette «coperta dall'esenzione» e «fuori dall'esenzione, da valutare»\nFAIL se: la maggiorazione è qualificata come «restrizione fondamentale», come «restrizione esclusa» o come «non restrittiva», oppure non compare nella matrice.\nÈ indifferente: quale delle due etichette ammesse è stata scelta.\nFonte di authoring: documento 03, art. 5; Orientamenti, punto (209)",
+      "pass_condition": "nella riga relativa alla maggiorazione compare una fra le etichette «coperta dall'esenzione» e «fuori dall'esenzione, da valutare»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che la qualificazione della maggiorazione dipende dalla connessione fra la differenza di prezzo e le differenze di investimenti e costi sostenuti per ciascun canale.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la qualificazione della maggiorazione dipende dalla connessione fra la differenza di prezzo e le differenze di investimenti e costi sostenuti per ciascun canale.\nPASS se: compare il riferimento alla connessione fra la differenza di prezzo e gli investimenti o i costi di canale; compare l'affermazione che occorre verificare se la differenza sia ragionevolmente connessa ai costi; compare l'affermazione che occorre verificare se la vendita online resti redditizia\nFAIL se: il punto non è trattato.\nFonte di authoring: Orientamenti, punto (209)",
+      "pass_condition": "compare il riferimento alla connessione fra la differenza di prezzo e gli investimenti o i costi di canale; compare l'affermazione che occorre verificare se la differenza sia ragionevolmente connessa ai costi; compare l'affermazione che occorre verificare se la vendita online resti redditizia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non afferma che la maggiorazione del prezzo all'ingrosso per il canale online è una restrizione fondamentale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la maggiorazione del prezzo all'ingrosso per il canale online è una restrizione fondamentale.\nPASS se: non compare l'affermazione che quella maggiorazione sia di per sé vietata o fondamentale\nFAIL se: la maggiorazione è presentata come restrizione fondamentale o come violazione.\nFonte di authoring: Orientamenti, punto (209)",
+      "pass_condition": "non compare l'affermazione che quella maggiorazione sia di per sé vietata o fondamentale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica come restrizione esclusa l'obbligo di non concorrenza di sette anni previsto dal contratto di distribuzione selettiva.",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica come restrizione esclusa l'obbligo di non concorrenza di sette anni previsto dal contratto di distribuzione selettiva.\nPASS se: nella riga relativa a quell'obbligo compare l'etichetta «restrizione esclusa»\nFAIL se: quell'obbligo è qualificato con una delle altre quattro etichette, oppure non compare nella matrice.\nÈ indifferente: il richiamo del limite di cinque anni.\nFonte di authoring: documento 01, art. 12; art. 5, par. 1, lett. a), reg. (UE) 2022/720",
+      "pass_condition": "nella riga relativa a quell'obbligo compare l'etichetta «restrizione esclusa»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non qualifica l'obbligo di non concorrenza come restrizione fondamentale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non qualifica l'obbligo di non concorrenza come restrizione fondamentale.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa all'obbligo di non concorrenza\nFAIL se: l'obbligo di non concorrenza è qualificato come restrizione fondamentale.\nFonte di authoring: art. 5, par. 1, lett. a), reg. (UE) 2022/720",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa all'obbligo di non concorrenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che una restrizione fondamentale elimina il beneficio dell'esenzione per l'intero accordo che la contiene.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che una restrizione fondamentale elimina il beneficio dell'esenzione per l'intero accordo che la contiene.\nPASS se: compare l'affermazione che l'esenzione non si applica all'accordo nel suo complesso; compare l'affermazione che l'intero accordo perde il beneficio dell'esenzione\nFAIL se: il punto non è trattato.\nFonte di authoring: art. 4 reg. (UE) 2022/720",
+      "pass_condition": "compare l'affermazione che l'esenzione non si applica all'accordo nel suo complesso; compare l'affermazione che l'intero accordo perde il beneficio dell'esenzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che una restrizione esclusa non è esentata ma le altre clausole del medesimo accordo conservano l'esenzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che una restrizione esclusa non è esentata ma le altre clausole del medesimo accordo conservano l'esenzione.\nPASS se: compare l'affermazione che la restrizione esclusa è scindibile; compare l'affermazione che l'esenzione non si applica al solo obbligo e resta per il resto dell'accordo; compare l'affermazione che le altre clausole restano esentate\nFAIL se: il punto non è trattato, oppure il deliverable afferma che l'intero contratto selettivo perde l'esenzione per effetto dell'obbligo di non concorrenza.\nFonte di authoring: art. 5 reg. (UE) 2022/720",
+      "pass_condition": "compare l'affermazione che la restrizione esclusa è scindibile; compare l'affermazione che l'esenzione non si applica al solo obbligo e resta per il resto dell'accordo; compare l'affermazione che le altre clausole restano esentate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "la matrice qualifica come «fuori dall'esenzione, da valutare» lo scambio di informazioni avvenuto nel comitato commerciale.",
+      "match_criteria": "Oggetto del criterio: la matrice qualifica come «fuori dall'esenzione, da valutare» lo scambio di informazioni avvenuto nel comitato commerciale.\nPASS se: nella riga relativa allo scambio di informazioni compare l'etichetta «fuori dall'esenzione, da valutare»\nFAIL se: lo scambio è qualificato con una delle altre quattro etichette, oppure non compare nella matrice.\nFonte di authoring: documento 06; art. 2, par. 5, reg. (UE) 2022/720",
+      "pass_condition": "nella riga relativa allo scambio di informazioni compare l'etichetta «fuori dall'esenzione, da valutare»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable riconduce quella qualificazione alla comunicazione, da parte dei rivenditori, dei prezzi che intendono praticare nel trimestre successivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce quella qualificazione alla comunicazione, da parte dei rivenditori, dei prezzi che intendono praticare nel trimestre successivo.\nPASS se: la qualificazione è agganciata allo scambio dei prezzi futuri o dei prezzi del trimestre successivo\nFAIL se: quel contenuto dello scambio non è richiamato.\nFonte di authoring: documento 06, punto 3; Orientamenti, punto (100), lett. a)",
+      "pass_condition": "la qualificazione è agganciata allo scambio dei prezzi futuri o dei prezzi del trimestre successivo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable riconduce quella qualificazione anche alla distribuzione dell'elenco nominativo dei clienti professionali.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce quella qualificazione anche alla distribuzione dell'elenco nominativo dei clienti professionali.\nPASS se: la qualificazione è agganciata anche allo scambio di dati relativi a utenti finali identificati o all'elenco nominativo dei clienti\nFAIL se: quel contenuto dello scambio non è richiamato.\nFonte di authoring: documento 06, punto 5; Orientamenti, punto (100), lett. b)",
+      "pass_condition": "la qualificazione è agganciata anche allo scambio di dati relativi a utenti finali identificati o all'elenco nominativo dei clienti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che il fornitore vende anche direttamente agli utilizzatori finali e che si è quindi in una situazione di duplice distribuzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fornitore vende anche direttamente agli utilizzatori finali e che si è quindi in una situazione di duplice distribuzione.\nPASS se: compare una fra: «duplice distribuzione»; «distribuzione duale»; «il fornitore opera anche a valle»; «il fornitore è anche concorrente dei rivenditori a valle»\nFAIL se: il punto non è trattato.\nFonte di authoring: documento 03, art. 2; art. 2, par. 4, reg. (UE) 2022/720",
+      "pass_condition": "compare una fra: «duplice distribuzione»; «distribuzione duale»; «il fornitore opera anche a valle»; «il fornitore è anche concorrente dei rivenditori a valle»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non afferma che la vendita diretta del fornitore agli utilizzatori finali fa venire meno l'esenzione per l'intero rapporto con la Rete.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la vendita diretta del fornitore agli utilizzatori finali fa venire meno l'esenzione per l'intero rapporto con la Rete.\nPASS se: non compare l'affermazione che la vendita diretta escluda l'esenzione per il rapporto verticale\nFAIL se: il deliverable conclude che l'esenzione non si applica perché il fornitore vende anche direttamente.\nFonte di authoring: art. 2, par. 4, lett. a), reg. (UE) 2022/720",
+      "pass_condition": "non compare l'affermazione che la vendita diretta escluda l'esenzione per il rapporto verticale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che la quota del fornitore supera il 30 per cento su una delle due definizioni del mercato e resta sotto sull'altra, e che il fascicolo non risolve quale sia il mercato rilevante.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la quota del fornitore supera il 30 per cento su una delle due definizioni del mercato e resta sotto sull'altra, e che il fascicolo non risolve quale sia il mercato rilevante.\nPASS se: compaiono entrambe le quote e l'affermazione che la definizione del mercato non è risolta dal fascicolo\nFAIL se: è indicata una sola quota come se fosse quella rilevante, oppure il punto non è trattato.\nFonte di authoring: documento 07; art. 3, par. 1, reg. (UE) 2022/720",
+      "pass_condition": "compaiono entrambe le quote e l'affermazione che la definizione del mercato non è risolta dal fascicolo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non afferma che la quota del fornitore è inferiore al 30 per cento senza indicare la definizione del mercato da cui la conclusione dipende.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la quota del fornitore è inferiore al 30 per cento senza indicare la definizione del mercato da cui la conclusione dipende.\nPASS se: ogni affermazione sulla quota è accompagnata dall'indicazione del perimetro o della definizione del mercato\nFAIL se: compare un'affermazione sulla quota priva dell'indicazione del perimetro.\nFonte di authoring: documento 07",
+      "pass_condition": "ogni affermazione sulla quota è accompagnata dall'indicazione del perimetro o della definizione del mercato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che l'esenzione richiede anche che la quota dell'acquirente non superi il 30 per cento e che il fascicolo non contiene quel dato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'esenzione richiede anche che la quota dell'acquirente non superi il 30 per cento e che il fascicolo non contiene quel dato.\nPASS se: compaiono entrambi gli elementi: il requisito relativo alla quota dell'acquirente e l'assenza del dato nel fascicolo\nFAIL se: il requisito relativo alla quota dell'acquirente non è richiamato, oppure è richiamato senza rilevare l'assenza del dato.\nFonte di authoring: art. 3, par. 1, reg. (UE) 2022/720; documento 07",
+      "pass_condition": "compaiono entrambi gli elementi: il requisito relativo alla quota dell'acquirente e l'assenza del dato nel fascicolo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che le quote si calcolano sui dati dell'anno civile precedente.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le quote si calcolano sui dati dell'anno civile precedente.\nPASS se: compare il riferimento all'anno civile precedente come base di calcolo delle quote\nFAIL se: il punto non è trattato.\nFonte di authoring: art. 8, lett. b), reg. (UE) 2022/720",
+      "pass_condition": "compare il riferimento all'anno civile precedente come base di calcolo delle quote",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che, quando la soglia del 30 per cento viene superata dopo esserne stata sotto, l'esenzione continua ad applicarsi per un periodo di due anni civili.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che, quando la soglia del 30 per cento viene superata dopo esserne stata sotto, l'esenzione continua ad applicarsi per un periodo di due anni civili.\nPASS se: compare il riferimento al periodo di due anni civili successivo al primo superamento della soglia\nFAIL se: il punto non è trattato.\nFonte di authoring: art. 8, lett. d), reg. (UE) 2022/720",
+      "pass_condition": "compare il riferimento al periodo di due anni civili successivo al primo superamento della soglia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che le intese vietate sono nulle.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le intese vietate sono nulle.\nPASS se: compare una fra: «nulle ad ogni effetto»; «nullità dell'intesa»; «nulla di diritto»; «nullità delle clausole»\nFAIL se: la conseguenza civilistica non è indicata.\nFonte di authoring: art. 2, comma 3, l. 287/1990; art. 101, par. 2, TFUE",
+      "pass_condition": "compare una fra: «nulle ad ogni effetto»; «nullità dell'intesa»; «nulla di diritto»; «nullità delle clausole»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica fra le azioni immediate la cessazione delle pressioni sui prezzi e il ritiro dell'invito ai rivenditori a segnalare gli scostamenti degli altri membri della Rete.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le azioni immediate la cessazione delle pressioni sui prezzi e il ritiro dell'invito ai rivenditori a segnalare gli scostamenti degli altri membri della Rete.\nPASS se: compaiono entrambe le azioni: la cessazione delle pressioni e il ritiro dell'invito alla segnalazione\nFAIL se: compare una sola delle due azioni, oppure nessuna.\nÈ indifferente: l'ordine reciproco fra le due azioni.\nFonte di authoring: documenti 04 e 05",
+      "pass_condition": "compaiono entrambe le azioni: la cessazione delle pressioni e il ritiro dell'invito alla segnalazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica fra le azioni una comunicazione correttiva alla Rete.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le azioni una comunicazione correttiva alla Rete.\nPASS se: compare l'indicazione di una comunicazione, circolare o lettera alla Rete che rettifichi la politica di prezzo\nFAIL se: la comunicazione correttiva non compare fra le azioni.\nFonte di authoring: documento 04",
+      "pass_condition": "compare l'indicazione di una comunicazione, circolare o lettera alla Rete che rettifichi la politica di prezzo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che vieta al distributore esclusivo le vendite attive fuori dal Territorio Sud.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che vieta al distributore esclusivo le vendite attive fuori dal Territorio Sud.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa alla restrizione delle vendite attive\nFAIL se: la restrizione delle vendite attive è qualificata come restrizione fondamentale.\nÈ indifferente: la sua qualificazione come «coperta dall'esenzione».\nFonte di authoring: documento 02, art. 4, commi 1 e 2; art. 4, lett. b), punto i), reg. (UE) 2022/720",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa alla restrizione delle vendite attive",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che vieta ai Rivenditori Autorizzati di vendere a distributori non autorizzati.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che vieta ai Rivenditori Autorizzati di vendere a distributori non autorizzati.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa al divieto di vendere a distributori non autorizzati\nFAIL se: quel divieto è qualificato come restrizione fondamentale.\nÈ indifferente: la sua qualificazione come «coperta dall'esenzione».\nFonte di authoring: documento 01, art. 7, comma 1; art. 4, lett. c), punto i), 2), reg. (UE) 2022/720",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa al divieto di vendere a distributori non autorizzati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale il divieto di vendere i Prodotti attraverso mercati online gestiti da terzi.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale il divieto di vendere i Prodotti attraverso mercati online gestiti da terzi.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa al divieto di utilizzare i mercati online\nFAIL se: il divieto di utilizzare i mercati online è qualificato come restrizione fondamentale.\nÈ indifferente: la sua qualificazione come «coperta dall'esenzione».\nFonte di authoring: documento 01, art. 9, comma 3; Orientamenti, punto (208), lett. c)",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa al divieto di utilizzare i mercati online",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come restrizione l'obbligo di gestire almeno un punto vendita o showroom non virtuale.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come restrizione l'obbligo di gestire almeno un punto vendita o showroom non virtuale.\nPASS se: l'obbligo di showroom non compare fra gli elementi qualificati come restrittivi\nFAIL se: l'obbligo di showroom è qualificato come «restrizione fondamentale», come «restrizione esclusa» o come «fuori dall'esenzione, da valutare».\nÈ indifferente: la sua qualificazione come «coperta dall'esenzione» o come «non restrittiva».\nFonte di authoring: documento 01, art. 4, comma 1, lett. b); Orientamenti, punto (208), lett. d)",
+      "pass_condition": "l'obbligo di showroom non compare fra gli elementi qualificati come restrittivi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale autonoma il servizio di rilevazione automatica dei prezzi al pubblico.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale autonoma il servizio di rilevazione automatica dei prezzi al pubblico.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa al servizio di rilevazione dei prezzi, considerato in sé\nFAIL se: il servizio di rilevazione dei prezzi è qualificato di per sé come restrizione fondamentale.\nÈ indifferente: il suo richiamo fra gli elementi che rendono più efficace la pressione documentata nell'email.\nFonte di authoring: documento 04, punto 3; Orientamenti, punto (191)",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa al servizio di rilevazione dei prezzi, considerato in sé",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la comunicazione del prezzo massimo di rivendita.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la comunicazione del prezzo massimo di rivendita.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa al prezzo massimo di rivendita\nFAIL se: il prezzo massimo di rivendita è qualificato come restrizione fondamentale.\nFonte di authoring: documento 04, punto 1; art. 4, lett. a), reg. (UE) 2022/720",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa al prezzo massimo di rivendita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che subordina il trasferimento e l'apertura di punti vendita all'approvazione del fornitore.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non qualifica come restrizione fondamentale la clausola che subordina il trasferimento e l'apertura di punti vendita all'approvazione del fornitore.\nPASS se: l'etichetta «restrizione fondamentale» non compare nella riga relativa al luogo di stabilimento\nFAIL se: quella clausola è qualificata come restrizione fondamentale o come ripartizione del mercato.\nÈ indifferente: la sua qualificazione come «coperta dall'esenzione».\nFonte di authoring: documento 01, art. 5, comma 2; art. 4, lett. c), punto i), 3), reg. (UE) 2022/720",
+      "pass_condition": "l'etichetta «restrizione fondamentale» non compare nella riga relativa al luogo di stabilimento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non afferma che la politica di prezzo al pubblico non presenta profili di rischio.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non afferma che la politica di prezzo al pubblico non presenta profili di rischio.\nPASS se: non compare l'affermazione che sulla politica di prezzo non vi siano rilievi\nFAIL se: il deliverable conclude che la politica di prezzo è conforme.\nFonte di authoring: documenti 04 e 05",
+      "pass_condition": "non compare l'affermazione che sulla politica di prezzo non vi siano rilievi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non pronostica l'esito di un eventuale procedimento dell'autorità garante.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non pronostica l'esito di un eventuale procedimento dell'autorità garante.\nPASS se: non compare un pronostico sull'esito di un procedimento, né sull'entità di una sanzione\nFAIL se: il deliverable afferma che un procedimento sarebbe vinto o perso, oppure quantifica la sanzione come esito atteso.\nÈ indifferente: l'indicazione che una sanzione è possibile e che la sua entità non è determinabile allo stato.\nFonte di authoring: 01_task.md",
+      "pass_condition": "non compare un pronostico sull'esito di un procedimento, né sull'entità di una sanzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non consente di stabilire se le forniture al rivenditore siano state effettivamente sospese.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non consente di stabilire se le forniture al rivenditore siano state effettivamente sospese.\nPASS se: compare una fra: «non risulta»; «non è documentato»; «non è possibile stabilire»; «resta da verificare»; riferita alla sospensione delle forniture\nFAIL se: il punto non è trattato, oppure il deliverable afferma che le forniture sono state sospese.\nFonte di authoring: documenti 05 e 08",
+      "pass_condition": "compare una fra: «non risulta»; «non è documentato»; «non è possibile stabilire»; «resta da verificare»; riferita alla sospensione delle forniture",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica fra le informazioni da acquisire i dati di costo relativi ai due canali di vendita.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le informazioni da acquisire i dati di costo relativi ai due canali di vendita.\nPASS se: compare la richiesta dei dati di costo o di investimento per canale\nFAIL se: la richiesta non compare.\nFonte di authoring: documento 07, sezione dei dati non disponibili",
+      "pass_condition": "compare la richiesta dei dati di costo o di investimento per canale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica fra le questioni riservate al parere legale la definizione del mercato rilevante.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le questioni riservate al parere legale la definizione del mercato rilevante.\nPASS se: la definizione del mercato rilevante compare nella sezione delle questioni riservate al parere legale\nFAIL se: la definizione del mercato non compare fra quelle questioni.\nFonte di authoring: documento 07, nota metodologica",
+      "pass_condition": "la definizione del mercato rilevante compare nella sezione delle questioni riservate al parere legale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica fra le questioni riservate al parere legale la valutazione dello scambio di informazioni fra i rivenditori presenti al comitato commerciale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le questioni riservate al parere legale la valutazione dello scambio di informazioni fra i rivenditori presenti al comitato commerciale.\nPASS se: il rilievo dello scambio fra rivenditori concorrenti compare nella sezione delle questioni riservate al parere legale\nFAIL se: quel rilievo non compare fra quelle questioni.\nFonte di authoring: documento 06",
+      "pass_condition": "il rilievo dello scambio fra rivenditori concorrenti compare nella sezione delle questioni riservate al parere legale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica il 34,1 per cento come quota del fornitore sul perimetro dei soli utensili elettrici professionali a batteria nell'anno civile 2028.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 34,1 per cento come quota del fornitore sul perimetro dei soli utensili elettrici professionali a batteria nell'anno civile 2028.\nPASS se: compare «34,1» oppure «34,1 %» riferito a quel perimetro\nFAIL se: è indicato un valore diverso.\nÈ indifferente: l'arrotondamento a 34 per cento.\nFonte di authoring: documento 07, perimetro A",
+      "pass_condition": "compare «34,1» oppure «34,1 %» riferito a quel perimetro",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica il 22,4 per cento come quota del fornitore sul perimetro di tutti gli utensili elettrici portatili nell'anno civile 2028.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 22,4 per cento come quota del fornitore sul perimetro di tutti gli utensili elettrici portatili nell'anno civile 2028.\nPASS se: compare «22,4» oppure «22,4 %» riferito a quel perimetro\nFAIL se: è indicato un valore diverso.\nÈ indifferente: l'arrotondamento a 22 per cento.\nFonte di authoring: documento 07, perimetro B",
+      "pass_condition": "compare «22,4» oppure «22,4 %» riferito a quel perimetro",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica il 2028 come anno civile dei dati utilizzati per il calcolo delle quote.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 2028 come anno civile dei dati utilizzati per il calcolo delle quote.\nPASS se: compare «2028» come anno dei dati rilevanti\nFAIL se: è indicato un anno diverso, oppure l'anno non è indicato.\nFonte di authoring: art. 8, lett. b), reg. (UE) 2022/720",
+      "pass_condition": "compare «2028» come anno dei dati rilevanti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica il 2028 come primo anno in cui la soglia del 30 per cento è stata superata sul perimetro dei soli utensili professionali a batteria.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 2028 come primo anno in cui la soglia del 30 per cento è stata superata sul perimetro dei soli utensili professionali a batteria.\nPASS se: compare «2028» come anno del primo superamento della soglia\nFAIL se: è indicato un anno diverso, oppure il primo superamento non è datato.\nFonte di authoring: documento 07, serie 2026-2028",
+      "pass_condition": "compare «2028» come anno del primo superamento della soglia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable afferma che alla data di riferimento l'esenzione non è venuta meno per effetto del superamento della soglia.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che alla data di riferimento l'esenzione non è venuta meno per effetto del superamento della soglia.\nPASS se: compare una fra: «l'esenzione continua ad applicarsi»; «l'esenzione non è ancora venuta meno»; «il periodo di due anni civili è ancora in corso»\nFAIL se: il punto non è trattato.\nFonte di authoring: art. 8, lett. d), reg. (UE) 2022/720",
+      "pass_condition": "compare una fra: «l'esenzione continua ad applicarsi»; «l'esenzione non è ancora venuta meno»; «il periodo di due anni civili è ancora in corso»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non afferma che l'esenzione è già venuta meno per effetto del superamento della soglia nel 2028.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'esenzione è già venuta meno per effetto del superamento della soglia nel 2028.\nPASS se: non compare l'affermazione che l'esenzione sia venuta meno con il superamento della soglia\nFAIL se: il deliverable conclude che l'esenzione non si applica più perché la quota ha superato il 30 per cento.\nFonte di authoring: art. 8, lett. d), reg. (UE) 2022/720",
+      "pass_condition": "non compare l'affermazione che l'esenzione sia venuta meno con il superamento della soglia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable indica nel 5 per cento la maggiorazione del prezzo all'ingrosso applicata alle unità destinate al canale online.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica nel 5 per cento la maggiorazione del prezzo all'ingrosso applicata alle unità destinate al canale online.\nPASS se: compare «5 per cento» oppure «5 %» riferito a quella maggiorazione\nFAIL se: è indicato un valore diverso, oppure la maggiorazione non è quantificata.\nÈ indifferente: l'indicazione anche degli importi in euro.\nFonte di authoring: documento 03, art. 5",
+      "pass_condition": "compare «5 per cento» oppure «5 %» riferito a quella maggiorazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "matrice_rischi_antitrust.md"
+      ],
+      "title": "il deliverable non afferma che la quota del fornitore è inferiore al 15 per cento su alcuno dei due perimetri.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la quota del fornitore è inferiore al 15 per cento su alcuno dei due perimetri.\nPASS se: non compare l'affermazione che la quota sia sotto il 15 per cento\nFAIL se: il deliverable afferma che la soglia del de minimis non è superata.\nFonte di authoring: documento 07; comunicazione de minimis, punto 8, lett. b)",
+      "pass_condition": "non compare l'affermazione che la quota sia sotto il 15 per cento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

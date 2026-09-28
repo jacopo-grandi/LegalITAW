@@ -1,0 +1,18 @@
+{
+  "task_id": "WF2-076",
+  "freeze_normativo": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 12 gennaio 2019, n. 14, artt. 64-bis, 85, 88, 109, 112 e 120-ter",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2019-01-12;14",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile, art. 2467 (finanziamenti dei soci)",
+      "url": "https://www.normattiva.it/eli/id/1942/04/04/042U0262/CONSOLIDATED/20260614",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

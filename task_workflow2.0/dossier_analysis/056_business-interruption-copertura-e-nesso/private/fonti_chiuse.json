@@ -1,0 +1,98 @@
+{
+  "task_id": "WF2-056",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1882 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "nozione di assicurazione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1892 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "dichiarazioni inesatte e reticenze con dolo o colpa grave",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1893 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "dichiarazioni inesatte e reticenze senza dolo o colpa grave",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1905 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "limite del risarcimento al danno sofferto dall'assicurato",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1907 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "assicurazione parziale: se il valore assicurato è inferiore a quello che la cosa aveva al tempo del sinistro l'assicuratore risponde in proporzione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1910 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "assicurazione presso diversi assicuratori",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1913 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "avviso di sinistro all'assicuratore",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1914 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "obbligo di salvataggio e spese sostenute a carico dell'assicuratore",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1915 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "inadempimento dell'obbligo di avviso e di salvataggio",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 2963 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "computo dei termini: il giorno iniziale non si computa; la scadenza in giorno festivo si proroga; la proroga presuppone un termine per il compimento di un'attività",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1349 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "determinazione della prestazione affidata a un terzo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 7 settembre 2005, n. 209 - art. 166",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-07;209",
+      "regola_sostenuta": "criteri di redazione dei contratti di assicurazione e chiarezza delle clausole",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 7 settembre 2005, n. 209 - art. 183",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2005-09-07;209",
+      "regola_sostenuta": "regole di comportamento dell'impresa nell'esecuzione del contratto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

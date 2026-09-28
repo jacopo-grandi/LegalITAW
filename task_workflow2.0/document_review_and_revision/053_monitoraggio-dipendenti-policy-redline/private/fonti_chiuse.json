@@ -1,0 +1,98 @@
+{
+  "task_id": "WF2-053",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 5",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "principi di liceità, minimizzazione, limitazione della conservazione e responsabilizzazione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 6",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "basi giuridiche del trattamento",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 13",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "informazioni da fornire all'interessato",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - artt. 28 e 29",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "rapporto fra titolare e responsabile del trattamento e contenuto dell'atto che lo disciplina",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 35",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "valutazione d'impatto sulla protezione dei dati e casi in cui è richiesta",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 45",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "trasferimenti sulla base di una decisione di adeguatezza",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - art. 88",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj",
+      "regola_sostenuta": "trattamento dei dati nel contesto dei rapporti di lavoro",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale dell'Unione"
+    },
+    {
+      "riferimento": "L. 20 maggio 1970, n. 300 - art. 4",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300",
+      "regola_sostenuta": "impianti e strumenti di controllo a distanza: presupposti del comma 1, esenzione del comma 2 per gli strumenti utilizzati per rendere la prestazione e per la registrazione degli accessi e delle presenze, utilizzabilità dei dati subordinata all'informazione adeguata del comma 3",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 20 maggio 1970, n. 300 - art. 8",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1970-05-20;300",
+      "regola_sostenuta": "divieto di indagini sulle opinioni e su fatti non rilevanti per l'attitudine professionale",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 30 giugno 2003, n. 196 - art. 114",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-06-30;196",
+      "regola_sostenuta": "rinvio all'articolo 4 dello Statuto dei lavoratori come condizione di liceità",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 30 giugno 2003, n. 196 - art. 113",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2003-06-30;196",
+      "regola_sostenuta": "raccolta di dati e pertinenza nel rapporto di lavoro",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Garante per la protezione dei dati personali, documento di indirizzo del 6 giugno 2024, doc. web n. 10026277",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/10026277",
+      "regola_sostenuta": "programmi e servizi informatici di gestione della posta elettronica nel contesto lavorativo e trattamento dei metadati: termine orientativo di 21 giorni per la conservazione dei metadati e condizioni per l'estensione",
+      "verificata_il": "2026-09-02",
+      "tipo": "provvedimento dell'autorità di controllo"
+    },
+    {
+      "riferimento": "Garante per la protezione dei dati personali, linee guida per posta elettronica e internet, doc. web n. 1387978",
+      "url": "https://www.garanteprivacy.it/home/docweb/-/docweb-display/docweb/1387978",
+      "regola_sostenuta": "trasparenza e disciplina interna dell'uso degli strumenti informatici",
+      "verificata_il": "2026-09-02",
+      "tipo": "provvedimento dell'autorità di controllo"
+    }
+  ]
+}

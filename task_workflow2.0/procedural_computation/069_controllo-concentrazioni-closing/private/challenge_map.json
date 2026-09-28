@@ -1,0 +1,199 @@
+{
+  "task_id": "WF2-069",
+  "lato_assistito": "Orizzonte Facility S.p.A., acquirente",
+  "data_di_riferimento": "2027-09-20",
+  "stato_fascicolo": "SPA firmato, filing non ancora depositato",
+  "fonti_ammesse": [
+    "AGCM - Operazioni di concentrazione e soglie 2026",
+    "Legge 10 ottobre 1990, n. 287, art. 16"
+  ],
+  "calcoli": [
+    "EUR 420m + 92m + 101m = EUR 613m",
+    "EUR 613m > EUR 595m",
+    "Orizzonte e Biancospino > EUR 36m"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per long-stop: inserire checkpoint 31 ottobre e 20 novembre",
+    "integrazione necessaria per condotta interim: limitare scambi a clean team e ordinary course"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_spa_estratto_closing.pdf",
+      "funzione": "Signing 15 settembre 2027; closing condition: non avvio istruttoria AGCM; long-stop 15 dicembre 2027; divieto contrattuale di closing anticipato."
+    },
+    {
+      "file": "02_prospetto_fatturati_2026.xlsx",
+      "funzione": "Italia: Orizzonte EUR 420 milioni, Biancospino EUR 92 milioni, altre imprese interessate EUR 101 milioni; totale EUR 613 milioni."
+    },
+    {
+      "file": "03_memo_perimetro_controllo.pdf",
+      "funzione": "Acquisto del 100% di Biancospino; nessun controllo comune precedente; fatturato mondiale combinato EUR 1,4 miliardi."
+    },
+    {
+      "file": "04_email_data_room_e_long_stop.eml",
+      "funzione": "Bozza filing prevista il 27 settembre; dati quote di mercato mancanti fino al 4 ottobre; il team propone closing il 2 ottobre sulla base del solo deposito."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "soglia complessiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "EUR 613 milioni supera EUR 595 milioni",
+      "azione_richiesta": "segnare la prima soglia come superata",
+      "conseguenza": "il calcolo usa fatturato italiano delle imprese interessate",
+      "evidenza": "doc. 02 e AGCM",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "soglia individuale",
+      "gravita": "alta",
+      "affermazione_richiesta": "almeno due imprese superano EUR 36 milioni",
+      "azione_richiesta": "segnare la seconda soglia come superata",
+      "conseguenza": "Orizzonte e Biancospino bastano",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "concentrazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'acquisto del 100% conferisce controllo esclusivo",
+      "azione_richiesta": "classificare l'operazione come concentrazione",
+      "conseguenza": "non e' ristrutturazione infragruppo",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "competenza nazionale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fatturato mondiale di EUR 1,4 miliardi non raggiunge le soglie UE indicate nel pack",
+      "azione_richiesta": "preparare filing AGCM",
+      "conseguenza": "non presentare filing UE sul solo dato italiano",
+      "evidenza": "doc. 02 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "filing preventivo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il deposito deve precedere la realizzazione",
+      "azione_richiesta": "depositare quando i dati sono completi",
+      "conseguenza": "la firma non coincide col closing",
+      "evidenza": "doc. 01 e fonti",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "closing condition contrattuale",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo SPA richiede non avvio, non il solo deposito",
+      "azione_richiesta": "vietare closing del 2 ottobre",
+      "conseguenza": "la proposta del deal team viola il contratto",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "nessun standstill legale presunto",
+      "gravita": "media",
+      "affermazione_richiesta": "il fascicolo non deve trasformare la condizione contrattuale in una regola legale generale non presente nell'elenco",
+      "azione_richiesta": "descrivere separatamente legge e SPA",
+      "conseguenza": "la conclusione resta verificabile alla data di congelamento",
+      "evidenza": "fonti congelate",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "completezza filing",
+      "gravita": "media",
+      "affermazione_richiesta": "le quote di mercato arrivano il 4 ottobre",
+      "azione_richiesta": "fissare deposito dopo controllo del set informativo",
+      "conseguenza": "un invio incompleto puo' compromettere il calendario",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "termine di trenta giorni",
+      "gravita": "media",
+      "affermazione_richiesta": "il presidio iniziale decorre dal ricevimento della notifica",
+      "azione_richiesta": "calcolare la data solo dopo ricevuta AGCM",
+      "conseguenza": "il 27 settembre e' una bozza, non dies a quo",
+      "evidenza": "legge n. 287/1990 art. 16",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "richieste informative",
+      "gravita": "media",
+      "affermazione_richiesta": "una richiesta puo' rendere necessario integrare il fascicolo",
+      "azione_richiesta": "registrare domanda, owner e risposta senza inventare sospensione automatica",
+      "conseguenza": "la long-stop va aggiornata su eventi reali",
+      "evidenza": "doc. 04 e fonti",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "long-stop",
+      "gravita": "media",
+      "affermazione_richiesta": "il 15 dicembre lascia margine ma dipende dalla data di deposito e da un eventuale approfondimento",
+      "azione_richiesta": "inserire checkpoint 31 ottobre e 20 novembre",
+      "conseguenza": "l'estensione richiede accordo scritto",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "condotta interim",
+      "gravita": "media",
+      "affermazione_richiesta": "il team vuole anticipare integrazione operativa",
+      "azione_richiesta": "limitare scambi a clean team e ordinary course",
+      "conseguenza": "firma e filing non autorizzano esercizio del controllo",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "signing del 15 settembre",
+      "oggetto": "doc. 01",
+      "chiave_nel_criterio": "15 settembre",
+      "perche_non_e_issue": "la firma senza trasferimento del controllo non e' closing",
+      "criterio_assenza": "B.24"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "rifinanziamento del debito",
+      "oggetto": "SPA allegato",
+      "chiave_nel_criterio": "rifinanziamento",
+      "perche_non_e_issue": "non modifica il controllo della target",
+      "criterio_assenza": "B.25"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "fatturato mondiale EUR 1,4 miliardi",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "EUR 1,4 miliardi",
+      "perche_non_e_issue": "non basta per attribuire competenza UE",
+      "criterio_assenza": "B.26"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "bozza filing del 27 settembre",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "27 settembre",
+      "perche_non_e_issue": "non e' una notifica ricevuta dall'Autorita'",
+      "criterio_assenza": "B.27"
+    }
+  ]
+}

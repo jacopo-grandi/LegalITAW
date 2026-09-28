@@ -1,0 +1,157 @@
+{
+  "task_id": "WF2-043",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Revisione di un atto di citazione: allegazioni, prove e quantificazione",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2026-08-24",
+  "workflow_family": "document_review_and_revision",
+  "subtask": "review_and_redline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "bozza non notificata; trattativa interrotta, prescrizione non imminente",
+  "legal_area": [
+    "Litigation & Arbitration",
+    "Contenzioso",
+    "Contrattualistica"
+  ],
+  "document_type": "bozza non notificata; trattativa interrotta, prescrizione non imminente",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "document_review_and_revision",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: atto_review.docx, nota_rilievi.md. Per i DOCX di redline usa [[DEL:testo soppresso]], [[INS:testo inserito]] e [[NOTE:motivazione]].\n\n# WF2-043 - Struttura del deliverable\n\nProdurre `atto_review.docx + nota_rilievi.md`. Limite complessivo: 3800 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Nota di revisione\nTrattare nota di revisione con rinvii puntuali agli allegati.\n\n### 2. Vizi bloccanti\nTrattare vizi bloccanti con rinvii puntuali agli allegati.\n\n### 3. Allegazioni e documenti\nTrattare allegazioni e documenti con rinvii puntuali agli allegati.\n\n### 4. Quantificazione\nTrattare quantificazione con rinvii puntuali agli allegati.\n\n### 5. Istruzioni per la redline\nTrattare istruzioni per la redline con rinvii puntuali agli allegati.\n\n### 6. Questioni da confermare\nTrattare questioni da confermare con rinvii puntuali agli allegati.\n\nOgni conclusione deve distinguere fatto documentato, inferenza, lacuna e azione. Le fonti normative sono soltanto quelle del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "legal_correctness",
+      "redline_quality"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_bozza_atto_citazione.docx",
+    "public/documents/02_contratto_installazione.pdf",
+    "public/documents/03_ordine_variante.pdf",
+    "public/documents/04_verbale_collaudo.pdf",
+    "public/documents/05_pec_contestazione.pdf",
+    "public/documents/06_relazione_tecnica.pdf",
+    "public/documents/07_prospetto_danni.xlsx"
+  ],
+  "expected_deliverables": [
+    "atto_review.docx",
+    "nota_rilievi.md"
+  ],
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "legal_correctness",
+    "redline_quality",
+    "scope_discipline",
+    "artifact_conformity"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "docx_redline",
+  "document_preset": "contract_negotiation_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "documents_rewrite": {
+    "date": "2026-09-21",
+    "status": "verified_and_integrated",
+    "artifact_count": 7,
+    "renames": [
+      {
+        "from": "02_contratto_installazione.md",
+        "to": "02_contratto_installazione.pdf"
+      },
+      {
+        "from": "03_ordine_variante.md",
+        "to": "03_ordine_variante.pdf"
+      },
+      {
+        "from": "04_verbale_collaudo.md",
+        "to": "04_verbale_collaudo.pdf"
+      },
+      {
+        "from": "05_pec_contestazione.md",
+        "to": "05_pec_contestazione.pdf"
+      },
+      {
+        "from": "06_relazione_tecnica.md",
+        "to": "06_relazione_tecnica.pdf"
+      },
+      {
+        "from": "07_prospetto_danni.md",
+        "to": "07_prospetto_danni.xlsx"
+      }
+    ],
+    "backup": "wf2_rewrite_wip/integration_backup_20260921/document_review_and_revision/043_atto-citazione-review",
+    "provenance": "source/authoring/documents_rewrite_20260921/"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

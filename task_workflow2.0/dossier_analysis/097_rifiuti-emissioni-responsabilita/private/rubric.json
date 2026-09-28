@@ -1,0 +1,1413 @@
+{
+  "task_id": "WF2-097",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 70,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente environmental_compliance_memo.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente environmental_compliance_memo.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 10 settembre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 10 settembre 2026.\nPASS se: compare «10 settembre 2026» come data alla quale il memo è riferito\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «10 settembre 2026» come data alla quale il memo è riferito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Ogni scadenza indica l'evento da cui decorre.",
+      "match_criteria": "Oggetto del criterio: Ogni scadenza indica l'evento da cui decorre.\nPASS se: ciascuna scadenza riporta l'evento di decorrenza\nFAIL se: una o più scadenze non indicano l'evento di decorrenza.\nÈ indifferente: la forma dell'indicazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna scadenza riporta l'evento di decorrenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Ogni scadenza riporta il calcolo seguito.",
+      "match_criteria": "Oggetto del criterio: Ogni scadenza riporta il calcolo seguito.\nPASS se: ciascuna scadenza riporta il passaggio aritmetico o la regola di computo applicata\nFAIL se: una o più scadenze riportano il solo risultato.\nÈ indifferente: il livello di dettaglio del calcolo.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna scadenza riporta il passaggio aritmetico o la regola di computo applicata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable tiene distinte le conseguenze che riguardano la società da quelle che riguardano le persone fisiche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable tiene distinte le conseguenze che riguardano la società da quelle che riguardano le persone fisiche.\nPASS se: le due categorie sono trattate separatamente o comunque distinte voce per voce\nFAIL se: le conseguenze sono esposte senza distinguere i due piani.\nÈ indifferente: il modo in cui la distinzione è resa graficamente.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "le due categorie sono trattate separatamente o comunque distinte voce per voce",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Ogni voce indica il documento del fascicolo da cui i dati provengono.",
+      "match_criteria": "Oggetto del criterio: Ogni voce indica il documento del fascicolo da cui i dati provengono.\nPASS se: ciascuna voce riporta il nome di almeno un allegato\nFAIL se: una o più voci non riportano alcun allegato.\nÈ indifferente: il numero degli allegati citati per voce.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta il nome di almeno un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non cita norme assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme assenti dal reference pack.\nPASS se: Il deliverable non cita norme assenti dal reference pack.\nFAIL se: compare un riferimento a un atto o a un articolo che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola voce.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.9",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Le azioni sono distinte fra quelle da compiere entro una data determinata e quelle il cui momento resta a scelta della società.",
+      "match_criteria": "Oggetto del criterio: Le azioni sono distinte fra quelle da compiere entro una data determinata e quelle il cui momento resta a scelta della società.\nPASS se: l'elenco delle azioni distingue le due categorie\nFAIL se: le azioni sono elencate senza alcuna distinzione temporale.\nÈ indifferente: l'ordine interno a ciascuna categoria.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "l'elenco delle azioni distingue le due categorie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza della durata dell'autorizzazione alla data del suo rilascio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza della durata dell'autorizzazione alla data del suo rilascio.\nPASS se: compare l'affermazione che i quindici anni decorrono dal rilascio del provvedimento\nFAIL se: la decorrenza è ricondotta a un evento diverso dal rilascio.\nÈ indifferente: il richiamo alla data di messa a regime.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md; art. 269, comma 7, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che i quindici anni decorrono dal rilascio del provvedimento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la domanda di rinnovo va presentata almeno un anno prima della scadenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la domanda di rinnovo va presentata almeno un anno prima della scadenza.\nPASS se: compare l'affermazione dell'anticipo di almeno un anno rispetto alla scadenza\nFAIL se: è indicato un anticipo diverso, oppure il punto non è trattato.\nÈ indifferente: il richiamo all'effetto del rinnovo sulla nuova durata.\nFonte di authoring: art. 269, comma 7, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione dell'anticipo di almeno un anno rispetto alla scadenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che nel fascicolo non risulta presentata alcuna domanda di rinnovo e che il termine è decorso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che nel fascicolo non risulta presentata alcuna domanda di rinnovo e che il termine è decorso.\nPASS se: compare l'affermazione che nessuna domanda risulta presentata e che il termine è decorso\nFAIL se: è affermato che la domanda è stata presentata, oppure che il termine non è ancora decorso.\nÈ indifferente: l'indicazione dei giorni di ritardo.\nFonte di authoring: 09_nota_del_consulente_ambientale.md, punto 5.3",
+      "pass_condition": "compare l'affermazione che nessuna domanda risulta presentata e che il termine è decorso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento l'autorizzazione è ancora efficace e l'esercizio è legittimo sotto questo profilo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento l'autorizzazione è ancora efficace e l'esercizio è legittimo sotto questo profilo.\nPASS se: compare l'affermazione che l'autorizzazione è ancora efficace alla data di riferimento\nFAIL se: è affermato che la società esercita con autorizzazione scaduta o decaduta.\nÈ indifferente: l'indicazione del tempo residuo.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md",
+      "pass_condition": "compare l'affermazione che l'autorizzazione è ancora efficace alla data di riferimento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che continuare l'esercizio con autorizzazione scaduta è punito con sanzione penale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che continuare l'esercizio con autorizzazione scaduta è punito con sanzione penale.\nPASS se: compare l'affermazione che la prosecuzione dell'esercizio con autorizzazione scaduta è penalmente sanzionata\nFAIL se: la conseguenza è qualificata come sanzione amministrativa, oppure il punto non è trattato.\nÈ indifferente: l'indicazione della cornice edittale.\nFonte di authoring: art. 279, comma 1, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che la prosecuzione dell'esercizio con autorizzazione scaduta è penalmente sanzionata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica fra le azioni la presentazione immediata della domanda di rinnovo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni la presentazione immediata della domanda di rinnovo.\nPASS se: fra le azioni compare la presentazione della domanda di rinnovo senza attendere\nFAIL se: l'azione non è indicata, oppure è collocata in una data successiva scelta per comodità.\nÈ indifferente: la forma proposta per la domanda.\nFonte di authoring: art. 269, comma 7, del codice dell'ambiente",
+      "pass_condition": "fra le azioni compare la presentazione della domanda di rinnovo senza attendere",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable qualifica il superamento del valore limite al punto E2 come contravvenzione punita con pena alternativa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il superamento del valore limite al punto E2 come contravvenzione punita con pena alternativa.\nPASS se: compare, riferita al superamento del valore limite, una fra: «contravvenzione»; «reato contravvenzionale»; «illecito penale punito con l'arresto o con l'ammenda»\nFAIL se: il superamento è qualificato come illecito amministrativo, oppure come inadempimento verso l'autorità.\nÈ indifferente: l'indicazione della cornice edittale.\nFonte di authoring: art. 279, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare, riferita al superamento del valore limite, una fra: «contravvenzione»; «reato contravvenzionale»; «illecito penale punito con l'arresto o con l'ammenda»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable rileva che per il primo semestre 2026 non risulta alcun autocontrollo alle emissioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable rileva che per il primo semestre 2026 non risulta alcun autocontrollo alle emissioni.\nPASS se: compare il rilievo dell'assenza dell'autocontrollo del primo semestre 2026\nFAIL se: il rilievo non compare, oppure è affermato che gli autocontrolli sono stati eseguiti regolarmente.\nÈ indifferente: l'indicazione dei punti che l'autocontrollo avrebbe dovuto riguardare.\nFonte di authoring: 09_nota_del_consulente_ambientale.md, punto 3; 01_autorizzazione_emissioni_in_atmosfera.md, Allegato tecnico",
+      "pass_condition": "compare il rilievo dell'assenza dell'autocontrollo del primo semestre 2026",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable rileva che il corredo filtrante del punto E2 non è stato sostituito entro la periodicità prescritta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable rileva che il corredo filtrante del punto E2 non è stato sostituito entro la periodicità prescritta.\nPASS se: compare il rilievo che la sostituzione integrale del corredo filtrante non è avvenuta entro la periodicità prescritta\nFAIL se: il rilievo non compare, oppure la manutenzione è presentata come conforme alla prescrizione.\nÈ indifferente: il richiamo alle sostituzioni parziali annotate.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md, prescrizione 5.2; 09_nota_del_consulente_ambientale.md, punto 4",
+      "pass_condition": "compare il rilievo che la sostituzione integrale del corredo filtrante non è avvenuta entro la periodicità prescritta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable qualifica la violazione delle prescrizioni dell'autorizzazione come assoggettata a sanzione amministrativa pecuniaria irrogata dall'autorità competente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la violazione delle prescrizioni dell'autorizzazione come assoggettata a sanzione amministrativa pecuniaria irrogata dall'autorità competente.\nPASS se: compare, riferita alla violazione delle prescrizioni, una fra: «sanzione amministrativa pecuniaria»; «illecito amministrativo»; «sanzione irrogata dall'autorità competente»\nFAIL se: la violazione delle prescrizioni è qualificata come reato.\nÈ indifferente: l'indicazione dell'importo minimo e massimo.\nFonte di authoring: art. 279, comma 2-bis, del codice dell'ambiente",
+      "pass_condition": "compare, riferita alla violazione delle prescrizioni, una fra: «sanzione amministrativa pecuniaria»; «illecito amministrativo»; «sanzione irrogata dall'autorità competente»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la pena dell'arresto si applica sempre se il superamento dei valori limite di emissione determina anche il superamento dei valori limite di qualità dell'aria.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la pena dell'arresto si applica sempre se il superamento dei valori limite di emissione determina anche il superamento dei valori limite di qualità dell'aria.\nPASS se: compare l'affermazione che l'aggravante presuppone il superamento dei valori limite di qualità dell'aria\nFAIL se: l'aggravante è collegata alla misura del superamento del valore limite di emissione, oppure il punto non è trattato.\nÈ indifferente: l'indicazione della pena.\nFonte di authoring: art. 279, comma 5, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che l'aggravante presuppone il superamento dei valori limite di qualità dell'aria",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable riconduce la responsabilità dell'ente alla sola ipotesi aggravata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la responsabilità dell'ente alla sola ipotesi aggravata.\nPASS se: compare l'affermazione che è reato presupposto la sola ipotesi aggravata e non il superamento semplice\nFAIL se: la responsabilità dell'ente è ricondotta al superamento del valore limite in quanto tale, oppure è esclusa senza indicarne la ragione.\nÈ indifferente: l'indicazione del numero massimo di quote.\nFonte di authoring: art. 25-undecies, comma 2, lettera h), del decreto sulla responsabilità degli enti",
+      "pass_condition": "compare l'affermazione che è reato presupposto la sola ipotesi aggravata e non il superamento semplice",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica che il fascicolo non contiene dati di qualità dell'aria e che senza quei dati il presupposto dell'aggravante non è verificabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica che il fascicolo non contiene dati di qualità dell'aria e che senza quei dati il presupposto dell'aggravante non è verificabile.\nPASS se: compare l'indicazione che i dati di qualità dell'aria mancano e che il presupposto non è verificabile\nFAIL se: il presupposto è dato per accertato o per escluso, oppure è dichiarata l'impossibilità di concludere senza indicare che cosa manca.\nÈ indifferente: la proposta su come acquisire i dati.\nFonte di authoring: 09_nota_del_consulente_ambientale.md, punto 5.6",
+      "pass_condition": "compare l'indicazione che i dati di qualità dell'aria mancano e che il presupposto non è verificabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la procedura estintiva si applica alle contravvenzioni che non hanno cagionato danno o pericolo concreto e attuale di danno alle risorse protette.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la procedura estintiva si applica alle contravvenzioni che non hanno cagionato danno o pericolo concreto e attuale di danno alle risorse protette.\nPASS se: compare l'affermazione del presupposto dell'assenza di danno o di pericolo concreto e attuale di danno\nFAIL se: la procedura è presentata come applicabile a qualunque violazione, oppure il presupposto non è indicato.\nÈ indifferente: l'osservazione che il verbale ne presuppone la sussistenza senza motivarla.\nFonte di authoring: art. 318-bis del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione del presupposto dell'assenza di danno o di pericolo concreto e attuale di danno",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza dei termini delle prescrizioni al ricevimento del verbale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza dei termini delle prescrizioni al ricevimento del verbale.\nPASS se: compare l'affermazione che i termini decorrono dal ricevimento del verbale\nFAIL se: la decorrenza è ricondotta al sopralluogo o alla data di emissione del verbale.\nÈ indifferente: il richiamo alla ricevuta di avvenuta consegna.\nFonte di authoring: 02_verbale_di_prescrizioni.md, prescrizioni 1 e 2 e relata di notifica",
+      "pass_condition": "compare l'affermazione che i termini decorrono dal ricevimento del verbale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable tratta separatamente i termini delle due prescrizioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable tratta separatamente i termini delle due prescrizioni.\nPASS se: le due prescrizioni compaiono con termini distinti\nFAIL se: è indicato un unico termine per entrambe le prescrizioni.\nÈ indifferente: l'ordine in cui le due prescrizioni sono esposte.\nFonte di authoring: 02_verbale_di_prescrizioni.md, prescrizioni 1 e 2",
+      "pass_condition": "le due prescrizioni compaiono con termini distinti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la proroga è concessa per una sola volta, per un periodo non superiore a sei mesi, su richiesta e in presenza di specifiche e documentate circostanze non imputabili al contravventore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la proroga è concessa per una sola volta, per un periodo non superiore a sei mesi, su richiesta e in presenza di specifiche e documentate circostanze non imputabili al contravventore.\nPASS se: compaiono l'unicità della proroga, il limite di sei mesi e il presupposto delle circostanze non imputabili\nFAIL se: la proroga è presentata come rinnovabile o come concedibile su semplice richiesta, oppure le condizioni non sono indicate.\nÈ indifferente: il richiamo alla comunicazione al pubblico ministero.\nFonte di authoring: art. 318-ter, comma 1, del codice dell'ambiente",
+      "pass_condition": "compaiono l'unicità della proroga, il limite di sei mesi e il presupposto delle circostanze non imputabili",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la somma da pagare è pari a un quarto del massimo dell'ammenda stabilita per la contravvenzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la somma da pagare è pari a un quarto del massimo dell'ammenda stabilita per la contravvenzione.\nPASS se: compare l'affermazione che la somma è pari a un quarto del massimo dell'ammenda\nFAIL se: è indicata una frazione diversa, oppure il riferimento è al minimo dell'ammenda.\nÈ indifferente: l'indicazione del massimo su cui la frazione è calcolata.\nFonte di authoring: art. 318-quater, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che la somma è pari a un quarto del massimo dell'ammenda",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che il pagamento, da effettuare entro trenta giorni dall'ammissione, è ciò che produce l'estinzione del reato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il pagamento, da effettuare entro trenta giorni dall'ammissione, è ciò che produce l'estinzione del reato.\nPASS se: compare l'affermazione che l'estinzione consegue al pagamento nel termine di trenta giorni\nFAIL se: l'estinzione è ricondotta al solo adempimento alla prescrizione.\nÈ indifferente: il richiamo alle modalità del pagamento.\nFonte di authoring: art. 318-quater, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che l'estinzione consegue al pagamento nel termine di trenta giorni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable riconduce i termini di verifica e di comunicazione al pubblico ministero alla scadenza del termine fissato nella prescrizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce i termini di verifica e di comunicazione al pubblico ministero alla scadenza del termine fissato nella prescrizione.\nPASS se: compare l'affermazione che quei termini decorrono dalla scadenza del termine fissato nella prescrizione\nFAIL se: i termini sono fatti decorrere dalla comunicazione di adempimento della società o dalla verifica.\nÈ indifferente: l'ordine in cui i tre termini sono esposti.\nFonte di authoring: art. 318-quater, commi 1, 2 e 3, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che quei termini decorrono dalla scadenza del termine fissato nella prescrizione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la soglia è di trenta metri cubi complessivi, di cui al massimo dieci metri cubi di rifiuti pericolosi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la soglia è di trenta metri cubi complessivi, di cui al massimo dieci metri cubi di rifiuti pericolosi.\nPASS se: compare l'affermazione che i dieci metri cubi di pericolosi sono un sotto-limite interno ai trenta complessivi\nFAIL se: la soglia è letta come trenta metri cubi di non pericolosi ai quali si aggiungono dieci metri cubi di pericolosi.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che i dieci metri cubi di pericolosi sono un sotto-limite interno ai trenta complessivi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che il quantitativo di rifiuti pericolosi in deposito supera il sotto-limite.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il quantitativo di rifiuti pericolosi in deposito supera il sotto-limite.\nPASS se: compare l'affermazione che i rifiuti pericolosi in deposito superano il sotto-limite\nFAIL se: è affermato che il deposito rispetta la soglia, oppure il superamento non è rilevato.\nÈ indifferente: l'indicazione della misura del superamento.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 6",
+      "pass_condition": "compare l'affermazione che i rifiuti pericolosi in deposito superano il sotto-limite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che il deposito temporaneo non necessita di autorizzazione soltanto alle condizioni di legge e che, venuta meno una di esse, il deposito non è più coperto da quella previsione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il deposito temporaneo non necessita di autorizzazione soltanto alle condizioni di legge e che, venuta meno una di esse, il deposito non è più coperto da quella previsione.\nPASS se: compare l'affermazione che il deposito perde la copertura dell'esonero\nFAIL se: il superamento è presentato come irregolarità meramente formale, oppure la conseguenza sul regime non è trattata.\nÈ indifferente: la qualificazione sanzionatoria, che il reference pack non consente di verificare.\nFonte di authoring: art. 185-bis, commi 2 e 3, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che il deposito perde la copertura dell'esonero",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica fra le azioni l'avvio a recupero o smaltimento dei rifiuti pericolosi per riportare il quantitativo entro il sotto-limite.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni l'avvio a recupero o smaltimento dei rifiuti pericolosi per riportare il quantitativo entro il sotto-limite.\nPASS se: fra le azioni compare l'avvio dei rifiuti pericolosi per rientrare nel sotto-limite\nFAIL se: l'azione non è indicata.\nÈ indifferente: il momento proposto per l'avvio.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 6",
+      "pass_condition": "fra le azioni compare l'avvio dei rifiuti pericolosi per rientrare nel sotto-limite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che le due modalità di avvio sono alternative e rimesse alla scelta del produttore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le due modalità di avvio sono alternative e rimesse alla scelta del produttore.\nPASS se: compare l'affermazione che le due modalità sono alternative e a scelta del produttore\nFAIL se: la cadenza trimestrale è presentata come obbligo che si somma alla soglia volumetrica.\nÈ indifferente: l'ordine in cui le due modalità sono esposte.\nFonte di authoring: art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che le due modalità sono alternative e a scelta del produttore",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la società ha scelto la modalità volumetrica con la procedura interna e che il passaggio alla cadenza almeno trimestrale è una scelta disponibile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la società ha scelto la modalità volumetrica con la procedura interna e che il passaggio alla cadenza almeno trimestrale è una scelta disponibile.\nPASS se: compaiono la scelta già compiuta e la disponibilità del passaggio alla cadenza trimestrale\nFAIL se: la scelta compiuta non è rilevata, oppure il passaggio è presentato come imposto.\nÈ indifferente: il momento proposto per l'eventuale passaggio.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 4",
+      "pass_condition": "compaiono la scelta già compiuta e la disponibilità del passaggio alla cadenza trimestrale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la soglia è espressa in metri cubi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la soglia è espressa in metri cubi.\nPASS se: compare l'affermazione che la soglia è espressa in metri cubi\nFAIL se: la soglia è riferita a un'unità di misura di peso.\nÈ indifferente: il richiamo ai pesi riportati dalla procedura interna in altra funzione.\nFonte di authoring: art. 185-bis, comma 2, lettera b), del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che la soglia è espressa in metri cubi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che il produttore annota almeno entro dieci giorni lavorativi dalla produzione del rifiuto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il produttore annota almeno entro dieci giorni lavorativi dalla produzione del rifiuto.\nPASS se: compare l'indicazione del termine di dieci giorni lavorativi dalla produzione\nFAIL se: è indicato un termine diverso, oppure i giorni sono qualificati come di calendario.\nÈ indifferente: il richiamo al termine per l'annotazione dello scarico.\nFonte di authoring: art. 190, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare l'indicazione del termine di dieci giorni lavorativi dalla produzione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable rileva che l'annotazione del rifiuto prodotto il 24 agosto 2026 è avvenuta oltre il termine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable rileva che l'annotazione del rifiuto prodotto il 24 agosto 2026 è avvenuta oltre il termine.\nPASS se: compare il rilievo che quell'annotazione è tardiva\nFAIL se: il rilievo non compare, oppure l'annotazione è presentata come tempestiva.\nÈ indifferente: l'indicazione dell'entità del ritardo.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 7; 04_registro_cronologico_carico_scarico.md, registrazione n. 118",
+      "pass_condition": "compare il rilievo che quell'annotazione è tardiva",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la consegna dei rifiuti non costituisce esclusione automatica della responsabilità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la consegna dei rifiuti non costituisce esclusione automatica della responsabilità.\nPASS se: compare l'affermazione che la consegna non esclude automaticamente la responsabilità\nFAIL se: è affermato che con la consegna al trasportatore la responsabilità è trasferita.\nÈ indifferente: il richiamo alla responsabilità di ciascun operatore per la parte di propria competenza.\nFonte di authoring: art. 188, comma 4, del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che la consegna non esclude automaticamente la responsabilità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable espone entrambe le condizioni alternative: la ricezione della copia controfirmata e datata in arrivo dal destinatario entro tre mesi dal conferimento al trasportatore, ovvero, alla scadenza, la comunicazione della mancata ric",
+      "match_criteria": "Oggetto del criterio: Il deliverable espone entrambe le condizioni alternative: la ricezione della copia controfirmata e datata in arrivo dal destinatario entro tre mesi dal conferimento al trasportatore, ovvero, alla scadenza, la comunicazione della mancata ricezione alle autorità competenti.\nPASS se: compaiono entrambe le condizioni alternative\nFAIL se: è indicata una sola delle due condizioni.\nÈ indifferente: l'ordine in cui le due condizioni sono esposte.\nFonte di authoring: art. 188, comma 4, del codice dell'ambiente",
+      "pass_condition": "compaiono entrambe le condizioni alternative",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento il termine di tre mesi non è scaduto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento il termine di tre mesi non è scaduto.\nPASS se: compare l'affermazione che il termine non è ancora scaduto\nFAIL se: è affermato che il termine è scaduto e che la responsabilità non è esclusa, oppure lo stato del termine non è indicato.\nÈ indifferente: l'indicazione dei giorni residui.\nFonte di authoring: 05_formulario_identificazione_rifiuti.md; 09_nota_del_consulente_ambientale.md, punto 5.5",
+      "pass_condition": "compare l'affermazione che il termine non è ancora scaduto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable riconduce la posizione di gestore al potere decisionale circa l'installazione o l'esercizio dello stabilimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la posizione di gestore al potere decisionale circa l'installazione o l'esercizio dello stabilimento.\nPASS se: compare l'affermazione che il gestore è individuato in base al potere decisionale\nFAIL se: la posizione di gestore è ricondotta alla qualifica formale, alla titolarità della procura o alla sola indicazione contenuta nell'autorizzazione.\nÈ indifferente: il richiamo all'unicità del gestore dello stabilimento.\nFonte di authoring: art. 268, comma 1, lettere h) e n), del codice dell'ambiente",
+      "pass_condition": "compare l'affermazione che il gestore è individuato in base al potere decisionale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable espone sia l'indicazione del gestore contenuta nell'autorizzazione sia le riserve al consiglio di amministrazione contenute nella procura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable espone sia l'indicazione del gestore contenuta nell'autorizzazione sia le riserve al consiglio di amministrazione contenute nella procura.\nPASS se: compaiono entrambi gli elementi\nFAIL se: è esposto uno solo dei due elementi.\nÈ indifferente: il richiamo ai limiti di spesa per singolo contratto.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md, articolo 1; 07_procura_speciale_direttore_stabilimento.md, riserve finali",
+      "pass_condition": "compaiono entrambi gli elementi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non attribuisce la posizione di gestore a uno dei due soggetti e indica la documentazione da acquisire per rispondere.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce la posizione di gestore a uno dei due soggetti e indica la documentazione da acquisire per rispondere.\nPASS se: la questione è tenuta aperta e la documentazione mancante è indicata\nFAIL se: la posizione di gestore è attribuita a uno dei due soggetti, oppure è dichiarata l'impossibilità di concludere senza indicare che cosa manca.\nÈ indifferente: l'ordine in cui la documentazione mancante è elencata.\nFonte di authoring: 08_email_direttore_di_stabilimento.md; 09_nota_del_consulente_ambientale.md, punto 5.8",
+      "pass_condition": "la questione è tenuta aperta e la documentazione mancante è indicata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable afferma che la variazione del gestore va comunicata dal nuovo gestore entro dieci giorni dalla data in cui essa acquista efficacia e che nel fascicolo non risulta alcuna comunicazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la variazione del gestore va comunicata dal nuovo gestore entro dieci giorni dalla data in cui essa acquista efficacia e che nel fascicolo non risulta alcuna comunicazione.\nPASS se: compaiono il termine di dieci giorni a carico del nuovo gestore e l'assenza della comunicazione\nFAIL se: il termine è attribuito al gestore uscente, è indicato un termine diverso, oppure il punto non è trattato.\nÈ indifferente: l'osservazione che la data di decorrenza non è determinabile.\nFonte di authoring: art. 269, comma 11-bis, del codice dell'ambiente; 09_nota_del_consulente_ambientale.md, punto 5.2",
+      "pass_condition": "compaiono il termine di dieci giorni a carico del nuovo gestore e l'assenza della comunicazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non indica come irregolare il formato cartaceo del formulario emesso il 26 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica come irregolare il formato cartaceo del formulario emesso il 26 agosto 2026.\nPASS se: Il deliverable non indica come irregolare il formato cartaceo del formulario emesso il 26 agosto 2026.\nFAIL se: è affermato che quel formulario è irregolare perché emesso in formato cartaceo, o che il relativo trasporto è privo di titolo.\nÈ indifferente: l'indicazione del termine finale entro cui il formato cartaceo è ammesso.\nFonte di authoring: art. 13, comma 5-bis, del decreto-legge 200/2025",
+      "pass_condition": "Il deliverable non indica come irregolare il formato cartaceo del formulario emesso il 26 agosto 2026.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non afferma che il deposito supera la soglia complessiva di trenta metri cubi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il deposito supera la soglia complessiva di trenta metri cubi.\nPASS se: Il deliverable non afferma che il deposito supera la soglia complessiva di trenta metri cubi.\nFAIL se: è affermato che il volume complessivo in deposito supera i trenta metri cubi.\nÈ indifferente: l'indicazione del volume complessivo in altra funzione.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 6",
+      "pass_condition": "Il deliverable non afferma che il deposito supera la soglia complessiva di trenta metri cubi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non accoglie l'applicazione dell'esonero dalla tenuta del registro.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non accoglie l'applicazione dell'esonero dalla tenuta del registro.\nPASS se: Il deliverable non accoglie l'applicazione dell'esonero dalla tenuta del registro.\nFAIL se: è affermato che la società è esonerata dalla tenuta del registro, o che l'esonero si applica perché ciascun reparto conta meno di dieci addetti.\nÈ indifferente: la menzione dell'esonero per escluderne l'applicabilità.\nFonte di authoring: art. 190, comma 5, del codice dell'ambiente; 06_procedura_deposito_temporaneo.md, punto 2",
+      "pass_condition": "Il deliverable non accoglie l'applicazione dell'esonero dalla tenuta del registro.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non indica un superamento al punto di emissione E4.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica un superamento al punto di emissione E4.\nPASS se: Il deliverable non indica un superamento al punto di emissione E4.\nFAIL se: è affermato che al punto E4 il valore limite è superato, o che i superamenti sono due.\nÈ indifferente: la menzione del punto E4 fra quelli misurati e conformi.\nFonte di authoring: 03_rapporto_di_prova_emissioni.md, punti 4, 5 e 6",
+      "pass_condition": "Il deliverable non indica un superamento al punto di emissione E4.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non fonda la violazione della prescrizione sulla perdita di carico differenziale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non fonda la violazione della prescrizione sulla perdita di carico differenziale.\nPASS se: Il deliverable non fonda la violazione della prescrizione sulla perdita di carico differenziale.\nFAIL se: è affermato che la perdita di carico rilevata supera la soglia prescritta, o che è quel superamento a rendere dovuta la sostituzione.\nÈ indifferente: la menzione del valore rilevato in altra funzione.\nFonte di authoring: 09_nota_del_consulente_ambientale.md, punto 4",
+      "pass_condition": "Il deliverable non fonda la violazione della prescrizione sulla perdita di carico differenziale.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non indica l'iscrizione della società all'Albo fra gli adempimenti mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'iscrizione della società all'Albo fra gli adempimenti mancanti.\nPASS se: Il deliverable non indica l'iscrizione della società all'Albo fra gli adempimenti mancanti.\nFAIL se: è affermato che la società deve iscriversi all'Albo dei gestori ambientali.\nÈ indifferente: la menzione dell'iscrizione del trasportatore.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 8; art. 212, commi 5 e 8, del codice dell'ambiente",
+      "pass_condition": "Il deliverable non indica l'iscrizione della società all'Albo fra gli adempimenti mancanti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non omette gli elementi che riducono l'esposizione della società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non omette gli elementi che riducono l'esposizione della società.\nPASS se: Il deliverable non omette gli elementi che riducono l'esposizione della società.\nFAIL se: non compare alcuno degli elementi favorevoli documentati, quali l'efficacia dell'autorizzazione alla data di riferimento, la conformità del punto E4, l'intervento già avviato sul sistema di abbattimento o la pendenza del termine di tre mesi.\nÈ indifferente: quali fra questi elementi sono esposti, purché ne compaia almeno uno.\nFonte di authoring: private/challenge_map.json, controlled non-issue",
+      "pass_condition": "Il deliverable non omette gli elementi che riducono l'esposizione della società.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non presenta come acquisiti l'estinzione della contravvenzione né il rinnovo dell'autorizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come acquisiti l'estinzione della contravvenzione né il rinnovo dell'autorizzazione.\nPASS se: Il deliverable non presenta come acquisiti l'estinzione della contravvenzione né il rinnovo dell'autorizzazione.\nFAIL se: è affermato che la contravvenzione si estinguerà, o che il rinnovo sarà concesso.\nÈ indifferente: l'indicazione dei presupposti da cui l'uno e l'altro dipendono.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presenta come acquisiti l'estinzione della contravvenzione né il rinnovo dell'autorizzazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 22 marzo 2027 come scadenza dell'autorizzazione alle emissioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 22 marzo 2027 come scadenza dell'autorizzazione alle emissioni.\nPASS se: compare la data «22 marzo 2027» riferita alla scadenza dell'autorizzazione\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: l'indicazione del tempo residuo.\nFonte di authoring: art. 269, comma 7, del codice dell'ambiente",
+      "pass_condition": "compare la data «22 marzo 2027» riferita alla scadenza dell'autorizzazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 22 marzo 2026 come termine per la presentazione della domanda di rinnovo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 22 marzo 2026 come termine per la presentazione della domanda di rinnovo.\nPASS se: compare la data «22 marzo 2026» riferita al termine per la domanda di rinnovo\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione dei giorni di ritardo.\nFonte di authoring: art. 269, comma 7, del codice dell'ambiente",
+      "pass_condition": "compare la data «22 marzo 2026» riferita al termine per la domanda di rinnovo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica in 68 milligrammi per normal metro cubo il valore misurato al punto E2.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 68 milligrammi per normal metro cubo il valore misurato al punto E2.\nPASS se: compare la misura «68 mg/Nm3» riferita al punto E2\nFAIL se: è indicata una misura diversa, oppure il valore misurato non compare.\nÈ indifferente: il modo in cui l'unità di misura è scritta.\nFonte di authoring: 03_rapporto_di_prova_emissioni.md, punto 4",
+      "pass_condition": "compare la misura «68 mg/Nm3» riferita al punto E2",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 30 giugno 2026 come termine entro cui l'autocontrollo del primo semestre 2026 andava eseguito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 30 giugno 2026 come termine entro cui l'autocontrollo del primo semestre 2026 andava eseguito.\nPASS se: compare la data «30 giugno 2026» riferita al termine dell'autocontrollo del primo semestre\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione dei giorni decorsi.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md, Allegato tecnico",
+      "pass_condition": "compare la data «30 giugno 2026» riferita al termine dell'autocontrollo del primo semestre",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 14 settembre 2022 come termine entro cui la sostituzione integrale del corredo filtrante andava effettuata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 14 settembre 2022 come termine entro cui la sostituzione integrale del corredo filtrante andava effettuata.\nPASS se: compare la data «14 settembre 2022» riferita al termine della sostituzione\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione dei giorni decorsi.\nFonte di authoring: 01_autorizzazione_emissioni_in_atmosfera.md, prescrizione 5.2",
+      "pass_condition": "compare la data «14 settembre 2022» riferita al termine della sostituzione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 13 ottobre 2026 come scadenza della prescrizione 1.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 13 ottobre 2026 come scadenza della prescrizione 1.\nPASS se: compare la data «13 ottobre 2026» riferita alla scadenza della prescrizione 1\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: l'indicazione dei giorni residui.\nFonte di authoring: 02_verbale_di_prescrizioni.md, prescrizione 1",
+      "pass_condition": "compare la data «13 ottobre 2026» riferita alla scadenza della prescrizione 1",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 23 settembre 2026 come scadenza della prescrizione 2.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 23 settembre 2026 come scadenza della prescrizione 2.\nPASS se: compare la data «23 settembre 2026» riferita alla scadenza della prescrizione 2\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: l'indicazione dei giorni residui.\nFonte di authoring: 02_verbale_di_prescrizioni.md, prescrizione 2",
+      "pass_condition": "compare la data «23 settembre 2026» riferita alla scadenza della prescrizione 2",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non computa i termini delle prescrizioni dal sopralluogo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa i termini delle prescrizioni dal sopralluogo.\nPASS se: Il deliverable non computa i termini delle prescrizioni dal sopralluogo.\nFAIL se: compare la data «6 ottobre 2026» oppure la data «16 settembre 2026» come scadenza di una delle due prescrizioni.\nÈ indifferente: la menzione della data del sopralluogo in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non computa i termini delle prescrizioni dal sopralluogo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica in 2.500 euro la somma da pagare in sede amministrativa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 2.500 euro la somma da pagare in sede amministrativa.\nPASS se: compare l'importo «2.500» riferito alla somma da pagare in sede amministrativa\nFAIL se: è indicato un importo diverso, oppure la somma non è quantificata.\nÈ indifferente: il modo in cui l'importo è scritto.\nFonte di authoring: art. 318-quater, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare l'importo «2.500» riferito alla somma da pagare in sede amministrativa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 12 dicembre 2026 come termine entro cui l'organo accertatore verifica l'adempimento alla prescrizione 1.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 12 dicembre 2026 come termine entro cui l'organo accertatore verifica l'adempimento alla prescrizione 1.\nPASS se: compare la data «12 dicembre 2026» riferita alla verifica dell'adempimento\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: il richiamo alla modalità della verifica.\nFonte di authoring: art. 318-quater, comma 1, del codice dell'ambiente",
+      "pass_condition": "compare la data «12 dicembre 2026» riferita alla verifica dell'adempimento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 10 febbraio 2027 come termine entro cui l'organo accertatore comunica al pubblico ministero l'adempimento alla prescrizione 1.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 10 febbraio 2027 come termine entro cui l'organo accertatore comunica al pubblico ministero l'adempimento alla prescrizione 1.\nPASS se: compare la data «10 febbraio 2027» riferita alla comunicazione dell'adempimento\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'ordine in cui i termini sono esposti.\nFonte di authoring: art. 318-quater, comma 2, del codice dell'ambiente",
+      "pass_condition": "compare la data «10 febbraio 2027» riferita alla comunicazione dell'adempimento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica l'11 gennaio 2027 come termine entro cui l'organo accertatore comunica l'inadempimento alla prescrizione 1.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica l'11 gennaio 2027 come termine entro cui l'organo accertatore comunica l'inadempimento alla prescrizione 1.\nPASS se: compare la data «11 gennaio 2027» riferita alla comunicazione dell'inadempimento\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'ordine in cui i termini sono esposti.\nFonte di authoring: art. 318-quater, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare la data «11 gennaio 2027» riferita alla comunicazione dell'inadempimento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica in 11,8 metri cubi il volume dei rifiuti pericolosi in deposito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 11,8 metri cubi il volume dei rifiuti pericolosi in deposito.\nPASS se: compare la misura «11,8» riferita al volume dei rifiuti pericolosi in deposito\nFAIL se: è indicata una misura diversa, oppure il volume dei pericolosi non compare.\nÈ indifferente: l'indicazione del volume complessivo accanto a quello dei pericolosi.\nFonte di authoring: 06_procedura_deposito_temporaneo.md, punto 6",
+      "pass_condition": "compare la misura «11,8» riferita al volume dei rifiuti pericolosi in deposito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non verifica il rispetto della soglia del deposito sui pesi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non verifica il rispetto della soglia del deposito sui pesi.\nPASS se: Il deliverable non verifica il rispetto della soglia del deposito sui pesi.\nFAIL se: il rispetto della soglia è verificato confrontando i pesi in chilogrammi o in tonnellate con la soglia di legge.\nÈ indifferente: la menzione dei pesi in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non verifica il rispetto della soglia del deposito sui pesi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "C.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 7 settembre 2026 come termine entro cui il rifiuto prodotto il 24 agosto 2026 andava annotato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 7 settembre 2026 come termine entro cui il rifiuto prodotto il 24 agosto 2026 andava annotato.\nPASS se: compare la data «7 settembre 2026» riferita al termine di annotazione\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione dell'entità del ritardo.\nFonte di authoring: art. 190, comma 3, del codice dell'ambiente",
+      "pass_condition": "compare la data «7 settembre 2026» riferita al termine di annotazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non computa il termine di annotazione in giorni di calendario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa il termine di annotazione in giorni di calendario.\nPASS se: Il deliverable non computa il termine di annotazione in giorni di calendario.\nFAIL se: il termine di annotazione è computato in giorni di calendario dalla produzione del rifiuto anziché in giorni lavorativi.\nÈ indifferente: la menzione della data di produzione in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non computa il termine di annotazione in giorni di calendario.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable indica il 26 novembre 2026 come termine entro cui la copia controfirmata del formulario deve essere ricevuta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 26 novembre 2026 come termine entro cui la copia controfirmata del formulario deve essere ricevuta.\nPASS se: compare la data «26 novembre 2026» riferita al termine di tre mesi\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione dei giorni residui.\nFonte di authoring: art. 188, comma 4, del codice dell'ambiente",
+      "pass_condition": "compare la data «26 novembre 2026» riferita al termine di tre mesi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "C.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "environmental_compliance_memo.md"
+      ],
+      "title": "Il deliverable non somma l'incertezza estesa al valore misurato al punto E4 per ricavarne un superamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non somma l'incertezza estesa al valore misurato al punto E4 per ricavarne un superamento.\nPASS se: Il deliverable non somma l'incertezza estesa al valore misurato al punto E4 per ricavarne un superamento.\nFAIL se: compare la misura «52 mg/Nm3» come valore del punto E4, oppure il superamento al punto E4 è ricavato sommando l'incertezza estesa al valore misurato.\nÈ indifferente: la menzione dell'incertezza estesa in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non somma l'incertezza estesa al valore misurato al punto E4 per ricavarne un superamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

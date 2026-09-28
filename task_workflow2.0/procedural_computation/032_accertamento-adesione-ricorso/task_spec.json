@@ -1,0 +1,122 @@
+{
+  "task_id": "WF2-032",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Tributario. Audit dei termini fra accertamento, adesione, pagamento e ricorso",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2030-09-16",
+  "workflow_family": "procedural_computation",
+  "subtask": "deadline_chain",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "in corso",
+  "legal_area": [
+    "tributario / contenzioso fiscale",
+    "C. Procedural computation",
+    "Contenzioso",
+    "Compliance & Regulatory"
+  ],
+  "document_type": "in corso",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: audit_dei_termini.md.\n\n# Struttura del deliverable\n\nFile da produrre: `audit_dei_termini.md`. Lunghezza massima 1.800 parole.\nSezioni obbligatorie, nell'ordine:\n\n## 1. La data entro cui decidere\nUna sola data, esposta in modo non ambiguo, e i giorni che restano alla data di riferimento.\n\n## 2. Quadro dei termini\nUna tabella con una riga per termine e le colonne: termine, evento da cui decorre, documento da cui\nrisulta l'evento, regola applicata, scadenza, stato alla data di riferimento.\n\n## 3. Opzioni percorribili e opzioni esaurite\nChe cosa la societa' puo' ancora fare, che cosa non puo' piu' fare e a quali condizioni.\n\n## 4. Calcoli\nPer ciascuna scadenza della tabella, i passaggi seguiti.\n\n## 5. Attivita' da compiere\nLe attivita', in ordine, con la data entro cui ciascuna va completata.\n\n## 6. Che cosa non torna nella nota del consulente\nLe affermazioni della nota che non trovano riscontro, una per una, con la correzione.\n\n## 7. Elementi mancanti dal fascicolo\nI documenti da acquisire e che cosa non e' determinabile allo stato.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_comunicazione_schema_di_atto.pdf",
+    "public/documents/02_osservazioni_allo_schema_di_atto.pdf",
+    "public/documents/03_avviso_di_accertamento.pdf",
+    "public/documents/04_ricevute_di_posta_certificata.pdf",
+    "public/documents/05_istanza_di_accertamento_con_adesione.pdf",
+    "public/documents/06_verbale_di_contraddittorio.pdf",
+    "public/documents/07_nota_del_consulente_fiscale.docx"
+  ],
+  "expected_deliverable": "audit_dei_termini.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

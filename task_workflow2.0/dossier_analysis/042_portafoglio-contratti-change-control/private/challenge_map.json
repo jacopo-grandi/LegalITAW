@@ -1,0 +1,221 @@
+{
+  "task_id": "WF2-042",
+  "lato_assistito": "Cervara Holding S.p.A., acquirente della totalità di Selva Digitale S.r.l.",
+  "data_di_riferimento": "2026-08-18",
+  "stato_del_fascicolo": "signing previsto il 31 agosto; closing subordinato ai consensi materiali",
+  "fonti_ammesse": [
+    "cc"
+  ],
+  "dati_mancanti": [
+    "acquisire l'addendum prima di confermare l'analisi",
+    "chiedere all'agent il lender register aggiornato"
+  ],
+  "calcoli": [
+    "euro 8.000.400",
+    "euro 500.000"
+  ],
+  "errori_bersaglio": [
+    "cessione automatica di tutti i contratti",
+    "recesso Ginestra incondizionato",
+    "consenso del locatore",
+    "notifica Falco dopo il closing",
+    "waiver Lago per email",
+    "addendum Falco considerato inesistente",
+    "omissione dei contratti sotto soglia"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "perimetro dell'operazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'operazione è una vendita del 100% delle quote di Selva Digitale",
+      "evidenza": "il term sheet esclude trasferimenti di azienda o singoli contratti",
+      "azione": "qualificare separatamente cambio di controllo e cessione",
+      "cautela": "non applicare automaticamente le clausole sulla cessione d'azienda"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Falco consenso",
+      "gravita": "alta",
+      "affermazione_richiesta": "il contratto Falco richiede consenso scritto preventivo per il cambio di controllo",
+      "evidenza": "articolo 18.3 del contratto cloud",
+      "azione": "ottenere il consenso prima del closing",
+      "cautela": "non sostituire il consenso con una semplice notifica"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Falco termine",
+      "gravita": "alta",
+      "affermazione_richiesta": "Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing",
+      "evidenza": "la clausola 18.4 usa giorni lavorativi",
+      "azione": "inviare la richiesta entro il 10 agosto 2026 o spostare il closing",
+      "cautela": "non contare giorni di calendario"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Ginestra notifica",
+      "gravita": "alta",
+      "affermazione_richiesta": "Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo",
+      "evidenza": "clausola 12.2 del contratto di distribuzione",
+      "azione": "preparare la notifica da inviare dopo il closing",
+      "cautela": "non trattarla come condizione sospensiva"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Ginestra recesso",
+      "gravita": "alta",
+      "affermazione_richiesta": "Ginestra può recedere soltanto se l'acquirente è un concorrente nominato",
+      "evidenza": "allegato 4 elenca tre concorrenti e Cervara non vi compare",
+      "azione": "documentare la non appartenenza all'elenco",
+      "cautela": "non affermare che ogni cambio di controllo consente recesso"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Lago evento di default",
+      "gravita": "alta",
+      "affermazione_richiesta": "il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver",
+      "evidenza": "clausole 14.1 e 15.2 del finanziamento",
+      "azione": "ottenere waiver sottoscritto prima del closing",
+      "cautela": "non considerare sufficiente l'email del relationship manager"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Lago maggioranza",
+      "gravita": "alta",
+      "affermazione_richiesta": "il waiver richiede finanziatori per almeno il 66,67% degli impegni",
+      "evidenza": "la clausola sulle decisioni dei Majority Lenders",
+      "azione": "verificare adesioni per euro 8.000.400 su euro 12.000.000",
+      "cautela": "non arrotondare la soglia al 66%"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Nodo silenzio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la licenza Nodo vieta la cessione ma non contiene una clausola di change of control",
+      "evidenza": "articolo 9 disciplina solo trasferimento del contratto e sublicenza",
+      "azione": "classificare come nessun trigger sul fascicolo attuale",
+      "cautela": "non equiparare controllo societario e cessione contrattuale"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "locazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la locazione non attribuisce rimedi per il solo cambio di controllo",
+      "evidenza": "clausola 16 consente cessione nell'ambito di riorganizzazioni e tace sul controllo",
+      "azione": "registrare il contratto come non bloccante",
+      "cautela": "non chiedere un consenso non previsto"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "materialità",
+      "gravita": "alta",
+      "affermazione_richiesta": "solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui",
+      "evidenza": "registro contratti: Falco euro 720.000, Lago oneri euro 610.000, Ginestra euro 430.000",
+      "azione": "prioritizzare i due contratti materiali senza omettere gli altri",
+      "cautela": "non usare la materialità per cancellare obblighi di notifica"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "registro incompleto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il registro non contiene l'ultimo addendum Falco",
+      "evidenza": "la nota CFO segnala un addendum 2025 non allegato",
+      "azione": "acquisire l'addendum prima di confermare l'analisi",
+      "cautela": "non presumere che l'addendum sia irrilevante"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "comunicazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "le comunicazioni devono seguire indirizzi e forme di ciascun contratto",
+      "evidenza": "Falco richiede PEC; Ginestra raccomandata o PEC; Lago piattaforma agent",
+      "azione": "predisporre tre flussi distinti",
+      "cautela": "non inviare una comunicazione unica"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "closing condition",
+      "gravita": "alta",
+      "affermazione_richiesta": "il term sheet rende consensi Falco e Lago condizioni al closing",
+      "evidenza": "allegato B del term sheet",
+      "azione": "inserire entrambi nella checklist di closing",
+      "cautela": "non confondere un obbligo contrattuale con una condizione dell'operazione"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "dato mancante",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca la conferma sulla composizione aggiornata dei finanziatori Lago",
+      "evidenza": "il registro riporta saldi al 30 giugno e nessuna notice di trasferimento",
+      "azione": "chiedere all'agent il lender register aggiornato",
+      "cautela": "non calcolare la maggioranza su dati non confermati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "cessione automatica di tutti i contratti",
+      "chiave_nel_criterio": "cessione automatica di tutti i contratti"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "recesso Ginestra incondizionato",
+      "chiave_nel_criterio": "recesso Ginestra incondizionato"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "consenso del locatore",
+      "chiave_nel_criterio": "consenso del locatore"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "notifica Falco dopo il closing",
+      "chiave_nel_criterio": "notifica Falco dopo il closing"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "waiver Lago per email",
+      "chiave_nel_criterio": "waiver Lago per email"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "addendum Falco considerato inesistente",
+      "chiave_nel_criterio": "addendum Falco considerato inesistente"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "omissione dei contratti sotto soglia",
+      "chiave_nel_criterio": "omissione dei contratti sotto soglia"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_term_sheet_operazione.pdf",
+      "funzione": "Term sheet dell'acquisizione"
+    },
+    {
+      "file": "02_contratto_cloud_falco.pdf",
+      "funzione": "Contratto cloud Falco"
+    },
+    {
+      "file": "03_distribuzione_ginestra.pdf",
+      "funzione": "Distribuzione Ginestra"
+    },
+    {
+      "file": "04_finanziamento_lago.pdf",
+      "funzione": "Finanziamento Lago"
+    },
+    {
+      "file": "05_licenza_software_nodo.pdf",
+      "funzione": "Licenza software Nodo"
+    },
+    {
+      "file": "06_locazione_sede.pdf",
+      "funzione": "Locazione della sede"
+    },
+    {
+      "file": "07_registro_contratti_e_nota_cfo.xlsx",
+      "funzione": "Registro contratti e nota del CFO"
+    }
+  ]
+}

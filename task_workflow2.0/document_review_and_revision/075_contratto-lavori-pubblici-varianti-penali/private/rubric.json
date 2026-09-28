@@ -1,0 +1,993 @@
+{
+  "task_id": "WF2-075",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 49,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "la consegna usa i file public_works_review.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file public_works_review.md.\nPASS se: i nomi dei file coincidono con public_works_review.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con public_works_review.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "la parte testuale non supera 2.300 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 2.300 parole.\nPASS se: il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola 12 consente varianti del RUP senza indicare presupposto né limite.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola 12 consente varianti del RUP senza indicare presupposto né limite.\nPASS se: afferma: la clausola 12 consente varianti del RUP senza indicare presupposto né limite; conclude: la clausola 12 consente varianti del RUP senza indicare presupposto né limite\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 12 consente varianti del RUP senza indicare presupposto né limite; conclude: la clausola 12 consente varianti del RUP senza indicare presupposto né limite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza contratto, clausola 12.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza contratto, clausola 12.\nPASS se: cita 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; indica come riscontro 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "cita 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; indica come riscontro 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: la modifica può uscire dai casi ammessi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la modifica può uscire dai casi ammessi.\nPASS se: espone l'effetto: la modifica può uscire dai casi ammessi; indica come conseguenza: la modifica può uscire dai casi ammessi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: la modifica può uscire dai casi ammessi; indica come conseguenza: la modifica può uscire dai casi ammessi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: legare ogni variante a presupposto, motivazione e soglia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: legare ogni variante a presupposto, motivazione e soglia.\nPASS se: afferma: la clausola 12 consente varianti del RUP senza indicare presupposto né limite; conclude: la clausola 12 consente varianti del RUP senza indicare presupposto né limite\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 12 consente varianti del RUP senza indicare presupposto né limite; conclude: la clausola 12 consente varianti del RUP senza indicare presupposto né limite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il quadro economico aggiornato.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il quadro economico aggiornato.\nPASS se: espone l'effetto: la modifica può uscire dai casi ammessi; indica come conseguenza: la modifica può uscire dai casi ammessi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: la modifica può uscire dai casi ammessi; indica come conseguenza: la modifica può uscire dai casi ammessi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali.\nPASS se: afferma: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali; conclude: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "afferma: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali; conclude: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza e disciplinare.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza e disciplinare.\nPASS se: cita 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; indica come riscontro 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "cita 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; indica come riscontro 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta.\nPASS se: espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta; indica come conseguenza: l'esigibilità della prestazione aggiuntiva resta esposta\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta; indica come conseguenza: l'esigibilità della prestazione aggiuntiva resta esposta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: coordinare contratto e lex specialis.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: coordinare contratto e lex specialis.\nPASS se: afferma: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali; conclude: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "afferma: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali; conclude: il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'allegato opzioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'allegato opzioni.\nPASS se: espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta; indica come conseguenza: l'esigibilità della prestazione aggiuntiva resta esposta\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo; art. 120 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: l'esigibilità della prestazione aggiuntiva resta esposta; indica come conseguenza: l'esigibilità della prestazione aggiuntiva resta esposta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per revisione prezzi.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per revisione prezzi.\nPASS se: compare «10 per cento»; compare «10%»\nFAIL se: non compare ne «10 per cento» ne «10%» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; art. 60 D.Lgs. 36/2023; Allegato II.2-bis",
+      "pass_condition": "compare «10 per cento»; compare «10%»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: clausola 15.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: clausola 15.\nPASS se: cita 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; indica come riscontro 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; art. 60 D.Lgs. 36/2023; Allegato II.2-bis",
+      "pass_condition": "cita 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; indica come riscontro 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti.\nPASS se: espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti; indica come conseguenza: la formula deve essere sostituita con rinvio e indice pertinenti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; art. 60 D.Lgs. 36/2023; Allegato II.2-bis",
+      "pass_condition": "espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti; indica come conseguenza: la formula deve essere sostituita con rinvio e indice pertinenti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per revisione prezzi.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per revisione prezzi.\nPASS se: afferma: la soglia contrattuale del 10 per cento contrasta con la clausola legale applicabile; conclude: la soglia contrattuale del 10 per cento contrasta con la clausola legale applicabile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; art. 60 D.Lgs. 36/2023; Allegato II.2-bis",
+      "pass_condition": "afferma: la soglia contrattuale del 10 per cento contrasta con la clausola legale applicabile; conclude: la soglia contrattuale del 10 per cento contrasta con la clausola legale applicabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca l'indice di settore.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca l'indice di settore.\nPASS se: espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti; indica come conseguenza: la formula deve essere sostituita con rinvio e indice pertinenti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi; art. 60 D.Lgs. 36/2023; Allegato II.2-bis",
+      "pass_condition": "espone l'effetto: la formula deve essere sostituita con rinvio e indice pertinenti; indica come conseguenza: la formula deve essere sostituita con rinvio e indice pertinenti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola 18 rinvia le riserve alla sola comunicazione PEC.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola 18 rinvia le riserve alla sola comunicazione PEC.\nPASS se: afferma: la clausola 18 rinvia le riserve alla sola comunicazione PEC; conclude: la clausola 18 rinvia le riserve alla sola comunicazione PEC\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; art. 115 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 18 rinvia le riserve alla sola comunicazione PEC; conclude: la clausola 18 rinvia le riserve alla sola comunicazione PEC",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza e capitolato.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza e capitolato.\nPASS se: cita 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; indica come riscontro 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; art. 115 D.Lgs. 36/2023",
+      "pass_condition": "cita 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; indica come riscontro 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: il testo non presidia iscrizione negli atti contabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il testo non presidia iscrizione negli atti contabili.\nPASS se: espone l'effetto: il testo non presidia iscrizione negli atti contabili; indica come conseguenza: il testo non presidia iscrizione negli atti contabili\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; art. 115 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: il testo non presidia iscrizione negli atti contabili; indica come conseguenza: il testo non presidia iscrizione negli atti contabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: richiamare modalità e termini dell'Allegato II.14.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: richiamare modalità e termini dell'Allegato II.14.\nPASS se: afferma: la clausola 18 rinvia le riserve alla sola comunicazione PEC; conclude: la clausola 18 rinvia le riserve alla sola comunicazione PEC\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve; art. 115 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 18 rinvia le riserve alla sola comunicazione PEC; conclude: la clausola 18 rinvia le riserve alla sola comunicazione PEC",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere.\nPASS se: afferma: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere; conclude: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; D.Lgs. 36/2023; Allegato II.14",
+      "pass_condition": "afferma: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere; conclude: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza contratto.\nPASS se: cita 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; indica come riscontro 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; D.Lgs. 36/2023; Allegato II.14",
+      "pass_condition": "cita 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; indica come riscontro 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: la previsione può interrompere l'esecuzione fuori dal procedimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la previsione può interrompere l'esecuzione fuori dal procedimento.\nPASS se: espone l'effetto: la previsione può interrompere l'esecuzione fuori dal procedimento; indica come conseguenza: la previsione può interrompere l'esecuzione fuori dal procedimento\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; D.Lgs. 36/2023; Allegato II.14",
+      "pass_condition": "espone l'effetto: la previsione può interrompere l'esecuzione fuori dal procedimento; indica come conseguenza: la previsione può interrompere l'esecuzione fuori dal procedimento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: subordinare sospensione a ordine e verbalizzazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: subordinare sospensione a ordine e verbalizzazione.\nPASS se: afferma: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere; conclude: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione; D.Lgs. 36/2023; Allegato II.14",
+      "pass_condition": "afferma: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere; conclude: la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la penale giornaliera è fissata senza tetto complessivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la penale giornaliera è fissata senza tetto complessivo.\nPASS se: afferma: la penale giornaliera è fissata senza tetto complessivo; conclude: la penale giornaliera è fissata senza tetto complessivo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; art. 126 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la penale giornaliera è fissata senza tetto complessivo; conclude: la penale giornaliera è fissata senza tetto complessivo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: clausola 22.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: clausola 22.\nPASS se: cita 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; indica come riscontro 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; art. 126 D.Lgs. 36/2023",
+      "pass_condition": "cita 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; indica come riscontro 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: manca il limite previsto dalla disciplina di gara.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: manca il limite previsto dalla disciplina di gara.\nPASS se: espone l'effetto: manca il limite previsto dalla disciplina di gara; indica come conseguenza: manca il limite previsto dalla disciplina di gara\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; art. 126 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: manca il limite previsto dalla disciplina di gara; indica come conseguenza: manca il limite previsto dalla disciplina di gara",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: inserire aliquota, base, contestazione e tetto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: inserire aliquota, base, contestazione e tetto.\nPASS se: afferma: la penale giornaliera è fissata senza tetto complessivo; conclude: la penale giornaliera è fissata senza tetto complessivo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali; art. 126 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la penale giornaliera è fissata senza tetto complessivo; conclude: la penale giornaliera è fissata senza tetto complessivo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola 25 rende definitivo il collaudo alla firma del certificato.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola 25 rende definitivo il collaudo alla firma del certificato.\nPASS se: afferma: la clausola 25 rende definitivo il collaudo alla firma del certificato; conclude: la clausola 25 rende definitivo il collaudo alla firma del certificato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 25 rende definitivo il collaudo alla firma del certificato; conclude: la clausola 25 rende definitivo il collaudo alla firma del certificato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza contratto.\nPASS se: cita 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; indica come riscontro 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "cita 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; indica come riscontro 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: il testo anticipa gli effetti definitivi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il testo anticipa gli effetti definitivi.\nPASS se: espone l'effetto: il testo anticipa gli effetti definitivi; indica come conseguenza: il testo anticipa gli effetti definitivi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: il testo anticipa gli effetti definitivi; indica come conseguenza: il testo anticipa gli effetti definitivi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: distinguere emissione provvisoria e consolidamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: distinguere emissione provvisoria e consolidamento.\nPASS se: afferma: la clausola 25 rende definitivo il collaudo alla firma del certificato; conclude: la clausola 25 rende definitivo il collaudo alla firma del certificato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 25 rende definitivo il collaudo alla firma del certificato; conclude: la clausola 25 rende definitivo il collaudo alla firma del certificato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà.\nPASS se: afferma: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà; conclude: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà; conclude: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: clausola 25.7.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: clausola 25.7.\nPASS se: cita 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; indica come riscontro 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "cita 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; indica come riscontro 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: la stazione appaltante perderebbe una tutela prevista.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la stazione appaltante perderebbe una tutela prevista.\nPASS se: espone l'effetto: la stazione appaltante perderebbe una tutela prevista; indica come conseguenza: la stazione appaltante perderebbe una tutela prevista\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: la stazione appaltante perderebbe una tutela prevista; indica come conseguenza: la stazione appaltante perderebbe una tutela prevista",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: eliminare la rinuncia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: eliminare la rinuncia.\nPASS se: afferma: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà; conclude: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi; art. 116 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà; conclude: la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la clausola 27 confonde recesso e risoluzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la clausola 27 confonde recesso e risoluzione.\nPASS se: afferma: la clausola 27 confonde recesso e risoluzione; conclude: la clausola 27 confonde recesso e risoluzione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; art. 122 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 27 confonde recesso e risoluzione; conclude: la clausola 27 confonde recesso e risoluzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: bozza contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: bozza contratto.\nPASS se: cita 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; indica come riscontro 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; art. 122 D.Lgs. 36/2023",
+      "pass_condition": "cita 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; indica come riscontro 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: presupposti e conseguenze economiche risultano indistinti.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: presupposti e conseguenze economiche risultano indistinti.\nPASS se: espone l'effetto: presupposti e conseguenze economiche risultano indistinti; indica come conseguenza: presupposti e conseguenze economiche risultano indistinti\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; art. 122 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: presupposti e conseguenze economiche risultano indistinti; indica come conseguenza: presupposti e conseguenze economiche risultano indistinti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: separare le due fattispecie.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: separare le due fattispecie.\nPASS se: afferma: la clausola 27 confonde recesso e risoluzione; conclude: la clausola 27 confonde recesso e risoluzione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione; art. 122 D.Lgs. 36/2023",
+      "pass_condition": "afferma: la clausola 27 confonde recesso e risoluzione; conclude: la clausola 27 confonde recesso e risoluzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable enuncia il risultato: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio.\nPASS se: afferma: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio; conclude: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; art. 117 D.Lgs. 36/2023",
+      "pass_condition": "afferma: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio; conclude: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable collega il dato al documento: clausola 29.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: clausola 29.\nPASS se: cita 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; indica come riscontro 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; art. 117 D.Lgs. 36/2023",
+      "pass_condition": "cita 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; indica come riscontro 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable espone l'effetto: lo svincolo anticipato lascia scoperta l'esecuzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: lo svincolo anticipato lascia scoperta l'esecuzione.\nPASS se: espone l'effetto: lo svincolo anticipato lascia scoperta l'esecuzione; indica come conseguenza: lo svincolo anticipato lascia scoperta l'esecuzione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; art. 117 D.Lgs. 36/2023",
+      "pass_condition": "espone l'effetto: lo svincolo anticipato lascia scoperta l'esecuzione; indica come conseguenza: lo svincolo anticipato lascia scoperta l'esecuzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "il deliverable indica l'azione: allineare svincolo e certificati.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: allineare svincolo e certificati.\nPASS se: afferma: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio; conclude: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia; art. 117 D.Lgs. 36/2023",
+      "pass_condition": "afferma: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio; conclude: lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «giorni naturali»: La durata espressa in giorni naturali non è di per sé una variante contrattuale.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «giorni naturali»: La durata espressa in giorni naturali non è di per sé una variante contrattuale.\nPASS se: non qualifica come criticita giorni naturali; esclude espressamente il falso positivo giorni naturali\nFAIL se: compare la conclusione vietata «giorni naturali costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita giorni naturali; esclude espressamente il falso positivo giorni naturali",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «bozza polizza»: Una bozza di garanzia non dimostra l'avvenuta costituzione della garanzia definitiva.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «bozza polizza»: Una bozza di garanzia non dimostra l'avvenuta costituzione della garanzia definitiva.\nPASS se: non qualifica come criticita bozza polizza; esclude espressamente il falso positivo bozza polizza\nFAIL se: compare la conclusione vietata «bozza polizza costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita bozza polizza; esclude espressamente il falso positivo bozza polizza",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "public_works_review.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «pec informativa»: Una PEC informativa non sostituisce automaticamente gli adempimenti della contabilità lavori.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «pec informativa»: Una PEC informativa non sostituisce automaticamente gli adempimenti della contabilità lavori.\nPASS se: non qualifica come criticita pec informativa; esclude espressamente il falso positivo pec informativa\nFAIL se: compare la conclusione vietata «pec informativa costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita pec informativa; esclude espressamente il falso positivo pec informativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

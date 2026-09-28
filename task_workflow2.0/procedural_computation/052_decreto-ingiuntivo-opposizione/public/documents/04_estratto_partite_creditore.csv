@@ -1,0 +1,17 @@
+data;tipo_documento;numero;descrizione;importo_eur;segno;imputato_a_riduzione_del_credito
+2030-07-31;fattura;118/2030;somministrazione filati luglio 2030;58000,00;D;no
+2030-08-31;fattura;129/2030;somministrazione filati agosto 2030;41000,00;D;no
+2030-09-30;fattura;144/2030;somministrazione filati settembre 2030;52000,00;D;no
+2030-10-31;fattura;151/2030;somministrazione filati ottobre 2030;49000,00;D;no
+2030-11-30;fattura;166/2030;somministrazione filati novembre 2030;61000,00;D;no
+2030-12-31;fattura;178/2030;somministrazione filati dicembre 2030;57000,00;D;no
+2031-01-31;fattura;4/2031;somministrazione filati gennaio 2031;44000,00;D;no
+2031-02-28;fattura;19/2031;somministrazione filati febbraio 2031;39000,00;D;no
+2031-03-31;fattura;31/2031;somministrazione filati marzo 2031;19000,00;D;no
+2030-09-15;incasso;bonifico;acconto ricevuto dal cliente;30000,00;A;no
+2030-12-18;incasso;bonifico;acconto ricevuto dal cliente;30000,00;A;no
+2031-01-14;nota di credito;7/2031;storno per resi novembre 2030;46000,00;A;no
+2031-02-03;nota di credito;11/2031;storno per resi dicembre 2030;38000,00;A;no
+2031-03-31;addebito;penale;penale contrattuale art. 11 del contratto;42000,00;D;no
+2031-03-31;addebito;interessi;interessi di mora maturati al 31 marzo 2031;24700,00;D;no
+2031-04-28;riepilogo;-;TOTALE PORTATO IN INGIUNZIONE;486700,00;D;-

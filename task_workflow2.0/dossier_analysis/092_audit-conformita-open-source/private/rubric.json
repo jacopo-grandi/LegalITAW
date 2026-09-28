@@ -1,0 +1,1053 @@
+{
+  "task_id": "WF2-092",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 52,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente open_source_audit.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente open_source_audit.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 5 novembre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 5 novembre 2026.\nPASS se: compare «5 novembre 2026» come data alla quale l'analisi è riferita\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «5 novembre 2026» come data alla quale l'analisi è riferita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Ogni rilievo indica il componente a cui si riferisce.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica il componente a cui si riferisce.\nPASS se: ciascuna voce riporta il nome di un pacchetto dell'inventario\nFAIL se: una o più voci non indicano alcun componente.\nÈ indifferente: l'indicazione della versione oltre al nome.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta il nome di un pacchetto dell'inventario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Ogni rilievo indica il canale di fornitura interessato.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica il canale di fornitura interessato.\nPASS se: ciascuna voce indica se il componente è distribuito sull'apparecchiatura, erogato come servizio o usato solo internamente\nFAIL se: una o più voci non indicano il canale.\nÈ indifferente: la denominazione usata per i canali.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce indica se il componente è distribuito sull'apparecchiatura, erogato come servizio o usato solo internamente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Ogni rilievo distingue il fatto documentato dalla dichiarazione di parte.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo distingue il fatto documentato dalla dichiarazione di parte.\nPASS se: ciascuna voce qualifica l'elemento su cui poggia come risultante da un documento oppure come dichiarato in una nota interna\nFAIL se: una dichiarazione di parte è riportata come fatto documentato senza distinzione.\nÈ indifferente: la terminologia usata per la distinzione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce qualifica l'elemento su cui poggia come risultante da un documento oppure come dichiarato in una nota interna",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Ogni rilievo indica chi deve chiudere il punto.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica chi deve chiudere il punto.\nPASS se: ciascuna voce indica una funzione o una posizione responsabile della chiusura\nFAIL se: una o più voci non indicano alcun responsabile.\nÈ indifferente: l'indicazione del nome della persona anziché della funzione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce indica una funzione o una posizione responsabile della chiusura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non cita norme o licenze assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme o licenze assenti dal reference pack.\nPASS se: Il deliverable non cita norme o licenze assenti dal reference pack.\nFAIL se: compare un riferimento a una norma, a una licenza o a una sezione di licenza che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola voce.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme o licenze assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che il pianificatore corvenza-scheduler è stato modificato localmente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il pianificatore corvenza-scheduler è stato modificato localmente.\nPASS se: compare l'affermazione che corvenza-scheduler è stato modificato\nFAIL se: il componente è descritto come usato senza modifiche, oppure la modifica non è affermata.\nÈ indifferente: l'indicazione di quanti file sono stati modificati.\nFonte di authoring: 02_inventario_dipendenze.csv; 08_email_responsabile_sviluppo.md",
+      "pass_condition": "compare l'affermazione che corvenza-scheduler è stato modificato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che gli utenti del cliente interagiscono con il pianificatore a distanza attraverso una rete.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che gli utenti del cliente interagiscono con il pianificatore a distanza attraverso una rete.\nPASS se: compare l'affermazione che il pianificatore è raggiunto dagli utenti attraverso il portale o attraverso l'interfaccia programmatica\nFAIL se: l'interazione a distanza non è affermata, oppure è esclusa perché il componente è eseguito sull'infrastruttura di Solmarino.\nÈ indifferente: il richiamo al numero dei clienti che usano l'interfaccia programmatica.\nFonte di authoring: 01_scheda_prodotto_e_fornitura.md, punti 2.2 e 5; 08_email_responsabile_sviluppo.md",
+      "pass_condition": "compare l'affermazione che il pianificatore è raggiunto dagli utenti attraverso il portale o attraverso l'interfaccia programmatica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable qualifica la conseguenza come obbligo di offrire agli utenti remoti la possibilità di ricevere il codice sorgente corrispondente della versione modificata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la conseguenza come obbligo di offrire agli utenti remoti la possibilità di ricevere il codice sorgente corrispondente della versione modificata.\nPASS se: compare, riferita al pianificatore, una fra: «offerta del codice sorgente agli utenti remoti»; «obbligo di rendere disponibile il codice sorgente corrispondente agli utenti che interagiscono via rete»; «messa a disposizione del sorgente su server di rete»\nFAIL se: la conseguenza è esclusa, oppure è descritta come obbligo di consegna al cliente contrattuale. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; la scelta della modalità tecnica di messa a disposizione.\nFonte di authoring: sezione 13 AGPL-3.0",
+      "pass_condition": "compare, riferita al pianificatore, una fra: «offerta del codice sorgente agli utenti remoti»; «obbligo di rendere disponibile il codice sorgente corrispondente agli utenti che interagiscono via rete»; «messa a disposizione del sorgente su server di rete»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non esclude l'obbligo sul pianificatore per il fatto che nessun eseguibile è consegnato al cliente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non esclude l'obbligo sul pianificatore per il fatto che nessun eseguibile è consegnato al cliente.\nPASS se: Il deliverable non esclude l'obbligo sul pianificatore per il fatto che nessun eseguibile è consegnato al cliente.\nFAIL se: l'assenza di consegna di un eseguibile è usata per escludere l'obbligo relativo al pianificatore.\nÈ indifferente: il richiamo all'assenza di consegna in relazione ad altri componenti.\nFonte di authoring: sezioni 0 e 13 AGPL-3.0",
+      "pass_condition": "Il deliverable non esclude l'obbligo sul pianificatore per il fatto che nessun eseguibile è consegnato al cliente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che le intestazioni dei file modificati di algen-crypto non dichiarano la modifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le intestazioni dei file modificati di algen-crypto non dichiarano la modifica.\nPASS se: compare l'affermazione che i file modificati riportano soltanto l'avviso di licenza originale\nFAIL se: il fatto non è rilevato, oppure è affermato che gli avvisi di modifica sono presenti.\nÈ indifferente: l'indicazione dei nomi dei file.\nFonte di authoring: 03_notice_e_intestazioni.md, parte seconda",
+      "pass_condition": "compare l'affermazione che i file modificati riportano soltanto l'avviso di licenza originale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica come rimedio l'apposizione su ciascun file modificato di un avviso che dichiara la modifica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica come rimedio l'apposizione su ciascun file modificato di un avviso che dichiara la modifica.\nPASS se: fra le azioni compare l'apposizione dell'avviso di modifica sui file modificati\nFAIL se: il rimedio indicato è l'aggiornamento del file NOTICE, oppure non è indicato alcun rimedio.\nÈ indifferente: l'indicazione della data della modifica nell'avviso.\nFonte di authoring: sezione 4, lettera b, Apache-2.0",
+      "pass_condition": "fra le azioni compare l'apposizione dell'avviso di modifica sui file modificati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che il NOTICE distribuito con la piattaforma non riproduce gli avvisi di attribuzione contenuti nel NOTICE di belfonte-parser.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il NOTICE distribuito con la piattaforma non riproduce gli avvisi di attribuzione contenuti nel NOTICE di belfonte-parser.\nPASS se: compare l'affermazione che il contenuto del NOTICE del pacchetto non è riprodotto\nFAIL se: il fatto non è rilevato, oppure è affermato che l'elencazione del pacchetto fra i componenti Apache assolve l'obbligo.\nÈ indifferente: il richiamo al contenuto specifico dell'avviso.\nFonte di authoring: 03_notice_e_intestazioni.md",
+      "pass_condition": "compare l'affermazione che il contenuto del NOTICE del pacchetto non è riprodotto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica come rimedio la riproduzione del contenuto degli avvisi di attribuzione in una delle collocazioni ammesse.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica come rimedio la riproduzione del contenuto degli avvisi di attribuzione in una delle collocazioni ammesse.\nPASS se: fra le azioni compare la riproduzione del contenuto del NOTICE del pacchetto\nFAIL se: il rimedio indicato è la sola citazione del pacchetto, oppure non è indicato.\nÈ indifferente: la collocazione scelta fra quelle ammesse.\nFonte di authoring: sezione 4, lettera d, Apache-2.0",
+      "pass_condition": "fra le azioni compare la riproduzione del contenuto del NOTICE del pacchetto",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable individua la combinazione fra meridolo-compress e algen-crypto come problematica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable individua la combinazione fra meridolo-compress e algen-crypto come problematica.\nPASS se: compare l'indicazione della combinazione fra un componente GPL-2.0-only e un componente Apache-2.0 collegati staticamente nello stesso modulo\nFAIL se: la combinazione non è individuata, oppure è presentata come ammissibile.\nÈ indifferente: l'indicazione del modulo in cui la combinazione si realizza.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "compare l'indicazione della combinazione fra un componente GPL-2.0-only e un componente Apache-2.0 collegati staticamente nello stesso modulo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable qualifica la combinazione come incompatibile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la combinazione come incompatibile.\nPASS se: compare, riferita a quella combinazione, una fra: «licenze incompatibili»; «incompatibilità di licenza»; «non combinabili»\nFAIL se: la combinazione è qualificata come meramente da documentare, oppure la qualificazione non compare.\nÈ indifferente: l'indicazione della ragione tecnica dell'incompatibilità.\nFonte di authoring: voce #apache2 della Free Software Foundation",
+      "pass_condition": "compare, riferita a quella combinazione, una fra: «licenze incompatibili»; «incompatibilità di licenza»; «non combinabili»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica un rimedio che incide sulla combinazione e non sulla sola documentazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica un rimedio che incide sulla combinazione e non sulla sola documentazione.\nPASS se: fra le azioni compare, riferita a quella combinazione, la sostituzione del componente, la sua rimozione o la modifica della modalità di collegamento\nFAIL se: l'unico rimedio indicato è l'aggiunta di un avviso o l'aggiornamento dell'inventario.\nÈ indifferente: la scelta fra sostituzione, rimozione e modifica del collegamento.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "fra le azioni compare, riferita a quella combinazione, la sostituzione del componente, la sua rimozione o la modifica della modalità di collegamento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable circoscrive la consegna ai componenti installati sull'apparecchiatura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable circoscrive la consegna ai componenti installati sull'apparecchiatura.\nPASS se: compare l'affermazione che la consegna riguarda i componenti installati sull'apparecchiatura e non i moduli erogati come servizio\nFAIL se: il perimetro è esteso ai moduli erogati come servizio, oppure non è delimitato.\nÈ indifferente: il richiamo alla circostanza che il cliente stesso escluda i moduli in servizio.\nFonte di authoring: 06_richiesta_codice_sorgente.md; 01_scheda_prodotto_e_fornitura.md, punto 2.1",
+      "pass_condition": "compare l'affermazione che la consegna riguarda i componenti installati sull'apparecchiatura e non i moduli erogati come servizio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che la consegna comprende gli script necessari alla generazione, all'installazione e all'esecuzione del codice oggetto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la consegna comprende gli script necessari alla generazione, all'installazione e all'esecuzione del codice oggetto.\nPASS se: compare l'affermazione che gli script di generazione, installazione ed esecuzione fanno parte del sorgente corrispondente\nFAIL se: la consegna è limitata al codice dei componenti, oppure il contenuto non è specificato.\nÈ indifferente: l'esclusione delle librerie di sistema.\nFonte di authoring: sezione 1 GPL-3.0",
+      "pass_condition": "compare l'affermazione che gli script di generazione, installazione ed esecuzione fanno parte del sorgente corrispondente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che, se la consegna avviene mediante archivio in rete, va dichiarato per quanto tempo l'archivio resta disponibile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, se la consegna avviene mediante archivio in rete, va dichiarato per quanto tempo l'archivio resta disponibile.\nPASS se: compare l'affermazione che va indicato il periodo di disponibilità dell'archivio\nFAIL se: il punto non è trattato, pur essendo stato chiesto dal cliente.\nÈ indifferente: la durata proposta.\nFonte di authoring: sezione 6 GPL-3.0; 06_richiesta_codice_sorgente.md",
+      "pass_condition": "compare l'affermazione che va indicato il periodo di disponibilità dell'archivio",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable individua quadrelli-render come componente GPL-3.0 modificato e distribuito sull'apparecchiatura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable individua quadrelli-render come componente GPL-3.0 modificato e distribuito sull'apparecchiatura.\nPASS se: compare l'indicazione di quadrelli-render come componente modificato distribuito sull'apparecchiatura\nFAIL se: il componente non è individuato, oppure è collocato nel servizio in cloud.\nÈ indifferente: il richiamo alla modalità di collegamento.\nFonte di authoring: 02_inventario_dipendenze.csv; 01_scheda_prodotto_e_fornitura.md, punto 2.1",
+      "pass_condition": "compare l'indicazione di quadrelli-render come componente modificato distribuito sull'apparecchiatura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica come necessaria la verifica del perimetro dell'opera così come distribuita nel modulo che incorpora il componente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica come necessaria la verifica del perimetro dell'opera così come distribuita nel modulo che incorpora il componente.\nPASS se: compare l'indicazione di verificare quale sia l'opera distribuita, e non soltanto la porzione modificata\nFAIL se: la conseguenza è circoscritta al solo pacchetto modificato.\nÈ indifferente: il richiamo alla distinzione fra opera unica e aggregato.\nFonte di authoring: sezione 5 GPL-3.0",
+      "pass_condition": "compare l'indicazione di verificare quale sia l'opera distribuita, e non soltanto la porzione modificata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non afferma che il modulo costituisce un aggregato di opere separate.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il modulo costituisce un aggregato di opere separate.\nPASS se: Il deliverable non afferma che il modulo costituisce un aggregato di opere separate.\nFAIL se: è affermato che il modulo costituisce un aggregato, o che la licenza non si estende oltre il pacchetto, senza che il fascicolo consenta di stabilirlo.\nÈ indifferente: l'indicazione dei dati tecnici necessari a stabilirlo.\nFonte di authoring: sezione 5 GPL-3.0",
+      "pass_condition": "Il deliverable non afferma che il modulo costituisce un aggregato di opere separate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che aurendo-forms espone agli utenti del portale l'accesso alle funzioni con cui compilano i moduli di collaudo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che aurendo-forms espone agli utenti del portale l'accesso alle funzioni con cui compilano i moduli di collaudo.\nPASS se: compare l'affermazione che il componente rende accessibili agli utenti le funzioni di compilazione guidata\nFAIL se: il presupposto non è affermato, oppure il componente è descritto come non esposto agli utenti.\nÈ indifferente: il richiamo alla delibera del comitato tecnico che lo ha adottato.\nFonte di authoring: 08_email_responsabile_sviluppo.md; 04_verbale_comitato_tecnico.md, punto 2",
+      "pass_condition": "compare l'affermazione che il componente rende accessibili agli utenti le funzioni di compilazione guidata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che l'obbligo relativo al componente EUPL non dipende dalla presenza di modifiche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'obbligo relativo al componente EUPL non dipende dalla presenza di modifiche.\nPASS se: compare l'affermazione che l'obbligo si attiva anche senza modifiche al componente\nFAIL se: l'obbligo è escluso perché il componente non è stato modificato.\nÈ indifferente: il confronto esplicito con il meccanismo dell'AGPL.\nFonte di authoring: artt. 1 e 5 EUPL-1.2",
+      "pass_condition": "compare l'affermazione che l'obbligo si attiva anche senza modifiche al componente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che alcuni dei componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alcuni dei componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura.\nPASS se: compare l'affermazione che componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura\nFAIL se: i componenti senza licenza sono trattati come questione uniforme senza distinguere il canale.\nÈ indifferente: l'elenco nominativo dei componenti.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "compare l'affermazione che componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non qualifica come permissivi i componenti che non dichiarano licenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non qualifica come permissivi i componenti che non dichiarano licenza.\nPASS se: Il deliverable non qualifica come permissivi i componenti che non dichiarano licenza.\nFAIL se: i componenti senza licenza dichiarata sono presentati come utilizzabili in via residuale o come permissivi.\nÈ indifferente: l'osservazione che l'inventario non riporta obblighi per quelle righe.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "Il deliverable non qualifica come permissivi i componenti che non dichiarano licenza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica la risoluzione della posizione prima della distribuzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica la risoluzione della posizione prima della distribuzione.\nPASS se: fra le azioni compare, riferita a quei componenti, la sostituzione, la rimozione o l'acquisizione del titolo prima della distribuzione\nFAIL se: l'azione indicata è il solo aggiornamento dell'inventario o della documentazione.\nÈ indifferente: la scelta fra le azioni indicate.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "fra le azioni compare, riferita a quei componenti, la sostituzione, la rimozione o l'acquisizione del titolo prima della distribuzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che non risulta agli atti alcun atto di cessione sottoscritto relativo al codec di trama.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che non risulta agli atti alcun atto di cessione sottoscritto relativo al codec di trama.\nPASS se: compare l'affermazione che l'atto di cessione non risulta sottoscritto o non risulta agli atti\nFAIL se: è affermato che il titolo è stato regolarizzato, oppure il punto non è trattato.\nÈ indifferente: il richiamo alla data di trasmissione della richiesta.\nFonte di authoring: 04_verbale_comitato_tecnico.md, punto 3",
+      "pass_condition": "compare l'affermazione che l'atto di cessione non risulta sottoscritto o non risulta agli atti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable qualifica l'autore del codec come collaboratore esterno e non come lavoratore dipendente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica l'autore del codec come collaboratore esterno e non come lavoratore dipendente.\nPASS se: compare, riferita all'autore, una fra: «collaboratore esterno»; «non è lavoratore dipendente»; «rapporto di collaborazione e non di lavoro subordinato»\nFAIL se: l'autore è trattato come dipendente, oppure la qualificazione non compare.\nÈ indifferente: il nome dell'autore.\nFonte di authoring: 04_verbale_comitato_tecnico.md; 03_notice_e_intestazioni.md",
+      "pass_condition": "compare, riferita all'autore, una fra: «collaboratore esterno»; «non è lavoratore dipendente»; «rapporto di collaborazione e non di lavoro subordinato»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non afferma che i diritti di utilizzazione economica sul codec spettano a Solmarino.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che i diritti di utilizzazione economica sul codec spettano a Solmarino.\nPASS se: Il deliverable non afferma che i diritti di utilizzazione economica sul codec spettano a Solmarino.\nFAIL se: è affermato che il titolo spetta a Solmarino perché l'opera è stata creata nell'ambito del rapporto di collaborazione.\nÈ indifferente: la richiesta di acquisire l'atto di cessione.\nFonte di authoring: art. 12-bis L. 633/1941",
+      "pass_condition": "Il deliverable non afferma che i diritti di utilizzazione economica sul codec spettano a Solmarino.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che la dichiarazione dell'articolo 4.2 del contratto è smentita dal confronto con l'inventario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la dichiarazione dell'articolo 4.2 del contratto è smentita dal confronto con l'inventario.\nPASS se: compare l'affermazione che la garanzia sull'assenza di obblighi di divulgazione non è coerente con i componenti inventariati\nFAIL se: l'articolo 4.2 non è rilevato, oppure è presentato come coerente.\nÈ indifferente: il richiamo al limite di responsabilità dell'articolo 5.3.\nFonte di authoring: 05_contratto_fornitura.md, articolo 4.2",
+      "pass_condition": "compare l'affermazione che la garanzia sull'assenza di obblighi di divulgazione non è coerente con i componenti inventariati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica un'azione sulla posizione contrattuale verso il cliente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica un'azione sulla posizione contrattuale verso il cliente.\nPASS se: fra le azioni compare, riferita all'articolo 4.2, la comunicazione al cliente, la modifica della clausola o la sua gestione in sede di rinnovo\nFAIL se: il punto è rilevato senza indicare alcuna azione.\nÈ indifferente: la scelta fra le azioni indicate.\nFonte di authoring: 05_contratto_fornitura.md, articolo 4.2",
+      "pass_condition": "fra le azioni compare, riferita all'articolo 4.2, la comunicazione al cliente, la modifica della clausola o la sua gestione in sede di rinnovo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che la delibera del comitato tecnico subordinava l'adozione del pianificatore all'acquisizione del parere dell'ufficio legale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la delibera del comitato tecnico subordinava l'adozione del pianificatore all'acquisizione del parere dell'ufficio legale.\nPASS se: compare l'affermazione che l'adozione era subordinata al parere dell'ufficio legale\nFAIL se: la delibera è presentata come incondizionata, oppure il punto non è trattato.\nÈ indifferente: il richiamo al soggetto incaricato dell'acquisizione.\nFonte di authoring: 04_verbale_comitato_tecnico.md, punto 1",
+      "pass_condition": "compare l'affermazione che l'adozione era subordinata al parere dell'ufficio legale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non afferma che il parere dell'ufficio legale è stato reso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il parere dell'ufficio legale è stato reso.\nPASS se: Il deliverable non afferma che il parere dell'ufficio legale è stato reso.\nFAIL se: è affermato che il parere è stato acquisito, o che la condizione della delibera è stata soddisfatta.\nÈ indifferente: l'osservazione che il componente è in esercizio dal 14 settembre 2026.\nFonte di authoring: 04_verbale_comitato_tecnico.md; 07_piano_di_rilascio.md, punto 5.1",
+      "pass_condition": "Il deliverable non afferma che il parere dell'ufficio legale è stato reso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable distingue i rilievi che impediscono il rilascio del 26 novembre 2026 da quelli che non lo impediscono.",
+      "match_criteria": "Oggetto del criterio: Il deliverable distingue i rilievi che impediscono il rilascio del 26 novembre 2026 da quelli che non lo impediscono.\nPASS se: il deliverable contiene due gruppi distinti di rilievi, bloccanti e non bloccanti rispetto al rilascio\nFAIL se: i rilievi non sono distinti rispetto al rilascio.\nÈ indifferente: il numero dei rilievi collocati in ciascun gruppo.\nFonte di authoring: 07_piano_di_rilascio.md; public/01_task.md",
+      "pass_condition": "il deliverable contiene due gruppi distinti di rilievi, bloccanti e non bloccanti rispetto al rilascio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che il rilascio aggiorna anche le apparecchiature già installate presso i clienti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il rilascio aggiorna anche le apparecchiature già installate presso i clienti.\nPASS se: compare l'affermazione che il rilascio comporta la distribuzione dell'immagine aggiornata alle apparecchiature installate\nFAIL se: il rilascio è trattato come aggiornamento del solo servizio in cloud.\nÈ indifferente: il richiamo al calendario di installazione per stabilimento.\nFonte di authoring: 07_piano_di_rilascio.md, punto 3.2",
+      "pass_condition": "compare l'affermazione che il rilascio comporta la distribuzione dell'immagine aggiornata alle apparecchiature installate",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non accetta come conclusione sugli obblighi di licenza la nota del responsabile rilasci secondo cui le attività aperte non impediscono il rilascio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non accetta come conclusione sugli obblighi di licenza la nota del responsabile rilasci secondo cui le attività aperte non impediscono il rilascio.\nPASS se: Il deliverable non accetta come conclusione sugli obblighi di licenza la nota del responsabile rilasci secondo cui le attività aperte non impediscono il rilascio.\nFAIL se: l'affermazione del responsabile rilasci è riportata come conclusione sull'ammissibilità del rilascio.\nÈ indifferente: la citazione della nota come dichiarazione sulla procedura interna.\nFonte di authoring: 07_piano_di_rilascio.md, punto 6",
+      "pass_condition": "Il deliverable non accetta come conclusione sugli obblighi di licenza la nota del responsabile rilasci secondo cui le attività aperte non impediscono il rilascio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non indica tessitura-queue fra i componenti che impongono l'offerta del codice sorgente agli utenti remoti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica tessitura-queue fra i componenti che impongono l'offerta del codice sorgente agli utenti remoti.\nPASS se: Il deliverable non indica tessitura-queue fra i componenti che impongono l'offerta del codice sorgente agli utenti remoti.\nFAIL se: tessitura-queue è indicato fra i componenti per cui va offerto il codice sorgente agli utenti che interagiscono a distanza.\nÈ indifferente: la menzione di tessitura-queue fra gli elementi verificati e privi di rilievo.\nFonte di authoring: 02_inventario_dipendenze.csv; sezione 13 AGPL-3.0",
+      "pass_condition": "Il deliverable non indica tessitura-queue fra i componenti che impongono l'offerta del codice sorgente agli utenti remoti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non indica vestrigo-imaging fra le combinazioni incompatibili.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica vestrigo-imaging fra le combinazioni incompatibili.\nPASS se: Il deliverable non indica vestrigo-imaging fra le combinazioni incompatibili.\nFAIL se: vestrigo-imaging è indicato come incompatibile con il componente Apache-2.0 insieme a meridolo-compress.\nÈ indifferente: la menzione di vestrigo-imaging per illustrare la differenza fra le due situazioni.\nFonte di authoring: 02_inventario_dipendenze.csv; voce #apache2 della Free Software Foundation",
+      "pass_condition": "Il deliverable non indica vestrigo-imaging fra le combinazioni incompatibili.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non indica nabissa-loader fra i componenti per cui va rilasciato il codice sorgente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica nabissa-loader fra i componenti per cui va rilasciato il codice sorgente.\nPASS se: Il deliverable non indica nabissa-loader fra i componenti per cui va rilasciato il codice sorgente.\nFAIL se: nabissa-loader è indicato fra i componenti che impongono il rilascio del codice sorgente.\nÈ indifferente: la menzione di nabissa-loader fra gli elementi verificati e privi di rilievo.\nFonte di authoring: 02_inventario_dipendenze.csv; voce #UnreleasedMods della Free Software Foundation",
+      "pass_condition": "Il deliverable non indica nabissa-loader fra i componenti per cui va rilasciato il codice sorgente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non afferma che i componenti Apache-2.0 eseguiti nel servizio in cloud impongono la divulgazione del codice sorgente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che i componenti Apache-2.0 eseguiti nel servizio in cloud impongono la divulgazione del codice sorgente.\nPASS se: Il deliverable non afferma che i componenti Apache-2.0 eseguiti nel servizio in cloud impongono la divulgazione del codice sorgente.\nFAIL se: è affermato un obbligo di divulgazione del sorgente per i componenti Apache-2.0 in ragione dell'esecuzione nel servizio in cloud.\nÈ indifferente: l'osservazione che i componenti Apache eseguiti in cloud restano soggetti agli obblighi di attribuzione.\nFonte di authoring: sezioni 3 e 4 Apache-2.0",
+      "pass_condition": "Il deliverable non afferma che i componenti Apache-2.0 eseguiti nel servizio in cloud impongono la divulgazione del codice sorgente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non attribuisce alla GPL-3.0 una definizione di opera derivata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce alla GPL-3.0 una definizione di opera derivata.\nPASS se: Il deliverable non attribuisce alla GPL-3.0 una definizione di opera derivata.\nFAIL se: compare l'affermazione che la GPL-3.0 definisce l'opera derivata o che il perimetro dell'obbligo deriva da quella definizione.\nÈ indifferente: l'uso della nozione di opera derivata riferita al diritto d'autore applicabile.\nFonte di authoring: sezioni 0 e 5 GPL-3.0",
+      "pass_condition": "Il deliverable non attribuisce alla GPL-3.0 una definizione di opera derivata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non attribuisce al modulo solmarino-strumenti conseguenze proprie dei moduli distribuiti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce al modulo solmarino-strumenti conseguenze proprie dei moduli distribuiti.\nPASS se: Il deliverable non attribuisce al modulo solmarino-strumenti conseguenze proprie dei moduli distribuiti.\nFAIL se: il modulo solmarino-strumenti è trattato come canale di distribuzione, o gli sono attribuiti obblighi di consegna del sorgente.\nÈ indifferente: la menzione del modulo per delimitare il perimetro.\nFonte di authoring: 01_scheda_prodotto_e_fornitura.md, punto 1",
+      "pass_condition": "Il deliverable non attribuisce al modulo solmarino-strumenti conseguenze proprie dei moduli distribuiti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non presenta come acquisiti né il parere dell'ufficio legale né l'atto di cessione sul codec.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come acquisiti né il parere dell'ufficio legale né l'atto di cessione sul codec.\nPASS se: Il deliverable non presenta come acquisiti né il parere dell'ufficio legale né l'atto di cessione sul codec.\nFAIL se: uno dei due documenti mancanti è presentato come esistente o come acquisito.\nÈ indifferente: la richiesta di acquisirli.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presenta come acquisiti né il parere dell'ufficio legale né l'atto di cessione sul codec.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica in 148 il numero dei componenti inventariati.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 148 il numero dei componenti inventariati.\nPASS se: compare il numero «148 componenti» riferito all'inventario\nFAIL se: è indicato un numero diverso, oppure il totale non compare.\nÈ indifferente: la ripartizione per categoria di licenza.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "compare il numero «148 componenti» riferito all'inventario",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica in otto il numero dei componenti che non dichiarano licenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in otto il numero dei componenti che non dichiarano licenza.\nPASS se: compare il numero «otto componenti» riferito a quelli senza licenza dichiarata\nFAIL se: è indicato un numero diverso, oppure il numero non compare.\nÈ indifferente: l'elenco nominativo.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "compare il numero «otto componenti» riferito a quelli senza licenza dichiarata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable afferma che cinque dei componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che cinque dei componenti senza licenza dichiarata sono distribuiti sull'apparecchiatura.\nPASS se: compare l'affermazione che cinque di quei componenti sono distribuiti sull'apparecchiatura\nFAIL se: la ripartizione per canale non compare, oppure è indicata in modo diverso.\nÈ indifferente: l'indicazione dei due componenti presenti solo nel servizio in cloud e di quello presente solo su strumenti interni.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "compare l'affermazione che cinque di quei componenti sono distribuiti sull'apparecchiatura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica il 26 novembre 2026 come data del rilascio agli ambienti dei clienti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 26 novembre 2026 come data del rilascio agli ambienti dei clienti.\nPASS se: compare la data «26 novembre 2026» riferita al rilascio\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: l'indicazione delle altre date del calendario.\nFonte di authoring: 07_piano_di_rilascio.md",
+      "pass_condition": "compare la data «26 novembre 2026» riferita al rilascio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable indica il 21 ottobre 2026 come data della richiesta del cliente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 21 ottobre 2026 come data della richiesta del cliente.\nPASS se: compare la data «21 ottobre 2026» riferita alla richiesta del cliente\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il numero di protocollo della lettera.\nFonte di authoring: 06_richiesta_codice_sorgente.md",
+      "pass_condition": "compare la data «21 ottobre 2026» riferita alla richiesta del cliente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "open_source_audit.md"
+      ],
+      "title": "Il deliverable non presenta come componenti a rischio la somma di quelli a copyleft forte e di quelli senza licenza dichiarata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come componenti a rischio la somma di quelli a copyleft forte e di quelli senza licenza dichiarata.\nPASS se: Il deliverable non presenta come componenti a rischio la somma di quelli a copyleft forte e di quelli senza licenza dichiarata.\nFAIL se: il numero dei componenti da trattare è ottenuto sommando i componenti a copyleft forte e quelli senza licenza dichiarata.\nÈ indifferente: l'indicazione separata dei due conteggi.\nFonte di authoring: 02_inventario_dipendenze.csv",
+      "pass_condition": "Il deliverable non presenta come componenti a rischio la somma di quelli a copyleft forte e di quelli senza licenza dichiarata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

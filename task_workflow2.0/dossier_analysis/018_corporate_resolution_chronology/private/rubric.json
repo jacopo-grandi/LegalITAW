@@ -1,0 +1,594 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-018",
+  "title": "Societario. Cronologia di una delibera assembleare: efficacia, iscrizione, opponibilità",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 36,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contiene una tabella.",
+      "pass_condition": "è presente almeno una tabella.",
+      "fail_condition": "la cronologia è resa solo in forma discorsiva o in elenco.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 cronologia in forma di tabella\nissue: — · tipo: presenza · gravità: alta · judge: no · fonte: prompt\nVerifica: il deliverable contiene una tabella.\nPass se: è presente almeno una tabella.\nFail se: la cronologia è resa solo in forma discorsiva o in elenco."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la tabella ha una colonna dedicata alla data di efficacia, distinta dalla colonna della data dell'atto.",
+      "pass_condition": "esistono due colonne distinte, una per la data dell'atto e una per la data dalla quale l'atto produce effetti.",
+      "fail_condition": "esiste una sola colonna di data, oppure la data di efficacia è riportata solo nel testo di una colonna di note.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 colonne della tabella\nissue: — · tipo: struttura · gravità: alta · judge: no · fonte: prompt\nVerifica: la tabella ha una colonna dedicata alla data di efficacia, distinta dalla colonna della data dell'atto.\nPass se: esistono due colonne distinte, una per la data dell'atto e una per la data dalla quale l'atto produce effetti.\nFail se: esiste una sola colonna di data, oppure la data di efficacia è riportata solo nel testo di una colonna di note."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "tutti i riferimenti normativi presenti figurano nell'elenco chiuso.",
+      "fail_condition": "compare un riferimento normativo non presente nell'elenco chiuso.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: tutti i riferimenti normativi presenti figurano nell'elenco chiuso.\nFail se: compare un riferimento normativo non presente nell'elenco chiuso."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la tabella contiene almeno una riga per ciascuno degli undici documenti del fascicolo, anche quando un documento prova soltanto una comunicazione o un deposito.",
+      "pass_condition": "tutti gli atti sono rappresentati o aggregati in righe che ne rendono riconoscibile il ruolo.",
+      "fail_condition": "almeno un atto del fascicolo è omesso dalla cronologia.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 riga per ciascun atto\nissue: A-04 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: la tabella contiene almeno una riga per ciascuno degli undici documenti del fascicolo, anche quando un documento prova soltanto una comunicazione o un deposito.\nPass se: tutti gli atti sono rappresentati o aggregati in righe che ne rendono riconoscibile il ruolo.\nFail se: almeno un atto del fascicolo è omesso dalla cronologia."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni riga della tabella indica il documento del fascicolo da cui deriva la data o il fatto.",
+      "pass_condition": "tutte le righe hanno una fonte documentale identificabile.",
+      "fail_condition": "almeno una riga è priva di fonte.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 fonte documentale per riga\nissue: A-05 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: ogni riga della tabella indica il documento del fascicolo da cui deriva la data o il fatto.\nPass se: tutte le righe hanno una fonte documentale identificabile.\nFail se: almeno una riga è priva di fonte."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "quando una data o un effetto dipende da un altro evento, la tabella mostra il passaggio fra evento iniziale, deposito o comunicazione, iscrizione ed effetto.",
+      "pass_condition": "le dipendenze rilevanti sono espresse e non soltanto implicite nell'ordine delle righe.",
+      "fail_condition": "le date sono elencate senza spiegare i rapporti di dipendenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.6 dipendenze esplicite\nissue: A-06 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: quando una data o un effetto dipende da un altro evento, la tabella mostra il passaggio fra evento iniziale, deposito o comunicazione, iscrizione ed effetto.\nPass se: le dipendenze rilevanti sono espresse e non soltanto implicite nell'ordine delle righe.\nFail se: le date sono elencate senza spiegare i rapporti di dipendenza."
+    },
+    {
+      "id": "A.7",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la tabella distingue formazione, deposito o comunicazione, iscrizione, efficacia e soggetto nei cui confronti l'effetto rileva.",
+      "pass_condition": "le cinque dimensioni hanno colonne dedicate o campi chiaramente separati.",
+      "fail_condition": "almeno una dimensione è sistematicamente assente. B. MERITO",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.7 momenti ed efficacia verso i soggetti\nissue: A-07 · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: la tabella distingue formazione, deposito o comunicazione, iscrizione, efficacia e soggetto nei cui confronti l'effetto rileva.\nPass se: le cinque dimensioni hanno colonne dedicate o campi chiaramente separati.\nFail se: almeno una dimensione è sistematicamente assente."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di efficacia della modifica dell'articolo 3 dello statuto il 6 maggio 2027.",
+      "pass_condition": "compare, riferita alla modifica dell'oggetto sociale, la data 6 maggio 2027 (o 06/05/2027) come data dalla quale la modifica produce effetti.",
+      "fail_condition": "compare un'altra data, oppure la data di efficacia non compare.",
+      "indifferent": "la data indicata come data della deliberazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.1 efficacia della modifica dell'oggetto\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: visura, sezione 2 (data iscrizione modifica)\nVerifica: il deliverable indica come data di efficacia della modifica dell'articolo 3 dello statuto il 6 maggio 2027.\nPass se: compare, riferita alla modifica dell'oggetto sociale, la data 6 maggio 2027 (o 06/05/2027) come data dalla quale la modifica produce effetti.\nFail se: compare un'altra data, oppure la data di efficacia non compare.\nIndifferente: la data indicata come data della deliberazione."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la data di efficacia della modifica dell'oggetto all'iscrizione nel registro delle imprese.",
+      "pass_condition": "in corrispondenza di quella data l'efficacia è ricondotta all'iscrizione. Varianti accettate: «iscrizione nel registro delle imprese», «iscritta nel registro delle imprese», «data di iscrizione».",
+      "fail_condition": "la data è ricondotta alla deliberazione, al deposito, alla verbalizzazione notarile, oppure non è ricondotta ad alcun evento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.2 ancoraggio dell'efficacia\nissue: I-01 · tipo: attribuzione · gravità: alta · judge: sì · fonte: visura, sezione 2\nVerifica: il deliverable riconduce la data di efficacia della modifica dell'oggetto all'iscrizione nel registro delle imprese.\nPass se: in corrispondenza di quella data l'efficacia è ricondotta all'iscrizione.\nVarianti accettate: «iscrizione nel registro delle imprese», «iscritta nel registro delle imprese», «data di iscrizione».\nFail se: la data è ricondotta alla deliberazione, al deposito, alla verbalizzazione notarile, oppure non è ricondotta ad alcun evento."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'8 aprile 2027 come data dalla quale la modifica dell'oggetto sociale produce effetti.",
+      "pass_condition": "l'8 aprile 2027 non compare come data di efficacia della modifica.",
+      "fail_condition": "l'8 aprile 2027 è indicato come data di efficacia della modifica.",
+      "indifferent": "l'8 aprile 2027 indicato come data della deliberazione o del verbale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.3 derivazione errata: data dell'assemblea\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: verbale 08/04/2027\nVerifica: il deliverable non indica l'8 aprile 2027 come data dalla quale la modifica dell'oggetto sociale produce effetti.\nPass se: l'8 aprile 2027 non compare come data di efficacia della modifica.\nFail se: l'8 aprile 2027 è indicato come data di efficacia della modifica.\nIndifferente: l'8 aprile 2027 indicato come data della deliberazione o del verbale."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 15 aprile 2027 come data dalla quale la modifica dell'oggetto sociale produce effetti.",
+      "pass_condition": "il 15 aprile 2027 non compare come data di efficacia della modifica.",
+      "fail_condition": "il 15 aprile 2027 è indicato come data di efficacia della modifica.",
+      "indifferent": "il 15 aprile 2027 indicato come data di deposito o di protocollazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.4 derivazione errata: data del deposito\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: ricevuta di protocollazione 24471/2027\nVerifica: il deliverable non indica il 15 aprile 2027 come data dalla quale la modifica dell'oggetto sociale produce effetti.\nPass se: il 15 aprile 2027 non compare come data di efficacia della modifica.\nFail se: il 15 aprile 2027 è indicato come data di efficacia della modifica.\nIndifferente: il 15 aprile 2027 indicato come data di deposito o di protocollazione."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di efficacia della modifica dell'articolo 5 dello statuto, che attribuisce al consiglio la facoltà di aumentare il capitale, il 6 maggio 2027.",
+      "pass_condition": "compare, riferita a quella modifica, la data 6 maggio 2027 (o 06/05/2027) come data dalla quale produce effetti.",
+      "fail_condition": "compare un'altra data, oppure la data di efficacia di quella modifica non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.5 efficacia della delega al consiglio\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: visura, sezione 2\nVerifica: il deliverable indica come data di efficacia della modifica dell'articolo 5 dello statuto, che attribuisce al consiglio la facoltà di aumentare il capitale, il 6 maggio 2027.\nPass se: compare, riferita a quella modifica, la data 6 maggio 2027 (o 06/05/2027) come data dalla quale produce effetti.\nFail se: compare un'altra data, oppure la data di efficacia di quella modifica non compare."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riporta il deposito del 15 aprile 2027 e l'iscrizione del 6 maggio 2027 come due eventi con due date diverse.",
+      "pass_condition": "entrambe le date compaiono, ciascuna riferita al proprio evento.",
+      "fail_condition": "una delle due date manca, oppure le due date sono presentate come lo stesso adempimento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.6 deposito e iscrizione come eventi distinti\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: ricevuta di protocollazione 24471/2027; visura, sezione 2\nVerifica: il deliverable riporta il deposito del 15 aprile 2027 e l'iscrizione del 6 maggio 2027 come due eventi con due date diverse.\nPass se: entrambe le date compaiono, ciascuna riferita al proprio evento.\nFail se: una delle due date manca, oppure le due date sono presentate come lo stesso adempimento."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di efficacia dell'aumento di capitale deliberato dal consiglio il 20 maggio 2027.",
+      "pass_condition": "compare, riferita all'aumento di capitale, la data 20 maggio 2027 (o 20/05/2027) come data dalla quale l'aumento produce effetti.",
+      "fail_condition": "compare un'altra data, oppure la data di efficacia dell'aumento non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.7 efficacia dell'aumento di capitale\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: visura, sezione 3 (data iscrizione)\nVerifica: il deliverable indica come data di efficacia dell'aumento di capitale deliberato dal consiglio il 20 maggio 2027.\nPass se: compare, riferita all'aumento di capitale, la data 20 maggio 2027 (o 20/05/2027) come data dalla quale l'aumento produce effetti.\nFail se: compare un'altra data, oppure la data di efficacia dell'aumento non compare."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la data di efficacia dell'aumento all'iscrizione della deliberazione del consiglio di amministrazione.",
+      "pass_condition": "in corrispondenza di quella data compare il riferimento all'iscrizione della deliberazione del consiglio o del verbale del consiglio.",
+      "fail_condition": "la data è ricondotta alla deliberazione consiliare in sé, al deposito del 14 maggio, all'iscrizione della delega, oppure non è ricondotta ad alcun evento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.8 ancoraggio dell'efficacia dell'aumento\nissue: I-04 · tipo: attribuzione · gravità: alta · judge: sì · fonte: visura, sezione 3; ricevuta di protocollazione 28166/2027\nVerifica: il deliverable riconduce la data di efficacia dell'aumento all'iscrizione della deliberazione del consiglio di amministrazione.\nPass se: in corrispondenza di quella data compare il riferimento all'iscrizione della deliberazione del consiglio o del verbale del consiglio.\nFail se: la data è ricondotta alla deliberazione consiliare in sé, al deposito del 14 maggio, all'iscrizione della delega, oppure non è ricondotta ad alcun evento."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'11 maggio 2027 come data dalla quale l'aumento di capitale produce effetti.",
+      "pass_condition": "l'11 maggio 2027 non compare come data di efficacia dell'aumento.",
+      "fail_condition": "l'11 maggio 2027 è indicato come data di efficacia dell'aumento.",
+      "indifferent": "l'11 maggio 2027 indicato come data della deliberazione del consiglio.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.9 derivazione errata: data della deliberazione consiliare\nissue: I-04 · tipo: assenza · gravità: media · judge: sì · fonte: verbale CdA 11/05/2027\nVerifica: il deliverable non indica l'11 maggio 2027 come data dalla quale l'aumento di capitale produce effetti.\nPass se: l'11 maggio 2027 non compare come data di efficacia dell'aumento.\nFail se: l'11 maggio 2027 è indicato come data di efficacia dell'aumento.\nIndifferente: l'11 maggio 2027 indicato come data della deliberazione del consiglio."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 6 maggio 2027 come data dalla quale l'aumento di capitale produce effetti.",
+      "pass_condition": "il 6 maggio 2027 non compare come data di efficacia dell'aumento.",
+      "fail_condition": "il 6 maggio 2027 è indicato come data di efficacia dell'aumento.",
+      "indifferent": "il 6 maggio 2027 indicato come data di efficacia della modifica statutaria o della delega.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10 derivazione errata: iscrizione della delega\nissue: I-04 · tipo: assenza · gravità: media · judge: sì · fonte: visura, sezioni 2 e 3\nVerifica: il deliverable non indica il 6 maggio 2027 come data dalla quale l'aumento di capitale produce effetti.\nPass se: il 6 maggio 2027 non compare come data di efficacia dell'aumento.\nFail se: il 6 maggio 2027 è indicato come data di efficacia dell'aumento.\nIndifferente: il 6 maggio 2027 indicato come data di efficacia della modifica statutaria o della delega."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la deliberazione del consiglio dell'11 maggio 2027 è nulla, invalida, annullabile o assunta senza potere.",
+      "pass_condition": "nessuna di queste qualificazioni compare riferita alla deliberazione consiliare.",
+      "fail_condition": "la deliberazione consiliare è qualificata come nulla, invalida, annullabile, inesistente o assunta in carenza di potere.",
+      "indifferent": "l'osservazione che l'aumento non era efficace prima dell'iscrizione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.11 validità della deliberazione consiliare\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: verbale CdA 11/05/2027\nVerifica: il deliverable non afferma che la deliberazione del consiglio dell'11 maggio 2027 è nulla, invalida, annullabile o assunta senza potere.\nPass se: nessuna di queste qualificazioni compare riferita alla deliberazione consiliare.\nFail se: la deliberazione consiliare è qualificata come nulla, invalida, annullabile, inesistente o assunta in carenza di potere.\nIndifferente: l'osservazione che l'aumento non era efficace prima dell'iscrizione."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data dalla quale Fulvia Roncadella è in carica come consigliere l'8 aprile 2027.",
+      "pass_condition": "compare, riferita alla nomina di Fulvia Roncadella, la data 8 aprile 2027 (o 08/04/2027) come data dalla quale la nomina produce effetti.",
+      "fail_condition": "compare un'altra data, oppure la data di efficacia della nomina non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 efficacia della nomina\nissue: I-06 · tipo: valore · gravità: alta · judge: no · fonte: verbale 08/04/2027\nVerifica: il deliverable indica come data dalla quale Fulvia Roncadella è in carica come consigliere l'8 aprile 2027.\nPass se: compare, riferita alla nomina di Fulvia Roncadella, la data 8 aprile 2027 (o 08/04/2027) come data dalla quale la nomina produce effetti.\nFail se: compare un'altra data, oppure la data di efficacia della nomina non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce l'efficacia della nomina alla deliberazione dell'assemblea con l'accettazione dell'incarico.",
+      "pass_condition": "in corrispondenza di quella data compare il riferimento all'accettazione dell'incarico resa dalla nominata.",
+      "fail_condition": "l'efficacia della nomina è ricondotta all'iscrizione, al deposito, oppure non è ricondotta ad alcun evento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 ancoraggio dell'efficacia della nomina\nissue: I-06 · tipo: attribuzione · gravità: alta · judge: sì · fonte: verbale 08/04/2027 (dichiarazione di accettazione)\nVerifica: il deliverable riconduce l'efficacia della nomina alla deliberazione dell'assemblea con l'accettazione dell'incarico.\nPass se: in corrispondenza di quella data compare il riferimento all'accettazione dell'incarico resa dalla nominata.\nFail se: l'efficacia della nomina è ricondotta all'iscrizione, al deposito, oppure non è ricondotta ad alcun evento."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 12 maggio 2027 come data dalla quale la nomina di Fulvia Roncadella produce effetti.",
+      "pass_condition": "il 12 maggio 2027 non compare come data dalla quale la nomina produce effetti.",
+      "fail_condition": "il 12 maggio 2027 è indicato come data dalla quale la nomina produce effetti o dalla quale la nominata è in carica.",
+      "indifferent": "il 12 maggio 2027 indicato come data di iscrizione della nomina.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 derivazione errata: iscrizione della nomina\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: visura, sezione 5\nVerifica: il deliverable non indica il 12 maggio 2027 come data dalla quale la nomina di Fulvia Roncadella produce effetti.\nPass se: il 12 maggio 2027 non compare come data dalla quale la nomina produce effetti.\nFail se: il 12 maggio 2027 è indicato come data dalla quale la nomina produce effetti o dalla quale la nominata è in carica.\nIndifferente: il 12 maggio 2027 indicato come data di iscrizione della nomina."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica l'iscrizione della nomina del 12 maggio 2027 come rilevante nei confronti dei terzi.",
+      "pass_condition": "quella iscrizione è qualificata come rilevante verso i terzi. Varianti accettate: «opponibile ai terzi», «opponibilità ai terzi», «conoscibile dai terzi», «efficacia verso i terzi».",
+      "fail_condition": "l'iscrizione della nomina è qualificata come condizione perché la nomina produca effetti, oppure la qualificazione non compare.",
+      "indifferent": "la citazione dell'articolo del codice civile.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 opponibilità della nomina ai terzi\nissue: I-07 · tipo: qualificazione · gravità: alta · judge: sì · fonte: visura, sezione 5\nVerifica: il deliverable qualifica l'iscrizione della nomina del 12 maggio 2027 come rilevante nei confronti dei terzi.\nPass se: quella iscrizione è qualificata come rilevante verso i terzi.\nVarianti accettate: «opponibile ai terzi», «opponibilità ai terzi», «conoscibile dai terzi», «efficacia verso i terzi».\nFail se: l'iscrizione della nomina è qualificata come condizione perché la nomina produca effetti, oppure la qualificazione non compare.\nIndifferente: la citazione dell'articolo del codice civile."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la decorrenza del termine per la dichiarazione di recesso della socia Anfossi all'iscrizione del 6 maggio 2027.",
+      "pass_condition": "compare, riferita al recesso, l'indicazione che il termine decorre dall'iscrizione della deliberazione, con la data 6 maggio 2027 (o 06/05/2027).",
+      "fail_condition": "la decorrenza è ricondotta ad altra data o ad altro evento, oppure non compare.",
+      "indifferent": "il calcolo della scadenza del termine e il giudizio sulla tempestività della spedizione, né richiesti né penalizzati.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 decorrenza del termine per il socio\nissue: I-08 · tipo: attribuzione · gravità: alta · judge: sì · fonte: dichiarazione di recesso 18/05/2027; visura, sezione 2\nVerifica: il deliverable riconduce la decorrenza del termine per la dichiarazione di recesso della socia Anfossi all'iscrizione del 6 maggio 2027.\nPass se: compare, riferita al recesso, l'indicazione che il termine decorre dall'iscrizione della deliberazione, con la data 6 maggio 2027 (o 06/05/2027).\nFail se: la decorrenza è ricondotta ad altra data o ad altro evento, oppure non compare.\nIndifferente: il calcolo della scadenza del termine e il giudizio sulla tempestività della spedizione, né richiesti né penalizzati."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'8 aprile 2027 come data di decorrenza del termine per la dichiarazione di recesso.",
+      "pass_condition": "l'8 aprile 2027 non compare come decorrenza di quel termine.",
+      "fail_condition": "l'8 aprile 2027 è indicato come decorrenza di quel termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 derivazione errata: decorrenza dall'assemblea\nissue: I-08 · tipo: assenza · gravità: media · judge: sì · fonte: verbale 08/04/2027\nVerifica: il deliverable non indica l'8 aprile 2027 come data di decorrenza del termine per la dichiarazione di recesso.\nPass se: l'8 aprile 2027 non compare come decorrenza di quel termine.\nFail se: l'8 aprile 2027 è indicato come decorrenza di quel termine."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che alla data del 27 maggio 2027 nessuna azione di nuova emissione risulta sottoscritta.",
+      "pass_condition": "la mancata esecuzione dell'aumento è affermata. Varianti accettate: «non sottoscritte», «nessuna sottoscrizione», «aumento non eseguito», «non ancora eseguito».",
+      "fail_condition": "l'affermazione non compare, oppure l'aumento è presentato come eseguito.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 aumento non eseguito\nissue: I-09 · tipo: presenza · gravità: media · judge: sì · fonte: visura, sezione 3; prompt\nVerifica: il deliverable afferma che alla data del 27 maggio 2027 nessuna azione di nuova emissione risulta sottoscritta.\nPass se: la mancata esecuzione dell'aumento è affermata.\nVarianti accettate: «non sottoscritte», «nessuna sottoscrizione», «aumento non eseguito», «non ancora eseguito».\nFail se: l'affermazione non compare, oppure l'aumento è presentato come eseguito."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come capitale sottoscritto alla data di riferimento euro 1.500.000,00.",
+      "pass_condition": "compare l'importo 1.500.000 riferito al capitale sottoscritto o versato.",
+      "fail_condition": "compare un altro importo come capitale sottoscritto, oppure l'importo non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 capitale sottoscritto\nissue: I-09 · tipo: valore · gravità: media · judge: no · fonte: visura, sezione 3\nVerifica: il deliverable indica come capitale sottoscritto alla data di riferimento euro 1.500.000,00.\nPass se: compare l'importo 1.500.000 riferito al capitale sottoscritto o versato.\nFail se: compare un altro importo come capitale sottoscritto, oppure l'importo non compare."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come capitale deliberato alla data di riferimento euro 2.100.000,00.",
+      "pass_condition": "compare l'importo 2.100.000 riferito al capitale deliberato.",
+      "fail_condition": "compare un altro importo come capitale deliberato, oppure l'importo non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 capitale deliberato\nissue: I-09 · tipo: valore · gravità: media · judge: no · fonte: visura, sezione 3\nVerifica: il deliverable indica come capitale deliberato alla data di riferimento euro 2.100.000,00.\nPass se: compare l'importo 2.100.000 riferito al capitale deliberato.\nFail se: compare un altro importo come capitale deliberato, oppure l'importo non compare."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'assemblea dell'8 aprile 2027 è stata regolarmente convocata.",
+      "pass_condition": "la regolarità della convocazione è affermata. Varianti accettate: «regolarmente convocata», «convocazione regolare», «nel rispetto del termine».",
+      "fail_condition": "l'affermazione non compare, oppure la convocazione è presentata come irregolare o tardiva.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 regolarità della convocazione\nissue: I-10 · tipo: presenza · gravità: media · judge: sì · fonte: statuto, art. 7; avviso 30/03/2027; ricevuta di avvenuta consegna\nVerifica: il deliverable afferma che l'assemblea dell'8 aprile 2027 è stata regolarmente convocata.\nPass se: la regolarità della convocazione è affermata.\nVarianti accettate: «regolarmente convocata», «convocazione regolare», «nel rispetto del termine».\nFail se: l'affermazione non compare, oppure la convocazione è presentata come irregolare o tardiva."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce il termine di convocazione alla previsione dello statuto.",
+      "pass_condition": "compare, riferito al termine di convocazione, il riferimento allo statuto o al suo articolo 7.",
+      "fail_condition": "il termine di convocazione è ricondotto soltanto alla legge, oppure non è ricondotto ad alcuna fonte.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.22 ancoraggio della regolarità allo statuto\nissue: I-10 · tipo: attribuzione · gravità: media · judge: sì · fonte: statuto, art. 7\nVerifica: il deliverable riconduce il termine di convocazione alla previsione dello statuto.\nPass se: compare, riferito al termine di convocazione, il riferimento allo statuto o al suo articolo 7.\nFail se: il termine di convocazione è ricondotto soltanto alla legge, oppure non è ricondotto ad alcuna fonte."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la pratica è stata sospesa dall'ufficio del registro delle imprese e che il fascicolo documenta poi l'iscrizione, ma non la data della trasmissione di regolarizzazione della società.",
+      "pass_condition": "la sospensione e la successiva iscrizione compaiono nella cronologia e non viene inventata una data intermedia. Varianti accettate: «sospensione», «sospesa», «richiesta di regolarizzazione», «richiesta di integrazione».",
+      "fail_condition": "l'evento non compare, oppure viene indicata una data di regolarizzazione non documentata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.23 sospensione per regolarizzazione\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: comunicazione dell'ufficio 22/04/2027\nVerifica: il deliverable afferma che la pratica è stata sospesa dall'ufficio del registro delle imprese e che il fascicolo documenta poi l'iscrizione, ma non la data della trasmissione di regolarizzazione della società.\nPass se: la sospensione e la successiva iscrizione compaiono nella cronologia e non viene inventata una data intermedia.\nVarianti accettate: «sospensione», «sospesa», «richiesta di regolarizzazione», «richiesta di integrazione».\nFail se: l'evento non compare, oppure viene indicata una data di regolarizzazione non documentata."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la domanda di iscrizione è stata rifiutata o che la deliberazione è divenuta inefficace.",
+      "pass_condition": "né il rifiuto della domanda né l'inefficacia definitiva della deliberazione sono affermati.",
+      "fail_condition": "compare l'affermazione che la domanda è stata rifiutata, oppure che la deliberazione è divenuta inefficace.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.24 esito della sospensione\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: visura, sezione 2 (iscrizione avvenuta)\nVerifica: il deliverable non afferma che la domanda di iscrizione è stata rifiutata o che la deliberazione è divenuta inefficace.\nPass se: né il rifiuto della domanda né l'inefficacia definitiva della deliberazione sono affermati.\nFail se: compare l'affermazione che la domanda è stata rifiutata, oppure che la deliberazione è divenuta inefficace."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la partecipazione di Fulvia Roncadella alla riunione del consiglio dell'11 maggio 2027 costituisce un'irregolarità.",
+      "pass_condition": "nessuna irregolarità è attribuita alla sua partecipazione.",
+      "fail_condition": "la partecipazione di Fulvia Roncadella è presentata come irregolare, come causa di invalidità della deliberazione o come anteriore all'assunzione della carica.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.25 controlled non-issue: partecipazione del nuovo consigliere\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: verbale CdA 11/05/2027; visura, sezione 5\nVerifica: il deliverable non afferma che la partecipazione di Fulvia Roncadella alla riunione del consiglio dell'11 maggio 2027 costituisce un'irregolarità.\nPass se: nessuna irregolarità è attribuita alla sua partecipazione.\nFail se: la partecipazione di Fulvia Roncadella è presentata come irregolare, come causa di invalidità della deliberazione o come anteriore all'assunzione della carica."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come irregolarità il termine con cui è stato comunicato l'avviso di convocazione del 30 marzo 2027.",
+      "pass_condition": "nessun rilievo di tardività o di insufficienza del preavviso compare.",
+      "fail_condition": "l'avviso è segnalato come tardivo, oppure il preavviso è segnalato come insufficiente.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.26 controlled non-issue: termine di convocazione\nissue: N-02 · tipo: assenza · gravità: media · judge: sì · fonte: statuto, art. 7\nVerifica: il deliverable non segnala come irregolarità il termine con cui è stato comunicato l'avviso di convocazione del 30 marzo 2027.\nPass se: nessun rilievo di tardività o di insufficienza del preavviso compare.\nFail se: l'avviso è segnalato come tardivo, oppure il preavviso è segnalato come insufficiente."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come ritardo il deposito effettuato dal notaio il 15 aprile 2027.",
+      "pass_condition": "nessun rilievo di ritardo è riferito al deposito del notaio.",
+      "fail_condition": "il deposito del 15 aprile 2027 è segnalato come tardivo o come fuori termine.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.27 controlled non-issue: deposito del notaio\nissue: N-04 · tipo: assenza · gravità: media · judge: sì · fonte: verbale 08/04/2027; ricevuta di protocollazione 24471/2027\nVerifica: il deliverable non segnala come ritardo il deposito effettuato dal notaio il 15 aprile 2027.\nPass se: nessun rilievo di ritardo è riferito al deposito del notaio.\nFail se: il deposito del 15 aprile 2027 è segnalato come tardivo o come fuori termine."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che le azioni di nuova emissione sono state sottoscritte o versate.",
+      "pass_condition": "nessuna affermazione di sottoscrizione o di versamento delle nuove azioni compare.",
+      "fail_condition": "compare l'affermazione che le nuove azioni sono state sottoscritte, versate o collocate.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.29 divieto di presunzione dell'esito: sottoscrizione\nissue: I-09 · tipo: assenza · gravità: media · judge: sì · fonte: visura, sezione 3\nVerifica: il deliverable non afferma che le azioni di nuova emissione sono state sottoscritte o versate.\nPass se: nessuna affermazione di sottoscrizione o di versamento delle nuove azioni compare.\nFail se: compare l'affermazione che le nuove azioni sono state sottoscritte, versate o collocate."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la partecipazione della socia Anfossi è stata liquidata o che la socia ha perso la qualità di socia.",
+      "pass_condition": "nessuna affermazione di liquidazione della partecipazione o di perdita della qualità di socia compare.",
+      "fail_condition": "compare l'affermazione che la partecipazione è stata liquidata, rimborsata, oppure che la socia non è più socia alla data di riferimento. C. VALORI CALCOLATI Assente. Il workflow non computa termini: sul recesso è valutata la sola attribuzione della decorrenza (B.16), non il calcolo della scadenza. Gli importi di capitale sono verificati come atomi di tipo valore in sezione B (B.19, B.20).",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.30 divieto di presunzione dell'esito: recesso\nissue: I-08 · tipo: assenza · gravità: media · judge: sì · fonte: dichiarazione di recesso 18/05/2027\nVerifica: il deliverable non afferma che la partecipazione della socia Anfossi è stata liquidata o che la socia ha perso la qualità di socia.\nPass se: nessuna affermazione di liquidazione della partecipazione o di perdita della qualità di socia compare.\nFail se: compare l'affermazione che la partecipazione è stata liquidata, rimborsata, oppure che la socia non è più socia alla data di riferimento."
+    }
+  ]
+}

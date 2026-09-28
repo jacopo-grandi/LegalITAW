@@ -1,0 +1,283 @@
+{
+  "task_id": "WF2-063",
+  "lato_assistito": "Saliceto Salute Digitale S.p.A., titolare e soggetto NIS",
+  "data_di_riferimento": "2027-02-16",
+  "stato_fascicolo": "incidente in corso, conoscenza ragionevole acquisita alle 08:20",
+  "fonti_ammesse": [
+    "Regolamento (UE) 2016/679, artt. 28, 33 e 34",
+    "Garante per la protezione dei dati personali - Data breach",
+    "D.lgs. 4 settembre 2024, n. 138, recepimento NIS2"
+  ],
+  "calcoli": [
+    "24h: 16/02/2027 08:20 + 24h = 17/02/2027 08:20",
+    "48h: 18/02/2027 08:20",
+    "72h: 19/02/2027 08:20",
+    "un mese dalla notifica completa: 19/03/2027 08:20"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per registro unico dei fatti, decisioni separate: mantenere fonte fattuale unica con decisioni e versioni per destinatario",
+    "integrazione necessaria per lacuna sull'estensione: aprire workstream forense con checkpoint alle 18:00"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_report_soc_ore_0820.pdf",
+      "funzione": "Il 16 febbraio 2027 alle 08:20 Saliceto acquisisce ragionevole certezza di cifratura ed esfiltrazione; primo alert tecnico alle 06:42, ancora non qualificato."
+    },
+    {
+      "file": "02_ticket_responsabile_kairone.md",
+      "funzione": "Kairone ha rilevato l'evento alle 05:55 e informa Saliceto alle 07:48; il contratto impone notifica entro dodici ore dalla conoscenza del responsabile."
+    },
+    {
+      "file": "03_registro_asset_e_dati.xlsx",
+      "funzione": "Coinvolti 18.400 pazienti, dati anagrafici, referti e recapiti; i backup clinici non risultano cifrati ma l'esfiltrazione e' attestata per 62 GB."
+    },
+    {
+      "file": "04_lettera_acn_soggetto_nis.pdf",
+      "funzione": "Saliceto e' soggetto NIS essenziale; punto di contatto registrato: direzione sicurezza; canale: portale ACN/CSIRT Italia."
+    },
+    {
+      "file": "05_polizza_cyber.pdf",
+      "funzione": "Avviso di incidente all'assicuratore entro 48 ore dalla conoscenza; spese di risposta soggette a consenso, salvo urgenze documentate."
+    },
+    {
+      "file": "06_contratto_cliente_cerasia.pdf",
+      "funzione": "Notifica di ogni incidente rilevante entro 24 ore dalla conoscenza di Saliceto; aggiornamenti giornalieri fino al contenimento."
+    },
+    {
+      "file": "07_runbook_incidenti.md",
+      "funzione": "Il runbook unifica impropriamente tutti i termini in 72 ore e assegna al DPO l'approvazione della notifica NIS."
+    },
+    {
+      "file": "08_nota_forense_iniziale.pdf",
+      "funzione": "Persistenza dal 12 febbraio; credenziali privilegiate sottratte; non e' ancora determinato se tutti i 62 GB contengano dati personali."
+    },
+    {
+      "file": "09_bozza_comunicazione_interessati.pdf",
+      "funzione": "La bozza parla soltanto di indisponibilita', non menziona l'esfiltrazione e non offre un recapito dedicato."
+    },
+    {
+      "file": "10_email_riscatto_e_forze_ordine.eml",
+      "funzione": "Scadenza criminale: 18 febbraio ore 12:00. Il CFO propone di attendere il termine prima di notificare; la Polizia postale chiede conservazione dell'immagine forense."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "momento di conoscenza del titolare",
+      "gravita": "alta",
+      "affermazione_richiesta": "il dies a quo di Saliceto e' il 16 febbraio alle 08:20, non il primo alert delle 06:42",
+      "azione_richiesta": "ancorare tutti i termini del titolare alle 08:20",
+      "conseguenza": "il dies a quo dei termini di notifica e' il 16 febbraio 2027 alle 08:20",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "obbligo del responsabile",
+      "gravita": "alta",
+      "affermazione_richiesta": "Kairone doveva informare senza ritardo e comunque entro il limite contrattuale",
+      "azione_richiesta": "registrare 05:55 e 07:48 come eventi distinti",
+      "conseguenza": "il termine del responsabile non sostituisce quello del titolare",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "pre-notifica NIS entro 24 ore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la scadenza e' 17 febbraio 2027 alle 08:20",
+      "azione_richiesta": "inviare pre-notifica ACN con natura dolosa e possibile impatto",
+      "conseguenza": "il primo adempimento NIS precede la notifica completa",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "notifica NIS entro 72 ore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la scadenza e' 19 febbraio 2027 alle 08:20",
+      "azione_richiesta": "trasmettere valutazione iniziale, gravita' e indicatori disponibili",
+      "conseguenza": "il secondo adempimento resta distinto dalla pre-notifica",
+      "evidenza": "doc. 01 e fonti",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "relazione finale NIS",
+      "gravita": "alta",
+      "affermazione_richiesta": "la relazione finale va calendarizzata a un mese dalla notifica completa, con aggiornamenti se l'incidente perdura",
+      "azione_richiesta": "fissare presidio al 19 marzo 2027 e verificare lo stato",
+      "conseguenza": "la chiusura tecnica non cancella l'obbligo",
+      "evidenza": "fonti e registro evento",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "notifica GDPR entro 72 ore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la scadenza e' 19 febbraio 2027 alle 08:20 e il rischio non e' improbabile",
+      "azione_richiesta": "notificare il Garante anche per fasi se mancano dettagli",
+      "conseguenza": "la notifica privacy ha destinatario e test diversi dalla NIS",
+      "evidenza": "doc. 01, doc. 03 e GDPR",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "comunicazione agli interessati",
+      "gravita": "alta",
+      "affermazione_richiesta": "dati sanitari ed esfiltrazione sostengono un rischio elevato",
+      "azione_richiesta": "comunicare senza ingiustificato ritardo con natura, conseguenze, misure e contatto",
+      "conseguenza": "non esiste un termine fisso di 72 ore per l'art. 34",
+      "evidenza": "doc. 03, doc. 08 e doc. 09",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "avviso all'assicuratore",
+      "gravita": "alta",
+      "affermazione_richiesta": "le 48 ore scadono il 18 febbraio 2027 alle 08:20",
+      "azione_richiesta": "inviare avviso cautelativo e chiedere consenso alle spese non urgenti",
+      "conseguenza": "il termine di polizza e' autonomo",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "avviso al cliente Cerasia",
+      "gravita": "media",
+      "affermazione_richiesta": "le 24 ore scadono il 17 febbraio 2027 alle 08:20",
+      "azione_richiesta": "inviare avviso contrattuale e aggiornamenti giornalieri",
+      "conseguenza": "il cliente non coincide con gli interessati",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "runbook con termini fusi",
+      "gravita": "media",
+      "affermazione_richiesta": "la regola unica delle 72 ore omette NIS 24h, polizza 48h e cliente 24h",
+      "azione_richiesta": "sostituire la riga unica con scadenze e owner separati",
+      "conseguenza": "la semplificazione produce ritardi",
+      "evidenza": "doc. 07",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "owner NIS errato",
+      "gravita": "media",
+      "affermazione_richiesta": "il punto di contatto NIS e' direzione sicurezza, non DPO",
+      "azione_richiesta": "assegnare approvazione aziendale e invio al punto registrato",
+      "conseguenza": "il DPO resta consultato sul flusso privacy",
+      "evidenza": "doc. 04 e doc. 07",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "bozza interessati incompleta",
+      "gravita": "media",
+      "affermazione_richiesta": "la bozza omette l'esfiltrazione e il recapito",
+      "azione_richiesta": "correggere contenuto prima dell'invio",
+      "conseguenza": "un testo rassicurante ma incompleto non soddisfa il dovere informativo",
+      "evidenza": "doc. 09",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "notifica per fasi",
+      "gravita": "media",
+      "affermazione_richiesta": "l'incertezza sulla composizione dei 62 GB non giustifica attendere",
+      "azione_richiesta": "inviare dati disponibili e integrare senza ritardo",
+      "conseguenza": "la completezza finale non e' condizione iniziale",
+      "evidenza": "doc. 08 e GDPR",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "conservazione probatoria",
+      "gravita": "media",
+      "affermazione_richiesta": "immagini, log e indicatori devono restare integri mentre si ripristina",
+      "azione_richiesta": "preservare copie, catena di custodia e decision log",
+      "conseguenza": "ripristino e prova hanno owner coordinati",
+      "evidenza": "doc. 08 e doc. 10",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "riscatto non sospensivo",
+      "gravita": "media",
+      "affermazione_richiesta": "la scadenza imposta dall'attaccante non sospende notifiche",
+      "azione_richiesta": "procedere con gli adempimenti senza attendere il 18 febbraio",
+      "conseguenza": "la decisione sul pagamento resta separata",
+      "evidenza": "doc. 10",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "registro unico dei fatti, decisioni separate",
+      "gravita": "media",
+      "affermazione_richiesta": "i medesimi fatti alimentano cinque flussi ma i test giuridici non coincidono",
+      "azione_richiesta": "mantenere fonte fattuale unica con decisioni e versioni per destinatario",
+      "conseguenza": "coordinamento non significa fusione",
+      "evidenza": "tutti i documenti",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-17",
+      "etichetta": "lacuna sull'estensione",
+      "gravita": "media",
+      "affermazione_richiesta": "non e' noto quali record compongano tutti i 62 GB",
+      "azione_richiesta": "aprire workstream forense con checkpoint alle 18:00",
+      "conseguenza": "non quantificare definitivamente prima della verifica",
+      "evidenza": "doc. 08",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "primo alert non qualificato",
+      "oggetto": "doc. 01",
+      "chiave_nel_criterio": "06:42",
+      "perche_non_e_issue": "alle 06:42 mancava ragionevole certezza",
+      "criterio_assenza": "B.59"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "backup clinici integri",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "backup",
+      "perche_non_e_issue": "l'integrita' dei backup mitiga disponibilita' ma non elimina l'esfiltrazione",
+      "criterio_assenza": "B.60"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "scadenza del riscatto",
+      "oggetto": "doc. 10",
+      "chiave_nel_criterio": "18 febbraio ore 12:00",
+      "perche_non_e_issue": "e' un fatto operativo e non un termine normativo",
+      "criterio_assenza": "B.61"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "festivita' e fine settimana",
+      "oggetto": "calendario",
+      "chiave_nel_criterio": "fine settimana",
+      "perche_non_e_issue": "i termini in ore non slittano al giorno lavorativo",
+      "criterio_assenza": "B.62"
+    },
+    {
+      "id": "N-05",
+      "etichetta": "DPO consultato",
+      "oggetto": "doc. 07",
+      "chiave_nel_criterio": "DPO",
+      "perche_non_e_issue": "la consultazione privacy e' utile; e' errata solo l'attribuzione del flusso NIS",
+      "criterio_assenza": "B.63"
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "task_id": "WF2-033",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Assicurativo. Linea del tempo della copertura e della denuncia su polizza rischi informatici",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2031-08-08",
+  "workflow_family": "procedural_computation",
+  "subtask": "procedural_timeline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "in corso",
+  "legal_area": [
+    "assicurativo / rischi informatici",
+    "C. Procedural computation",
+    "Contrattualistica",
+    "Contenzioso"
+  ],
+  "document_type": "in corso",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: timeline_copertura_denuncia.md.\n\n# Struttura del deliverable\n\nFile da produrre: `timeline_copertura_denuncia.md`. Lunghezza massima 1.900 parole.\nSezioni obbligatorie, nell'ordine:\n\n## 1. Linea del tempo\nUna tabella cronologica con le colonne: data e ora, fatto, documento da cui risulta, rilevanza per la\ncopertura o per un termine.\n\n## 2. Che cosa la polizza copre e che cosa no\nLe voci coperte, quelle escluse e quelle soggette a limite o a condizione, con la clausola da cui\nciascuna deriva.\n\n## 3. Quadro dei termini\nUna tabella con le colonne: termine, momento da cui decorre, documento, regola applicata, scadenza,\nstato alla data di riferimento.\n\n## 4. Calcoli\nPer ciascuna scadenza e per ciascuna durata della tabella, i passaggi seguiti.\n\n## 5. Checklist delle attivita' da compiere\nLe attivita', in ordine, con la data entro cui ciascuna va completata e chi deve compierla.\n\n## 6. Elementi mancanti dal fascicolo\nI documenti da acquisire e che cosa non e' determinabile allo stato.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_condizioni_di_assicurazione.pdf",
+    "public/documents/02_scheda_di_polizza.pdf",
+    "public/documents/03_relazione_di_analisi_forense.pdf",
+    "public/documents/04_notifica_di_violazione_dei_dati.pdf",
+    "public/documents/05_denuncia_di_sinistro.pdf",
+    "public/documents/06_richiesta_di_risarcimento_del_terzo.pdf",
+    "public/documents/07_lettera_di_incarico_professionale.pdf",
+    "public/documents/08_richiesta_di_documentazione_dell_assicuratore.pdf",
+    "public/documents/09_messaggio_del_direttore_operativo.docx"
+  ],
+  "expected_deliverable": "timeline_copertura_denuncia.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

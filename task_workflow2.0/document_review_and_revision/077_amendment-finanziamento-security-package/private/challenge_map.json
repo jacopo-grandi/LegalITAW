@@ -1,0 +1,176 @@
+{
+  "task_id": "WF2-077",
+  "lato_assistito": "Banca Cortenia S.p.A., finanziatrice di Salmura Packaging S.p.A.",
+  "data_di_riferimento": "2029-10-22",
+  "stato_fascicolo": "bozza pre-firma",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Waiver circoscritto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il waiver richiesto riguarda solo il Leverage Ratio al 30 giugno 2029",
+      "evidenza": "01_amendment_n2_finanziamento_salmura.docx, contenuto pertinente a waiver circoscritto",
+      "conseguenza": "una rinuncia generale cancellerebbe default non istruiti",
+      "azione": "limitare evento, periodo e documento",
+      "dato_mancante": "manca conferma su default ulteriori",
+      "errore_bersaglio": "rinunciare a violazioni note e ignote",
+      "fonte": "richiesta; amendment"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Riserva diritti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza non preserva i diritti per inadempimenti diversi",
+      "evidenza": "01_amendment_n2_finanziamento_salmura.docx, contenuto pertinente a riserva diritti",
+      "conseguenza": "serve una riserva espressa",
+      "azione": "inserire no waiver generale",
+      "dato_mancante": "manca l'elenco delle reservation letters",
+      "errore_bersaglio": "considerare il silenzio come riserva",
+      "fonte": "amendment; contratto originario"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Condizioni efficacia",
+      "gravita": "alta",
+      "affermazione_richiesta": "le conferme dei garanti sono condizioni di efficacia non ancora soddisfatte",
+      "evidenza": "02_closing_checklist_amendment_n2.xlsx, contenuto pertinente a condizioni efficacia",
+      "conseguenza": "l'amendment non deve operare alla sola firma del debitore",
+      "azione": "richiedere conferma scritta dell'Agent",
+      "dato_mancante": "manca la firma di due garanti",
+      "errore_bersaglio": "rendere immediata l'efficacia",
+      "fonte": "closing checklist"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Delibere",
+      "gravita": "alta",
+      "affermazione_richiesta": "la delibera del debitore autorizza 12 milioni ma l'esposizione modificata è 15 milioni",
+      "evidenza": "02_closing_checklist_amendment_n2.xlsx, contenuto pertinente a delibere",
+      "conseguenza": "la capienza autorizzativa non coincide con l'operazione",
+      "azione": "ottenere una delibera integrativa",
+      "dato_mancante": "manca il verbale del garante immobiliare",
+      "errore_bersaglio": "accettare la delibera per analogia",
+      "fonte": "delibera; amendment"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Conferma garanzie",
+      "gravita": "alta",
+      "affermazione_richiesta": "la proroga e l'aumento del margine richiedono conferma espressa dei garanti",
+      "evidenza": "03_email_garanzie_e_ispezione_ipotecaria.eml, contenuto pertinente a conferma garanzie",
+      "conseguenza": "il package deve riferirsi alle obbligazioni come modificate",
+      "azione": "acquisire confirmations separate",
+      "dato_mancante": "manca una garanzia originale",
+      "errore_bersaglio": "fare affidamento su una formula automatica",
+      "fonte": "garanzie; art. 1232 c.c."
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Ipoteca",
+      "gravita": "alta",
+      "affermazione_richiesta": "la nota ipotecaria indica un importo massimo di 18 milioni",
+      "evidenza": "03_email_garanzie_e_ispezione_ipotecaria.eml, contenuto pertinente a ipoteca",
+      "conseguenza": "la capienza va confrontata con capitale, interessi e accessori",
+      "azione": "ottenere calcolo di capienza e parere notarile",
+      "dato_mancante": "manca conteggio accessori",
+      "errore_bersaglio": "equiparare importo iscritto e credito garantito",
+      "fonte": "nota ipotecaria; codice civile"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Pegno quote",
+      "gravita": "alta",
+      "affermazione_richiesta": "il patto di pegno vieta modifiche al finanziamento senza consenso del datore",
+      "evidenza": "04_relazione_pegno_e_intercreditor.pdf, contenuto pertinente a pegno quote",
+      "conseguenza": "il consenso è un documento di closing",
+      "azione": "inserirlo tra le condizioni",
+      "dato_mancante": "manca firma del socio estero",
+      "errore_bersaglio": "ritenere il pegno sempre trascinato",
+      "fonte": "pegno"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Intercreditor",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'estensione della scadenza richiede Majority Senior Creditors e notifica ai subordinati",
+      "evidenza": "04_relazione_pegno_e_intercreditor.pdf, contenuto pertinente a intercreditor",
+      "conseguenza": "la bozza non può rendere il consenso implicito",
+      "azione": "ottenere decisione e inviare notifica",
+      "dato_mancante": "manca il calcolo delle maggioranze",
+      "errore_bersaglio": "considerare sufficiente il consenso dell'Agent",
+      "fonte": "intercreditor"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Novazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "le parti intendono modificare e non novare il finanziamento",
+      "evidenza": "05_nota_studio_bertelli_per_il_debitore.pdf, contenuto pertinente a novazione",
+      "conseguenza": "il testo deve preservare continuità di debito e garanzie",
+      "azione": "inserire clausola di non novazione",
+      "dato_mancante": "manca conferma fiscale",
+      "errore_bersaglio": "descrivere un nuovo finanziamento sostitutivo",
+      "fonte": "term sheet; art. 1232 c.c."
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Closing",
+      "gravita": "alta",
+      "affermazione_richiesta": "la fee è dovuta solo alla data di efficacia",
+      "evidenza": "05_nota_studio_bertelli_per_il_debitore.pdf, contenuto pertinente a closing",
+      "conseguenza": "firma ed efficacia devono restare distinte",
+      "azione": "allineare pagamento e notice dell'Agent",
+      "dato_mancante": "manca fattura della fee",
+      "errore_bersaglio": "esigere la fee alla circolazione della bozza",
+      "fonte": "fee letter; checklist"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "firma agent",
+      "chiave_nel_criterio": "firma agent",
+      "regola": "La sola firma dell'Agent non prova il raggiungimento delle maggioranze intercreditor."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "importo ipoteca",
+      "chiave_nel_criterio": "importo ipoteca",
+      "regola": "Il massimale ipotecario non coincide automaticamente con la copertura economica disponibile."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "circolazione bozza",
+      "chiave_nel_criterio": "circolazione bozza",
+      "regola": "La circolazione della bozza non fa maturare la fee collegata all'efficacia."
+    }
+  ],
+  "calcoli": [
+    "2029-06-30",
+    "2029-10-22",
+    "2031-12-31"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_amendment_n2_finanziamento_salmura.docx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_closing_checklist_amendment_n2.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_garanzie_e_ispezione_ipotecaria.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_relazione_pegno_e_intercreditor.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_studio_bertelli_per_il_debitore.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

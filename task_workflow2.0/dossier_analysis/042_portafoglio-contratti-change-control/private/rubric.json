@@ -1,0 +1,913 @@
+{
+  "task_id": "WF2-042",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 45,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non cita fonti estranee al reference pack chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti estranee al reference pack chiuso.\nPASS se: ogni fonte normativa appartiene al reference pack\nFAIL se: Fallisce se una regola decisiva è fondata su una fonte normativa assente dal reference pack.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni fonte normativa appartiene al reference pack",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: l'operazione è una vendita del 100% delle quote di Selva Digitale.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'operazione è una vendita del 100% delle quote di Selva Digitale.\nPASS se: Il testo afferma: l'operazione è una vendita del 100% delle quote di Selva Digitale.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il term sheet esclude trasferimenti di azienda o singoli contratti",
+      "pass_condition": "Il testo afferma: l'operazione è una vendita del 100% delle quote di Selva Digitale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «l'operazione è una vendita del 100% delle quote di Selva Digitale» (I-01) è attribuita al documento 01_term_sheet_operazione.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'operazione è una vendita del 100% delle quote di Selva Digitale» (I-01) è attribuita al documento 01_term_sheet_operazione.pdf.\nPASS se: il deliverable enuncia la conclusione «l'operazione è una vendita del 100% delle quote di Selva Digitale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_term_sheet_operazione.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_term_sheet_operazione.pdf = «Term sheet dell'acquisizione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_term_sheet_operazione.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'operazione è una vendita del 100% delle quote di Selva Digitale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_term_sheet_operazione.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: qualificare separatamente cambio di controllo e cessione.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: qualificare separatamente cambio di controllo e cessione.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il contratto Falco richiede consenso scritto preventivo per il cambio di controllo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il contratto Falco richiede consenso scritto preventivo per il cambio di controllo.\nPASS se: Il testo afferma: il contratto Falco richiede consenso scritto preventivo per il cambio di controllo.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: articolo 18.3 del contratto cloud",
+      "pass_condition": "Il testo afferma: il contratto Falco richiede consenso scritto preventivo per il cambio di controllo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «il contratto Falco richiede consenso scritto preventivo per il cambio di controllo» (I-02) è attribuita al documento 02_contratto_cloud_falco.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il contratto Falco richiede consenso scritto preventivo per il cambio di controllo» (I-02) è attribuita al documento 02_contratto_cloud_falco.pdf.\nPASS se: il deliverable enuncia la conclusione «il contratto Falco richiede consenso scritto preventivo per il cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_contratto_cloud_falco.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_contratto_cloud_falco.pdf = «Contratto cloud Falco»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_contratto_cloud_falco.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il contratto Falco richiede consenso scritto preventivo per il cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_contratto_cloud_falco.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: ottenere il consenso prima del closing.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: ottenere il consenso prima del closing.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing.\nPASS se: compare \"Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing\" nel contesto di Falco termine\nFAIL se: Nel contesto di Falco termine il valore è assente, diverso da \"Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la clausola 18.4 usa giorni lavorativi",
+      "pass_condition": "compare \"Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing\" nel contesto di Falco termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing» (I-03) è attribuita al documento 02_contratto_cloud_falco.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing» (I-03) è attribuita al documento 02_contratto_cloud_falco.pdf.\nPASS se: il deliverable enuncia la conclusione «Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_contratto_cloud_falco.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_contratto_cloud_falco.pdf = «Contratto cloud Falco»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_contratto_cloud_falco.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «Falco deve ricevere la richiesta almeno quindici giorni lavorativi prima del closing» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_contratto_cloud_falco.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: inviare la richiesta entro il 10 agosto 2026 o spostare il closing.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: inviare la richiesta entro il 10 agosto 2026 o spostare il closing.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo.\nPASS se: Il testo afferma: Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: clausola 12.2 del contratto di distribuzione",
+      "pass_condition": "Il testo afferma: Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo» (I-04) è attribuita al documento 03_distribuzione_ginestra.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo» (I-04) è attribuita al documento 03_distribuzione_ginestra.pdf.\nPASS se: il deliverable enuncia la conclusione «Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_distribuzione_ginestra.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_distribuzione_ginestra.pdf = «Distribuzione Ginestra»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_distribuzione_ginestra.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «Ginestra richiede una notifica entro dieci giorni successivi al cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_distribuzione_ginestra.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: preparare la notifica da inviare dopo il closing.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: preparare la notifica da inviare dopo il closing.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: Ginestra può recedere soltanto se l'acquirente è un concorrente nominato.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: Ginestra può recedere soltanto se l'acquirente è un concorrente nominato.\nPASS se: Il testo afferma: Ginestra può recedere soltanto se l'acquirente è un concorrente nominato.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: allegato 4 elenca tre concorrenti e Cervara non vi compare",
+      "pass_condition": "Il testo afferma: Ginestra può recedere soltanto se l'acquirente è un concorrente nominato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «Ginestra può recedere soltanto se l'acquirente è un concorrente nominato» (I-05) è attribuita al documento 03_distribuzione_ginestra.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «Ginestra può recedere soltanto se l'acquirente è un concorrente nominato» (I-05) è attribuita al documento 03_distribuzione_ginestra.pdf.\nPASS se: il deliverable enuncia la conclusione «Ginestra può recedere soltanto se l'acquirente è un concorrente nominato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_distribuzione_ginestra.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_distribuzione_ginestra.pdf = «Distribuzione Ginestra»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_distribuzione_ginestra.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «Ginestra può recedere soltanto se l'acquirente è un concorrente nominato» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_distribuzione_ginestra.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: documentare la non appartenenza all'elenco.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: documentare la non appartenenza all'elenco.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver.\nPASS se: Il testo afferma: il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: clausole 14.1 e 15.2 del finanziamento",
+      "pass_condition": "Il testo afferma: il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver» (I-06) è attribuita al documento 04_finanziamento_lago.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver» (I-06) è attribuita al documento 04_finanziamento_lago.pdf.\nPASS se: il deliverable enuncia la conclusione «il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_finanziamento_lago.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_finanziamento_lago.pdf = «Finanziamento Lago»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_finanziamento_lago.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il finanziamento Lago qualifica il cambio di controllo come evento di default salvo waiver» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_finanziamento_lago.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "È proposta l'azione: ottenere waiver sottoscritto prima del closing.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: ottenere waiver sottoscritto prima del closing.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il waiver richiede finanziatori per almeno il 66,67% degli impegni.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il waiver richiede finanziatori per almeno il 66,67% degli impegni.\nPASS se: compare \"66,67%\" nel contesto di Lago maggioranza\nFAIL se: Nel contesto di Lago maggioranza il valore è assente, diverso da \"66,67%\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la clausola sulle decisioni dei Majority Lenders",
+      "pass_condition": "compare \"66,67%\" nel contesto di Lago maggioranza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «il waiver richiede finanziatori per almeno il 66,67% degli impegni» (I-07) è attribuita al documento 04_finanziamento_lago.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il waiver richiede finanziatori per almeno il 66,67% degli impegni» (I-07) è attribuita al documento 04_finanziamento_lago.pdf.\nPASS se: il deliverable enuncia la conclusione «il waiver richiede finanziatori per almeno il 66,67% degli impegni» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_finanziamento_lago.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_finanziamento_lago.pdf = «Finanziamento Lago»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_finanziamento_lago.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il waiver richiede finanziatori per almeno il 66,67% degli impegni» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_finanziamento_lago.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la licenza Nodo vieta la cessione ma non contiene una clausola di change of control.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la licenza Nodo vieta la cessione ma non contiene una clausola di change of control.\nPASS se: Il testo afferma: la licenza Nodo vieta la cessione ma non contiene una clausola di change of control.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: articolo 9 disciplina solo trasferimento del contratto e sublicenza",
+      "pass_condition": "Il testo afferma: la licenza Nodo vieta la cessione ma non contiene una clausola di change of control.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «la licenza Nodo vieta la cessione ma non contiene una clausola di change of control» (I-08) è attribuita al documento 05_licenza_software_nodo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la licenza Nodo vieta la cessione ma non contiene una clausola di change of control» (I-08) è attribuita al documento 05_licenza_software_nodo.pdf.\nPASS se: il deliverable enuncia la conclusione «la licenza Nodo vieta la cessione ma non contiene una clausola di change of control» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_licenza_software_nodo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_licenza_software_nodo.pdf = «Licenza software Nodo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_licenza_software_nodo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la licenza Nodo vieta la cessione ma non contiene una clausola di change of control» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_licenza_software_nodo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la locazione non attribuisce rimedi per il solo cambio di controllo.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la locazione non attribuisce rimedi per il solo cambio di controllo.\nPASS se: Il testo afferma: la locazione non attribuisce rimedi per il solo cambio di controllo.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: clausola 16 consente cessione nell'ambito di riorganizzazioni e tace sul controllo",
+      "pass_condition": "Il testo afferma: la locazione non attribuisce rimedi per il solo cambio di controllo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «la locazione non attribuisce rimedi per il solo cambio di controllo» (I-09) è attribuita al documento 06_locazione_sede.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la locazione non attribuisce rimedi per il solo cambio di controllo» (I-09) è attribuita al documento 06_locazione_sede.pdf.\nPASS se: il deliverable enuncia la conclusione «la locazione non attribuisce rimedi per il solo cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_locazione_sede.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 06_locazione_sede.pdf = «Locazione della sede»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/06_locazione_sede.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la locazione non attribuisce rimedi per il solo cambio di controllo» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_locazione_sede.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui.\nPASS se: compare \"euro 500.000\" nel contesto di materialità\nFAIL se: Nel contesto di materialità il valore è assente, diverso da \"euro 500.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: registro contratti: Falco euro 720.000, Lago oneri euro 610.000, Ginestra euro 430.000",
+      "pass_condition": "compare \"euro 500.000\" nel contesto di materialità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui» (I-10) è attribuita al documento 07_registro_contratti_e_nota_cfo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui» (I-10) è attribuita al documento 07_registro_contratti_e_nota_cfo.xlsx.\nPASS se: il deliverable enuncia la conclusione «solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_registro_contratti_e_nota_cfo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_registro_contratti_e_nota_cfo.xlsx = «Registro contratti e nota del CFO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_registro_contratti_e_nota_cfo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «solo Falco e Lago superano la soglia economica di materialità di euro 500.000 annui» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_registro_contratti_e_nota_cfo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il registro non contiene l'ultimo addendum Falco.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il registro non contiene l'ultimo addendum Falco.\nPASS se: Il testo afferma: il registro non contiene l'ultimo addendum Falco.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la nota CFO segnala un addendum 2025 non allegato",
+      "pass_condition": "Il testo afferma: il registro non contiene l'ultimo addendum Falco.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «il registro non contiene l'ultimo addendum Falco» (I-11) è attribuita al documento 07_registro_contratti_e_nota_cfo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il registro non contiene l'ultimo addendum Falco» (I-11) è attribuita al documento 07_registro_contratti_e_nota_cfo.xlsx.\nPASS se: il deliverable enuncia la conclusione «il registro non contiene l'ultimo addendum Falco» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_registro_contratti_e_nota_cfo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_registro_contratti_e_nota_cfo.xlsx = «Registro contratti e nota del CFO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_registro_contratti_e_nota_cfo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «il registro non contiene l'ultimo addendum Falco» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_registro_contratti_e_nota_cfo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: le comunicazioni devono seguire indirizzi e forme di ciascun contratto.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: le comunicazioni devono seguire indirizzi e forme di ciascun contratto.\nPASS se: Il testo afferma: le comunicazioni devono seguire indirizzi e forme di ciascun contratto.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: Falco richiede PEC; Ginestra raccomandata o PEC; Lago piattaforma agent",
+      "pass_condition": "Il testo afferma: le comunicazioni devono seguire indirizzi e forme di ciascun contratto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «le comunicazioni devono seguire indirizzi e forme di ciascun contratto» (I-12) è attribuita ai documenti 02_contratto_cloud_falco.pdf, 03_distribuzione_ginestra.pdf e 04_finanziamento_lago.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «le comunicazioni devono seguire indirizzi e forme di ciascun contratto» (I-12) è attribuita ai documenti 02_contratto_cloud_falco.pdf, 03_distribuzione_ginestra.pdf e 04_finanziamento_lago.pdf.\nPASS se: il deliverable enuncia la conclusione «le comunicazioni devono seguire indirizzi e forme di ciascun contratto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_contratto_cloud_falco.pdf, 03_distribuzione_ginestra.pdf e 04_finanziamento_lago.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_contratto_cloud_falco.pdf = «Contratto cloud Falco»; 03_distribuzione_ginestra.pdf = «Distribuzione Ginestra»; 04_finanziamento_lago.pdf = «Finanziamento Lago»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_contratto_cloud_falco.pdf + 03_distribuzione_ginestra.pdf + 04_finanziamento_lago.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «le comunicazioni devono seguire indirizzi e forme di ciascun contratto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_contratto_cloud_falco.pdf, 03_distribuzione_ginestra.pdf e 04_finanziamento_lago.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il term sheet rende consensi Falco e Lago condizioni al closing.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il term sheet rende consensi Falco e Lago condizioni al closing.\nPASS se: Il testo afferma: il term sheet rende consensi Falco e Lago condizioni al closing.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: allegato B del term sheet",
+      "pass_condition": "Il testo afferma: il term sheet rende consensi Falco e Lago condizioni al closing.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «il term sheet rende consensi Falco e Lago condizioni al closing» (I-13) è attribuita al documento 01_term_sheet_operazione.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il term sheet rende consensi Falco e Lago condizioni al closing» (I-13) è attribuita al documento 01_term_sheet_operazione.pdf.\nPASS se: il deliverable enuncia la conclusione «il term sheet rende consensi Falco e Lago condizioni al closing» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_term_sheet_operazione.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_term_sheet_operazione.pdf = «Term sheet dell'acquisizione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_term_sheet_operazione.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il term sheet rende consensi Falco e Lago condizioni al closing» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_term_sheet_operazione.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: manca la conferma sulla composizione aggiornata dei finanziatori Lago.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: manca la conferma sulla composizione aggiornata dei finanziatori Lago.\nPASS se: Il testo afferma: manca la conferma sulla composizione aggiornata dei finanziatori Lago.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il registro riporta saldi al 30 giugno e nessuna notice di trasferimento",
+      "pass_condition": "Il testo afferma: manca la conferma sulla composizione aggiornata dei finanziatori Lago.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "La conclusione «manca la conferma sulla composizione aggiornata dei finanziatori Lago» (I-14) è attribuita ai documenti 04_finanziamento_lago.pdf e 07_registro_contratti_e_nota_cfo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «manca la conferma sulla composizione aggiornata dei finanziatori Lago» (I-14) è attribuita ai documenti 04_finanziamento_lago.pdf e 07_registro_contratti_e_nota_cfo.xlsx.\nPASS se: il deliverable enuncia la conclusione «manca la conferma sulla composizione aggiornata dei finanziatori Lago» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 04_finanziamento_lago.pdf e 07_registro_contratti_e_nota_cfo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_finanziamento_lago.pdf = «Finanziamento Lago»; 07_registro_contratti_e_nota_cfo.xlsx = «Registro contratti e nota del CFO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_finanziamento_lago.pdf + 07_registro_contratti_e_nota_cfo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «manca la conferma sulla composizione aggiornata dei finanziatori Lago» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 04_finanziamento_lago.pdf e 07_registro_contratti_e_nota_cfo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: cessione automatica di tutti i contratti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: cessione automatica di tutti i contratti.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: cessione automatica di tutti i contratti.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: recesso Ginestra incondizionato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: recesso Ginestra incondizionato.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: recesso Ginestra incondizionato.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: consenso del locatore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: consenso del locatore.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: consenso del locatore.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: notifica Falco dopo il closing.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: notifica Falco dopo il closing.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: notifica Falco dopo il closing.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: waiver Lago per email.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: waiver Lago per email.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: waiver Lago per email.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: addendum Falco considerato inesistente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: addendum Falco considerato inesistente.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: addendum Falco considerato inesistente.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: omissione dei contratti sotto soglia.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: omissione dei contratti sotto soglia.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: omissione dei contratti sotto soglia.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-07"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.\nPASS se: sono trattati fatti di entrambi i segni\nFAIL se: una delle due direzioni è sistematicamente omessa.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "sono trattati fatti di entrambi i segni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable evita la sovra-segnalazione dei rischi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la sovra-segnalazione dei rischi.\nPASS se: gli elementi neutri sono mantenuti distinti dai rischi\nFAIL se: Fallisce se almeno un elemento neutro o favorevole è qualificato come rischio concreto senza un fatto o una regola che lo sostenga.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "gli elementi neutri sono mantenuti distinti dai rischi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_risk_matrix.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito su dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito su dati mancanti.\nPASS se: le lacune restano esplicite\nFAIL se: Fallisce se almeno una lacuna dichiarata nel fascicolo è colmata con un fatto dato per certo.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "le lacune restano esplicite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

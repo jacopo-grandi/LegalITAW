@@ -1,0 +1,1570 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-010",
+  "title": "Timeline SPA con condizioni sospensive",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 97,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il file consegnato è scaricabile e contiene due deliverable distinti: una timeline e una checklist delle condizioni sospensive.",
+      "pass_condition": "il file scaricabile contiene due deliverable distinti e riconoscibili: una timeline e una checklist delle condizioni sospensive.",
+      "fail_condition": "il file non è scaricabile, manca uno dei due deliverable o timeline e checklist non sono distinte.",
+      "indifferent": "La collocazione delle due parti nello stesso file.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [struttura] Il file consegnato è scaricabile e contiene due deliverable distinti: una timeline e una checklist delle condizioni sospensive."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni riga della timeline contiene tre campi non vuoti: data, fonte (clausola o norma), soggetto onerato.",
+      "pass_condition": "ogni riga della timeline ha tre campi non vuoti: data, fonte (clausola o norma) e soggetto onerato.",
+      "fail_condition": "anche una sola riga è priva di uno dei tre campi o ha uno di essi vuoto.",
+      "indifferent": "L’ordine e il formato dei campi, purché ogni fonte identifichi una clausola o una norma.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] Ogni riga della timeline contiene tre campi non vuoti: data, fonte (clausola o norma), soggetto onerato."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni data frutto di computo è accompagnata dal percorso di calcolo: evento di decorrenza, numero e tipo di giorni, trattamento delle festività.",
+      "pass_condition": "ogni data ottenuta con un calcolo indica l'evento di decorrenza, il numero e il tipo di giorni (di calendario, lavorativi, liberi) e come sono trattati festivi e sabati.",
+      "fail_condition": "anche una sola data calcolata manca di uno di questi elementi.",
+      "indifferent": "le date riprese dal fascicolo senza calcolo; la forma (testo, tabella, nota).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] Ogni data frutto di computo è accompagnata dal percorso di calcolo: evento di decorrenza, numero e tipo di giorni, trattamento delle festività."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni data porta un'etichetta di natura fra: determinata, relativa al Closing, non determinabile.",
+      "pass_condition": "ogni data della timeline porta una delle etichette: determinata, relativa al Closing, non determinabile.",
+      "fail_condition": "anche una sola data è priva di etichetta o ne porta una diversa da queste tre.",
+      "indifferent": "la forma dell'etichetta (colonna, tag, testo).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] Ogni data porta un'etichetta di natura fra: determinata, relativa al Closing, non determinabile."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni data che costituisce termine porta un'etichetta fra: vincolante, programmatica.",
+      "pass_condition": "ogni data che costituisce un termine porta una delle etichette: vincolante, programmatica.",
+      "fail_condition": "anche un solo termine è privo di etichetta o ne porta una diversa da queste due.",
+      "indifferent": "la forma dell'etichetta; le date che non sono termini.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 [struttura] Ogni data che costituisce termine porta un'etichetta fra: vincolante, programmatica."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non cita norme fuori dall'elenco chiuso: artt. 1187, 1353, 1358, 1359, 1360, 2963 c.c.; L. 287/1990 art. 16; Reg. (CE) 139/2004; D.L. 21/2012.",
+      "pass_condition": "ogni norma citata appartiene all'elenco chiuso: artt. 1187, 1353, 1358, 1359, 1360, 2963 c.c.; L. 287/1990 art. 16; Reg. (CE) 139/2004; D.L. 21/2012.",
+      "fail_condition": "compare anche una sola norma fuori da questo elenco, inventata o superata, anche se citata a titolo di esempio o come norma vigente in altri ordinamenti.",
+      "indifferent": "il rinvio agli articoli del contratto, agli allegati e ai documenti del fascicolo, che non sono norme; la forma della citazione.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.6 [assenza] Nessun riferimento normativo fuori dall'elenco chiuso: artt. 1187, 1353, 1358, 1359, 1360, 2963 c.c.; L. 287/1990 art. 16; Reg. (CE) 139/2004; D.L. 21/2012. Ogni altra norma citata è invenzione o eccedenza."
+    },
+    {
+      "id": "A.7",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "La checklist contiene una riga per ciascuna delle cinque Condizioni Sospensive, e ciascuna riga porta il soggetto onerato e lo stato.",
+      "pass_condition": "la checklist contiene una riga distinta per ciascuna delle cinque Condizioni Sospensive e ciascuna riga indica il soggetto onerato e lo stato.",
+      "fail_condition": "manca anche una sola delle cinque condizioni, oppure una riga non riporta il soggetto onerato o lo stato.",
+      "indifferent": "La formulazione e l’ordine delle cinque condizioni.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.7 [struttura] La checklist contiene una riga per ciascuna delle cinque Condizioni Sospensive, e ciascuna riga porta il soggetto onerato e lo stato.\n\nSEZIONE B — MERITO. Passa al judge, salvo dove indicato."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la Long-Stop Date come l'unico termine finale vincolante dell'operazione.",
+      "pass_condition": "compare \"unico termine vincolante\", \"unico termine finale\", \"sola scadenza vincolante\" riferito alla Long-Stop Date.",
+      "fail_condition": "la qualifica manca, o è attribuita anche o solo alla Data Obiettivo di Closing.",
+      "indifferent": null,
+      "source": "art. 8.1.",
+      "severity": "alta",
+      "raw_text": "B.1 long-stop unico termine vincolante [issue: I-01] [tipo: qualificazione]\nVerifica: il deliverable qualifica la Long-Stop Date come l'unico termine finale vincolante dell'operazione.\nPass se: compare \"unico termine vincolante\", \"unico termine finale\", \"sola scadenza vincolante\" riferito alla Long-Stop Date.\nFail se: la qualifica manca, o è attribuita anche o solo alla Data Obiettivo di Closing.\n— non passa al judge — Fonte: art. 8.1. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che alla Long-Stop Date sorge un diritto di recesso spettante a ciascuna delle due Parti.",
+      "pass_condition": "compare il recesso come rimedio e l'attribuzione a entrambe le Parti (\"ciascuna Parte\", \"entrambe\", \"sia il Compratore sia il Venditore\").",
+      "fail_condition": "il rimedio è indicato come risoluzione automatica, come caducazione o come inefficacia; oppure il recesso è attribuito a una sola Parte.",
+      "indifferent": null,
+      "source": "art. 8.2.",
+      "severity": "alta",
+      "raw_text": "B.2 rimedio del mancato avveramento [issue: I-01] [tipo: presenza]\nVerifica: il deliverable afferma che alla Long-Stop Date sorge un diritto di recesso spettante a ciascuna delle due Parti.\nPass se: compare il recesso come rimedio e l'attribuzione a entrambe le Parti (\"ciascuna Parte\", \"entrambe\", \"sia il Compratore sia il Venditore\").\nFail se: il rimedio è indicato come risoluzione automatica, come caducazione o come inefficacia; oppure il recesso è attribuito a una sola Parte.\n— non passa al judge — Fonte: art. 8.2. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il recesso richiede comunicazione scritta entro 10 Giorni Lavorativi dalla Long-Stop Date.",
+      "pass_condition": "compaiono sia il requisito della comunicazione scritta sia il termine di 10 Giorni Lavorativi.",
+      "fail_condition": "il recesso è presentato come operante di diritto, o il termine per esercitarlo non è indicato.",
+      "indifferent": null,
+      "source": "art. 8.2.",
+      "severity": "alta",
+      "raw_text": "B.3 recesso non automatico [issue: I-01] [tipo: presenza]\nVerifica: il deliverable afferma che il recesso richiede comunicazione scritta entro 10 Giorni Lavorativi dalla Long-Stop Date.\nPass se: compaiono sia il requisito della comunicazione scritta sia il termine di 10 Giorni Lavorativi.\nFail se: il recesso è presentato come operante di diritto, o il termine per esercitarlo non è indicato.\n— non passa al judge — Fonte: art. 8.2. Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, in mancanza di comunicazione di recesso nel termine, il Contratto resta efficace.",
+      "pass_condition": "compare \"resta efficace\", \"rimane in vigore\", \"prosegue\", riferito al Contratto dopo la scadenza del termine di recesso.",
+      "fail_condition": "si afferma che il Contratto si scioglie, decade o perde efficacia; oppure l'effetto non è indicato.",
+      "indifferent": null,
+      "source": "art. 8.3.",
+      "severity": "alta",
+      "raw_text": "B.4 effetto del silenzio [issue: I-01] [tipo: presenza]\nVerifica: il deliverable afferma che, in mancanza di comunicazione di recesso nel termine, il Contratto resta efficace.\nPass se: compare \"resta efficace\", \"rimane in vigore\", \"prosegue\", riferito al Contratto dopo la scadenza del termine di recesso.\nFail se: si afferma che il Contratto si scioglie, decade o perde efficacia; oppure l'effetto non è indicato.\n— non passa al judge — Fonte: art. 8.3. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il recesso non spetta alla Parte il cui inadempimento agli obblighi dell'art. 6 ha causato il mancato avveramento.",
+      "pass_condition": "compare la preclusione, riferita alla Parte inadempiente.",
+      "fail_condition": "la preclusione non compare, o il recesso è presentato come spettante a entrambe le Parti in ogni caso.",
+      "indifferent": null,
+      "source": "art. 8.4.",
+      "severity": "media",
+      "raw_text": "B.5 preclusione della Parte inadempiente [issue: I-01] [tipo: presenza]\nVerifica: il deliverable afferma che il recesso non spetta alla Parte il cui inadempimento agli obblighi dell'art. 6 ha causato il mancato avveramento.\nPass se: compare la preclusione, riferita alla Parte inadempiente.\nFail se: la preclusione non compare, o il recesso è presentato come spettante a entrambe le Parti in ogni caso.\n— non passa al judge — Fonte: art. 8.4. Gravità: media."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la Data Obiettivo di Closing del 30 giugno 2027 come programmatica e non vincolante.",
+      "pass_condition": "compare \"programmatica\", \"meramente organizzativa\", \"non vincolante\", \"data attesa\", \"obiettivo non vincolante\", riferito al 30 giugno 2027.",
+      "fail_condition": "la Data Obiettivo è presentata come termine, scadenza o data vincolante; oppure la qualifica manca.",
+      "indifferent": null,
+      "source": "artt. 7.1 e 7.2.",
+      "severity": "alta",
+      "raw_text": "B.6 natura della Data Obiettivo [issue: I-02] [tipo: qualificazione]\nVerifica: il deliverable qualifica la Data Obiettivo di Closing del 30 giugno 2027 come programmatica e non vincolante.\nPass se: compare \"programmatica\", \"meramente organizzativa\", \"non vincolante\", \"data attesa\", \"obiettivo non vincolante\", riferito al 30 giugno 2027.\nFail se: la Data Obiettivo è presentata come termine, scadenza o data vincolante; oppure la qualifica manca.\n— non passa al judge — Fonte: artt. 7.1 e 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non attribuisce al mancato rispetto della Data Obiettivo un diritto di recesso, di risoluzione, di indennizzo o di rinegoziazione.",
+      "pass_condition": "nessuno di questi rimedi è collegato alla Data Obiettivo.",
+      "fail_condition": "anche uno solo di essi è presentato come conseguenza del mancato rispetto della Data Obiettivo.",
+      "indifferent": null,
+      "source": "art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.7 nessun rimedio dalla Data Obiettivo [issue: I-02] [tipo: assenza]\nVerifica: il deliverable non attribuisce al mancato rispetto della Data Obiettivo un diritto di recesso, di risoluzione, di indennizzo o di rinegoziazione.\nPass se: nessuno di questi rimedi è collegato alla Data Obiettivo.\nFail se: anche uno solo di essi è presentato come conseguenza del mancato rispetto della Data Obiettivo.\n— non passa al judge — Fonte: art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il 30 giugno 2027 come termine ultimo dell'operazione.",
+      "pass_condition": "il termine ultimo indicato è il 31 ottobre 2027 e il 30 giugno non è mai qualificato come tale.",
+      "fail_condition": "il 30 giugno è presentato come termine ultimo, long-stop o scadenza finale.",
+      "indifferent": null,
+      "source": "artt. 7.1, 8.1.",
+      "severity": "alta",
+      "raw_text": "B.8 Data Obiettivo non è long-stop [issue: I-02] [tipo: assenza]\nVerifica: il deliverable non presenta il 30 giugno 2027 come termine ultimo dell'operazione.\nPass se: il termine ultimo indicato è il 31 ottobre 2027 e il 30 giugno non è mai qualificato come tale.\nFail se: il 30 giugno è presentato come termine ultimo, long-stop o scadenza finale.\n— non passa al judge — Fonte: artt. 7.1, 8.1. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta l'incontro fra i rappresentanti previsto dall'art. 7.4 come un rimedio a disposizione delle Parti.",
+      "pass_condition": "l'incontro, se menzionato, è descritto come obbligo di rinegoziazione del cronoprogramma privo di conseguenze in caso di disaccordo.",
+      "fail_condition": "l'incontro è presentato come rimedio, tutela, o fonte di un diritto in caso di mancato accordo.",
+      "indifferent": null,
+      "source": "art. 7.4.",
+      "severity": "media",
+      "raw_text": "B.9 incontro sul cronoprogramma [issue: I-02] [tipo: assenza]\nVerifica: il deliverable non presenta l'incontro fra i rappresentanti previsto dall'art. 7.4 come un rimedio a disposizione delle Parti.\nPass se: l'incontro, se menzionato, è descritto come obbligo di rinegoziazione del cronoprogramma privo di conseguenze in caso di disaccordo.\nFail se: l'incontro è presentato come rimedio, tutela, o fonte di un diritto in caso di mancato accordo.\n— non passa al judge — Fonte: art. 7.4. Gravità: media."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il closing dipende dall'avveramento cumulativo di tutte le Condizioni Sospensive e non di una parte di esse.",
+      "pass_condition": "compare \"cumulativo\", \"tutte\", \"ciascuna delle condizioni\", riferito al presupposto del closing.",
+      "fail_condition": "il closing è presentato come possibile all'avverarsi di una parte delle condizioni, o la cumulatività non è affermata.",
+      "indifferent": null,
+      "source": "art. 4.1.",
+      "severity": "alta",
+      "raw_text": "B.10 cumulatività delle condizioni [issue: I-03] [tipo: presenza]\nVerifica: il deliverable afferma che il closing dipende dall'avveramento cumulativo di tutte le Condizioni Sospensive e non di una parte di esse.\nPass se: compare \"cumulativo\", \"tutte\", \"ciascuna delle condizioni\", riferito al presupposto del closing.\nFail se: il closing è presentato come possibile all'avverarsi di una parte delle condizioni, o la cumulatività non è affermata.\n— non passa al judge — Fonte: art. 4.1. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che i termini dei procedimenti antitrust e golden power sono stabiliti dalla legge e non dalla volontà delle Parti.",
+      "pass_condition": "compare l'attribuzione alla legge, riferita ad almeno uno dei due procedimenti.",
+      "fail_condition": "i termini sono presentati come contrattuali o come modificabili dalle Parti.",
+      "indifferent": null,
+      "source": "art. 16 L. 287/1990; D.L. 21/2012.",
+      "severity": "media",
+      "raw_text": "B.11 fonte dei termini regolatori [issue: I-03] [tipo: presenza]\nVerifica: il deliverable afferma che i termini dei procedimenti antitrust e golden power sono stabiliti dalla legge e non dalla volontà delle Parti.\nPass se: compare l'attribuzione alla legge, riferita ad almeno uno dei due procedimenti.\nFail se: i termini sono presentati come contrattuali o come modificabili dalle Parti.\n— non passa al judge — Fonte: art. 16 L. 287/1990; D.L. 21/2012. Gravità: media."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come inadempimento di una Parte il fatto che un termine regolatorio si collochi oltre la Data Obiettivo di Closing.",
+      "pass_condition": "nessun inadempimento è collegato alla durata dei procedimenti.",
+      "fail_condition": "il superamento della Data Obiettivo per ragioni regolatorie è presentato come inadempimento, colpa o violazione.",
+      "indifferent": null,
+      "source": "artt. 3, 7.2.",
+      "severity": "media",
+      "raw_text": "B.12 ritardo regolatorio non è inadempimento [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non qualifica come inadempimento di una Parte il fatto che un termine regolatorio si collochi oltre la Data Obiettivo di Closing.\nPass se: nessun inadempimento è collegato alla durata dei procedimenti.\nFail se: il superamento della Data Obiettivo per ragioni regolatorie è presentato come inadempimento, colpa o violazione.\n— non passa al judge — Fonte: artt. 3, 7.2. Gravità: media."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable identifica l'AGCM come autorità nazionale contemplata dallo SPA, ma non afferma come definitivamente accertata la competenza nazionale sulla base di soglie 2027 non ancora disponibili nel reference pack.",
+      "pass_condition": "compaiono sia l'AGCM sia la precisazione che l'obbligo legale di comunicazione nazionale va verificato applicando le soglie vigenti nel 2027.",
+      "fail_condition": "è indicata la Commissione europea come competente, oppure la competenza AGCM è affermata come certa usando soglie 2026 o soglie 2027 inventate.",
+      "indifferent": null,
+      "source": "artt. 4.1(a), 6.1 e Allegato E dello SPA; art. 16 L. 287/1990; nota temporale.",
+      "severity": "alta",
+      "raw_text": "B.13 autorità nazionale contemplata e riserva sulle soglie future [issue: I-04] [tipo: qualificazione] [verifica: judge]\nVerifica: il deliverable identifica l'AGCM come autorità nazionale contemplata dallo SPA, ma non afferma come definitivamente accertata la competenza nazionale sulla base di soglie 2027 non ancora disponibili nel reference pack.\nPass se: compaiono sia l'AGCM sia la precisazione che l'obbligo legale di comunicazione nazionale va verificato applicando le soglie vigenti nel 2027.\nFail se: è indicata la Commissione europea come competente, oppure la competenza AGCM è affermata come certa usando soglie 2026 o soglie 2027 inventate.\n— Fonte: artt. 4.1(a), 6.1 e Allegato E dello SPA; art. 16 L. 287/1990; nota temporale. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le soglie di dimensione comunitaria non sono superate.",
+      "pass_condition": "compare l'esclusione della competenza della Commissione, o l'affermazione che le soglie del Reg. 139/2004 non sono raggiunte.",
+      "fail_condition": "l'esclusione non è affermata, o si afferma che l'operazione ha dimensione comunitaria.",
+      "indifferent": null,
+      "source": "Reg. (CE) 139/2004; Allegato E.",
+      "severity": "alta",
+      "raw_text": "B.14 esclusione della dimensione comunitaria [issue: I-04] [tipo: presenza]\nVerifica: il deliverable afferma che le soglie di dimensione comunitaria non sono superate.\nPass se: compare l'esclusione della competenza della Commissione, o l'affermazione che le soglie del Reg. 139/2004 non sono raggiunte.\nFail se: l'esclusione non è affermata, o si afferma che l'operazione ha dimensione comunitaria.\n— non passa al judge — Fonte: Reg. (CE) 139/2004; Allegato E. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable usa i dati di fatturato dell'Allegato E come base quantitativa del test nazionale e indica come dato mancante le soglie AGCM applicabili nel 2027.",
+      "pass_condition": "l'Allegato E o i relativi fatturati sono citati insieme alla necessità di confrontarli con le soglie 2027 vigenti al momento rilevante.",
+      "fail_condition": "la competenza è affermata senza ancoraggio ai fatturati, oppure vengono trattate come vigenti nel 2027 soglie di un anno diverso.",
+      "indifferent": null,
+      "source": "Allegato E; art. 16 L. 287/1990; nota temporale.",
+      "severity": "media",
+      "raw_text": "B.15 fondamento del test nazionale [issue: I-04] [tipo: attribuzione] [verifica: span]\nVerifica: il deliverable usa i dati di fatturato dell'Allegato E come base quantitativa del test nazionale e indica come dato mancante le soglie AGCM applicabili nel 2027.\nPass se: l'Allegato E o i relativi fatturati sono citati insieme alla necessità di confrontarli con le soglie 2027 vigenti al momento rilevante.\nFail se: la competenza è affermata senza ancoraggio ai fatturati, oppure vengono trattate come vigenti nel 2027 soglie di un anno diverso.\n— Fonte: Allegato E; art. 16 L. 287/1990; nota temporale. Gravità: media."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "nello scenario in cui la comunicazione nazionale sia dovuta, il deliverable indica in 30 giorni dalla comunicazione ritualmente effettuata il termine entro cui l'AGCM può deliberare l'avvio dell'istruttoria.",
+      "pass_condition": "compaiono il termine di 30 giorni, il riferimento all'avvio dell'istruttoria e la natura condizionale dello scenario nazionale.",
+      "fail_condition": "è indicato un termine diverso, il termine non compare o è presentato come applicabile con certezza senza la verifica delle soglie 2027.",
+      "indifferent": null,
+      "source": "art. 16 L. 287/1990.",
+      "severity": "alta",
+      "raw_text": "B.16 termine di fase 1 [issue: I-04] [tipo: presenza] [verifica: span]\nVerifica: nello scenario in cui la comunicazione nazionale sia dovuta, il deliverable indica in 30 giorni dalla comunicazione ritualmente effettuata il termine entro cui l'AGCM può deliberare l'avvio dell'istruttoria.\nPass se: compaiono il termine di 30 giorni, il riferimento all'avvio dell'istruttoria e la natura condizionale dello scenario nazionale.\nFail se: è indicato un termine diverso, il termine non compare o è presentato come applicabile con certezza senza la verifica delle soglie 2027.\n— non passa al judge — Fonte: art. 16 L. 287/1990. Gravità: alta."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "nello scenario in cui l'AGCM avvii l'istruttoria, il deliverable indica il termine vigente di 90 giorni dall'avvio e l'eventuale proroga fino a 30 giorni nel caso previsto dalla legge.",
+      "pass_condition": "compaiono sia i 90 giorni sia la possibile proroga fino a 30 giorni, riferiti allo scenario di istruttoria.",
+      "fail_condition": "compare il previgente termine di 45 giorni, manca uno dei due periodi o sono indicate durate diverse.",
+      "indifferent": null,
+      "source": "art. 16, co. 8, L. 287/1990.",
+      "severity": "alta",
+      "raw_text": "B.17 termine di istruttoria [issue: I-04] [tipo: presenza] [verifica: span]\nVerifica: nello scenario in cui l'AGCM avvii l'istruttoria, il deliverable indica il termine vigente di 90 giorni dall'avvio e l'eventuale proroga fino a 30 giorni nel caso previsto dalla legge.\nPass se: compaiono sia i 90 giorni sia la possibile proroga fino a 30 giorni, riferiti allo scenario di istruttoria.\nFail se: compare il previgente termine di 45 giorni, manca uno dei due periodi o sono indicate durate diverse.\n— Fonte: art. 16, co. 8, L. 287/1990. Gravità: alta."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable afferma che il termine AGCM decorre dalla comunicazione completa.",
+      "pass_condition": "compare \"completa\", \"regolare\", \"integra\", riferito alla comunicazione da cui decorre il termine.",
+      "fail_condition": "il termine è fatto decorrere dal primo deposito senza qualificazione di completezza.",
+      "indifferent": null,
+      "source": "art. 16 L. 287/1990.",
+      "severity": "media",
+      "raw_text": "B.18 decorrenza del termine antitrust [issue: I-04] [tipo: presenza] [verifica: span]\nVerifica: il deliverable afferma che il termine AGCM decorre dalla comunicazione completa.\nPass se: compare \"completa\", \"regolare\", \"integra\", riferito alla comunicazione da cui decorre il termine.\nFail se: il termine è fatto decorrere dal primo deposito senza qualificazione di completezza.\n— non passa al judge — Fonte: art. 16 L. 287/1990. Gravità: media."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'operazione è soggetta all'obbligo di notifica in materia di poteri speciali.",
+      "pass_condition": "compare l'obbligo di notifica, riferito al golden power o al D.L. 21/2012.",
+      "fail_condition": "l'obbligo non è affermato, o è presentato come facoltativo o eventuale.",
+      "indifferent": null,
+      "source": "D.L. 21/2012; art. 4.1 lett. b.",
+      "severity": "alta",
+      "raw_text": "B.19 obbligo di notifica golden power [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che l'operazione è soggetta all'obbligo di notifica in materia di poteri speciali.\nPass se: compare l'obbligo di notifica, riferito al golden power o al D.L. 21/2012.\nFail se: l'obbligo non è affermato, o è presentato come facoltativo o eventuale.\n— non passa al judge — Fonte: D.L. 21/2012; art. 4.1 lett. b. Gravità: alta."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce l'obbligo di notifica all'attività della Società nei programmi aeronautici e di difesa.",
+      "pass_condition": "è citata l'attività della Società descritta nella premessa (B) o nell'Allegato E, o la quota del 21,4% del fatturato.",
+      "fail_condition": "l'obbligo è affermato senza ancoraggio all'attività della Società.",
+      "indifferent": null,
+      "source": "premessa (B); Allegato E.",
+      "severity": "media",
+      "raw_text": "B.20 presupposto dell'obbligo [issue: I-05] [tipo: attribuzione]\nVerifica: il deliverable riconduce l'obbligo di notifica all'attività della Società nei programmi aeronautici e di difesa.\nPass se: è citata l'attività della Società descritta nella premessa (B) o nell'Allegato E, o la quota del 21,4% del fatturato.\nFail se: l'obbligo è affermato senza ancoraggio all'attività della Società.\n— non passa al judge — Fonte: premessa (B); Allegato E. Gravità: media."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica in 45 giorni dalla notifica completa il termine per l'esercizio dei poteri speciali.",
+      "pass_condition": "compaiono i 45 giorni e la decorrenza dalla notifica completa.",
+      "fail_condition": "è indicata una durata diversa, o la decorrenza non è qualificata come notifica completa.",
+      "indifferent": null,
+      "source": "D.L. 21/2012.",
+      "severity": "alta",
+      "raw_text": "B.21 termine per l'esercizio dei poteri [issue: I-05] [tipo: presenza]\nVerifica: il deliverable indica in 45 giorni dalla notifica completa il termine per l'esercizio dei poteri speciali.\nPass se: compaiono i 45 giorni e la decorrenza dalla notifica completa.\nFail se: è indicata una durata diversa, o la decorrenza non è qualificata come notifica completa.\n— non passa al judge — Fonte: D.L. 21/2012. Gravità: alta."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le richieste istruttorie sospendono il decorso del termine.",
+      "pass_condition": "compare la sospensione collegata alle richieste istruttorie o alle richieste di informazioni.",
+      "fail_condition": "il termine è presentato come non sospendibile, o la sospensione non è menzionata.",
+      "indifferent": null,
+      "source": "D.L. 21/2012.",
+      "severity": "media",
+      "raw_text": "B.22 sospensione del termine [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che le richieste istruttorie sospendono il decorso del termine.\nPass se: compare la sospensione collegata alle richieste istruttorie o alle richieste di informazioni.\nFail se: il termine è presentato come non sospendibile, o la sospensione non è menzionata.\n— non passa al judge — Fonte: D.L. 21/2012. Gravità: media."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che alla scadenza del termine senza esercizio dei poteri l'operazione si intende assentita.",
+      "pass_condition": "compare \"silenzio-assenso\", \"silenzio assenso\", \"assenso tacito\", o l'equivalente descrizione dell'effetto.",
+      "fail_condition": "l'effetto del decorso del termine non è indicato, o è indicato come diniego.",
+      "indifferent": null,
+      "source": "D.L. 21/2012; art. 4.1 lett. b.",
+      "severity": "alta",
+      "raw_text": "B.23 silenzio-assenso [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che alla scadenza del termine senza esercizio dei poteri l'operazione si intende assentita.\nPass se: compare \"silenzio-assenso\", \"silenzio assenso\", \"assenso tacito\", o l'equivalente descrizione dell'effetto.\nFail se: l'effetto del decorso del termine non è indicato, o è indicato come diniego.\n— non passa al judge — Fonte: D.L. 21/2012; art. 4.1 lett. b. Gravità: alta."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che gli atti compiuti in violazione dell'obbligo di notifica o prima del decorso del termine sono nulli.",
+      "pass_condition": "compare la nullità, riferita al perfezionamento anticipato o alla mancata notifica.",
+      "fail_condition": "la sanzione è indicata come annullabilità, inefficacia, sanzione pecuniaria, o non è indicata.",
+      "indifferent": null,
+      "source": "D.L. 21/2012.",
+      "severity": "alta",
+      "raw_text": "B.24 nullità degli atti anticipati [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che gli atti compiuti in violazione dell'obbligo di notifica o prima del decorso del termine sono nulli.\nPass se: compare la nullità, riferita al perfezionamento anticipato o alla mancata notifica.\nFail se: la sanzione è indicata come annullabilità, inefficacia, sanzione pecuniaria, o non è indicata.\n— non passa al judge — Fonte: D.L. 21/2012. Gravità: alta."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il Closing non può precedere la conclusione del procedimento golden power.",
+      "pass_condition": "compare il divieto, o l'affermazione che il closing è subordinato al clearance.",
+      "fail_condition": "il closing è presentato come possibile prima della conclusione del procedimento.",
+      "indifferent": null,
+      "source": "D.L. 21/2012; art. 4.1 lett. b.",
+      "severity": "alta",
+      "raw_text": "B.25 divieto di closing anticipato [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che il Closing non può precedere la conclusione del procedimento golden power.\nPass se: compare il divieto, o l'affermazione che il closing è subordinato al clearance.\nFail se: il closing è presentato come possibile prima della conclusione del procedimento.\n— non passa al judge — Fonte: D.L. 21/2012; art. 4.1 lett. b. Gravità: alta."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la condizione golden power come non rinunciabile.",
+      "pass_condition": "compare \"non rinunciabile\", \"irrinunciabile\", \"la rinuncia non è ammessa\", riferito alla condizione dell'art. 4.1 lett. b.",
+      "fail_condition": "la condizione è qualificata come rinunciabile, o la qualificazione manca.",
+      "indifferent": null,
+      "source": "artt. 4.1 lett. b, 5.1; D.L. 21/2012.",
+      "severity": "alta",
+      "raw_text": "B.26 golden power non rinunciabile [issue: I-06] [tipo: qualificazione]\nVerifica: il deliverable qualifica la condizione golden power come non rinunciabile.\nPass se: compare \"non rinunciabile\", \"irrinunciabile\", \"la rinuncia non è ammessa\", riferito alla condizione dell'art. 4.1 lett. b.\nFail se: la condizione è qualificata come rinunciabile, o la qualificazione manca.\n— non passa al judge — Fonte: artt. 4.1 lett. b, 5.1; D.L. 21/2012. Gravità: alta."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la clausola di rinuncia dell'art. 5.1 non può derogare alla nullità di legge.",
+      "pass_condition": "l'irrinunciabilità è motivata con la nullità, o con l'inderogabilità della disciplina.",
+      "fail_condition": "l'irrinunciabilità è affermata senza motivazione, o motivata con ragioni contrattuali.",
+      "indifferent": null,
+      "source": "art. 5.1; D.L. 21/2012.",
+      "severity": "media",
+      "raw_text": "B.27 ragione dell'irrinunciabilità [issue: I-06] [tipo: presenza]\nVerifica: il deliverable afferma che la clausola di rinuncia dell'art. 5.1 non può derogare alla nullità di legge.\nPass se: l'irrinunciabilità è motivata con la nullità, o con l'inderogabilità della disciplina.\nFail se: l'irrinunciabilità è affermata senza motivazione, o motivata con ragioni contrattuali.\n— non passa al judge — Fonte: art. 5.1; D.L. 21/2012. Gravità: media."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la condizione antitrust come rinunciabile sul piano contrattuale ma rischiosa.",
+      "pass_condition": "compaiono entrambi gli elementi: la liceità della rinuncia e la sua rischiosità.",
+      "fail_condition": "la condizione è qualificata come non rinunciabile, oppure come rinunciabile senza alcuna avvertenza di rischio.",
+      "indifferent": null,
+      "source": "artt. 4.1 lett. a, 5.1; L. 287/1990.",
+      "severity": "alta",
+      "raw_text": "B.28 antitrust rinunciabile ma rischiosa [issue: I-06] [tipo: qualificazione]\nVerifica: il deliverable qualifica la condizione antitrust come rinunciabile sul piano contrattuale ma rischiosa.\nPass se: compaiono entrambi gli elementi: la liceità della rinuncia e la sua rischiosità.\nFail se: la condizione è qualificata come non rinunciabile, oppure come rinunciabile senza alcuna avvertenza di rischio.\n— non passa al judge — Fonte: artt. 4.1 lett. a, 5.1; L. 287/1990. Gravità: alta."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, nonostante la rinuncia, l'AGCM conserva il potere di sospendere l'operazione e di imporre misure ripristinatorie.",
+      "pass_condition": "compare almeno uno fra il potere di sospensione e le misure ripristinatorie.",
+      "fail_condition": "la rinuncia è presentata come idonea a sottrarre l'operazione ai poteri dell'Autorità.",
+      "indifferent": null,
+      "source": "L. 287/1990.",
+      "severity": "media",
+      "raw_text": "B.29 poteri residui dell'AGCM [issue: I-06] [tipo: presenza]\nVerifica: il deliverable afferma che, nonostante la rinuncia, l'AGCM conserva il potere di sospendere l'operazione e di imporre misure ripristinatorie.\nPass se: compare almeno uno fra il potere di sospensione e le misure ripristinatorie.\nFail se: la rinuncia è presentata come idonea a sottrarre l'operazione ai poteri dell'Autorità.\n— non passa al judge — Fonte: L. 287/1990. Gravità: media."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le condizioni (c), (d) ed (e) sono rinunciabili dal solo Compratore.",
+      "pass_condition": "la rinuncia a quelle tre condizioni è attribuita al Compratore in via esclusiva.",
+      "fail_condition": "la rinuncia è attribuita a entrambe le Parti, o al Venditore, o la titolarità non è indicata.",
+      "indifferent": null,
+      "source": "artt. 4.2, 5.1.",
+      "severity": "media",
+      "raw_text": "B.30 titolarità della rinuncia [issue: I-06] [tipo: presenza]\nVerifica: il deliverable afferma che le condizioni (c), (d) ed (e) sono rinunciabili dal solo Compratore.\nPass se: la rinuncia a quelle tre condizioni è attribuita al Compratore in via esclusiva.\nFail se: la rinuncia è attribuita a entrambe le Parti, o al Venditore, o la titolarità non è indicata.\n— non passa al judge — Fonte: artt. 4.2, 5.1. Gravità: media."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega il contratto di fornitura con Aeromec Systems (Allegato B, punto 1) alla condizione sospensiva di cui all'art. 4.1, lettera (c).",
+      "pass_condition": "il collegamento fra quel contratto e quella condizione è esplicito.",
+      "fail_condition": "il collegamento manca, o il contratto è associato a una condizione diversa.",
+      "indifferent": null,
+      "source": "Allegato B punto 1; art. 4.1 lett. c.",
+      "severity": "alta",
+      "raw_text": "B.31 consenso Aeromec [issue: I-07] [tipo: presenza]\nVerifica: il deliverable collega il contratto di fornitura con Aeromec Systems (Allegato B, punto 1) alla condizione sospensiva di cui all'art. 4.1, lettera (c).\nPass se: il collegamento fra quel contratto e quella condizione è esplicito.\nFail se: il collegamento manca, o il contratto è associato a una condizione diversa.\n— non passa al judge — Fonte: Allegato B punto 1; art. 4.1 lett. c. Gravità: alta."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che, in assenza di consenso, Aeromec può risolvere il contratto con preavviso di 60 Giorni.",
+      "pass_condition": "compaiono la facoltà di risoluzione e il preavviso di 60 Giorni.",
+      "fail_condition": "l'effetto non è indicato, o è indicato un rimedio o un preavviso diverso.",
+      "indifferent": null,
+      "source": "Allegato B punto 1, art. 19.2.",
+      "severity": "media",
+      "raw_text": "B.32 effetto del diniego di Aeromec [issue: I-07] [tipo: presenza]\nVerifica: il deliverable indica che, in assenza di consenso, Aeromec può risolvere il contratto con preavviso di 60 Giorni.\nPass se: compaiono la facoltà di risoluzione e il preavviso di 60 Giorni.\nFail se: l'effetto non è indicato, o è indicato un rimedio o un preavviso diverso.\n— non passa al judge — Fonte: Allegato B punto 1, art. 19.2. Gravità: media."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega il finanziamento con Banca Sant'Orsola (Allegato B, punto 2) alla condizione sospensiva di cui all'art. 4.1, lettera (d).",
+      "pass_condition": "il collegamento fra quel contratto e quella condizione è esplicito.",
+      "fail_condition": "il collegamento manca, o il contratto è associato a una condizione diversa.",
+      "indifferent": null,
+      "source": "Allegato B punto 2; art. 4.1 lett. d.",
+      "severity": "alta",
+      "raw_text": "B.33 rinuncia della banca [issue: I-07] [tipo: presenza]\nVerifica: il deliverable collega il finanziamento con Banca Sant'Orsola (Allegato B, punto 2) alla condizione sospensiva di cui all'art. 4.1, lettera (d).\nPass se: il collegamento fra quel contratto e quella condizione è esplicito.\nFail se: il collegamento manca, o il contratto è associato a una condizione diversa.\n— non passa al judge — Fonte: Allegato B punto 2; art. 4.1 lett. d. Gravità: alta."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che, in assenza di rinuncia, sorge l'obbligo di rimborso anticipato integrale entro 30 Giorni dal perfezionamento.",
+      "pass_condition": "compaiono il rimborso anticipato integrale e il termine di 30 Giorni.",
+      "fail_condition": "l'effetto non è indicato, o sono indicati un effetto o un termine diversi.",
+      "indifferent": null,
+      "source": "Allegato B punto 2, art. 11.3.",
+      "severity": "media",
+      "raw_text": "B.34 effetto del diniego della banca [issue: I-07] [tipo: presenza]\nVerifica: il deliverable indica che, in assenza di rinuncia, sorge l'obbligo di rimborso anticipato integrale entro 30 Giorni dal perfezionamento.\nPass se: compaiono il rimborso anticipato integrale e il termine di 30 Giorni.\nFail se: l'effetto non è indicato, o sono indicati un effetto o un termine diversi.\n— non passa al judge — Fonte: Allegato B punto 2, art. 11.3. Gravità: media."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica l'obbligo verso Immobiliare Cascine come mera comunicazione che non condiziona il Closing.",
+      "pass_condition": "compare la qualificazione come comunicazione, insieme all'affermazione che non è richiesto alcun consenso o che non condiziona il closing.",
+      "fail_condition": "l'obbligo è presentato come consenso necessario, come condizione sospensiva, o come fonte di un diritto di recesso o di revisione del canone in capo al locatore.",
+      "indifferent": null,
+      "source": "Allegato B punto 3, art. 8.4.",
+      "severity": "alta",
+      "raw_text": "B.35 locazione: mera comunicazione [issue: I-07] [tipo: qualificazione]\nVerifica: il deliverable qualifica l'obbligo verso Immobiliare Cascine come mera comunicazione che non condiziona il Closing.\nPass se: compare la qualificazione come comunicazione, insieme all'affermazione che non è richiesto alcun consenso o che non condiziona il closing.\nFail se: l'obbligo è presentato come consenso necessario, come condizione sospensiva, o come fonte di un diritto di recesso o di revisione del canone in capo al locatore.\n— non passa al judge — Fonte: Allegato B punto 3, art. 8.4. Gravità: alta."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la facoltà di recesso del licenziante non risulta attivata, perché il gruppo del Compratore non svolge l'attività di mercato del licenziante.",
+      "pass_condition": "compare la conclusione che il recesso non è attivato, o che il presupposto della concorrenza non risulta integrato.",
+      "fail_condition": "si afferma che il recesso è attivato o probabile, o la posizione del punto 4 non è presa.",
+      "indifferent": null,
+      "source": "Allegato B punto 4, art. 7.1.",
+      "severity": "alta",
+      "raw_text": "B.36 Sinterlega: recesso non attivato [issue: I-07] [tipo: qualificazione]\nVerifica: il deliverable afferma che la facoltà di recesso del licenziante non risulta attivata, perché il gruppo del Compratore non svolge l'attività di mercato del licenziante.\nPass se: compare la conclusione che il recesso non è attivato, o che il presupposto della concorrenza non risulta integrato.\nFail se: si afferma che il recesso è attivato o probabile, o la posizione del punto 4 non è presa.\n— non passa al judge — Fonte: Allegato B punto 4, art. 7.1. Gravità: alta."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta l'accordo con Sinterlega fra le Condizioni Sospensive né fra i Consensi Richiesti.",
+      "pass_condition": "l'accordo di licenza, Sinterlega e il punto 4 dell'Allegato B non compaiono in alcun elenco di condizioni o di consensi da ottenere.",
+      "fail_condition": "il punto 4 compare come condizione, come consenso richiesto, o come presupposto del closing.",
+      "indifferent": null,
+      "source": "artt. 1.2, 4.1.",
+      "severity": "alta",
+      "raw_text": "B.37 Sinterlega non è condizione [issue: I-07] [tipo: assenza]\nVerifica: il deliverable non presenta l'accordo con Sinterlega fra le Condizioni Sospensive né fra i Consensi Richiesti.\nPass se: l'accordo di licenza, Sinterlega e il punto 4 dell'Allegato B non compaiono in alcun elenco di condizioni o di consensi da ottenere.\nFail se: il punto 4 compare come condizione, come consenso richiesto, o come presupposto del closing.\n— non passa al judge — Fonte: artt. 1.2, 4.1. Gravità: alta."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non desume la concorrenza fra Compratore e licenziante dalla circostanza che Ardesia Trattamenti svolga attività di trattamento termico.",
+      "pass_condition": "la coincidenza fra oggetto della licenza e attività della controllata non è usata come prova della concorrenza.",
+      "fail_condition": "la concorrenza è affermata sulla base di quella coincidenza.",
+      "indifferent": null,
+      "source": "Allegato B punto 4.",
+      "severity": "alta",
+      "raw_text": "B.38 concorrenza non dedotta dal trattamento termico [issue: I-07] [tipo: assenza]\nVerifica: il deliverable non desume la concorrenza fra Compratore e licenziante dalla circostanza che Ardesia Trattamenti svolga attività di trattamento termico.\nPass se: la coincidenza fra oggetto della licenza e attività della controllata non è usata come prova della concorrenza.\nFail se: la concorrenza è affermata sulla base di quella coincidenza.\n— non passa al judge — Fonte: Allegato B punto 4. Gravità: alta."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara che il fascicolo non consente di sapere se Sinterlega offra sul mercato servizi di trattamento termico.",
+      "pass_condition": "l'informazione è indicata come mancante o da verificare.",
+      "fail_condition": "la circostanza è data per acquisita in un senso o nell'altro, o non è menzionata.",
+      "indifferent": null,
+      "source": "Allegato B punto 4.",
+      "severity": "media",
+      "raw_text": "B.39 informazione mancante su Sinterlega [issue: I-07] [tipo: presenza]\nVerifica: il deliverable dichiara che il fascicolo non consente di sapere se Sinterlega offra sul mercato servizi di trattamento termico.\nPass se: l'informazione è indicata come mancante o da verificare.\nFail se: la circostanza è data per acquisita in un senso o nell'altro, o non è menzionata.\n— non passa al judge — Fonte: Allegato B punto 4. Gravità: media."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il giorno iniziale non si computa e il giorno finale sì.",
+      "pass_condition": "compare la regola, anche senza citazione degli artt. 1187 e 2963 c.c.",
+      "fail_condition": "la regola non compare, o è enunciata in senso inverso.",
+      "indifferent": "la citazione degli artt. 1187 e 2963 c.c., ammessa e non richiesta.",
+      "source": "artt. 1187, 2963 c.c.",
+      "severity": "alta",
+      "raw_text": "B.40 regola generale di computo [issue: I-08] [tipo: presenza]\nVerifica: il deliverable afferma che il giorno iniziale non si computa e il giorno finale sì.\nPass se: compare la regola, anche senza citazione degli artt. 1187 e 2963 c.c.\nFail se: la regola non compare, o è enunciata in senso inverso.\nIndifferente: la citazione degli artt. 1187 e 2963 c.c., ammessa e non richiesta.\n— non passa al judge — Fonte: artt. 1187, 2963 c.c. Gravità: alta."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica la Long-Stop Date come data di calendario fissata dalle Parti e non come termine da computare.",
+      "pass_condition": "la qualifica come data pattuita, convenzionale o fissata dalle Parti e, in ogni punto del deliverable, la mantiene al 31 ottobre 2027 senza applicarle esclusione del dies a quo, proroghe festive o altre regole di computo.",
+      "fail_condition": "la sola formula «data pattuita» compare ma altrove la Long-Stop Date è calcolata, prorogata o usata come termine soggetto alle regole di computo; fallisce anche quando il risultato finale resta casualmente il 31 ottobre.",
+      "indifferent": null,
+      "source": "art. 8.1.",
+      "severity": "alta",
+      "raw_text": "B.41 Long-Stop Date è data pattuita e resta trattata come tale [issue: I-08] [tipo: qualificazione] [verifica: judge]\nVerifica: il deliverable qualifica la Long-Stop Date come data di calendario fissata dalle Parti e non come termine da computare.\nPass se: la qualifica come data pattuita, convenzionale o fissata dalle Parti e, in ogni punto del deliverable, la mantiene al 31 ottobre 2027 senza applicarle esclusione del dies a quo, proroghe festive o altre regole di computo.\nFail se: la sola formula «data pattuita» compare ma altrove la Long-Stop Date è calcolata, prorogata o usata come termine soggetto alle regole di computo; fallisce anche quando il risultato finale resta casualmente il 31 ottobre.\n— non passa al judge — Fonte: art. 8.1. Gravità: alta."
+    },
+    {
+      "id": "B.42",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica la Long-Stop Date come prorogata o slittata per essere il 31 ottobre 2027 una domenica.",
+      "pass_condition": "la Long-Stop Date resta il 31 ottobre 2027 in ogni punto del deliverable.",
+      "fail_condition": "compare il 2 novembre 2027, o qualsiasi altra data, come Long-Stop Date prorogata.",
+      "indifferent": null,
+      "source": "art. 8.1.",
+      "severity": "alta",
+      "raw_text": "B.42 nessuno slittamento della Long-Stop Date [issue: I-08] [tipo: assenza] [verifica: scansione]\nVerifica: il deliverable non indica la Long-Stop Date come prorogata o slittata per essere il 31 ottobre 2027 una domenica.\nPass se: la Long-Stop Date resta il 31 ottobre 2027 in ogni punto del deliverable.\nFail se: compare il 2 novembre 2027, o qualsiasi altra data, come Long-Stop Date prorogata.\n— non passa al judge — Fonte: art. 8.1. Gravità: alta."
+    },
+    {
+      "id": "B.43",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che i 10 Giorni Lavorativi del termine di recesso iniziano a decorrere dal 2 novembre 2027, perché il 1 novembre è festivo.",
+      "pass_condition": "compaiono la decorrenza dal 2 novembre e il carattere festivo del 1 novembre.",
+      "fail_condition": "la decorrenza è fissata al 31 ottobre o al 1 novembre, o il percorso non è mostrato.",
+      "indifferent": null,
+      "source": "art. 8.2; art. 1.2.",
+      "severity": "alta",
+      "raw_text": "B.43 decorrenza del termine di recesso [issue: I-08] [tipo: presenza]\nVerifica: il deliverable afferma che i 10 Giorni Lavorativi del termine di recesso iniziano a decorrere dal 2 novembre 2027, perché il 1 novembre è festivo.\nPass se: compaiono la decorrenza dal 2 novembre e il carattere festivo del 1 novembre.\nFail se: la decorrenza è fissata al 31 ottobre o al 1 novembre, o il percorso non è mostrato.\n— non passa al judge — Fonte: art. 8.2; art. 1.2. Gravità: alta."
+    },
+    {
+      "id": "B.44",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il termine di 30 giorni dell'AGCM come termine da computare e ne indica la proroga al 5 aprile 2027, cadendo il 4 aprile di domenica.",
+      "pass_condition": "compaiono la proroga e la data del 5 aprile 2027.",
+      "fail_condition": "il termine è indicato come scadente il 4 aprile senza proroga, o la proroga è negata.",
+      "indifferent": null,
+      "source": "art. 2963 c.c.; art. 16 L. 287/1990.",
+      "severity": "media",
+      "raw_text": "B.44 proroga del termine antitrust [issue: I-08] [tipo: qualificazione]\nVerifica: il deliverable qualifica il termine di 30 giorni dell'AGCM come termine da computare e ne indica la proroga al 5 aprile 2027, cadendo il 4 aprile di domenica.\nPass se: compaiono la proroga e la data del 5 aprile 2027.\nFail se: il termine è indicato come scadente il 4 aprile senza proroga, o la proroga è negata.\n— non passa al judge — Fonte: art. 2963 c.c.; art. 16 L. 287/1990. Gravità: media."
+    },
+    {
+      "id": "B.45",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che le Parti devono comportarsi secondo buona fede in pendenza della condizione.",
+      "pass_condition": "compare l'obbligo di buona fede riferito alla fase fra signing e closing.",
+      "fail_condition": "l'obbligo non compare.",
+      "indifferent": "la citazione dell'art. 1358 c.c.",
+      "source": "art. 1358 c.c.",
+      "severity": "media",
+      "raw_text": "B.45 buona fede pendente conditione [issue: I-09] [tipo: presenza]\nVerifica: il deliverable afferma che le Parti devono comportarsi secondo buona fede in pendenza della condizione.\nPass se: compare l'obbligo di buona fede riferito alla fase fra signing e closing.\nFail se: l'obbligo non compare.\nIndifferente: la citazione dell'art. 1358 c.c.\n— non passa al judge — Fonte: art. 1358 c.c. Gravità: media."
+    },
+    {
+      "id": "B.46",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la condizione si considera avverata se è mancata per causa imputabile alla Parte che aveva interesse contrario.",
+      "pass_condition": "compare la finzione di avveramento con il presupposto dell'imputabilità.",
+      "fail_condition": "non compare, o è enunciata senza il presupposto dell'interesse contrario.",
+      "indifferent": "la citazione dell'art. 1359 c.c. e il collegamento con l'art. 8.4.",
+      "source": "art. 1359 c.c.",
+      "severity": "media",
+      "raw_text": "B.46 finzione di avveramento [issue: I-09] [tipo: presenza]\nVerifica: il deliverable afferma che la condizione si considera avverata se è mancata per causa imputabile alla Parte che aveva interesse contrario.\nPass se: compare la finzione di avveramento con il presupposto dell'imputabilità.\nFail se: non compare, o è enunciata senza il presupposto dell'interesse contrario.\nIndifferente: la citazione dell'art. 1359 c.c. e il collegamento con l'art. 8.4.\n— non passa al judge — Fonte: art. 1359 c.c. Gravità: media."
+    },
+    {
+      "id": "B.47",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'avveramento retroagisce al momento della conclusione del contratto, salvo diversa volontà delle Parti.",
+      "pass_condition": "compaiono la retroattività e la riserva della diversa volontà.",
+      "fail_condition": "la retroattività non compare, o è presentata come inderogabile.",
+      "indifferent": "la citazione dell'art. 1360 c.c.",
+      "source": "art. 1360 c.c.",
+      "severity": "bassa",
+      "raw_text": "B.47 retroattività dell'avveramento [issue: I-09] [tipo: presenza]\nVerifica: il deliverable afferma che l'avveramento retroagisce al momento della conclusione del contratto, salvo diversa volontà delle Parti.\nPass se: compaiono la retroattività e la riserva della diversa volontà.\nFail se: la retroattività non compare, o è presentata come inderogabile.\nIndifferente: la citazione dell'art. 1360 c.c.\n— non passa al judge — Fonte: art. 1360 c.c. Gravità: bassa."
+    },
+    {
+      "id": "B.48",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica i termini dell'art. 6 come obblighi delle Parti e non come condizioni sospensive.",
+      "pass_condition": "compare la qualificazione come obbligo, impegno o covenant.",
+      "fail_condition": "uno o più termini dell'art. 6 sono qualificati come condizioni sospensive.",
+      "indifferent": null,
+      "source": "art. 6.",
+      "severity": "alta",
+      "raw_text": "B.48 natura degli obblighi dell'art. 6 [issue: I-10] [tipo: qualificazione]\nVerifica: il deliverable qualifica i termini dell'art. 6 come obblighi delle Parti e non come condizioni sospensive.\nPass se: compare la qualificazione come obbligo, impegno o covenant.\nFail se: uno o più termini dell'art. 6 sono qualificati come condizioni sospensive.\n— non passa al judge — Fonte: art. 6. Gravità: alta."
+    },
+    {
+      "id": "B.49",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'inadempimento di un obbligo dell'art. 6 genera responsabilità risarcitoria e preclude il recesso, ma non fa venire meno l'operazione.",
+      "pass_condition": "compare almeno la distinzione fra conseguenza risarcitoria e sopravvivenza dell'operazione.",
+      "fail_condition": "l'inadempimento è presentato come causa di caducazione, risoluzione automatica o mancato avveramento della condizione.",
+      "indifferent": null,
+      "source": "artt. 8.4, 8.5.",
+      "severity": "alta",
+      "raw_text": "B.49 conseguenza dell'inadempimento [issue: I-10] [tipo: presenza]\nVerifica: il deliverable afferma che l'inadempimento di un obbligo dell'art. 6 genera responsabilità risarcitoria e preclude il recesso, ma non fa venire meno l'operazione.\nPass se: compare almeno la distinzione fra conseguenza risarcitoria e sopravvivenza dell'operazione.\nFail se: l'inadempimento è presentato come causa di caducazione, risoluzione automatica o mancato avveramento della condizione.\n— non passa al judge — Fonte: artt. 8.4, 8.5. Gravità: alta."
+    },
+    {
+      "id": "B.50",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta una Condizione Sospensiva dell'art. 4.1 come mero obbligo di attivarsi.",
+      "pass_condition": "nessuna delle voci che il deliverable presenta come Condizione Sospensiva è descritta come adempimento o attività a carico di una Parte.",
+      "fail_condition": "una condizione è descritta come adempimento a carico di una Parte, o è confusa con il termine dell'art. 6 che la precede.",
+      "indifferent": null,
+      "source": "artt. 4.1, 6.",
+      "severity": "alta",
+      "raw_text": "B.50 condizioni non degradate a obblighi [issue: I-10] [tipo: assenza]\nVerifica: il deliverable non presenta una Condizione Sospensiva dell'art. 4.1 come mero obbligo di attivarsi.\nPass se: nessuna delle voci che il deliverable presenta come Condizione Sospensiva è descritta come adempimento o attività a carico di una Parte.\nFail se: una condizione è descritta come adempimento a carico di una Parte, o è confusa con il termine dell'art. 6 che la precede.\n— non passa al judge — Fonte: artt. 4.1, 6. Gravità: alta."
+    },
+    {
+      "id": "B.51",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica alcuna Condizione Sospensiva come avverata o come validamente rinunciata alla data di redazione.",
+      "pass_condition": "ogni condizione riportata risulta pendente.",
+      "fail_condition": "anche una sola condizione è indicata come avverata, soddisfatta o rinunciata.",
+      "indifferent": null,
+      "source": "art. 4.1.",
+      "severity": "alta",
+      "raw_text": "B.51 nessuna condizione avverata [issue: I-11] [tipo: assenza]\nVerifica: il deliverable non indica alcuna Condizione Sospensiva come avverata o come validamente rinunciata alla data di redazione.\nPass se: ogni condizione riportata risulta pendente.\nFail se: anche una sola condizione è indicata come avverata, soddisfatta o rinunciata.\n— non passa al judge — Fonte: art. 4.1. Gravità: alta."
+    },
+    {
+      "id": "B.52",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable attribuisce la comunicazione all'AGCM al Compratore, la notifica golden power a entrambe le Parti congiuntamente e le richieste ai terzi contraenti al Venditore.",
+      "pass_condition": "le tre attribuzioni compaiono e coincidono.",
+      "fail_condition": "anche una sola è attribuita al soggetto sbagliato o non è attribuita.",
+      "indifferent": null,
+      "source": "art. 6.",
+      "severity": "media",
+      "raw_text": "B.52 soggetto onerato dell'attività prodromica [issue: I-11] [tipo: presenza]\nVerifica: il deliverable attribuisce la comunicazione all'AGCM al Compratore, la notifica golden power a entrambe le Parti congiuntamente e le richieste ai terzi contraenti al Venditore.\nPass se: le tre attribuzioni compaiono e coincidono.\nFail se: anche una sola è attribuita al soggetto sbagliato o non è attribuita.\n— non passa al judge — Fonte: art. 6. Gravità: media."
+    },
+    {
+      "id": "B.53",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "nello scenario in cui l'AGCM non avvii l'istruttoria, il deliverable individua nella condizione golden power il più lungo fra i termini regolatori determinabili, con maturazione all'8 aprile 2027.",
+      "pass_condition": "compaiono il golden power come vincolo regolatorio più lungo nello scenario base e la data dell'8 aprile 2027.",
+      "fail_condition": "la conclusione non è limitata allo scenario senza istruttoria, oppure è indicata una data diversa.",
+      "indifferent": null,
+      "source": "art. 6.2; D.L. 21/2012.",
+      "severity": "alta",
+      "raw_text": "B.53 percorso regolatorio nello scenario senza istruttoria AGCM [issue: I-11] [tipo: presenza] [verifica: span]\nVerifica: nello scenario in cui l'AGCM non avvii l'istruttoria, il deliverable individua nella condizione golden power il più lungo fra i termini regolatori determinabili, con maturazione all'8 aprile 2027.\nPass se: compaiono il golden power come vincolo regolatorio più lungo nello scenario base e la data dell'8 aprile 2027.\nFail se: la conclusione non è limitata allo scenario senza istruttoria, oppure è indicata una data diversa.\n— Fonte: art. 6.2; D.L. 21/2012. Gravità: alta."
+    },
+    {
+      "id": "B.53a",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che, se l'AGCM avvia l'istruttoria, il percorso antitrust può diventare più lungo del golden power perché dura 90 giorni dall'avvio e può essere prorogato fino a 30; non inventa una data finale senza conoscere la data effettiva di avvio e gli eventi procedimentali.",
+      "pass_condition": "sono indicati il cambio di percorso critico nello scenario di istruttoria, le durate 90 + fino a 30 giorni e la natura non determinabile ex ante della data conclusiva.",
+      "fail_condition": "il golden power è presentato come percorso regolatorio sempre più lungo, viene usato il previgente termine di 45 giorni o è indicata come certa una data di conclusione dell'istruttoria.",
+      "indifferent": null,
+      "source": "art. 16, co. 8, L. 287/1990; art. 6.2 dello SPA.",
+      "severity": "alta",
+      "raw_text": "B.53a percorso regolatorio nello scenario con istruttoria AGCM [issue: I-11] [tipo: qualificazione] [verifica: judge]\nVerifica: il deliverable afferma che, se l'AGCM avvia l'istruttoria, il percorso antitrust può diventare più lungo del golden power perché dura 90 giorni dall'avvio e può essere prorogato fino a 30; non inventa una data finale senza conoscere la data effettiva di avvio e gli eventi procedimentali.\nPass se: sono indicati il cambio di percorso critico nello scenario di istruttoria, le durate 90 + fino a 30 giorni e la natura non determinabile ex ante della data conclusiva.\nFail se: il golden power è presentato come percorso regolatorio sempre più lungo, viene usato il previgente termine di 45 giorni o è indicata come certa una data di conclusione dell'istruttoria.\n— Fonte: art. 16, co. 8, L. 287/1990; art. 6.2 dello SPA. Gravità: alta."
+    },
+    {
+      "id": "B.54",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il percorso critico complessivo non è determinabile, perché le condizioni (c) e (d) dipendono da terzi e non hanno termine.",
+      "pass_condition": "compare la riserva sui consensi dei terzi, collegata alla prima data utile di closing.",
+      "fail_condition": "la data regolatoria è presentata come prima data utile di closing dell'operazione senza riserva.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. c e d.",
+      "severity": "alta",
+      "raw_text": "B.54 limite di determinabilità del percorso critico [issue: I-11] [tipo: presenza]\nVerifica: il deliverable afferma che il percorso critico complessivo non è determinabile, perché le condizioni (c) e (d) dipendono da terzi e non hanno termine.\nPass se: compare la riserva sui consensi dei terzi, collegata alla prima data utile di closing.\nFail se: la data regolatoria è presentata come prima data utile di closing dell'operazione senza riserva.\n— non passa al judge — Fonte: art. 4.1 lett. c e d. Gravità: alta."
+    },
+    {
+      "id": "B.55",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, se l'AGCM non avvia istruttoria, la Data Obiettivo del 30 giugno 2027 è rispettabile.",
+      "pass_condition": "compare la conclusione positiva riferita allo scenario senza istruttoria.",
+      "fail_condition": "si afferma che la data non è rispettabile per ragioni regolatorie, o la risposta non è data.",
+      "indifferent": null,
+      "source": "artt. 7.1, 9.1.",
+      "severity": "alta",
+      "raw_text": "B.55 percorribilità nello scenario base [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che, se l'AGCM non avvia istruttoria, la Data Obiettivo del 30 giugno 2027 è rispettabile.\nPass se: compare la conclusione positiva riferita allo scenario senza istruttoria.\nFail se: si afferma che la data non è rispettabile per ragioni regolatorie, o la risposta non è data.\n— non passa al judge — Fonte: artt. 7.1, 9.1. Gravità: alta."
+    },
+    {
+      "id": "B.56",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, in caso di istruttoria, la Data Obiettivo si differisce automaticamente al quindicesimo Giorno Lavorativo successivo alla conclusione del procedimento.",
+      "pass_condition": "compaiono l'automaticità e il termine di 15 Giorni Lavorativi.",
+      "fail_condition": "il differimento è presentato come rimesso alle Parti, o non è menzionato.",
+      "indifferent": null,
+      "source": "art. 7.3.",
+      "severity": "alta",
+      "raw_text": "B.56 differimento automatico [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che, in caso di istruttoria, la Data Obiettivo si differisce automaticamente al quindicesimo Giorno Lavorativo successivo alla conclusione del procedimento.\nPass se: compaiono l'automaticità e il termine di 15 Giorni Lavorativi.\nFail se: il differimento è presentato come rimesso alle Parti, o non è menzionato.\n— non passa al judge — Fonte: art. 7.3. Gravità: alta."
+    },
+    {
+      "id": "B.57",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il differimento della Data Obiettivo non produce effetti sulla Long-Stop Date.",
+      "pass_condition": "compare l'invarianza della Long-Stop Date.",
+      "fail_condition": "si afferma o si lascia intendere che anche la Long-Stop Date si sposta.",
+      "indifferent": null,
+      "source": "art. 7.3.",
+      "severity": "alta",
+      "raw_text": "B.57 invarianza della Long-Stop Date [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che il differimento della Data Obiettivo non produce effetti sulla Long-Stop Date.\nPass se: compare l'invarianza della Long-Stop Date.\nFail se: si afferma o si lascia intendere che anche la Long-Stop Date si sposta.\n— non passa al judge — Fonte: art. 7.3. Gravità: alta."
+    },
+    {
+      "id": "B.58",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable distingue lo scenario base, in cui il fattore non calendarizzabile è l'ottenimento dei consensi dei terzi, dallo scenario di istruttoria AGCM, in cui anche il procedimento antitrust può oltrepassare il 30 giugno 2027.",
+      "pass_condition": "la risposta sulla tenuta della Data Obiettivo menziona i consensi dei terzi e separa espressamente lo scenario senza istruttoria da quello con istruttoria.",
+      "fail_condition": "la data è dichiarata sempre rispettabile per ragioni regolatorie, oppure i consensi dei terzi non sono menzionati come fattore critico non determinabile.",
+      "indifferent": null,
+      "source": "artt. 4.1 lett. c e d, 7.3; art. 16, co. 8, L. 287/1990.",
+      "severity": "alta",
+      "raw_text": "B.58 fattori che possono superare la Data Obiettivo [issue: I-12] [tipo: presenza] [verifica: judge]\nVerifica: il deliverable distingue lo scenario base, in cui il fattore non calendarizzabile è l'ottenimento dei consensi dei terzi, dallo scenario di istruttoria AGCM, in cui anche il procedimento antitrust può oltrepassare il 30 giugno 2027.\nPass se: la risposta sulla tenuta della Data Obiettivo menziona i consensi dei terzi e separa espressamente lo scenario senza istruttoria da quello con istruttoria.\nFail se: la data è dichiarata sempre rispettabile per ragioni regolatorie, oppure i consensi dei terzi non sono menzionati come fattore critico non determinabile.\n— Fonte: artt. 4.1 lett. c e d, 7.3; art. 16, co. 8, L. 287/1990. Gravità: alta."
+    },
+    {
+      "id": "B.59",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non rappresenta l'Autorizzazione Antitrust come ottenuta né ne indica una data certa di rilascio.",
+      "pass_condition": "l'esito è presentato come non ancora intervenuto.",
+      "fail_condition": "l'autorizzazione è data per acquisita, o le è attribuita una data di rilascio certa.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. a.",
+      "severity": "alta",
+      "raw_text": "B.59 autorizzazione antitrust non presunta [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non rappresenta l'Autorizzazione Antitrust come ottenuta né ne indica una data certa di rilascio.\nPass se: l'esito è presentato come non ancora intervenuto.\nFail se: l'autorizzazione è data per acquisita, o le è attribuita una data di rilascio certa.\n— non passa al judge — Fonte: art. 4.1 lett. a. Gravità: alta."
+    },
+    {
+      "id": "B.60",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non rappresenta l'Autorizzazione Golden Power come ottenuta né ne indica una data certa di rilascio.",
+      "pass_condition": "l'esito è presentato come non ancora intervenuto.",
+      "fail_condition": "l'autorizzazione è data per acquisita, o le è attribuita una data di rilascio certa.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. b.",
+      "severity": "alta",
+      "raw_text": "B.60 autorizzazione golden power non presunta [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non rappresenta l'Autorizzazione Golden Power come ottenuta né ne indica una data certa di rilascio.\nPass se: l'esito è presentato come non ancora intervenuto.\nFail se: l'autorizzazione è data per acquisita, o le è attribuita una data di rilascio certa.\n— non passa al judge — Fonte: art. 4.1 lett. b. Gravità: alta."
+    },
+    {
+      "id": "B.61",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable presenta il decorso del termine golden power senza esercizio dei poteri come esito possibile e non come dato acquisito.",
+      "pass_condition": "compare una formulazione ipotetica o condizionale riferita al silenzio-assenso.",
+      "fail_condition": "il silenzio-assenso è presentato come certo o già verificato.",
+      "indifferent": null,
+      "source": "D.L. 21/2012.",
+      "severity": "alta",
+      "raw_text": "B.61 silenzio-assenso come esito possibile [issue: I-13] [tipo: qualificazione]\nVerifica: il deliverable presenta il decorso del termine golden power senza esercizio dei poteri come esito possibile e non come dato acquisito.\nPass se: compare una formulazione ipotetica o condizionale riferita al silenzio-assenso.\nFail se: il silenzio-assenso è presentato come certo o già verificato.\n— non passa al judge — Fonte: D.L. 21/2012. Gravità: alta."
+    },
+    {
+      "id": "B.62",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non rappresenta il consenso di Aeromec o la rinuncia di Banca Sant'Orsola come ottenuti o come certi.",
+      "pass_condition": "entrambi sono presentati come richieste il cui esito non è nella disponibilità delle Parti.",
+      "fail_condition": "anche uno solo è dato per acquisito, o gli è attribuita una data certa.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. c e d.",
+      "severity": "alta",
+      "raw_text": "B.62 consensi dei terzi non presunti [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non rappresenta il consenso di Aeromec o la rinuncia di Banca Sant'Orsola come ottenuti o come certi.\nPass se: entrambi sono presentati come richieste il cui esito non è nella disponibilità delle Parti.\nFail se: anche uno solo è dato per acquisito, o gli è attribuita una data certa.\n— non passa al judge — Fonte: art. 4.1 lett. c e d. Gravità: alta."
+    },
+    {
+      "id": "B.63",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara non determinabile la data del provvedimento dell'AGCM.",
+      "pass_condition": "la data è dichiarata non determinabile, non nota o non prevedibile.",
+      "fail_condition": "è indicata come determinata, o non è trattata.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. a.",
+      "severity": "media",
+      "raw_text": "B.63 data del provvedimento AGCM non determinabile [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara non determinabile la data del provvedimento dell'AGCM.\nPass se: la data è dichiarata non determinabile, non nota o non prevedibile.\nFail se: è indicata come determinata, o non è trattata.\n— non passa al judge — Fonte: art. 4.1 lett. a. Gravità: media."
+    },
+    {
+      "id": "B.64",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica quale evento determinerebbe quella data: il provvedimento dell'Autorità o il decorso dei 30 giorni dalla comunicazione completa.",
+      "pass_condition": "l'evento è indicato.",
+      "fail_condition": "la data è dichiarata non determinabile senza indicare che cosa la determinerebbe.",
+      "indifferent": null,
+      "source": "art. 16 L. 287/1990.",
+      "severity": "media",
+      "raw_text": "B.64 evento determinante del provvedimento AGCM [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica quale evento determinerebbe quella data: il provvedimento dell'Autorità o il decorso dei 30 giorni dalla comunicazione completa.\nPass se: l'evento è indicato.\nFail se: la data è dichiarata non determinabile senza indicare che cosa la determinerebbe.\n— non passa al judge — Fonte: art. 16 L. 287/1990. Gravità: media."
+    },
+    {
+      "id": "B.65",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara non determinabile la data di conclusione del procedimento golden power.",
+      "pass_condition": "la data è dichiarata non determinabile, non nota o non prevedibile.",
+      "fail_condition": "è indicata come determinata, o non è trattata.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. b.",
+      "severity": "media",
+      "raw_text": "B.65 data del golden power non determinabile [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara non determinabile la data di conclusione del procedimento golden power.\nPass se: la data è dichiarata non determinabile, non nota o non prevedibile.\nFail se: è indicata come determinata, o non è trattata.\n— non passa al judge — Fonte: art. 4.1 lett. b. Gravità: media."
+    },
+    {
+      "id": "B.66",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica quale evento determinerebbe quella data: il provvedimento del Governo o il decorso dei 45 giorni dalla notifica completa.",
+      "pass_condition": "l'evento è indicato.",
+      "fail_condition": "la data è dichiarata non determinabile senza indicare che cosa la determinerebbe.",
+      "indifferent": null,
+      "source": "D.L. 21/2012.",
+      "severity": "media",
+      "raw_text": "B.66 evento determinante del golden power [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica quale evento determinerebbe quella data: il provvedimento del Governo o il decorso dei 45 giorni dalla notifica completa.\nPass se: l'evento è indicato.\nFail se: la data è dichiarata non determinabile senza indicare che cosa la determinerebbe.\n— non passa al judge — Fonte: D.L. 21/2012. Gravità: media."
+    },
+    {
+      "id": "B.67",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara non determinabile la data del consenso di Aeromec Systems e indica il riscontro scritto del committente come evento che la determinerebbe.",
+      "pass_condition": "compaiono la dichiarazione di non determinabilità e il riscontro del terzo.",
+      "fail_condition": "la data è indicata come determinata, o la non determinabilità è dichiarata senza indicare l'evento.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. c; Allegato B punto 1.",
+      "severity": "media",
+      "raw_text": "B.67 data del consenso Aeromec non determinabile [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara non determinabile la data del consenso di Aeromec Systems e indica il riscontro scritto del committente come evento che la determinerebbe.\nPass se: compaiono la dichiarazione di non determinabilità e il riscontro del terzo.\nFail se: la data è indicata come determinata, o la non determinabilità è dichiarata senza indicare l'evento.\n— non passa al judge — Fonte: art. 4.1 lett. c; Allegato B punto 1. Gravità: media."
+    },
+    {
+      "id": "B.68",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara non determinabile la data della rinuncia di Banca Sant'Orsola e indica il riscontro scritto della banca come evento che la determinerebbe.",
+      "pass_condition": "compaiono la dichiarazione di non determinabilità e il riscontro del terzo.",
+      "fail_condition": "la data è indicata come determinata, o la non determinabilità è dichiarata senza indicare l'evento.",
+      "indifferent": null,
+      "source": "art. 4.1 lett. d; Allegato B punto 2.",
+      "severity": "media",
+      "raw_text": "B.68 data della rinuncia della banca non determinabile [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara non determinabile la data della rinuncia di Banca Sant'Orsola e indica il riscontro scritto della banca come evento che la determinerebbe.\nPass se: compaiono la dichiarazione di non determinabilità e il riscontro del terzo.\nFail se: la data è indicata come determinata, o la non determinabilità è dichiarata senza indicare l'evento.\n— non passa al judge — Fonte: art. 4.1 lett. d; Allegato B punto 2. Gravità: media."
+    },
+    {
+      "id": "B.69",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara che la data del Closing non è determinabile e la fa dipendere dall'avveramento o dalla rinuncia dell'ultima Condizione Sospensiva.",
+      "pass_condition": "compaiono la non determinabilità e la dipendenza dall'ultima condizione.",
+      "fail_condition": "al Closing è attribuita una data di calendario.",
+      "indifferent": null,
+      "source": "art. 9.1.",
+      "severity": "alta",
+      "raw_text": "B.69 data del Closing non determinabile [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara che la data del Closing non è determinabile e la fa dipendere dall'avveramento o dalla rinuncia dell'ultima Condizione Sospensiva.\nPass se: compaiono la non determinabilità e la dipendenza dall'ultima condizione.\nFail se: al Closing è attribuita una data di calendario.\n— non passa al judge — Fonte: art. 9.1. Gravità: alta."
+    },
+    {
+      "id": "B.70",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non dichiara indeterminabili lo svincolo del conto vincolato, le decadenze indennitarie e la comunicazione a Immobiliare Cascine.",
+      "pass_condition": "i tre sono espressi come termini decorrenti dal Closing.",
+      "fail_condition": "anche uno solo è dichiarato non determinabile o omesso perché ritenuto tale.",
+      "indifferent": null,
+      "source": "artt. 3.2 lett. b, 11.3; Allegato B punto 3.",
+      "severity": "media",
+      "raw_text": "B.70 termini relativi non degradati a indeterminabili [issue: I-14] [tipo: assenza]\nVerifica: il deliverable non dichiara indeterminabili lo svincolo del conto vincolato, le decadenze indennitarie e la comunicazione a Immobiliare Cascine.\nPass se: i tre sono espressi come termini decorrenti dal Closing.\nFail se: anche uno solo è dichiarato non determinabile o omesso perché ritenuto tale.\n— non passa al judge — Fonte: artt. 3.2 lett. b, 11.3; Allegato B punto 3. Gravità: media."
+    },
+    {
+      "id": "B.71",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala il preavviso di closing di 5 Giorni Lavorativi come criticità.",
+      "pass_condition": "il preavviso, se menzionato, è descritto come adempimento procedurale ordinario.",
+      "fail_condition": "è segnalato come rischio, criticità, anomalia, o elevato a condizione sospensiva.",
+      "indifferent": null,
+      "source": "art. 9.2.",
+      "severity": "media",
+      "raw_text": "B.71 preavviso di closing non è criticità [issue: I-15] [tipo: assenza]\nVerifica: il deliverable non segnala il preavviso di closing di 5 Giorni Lavorativi come criticità.\nPass se: il preavviso, se menzionato, è descritto come adempimento procedurale ordinario.\nFail se: è segnalato come rischio, criticità, anomalia, o elevato a condizione sospensiva.\n— non passa al judge — Fonte: art. 9.2. Gravità: media."
+    },
+    {
+      "id": "B.72",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la clausola sul luogo del Closing.",
+      "pass_condition": "la clausola, se menzionata, è descritta come previsione ordinaria.",
+      "fail_condition": "è segnalata come rischio, criticità, anomalia, o elevata a condizione sospensiva.",
+      "indifferent": null,
+      "source": "art. 9.3.",
+      "severity": "media",
+      "raw_text": "B.72 luogo del closing non è criticità [issue: I-15] [tipo: assenza]\nVerifica: il deliverable non segnala come criticità la clausola sul luogo del Closing.\nPass se: la clausola, se menzionata, è descritta come previsione ordinaria.\nFail se: è segnalata come rischio, criticità, anomalia, o elevata a condizione sospensiva.\n— non passa al judge — Fonte: art. 9.3. Gravità: media."
+    },
+    {
+      "id": "B.73",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità l'elenco degli adempimenti di closing dell'Allegato D.",
+      "pass_condition": "l'elenco, se menzionato, è descritto come contenuto ordinario del closing.",
+      "fail_condition": "è segnalato come rischio, criticità, anomalia, o elevato a condizione sospensiva.",
+      "indifferent": null,
+      "source": "Allegato D.",
+      "severity": "media",
+      "raw_text": "B.73 adempimenti dell'Allegato D non sono criticità [issue: I-15] [tipo: assenza]\nVerifica: il deliverable non segnala come criticità l'elenco degli adempimenti di closing dell'Allegato D.\nPass se: l'elenco, se menzionato, è descritto come contenuto ordinario del closing.\nFail se: è segnalato come rischio, criticità, anomalia, o elevato a condizione sospensiva.\n— non passa al judge — Fonte: Allegato D. Gravità: media."
+    },
+    {
+      "id": "B.74",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la sostituzione dell'organo amministrativo al Closing.",
+      "pass_condition": "la previsione, se menzionata, è descritta come adempimento ordinario del closing.",
+      "fail_condition": "è segnalata come rischio, criticità, anomalia, o elevata a condizione sospensiva.",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.74 dimissioni dell'amministratore non sono criticità [issue: I-15] [tipo: assenza]\nVerifica: il deliverable non segnala come criticità la sostituzione dell'organo amministrativo al Closing.\nPass se: la previsione, se menzionata, è descritta come adempimento ordinario del closing.\nFail se: è segnalata come rischio, criticità, anomalia, o elevata a condizione sospensiva.\n— non passa al judge — Fonte: Allegato D. Gravità: media.\n\nSEZIONE C — DATE. Verifica meccanica, non passa al judge, salvo C.5b e C.12b."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 12 febbraio 2027 come Data di Sottoscrizione.",
+      "pass_condition": "il 12 febbraio 2027 è indicato come Data di Sottoscrizione.",
+      "fail_condition": "il 12 febbraio 2027 manca, è riferito a un evento diverso o una diversa data è indicata come Data di Sottoscrizione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 [valore] Il deliverable indica il 12 febbraio 2027 come Data di Sottoscrizione."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 22 febbraio 2027 come termine per la notifica golden power.",
+      "pass_condition": "il 22 febbraio 2027 è indicato come termine per la notifica golden power.",
+      "fail_condition": "il 22 febbraio 2027 manca, è riferito a un evento diverso o una diversa data è indicata come termine per la notifica golden power.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 [valore] Il deliverable indica il 22 febbraio 2027 come termine per la notifica golden power."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 26 febbraio 2027 come termine per la trasmissione ai terzi delle richieste di consenso.",
+      "pass_condition": "il 26 febbraio 2027 è indicato come termine per trasmettere ai terzi le richieste di consenso.",
+      "fail_condition": "il 26 febbraio 2027 manca, è riferito a un evento diverso o una diversa data è indicata per la trasmissione ai terzi.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 [valore] Il deliverable indica il 26 febbraio 2027 come termine per la trasmissione ai terzi delle richieste di consenso."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 5 marzo 2027 come termine per la comunicazione all'AGCM.",
+      "pass_condition": "il 5 marzo 2027 è indicato come termine per la comunicazione all’AGCM.",
+      "fail_condition": "il 5 marzo 2027 manca, è riferito a un evento diverso o una diversa data è indicata come termine per la comunicazione all’AGCM.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 [valore] Il deliverable indica il 5 marzo 2027 come termine per la comunicazione all'AGCM."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica in 10 Giorni Lavorativi dall'avveramento dell'ultima condizione la finestra entro cui si tiene il Closing, e in almeno 5 Giorni Lavorativi il preavviso.",
+      "pass_condition": "è indicata una finestra entro cui tenere il Closing, non superiore a 10 Giorni Lavorativi dall’avveramento dell’ultima condizione, e il preavviso è di almeno 5 Giorni Lavorativi.",
+      "fail_condition": "manca uno dei due termini, il Closing non è collocato entro 10 Giorni Lavorativi dall’avveramento dell’ultima condizione, oppure il preavviso è inferiore a 5 Giorni Lavorativi o non è indicato.",
+      "indifferent": "Il formato grafico dei termini, purché siano espressi come Giorni Lavorativi e riferiti agli eventi indicati.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 [valore] Il deliverable indica in 10 Giorni Lavorativi dall'avveramento dell'ultima condizione la finestra entro cui si tiene il Closing, e in almeno 5 Giorni Lavorativi il preavviso."
+    },
+    {
+      "id": "C.5b",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta i 10 Giorni Lavorativi come intervallo minimo da osservare fra avveramento e Closing.",
+      "pass_condition": "i 10 Giorni Lavorativi sono descritti come finestra entro cui si tiene il Closing dopo l’avveramento dell’ultima condizione, non come intervallo minimo fra avveramento e Closing.",
+      "fail_condition": "l’avveramento è presentato come dovuto almeno 10 Giorni Lavorativi prima del Closing.",
+      "indifferent": "La collocazione del preavviso di 5 Giorni Lavorativi, oggetto distinto.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.5b [assenza — al judge] Il deliverable non presenta i 10 Giorni Lavorativi come intervallo minimo da osservare fra avveramento e Closing. Fail se: l'avveramento è presentato come dovuto almeno 10 Giorni Lavorativi prima del Closing."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 31 ottobre 2027 come Long-Stop Date.",
+      "pass_condition": "il 31 ottobre 2027 è indicato come Long-Stop Date.",
+      "fail_condition": "il 31 ottobre 2027 manca, è riferito a un evento diverso o una diversa data è indicata come Long-Stop Date.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 [valore] Il deliverable indica il 31 ottobre 2027 come Long-Stop Date."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 15 novembre 2027 come termine per l'esercizio del recesso.",
+      "pass_condition": "il 15 novembre 2027 è indicato come termine per esercitare il recesso.",
+      "fail_condition": "il 15 novembre 2027 manca, è riferito a un evento diverso o una diversa scadenza è indicata per esercitare il recesso.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 [valore] Il deliverable indica il 15 novembre 2027 come termine per l'esercizio del recesso."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable esprime lo svincolo del conto vincolato come diciottesimo mese successivo alla data del Closing.",
+      "pass_condition": "lo svincolo del conto vincolato è espresso come diciottesimo mese successivo alla data del Closing.",
+      "fail_condition": "il termine manca o è espresso come data di calendario anziché come diciottesimo mese successivo al Closing.",
+      "indifferent": "La data di calendario eventualmente ricavabile dal Closing, che non è determinabile ex ante.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.8 [valore] Il deliverable esprime lo svincolo del conto vincolato come diciottesimo mese successivo alla data del Closing."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable esprime la decadenza dalle pretese indennitarie generali come diciotto mesi dalla data del Closing.",
+      "pass_condition": "la decadenza dalle pretese indennitarie generali è espressa come diciotto mesi dalla data del Closing.",
+      "fail_condition": "il termine manca o è espresso come data di calendario anziché come diciotto mesi dalla data del Closing.",
+      "indifferent": "La data di calendario eventualmente ricavabile dal Closing, che non è determinabile ex ante.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.9 [valore] Il deliverable esprime la decadenza dalle pretese indennitarie generali come diciotto mesi dalla data del Closing."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable esprime la decadenza dalle pretese fiscali, contributive e ambientali come cinque anni dalla data del Closing.",
+      "pass_condition": "la decadenza dalle pretese fiscali, contributive e ambientali è espressa come cinque anni dalla data del Closing.",
+      "fail_condition": "il termine manca o è espresso come data di calendario anziché come cinque anni dalla data del Closing.",
+      "indifferent": "La data di calendario eventualmente ricavabile dal Closing, che non è determinabile ex ante.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.10 [valore] Il deliverable esprime la decadenza dalle pretese fiscali, contributive e ambientali come cinque anni dalla data del Closing."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable esprime la comunicazione a Immobiliare Cascine come 30 Giorni dalla data del Closing.",
+      "pass_condition": "la comunicazione a Immobiliare Cascine è espressa come 30 Giorni dalla data del Closing.",
+      "fail_condition": "il termine manca o è espresso come data di calendario anziché come 30 Giorni dalla data del Closing.",
+      "indifferent": "La data di calendario eventualmente ricavabile dal Closing, che non è determinabile ex ante.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.11 [valore] Il deliverable esprime la comunicazione a Immobiliare Cascine come 30 Giorni dalla data del Closing."
+    },
+    {
+      "id": "C.12",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 30 giugno 2027 come Data Obiettivo di Closing.",
+      "pass_condition": "il 30 giugno 2027 è indicato come Data Obiettivo di Closing.",
+      "fail_condition": "il 30 giugno 2027 manca, è riferito a un evento diverso o una diversa data è indicata come Data Obiettivo di Closing.",
+      "indifferent": "La forma grafica della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.12 [valore] Il deliverable indica il 30 giugno 2027 come Data Obiettivo di Closing."
+    },
+    {
+      "id": "C.12b",
+      "section": "qualita_incrementale",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable qualifica il 30 giugno 2027 come data programmatica.",
+      "pass_condition": "il 30 giugno 2027 è qualificato come data programmatica, meramente organizzativa, non vincolante o data attesa.",
+      "fail_condition": "il 30 giugno 2027 è presentato come termine vincolante oppure compare senza alcuna qualificazione.",
+      "indifferent": "La scelta fra le qualificazioni ammesse, purché la data resti non vincolante.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.12b [qualificazione — al judge] Il deliverable qualifica il 30 giugno 2027 come data programmatica. Pass se: compare una fra \"programmatica\", \"meramente organizzativa\", \"non vincolante\", \"data attesa\". Fail se: è presentata come termine vincolante o priva di qualificazione."
+    },
+    {
+      "id": "C.13",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "Nessuna delle date di cui a C.8, C.9, C.10 e C.11 è espressa come data di calendario.",
+      "pass_condition": "nessuna delle scadenze di cui a C.8, C.9, C.10 e C.11 è convertita in una data di calendario.",
+      "fail_condition": "anche uno solo dei quattro termini è espresso come data di calendario, anche fra parentesi, come stima o esempio.",
+      "indifferent": "Le date di calendario di altri eventi della timeline.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.13 [assenza] Nessuna delle date di cui a C.8, C.9, C.10 e C.11 è espressa come data di calendario."
+    }
+  ]
+}

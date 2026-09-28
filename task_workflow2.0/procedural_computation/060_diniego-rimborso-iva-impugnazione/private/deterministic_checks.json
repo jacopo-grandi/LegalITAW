@@ -1,0 +1,188 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-060",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "tax_deadline_audit.md"
+  ],
+  "criteria_total": 38,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "B.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "6 maggio 2031",
+        "06/05/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «6 maggio 2031» come giorno di decorrenza del termine.; compare «06/05/2031» come giorno di decorrenza del termine.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B3",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?:6°?\\s+maggio(?:\\s+2031)?|0?6\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2031|0?6\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*31)|(?:6°?\\s+maggio(?:\\s+2031)?|0?6\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2031|0?6\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "sessanta giorni",
+        "60 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «sessanta giorni» come durata del termine.; compare «60 giorni» come durata del termine.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B6",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?:60|sessanta)\\s+giorn[oaei]|(?:60|sessanta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "7 luglio 2031",
+        "07/07/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «7 luglio 2031» come scadenza del termine.; compare «07/07/2031» come scadenza del termine.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B8",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?:7°?\\s+luglio(?:\\s+2031)?|0?7\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*2031|0?7\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*31)|(?:7°?\\s+luglio(?:\\s+2031)?|0?7\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*2031|0?7\\s*[/.\\-]\\s*0?7\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.11",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "sette giorni",
+        "7 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «sette giorni» come tempo residuo.; compare «7 giorni» come tempo residuo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B11",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?:7|sette)\\s+giorn[oaei]|(?:7|sette)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.13",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "18 febbraio 2030",
+        "18/02/2030"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «18 febbraio 2030» come compimento dei novanta giorni.; compare «18/02/2030» come compimento dei novanta giorni.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B13",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?:18°?\\s+febbraio(?:\\s+2030)?|0?18\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2030|0?18\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*30)|(?:18°?\\s+febbraio(?:\\s+2030)?|0?18\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2030|0?18\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*30))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.21",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 318.400,00",
+        "318.400,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 318.400,00» come valore della controversia.; compare «318.400,00» come valore della controversia.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B21",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?<![\\d.,])318[.\\s]?400(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])318[.\\s]?400(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.24",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 1.020.000,00",
+        "1.020.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 1.020.000,00» come ammontare delle operazioni contestate.; compare «1.020.000,00» come ammontare delle operazioni contestate.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-060-B24",
+        "type": "required_regex",
+        "artifact": "tax_deadline_audit.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?020[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?020[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

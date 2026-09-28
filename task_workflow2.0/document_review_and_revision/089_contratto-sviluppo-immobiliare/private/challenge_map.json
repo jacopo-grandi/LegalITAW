@@ -1,0 +1,123 @@
+{
+  "task_id": "WF2-089",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "condizione urbanistica",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'efficacia deve dipendere dal permesso coerente con il progetto e non dalla sola presentazione dell'istanza",
+      "evidenza": "bozza e stato urbanistico"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "titolarita' area",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'accesso anticipato non trasferisce possesso ne' rischio al developer",
+      "evidenza": "visura e bozza"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "milestone verificabili",
+      "gravita": "alta",
+      "affermazione_richiesta": "le milestone richiedono elaborati, certificazione del direttore lavori e periodo di verifica",
+      "evidenza": "cronoprogramma"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "pagamento anticipato",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'anticipo del venti per cento e' privo di garanzia di restituzione",
+      "evidenza": "bozza articolo 8"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "performance bond",
+      "gravita": "media",
+      "affermazione_richiesta": "la garanzia del cinque per cento scade prima del collaudo finale",
+      "evidenza": "bozza garanzia"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "varianti necessarie",
+      "gravita": "media",
+      "affermazione_richiesta": "le varianti imposte dall'autorita' richiedono notifica, impatto e approvazione del budget",
+      "evidenza": "bozza articolo 11"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "varianti discrezionali",
+      "gravita": "media",
+      "affermazione_richiesta": "il developer puo' cambiare materiali senza soglia o equivalenza prestazionale",
+      "evidenza": "bozza articolo 11"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "ritardo",
+      "gravita": "media",
+      "affermazione_richiesta": "la penale decorre dopo una franchigia non definita e manca un cap coordinato con il danno",
+      "evidenza": "bozza articolo 14"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "collaudo",
+      "gravita": "media",
+      "affermazione_richiesta": "il silenzio di cinque giorni non deve valere accettazione definitiva",
+      "evidenza": "bozza articolo 16"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "vizi",
+      "gravita": "media",
+      "affermazione_richiesta": "la consegna non puo' rinunciare in via generale alle garanzie per vizi",
+      "evidenza": "bozza articolo 17"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "agibilita'",
+      "gravita": "media",
+      "affermazione_richiesta": "il completamento deve distinguere collaudo, documenti impianti e segnalazione di agibilita'",
+      "evidenza": "checklist tecnica"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "long-stop",
+      "gravita": "media",
+      "affermazione_richiesta": "il long-stop del 30 giugno 2033 richiede effetti su recesso, restituzioni e consegna documenti",
+      "evidenza": "bozza articolo 19"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "aggiornamento catastale preliminare",
+      "oggetto": "aggiornamento catastale preliminare",
+      "chiave_nel_criterio": "aggiornamento catastale preliminare",
+      "perche_non_e_issue": "la planimetria preliminare non prova una difformita' edilizia",
+      "criterio_assenza": "Il deliverable non presenta aggiornamento catastale preliminare come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "colore facciata",
+      "oggetto": "colore facciata",
+      "chiave_nel_criterio": "colore facciata",
+      "perche_non_e_issue": "la scelta cromatica ancora aperta non e' una variante essenziale",
+      "criterio_assenza": "Il deliverable non presenta colore facciata come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "polizza cantiere",
+      "oggetto": "polizza cantiere",
+      "chiave_nel_criterio": "polizza cantiere",
+      "perche_non_e_issue": "la polizza CAR esistente non sostituisce il performance bond",
+      "criterio_assenza": "Il deliverable non presenta polizza cantiere come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "verbale accesso",
+      "oggetto": "verbale accesso",
+      "chiave_nel_criterio": "verbale accesso",
+      "perche_non_e_issue": "il verbale di accesso non costituisce consegna dell'opera",
+      "criterio_assenza": "Il deliverable non presenta verbale accesso come rilievo autonomo."
+    }
+  ]
+}

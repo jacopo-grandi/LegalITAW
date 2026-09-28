@@ -1,0 +1,5 @@
+Ho ereditato questa posizione da un collega che ha lasciato lo studio e il cliente mi chiede di sapere dove siamo. Ferramenta Bardini era creditrice della Officine Meccaniche Valdarno, oggi in liquidazione giudiziale: in sede di verifica il credito è stato ammesso solo in parte e abbiamo fatto opposizione. Il tribunale ci ha dato torto e ora il cliente vuole andare avanti. Ti allego il fascicolo così come l'ho trovato, in ordine sparso.
+Mi serve un memo sui termini che mi dica se l'opposizione che abbiamo depositato era nei termini e da quale atto decorreva il termine, e qual è il rimedio contro il decreto del tribunale, entro quando va proposto e quanto tempo ci resta oggi.
+Dimmi anche se nella gestione del procedimento ci sono irregolarità che devo conoscere, distinguendo quelle che producono conseguenze da quelle che non ne producono. Non voglio allarmi su cose che non incidono.
+Per ogni data che mi indichi voglio sapere da quale atto del fascicolo la ricavi e su quale norma ti basi, articolo e comma. Il cliente ha una sua idea di come si prosegue: valutala e dimmi se è corretta. Considera come data di riferimento il 1 febbraio 2027.
+

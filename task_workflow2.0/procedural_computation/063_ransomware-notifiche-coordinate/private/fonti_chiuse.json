@@ -1,0 +1,21 @@
+{
+  "task_id": "WF2-063",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "Regolamento (UE) 2016/679, artt. 28, 33 e 34",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=it",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    },
+    {
+      "id": "F2",
+      "riferimento": "D.lgs. 4 settembre 2024, n. 138, art. 25",
+      "url": "https://www.normattiva.it/eli/id/2024/10/01/24G00155/CONSOLIDATED",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    }
+  ]
+}

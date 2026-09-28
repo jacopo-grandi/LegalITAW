@@ -1,0 +1,263 @@
+{
+  "task_id": "WF2-095",
+  "lato_assistito": "Sartiglia Immobiliare S.r.l., locatrice intimante",
+  "committente": "amministratore unico di Sartiglia Immobiliare S.r.l.",
+  "data_di_riferimento": "2026-08-06",
+  "stato_fascicolo": "intimazione notificata; udienza di convalida fissata per il 20 agosto 2026 e non ancora tenuta; nessuna comparsa di costituzione depositata dalla conduttrice",
+  "meccanismi_di_difficolta": [
+    "regola generale da dedurre: la sospensione feriale sembra applicabile e non lo è, e la deroga non è scritta in alcun documento del fascicolo",
+    "definizione convenzionale contro regola di legge: le soglie dei venti giorni e delle due mensilità stanno nel contratto perché per la locazione ad uso diverso non sono regole di legge",
+    "presenza contro adeguatezza: la clausola che esclude il termine per il pagamento esiste, è chiara e non è utilizzabile perché il canone resta sotto la soglia di derogabilità",
+    "termine costruito esattamente sul minimo di legge, così che un errore sul dies a quo cambia l'esito",
+    "dichiarazione di parte da smentire: l'opinione del commercialista sulla sospensione dei termini è nel prompt e va corretta",
+    "evidenze incomplete: la ricevuta di spedizione dell'avviso e il rendiconto condominiale sono richiamati e non presenti"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "termine di comparizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "fra la notificazione del 30 luglio 2026 e l'udienza del 20 agosto 2026 intercorrono venti giorni liberi, pari al minimo di legge: il termine è rispettato",
+      "evidenza": "04_relazione_di_notificazione.md; 03_intimazione_sfratto.md, punto 15",
+      "errore_bersaglio": "computare i venti giorni includendo il giorno della notificazione o quello dell'udienza, e concludere che il termine non è rispettato"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "sospensione feriale dei termini",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sospensione feriale non si applica ai procedimenti di sfratto: il termine di comparizione non si sospende nel mese di agosto e l'udienza del 20 agosto 2026 è validamente fissata",
+      "evidenza": "art. 3 della legge sulla sospensione dei termini e art. 92 dell'ordinamento giudiziario",
+      "errore_bersaglio": "applicare la sospensione dal 1 al 31 agosto e concludere che il termine di comparizione riprende a decorrere dal 1 settembre 2026"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "natura delle soglie del contratto",
+      "gravita": "alta",
+      "affermazione_richiesta": "la soglia dei venti giorni dalla scadenza e quella delle due mensilità di oneri accessori, richiamate dall'articolo 6 del contratto, non sono regole di legge applicabili alla locazione ad uso diverso: sono pattuizioni delle parti, perché la disposizione che le contiene non è fra quelle estese ai contratti ad uso diverso",
+      "evidenza": "01_contratto_locazione.md, art. 6.1 e 6.2; artt. 5 e 41 della legge sulle locazioni",
+      "errore_bersaglio": "presentare la soglia dei venti giorni come regola di legge applicabile alla locazione commerciale"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "valutazione della gravità dell'inadempimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la gravità dell'inadempimento va valutata secondo la disciplina generale della risoluzione, avuto riguardo all'interesse del locatore; la soglia convenzionale del contratto è un elemento di quella valutazione e non la sostituisce",
+      "evidenza": "01_contratto_locazione.md, art. 6.1; art. 1455 del codice civile",
+      "errore_bersaglio": "far derivare la risoluzione dal solo decorso dei venti giorni, come se la soglia contrattuale fosse un automatismo di legge"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "clausola che esclude il termine per il pagamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 6.3 esclude che alla conduttrice possa essere concesso un termine per il pagamento dei canoni scaduti: è una pattuizione in deroga alle disposizioni di legge, che le parti avrebbero potuto concordare solo se il canone annuo avesse superato la soglia prevista, mentre il canone pattuito è di gran lunga inferiore; la locatrice non può fondarsi su quella clausola",
+      "evidenza": "01_contratto_locazione.md, artt. 4.1 e 6.3; art. 79 della legge sulle locazioni",
+      "errore_bersaglio": "fondare sulla clausola 6.3 la conclusione che il termine di grazia non possa essere concesso, oppure presentare la clausola come un'esposizione della locatrice anziché come una clausola su cui non può contare"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "attestazione della persistenza della morosità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la convalida per morosità è subordinata all'attestazione in giudizio del locatore o del suo procuratore che la morosità persiste: l'attestazione va predisposta per l'udienza e il giudice può ordinare al locatore di prestare cauzione",
+      "evidenza": "art. 663, comma 2, del codice di procedura civile",
+      "errore_bersaglio": "presentare la convalida come conseguenza automatica della mancata opposizione, senza l'attestazione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "omissione dell'avviso sul patrocinio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la citazione contiene l'avvertimento sulla convalida ma non l'avviso che, sussistendone i presupposti, la parte può presentare istanza per l'ammissione al patrocinio a spese dello Stato: l'omissione riguarda un contenuto prescritto dell'atto e va rilevata",
+      "evidenza": "03_intimazione_sfratto.md, punto 15; art. 660, comma 3, del codice di procedura civile",
+      "errore_bersaglio": "non rilevare l'omissione, oppure concludere che l'atto è nullo, quando la conduttrice ha annunciato di comparire e la conseguenza dell'omissione si atteggia diversamente secondo che l'intimato compaia o no"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "notificazione non in mani proprie",
+      "gravita": "media",
+      "affermazione_richiesta": "l'atto non è stato notificato in mani proprie: in tal caso l'ufficiale giudiziario deve spedire avviso all'intimato a mezzo di lettera raccomandata e allegare all'originale la ricevuta di spedizione, che il fascicolo non contiene",
+      "evidenza": "04_relazione_di_notificazione.md e annotazione di studio del 30 luglio 2026; art. 660, ultimo comma, del codice di procedura civile",
+      "errore_bersaglio": "considerare la notificazione regolare perché la consegna è avvenuta presso la sede a mani di addetta alla ricezione, senza rilevare l'adempimento ulteriore"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "contestazione dell'ammontare e somma non controversa",
+      "gravita": "alta",
+      "affermazione_richiesta": "la conduttrice non contesta i canoni e contesta una quota degli oneri accessori: se comparendo nega la propria morosità contestando l'ammontare, il giudice può disporre con ordinanza il pagamento della somma non controversa concedendo un termine non superiore a venti giorni, e in caso di inottemperanza convalida l'intimazione e pronuncia decreto ingiuntivo",
+      "evidenza": "06_email_conduttrice.md; art. 666 del codice di procedura civile",
+      "errore_bersaglio": "trattare la contestazione come opposizione idonea a impedire ogni provvedimento, oppure ignorare che la conduttrice dichiara di non contestare i canoni"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "ordinanza provvisoria di rilascio",
+      "gravita": "alta",
+      "affermazione_richiesta": "se la conduttrice comparendo oppone eccezioni non fondate su prova scritta, la locatrice può chiedere l'ordinanza non impugnabile di rilascio con riserva delle eccezioni, immediatamente esecutiva e subordinabile alla prestazione di cauzione; l'istanza è necessaria e non può essere supplita d'ufficio",
+      "evidenza": "art. 665 del codice di procedura civile; 06_email_conduttrice.md",
+      "errore_bersaglio": "presentare l'ordinanza di rilascio come provvedimento adottato d'ufficio, oppure ometterla fra i passaggi possibili"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "decreto d'ingiunzione separato",
+      "gravita": "media",
+      "affermazione_richiesta": "il giudice pronuncia separato decreto d'ingiunzione per l'ammontare dei canoni scaduti e da scadere fino all'esecuzione dello sfratto e per le spese dell'intimazione; il decreto è immediatamente esecutivo e l'opposizione non toglie efficacia all'avvenuta risoluzione",
+      "evidenza": "art. 664 del codice di procedura civile; 03_intimazione_sfratto.md, conclusione c",
+      "errore_bersaglio": "limitare l'ingiunzione ai canoni già scaduti alla data dell'atto, ignorando i canoni da scadere fino all'esecuzione"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "termine di grazia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la conduttrice ha chiesto un termine per il pagamento; l'applicabilità della sanatoria giudiziale alle locazioni ad uso diverso non è risolta dal testo di legge, perché la disposizione si riferisce ai canoni e agli oneri della norma non estesa a tali contratti mentre è collocata fra le disposizioni processuali: la questione va rappresentata come controversa e va chiesta istruzione, indicando che, se concesso, il termine non può superare i novanta giorni e l'udienza è rinviata a non oltre dieci giorni dalla scadenza",
+      "evidenza": "06_email_conduttrice.md; art. 55 della legge sulle locazioni",
+      "errore_bersaglio": "affermare senza riserve che il termine di grazia è concedibile, oppure che non lo è, presentando come risolta una questione che il testo non risolve"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "mediazione nella fase sommaria",
+      "chiave_nel_criterio": "esperimento della mediazione",
+      "ragione": "la mediazione non è condizione di procedibilità nei procedimenti per convalida di licenza o sfratto fino al mutamento del rito: non doveva essere esperita prima dell'intimazione e la sua mancanza non è un'omissione",
+      "errore_bersaglio": "indicare la mancata mediazione fra i vizi dell'iniziativa o fra gli adempimenti da compiere prima dell'udienza"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "importo degli oneri accessori non pagati",
+      "chiave_nel_criterio": "soglia delle due mensilità",
+      "ragione": "gli oneri accessori non pagati sono 486,00 euro, molto inferiori all'importo di due mensilità richiamato dalla clausola 6.2: quella soglia non è raggiunta e non costituisce un motivo autonomo di risoluzione da azionare",
+      "errore_bersaglio": "indicare il mancato pagamento degli oneri accessori come motivo autonomo di risoluzione, o affermare che la soglia delle due mensilità è superata"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "registrazione del contratto",
+      "chiave_nel_criterio": "registrazione del contratto di locazione",
+      "ragione": "il contratto risulta registrato presso l'Agenzia delle Entrate con estremi riportati in calce e richiamati nell'atto di intimazione: la produzione del contratto con prova della registrazione è soddisfatta",
+      "errore_bersaglio": "indicare la registrazione fra i documenti da acquisire o fra gli adempimenti mancanti"
+    }
+  ],
+  "dati_mancanti": [
+    "la ricevuta di spedizione dell'avviso a mezzo lettera raccomandata, che l'annotazione di studio dichiara non allegata all'originale",
+    "il rendiconto condominiale approvato il 28 marzo 2026, richiamato dalla diffida e indicato fra gli allegati dell'atto ma non presente nel fascicolo, necessario a verificare la quota contestata",
+    "la delibera dell'assemblea condominiale del 28 marzo 2026 che istituisce il servizio di portierato e la data della sua effettiva attivazione, che la conduttrice indica ma che non risulta da alcun documento",
+    "la prova della ricezione della diffida del 10 luglio 2026, di cui l'atto riferisce l'invio senza che le ricevute siano nel fascicolo",
+    "l'eventuale comparsa di costituzione della conduttrice, che al 4 agosto 2026 non risulta depositata"
+  ],
+  "fonti_ammesse": [
+    "L. 392/1978, artt. 5, 41, 55, 79",
+    "c.p.c., artt. 155, 657, 658, 660, 663, 664, 665, 666, 667, 447-bis",
+    "L. 742/1969, artt. 1 e 3",
+    "art. 92",
+    "art. 5, commi 1, 2 e 6, lettera b)",
+    "artt. 1455 e 1587"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "6 agosto 2026",
+      "calcolo": "giovedì; anteriore di 14 giorni all'udienza di comparizione",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "canone mensile pattuito",
+      "valore": "3.150,00 euro",
+      "calcolo": "37.800,00 euro annui in dodici rate anticipate",
+      "fonte": "01_contratto_locazione.md, art. 4.1"
+    },
+    {
+      "milestone": "canoni scaduti e intimati",
+      "valore": "12.600,00 euro",
+      "calcolo": "quattro mensilità da 3.150,00 euro, scadute il 5 aprile, il 5 maggio, il 5 giugno e il 5 luglio 2026",
+      "fonte": "03_intimazione_sfratto.md e 05_estratto_partitario.csv"
+    },
+    {
+      "milestone": "oneri accessori intimati",
+      "valore": "486,00 euro",
+      "calcolo": "esercizio 2025, richiesti il 14 aprile 2026 con il rendiconto approvato il 28 marzo 2026",
+      "fonte": "05_estratto_partitario.csv"
+    },
+    {
+      "milestone": "totale intimato",
+      "valore": "13.086,00 euro",
+      "calcolo": "12.600,00 + 486,00 = 13.086,00",
+      "fonte": "03_intimazione_sfratto.md, punto 12"
+    },
+    {
+      "milestone": "partite aperte alla data di estrazione del partitario",
+      "valore": "16.236,00 euro",
+      "calcolo": "cinque mensilità da 3.150,00 euro, compresa quella di agosto 2026 scaduta dopo l'atto, più 486,00 euro di oneri accessori; non è l'importo intimato",
+      "fonte": "05_estratto_partitario.csv"
+    },
+    {
+      "milestone": "quota di oneri accessori contestata dalla conduttrice",
+      "valore": "214,00 euro",
+      "calcolo": "quota per il servizio di portierato, istituito con delibera del 28 marzo 2026 e attivato dal 1 maggio 2026, addebitata sull'esercizio 2025",
+      "fonte": "06_email_conduttrice.md"
+    },
+    {
+      "milestone": "somma non controversa",
+      "valore": "12.872,00 euro",
+      "calcolo": "12.600,00 euro di canoni non contestati più 272,00 euro di oneri accessori residui dopo lo stralcio della quota di portierato",
+      "fonte": "06_email_conduttrice.md e 05_estratto_partitario.csv"
+    },
+    {
+      "milestone": "confronto fra oneri non pagati e due mensilità di canone",
+      "valore": "486,00 euro contro 6.300,00 euro",
+      "calcolo": "la soglia richiamata dalla clausola 6.2 non è raggiunta",
+      "fonte": "01_contratto_locazione.md, art. 6.2"
+    },
+    {
+      "milestone": "canone annuo e soglia di derogabilità",
+      "valore": "37.800,00 euro contro 250.000,00 euro",
+      "calcolo": "il canone annuo è inferiore alla soglia oltre la quale le parti possono concordare termini e condizioni in deroga alle disposizioni di legge",
+      "fonte": "01_contratto_locazione.md, art. 4.1"
+    },
+    {
+      "milestone": "notificazione dell'intimazione",
+      "valore": "30 luglio 2026",
+      "calcolo": "giovedì; consegna a mani di addetta alla ricezione, non in mani proprie del legale rappresentante",
+      "fonte": "04_relazione_di_notificazione.md"
+    },
+    {
+      "milestone": "udienza di comparizione fissata",
+      "valore": "20 agosto 2026",
+      "calcolo": "giovedì",
+      "fonte": "03_intimazione_sfratto.md, punto 15"
+    },
+    {
+      "milestone": "giorni liberi fra notificazione e udienza",
+      "valore": "venti giorni liberi",
+      "calcolo": "si escludono il giorno della notificazione e il giorno dell'udienza: dal 31 luglio al 19 agosto 2026 compresi sono venti giorni, pari al minimo di legge",
+      "fonte": "art. 660, comma 4, del codice di procedura civile"
+    },
+    {
+      "milestone": "esito del computo del termine di comparizione",
+      "valore": "termine rispettato",
+      "calcolo": "nessuna abbreviazione risulta richiesta né autorizzata con decreto motivato",
+      "fonte": "art. 660, comma 4, del codice di procedura civile"
+    },
+    {
+      "milestone": "derivazione errata con sospensione feriale applicata",
+      "valore": "21 settembre 2026",
+      "calcolo": "venti giorni liberi computati dal 1 settembre 2026; la sospensione feriale non si applica alle cause di sfratto",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "termine massimo per il pagamento della somma non controversa",
+      "valore": "venti giorni dall'ordinanza",
+      "calcolo": "alla data di riferimento l'ordinanza non è stata emessa e la scadenza non è determinabile",
+      "fonte": "art. 666 del codice di procedura civile"
+    },
+    {
+      "milestone": "termine massimo di grazia in sede giudiziale",
+      "valore": "novanta giorni",
+      "calcolo": "con rinvio dell'udienza a non oltre dieci giorni dalla scadenza; l'applicabilità alle locazioni ad uso diverso non è risolta dal testo di legge",
+      "fonte": "art. 55, commi 2 e 3, della legge sulle locazioni"
+    }
+  ],
+  "funzione_allegati": {
+    "01_contratto_locazione.md": "contiene le soglie convenzionali di gravità dell'inadempimento e la clausola che esclude il termine per il pagamento: sono scelte delle parti e vanno tenute distinte dalle regole di legge",
+    "02_diffida_di_pagamento.md": "documenta la composizione della morosità intimata e la data del sollecito",
+    "03_intimazione_sfratto.md": "fissa la data dell'udienza e contiene gli avvertimenti di rito: è l'atto su cui si misura la completezza formale",
+    "04_relazione_di_notificazione.md": "prova la data e le modalità della notificazione e, con l'annotazione, l'assenza della ricevuta di spedizione dell'avviso",
+    "05_estratto_partitario.csv": "documenta lo storico dei pagamenti e le partite aperte, che alla data di estrazione non coincidono con l'importo intimato",
+    "06_email_conduttrice.md": "è la dichiarazione con cui la conduttrice contesta una parte dell'importo e annuncia la comparizione: determina quale dei possibili sviluppi processuali diventa concreto"
+  }
+}

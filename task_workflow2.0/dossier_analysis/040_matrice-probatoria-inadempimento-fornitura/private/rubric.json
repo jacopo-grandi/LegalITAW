@@ -1,0 +1,1333 @@
+{
+  "task_id": "WF2-040",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 66,
+  "criteria": [
+    {
+      "id": "A.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "La matrice probatoria è resa in forma di tabella e ciascuna riga porta il fatto affermato, la prova presente nel fascicolo, la contestazione opponibile, la lacuna residua e l'azione.",
+      "match_criteria": "Oggetto del criterio: La matrice probatoria è resa in forma di tabella e ciascuna riga porta il fatto affermato, la prova presente nel fascicolo, la contestazione opponibile, la lacuna residua e l'azione.\nPASS se: la tabella è presente e ogni riga porta i cinque dati.\nFAIL se: la matrice non è in forma di tabella, oppure almeno una riga è priva di uno dei cinque dati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "la tabella è presente e ogni riga porta i cinque dati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Ogni riga della matrice qualifica la provenienza della prova come nostro documento, documento del cliente, documento di un terzo oppure nessuna.",
+      "match_criteria": "Oggetto del criterio: Ogni riga della matrice qualifica la provenienza della prova come nostro documento, documento del cliente, documento di un terzo oppure nessuna.\nPASS se: ogni riga porta una delle quattro qualificazioni.\nFAIL se: almeno una riga è priva della qualificazione, oppure si usa una scala che non distingue il documento di parte da quello del terzo.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ogni riga porta una delle quattro qualificazioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non contiene la bozza di una lettera di risposta, di una memoria o di un atto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene la bozza di una lettera di risposta, di una memoria o di un atto.\nPASS se: non compare testo redatto in forma di lettera o di atto difensivo.\nFAIL se: il deliverable contiene una bozza di lettera, di memoria o di atto.\nFonte di authoring: prompt",
+      "pass_condition": "non compare testo redatto in forma di lettera o di atto difensivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPASS se: ogni riferimento normativo citato appartiene all'elenco.\nFAIL se: compare almeno un riferimento normativo fuori elenco.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 3.240.000 euro come importo complessivamente richiesto nella diffida.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 3.240.000 euro come importo complessivamente richiesto nella diffida.\nPASS se: compare l'importo di 3.240.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: diffida, punto 6",
+      "pass_condition": "compare l'importo di 3.240.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 1.320.000 euro come importo della richiesta assistito da documenti presenti nel fascicolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 1.320.000 euro come importo della richiesta assistito da documenti presenti nel fascicolo.\nPASS se: compare l'importo di 1.320.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 640.000 + 212.400 + 180.000 + 287.600",
+      "pass_condition": "compare l'importo di 1.320.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 499.600 euro come esposizione ricostruita voce per voce prima dell'applicazione del massimale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 499.600 euro come esposizione ricostruita voce per voce prima dell'applicazione del massimale.\nPASS se: compare l'importo di 499.600 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 128.400 + 180.000 + 191.200",
+      "pass_condition": "compare l'importo di 499.600 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 372.000 euro come esposizione residua dopo l'applicazione del massimale contrattuale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 372.000 euro come esposizione residua dopo l'applicazione del massimale contrattuale.\nPASS se: compare l'importo di 372.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 15% di 2.480.000; contratto, art. 10.2",
+      "pass_condition": "compare l'importo di 372.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable tiene distinti l'importo richiesto, l'importo documentato e l'esposizione stimata, e mostra il passaggio dall'uno all'altro.",
+      "match_criteria": "Oggetto del criterio: Il deliverable tiene distinti l'importo richiesto, l'importo documentato e l'esposizione stimata, e mostra il passaggio dall'uno all'altro.\nPASS se: i tre importi compaiono distinti e il deliverable spiega che cosa cade fra l'uno e l'altro.\nFAIL se: i tre importi non sono distinti, oppure il deliverable si limita a contestare la richiesta senza ricostruire l'esposizione.\nFonte di authoring: matrice probatoria",
+      "pass_condition": "i tre importi compaiono distinti e il deliverable spiega che cosa cade fra l'uno e l'altro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta l'importo richiesto come misura dell'esposizione della società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta l'importo richiesto come misura dell'esposizione della società.\nPASS se: non compare l'affermazione che l'esposizione è pari a 3.240.000 euro o che quello è il rischio.\nFAIL se: compare l'affermazione che la società rischia l'importo richiesto.\nFonte di authoring: diffida, punto 6",
+      "pass_condition": "non compare l'affermazione che l'esposizione è pari a 3.240.000 euro o che quello è il rischio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 1.920.000 euro come somma delle voci della richiesta prive di qualsiasi riscontro documentale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 1.920.000 euro come somma delle voci della richiesta prive di qualsiasi riscontro documentale.\nPASS se: compare l'importo di 1.920.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 1.850.000 + 70.000",
+      "pass_condition": "compare l'importo di 1.920.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la perdita di margine sugli ordini non evasi e il danno all'immagine non sono sostenute da alcun documento del fascicolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la perdita di margine sugli ordini non evasi e il danno all'immagine non sono sostenute da alcun documento del fascicolo.\nPASS se: compaiono entrambe le voci come prive di riscontro documentale.\nFAIL se: è indicata una sola delle due voci, oppure nessuna, oppure le voci sono trattate come documentate.\nFonte di authoring: diffida, punto 6, lettere d ed f; elenco degli allegati",
+      "pass_condition": "compaiono entrambe le voci come prive di riscontro documentale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la perdita di margine sugli ordini e il danno all'immagine sono esclusi dalla clausola contrattuale sulla responsabilità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la perdita di margine sugli ordini e il danno all'immagine sono esclusi dalla clausola contrattuale sulla responsabilità.\nPASS se: compare l'affermazione che quelle voci sono escluse dal contratto.\nFAIL se: l'affermazione non compare, oppure le voci sono contestate solo sul piano probatorio.\nFonte di authoring: contratto, art. 10.1",
+      "pass_condition": "compare l'affermazione che quelle voci sono escluse dal contratto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che quelle due voci cadono per due ragioni distinte e autonome: l'esclusione contrattuale e l'assenza di prova.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che quelle due voci cadono per due ragioni distinte e autonome: l'esclusione contrattuale e l'assenza di prova.\nPASS se: compare l'indicazione che le ragioni sono due e indipendenti.\nFAIL se: è indicata una sola ragione.\nFonte di authoring: contratto, art. 10.1; diffida, allegati",
+      "pass_condition": "compare l'indicazione che le ragioni sono due e indipendenti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica l'11 gennaio 2034 come data di scoperta del difetto denunciato nel febbraio 2034.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica l'11 gennaio 2034 come data di scoperta del difetto denunciato nel febbraio 2034.\nPASS se: compare la data dell'11 gennaio 2034 riferita alla scoperta.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: rapporto di intervento del 12 gennaio 2034; PEC del 6 febbraio 2034",
+      "pass_condition": "compare la data dell'11 gennaio 2034 riferita alla scoperta.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica in ventisei i giorni intercorsi fra la scoperta e la denuncia scritta dell'episodio di gennaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in ventisei i giorni intercorsi fra la scoperta e la denuncia scritta dell'episodio di gennaio.\nPASS se: compare il valore 26 riferito a quei giorni.\nFAIL se: compare un valore diverso, oppure il numero di giorni non è indicato.\nFonte di authoring: dall'11 gennaio 2034 al 6 febbraio 2034",
+      "pass_condition": "compare il valore 26 riferito a quei giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable qualifica la denuncia dell'episodio di gennaio come tardiva rispetto al termine convenzionale di quindici giorni previsto a pena di decadenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la denuncia dell'episodio di gennaio come tardiva rispetto al termine convenzionale di quindici giorni previsto a pena di decadenza.\nPASS se: compare, riferita a quella denuncia, una fra: «tardiva», «fuori termine», «oltre il termine di decadenza», «decaduta».\nFAIL se: la denuncia non è qualificata, oppure è indicata come tempestiva.\nFonte di authoring: contratto, art. 9.3",
+      "pass_condition": "compare, riferita a quella denuncia, una fra: «tardiva», «fuori termine», «oltre il termine di decadenza», «decaduta».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il termine di denuncia previsto dalla legge per la garanzia nell'appalto è di sessanta giorni, più ampio di quello convenzionale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine di denuncia previsto dalla legge per la garanzia nell'appalto è di sessanta giorni, più ampio di quello convenzionale.\nPASS se: compare il confronto fra il termine convenzionale e il termine legale di sessanta giorni.\nFAIL se: il confronto non compare.\nFonte di authoring: art. 1667, comma 2, c.c.",
+      "pass_condition": "compare il confronto fra il termine convenzionale e il termine legale di sessanta giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il termine convenzionale di decadenza è esposto al rilievo di nullità in quanto può rendere eccessivamente difficile l'esercizio del diritto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine convenzionale di decadenza è esposto al rilievo di nullità in quanto può rendere eccessivamente difficile l'esercizio del diritto.\nPASS se: compare l'indicazione che la validità del termine convenzionale può essere contestata.\nFAIL se: l'indicazione non compare.\nFonte di authoring: art. 2965 c.c.",
+      "pass_condition": "compare l'indicazione che la validità del termine convenzionale può essere contestata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta la decadenza sull'episodio di gennaio come acquisita o definitiva.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la decadenza sull'episodio di gennaio come acquisita o definitiva.\nPASS se: non compare l'affermazione che quelle voci sono definitivamente escluse, che la decadenza è certa o che la questione è chiusa.\nFAIL se: compare l'affermazione che la decadenza è acquisita, certa o definitiva.\nÈ indifferente: l'indicazione dell'eccezione di decadenza come difesa da sollevare.\nFonte di authoring: contratto, art. 9.3; art. 2965 c.c.",
+      "pass_condition": "non compare l'affermazione che quelle voci sono definitivamente escluse, che la decadenza è certa o che la questione è chiusa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 724.000 euro come somma delle voci riferite all'episodio di gennaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 724.000 euro come somma delle voci riferite all'episodio di gennaio.\nPASS se: compare l'importo di 724.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 640.000 + 84.000",
+      "pass_condition": "compare l'importo di 724.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 84.000 euro come quota dei maggiori costi di manodopera riferita all'episodio di gennaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 84.000 euro come quota dei maggiori costi di manodopera riferita all'episodio di gennaio.\nPASS se: compare l'importo di 84.000 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: prospetto dei maggiori costi, sezione B, riga 7",
+      "pass_condition": "compare l'importo di 84.000 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 128.400 euro come quota dei maggiori costi di manodopera riferita all'episodio di novembre.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 128.400 euro come quota dei maggiori costi di manodopera riferita all'episodio di novembre.\nPASS se: compare l'importo di 128.400 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: prospetto dei maggiori costi, sezione B, riga 6",
+      "pass_condition": "compare l'importo di 128.400 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable qualifica il calo di rendimento dell'aprile 2034 come non imputabile alla linea, in quanto derivante dall'impiego di un film non conforme alla specifica contrattuale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il calo di rendimento dell'aprile 2034 come non imputabile alla linea, in quanto derivante dall'impiego di un film non conforme alla specifica contrattuale.\nPASS se: compare l'affermazione che il difetto non è imputabile alla macchina o che deriva dal materiale fornito dal committente.\nFAIL se: l'episodio è attribuito alla macchina, oppure la questione dell'attribuzione non è affrontata.\nFonte di authoring: rapporto del 19 aprile 2034; contratto, art. 9.4",
+      "pass_condition": "compare l'affermazione che il difetto non è imputabile alla macchina o che deriva dal materiale fornito dal committente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica lo spessore misurato del film impiegato nell'aprile 2034.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica lo spessore misurato del film impiegato nell'aprile 2034.\nPASS se: compaiono i valori 21,4 e 22,6 riferiti allo spessore misurato in micron.\nFAIL se: compaiono valori diversi, oppure lo spessore misurato non è indicato.\nFonte di authoring: rapporto del 19 aprile 2034, punto 2",
+      "pass_condition": "compaiono i valori 21,4 e 22,6 riferiti allo spessore misurato in micron.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica lo spessore del film previsto dalla specifica contrattuale e la relativa tolleranza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica lo spessore del film previsto dalla specifica contrattuale e la relativa tolleranza.\nPASS se: compaiono il valore 28 e la tolleranza di 2 micron.\nFAIL se: compaiono valori diversi, oppure la specifica non è indicata.\nFonte di authoring: contratto, Allegato 1, punto 3",
+      "pass_condition": "compaiono il valore 28 e la tolleranza di 2 micron.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable richiama la prova eseguita con film conforme alla specifica, che ha restituito un rendimento superiore a quello garantito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable richiama la prova eseguita con film conforme alla specifica, che ha restituito un rendimento superiore a quello garantito.\nPASS se: compare il riferimento alla prova con film conforme e al rendimento che ne è risultato.\nFAIL se: il riferimento non compare.\nFonte di authoring: rapporto del 19 aprile 2034, punto 4",
+      "pass_condition": "compare il riferimento alla prova con film conforme e al rendimento che ne è risultato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'episodio del novembre 2033 è imputabile alla società, in quanto il rapporto del suo stesso tecnico lo qualifica come difetto di progetto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'episodio del novembre 2033 è imputabile alla società, in quanto il rapporto del suo stesso tecnico lo qualifica come difetto di progetto.\nPASS se: compare l'affermazione che su quell'episodio non vi sono difese sull'an, o che la responsabilità è documentata dal nostro rapporto.\nFAIL se: l'affermazione non compare, oppure l'episodio è presentato come contestabile nell'an.\nFonte di authoring: rapporto del 14 novembre 2033, punto 3",
+      "pass_condition": "compare l'affermazione che su quell'episodio non vi sono difese sull'an, o che la responsabilità è documentata dal nostro rapporto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la denuncia dell'episodio di novembre è stata tempestiva rispetto al termine convenzionale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la denuncia dell'episodio di novembre è stata tempestiva rispetto al termine convenzionale.\nPASS se: compare l'affermazione che quella denuncia è in termine o tempestiva.\nFAIL se: l'affermazione non compare, oppure la denuncia è indicata come tardiva.\nFonte di authoring: PEC del 16 novembre 2033; contratto, art. 9.3",
+      "pass_condition": "compare l'affermazione che quella denuncia è in termine o tempestiva.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che le penali applicate dal cliente finale sono documentate da un documento proveniente da un terzo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le penali applicate dal cliente finale sono documentate da un documento proveniente da un terzo.\nPASS se: compare l'affermazione che quella voce è sostenuta da un documento di un terzo.\nFAIL se: l'affermazione non compare, oppure la voce è trattata come non documentata.\nFonte di authoring: nota di addebito n. 118",
+      "pass_condition": "compare l'affermazione che quella voce è sostenuta da un documento di un terzo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable riconduce la prevedibilità delle penali del cliente finale alle premesse del contratto, che danno atto della destinazione della linea e dell'esistenza di penali.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la prevedibilità delle penali del cliente finale alle premesse del contratto, che danno atto della destinazione della linea e dell'esistenza di penali.\nPASS se: compare il riferimento alla premessa del contratto sulla destinazione della linea al contratto con il cliente finale.\nFAIL se: la prevedibilità è ricondotta ad altro, oppure non è affrontata.\nFonte di authoring: contratto, premessa C",
+      "pass_condition": "compare il riferimento alla premessa del contratto sulla destinazione della linea al contratto con il cliente finale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 96.400 euro come parte della fattura di ripristino riferita a interventi richiesti dal committente ed estranei ai difetti dedotti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 96.400 euro come parte della fattura di ripristino riferita a interventi richiesti dal committente ed estranei ai difetti dedotti.\nPASS se: compare l'importo di 96.400 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: fattura n. 214, righe 4 e 5",
+      "pass_condition": "compare l'importo di 96.400 euro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che le righe della fattura relative al sistema di regolazione automatica della tensione del film e alla modifica del nastro per il nuovo formato sono estranee ai difetti dedotti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che le righe della fattura relative al sistema di regolazione automatica della tensione del film e alla modifica del nastro per il nuovo formato sono estranee ai difetti dedotti.\nPASS se: compaiono entrambe le voci come estranee.\nFAIL se: è indicata una sola delle due voci, oppure nessuna.\nFonte di authoring: fattura n. 214, righe 4 e 5",
+      "pass_condition": "compaiono entrambe le voci come estranee.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 191.200 euro come parte della fattura di ripristino riferibile al fermo della linea.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 191.200 euro come parte della fattura di ripristino riferibile al fermo della linea.\nPASS se: compare l'importo di 191.200 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: fattura n. 214, righe 1, 2 e 3",
+      "pass_condition": "compare l'importo di 191.200 euro.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'esposizione ricostruita supera il massimale contrattuale e che quest'ultimo la contiene.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'esposizione ricostruita supera il massimale contrattuale e che quest'ultimo la contiene.\nPASS se: compare l'affermazione che il massimale è inferiore all'esposizione ricostruita e che opera come limite.\nFAIL se: l'affermazione non compare, oppure il massimale è applicato prima della ricostruzione voce per voce.\nFonte di authoring: contratto, art. 10.2",
+      "pass_condition": "compare l'affermazione che il massimale è inferiore all'esposizione ricostruita e che opera come limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il massimale e le esclusioni non operano in caso di dolo o di colpa grave.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il massimale e le esclusioni non operano in caso di dolo o di colpa grave.\nPASS se: compare l'affermazione che le limitazioni non operano in caso di dolo o colpa grave.\nFAIL se: l'affermazione non compare, oppure il massimale è presentato come operante in ogni caso.\nFonte di authoring: contratto, art. 10.3; art. 1229 c.c.",
+      "pass_condition": "compare l'affermazione che le limitazioni non operano in caso di dolo o colpa grave.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable individua nel riconoscimento, contenuto nel rapporto di intervento del novembre 2033, di un difetto di progetto comune alla serie e già oggetto di una modifica rilasciata dall'ufficio tecnico, l'elemento su cui la controparte",
+      "match_criteria": "Oggetto del criterio: Il deliverable individua nel riconoscimento, contenuto nel rapporto di intervento del novembre 2033, di un difetto di progetto comune alla serie e già oggetto di una modifica rilasciata dall'ufficio tecnico, l'elemento su cui la controparte può fondare l'eccezione di colpa grave.\nPASS se: compare il collegamento fra quel rapporto e il rischio che il massimale sia superato.\nFAIL se: il collegamento non compare.\nFonte di authoring: rapporto del 14 novembre 2033, punto 3; contratto, art. 10.3",
+      "pass_condition": "compare il collegamento fra quel rapporto e il rischio che il massimale sia superato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il messaggio del direttore commerciale del 24 maggio 2034 espone la società, in quanto contiene un'offerta economica e un'ammissione sui difetti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il messaggio del direttore commerciale del 24 maggio 2034 espone la società, in quanto contiene un'offerta economica e un'ammissione sui difetti.\nPASS se: compare l'affermazione che quel messaggio è un elemento a nostro sfavore o un rischio.\nFAIL se: l'affermazione non compare, oppure il messaggio non è esaminato.\nFonte di authoring: email del 24 maggio 2034",
+      "pass_condition": "compare l'affermazione che quel messaggio è un elemento a nostro sfavore o un rischio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable qualifica il messaggio come possibile riconoscimento del debito o come dichiarazione utilizzabile contro la società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il messaggio come possibile riconoscimento del debito o come dichiarazione utilizzabile contro la società.\nPASS se: compare, riferita a quel messaggio, una fra: «riconoscimento», «riconoscimento del debito», «ammissione», «dichiarazione utilizzabile contro di noi», «confessione stragiudiziale».\nFAIL se: il messaggio è qualificato come irrilevante, oppure non è qualificato.\nFonte di authoring: email del 24 maggio 2034; art. 2944 c.c.",
+      "pass_condition": "compare, riferita a quel messaggio, una fra: «riconoscimento», «riconoscimento del debito», «ammissione», «dichiarazione utilizzabile contro di noi», «confessione stragiudiziale».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni la circoscrizione degli effetti del messaggio e il divieto che proposte transattive siano formulate da funzioni diverse da quella legale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni la circoscrizione degli effetti del messaggio e il divieto che proposte transattive siano formulate da funzioni diverse da quella legale.\nPASS se: compare l'azione di chiarire alla controparte la portata del messaggio o di riservare alla funzione legale ogni contatto sulla vertenza.\nFAIL se: l'azione non compare.\nFonte di authoring: email del 24 maggio 2034",
+      "pass_condition": "compare l'azione di chiarire alla controparte la portata del messaggio o di riservare alla funzione legale ogni contatto sulla vertenza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che il messaggio sia privo di rilievo perché proveniente da una funzione priva del potere di impegnare la società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il messaggio sia privo di rilievo perché proveniente da una funzione priva del potere di impegnare la società.\nPASS se: non compare l'affermazione che il messaggio è irrilevante per difetto di poteri.\nFAIL se: compare quell'affermazione.\nÈ indifferente: l'indicazione del difetto di poteri come argomento da spendere, purché non presentato come risolutivo.\nFonte di authoring: email del 24 maggio 2034",
+      "pass_condition": "non compare l'affermazione che il messaggio è irrilevante per difetto di poteri.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica 37.200 euro come penale maturata per il ritardo nella consegna.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica 37.200 euro come penale maturata per il ritardo nella consegna.\nPASS se: compare l'importo di 37.200 euro.\nFAIL se: compare un importo diverso, oppure l'importo non compare.\nFonte di authoring: 3 settimane compiute allo 0,5% di 2.480.000",
+      "pass_condition": "compare l'importo di 37.200 euro.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la penale è per contratto l'unico rimedio spettante al committente per il ritardo nella consegna.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la penale è per contratto l'unico rimedio spettante al committente per il ritardo nella consegna.\nPASS se: compare l'affermazione che la penale esclude ogni ulteriore pretesa risarcitoria per il ritardo.\nFAIL se: l'affermazione non compare.\nFonte di authoring: contratto, art. 6.3",
+      "pass_condition": "compare l'affermazione che la penale esclude ogni ulteriore pretesa risarcitoria per il ritardo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica il 12 luglio 2034 come data di scadenza del termine assegnato dalla diffida.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 12 luglio 2034 come data di scadenza del termine assegnato dalla diffida.\nPASS se: compare la data del 12 luglio 2034.\nFAIL se: compare una data diversa, oppure la data non compare.\nFonte di authoring: 30 giorni dal 12 giugno 2034; diffida, punto 7",
+      "pass_condition": "compare la data del 12 luglio 2034.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti il componente sostituito nel gennaio 2034, che il consulente della controparte dà atto di non avere potuto esaminare.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti il componente sostituito nel gennaio 2034, che il consulente della controparte dà atto di non avere potuto esaminare.\nPASS se: compare l'indicazione che il componente non è stato conservato o non è disponibile.\nFAIL se: l'indicazione non compare.\nFonte di authoring: relazione tecnica di parte, punto 3",
+      "pass_condition": "compare l'indicazione che il componente non è stato conservato o non è disponibile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi mancanti la documentazione degli ordini asseritamente non evasi e dei relativi margini.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi mancanti la documentazione degli ordini asseritamente non evasi e dei relativi margini.\nPASS se: compare l'indicazione che quella documentazione manca o non è allegata.\nFAIL se: l'indicazione non compare.\nFonte di authoring: diffida, punto 6, lett. d ed elenco degli allegati",
+      "pass_condition": "compare l'indicazione che quella documentazione manca o non è allegata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra gli elementi da acquisire o da conservare i dati di funzionamento registrati dalla linea.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra gli elementi da acquisire o da conservare i dati di funzionamento registrati dalla linea.\nPASS se: compare il riferimento allo storico eventi, ai dati di macchina o ai log della linea.\nFAIL se: il riferimento non compare.\nFonte di authoring: rapporto del 19 aprile 2034, allegati; relazione di parte, punto 1",
+      "pass_condition": "compare il riferimento allo storico eventi, ai dati di macchina o ai log della linea.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che la pretesa non sia valutabile in assenza di una consulenza tecnica disposta da un giudice o da un arbitro.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la pretesa non sia valutabile in assenza di una consulenza tecnica disposta da un giudice o da un arbitro.\nPASS se: non compare l'affermazione che nulla può essere concluso senza una consulenza tecnica d'ufficio.\nFAIL se: compare quell'affermazione.\nFonte di authoring: matrice probatoria",
+      "pass_condition": "non compare l'affermazione che nulla può essere concluso senza una consulenza tecnica d'ufficio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni la risposta alla diffida entro la scadenza del termine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni la risposta alla diffida entro la scadenza del termine.\nPASS se: compare l'azione di rispondere alla diffida, con l'indicazione del termine.\nFAIL se: l'azione non compare, oppure è priva di termine.\nFonte di authoring: diffida, punto 7",
+      "pass_condition": "compare l'azione di rispondere alla diffida, con l'indicazione del termine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni la richiesta alla controparte dei documenti mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni la richiesta alla controparte dei documenti mancanti.\nPASS se: compare l'azione di chiedere alla controparte la documentazione a sostegno delle voci non documentate.\nFAIL se: l'azione non compare.\nFonte di authoring: diffida, elenco degli allegati",
+      "pass_condition": "compare l'azione di chiedere alla controparte la documentazione a sostegno delle voci non documentate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica fra le azioni l'incarico a un tecnico di fiducia o la valutazione di un accertamento tecnico preventivo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica fra le azioni l'incarico a un tecnico di fiducia o la valutazione di un accertamento tecnico preventivo.\nPASS se: compare l'azione di far verificare le conclusioni tecniche o di attivare un accertamento tecnico prima che la linea sia ulteriormente modificata.\nFAIL se: l'azione non compare.\nFonte di authoring: relazione tecnica di parte; rapporti di intervento",
+      "pass_condition": "compare l'azione di far verificare le conclusioni tecniche o di attivare un accertamento tecnico prima che la linea sia ulteriormente modificata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che la relazione tecnica del consulente della controparte sia inutilizzabile o priva di valore in quanto redatta fuori dal contraddittorio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la relazione tecnica del consulente della controparte sia inutilizzabile o priva di valore in quanto redatta fuori dal contraddittorio.\nPASS se: non compare l'affermazione che la relazione è inutilizzabile, inammissibile o priva di valore.\nFAIL se: compare quell'affermazione.\nÈ indifferente: la contestazione delle conclusioni della relazione e il rilievo dei limiti che essa stessa dichiara.\nFonte di authoring: relazione tecnica di parte, punto 1",
+      "pass_condition": "non compare l'affermazione che la relazione è inutilizzabile, inammissibile o priva di valore.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non eccepisce che il pagamento del saldo senza riserve abbia estinto le pretese del committente.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non eccepisce che il pagamento del saldo senza riserve abbia estinto le pretese del committente.\nPASS se: non compare l'eccezione fondata sul pagamento del saldo senza riserve.\nFAIL se: compare l'affermazione che il pagamento del saldo ha estinto o precluso le pretese.\nFonte di authoring: contratto, art. 3.3",
+      "pass_condition": "non compare l'eccezione fondata sul pagamento del saldo senza riserve.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non eccepisce l'invalidità o l'inefficacia della diffida per effetto della clausola compromissoria.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non eccepisce l'invalidità o l'inefficacia della diffida per effetto della clausola compromissoria.\nPASS se: non compare l'eccezione di invalidità della diffida fondata sulla clausola arbitrale.\nFAIL se: compare quell'eccezione.\nÈ indifferente: l'indicazione della clausola arbitrale come sede della futura controversia.\nFonte di authoring: contratto, art. 14.2",
+      "pass_condition": "non compare l'eccezione di invalidità della diffida fondata sulla clausola arbitrale.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta il ritardo nella consegna come voce di rischio ulteriore rispetto alla penale già applicata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta il ritardo nella consegna come voce di rischio ulteriore rispetto alla penale già applicata.\nPASS se: il ritardo non compare fra i rischi o fra le voci di esposizione.\nFAIL se: il ritardo è presentato come rischio ulteriore o come voce di esposizione.\nFonte di authoring: contratto, art. 6.3; verbale di avviamento, premessa b",
+      "pass_condition": "il ritardo non compare fra i rischi o fra le voci di esposizione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta le riserve apposte nel verbale di avviamento come indice di un collaudo non superato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta le riserve apposte nel verbale di avviamento come indice di un collaudo non superato.\nPASS se: non compare l'affermazione che il collaudo non è stato superato o che le riserve incidono sulle prestazioni.\nFAIL se: compare quell'affermazione.\nFonte di authoring: verbale di avviamento, punti 3 e 4",
+      "pass_condition": "non compare l'affermazione che il collaudo non è stato superato o che le riserve incidono sulle prestazioni.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta l'esito delle prove prestazionali del 4 novembre 2033 come elemento sfavorevole alla società.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta l'esito delle prove prestazionali del 4 novembre 2033 come elemento sfavorevole alla società.\nPASS se: il collaudo non compare fra i punti di debolezza.\nFAIL se: il collaudo è presentato come punto di debolezza o come elemento a sfavore.\nFonte di authoring: verbale di avviamento, punti 2 e 3",
+      "pass_condition": "il collaudo non compare fra i punti di debolezza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come rischio la clausola che esclude il lucro cessante e i danni indiretti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rischio la clausola che esclude il lucro cessante e i danni indiretti.\nPASS se: quella clausola non compare fra i rischi.\nFAIL se: la clausola è presentata come rischio o come criticità.\nFonte di authoring: contratto, art. 10.1",
+      "pass_condition": "quella clausola non compare fra i rischi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che l'eccezione di decadenza sarà accolta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'eccezione di decadenza sarà accolta.\nPASS se: non compare l'affermazione che l'eccezione sarà accolta o che la controparte perderà su quel punto.\nFAIL se: compare quell'affermazione.\nFonte di authoring: contratto, art. 9.3; art. 2965 c.c.",
+      "pass_condition": "non compare l'affermazione che l'eccezione sarà accolta o che la controparte perderà su quel punto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che la controversia si chiuderà a una determinata cifra o che la controparte rinuncerà alle proprie pretese.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che la controversia si chiuderà a una determinata cifra o che la controparte rinuncerà alle proprie pretese.\nPASS se: non compare l'affermazione che la vertenza si chiuderà a una cifra determinata o che la controparte rinuncerà.\nFAIL se: compare quell'affermazione.\nÈ indifferente: l'indicazione di un intervallo di riferimento per una eventuale trattativa, purché presentato come tale.\nFonte di authoring: -",
+      "pass_condition": "non compare l'affermazione che la vertenza si chiuderà a una cifra determinata o che la controparte rinuncerà.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come rilievo la certificazione di qualità del fornitore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come rilievo la certificazione di qualità del fornitore.\nPASS se: la certificazione di qualità non compare fra i rilievi.\nFAIL se: la certificazione di qualità è indicata come rilievo o come rischio.\nFonte di authoring: -",
+      "pass_condition": "la certificazione di qualità non compare fra i rilievi.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica la differenza fra l'importo richiesto e l'esposizione stimata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica la differenza fra l'importo richiesto e l'esposizione stimata.\nPASS se: compare il valore 2.868.000 riferito a quella differenza.\nFAIL se: compare un valore diverso, oppure la differenza non è indicata.\nFonte di authoring: 3.240.000 - 372.000",
+      "pass_condition": "compare il valore 2.868.000 riferito a quella differenza.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable indica la quota percentuale della richiesta priva di riscontro documentale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica la quota percentuale della richiesta priva di riscontro documentale.\nPASS se: compare il valore 59,26 per cento, oppure 59,26%.\nFAIL se: compare un valore diverso, oppure la quota non è indicata.\nFonte di authoring: 1.920.000 / 3.240.000",
+      "pass_condition": "compare il valore 59,26 per cento, oppure 59,26%.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable applica il massimale dopo avere ricostruito l'esposizione voce per voce, e non come riduzione diretta dell'importo richiesto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica il massimale dopo avere ricostruito l'esposizione voce per voce, e non come riduzione diretta dell'importo richiesto.\nPASS se: compare la sequenza: ricostruzione voce per voce, somma, applicazione del massimale.\nFAIL se: il massimale è applicato direttamente all'importo richiesto, oppure l'ordine dei passaggi non è esplicitato.\nFonte di authoring: contratto, art. 10.2",
+      "pass_condition": "compare la sequenza: ricostruzione voce per voce, somma, applicazione del massimale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non presenta l'esposizione come risultato della sottrazione dall'importo richiesto delle sole voci contestate, senza ricostruzione voce per voce.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta l'esposizione come risultato della sottrazione dall'importo richiesto delle sole voci contestate, senza ricostruzione voce per voce.\nPASS se: non compare un calcolo che parta da 3.240.000 euro e sottragga le voci contestate.\nFAIL se: l'esposizione è presentata come differenza fra l'importo richiesto e le voci contestate.\nFonte di authoring: matrice probatoria",
+      "pass_condition": "non compare un calcolo che parta da 3.240.000 euro e sottragga le voci contestate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_matrix.md"
+      ],
+      "title": "Il deliverable non fa decorrere il termine di denuncia dell'episodio di gennaio dalla data del rapporto di intervento anziché dalla data della scoperta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non fa decorrere il termine di denuncia dell'episodio di gennaio dalla data del rapporto di intervento anziché dalla data della scoperta.\nPASS se: non compare l'indicazione che il termine decorre dal 12 gennaio 2034.\nFAIL se: il termine è fatto decorrere dalla data del rapporto di intervento.\nFonte di authoring: contratto, art. 9.3",
+      "pass_condition": "non compare l'indicazione che il termine decorre dal 12 gennaio 2034.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": null
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

@@ -1,0 +1,786 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-002",
+  "title": "Insolvenza. Termini per l'opposizione allo stato passivo e per l'impugnazione del decreto",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 48,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable è un file documento scaricabile (.pdf o .docx).",
+      "pass_condition": "è consegnato un file documento scaricabile con estensione .pdf o .docx.",
+      "fail_condition": "non è consegnato un file documento scaricabile, oppure il file ha un’estensione diversa da .pdf o .docx.",
+      "indifferent": "Il contenuto del memo e il nome del file.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [valore] il deliverable è un file documento scaricabile (.pdf o .docx)."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nel deliverable compaiono due date indicate come scadenza, una per l'opposizione allo stato passivo e una per l'impugnazione del decreto.",
+      "pass_condition": "compaiono due date di scadenza, ciascuna associata senza ambiguità al proprio rimedio: una all’opposizione allo stato passivo e una all’impugnazione del decreto.",
+      "fail_condition": "manca una delle due scadenze, una data è associata al rimedio sbagliato, oppure una stessa data o più date sono presentate come scadenza per lo stesso rimedio senza chiarire quale valga.",
+      "indifferent": "La forma di esposizione delle due scadenze.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [valore] nel deliverable compaiono due date indicate come scadenza, una per l'opposizione allo stato passivo e una per l'impugnazione del decreto."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata porta il riferimento all'atto del fascicolo da cui è ricavata.",
+      "pass_condition": "ogni data ripresa dal fascicolo è accompagnata dal riferimento all'atto da cui è ricavata, e ogni data calcolata indica l'atto da cui parte il calcolo.",
+      "fail_condition": "anche una sola data ripresa dal fascicolo o calcolata è priva del riferimento all'atto.",
+      "indifferent": "la forma del rinvio (nome del file, numero o titolo del documento) e la sua collocazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] ogni data indicata porta il riferimento all'atto del fascicolo da cui è ricavata."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata porta il riferimento alla norma su cui si basa, con articolo e comma.",
+      "pass_condition": "ogni scadenza o termine indicato riporta la norma su cui si basa, con articolo e, se l'articolo è diviso in commi, comma.",
+      "fail_condition": "anche un solo termine è privo della norma, oppure la norma è citata senza articolo o senza comma.",
+      "indifferent": "le date di puro fatto (per esempio una ricezione o una comunicazione), che non si basano su una norma; la forma della citazione; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] ogni data indicata porta il riferimento alla norma su cui si basa, con articolo e comma."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non cita norme fuori dall'elenco chiuso del reference pack.",
+      "pass_condition": "ogni norma citata appartiene all'elenco del reference pack: D.Lgs. 14/2019 (CCII), artt. 205, 206 e 207; codice di procedura civile, artt. 155 e 327; R.D. 267/1942, artt. 98 e 99, soltanto come disciplina previgente. Commi di questi articoli ammessi; nessuna giurisprudenza.",
+      "fail_condition": "compare anche una sola norma o decisione fuori da questo elenco, anche come ipotesi o esempio, oppure gli artt. 98 e 99 della legge fallimentare sono presentati come disciplina vigente.",
+      "indifferent": "I riferimenti agli atti e ai documenti numerati del fascicolo non sono norme.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.5 [assenza] nessun riferimento normativo fuori dall'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il rimedio contro il decreto di esecutività dello stato passivo come opposizione proposta con ricorso al tribunale in composizione collegiale.",
+      "pass_condition": "compare una fra: «opposizione allo stato passivo» con indicazione del tribunale in composizione collegiale, «ricorso al tribunale in composizione collegiale», «opposizione con ricorso al collegio».",
+      "fail_condition": "il rimedio è qualificato come reclamo al giudice delegato, come impugnazione dei crediti ammessi, come domanda tardiva, oppure non è nominato.",
+      "indifferent": "la menzione del contenuto della domanda di ammissione.",
+      "source": "artt. 206, co. 2 e 207 CCII",
+      "severity": "alta",
+      "raw_text": "B.1 rimedio del primo anello [issue: I-01] [tipo: qualificazione]\nVerifica  il deliverable qualifica il rimedio contro il decreto di esecutività dello stato passivo come opposizione proposta con ricorso al tribunale in composizione collegiale.\nPass se  compare una fra: «opposizione allo stato passivo» con indicazione del tribunale in composizione collegiale, «ricorso al tribunale in composizione collegiale», «opposizione con ricorso al collegio».\nFail se  il rimedio è qualificato come reclamo al giudice delegato, come impugnazione dei crediti ammessi, come domanda tardiva, oppure non è nominato.\nIndifferente  la menzione del contenuto della domanda di ammissione.\n—— non passa al judge ——\nFonte  artt. 206, co. 2 e 207 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica gli artt. 98 e 99 della legge fallimentare come disciplina applicabile.",
+      "pass_condition": "quegli articoli non compaiono, oppure compaiono con la qualificazione di disciplina previgente, abrogata o precedente storico.",
+      "fail_condition": "gli artt. 98 o 99 l.fall. sono indicati come norme che regolano il termine o il rimedio nel caso concreto.",
+      "indifferent": "il richiamo alla giurisprudenza formatasi sulla legge fallimentare.",
+      "source": "D.Lgs. 14/2019",
+      "severity": "alta",
+      "raw_text": "B.2 disciplina applicabile [issue: I-01] [tipo: assenza]\nVerifica  il deliverable non indica gli artt. 98 e 99 della legge fallimentare come disciplina applicabile.\nPass se  quegli articoli non compaiono, oppure compaiono con la qualificazione di disciplina previgente, abrogata o precedente storico.\nFail se  gli artt. 98 o 99 l.fall. sono indicati come norme che regolano il termine o il rimedio nel caso concreto.\nIndifferente  il richiamo alla giurisprudenza formatasi sulla legge fallimentare.\n—— non passa al judge ——\nFonte  D.Lgs. 14/2019    Gravità  alta"
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la decorrenza del termine di opposizione alla comunicazione eseguita dal curatore ai creditori dopo la dichiarazione di esecutività dello stato passivo.",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «comunicazione del curatore», «PEC del curatore», «ricevuta di avvenuta consegna della comunicazione del curatore».",
+      "fail_condition": "la decorrenza è ricondotta a un altro atto del fascicolo, oppure l'atto di decorrenza non è indicato.",
+      "indifferent": "l'ora della ricevuta di consegna; il richiamo all'art. 205 CCII.",
+      "source": "Allegato 2, doc. 2.2",
+      "severity": "alta",
+      "raw_text": "B.3 dies a quo del primo anello — atto [issue: I-02] [tipo: attribuzione]\nVerifica  il deliverable riconduce la decorrenza del termine di opposizione alla comunicazione eseguita dal curatore ai creditori dopo la dichiarazione di esecutività dello stato passivo.\nPass se  la decorrenza è ricondotta a una fra: «comunicazione del curatore», «PEC del curatore», «ricevuta di avvenuta consegna della comunicazione del curatore».\nFail se  la decorrenza è ricondotta a un altro atto del fascicolo, oppure l'atto di decorrenza non è indicato.\nIndifferente  l'ora della ricevuta di consegna; il richiamo all'art. 205 CCII.\n—— non passa al judge ——\nFonte  Allegato 2, doc. 2.2    Gravità  alta"
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il deposito del decreto in cancelleria del 10 luglio 2026, né il biglietto di cancelleria, come fatto da cui decorre il termine di opposizione.",
+      "pass_condition": "né il deposito del 10 luglio 2026 né il biglietto di cancelleria compaiono come momento di decorrenza dell'opposizione.",
+      "fail_condition": "il termine di opposizione è fatto decorrere dal deposito del decreto o dal biglietto di cancelleria.",
+      "indifferent": "la menzione del deposito nella ricostruzione dei fatti.",
+      "source": "Allegato 3, doc. 3.1",
+      "severity": "alta",
+      "raw_text": "B.4 deposito e biglietto di cancelleria [issue: I-03] [tipo: assenza]\nVerifica  il deliverable non indica il deposito del decreto in cancelleria del 10 luglio 2026, né il biglietto di cancelleria, come fatto da cui decorre il termine di opposizione.\nPass se  né il deposito del 10 luglio 2026 né il biglietto di cancelleria compaiono come momento di decorrenza dell'opposizione.\nFail se  il termine di opposizione è fatto decorrere dal deposito del decreto o dal biglietto di cancelleria.\nIndifferente  la menzione del deposito nella ricostruzione dei fatti.\n—— non passa al judge ——\nFonte  Allegato 3, doc. 3.1    Gravità  alta"
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'email ordinaria del curatore del 9 luglio 2026 come fatto da cui decorre il termine di opposizione.",
+      "pass_condition": "quell'email non compare come momento di decorrenza né come conoscenza rilevante ai fini del termine.",
+      "fail_condition": "il termine è fatto decorrere dall'email del 9 luglio 2026, dalla sua lettura o dal suo inoltro.",
+      "indifferent": "la menzione dell'email nella ricostruzione dei fatti.",
+      "source": "Allegato 2, doc. 2.1",
+      "severity": "alta",
+      "raw_text": "B.5 email ordinaria del curatore [issue: I-04] [tipo: assenza]\nVerifica  il deliverable non indica l'email ordinaria del curatore del 9 luglio 2026 come fatto da cui decorre il termine di opposizione.\nPass se  quell'email non compare come momento di decorrenza né come conoscenza rilevante ai fini del termine.\nFail se  il termine è fatto decorrere dall'email del 9 luglio 2026, dalla sua lettura o dal suo inoltro.\nIndifferente  la menzione dell'email nella ricostruzione dei fatti.\n—— non passa al judge ——\nFonte  Allegato 2, doc. 2.1    Gravità  alta"
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la posta certificata del 20 luglio 2026 riapre, rinnova o sposta il termine di opposizione.",
+      "pass_condition": "non compare l'affermazione che il termine decorre, decorre di nuovo o si sposta per effetto della comunicazione del 20 luglio 2026.",
+      "fail_condition": "al reinvio è attribuito l'effetto di far decorrere, riaprire o spostare il termine.",
+      "indifferent": "il rilievo che il contenuto del reinvio è identico a quello della comunicazione del 13 luglio 2026.",
+      "source": "Allegato 2, doc. 2.3",
+      "severity": "alta",
+      "raw_text": "B.6 reinvio della comunicazione [issue: I-05] [tipo: assenza]\nVerifica  il deliverable non afferma che la posta certificata del 20 luglio 2026 riapre, rinnova o sposta il termine di opposizione.\nPass se  non compare l'affermazione che il termine decorre, decorre di nuovo o si sposta per effetto della comunicazione del 20 luglio 2026.\nFail se  al reinvio è attribuito l'effetto di far decorrere, riaprire o spostare il termine.\nIndifferente  il rilievo che il contenuto del reinvio è identico a quello della comunicazione del 13 luglio 2026.\n—— non passa al judge ——\nFonte  Allegato 2, doc. 2.3    Gravità  alta"
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'8 luglio 2026 come fatto da cui decorre il termine di opposizione.",
+      "pass_condition": "la data dell'8 luglio 2026 non compare come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dall'udienza di verifica o dall'adozione del decreto.",
+      "indifferent": "la menzione dell'8 luglio 2026 come data dell'udienza.",
+      "source": "Allegato 1",
+      "severity": "alta",
+      "raw_text": "B.7 udienza di verifica [issue: I-06] [tipo: assenza]\nVerifica  il deliverable non indica l'8 luglio 2026 come fatto da cui decorre il termine di opposizione.\nPass se  la data dell'8 luglio 2026 non compare come momento di decorrenza.\nFail se  il termine è fatto decorrere dall'udienza di verifica o dall'adozione del decreto.\nIndifferente  la menzione dell'8 luglio 2026 come data dell'udienza.\n—— non passa al judge ——\nFonte  Allegato 1    Gravità  alta"
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il termine per l'opposizione come perentorio.",
+      "pass_condition": "compare, riferita a quel termine, una fra: «perentorio», «a pena di decadenza», «il cui decorso comporta decadenza».",
+      "fail_condition": "il termine è qualificato come ordinatorio, prorogabile o suscettibile di rimessione in termini, oppure la qualificazione non compare.",
+      "indifferent": "la citazione dell'art. 207, co. 1 CCII.",
+      "source": "art. 207, co. 1 CCII",
+      "severity": "alta",
+      "raw_text": "B.8 perentorietà [issue: I-07] [tipo: qualificazione]\nVerifica  il deliverable qualifica il termine per l'opposizione come perentorio.\nPass se  compare, riferita a quel termine, una fra: «perentorio», «a pena di decadenza», «il cui decorso comporta decadenza».\nFail se  il termine è qualificato come ordinatorio, prorogabile o suscettibile di rimessione in termini, oppure la qualificazione non compare.\nIndifferente  la citazione dell'art. 207, co. 1 CCII.\n—— non passa al judge ——\nFonte  art. 207, co. 1 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che l'opposizione depositata l'11 settembre 2026 è tempestiva.",
+      "pass_condition": "compare, riferita a quel deposito, una fra: «tempestiva», «nei termini», «entro il termine», «ammissibile quanto al termine».",
+      "fail_condition": "la tempestività non è affermata, oppure è lasciata indecisa.",
+      "indifferent": "la menzione dei giorni di margine rispetto alla scadenza.",
+      "source": "Allegato 4, doc. 4.1",
+      "severity": "alta",
+      "raw_text": "B.9 tempestività dell'opposizione [issue: I-08] [tipo: presenza]\nVerifica  il deliverable afferma che l'opposizione depositata l'11 settembre 2026 è tempestiva.\nPass se  compare, riferita a quel deposito, una fra: «tempestiva», «nei termini», «entro il termine», «ammissibile quanto al termine».\nFail se  la tempestività non è affermata, oppure è lasciata indecisa.\nIndifferente  la menzione dei giorni di margine rispetto alla scadenza.\n—— non passa al judge ——\nFonte  Allegato 4, doc. 4.1    Gravità  alta"
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'opposizione è tardiva o inammissibile per decorso del termine.",
+      "pass_condition": "non compare l'affermazione che l'opposizione è tardiva, decaduta o inammissibile per superamento del termine.",
+      "fail_condition": "l'opposizione è dichiarata tardiva o inammissibile per decorso del termine.",
+      "indifferent": "l'esito di merito sfavorevole dell'opposizione.",
+      "source": "Allegato 4, doc. 4.1",
+      "severity": "alta",
+      "raw_text": "B.10 tempestività — divieto opposto [issue: I-08] [tipo: assenza]\nVerifica  il deliverable non afferma che l'opposizione è tardiva o inammissibile per decorso del termine.\nPass se  non compare l'affermazione che l'opposizione è tardiva, decaduta o inammissibile per superamento del termine.\nFail se  l'opposizione è dichiarata tardiva o inammissibile per decorso del termine.\nIndifferente  l'esito di merito sfavorevole dell'opposizione.\n—— non passa al judge ——\nFonte  Allegato 4, doc. 4.1    Gravità  alta"
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la notificazione del ricorso al curatore del 1 ottobre 2026 è avvenuta oltre i dieci giorni dalla comunicazione del decreto di fissazione dell'udienza.",
+      "pass_condition": "compare l'indicazione che quella notificazione è avvenuta oltre il termine di dieci giorni.",
+      "fail_condition": "la circostanza non è rilevata, oppure la notificazione è indicata come avvenuta nel termine.",
+      "indifferent": "il numero di giorni di ritardo indicato.",
+      "source": "art. 207, co. 4 CCII; Allegato 4, doc. 4.2 e 4.3",
+      "severity": "alta",
+      "raw_text": "B.11 notificazione tardiva — rilievo [issue: I-09] [tipo: presenza]\nVerifica  il deliverable rileva che la notificazione del ricorso al curatore del 1 ottobre 2026 è avvenuta oltre i dieci giorni dalla comunicazione del decreto di fissazione dell'udienza.\nPass se  compare l'indicazione che quella notificazione è avvenuta oltre il termine di dieci giorni.\nFail se  la circostanza non è rilevata, oppure la notificazione è indicata come avvenuta nel termine.\nIndifferente  il numero di giorni di ritardo indicato.\n—— non passa al judge ——\nFonte  art. 207, co. 4 CCII; Allegato 4, doc. 4.2 e 4.3    Gravità  alta"
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non attribuisce alla notificazione del 1 ottobre 2026 decadenza, inammissibilità o nullità.",
+      "pass_condition": "non compare, riferita a quella notificazione, alcuna fra: decadenza, inammissibilità del ricorso, nullità, improcedibilità.",
+      "fail_condition": "al ritardo nella notificazione è attribuita una di quelle conseguenze.",
+      "indifferent": "il suggerimento di regolarizzare la posizione processuale.",
+      "source": "art. 207, co. 4 CCII",
+      "severity": "alta",
+      "raw_text": "B.12 notificazione tardiva — conseguenze [issue: I-09] [tipo: assenza]\nVerifica  il deliverable non attribuisce alla notificazione del 1 ottobre 2026 decadenza, inammissibilità o nullità.\nPass se  non compare, riferita a quella notificazione, alcuna fra: decadenza, inammissibilità del ricorso, nullità, improcedibilità.\nFail se  al ritardo nella notificazione è attribuita una di quelle conseguenze.\nIndifferente  il suggerimento di regolarizzare la posizione processuale.\n—— non passa al judge ——\nFonte  art. 207, co. 4 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come irregolare l'intervallo tra la notificazione del ricorso e l'udienza.",
+      "pass_condition": "quell'intervallo non compare tra i profili di criticità.",
+      "fail_condition": "l'intervallo è indicato come inferiore al minimo di legge o come irregolarità.",
+      "indifferent": "il rilievo che l'intervallo minimo di trenta giorni è rispettato.",
+      "source": "art. 207, co. 5 CCII",
+      "severity": "media",
+      "raw_text": "B.13 intervallo tra notificazione e udienza [issue: I-09] [tipo: assenza]\nVerifica  il deliverable non segnala come irregolare l'intervallo tra la notificazione del ricorso e l'udienza.\nPass se  quell'intervallo non compare tra i profili di criticità.\nFail se  l'intervallo è indicato come inferiore al minimo di legge o come irregolarità.\nIndifferente  il rilievo che l'intervallo minimo di trenta giorni è rispettato.\n—— non passa al judge ——\nFonte  art. 207, co. 5 CCII    Gravità  media"
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il decreto è stato depositato oltre il termine previsto dall'art. 207, co. 13 CCII.",
+      "pass_condition": "compare l'indicazione che il deposito del decreto è avvenuto oltre quel termine.",
+      "fail_condition": "la circostanza non è rilevata, oppure il deposito è indicato come avvenuto nel termine.",
+      "indifferent": "il numero di giorni indicato.",
+      "source": "art. 207, co. 13 CCII; Allegato 1 e Allegato 4",
+      "severity": "media",
+      "raw_text": "B.14 decreto oltre il termine — rilievo [issue: I-10] [tipo: presenza]\nVerifica  il deliverable rileva che il decreto è stato depositato oltre il termine previsto dall'art. 207, co. 13 CCII.\nPass se  compare l'indicazione che il deposito del decreto è avvenuto oltre quel termine.\nFail se  la circostanza non è rilevata, oppure il deposito è indicato come avvenuto nel termine.\nIndifferente  il numero di giorni indicato.\n—— non passa al judge ——\nFonte  art. 207, co. 13 CCII; Allegato 1 e Allegato 4    Gravità  media"
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il decreto è nullo o invalido per il ritardo nel deposito.",
+      "pass_condition": "non compare, riferita al decreto, alcuna fra: nullità, invalidità, inefficacia per il ritardo.",
+      "fail_condition": "dal ritardo è dedotta la nullità o l'invalidità del decreto.",
+      "indifferent": "la qualificazione del termine come ordinatorio.",
+      "source": "art. 207, co. 13 CCII",
+      "severity": "alta",
+      "raw_text": "B.15 decreto oltre il termine — validità [issue: I-10] [tipo: assenza]\nVerifica  il deliverable non afferma che il decreto è nullo o invalido per il ritardo nel deposito.\nPass se  non compare, riferita al decreto, alcuna fra: nullità, invalidità, inefficacia per il ritardo.\nFail se  dal ritardo è dedotta la nullità o l'invalidità del decreto.\nIndifferente  la qualificazione del termine come ordinatorio.\n—— non passa al judge ——\nFonte  art. 207, co. 13 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il ritardo nel deposito del decreto incide sulla decorrenza del termine per impugnarlo.",
+      "pass_condition": "non compare l'affermazione che il ritardo sposta, sospende o riapre il termine per l'impugnazione, né che consente la rimessione in termini.",
+      "fail_condition": "al ritardo è attribuito un effetto sulla decorrenza del termine di impugnazione o una rimessione in termini.",
+      "indifferent": "nulla.",
+      "source": "art. 207, co. 13 e 14 CCII",
+      "severity": "alta",
+      "raw_text": "B.16 decreto oltre il termine — decorrenza [issue: I-10] [tipo: assenza]\nVerifica  il deliverable non afferma che il ritardo nel deposito del decreto incide sulla decorrenza del termine per impugnarlo.\nPass se  non compare l'affermazione che il ritardo sposta, sospende o riapre il termine per l'impugnazione, né che consente la rimessione in termini.\nFail se  al ritardo è attribuito un effetto sulla decorrenza del termine di impugnazione o una rimessione in termini.\nIndifferente  nulla.\n—— non passa al judge ——\nFonte  art. 207, co. 13 e 14 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il rimedio contro il decreto che decide l'opposizione come ricorso per cassazione.",
+      "pass_condition": "compare una fra: «ricorso per cassazione», «ricorso in Cassazione», «impugnazione dinanzi alla Corte di cassazione».",
+      "fail_condition": "il rimedio non è nominato, oppure è indicato un rimedio diverso.",
+      "indifferent": "la menzione dei motivi di ricorso; la menzione dell'obbligo di difesa tecnica.",
+      "source": "art. 207, co. 14 CCII",
+      "severity": "alta",
+      "raw_text": "B.17 rimedio del secondo anello [issue: I-11] [tipo: qualificazione]\nVerifica  il deliverable qualifica il rimedio contro il decreto che decide l'opposizione come ricorso per cassazione.\nPass se  compare una fra: «ricorso per cassazione», «ricorso in Cassazione», «impugnazione dinanzi alla Corte di cassazione».\nFail se  il rimedio non è nominato, oppure è indicato un rimedio diverso.\nIndifferente  la menzione dei motivi di ricorso; la menzione dell'obbligo di difesa tecnica.\n—— non passa al judge ——\nFonte  art. 207, co. 14 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica come esperibile contro il decreto l'appello o un reclamo.",
+      "pass_condition": "non compare, come rimedio contro il decreto, alcuna fra: appello, reclamo alla corte d'appello, reclamo ex art. 124 CCII, reclamo ex art. 133 CCII, reclamo al collegio.",
+      "fail_condition": "uno di quei rimedi è indicato come esperibile contro il decreto.",
+      "indifferent": "la menzione di quei rimedi per escluderli espressamente.",
+      "source": "art. 207, co. 14 CCII",
+      "severity": "alta",
+      "raw_text": "B.18 rimedi esclusi [issue: I-11] [tipo: assenza]\nVerifica  il deliverable non indica come esperibile contro il decreto l'appello o un reclamo.\nPass se  non compare, come rimedio contro il decreto, alcuna fra: appello, reclamo alla corte d'appello, reclamo ex art. 124 CCII, reclamo ex art. 133 CCII, reclamo al collegio.\nFail se  uno di quei rimedi è indicato come esperibile contro il decreto.\nIndifferente  la menzione di quei rimedi per escluderli espressamente.\n—— non passa al judge ——\nFonte  art. 207, co. 14 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il decreto è inoppugnabile.",
+      "pass_condition": "non compare l'affermazione che contro il decreto non è dato alcun rimedio.",
+      "fail_condition": "il decreto è dichiarato inoppugnabile, definitivo o non impugnabile.",
+      "indifferent": "la precisazione che il decreto non è appellabile.",
+      "source": "art. 207, co. 14 CCII",
+      "severity": "alta",
+      "raw_text": "B.19 decreto non inoppugnabile [issue: I-11] [tipo: assenza]\nVerifica  il deliverable non afferma che il decreto è inoppugnabile.\nPass se  non compare l'affermazione che contro il decreto non è dato alcun rimedio.\nFail se  il decreto è dichiarato inoppugnabile, definitivo o non impugnabile.\nIndifferente  la precisazione che il decreto non è appellabile.\n—— non passa al judge ——\nFonte  art. 207, co. 14 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce la decorrenza del termine per il ricorso per cassazione alla comunicazione della cancelleria del decreto.",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «comunicazione della cancelleria», «biglietto di cancelleria», «comunicazione telematica della cancelleria».",
+      "fail_condition": "la decorrenza è ricondotta a un altro atto, oppure l'atto di decorrenza non è indicato.",
+      "indifferent": "l'ora della comunicazione.",
+      "source": "art. 207, co. 14 CCII; Allegato 3, doc. 3.2",
+      "severity": "alta",
+      "raw_text": "B.20 dies a quo del secondo anello — atto [issue: I-12] [tipo: attribuzione]\nVerifica  il deliverable riconduce la decorrenza del termine per il ricorso per cassazione alla comunicazione della cancelleria del decreto.\nPass se  la decorrenza è ricondotta a una fra: «comunicazione della cancelleria», «biglietto di cancelleria», «comunicazione telematica della cancelleria».\nFail se  la decorrenza è ricondotta a un altro atto, oppure l'atto di decorrenza non è indicato.\nIndifferente  l'ora della comunicazione.\n—— non passa al judge ——\nFonte  art. 207, co. 14 CCII; Allegato 3, doc. 3.2    Gravità  alta"
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il deposito del decreto del 25 gennaio 2027 come fatto da cui decorre il termine per il ricorso per cassazione.",
+      "pass_condition": "la data del 25 gennaio 2027 non compare come momento di decorrenza di quel termine.",
+      "fail_condition": "il termine è fatto decorrere dal deposito del decreto, o da una notificazione a istanza di parte.",
+      "indifferent": "la menzione del 25 gennaio 2027 come data di deposito.",
+      "source": "Allegato 3, doc. 3.2",
+      "severity": "alta",
+      "raw_text": "B.21 secondo anello — decorrenza esclusa [issue: I-12] [tipo: assenza]\nVerifica  il deliverable non indica il deposito del decreto del 25 gennaio 2027 come fatto da cui decorre il termine per il ricorso per cassazione.\nPass se  la data del 25 gennaio 2027 non compare come momento di decorrenza di quel termine.\nFail se  il termine è fatto decorrere dal deposito del decreto, o da una notificazione a istanza di parte.\nIndifferente  la menzione del 25 gennaio 2027 come data di deposito.\n—— non passa al judge ——\nFonte  Allegato 3, doc. 3.2    Gravità  alta"
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la comunicazione della cancelleria rileva come decorrenza per il ricorso per cassazione e non per l'opposizione allo stato passivo.",
+      "pass_condition": "compare l'affermazione che i due termini decorrono da atti diversi, con l'indicazione della comunicazione del curatore per il primo e della comunicazione della cancelleria per il secondo.",
+      "fail_condition": "la stessa comunicazione è indicata come decorrenza per entrambi i termini, oppure la distinzione non compare.",
+      "indifferent": "la spiegazione della ragione normativa della differenza.",
+      "source": "art. 207, co. 1 e 14 CCII",
+      "severity": "alta",
+      "raw_text": "B.22 diversità di regime tra i due anelli [issue: I-12] [tipo: presenza]\nVerifica  il deliverable afferma che la comunicazione della cancelleria rileva come decorrenza per il ricorso per cassazione e non per l'opposizione allo stato passivo.\nPass se  compare l'affermazione che i due termini decorrono da atti diversi, con l'indicazione della comunicazione del curatore per il primo e della comunicazione della cancelleria per il secondo.\nFail se  la stessa comunicazione è indicata come decorrenza per entrambi i termini, oppure la distinzione non compare.\nIndifferente  la spiegazione della ragione normativa della differenza.\n—— non passa al judge ——\nFonte  art. 207, co. 1 e 14 CCII    Gravità  alta"
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta un termine di sei mesi dal deposito del decreto come previsto dal Codice della crisi.",
+      "pass_condition": "il termine di sei mesi non compare, oppure compare qualificato come applicazione analogica dell'art. 327 c.p.c. e dichiarato inoperante nel caso concreto.",
+      "fail_condition": "il termine di sei mesi è attribuito a una previsione del Codice della crisi, oppure è indicato come applicabile nel caso concreto.",
+      "indifferent": "la durata indicata.",
+      "source": "art. 207 CCII; art. 327 c.p.c.",
+      "severity": "media",
+      "raw_text": "B.23 termine lungo [issue: I-13] [tipo: assenza]\nVerifica  il deliverable non presenta un termine di sei mesi dal deposito del decreto come previsto dal Codice della crisi.\nPass se  il termine di sei mesi non compare, oppure compare qualificato come applicazione analogica dell'art. 327 c.p.c. e dichiarato inoperante nel caso concreto.\nFail se  il termine di sei mesi è attribuito a una previsione del Codice della crisi, oppure è indicato come applicabile nel caso concreto.\nIndifferente  la durata indicata.\n—— non passa al judge ——\nFonte  art. 207 CCII; art. 327 c.p.c.    Gravità  media"
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma espressamente che il reclamo alla Corte d'appello di Firenze, indicato dal cliente nell'email del 28 gennaio 2027, non è il rimedio esperibile.",
+      "pass_condition": "compare, riferita a quel reclamo o all'indicazione del cliente, una fra: «non è il rimedio esperibile», «non è corretta», «va corretta», «non è proponibile».",
+      "fail_condition": "l'indicazione del cliente non è menzionata, oppure è confermata, oppure il rimedio corretto è esposto altrove senza alcun riferimento a quell'indicazione.",
+      "indifferent": "il tono della correzione; la menzione della competenza territoriale.",
+      "source": "Allegato 5, doc. 5.2",
+      "severity": "alta",
+      "raw_text": "B.24 impostazione del cliente — rimedio [issue: I-14] [tipo: presenza]\nVerifica  il deliverable afferma espressamente che il reclamo alla Corte d'appello di Firenze, indicato dal cliente nell'email del 28 gennaio 2027, non è il rimedio esperibile.\nPass se  compare, riferita a quel reclamo o all'indicazione del cliente, una fra: «non è il rimedio esperibile», «non è corretta», «va corretta», «non è proponibile».\nFail se  l'indicazione del cliente non è menzionata, oppure è confermata, oppure il rimedio corretto è esposto altrove senza alcun riferimento a quell'indicazione.\nIndifferente  il tono della correzione; la menzione della competenza territoriale.\n—— non passa al judge ——\nFonte  Allegato 5, doc. 5.2    Gravità  alta"
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'indicazione del cliente è corretta perché il termine è comunque di trenta giorni.",
+      "pass_condition": "non compare l'affermazione che la coincidenza della durata rende corretto il rimedio indicato dal cliente.",
+      "fail_condition": "la coincidenza dei trenta giorni è usata per confermare l'impostazione del cliente.",
+      "indifferent": "il rilievo che la durata dei due termini coincide.",
+      "source": "Allegato 5, doc. 5.2",
+      "severity": "media",
+      "raw_text": "B.25 impostazione del cliente — coincidenza della durata [issue: I-14] [tipo: assenza]\nVerifica  il deliverable non afferma che l'indicazione del cliente è corretta perché il termine è comunque di trenta giorni.\nPass se  non compare l'affermazione che la coincidenza della durata rende corretto il rimedio indicato dal cliente.\nFail se  la coincidenza dei trenta giorni è usata per confermare l'impostazione del cliente.\nIndifferente  il rilievo che la durata dei due termini coincide.\n—— non passa al judge ——\nFonte  Allegato 5, doc. 5.2    Gravità  media"
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma espressamente che l'indicazione riferita dal cliente, secondo cui il termine per l'opposizione decorreva dal deposito del decreto in tribunale, è errata.",
+      "pass_condition": "compare, riferita a quella indicazione, una fra: «è errata», «non è corretta», «il termine non decorreva dal deposito».",
+      "fail_condition": "quell'indicazione non è menzionata, oppure è confermata come corretta.",
+      "indifferent": "la menzione del collega che l'aveva data.",
+      "source": "Allegato 5, doc. 5.2",
+      "severity": "alta",
+      "raw_text": "B.26 impostazione del cliente — decorrenza dal deposito [issue: I-14] [tipo: presenza]\nVerifica  il deliverable afferma espressamente che l'indicazione riferita dal cliente, secondo cui il termine per l'opposizione decorreva dal deposito del decreto in tribunale, è errata.\nPass se  compare, riferita a quella indicazione, una fra: «è errata», «non è corretta», «il termine non decorreva dal deposito».\nFail se  quell'indicazione non è menzionata, oppure è confermata come corretta.\nIndifferente  la menzione del collega che l'aveva data.\n—— non passa al judge ——\nFonte  Allegato 5, doc. 5.2    Gravità  alta"
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala l'ora delle ricevute di avvenuta consegna come circostanza che incide sulla decorrenza o sulla scadenza.",
+      "pass_condition": "l'ora delle ricevute non compare tra i profili di criticità.",
+      "fail_condition": "l'ora delle ricevute è indicata come irregolarità o come elemento che sposta la decorrenza.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 2",
+      "severity": "media",
+      "raw_text": "B.27 rumore — ora delle ricevute di consegna [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala l'ora delle ricevute di avvenuta consegna come circostanza che incide sulla decorrenza o sulla scadenza.\nPass se  l'ora delle ricevute non compare tra i profili di criticità.\nFail se  l'ora delle ricevute è indicata come irregolarità o come elemento che sposta la decorrenza.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 2    Gravità  media"
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la richiesta telefonica che ha originato il reinvio della comunicazione come irregolarità.",
+      "pass_condition": "quella richiesta non compare tra i profili di criticità.",
+      "fail_condition": "la richiesta telefonica è indicata come irregolarità o come elemento che incide sul termine.",
+      "indifferent": "la sua menzione come dato di fatto.",
+      "source": "Allegato 2, doc. 2.3",
+      "severity": "bassa",
+      "raw_text": "B.28 rumore — richiesta telefonica [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala la richiesta telefonica che ha originato il reinvio della comunicazione come irregolarità.\nPass se  quella richiesta non compare tra i profili di criticità.\nFail se  la richiesta telefonica è indicata come irregolarità o come elemento che incide sul termine.\nIndifferente  la sua menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegato 2, doc. 2.3    Gravità  bassa"
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come irregolarità la distinzione tra la data della camera di consiglio e quella del deposito del decreto.",
+      "pass_condition": "quella distinzione non compare tra i profili di criticità.",
+      "fail_condition": "la non coincidenza delle due date è indicata come vizio o come irregolarità.",
+      "indifferent": "la menzione di entrambe le date nella ricostruzione.",
+      "source": "Allegato 4",
+      "severity": "media",
+      "raw_text": "B.29 rumore — camera di consiglio [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala come irregolarità la distinzione tra la data della camera di consiglio e quella del deposito del decreto.\nPass se  quella distinzione non compare tra i profili di criticità.\nFail se  la non coincidenza delle due date è indicata come vizio o come irregolarità.\nIndifferente  la menzione di entrambe le date nella ricostruzione.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  media"
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la liquidazione delle spese contenuta nel decreto come irregolarità.",
+      "pass_condition": "la liquidazione delle spese non compare tra i profili di criticità.",
+      "fail_condition": "la liquidazione delle spese è indicata come vizio o come irregolarità.",
+      "indifferent": "la sua menzione come contenuto del decreto.",
+      "source": "Allegato 4",
+      "severity": "bassa",
+      "raw_text": "B.30 rumore — liquidazione delle spese [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala la liquidazione delle spese contenuta nel decreto come irregolarità.\nPass se  la liquidazione delle spese non compare tra i profili di criticità.\nFail se  la liquidazione delle spese è indicata come vizio o come irregolarità.\nIndifferente  la sua menzione come contenuto del decreto.\n—— non passa al judge ——\nFonte  Allegato 4    Gravità  bassa"
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la numerazione degli identificativi di messaggio come irregolarità.",
+      "pass_condition": "gli identificativi di messaggio non compaiono tra i profili di criticità.",
+      "fail_condition": "la numerazione degli identificativi è indicata come irregolarità o come elemento che incide sul termine.",
+      "indifferent": "la loro menzione come dato di fatto.",
+      "source": "Allegati 2 e 3",
+      "severity": "bassa",
+      "raw_text": "B.31 rumore — identificativi di messaggio [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala la numerazione degli identificativi di messaggio come irregolarità.\nPass se  gli identificativi di messaggio non compaiono tra i profili di criticità.\nFail se  la numerazione degli identificativi è indicata come irregolarità o come elemento che incide sul termine.\nIndifferente  la loro menzione come dato di fatto.\n—— non passa al judge ——\nFonte  Allegati 2 e 3    Gravità  bassa"
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come vizio l'avvertimento sui rimedi contenuto nella comunicazione del curatore.",
+      "pass_condition": "quell'avvertimento non compare tra i profili di criticità.",
+      "fail_condition": "l'omessa indicazione della durata del termine nell'avvertimento è indicata come vizio, o come circostanza che sposta o riapre il termine.",
+      "indifferent": "la sua menzione come contenuto della comunicazione.",
+      "source": "Allegato 2, doc. 2.2",
+      "severity": "media",
+      "raw_text": "B.32 rumore — avvertimento sui rimedi [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non segnala come vizio l'avvertimento sui rimedi contenuto nella comunicazione del curatore.\nPass se  quell'avvertimento non compare tra i profili di criticità.\nFail se  l'omessa indicazione della durata del termine nell'avvertimento è indicata come vizio, o come circostanza che sposta o riapre il termine.\nIndifferente  la sua menzione come contenuto della comunicazione.\n—— non passa al judge ——\nFonte  Allegato 2, doc. 2.2    Gravità  media"
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non attribuisce conseguenze processuali all'assenza di un riscontro scritto al messaggio del cliente del 21 luglio 2026.",
+      "pass_condition": "non compare l'affermazione che la mancata risposta incide sulla decorrenza del termine, sulla tempestività dell'opposizione o sulla validità degli atti.",
+      "fail_condition": "alla mancata risposta è attribuito un effetto sui termini o sulla validità degli atti del procedimento.",
+      "indifferent": "il rilievo che il messaggio è rimasto senza riscontro scritto; ogni considerazione sul rapporto professionale.",
+      "source": "Allegato 5, doc. 5.1",
+      "severity": "media",
+      "raw_text": "B.33 rumore — messaggio del cliente senza riscontro [issue: I-15] [tipo: assenza]\nVerifica  il deliverable non attribuisce conseguenze processuali all'assenza di un riscontro scritto al messaggio del cliente del 21 luglio 2026.\nPass se  non compare l'affermazione che la mancata risposta incide sulla decorrenza del termine, sulla tempestività dell'opposizione o sulla validità degli atti.\nFail se  alla mancata risposta è attribuito un effetto sui termini o sulla validità degli atti del procedimento.\nIndifferente  il rilievo che il messaggio è rimasto senza riscontro scritto; ogni considerazione sul rapporto professionale.\n—— non passa al judge ——\nFonte  Allegato 5, doc. 5.1    Gravità  media"
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma l'esistenza di una notificazione del decreto a istanza di parte.",
+      "pass_condition": "non compare l'affermazione che il decreto è stato notificato a istanza di parte.",
+      "fail_condition": "una notificazione del decreto a istanza di parte è data come avvenuta.",
+      "indifferent": "l'indicazione che nel fascicolo non risulta alcuna notificazione a istanza di parte.",
+      "source": "fascicolo",
+      "severity": "alta",
+      "raw_text": "B.34 presunzione — atti non presenti [issue: I-16] [tipo: assenza]\nVerifica  il deliverable non afferma l'esistenza di una notificazione del decreto a istanza di parte.\nPass se  non compare l'affermazione che il decreto è stato notificato a istanza di parte.\nFail se  una notificazione del decreto a istanza di parte è data come avvenuta.\nIndifferente  l'indicazione che nel fascicolo non risulta alcuna notificazione a istanza di parte.\n—— non passa al judge ——\nFonte  fascicolo    Gravità  alta"
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica come scadenza del termine per il ricorso per cassazione una data anteriore al 25 febbraio 2027.",
+      "pass_condition": "nessuna data anteriore al 25 febbraio 2027 è presentata come scadenza di quel termine.",
+      "fail_condition": "è indicata come scadenza una data anteriore al 25 febbraio 2027, anche se giustificata da ragioni di cautela o dall'assenza del cliente dal 10 al 24 febbraio 2027.",
+      "indifferent": "il suggerimento organizzativo di predisporre e sottoscrivere gli atti prima del 10 febbraio 2027, purché la scadenza resti indicata al 25 febbraio 2027.",
+      "source": "Allegato 5, doc. 5.2; decisione #5 metodo",
+      "severity": "media",
+      "raw_text": "B.35 presunzione — nessuna anticipazione prudenziale [issue: I-16] [tipo: assenza]\nVerifica  il deliverable non indica come scadenza del termine per il ricorso per cassazione una data anteriore al 25 febbraio 2027.\nPass se  nessuna data anteriore al 25 febbraio 2027 è presentata come scadenza di quel termine.\nFail se  è indicata come scadenza una data anteriore al 25 febbraio 2027, anche se giustificata da ragioni di cautela o dall'assenza del cliente dal 10 al 24 febbraio 2027.\nIndifferente  il suggerimento organizzativo di predisporre e sottoscrivere gli atti prima del 10 febbraio 2027, purché la scadenza resti indicata al 25 febbraio 2027.\n—— non passa al judge ——\nFonte  Allegato 5, doc. 5.2; decisione #5 metodo    Gravità  media"
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il termine per il ricorso per cassazione è già scaduto.",
+      "pass_condition": "non compare l'affermazione che quel termine è decorso, scaduto o perento.",
+      "fail_condition": "è affermato che il termine è scaduto e che l'impugnazione non è più proponibile.",
+      "indifferent": "l'avvertenza che i tempi sono stretti.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.36 presunzione — termine non scaduto [issue: I-16] [tipo: assenza]\nVerifica  il deliverable non afferma che il termine per il ricorso per cassazione è già scaduto.\nPass se  non compare l'affermazione che quel termine è decorso, scaduto o perento.\nFail se  è affermato che il termine è scaduto e che l'impugnazione non è più proponibile.\nIndifferente  l'avvertenza che i tempi sono stretti.\n—— non passa al judge ——\nFonte  stato del fascicolo alla data di riferimento    Gravità  alta"
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data da cui decorre il termine di opposizione il 13 luglio 2026.",
+      "pass_condition": "la data di decorrenza del termine per l’opposizione allo stato passivo è indicata come 13 luglio 2026.",
+      "fail_condition": "il 13 luglio 2026 manca, è riferito a un evento diverso, oppure è indicata una diversa data di decorrenza per l’opposizione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 [valore] il deliverable indica come data da cui decorre il termine di opposizione il 13 luglio 2026."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data di scadenza del termine di opposizione il 14 settembre 2026.",
+      "pass_condition": "la scadenza del termine per l’opposizione allo stato passivo è indicata come 14 settembre 2026.",
+      "fail_condition": "il 14 settembre 2026 manca, è riferito a un evento diverso, oppure è indicata una diversa scadenza per l’opposizione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 [valore] il deliverable indica come data di scadenza del termine di opposizione il 14 settembre 2026."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica come scadenza del termine di opposizione nessuna fra: 12 agosto 2026, 7 settembre 2026, 8 settembre 2026, 9 settembre 2026, 21 settembre 2026, 30 settembre 2026, 13 ottobre 2026.",
+      "pass_condition": "nessuna delle date 12 agosto 2026, 7 settembre 2026, 8 settembre 2026, 9 settembre 2026, 21 settembre 2026, 30 settembre 2026 e 13 ottobre 2026 è indicata come scadenza del termine di opposizione.",
+      "fail_condition": "anche una sola delle date elencate è indicata come scadenza dell’opposizione, anche come possibilità, esempio o alternativa.",
+      "indifferent": "La menzione delle date per una funzione diversa dalla scadenza dell’opposizione.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.3 [assenza] il deliverable non indica come scadenza del termine di opposizione nessuna fra: 12 agosto 2026, 7 settembre 2026, 8 settembre 2026, 9 settembre 2026, 21 settembre 2026, 30 settembre 2026, 13 ottobre 2026."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data da cui decorre il termine per il ricorso per cassazione il 26 gennaio 2027.",
+      "pass_condition": "la decorrenza del termine per il ricorso per cassazione è indicata come 26 gennaio 2027.",
+      "fail_condition": "il 26 gennaio 2027 manca, è riferito a un evento diverso, oppure è indicata una diversa decorrenza per il ricorso per cassazione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 [valore] il deliverable indica come data da cui decorre il termine per il ricorso per cassazione il 26 gennaio 2027."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come data di scadenza del termine per il ricorso per cassazione il 25 febbraio 2027.",
+      "pass_condition": "la scadenza del termine per il ricorso per cassazione è indicata come 25 febbraio 2027.",
+      "fail_condition": "il 25 febbraio 2027 manca, è riferito a un evento diverso, oppure è indicata una diversa scadenza per il ricorso per cassazione.",
+      "indifferent": "Il formato grafico della data.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 [valore] il deliverable indica come data di scadenza del termine per il ricorso per cassazione il 25 febbraio 2027."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non indica come scadenza del termine per il ricorso per cassazione nessuna fra: 24 febbraio 2027, 27 marzo 2027, 30 marzo 2027, 25 luglio 2027.",
+      "pass_condition": "nessuna delle date 24 febbraio 2027, 27 marzo 2027, 30 marzo 2027 e 25 luglio 2027 è indicata come scadenza del termine per il ricorso per cassazione.",
+      "fail_condition": "anche una sola delle date elencate è indicata come scadenza della cassazione, anche come possibilità, esempio o alternativa.",
+      "indifferent": "La menzione delle date per una funzione diversa dalla scadenza del ricorso per cassazione.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "C.6 [assenza] il deliverable non indica come scadenza del termine per il ricorso per cassazione nessuna fra: 24 febbraio 2027, 27 marzo 2027, 30 marzo 2027, 25 luglio 2027."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "exact_match",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica come tempo residuo alla data di riferimento ventiquattro giorni.",
+      "pass_condition": "il tempo residuo alla data di riferimento del 1 febbraio 2027 è indicato come ventiquattro giorni.",
+      "fail_condition": "il valore ventiquattro giorni manca, è riferito a un termine diverso, oppure è indicata una diversa durata residua.",
+      "indifferent": "Il formato con cui è espresso il numero dei giorni.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 [valore] il deliverable indica come tempo residuo alla data di riferimento ventiquattro giorni.\n\nRaccordo issue → atomi: I-01 (B.1, B.2) · I-02 (B.3, C.1) · I-03 (B.4) · I-04 (B.5) · I-05 (B.6) · I-06 (B.7) · I-07 (B.8) · I-08 (B.9, B.10, C.2, C.3) · I-09 (B.11, B.12, B.13) · I-10 (B.14, B.15, B.16) · I-11 (B.17, B.18, B.19) · I-12 (B.20, B.21, B.22, C.4, C.5, C.6) · I-13 (B.23) · I-14 (B.24, B.25, B.26) · I-15 (B.27–B.33) · I-16 (B.34, B.35, B.36, C.7). Nessun atomo orfano, nessun issue scoperto."
+    }
+  ]
+}

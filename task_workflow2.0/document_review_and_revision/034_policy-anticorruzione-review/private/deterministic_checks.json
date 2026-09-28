@@ -1,0 +1,135 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-034",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "nota_di_review.md"
+  ],
+  "criteria_total": 45,
+  "proposals_count": 5,
+  "proposals": [
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "150"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «150» riferito al limite per singola erogazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-034-C1",
+        "type": "required_regex",
+        "artifact": "nota_di_review.md",
+        "patterns": [
+          "(?:(?<![\\d.,])150(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "25.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «25.000» come soglia della verifica",
+      "combine": "single",
+      "check": {
+        "id": "WF2-034-C2",
+        "type": "required_regex",
+        "artifact": "nota_di_review.md",
+        "patterns": [
+          "(?:(?<![\\d.,])25[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "1.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «1.000» come soglia dell'ospitalita'",
+      "combine": "single",
+      "check": {
+        "id": "WF2-034-C3",
+        "type": "required_regex",
+        "artifact": "nota_di_review.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "trenta giorni",
+        "30 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «trenta giorni» oppure «30 giorni» riferito alla regolarizzazione successiva",
+      "combine": "single",
+      "check": {
+        "id": "WF2-034-C4",
+        "type": "required_regex",
+        "artifact": "nota_di_review.md",
+        "patterns": [
+          "(?:(?:30|trenta)\\s+giorn[oaei]|(?:30|trenta)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "3 dicembre 2032",
+        "03/12/2032"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «3 dicembre 2032» oppure «03/12/2032»",
+      "combine": "single",
+      "check": {
+        "id": "WF2-034-C5",
+        "type": "required_regex",
+        "artifact": "nota_di_review.md",
+        "patterns": [
+          "(?:(?:3°?\\s+dicembre(?:\\s+2032)?|0?3\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2032|0?3\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*32)|(?:3°?\\s+dicembre(?:\\s+2032)?|0?3\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2032|0?3\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*32))"
+        ]
+      }
+    }
+  ]
+}

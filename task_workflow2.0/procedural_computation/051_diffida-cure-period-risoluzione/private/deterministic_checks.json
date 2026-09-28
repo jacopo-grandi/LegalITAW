@@ -1,0 +1,63 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-051",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "contract_deadline_audit.md"
+  ],
+  "criteria_total": 38,
+  "proposals_count": 2,
+  "proposals": [
+    {
+      "criterion_id": "B.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "13 marzo 2031",
+        "13/03/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «13 marzo 2031» come scadenza del termine della clausola 14.2.; compare «13/03/2031» come scadenza del termine della clausola 14.2.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-051-B1",
+        "type": "required_regex",
+        "artifact": "contract_deadline_audit.md",
+        "patterns": [
+          "(?:(?:13°?\\s+marzo(?:\\s+2031)?|0?13\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?13\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31)|(?:13°?\\s+marzo(?:\\s+2031)?|0?13\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?13\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "18 marzo 2031",
+        "18/03/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «18 marzo 2031» come scadenza del termine di quindici giorni.; compare «18/03/2031» come scadenza del termine di quindici giorni.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-051-B4",
+        "type": "required_regex",
+        "artifact": "contract_deadline_audit.md",
+        "patterns": [
+          "(?:(?:18°?\\s+marzo(?:\\s+2031)?|0?18\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?18\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31)|(?:18°?\\s+marzo(?:\\s+2031)?|0?18\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?18\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    }
+  ]
+}

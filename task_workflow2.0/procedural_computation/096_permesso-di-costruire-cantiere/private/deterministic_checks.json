@@ -1,0 +1,133 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-096",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "construction_deadline_audit.md"
+  ],
+  "criteria_total": 48,
+  "proposals_count": 5,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2 dicembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «2 dicembre 2026» come data alla quale l'audit è riferito",
+      "combine": "single",
+      "check": {
+        "id": "WF2-096-A3",
+        "type": "required_regex",
+        "artifact": "construction_deadline_audit.md",
+        "patterns": [
+          "(?:(?:2°?\\s+dicembre(?:\\s+2026)?|0?2\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2026|0?2\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "12 febbraio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «12 febbraio 2027» riferita al termine di inizio dei lavori",
+      "combine": "single",
+      "check": {
+        "id": "WF2-096-C1",
+        "type": "required_regex",
+        "artifact": "construction_deadline_audit.md",
+        "patterns": [
+          "(?:(?:12°?\\s+febbraio(?:\\s+2027)?|0?12\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*2027|0?12\\s*[/.\\-]\\s*0?2\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "11 maggio 2029"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «11 maggio 2029» riferita al termine di ultimazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-096-C2",
+        "type": "required_regex",
+        "artifact": "construction_deadline_audit.md",
+        "patterns": [
+          "(?:(?:11°?\\s+maggio(?:\\s+2029)?|0?11\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2029|0?11\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*29))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "25 maggio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «25 maggio 2027» riferita all'ultimazione programmata",
+      "combine": "single",
+      "check": {
+        "id": "WF2-096-C6",
+        "type": "required_regex",
+        "artifact": "construction_deadline_audit.md",
+        "patterns": [
+          "(?:(?:25°?\\s+maggio(?:\\s+2027)?|0?25\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2027|0?25\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.9",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "240"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare la misura «240» riferita all'incremento della superficie di solaio",
+      "combine": "single",
+      "check": {
+        "id": "WF2-096-C9",
+        "type": "required_regex",
+        "artifact": "construction_deadline_audit.md",
+        "patterns": [
+          "(?:(?<![\\d.,])240(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

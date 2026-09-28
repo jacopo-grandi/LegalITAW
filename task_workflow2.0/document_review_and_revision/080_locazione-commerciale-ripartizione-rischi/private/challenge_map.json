@@ -1,0 +1,174 @@
+{
+  "task_id": "WF2-080",
+  "lato_assistito": "Raventa Retail S.r.l., futura conduttrice di un negozio di proprietà di Borgoluce Immobiliare S.r.l.",
+  "data_di_riferimento": "2029-04-09",
+  "stato_fascicolo": "bozza pre-firma",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Durata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la durata minima del negozio è sei anni",
+      "evidenza": "01_bozza_locazione_via_delle_vele_18.docx, contenuto pertinente a durata",
+      "conseguenza": "la previsione quadriennale va sostituita",
+      "azione": "inserire sei anni dalla consegna",
+      "dato_mancante": "manca la data certa di consegna",
+      "errore_bersaglio": "confermare quattro anni",
+      "fonte": "art. 27 legge 392/1978"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Rinnovo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la cessazione automatica senza rinnovo non riflette il regime applicabile",
+      "evidenza": "01_bozza_locazione_via_delle_vele_18.docx, contenuto pertinente a rinnovo",
+      "conseguenza": "occorre disciplinare rinnovo e diniego",
+      "azione": "coordinare preavvisi e motivi",
+      "dato_mancante": "manca un calendario lavori",
+      "errore_bersaglio": "prevedere cessazione libera del locatore",
+      "fonte": "legge 392/1978"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Recesso conduttore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza esclude il recesso per gravi motivi",
+      "evidenza": "02_registro_trattativa_e_term_sheet.xlsx, contenuto pertinente a recesso conduttore",
+      "conseguenza": "l'esclusione espone la clausola a inefficacia",
+      "azione": "salvare la facoltà legale e negoziare una break option",
+      "dato_mancante": "manca il piano di apertura",
+      "errore_bersaglio": "eliminare ogni uscita",
+      "fonte": "art. 27 legge 392/1978"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "ISTAT",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'aggiornamento annuo ordinario è limitato al settantacinque per cento della variazione",
+      "evidenza": "02_registro_trattativa_e_term_sheet.xlsx, contenuto pertinente a istat",
+      "conseguenza": "la percentuale del cento per cento va ridotta",
+      "azione": "subordinare l'aggiornamento a richiesta",
+      "dato_mancante": "manca indice base",
+      "errore_bersaglio": "mantenere il cento per cento",
+      "fonte": "art. 32 legge 392/1978"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Consegna",
+      "gravita": "alta",
+      "affermazione_richiesta": "il canone decorre dalla consegna con agibilità e impianti funzionanti",
+      "evidenza": "03_email_consegna_lavori_e_titoli.eml, contenuto pertinente a consegna",
+      "conseguenza": "la decorrenza non può restare agganciata alla firma",
+      "azione": "definire condizioni e verbale",
+      "dato_mancante": "manca certificato di agibilità",
+      "errore_bersaglio": "far decorrere il canone dalla sottoscrizione",
+      "fonte": "term sheet; bozza"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Riparazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "le opere strutturali non causate dalla conduttrice restano al locatore",
+      "evidenza": "03_email_consegna_lavori_e_titoli.eml, contenuto pertinente a riparazioni",
+      "conseguenza": "il trasferimento totale altera la ripartizione del rischio",
+      "azione": "separare ordinario, straordinario e danno imputabile",
+      "dato_mancante": "manca verifica della copertura",
+      "errore_bersaglio": "porre ogni costo sulla conduttrice",
+      "fonte": "codice civile; relazione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Autorizzazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "il locatore deve consegnare documenti e prestare cooperazione per i titoli",
+      "evidenza": "04_relazione_verifica_precontrattuale_elvi.pdf, contenuto pertinente a autorizzazioni",
+      "conseguenza": "la conduttrice non controlla documenti proprietari",
+      "azione": "inserire obbligo di cooperazione e long-stop",
+      "dato_mancante": "manca pratica antincendio",
+      "errore_bersaglio": "garantire l'ottenimento di ogni licenza da parte della conduttrice",
+      "fonte": "allegato tecnico"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Deposito",
+      "gravita": "alta",
+      "affermazione_richiesta": "il deposito di nove mensilità è sproporzionato rispetto al term sheet di tre",
+      "evidenza": "04_relazione_verifica_precontrattuale_elvi.pdf, contenuto pertinente a deposito",
+      "conseguenza": "la deviazione va negoziata e resa fruttifera secondo disciplina",
+      "azione": "ripristinare tre mensilità o usare garanzia alternativa",
+      "dato_mancante": "manca testo fideiussione",
+      "errore_bersaglio": "accettare nove mensilità infruttifere",
+      "fonte": "term sheet; legge 392/1978"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Cessione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola non salva il trasferimento insieme all'azienda",
+      "evidenza": "05_nota_negoziale_borgoluce.pdf, contenuto pertinente a cessione",
+      "conseguenza": "il divieto assoluto confligge con il regime speciale",
+      "azione": "inserire la facoltà con comunicazione",
+      "dato_mancante": "manca struttura dell'operazione futura",
+      "errore_bersaglio": "subordinare sempre al consenso",
+      "fonte": "art. 36 legge 392/1978"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Indennità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la rinuncia preventiva all'indennità per perdita di avviamento va eliminata",
+      "evidenza": "05_nota_negoziale_borgoluce.pdf, contenuto pertinente a indennità",
+      "conseguenza": "la rinuncia anticipata può comprimere un diritto indisponibile",
+      "azione": "riservare l'applicazione della legge",
+      "dato_mancante": "manca verifica del contatto con il pubblico",
+      "errore_bersaglio": "mantenere la rinuncia preventiva",
+      "fonte": "artt. 34 e 79 legge 392/1978"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "uso retail",
+      "chiave_nel_criterio": "uso retail",
+      "regola": "La destinazione retail non basta, senza dati sull'attività, a provare il diritto all'indennità finale."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "lavori allestimento",
+      "chiave_nel_criterio": "lavori allestimento",
+      "regola": "I lavori di allestimento della conduttrice non trasferiscono automaticamente i difetti strutturali."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "fideiussione futura",
+      "chiave_nel_criterio": "fideiussione futura",
+      "regola": "Il richiamo a una futura fideiussione non documenta termini e oneri della garanzia."
+    }
+  ],
+  "calcoli": [
+    "2029-04-09"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_bozza_locazione_via_delle_vele_18.docx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_trattativa_e_term_sheet.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_consegna_lavori_e_titoli.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_relazione_verifica_precontrattuale_elvi.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_negoziale_borgoluce.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

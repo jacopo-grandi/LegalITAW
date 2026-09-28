@@ -1,0 +1,122 @@
+{
+  "task_id": "WF2-055",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Indagine interna su un intermediario in una gara pubblica",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2031-05-26",
+  "workflow_family": "dossier_analysis",
+  "subtask": "cross_document_issue_analysis",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "medium",
+  "legal_area": [
+    "Compliance & Investigations",
+    "B. Dossier analysis",
+    "Compliance & Regulatory",
+    "Contenzioso"
+  ],
+  "document_type": "medium",
+  "difficulty": "medium",
+  "estimated_completion_minutes": 90,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "medium",
+    "estimated_minutes": 90,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "dossier_analysis",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: investigation_matrix.md.\n\n# WF2-055 - Struttura del deliverable\n\nProdurre `investigation_matrix.md`. Limite complessivo: 2400 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Perimetro e stato dell'indagine\nOggetto della verifica, valore della commessa, corrispettivo complessivo e sua incidenza.\n\n### 2. Matrice dei rilievi\nUna riga per elemento, con documento di provenienza, qualificazione e azione conseguente; per gli elementi che richiedono l'incrocio, l'indicazione dei documenti.\n\n### 3. Elementi che non costituiscono rilievo\nElementi che sembrano problematici e non lo sono, con la ragione.\n\n### 4. Attendibilita delle fonti\nValore delle risultanze dello screening e limiti dichiarati dal fornitore; natura della procedura interna come fonte.\n\n### 5. Misure conservative, dati mancanti e azioni\nMisure da adottare subito, dati che il fascicolo non prova con i documenti necessari, limite dell'indagine sui documenti disponibili.\n\nOgni conclusione distingue il fatto documentato, la risultanza non verificata, la lacuna e l'azione. Le fonti normative sono soltanto quelle del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "cross_document_reasoning",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_procedura_anticorruzione_interna.pdf",
+    "public/documents/02_contratto_consulenza_intermediario.pdf",
+    "public/documents/03_determina_aggiudicazione.pdf",
+    "public/documents/04_fattura_18_2030_tecnoassist.pdf",
+    "public/documents/05_fattura_04_2031_tecnoassist.pdf",
+    "public/documents/06_estratto_pagamenti_intermediario.csv",
+    "public/documents/07_screening_reputazionale_intermediario.pdf"
+  ],
+  "expected_deliverable": "investigation_matrix.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "cross_document_reasoning",
+    "legal_correctness",
+    "false_positive_control",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

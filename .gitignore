@@ -1,0 +1,22 @@
+# Credenziali
+.env
+.env.*
+!.env.example
+
+# Output delle run
+results/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.venv/
+venv/
+.pytest_cache/
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/

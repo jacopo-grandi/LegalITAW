@@ -1,0 +1,626 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-030",
+  "title": "Assicurativo. Termine di denuncia su polizza D&O in regime claims made",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "fail_condition": "compare un riferimento estraneo all'elenco chiuso.",
+      "indifferent": null,
+      "source": "02_reference_pack.md",
+      "severity": "alta",
+      "raw_text": "A.4 il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.\nissue: A · tipo: assenza · gravità: alta · judge: no · fonte: 02_reference_pack.md\nVerifica: il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.\nPass se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFail se: compare un riferimento estraneo all'elenco chiuso."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica come fatto che fa decorrere il termine la richiesta risarcitoria ricevuta dall'Assicurato.",
+      "pass_condition": "compare l'affermazione che il termine decorre dalla Richiesta di Risarcimento, dalla richiesta risarcitoria oppure dalla lettera ricevuta",
+      "fail_condition": "il termine e' fatto decorrere dai fatti contestati o da un altro evento.",
+      "indifferent": null,
+      "source": "condizioni di polizza, definizioni e art. 3",
+      "severity": "alta",
+      "raw_text": "B.1 il deliverable qualifica come fatto che fa decorrere il termine la richiesta risarcitoria ricevuta dall'Assicurato.\nissue: I-01 · tipo: qualificazione · gravità: alta · judge: sì · fonte: condizioni di polizza, definizioni e art. 3\nVerifica: il deliverable qualifica come fatto che fa decorrere il termine la richiesta risarcitoria ricevuta dall'Assicurato.\nPass se: compare l'affermazione che il termine decorre dalla Richiesta di Risarcimento, dalla richiesta risarcitoria oppure dalla lettera ricevuta\nFail se: il termine e' fatto decorrere dai fatti contestati o da un altro evento."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce la data di decorrenza all'avviso di ricevimento della raccomandata.",
+      "pass_condition": "la data e' agganciata all'avviso di ricevimento, alla ricevuta di consegna oppure alla cartolina di ritorno",
+      "fail_condition": "la data non e' agganciata ad alcun documento.",
+      "indifferent": null,
+      "source": "lettera del 13 gennaio 2027 con avviso di ricevimento",
+      "severity": "alta",
+      "raw_text": "B.2 il deliverable riconduce la data di decorrenza all'avviso di ricevimento della raccomandata.\nissue: I-02 · tipo: attribuzione · gravità: alta · judge: sì · fonte: lettera del 13 gennaio 2027 con avviso di ricevimento\nVerifica: il deliverable riconduce la data di decorrenza all'avviso di ricevimento della raccomandata.\nPass se: la data e' agganciata all'avviso di ricevimento, alla ricevuta di consegna oppure alla cartolina di ritorno\nFail se: la data non e' agganciata ad alcun documento."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che alla data dell'8 febbraio 2027 il termine per la denuncia e' ancora pendente.",
+      "pass_condition": "compare una fra: «e' ancora pendente», «non e' ancora scaduto», «e' in corso», «restano … giorni»",
+      "fail_condition": "il termine e' presentato come scaduto oppure il suo stato non e' indicato.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 8",
+      "severity": "alta",
+      "raw_text": "B.3 il deliverable afferma che alla data dell'8 febbraio 2027 il termine per la denuncia e' ancora pendente.\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: condizioni di polizza, art. 8\nVerifica: il deliverable afferma che alla data dell'8 febbraio 2027 il termine per la denuncia e' ancora pendente.\nPass se: compare una fra: «e' ancora pendente», «non e' ancora scaduto», «e' in corso», «restano … giorni»\nFail se: il termine e' presentato come scaduto oppure il suo stato non e' indicato."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica la lettera della socia del 9 novembre 2026 come atto che non integra una Richiesta di Risarcimento.",
+      "pass_condition": "compare, riferita a quella lettera, una fra: «non e' una Richiesta di Risarcimento», «non integra la definizione», «non contiene alcuna richiesta di risarcimento», «non e' un sinistro»",
+      "fail_condition": "la lettera e' trattata come Richiesta di Risarcimento oppure non e' trattata.",
+      "indifferent": null,
+      "source": "definizione di Richiesta di Risarcimento",
+      "severity": "alta",
+      "raw_text": "B.4 il deliverable qualifica la lettera della socia del 9 novembre 2026 come atto che non integra una Richiesta di Risarcimento.\nissue: I-04 · tipo: qualificazione · gravità: alta · judge: sì · fonte: definizione di Richiesta di Risarcimento\nVerifica: il deliverable qualifica la lettera della socia del 9 novembre 2026 come atto che non integra una Richiesta di Risarcimento.\nPass se: compare, riferita a quella lettera, una fra: «non e' una Richiesta di Risarcimento», «non integra la definizione», «non contiene alcuna richiesta di risarcimento», «non e' un sinistro»\nFail se: la lettera e' trattata come Richiesta di Risarcimento oppure non e' trattata."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che opera il Periodo di Osservazione previsto per il caso di mancato rinnovo.",
+      "pass_condition": "compare il riferimento al Periodo di Osservazione, alla garanzia postuma oppure all'estensione successiva alla cessazione della polizza",
+      "fail_condition": "la scadenza della polizza e' trattata come ostacolo alla garanzia, oppure il punto non e' trattato.",
+      "indifferent": null,
+      "source": "scheda di polizza; condizioni di polizza, artt. 3 e 4",
+      "severity": "alta",
+      "raw_text": "B.5 il deliverable afferma che opera il Periodo di Osservazione previsto per il caso di mancato rinnovo.\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: scheda di polizza; condizioni di polizza, artt. 3 e 4\nVerifica: il deliverable afferma che opera il Periodo di Osservazione previsto per il caso di mancato rinnovo.\nPass se: compare il riferimento al Periodo di Osservazione, alla garanzia postuma oppure all'estensione successiva alla cessazione della polizza\nFail se: la scadenza della polizza e' trattata come ostacolo alla garanzia, oppure il punto non e' trattato."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la richiesta ricevuta il 19 gennaio 2027 rientra nel Periodo di Osservazione.",
+      "pass_condition": "compare l'affermazione che la richiesta rientra, ricade o e' compresa nel Periodo di Osservazione",
+      "fail_condition": "la collocazione della richiesta nel Periodo di Osservazione non e' affermata.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 4",
+      "severity": "alta",
+      "raw_text": "B.6 il deliverable afferma che la richiesta ricevuta il 19 gennaio 2027 rientra nel Periodo di Osservazione.\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: condizioni di polizza, art. 4\nVerifica: il deliverable afferma che la richiesta ricevuta il 19 gennaio 2027 rientra nel Periodo di Osservazione.\nPass se: compare l'affermazione che la richiesta rientra, ricade o e' compresa nel Periodo di Osservazione\nFail se: la collocazione della richiesta nel Periodo di Osservazione non e' affermata."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che le condotte contestate sono successive alla Data di Retroattivita' e anteriori alla cessazione della garanzia.",
+      "pass_condition": "compare la verifica della collocazione temporale dei fatti rispetto alla Data di Retroattivita' e alla cessazione della polizza",
+      "fail_condition": "la verifica non compare.",
+      "indifferent": null,
+      "source": "lettera di messa in mora; scheda di polizza",
+      "severity": "media",
+      "raw_text": "B.7 il deliverable afferma che le condotte contestate sono successive alla Data di Retroattivita' e anteriori alla cessazione della garanzia.\nissue: I-06 · tipo: presenza · gravità: media · judge: sì · fonte: lettera di messa in mora; scheda di polizza\nVerifica: il deliverable afferma che le condotte contestate sono successive alla Data di Retroattivita' e anteriori alla cessazione della garanzia.\nPass se: compare la verifica della collocazione temporale dei fatti rispetto alla Data di Retroattivita' e alla cessazione della polizza\nFail se: la verifica non compare."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'ex amministratore resta Assicurato per i fatti commessi durante la carica.",
+      "pass_condition": "compare l'affermazione che la garanzia opera anche a favore degli amministratori cessati, oppure che la qualita' di Assicurato permane",
+      "fail_condition": "la cessazione dalla carica e' trattata come causa di perdita della copertura, oppure il punto non e' trattato.",
+      "indifferent": null,
+      "source": "definizione di Assicurato; art. 5",
+      "severity": "alta",
+      "raw_text": "B.8 il deliverable afferma che l'ex amministratore resta Assicurato per i fatti commessi durante la carica.\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: definizione di Assicurato; art. 5\nVerifica: il deliverable afferma che l'ex amministratore resta Assicurato per i fatti commessi durante la carica.\nPass se: compare l'affermazione che la garanzia opera anche a favore degli amministratori cessati, oppure che la qualita' di Assicurato permane\nFail se: la cessazione dalla carica e' trattata come causa di perdita della copertura, oppure il punto non e' trattato."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'esclusione per le richieste promosse dalla Contraente non opera perche' si tratta di azione sociale di responsabilita' deliberata dall'assemblea.",
+      "pass_condition": "compare il richiamo al carve-out, all'eccezione o alla deroga per l'azione sociale di responsabilita'",
+      "fail_condition": "l'esclusione e' presentata come operante, oppure il punto non e' trattato.",
+      "indifferent": null,
+      "source": "art. 6 lett. d; verbale di assemblea",
+      "severity": "alta",
+      "raw_text": "B.9 il deliverable afferma che l'esclusione per le richieste promosse dalla Contraente non opera perche' si tratta di azione sociale di responsabilita' deliberata dall'assemblea.\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 6 lett. d; verbale di assemblea\nVerifica: il deliverable afferma che l'esclusione per le richieste promosse dalla Contraente non opera perche' si tratta di azione sociale di responsabilita' deliberata dall'assemblea.\nPass se: compare il richiamo al carve-out, all'eccezione o alla deroga per l'azione sociale di responsabilita'\nFail se: l'esclusione e' presentata come operante, oppure il punto non e' trattato."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la definizione a saldo e stralcio non puo' essere proposta senza il preventivo consenso scritto dell'Assicuratore.",
+      "pass_condition": "compare una fra: «senza il preventivo consenso scritto», «previo consenso dell'Assicuratore», «non deve transigere senza l'accordo della compagnia»",
+      "fail_condition": "l'ipotesi transattiva e' avallata, oppure il punto non e' trattato.",
+      "indifferent": null,
+      "source": "nota del 5 febbraio 2027; art. 10",
+      "severity": "alta",
+      "raw_text": "B.10 il deliverable afferma che la definizione a saldo e stralcio non puo' essere proposta senza il preventivo consenso scritto dell'Assicuratore.\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del 5 febbraio 2027; art. 10\nVerifica: il deliverable afferma che la definizione a saldo e stralcio non puo' essere proposta senza il preventivo consenso scritto dell'Assicuratore.\nPass se: compare una fra: «senza il preventivo consenso scritto», «previo consenso dell'Assicuratore», «non deve transigere senza l'accordo della compagnia»\nFail se: l'ipotesi transattiva e' avallata, oppure il punto non e' trattato."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non suggerisce di inviare alla societa' una proposta transattiva prima della denuncia.",
+      "pass_condition": "non compare l'indicazione di formulare una proposta alla societa' prima o contestualmente alla denuncia",
+      "fail_condition": "e' suggerito di scrivere alla societa' prima della denuncia.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 10",
+      "severity": "alta",
+      "raw_text": "B.11 il deliverable non suggerisce di inviare alla societa' una proposta transattiva prima della denuncia.\nissue: I-09 · tipo: assenza · gravità: alta · judge: sì · fonte: condizioni di polizza, art. 10\nVerifica: il deliverable non suggerisce di inviare alla societa' una proposta transattiva prima della denuncia.\nPass se: non compare l'indicazione di formulare una proposta alla societa' prima o contestualmente alla denuncia\nFail se: e' suggerito di scrivere alla societa' prima della denuncia."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la comunicazione all'assicuratore sospende il corso della prescrizione.",
+      "pass_condition": "compare il termine «sospende» oppure «sospensione» riferito alla prescrizione del diritto verso l'assicuratore",
+      "fail_condition": "l'effetto non e' indicato.",
+      "indifferent": null,
+      "source": "art. 2952, comma 4, c.c.",
+      "severity": "media",
+      "raw_text": "B.12 il deliverable afferma che la comunicazione all'assicuratore sospende il corso della prescrizione.\nissue: I-10 · tipo: presenza · gravità: media · judge: sì · fonte: art. 2952, comma 4, c.c.\nVerifica: il deliverable afferma che la comunicazione all'assicuratore sospende il corso della prescrizione.\nPass se: compare il termine «sospende» oppure «sospensione» riferito alla prescrizione del diritto verso l'assicuratore\nFail se: l'effetto non e' indicato."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che la comunicazione all'assicuratore interrompe la prescrizione.",
+      "pass_condition": "non compare il termine «interrompe» ne' «interruzione» riferito a quella comunicazione",
+      "fail_condition": "l'effetto e' descritto come interruttivo.",
+      "indifferent": null,
+      "source": "art. 2952, comma 4, c.c.",
+      "severity": "media",
+      "raw_text": "B.13 il deliverable non afferma che la comunicazione all'assicuratore interrompe la prescrizione.\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: art. 2952, comma 4, c.c.\nVerifica: il deliverable non afferma che la comunicazione all'assicuratore interrompe la prescrizione.\nPass se: non compare il termine «interrompe» ne' «interruzione» riferito a quella comunicazione\nFail se: l'effetto e' descritto come interruttivo."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il diritto verso l'assicuratore si prescrive in due anni.",
+      "pass_condition": "compare «due anni» oppure «biennale» riferito alla prescrizione del diritto verso l'assicuratore",
+      "fail_condition": "e' indicato un termine diverso, oppure la prescrizione non e' trattata.",
+      "indifferent": null,
+      "source": "art. 2952, comma 2, c.c.",
+      "severity": "alta",
+      "raw_text": "B.14 il deliverable afferma che il diritto verso l'assicuratore si prescrive in due anni.\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 2952, comma 2, c.c.\nVerifica: il deliverable afferma che il diritto verso l'assicuratore si prescrive in due anni.\nPass se: compare «due anni» oppure «biennale» riferito alla prescrizione del diritto verso l'assicuratore\nFail se: e' indicato un termine diverso, oppure la prescrizione non e' trattata."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il termine di prescrizione decorre dal giorno in cui il terzo ha richiesto il risarcimento all'assicurato.",
+      "pass_condition": "la decorrenza e' agganciata alla richiesta del terzo oppure alla ricezione della richiesta risarcitoria",
+      "fail_condition": "la decorrenza e' agganciata ai fatti contestati o alla stipula della polizza.",
+      "indifferent": null,
+      "source": "art. 2952, comma 3, c.c.",
+      "severity": "alta",
+      "raw_text": "B.15 il deliverable afferma che il termine di prescrizione decorre dal giorno in cui il terzo ha richiesto il risarcimento all'assicurato.\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 2952, comma 3, c.c.\nVerifica: il deliverable afferma che il termine di prescrizione decorre dal giorno in cui il terzo ha richiesto il risarcimento all'assicurato.\nPass se: la decorrenza e' agganciata alla richiesta del terzo oppure alla ricezione della richiesta risarcitoria\nFail se: la decorrenza e' agganciata ai fatti contestati o alla stipula della polizza."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica il contenuto che la denuncia deve avere.",
+      "pass_condition": "compaiono almeno la trasmissione degli atti ricevuti e la descrizione dei fatti fra gli elementi della denuncia",
+      "fail_condition": "il contenuto della denuncia non e' indicato.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 8",
+      "severity": "media",
+      "raw_text": "B.16 il deliverable indica il contenuto che la denuncia deve avere.\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: condizioni di polizza, art. 8\nVerifica: il deliverable indica il contenuto che la denuncia deve avere.\nPass se: compaiono almeno la trasmissione degli atti ricevuti e la descrizione dei fatti fra gli elementi della denuncia\nFail se: il contenuto della denuncia non e' indicato."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la denuncia va effettuata per iscritto.",
+      "pass_condition": "compare una fra: «per iscritto», «forma scritta», «comunicazione scritta» riferita alla denuncia",
+      "fail_condition": "la forma della denuncia non e' indicata.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 8",
+      "severity": "media",
+      "raw_text": "B.17 il deliverable afferma che la denuncia va effettuata per iscritto.\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: condizioni di polizza, art. 8\nVerifica: il deliverable afferma che la denuncia va effettuata per iscritto.\nPass se: compare una fra: «per iscritto», «forma scritta», «comunicazione scritta» riferita alla denuncia\nFail se: la forma della denuncia non e' indicata."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il fascicolo non consente di stabilire se e in che misura l'indennizzo sara' dovuto.",
+      "pass_condition": "compare una fra: «non e' possibile stabilire», «non e' possibile affermare», «non si puo' dire allo stato», «resta da verificare» riferito all'indennizzo",
+      "fail_condition": "il deliverable afferma che l'indennizzo sara' corrisposto o che non sara' corrisposto.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 6",
+      "severity": "alta",
+      "raw_text": "B.18 il deliverable afferma che il fascicolo non consente di stabilire se e in che misura l'indennizzo sara' dovuto.\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: condizioni di polizza, art. 6\nVerifica: il deliverable afferma che il fascicolo non consente di stabilire se e in che misura l'indennizzo sara' dovuto.\nPass se: compare una fra: «non e' possibile stabilire», «non e' possibile affermare», «non si puo' dire allo stato», «resta da verificare» riferito all'indennizzo\nFail se: il deliverable afferma che l'indennizzo sara' corrisposto o che non sara' corrisposto."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti da acquisire la relazione della funzione internal audit richiamata nel verbale.",
+      "pass_condition": "compare la richiesta della relazione dell'internal audit o della relazione richiamata dal verbale di assemblea",
+      "fail_condition": "la richiesta non compare.",
+      "indifferent": null,
+      "source": "verbale di assemblea dell'11 gennaio 2027",
+      "severity": "media",
+      "raw_text": "B.19 il deliverable indica fra i documenti da acquisire la relazione della funzione internal audit richiamata nel verbale.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: verbale di assemblea dell'11 gennaio 2027\nVerifica: il deliverable indica fra i documenti da acquisire la relazione della funzione internal audit richiamata nel verbale.\nPass se: compare la richiesta della relazione dell'internal audit o della relazione richiamata dal verbale di assemblea\nFail se: la richiesta non compare."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non fa decorrere il termine di denuncia dalla data delle operazioni contestate.",
+      "pass_condition": "non compare l'affermazione che il termine decorra dai fatti degli esercizi 2023, 2024 o 2025",
+      "fail_condition": "il termine e' fatto decorrere dai fatti contestati.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 3",
+      "severity": "alta",
+      "raw_text": "B.20 il deliverable non fa decorrere il termine di denuncia dalla data delle operazioni contestate.\nissue: I-01 · tipo: assenza · gravità: alta · judge: sì · fonte: condizioni di polizza, art. 3\nVerifica: il deliverable non fa decorrere il termine di denuncia dalla data delle operazioni contestate.\nPass se: non compare l'affermazione che il termine decorra dai fatti degli esercizi 2023, 2024 o 2025\nFail se: il termine e' fatto decorrere dai fatti contestati."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che la garanzia e' inoperante perche' la polizza e' scaduta.",
+      "pass_condition": "non compare l'affermazione che la scadenza della polizza esclude la copertura",
+      "fail_condition": "la garanzia e' dichiarata inoperante per effetto della scadenza.",
+      "indifferent": null,
+      "source": "scheda di polizza; art. 4",
+      "severity": "alta",
+      "raw_text": "B.21 il deliverable non afferma che la garanzia e' inoperante perche' la polizza e' scaduta.\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: scheda di polizza; art. 4\nVerifica: il deliverable non afferma che la garanzia e' inoperante perche' la polizza e' scaduta.\nPass se: non compare l'affermazione che la scadenza della polizza esclude la copertura\nFail se: la garanzia e' dichiarata inoperante per effetto della scadenza."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che la copertura e' venuta meno con la cessazione dalla carica.",
+      "pass_condition": "non compare l'affermazione che la cessazione dalla carica faccia venire meno la copertura",
+      "fail_condition": "la cessazione dalla carica e' presentata come causa di perdita della copertura.",
+      "indifferent": null,
+      "source": "art. 5",
+      "severity": "alta",
+      "raw_text": "B.22 il deliverable non afferma che la copertura e' venuta meno con la cessazione dalla carica.\nissue: I-07 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 5\nVerifica: il deliverable non afferma che la copertura e' venuta meno con la cessazione dalla carica.\nPass se: non compare l'affermazione che la cessazione dalla carica faccia venire meno la copertura\nFail se: la cessazione dalla carica e' presentata come causa di perdita della copertura."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "simmetria del controllo: il deliverable non afferma che il termine per la denuncia e' gia' scaduto perche' decorrente dalla lettera della socia.",
+      "pass_condition": "non compare l'affermazione che il termine sia decorso dal novembre 2026",
+      "fail_condition": "il termine e' presentato come gia' scaduto.",
+      "indifferent": null,
+      "source": "lettera della socia del 9 novembre 2026",
+      "severity": "alta",
+      "raw_text": "B.23 simmetria del controllo: il deliverable non afferma che il termine per la denuncia e' gia' scaduto perche' decorrente dalla lettera della socia.\nissue: I-04 · tipo: assenza · gravità: alta · judge: sì · fonte: lettera della socia del 9 novembre 2026\nVerifica: simmetria del controllo: il deliverable non afferma che il termine per la denuncia e' gia' scaduto perche' decorrente dalla lettera della socia.\nPass se: non compare l'affermazione che il termine sia decorso dal novembre 2026\nFail se: il termine e' presentato come gia' scaduto."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non presenta la franchigia come somma a carico dell'ex amministratore.",
+      "pass_condition": "la franchigia non e' indicata fra i costi a carico dell'Assicurato persona fisica",
+      "fail_condition": "la franchigia e' presentata come costo dell'ex amministratore.",
+      "indifferent": null,
+      "source": "scheda di polizza; art. 7",
+      "severity": "alta",
+      "raw_text": "B.24 sovra-segnalazione: il deliverable non presenta la franchigia come somma a carico dell'ex amministratore.\nissue: I-13 · tipo: assenza · gravità: alta · judge: sì · fonte: scheda di polizza; art. 7\nVerifica: sovra-segnalazione: il deliverable non presenta la franchigia come somma a carico dell'ex amministratore.\nPass se: la franchigia non e' indicata fra i costi a carico dell'Assicurato persona fisica\nFail se: la franchigia e' presentata come costo dell'ex amministratore."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come inadempimento la mancata notifica della circostanza.",
+      "pass_condition": "la mancata notifica della circostanza non compare fra gli inadempimenti dell'Assicurato",
+      "fail_condition": "la mancata notifica e' presentata come inadempimento.",
+      "indifferent": null,
+      "source": "art. 9",
+      "severity": "media",
+      "raw_text": "B.25 sovra-segnalazione: il deliverable non segnala come inadempimento la mancata notifica della circostanza.\nissue: I-04 · tipo: assenza · gravità: media · judge: sì · fonte: art. 9\nVerifica: sovra-segnalazione: il deliverable non segnala come inadempimento la mancata notifica della circostanza.\nPass se: la mancata notifica della circostanza non compare fra gli inadempimenti dell'Assicurato\nFail se: la mancata notifica e' presentata come inadempimento."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come rilievo il fatto che il premio sia a carico della Contraente.",
+      "pass_condition": "il pagamento del premio da parte della societa' non compare fra i rilievi",
+      "fail_condition": "il pagamento del premio da parte della societa' e' presentato come problema per l'Assicurato.",
+      "indifferent": null,
+      "source": "scheda di polizza",
+      "severity": "media",
+      "raw_text": "B.26 sovra-segnalazione: il deliverable non segnala come rilievo il fatto che il premio sia a carico della Contraente.\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: scheda di polizza\nVerifica: sovra-segnalazione: il deliverable non segnala come rilievo il fatto che il premio sia a carico della Contraente.\nPass se: il pagamento del premio da parte della societa' non compare fra i rilievi\nFail se: il pagamento del premio da parte della societa' e' presentato come problema per l'Assicurato."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come inadempimento la mancata comunicazione della cessazione all'assicuratore.",
+      "pass_condition": "la mancata comunicazione della cessazione all'assicuratore non compare fra gli inadempimenti",
+      "fail_condition": "la mancata comunicazione e' presentata come inadempimento.",
+      "indifferent": null,
+      "source": "art. 5",
+      "severity": "media",
+      "raw_text": "B.27 sovra-segnalazione: il deliverable non segnala come inadempimento la mancata comunicazione della cessazione all'assicuratore.\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: art. 5\nVerifica: sovra-segnalazione: il deliverable non segnala come inadempimento la mancata comunicazione della cessazione all'assicuratore.\nPass se: la mancata comunicazione della cessazione all'assicuratore non compare fra gli inadempimenti\nFail se: la mancata comunicazione e' presentata come inadempimento."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala un problema di incapienza del massimale.",
+      "pass_condition": "non compare l'affermazione che il massimale sia insufficiente rispetto alla pretesa",
+      "fail_condition": "e' segnalata l'incapienza del massimale.",
+      "indifferent": null,
+      "source": "scheda di polizza",
+      "severity": "media",
+      "raw_text": "B.28 sovra-segnalazione: il deliverable non segnala un problema di incapienza del massimale.\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: scheda di polizza\nVerifica: sovra-segnalazione: il deliverable non segnala un problema di incapienza del massimale.\nPass se: non compare l'affermazione che il massimale sia insufficiente rispetto alla pretesa\nFail se: e' segnalata l'incapienza del massimale."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "divieto di presunzione dell'esito: il deliverable non afferma che l'azione sociale sara' respinta o accolta.",
+      "pass_condition": "non compare un pronostico sull'esito dell'azione sociale di responsabilita'",
+      "fail_condition": "il deliverable pronostica l'esito dell'azione sociale.",
+      "indifferent": null,
+      "source": "verbale di assemblea",
+      "severity": "alta",
+      "raw_text": "B.29 divieto di presunzione dell'esito: il deliverable non afferma che l'azione sociale sara' respinta o accolta.\nissue: I-13 · tipo: assenza · gravità: alta · judge: sì · fonte: verbale di assemblea\nVerifica: divieto di presunzione dell'esito: il deliverable non afferma che l'azione sociale sara' respinta o accolta.\nPass se: non compare un pronostico sull'esito dell'azione sociale di responsabilita'\nFail se: il deliverable pronostica l'esito dell'azione sociale."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non adotta come termine di denuncia i tre giorni previsti dalla legge in luogo dei trenta giorni previsti dalla polizza.",
+      "pass_condition": "il termine indicato non e' di tre giorni",
+      "fail_condition": "e' indicato un termine di tre giorni.",
+      "indifferent": null,
+      "source": "art. 1913 c.c.; condizioni di polizza, art. 8",
+      "severity": "media",
+      "raw_text": "B.30 il deliverable non adotta come termine di denuncia i tre giorni previsti dalla legge in luogo dei trenta giorni previsti dalla polizza.\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: art. 1913 c.c.; condizioni di polizza, art. 8\nVerifica: il deliverable non adotta come termine di denuncia i tre giorni previsti dalla legge in luogo dei trenta giorni previsti dalla polizza.\nPass se: il termine indicato non e' di tre giorni\nFail se: e' indicato un termine di tre giorni."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 19 gennaio 2027 come fatto da cui decorre il termine per la denuncia.",
+      "pass_condition": "compare «19 gennaio 2027» oppure «19/01/2027» come decorrenza",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "avviso di ricevimento",
+      "severity": "alta",
+      "raw_text": "C.1 il deliverable indica il 19 gennaio 2027 come fatto da cui decorre il termine per la denuncia.\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: avviso di ricevimento\nVerifica: il deliverable indica il 19 gennaio 2027 come fatto da cui decorre il termine per la denuncia.\nPass se: compare «19 gennaio 2027» oppure «19/01/2027» come decorrenza\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 18 febbraio 2027 come termine entro cui effettuare la denuncia.",
+      "pass_condition": "compare «18 febbraio 2027» oppure «18/02/2027» come termine",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "condizioni di polizza, art. 8",
+      "severity": "alta",
+      "raw_text": "C.2 il deliverable indica il 18 febbraio 2027 come termine entro cui effettuare la denuncia.\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: condizioni di polizza, art. 8\nVerifica: il deliverable indica il 18 febbraio 2027 come termine entro cui effettuare la denuncia.\nPass se: compare «18 febbraio 2027» oppure «18/02/2027» come termine\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il giorno da cui il termine decorre non si computa.",
+      "pass_condition": "compare una fra: «il giorno iniziale non si computa», «a decorrere dal giorno successivo», «escluso il giorno di ricezione», «dal 20 gennaio 2027»",
+      "fail_condition": "il passaggio non compare, oppure il termine e' contato includendo il giorno iniziale.",
+      "indifferent": null,
+      "source": "computo dei termini a giorni",
+      "severity": "media",
+      "raw_text": "C.3 il deliverable afferma che il giorno da cui il termine decorre non si computa.\nissue: I-03 · tipo: presenza · gravità: media · judge: sì · fonte: computo dei termini a giorni\nVerifica: il deliverable afferma che il giorno da cui il termine decorre non si computa.\nPass se: compare una fra: «il giorno iniziale non si computa», «a decorrere dal giorno successivo», «escluso il giorno di ricezione», «dal 20 gennaio 2027»\nFail se: il passaggio non compare, oppure il termine e' contato includendo il giorno iniziale."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 19 gennaio 2029 come scadenza della prescrizione del diritto verso l'assicuratore.",
+      "pass_condition": "compare «19 gennaio 2029» oppure «19/01/2029»",
+      "fail_condition": "e' indicata una data diversa, oppure la scadenza non e' indicata.",
+      "indifferent": null,
+      "source": "art. 2952, commi 2 e 3, c.c.",
+      "severity": "alta",
+      "raw_text": "C.4 il deliverable indica il 19 gennaio 2029 come scadenza della prescrizione del diritto verso l'assicuratore.\nissue: I-11 · tipo: valore · gravità: alta · judge: no · fonte: art. 2952, commi 2 e 3, c.c.\nVerifica: il deliverable indica il 19 gennaio 2029 come scadenza della prescrizione del diritto verso l'assicuratore.\nPass se: compare «19 gennaio 2029» oppure «19/01/2029»\nFail se: e' indicata una data diversa, oppure la scadenza non e' indicata."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 10 febbraio 2027 come termine per la denuncia.",
+      "pass_condition": "non compare «10 febbraio 2027» ne' «10/02/2027» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla deliberazione assembleare.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.5 il deliverable non indica il 10 febbraio 2027 come termine per la denuncia.\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 10 febbraio 2027 come termine per la denuncia.\nPass se: non compare «10 febbraio 2027» ne' «10/02/2027» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla deliberazione assembleare."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 12 febbraio 2027 come termine per la denuncia.",
+      "pass_condition": "non compare «12 febbraio 2027» ne' «12/02/2027» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla data della lettera.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.6 il deliverable non indica il 12 febbraio 2027 come termine per la denuncia.\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 12 febbraio 2027 come termine per la denuncia.\nPass se: non compare «12 febbraio 2027» ne' «12/02/2027» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla data della lettera."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 9 dicembre 2026 come termine per la denuncia.",
+      "pass_condition": "non compare «9 dicembre 2026» ne' «09/12/2026» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla lettera della socia.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.7 il deliverable non indica il 9 dicembre 2026 come termine per la denuncia.\nissue: I-04 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 9 dicembre 2026 come termine per la denuncia.\nPass se: non compare «9 dicembre 2026» ne' «09/12/2026» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla lettera della socia."
+    }
+  ]
+}

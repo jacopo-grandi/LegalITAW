@@ -1,0 +1,272 @@
+{
+  "task_id": "WF2-054",
+  "lato_assistito": "Banca di Credito Serrafino S.p.A., banca corrispondente",
+  "data_di_riferimento": "2031-07-22",
+  "stato_fascicolo": "bozza di accordo del 15 luglio 2031 non sottoscritta, con decorrenza prevista dal 1 settembre 2031; questionario di due diligence compilato dalla controparte il 14 maggio 2031; scheda rischio paese del 3 giugno 2031 con classe elevata; nota dell'unità commerciale del 27 giugno 2031; screening del 9 luglio 2031; nessun parere della funzione antiriciclaggio e nessuna autorizzazione della Direzione generale risultano dagli atti.",
+  "meccanismi_di_difficolta": [
+    "ruolo formale contro ruolo sostanziale: la bozza attribuisce alla controparte obblighi che la policy pone in capo alla Banca, e sposta l'oggetto della verifica dal cliente della Banca ai clienti del cliente",
+    "presenza contro adeguatezza: riesame, escalation, riscontro e preavviso di chiusura sono tutti previsti, e il difetto sta in quattro livelli numerici",
+    "dichiarazione di parte smentita dai documenti: le dichiarazioni che l'accordo fa rendere alla controparte sono contraddette dal questionario compilato dalla controparte stessa",
+    "omonimia: lo screening restituisce un riscontro con anagrafica coincidente su un soggetto e un riscontro con anagrafica difforme su un altro",
+    "fatti distribuiti: la periodicità del riesame dipende dalla classe di rischio attribuita da un documento diverso, e l'inattuabilità del diritto di informazione si ricava incrociando la clausola con il questionario e con la scheda paese",
+    "clausola favorevole al lato assistito: il preavviso di recesso ordinario e la durata a tempo indeterminato non sono esposizioni della Banca"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "traslazione degli obblighi di verifica sulla controparte",
+      "gravita": "alta",
+      "affermazione_richiesta": "le clausole 6.1 e 6.2 attribuiscono alla controparte in via esclusiva la verifica della clientela e dichiarano che la Banca si affida integralmente a essa: la policy interna pone quegli obblighi in capo alla Banca e ne esclude il trasferimento contrattuale",
+      "evidenza": "clausole 6.1 e 6.2 della bozza; paragrafi 2.1 e 2.2 della policy interna",
+      "non_deve_affermare": "che la Banca debba ripetere la verifica su tutti i clienti della controparte, o che l'affidamento integrale sia ammissibile"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "individuazione del cliente della Banca nel rapporto di corrispondenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "nel rapporto di corrispondenza il cliente della Banca è la banca rispondente: è su di essa che la verifica della Banca si esercita, non sui clienti di questa",
+      "evidenza": "paragrafo 2.2 della policy interna; oggetto dell'accordo",
+      "non_deve_affermare": "che il cliente della Banca sia la clientela della controparte, o che la Banca non abbia alcun cliente da verificare"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "esclusione dei filtri autonomi sulle operazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 7.2 esclude i filtri autonomi della Banca sulle operazioni regolate sul conto, mentre la policy interna li impone su tutte le operazioni indipendentemente dai controlli della controparte",
+      "evidenza": "clausola 7.2 della bozza; paragrafo 7.1 della policy interna",
+      "non_deve_affermare": "che l'esclusione sia giustificata dalla necessità di non duplicare i controlli o di non introdurre ritardi"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "conto a utilizzo diretto da parte di terzi",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 3.2 consente ai clienti istituzionali della controparte di operare direttamente sul conto senza preventiva comunicazione, mentre la policy interna lo esclude salva autorizzazione espressa, subordinata all'identificazione preventiva dei soggetti abilitati e al monitoraggio dedicato",
+      "evidenza": "clausola 3.2 della bozza; paragrafo 5.2 della policy interna",
+      "non_deve_affermare": "che l'utilizzo diretto sia ammissibile perché richiesto dalla controparte come condizione della trattativa"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "il questionario conferma l'utilizzo diretto e l'assenza di identificazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sezione 5 del questionario dichiara che la controparte consente ai propri clienti di operare direttamente sui conti di corrispondenza, che non li identifica preventivamente e che non ne comunica l'elenco",
+      "evidenza": "sezione 5 del questionario di due diligence",
+      "non_deve_affermare": "che l'assetto dichiarato nel questionario sia compatibile con la policy"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "presenza fisica e sede di direzione effettiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 5.1 riporta la dichiarazione della controparte sulla sede di direzione effettiva, ma il questionario indica uffici di rappresentanza in due giurisdizioni, un consiglio che si riunisce a distanza e quattro dipendenti nella giurisdizione di costituzione: la dichiarazione non è documentata da evidenze indipendenti",
+      "evidenza": "clausola 5.1 della bozza; sezione 1 del questionario; paragrafo 4.3 della policy",
+      "non_deve_affermare": "che la presenza fisica sia esclusa in via definitiva, o che la dichiarazione della controparte esaurisca la verifica"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "clientela della controparte priva di licenza e servizi a banche terze",
+      "gravita": "alta",
+      "affermazione_richiesta": "il questionario dichiara che fra la clientela della controparte figurano società di cambio valuta non sottoposte a vigilanza prudenziale e che la controparte rende servizi a banche terze: sono elementi che incidono sulla classificazione del rischio e sul perimetro dei controlli",
+      "evidenza": "sezione 4 del questionario",
+      "non_deve_affermare": "che la clientela della controparte sia irrilevante perché verificata da questa"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "conferma delle dichiarazioni una sola volta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.2 rende le dichiarazioni della controparte rese una sola volta alla sottoscrizione e confermate per tutta la durata, mentre la policy impone la comunicazione senza indugio delle variazioni di assetto proprietario, organo di amministrazione e licenza",
+      "evidenza": "clausola 4.2 della bozza; paragrafo 6.5 della policy interna",
+      "non_deve_affermare": "che la conferma implicita sia ammissibile in un rapporto a tempo indeterminato"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "aggiornamento delle informazioni in occasione del riesame",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 10.1 àncora la comunicazione delle variazioni al riesame triennale, mentre la policy la richiede senza indugio",
+      "evidenza": "clausola 10.1 della bozza; paragrafo 6.5 della policy interna",
+      "non_deve_affermare": "che la comunicazione periodica sia idonea in un rapporto classificato a rischio elevato"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "periodicita del riesame della relazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 9.2 fissa il riesame a trentasei mesi, mentre la policy impone una periodicità non superiore a dodici mesi per i rapporti classificati a rischio elevato, classe attribuita dalla scheda paese",
+      "evidenza": "clausola 9.2 della bozza; paragrafo 6.4 della policy; classificazione della scheda rischio paese",
+      "non_deve_affermare": "che la periodicità triennale sia ammissibile perché l'accordo è a tempo indeterminato"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "soglia di escalation delle operazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 12.2 fissa l'informativa alle operazioni superiori a euro 1.000.000,00, mentre la policy impone l'approfondimento a partire da euro 250.000,00 e per tutte le operazioni con indicatori di anomalia indipendentemente dall'importo",
+      "evidenza": "clausola 12.2 della bozza; paragrafo 7.2 della policy interna",
+      "non_deve_affermare": "che la soglia contrattuale più alta sia ammissibile perché pattuita"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "destinatario dell'escalation",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 12.3 indirizza l'informativa alla funzione pagamenti esteri, che è la funzione che ha promosso l'apertura del rapporto: l'informativa va indirizzata anche alla funzione antiriciclaggio",
+      "evidenza": "clausola 12.3 della bozza; nota dell'unità Pagamenti esteri; paragrafi 3.1 e 9.1 della policy",
+      "non_deve_affermare": "che l'indirizzamento alla sola funzione commerciale sia neutro"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "termine di riscontro alle richieste di informazioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 11.4 fissa il riscontro a quindici giorni lavorativi, mentre la policy lo attende entro cinque giorni lavorativi e qualifica il mancato riscontro nel termine come fattore di rischio che attiva la chiusura",
+      "evidenza": "clausola 11.4 della bozza; paragrafo 7.5 della policy interna",
+      "non_deve_affermare": "che quindici giorni siano ammissibili perché la controparte ne dichiara venti"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "limite di riservatezza opposto al riscontro",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 11.3 subordina il riscontro ai limiti della riservatezza bancaria della giurisdizione della controparte, e il questionario dichiara che la trasmissione richiede l'autorizzazione dell'autorità di vigilanza locale: la clausola rende il diritto di informazione inattuabile",
+      "evidenza": "clausola 11.3 della bozza; sezione 7 del questionario; scheda rischio paese, riga sul segreto bancario",
+      "non_deve_affermare": "che il limite di riservatezza sia superabile con la sola formulazione motivata della richiesta"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "esclusione del diritto di verifica",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 13.1 esclude il diritto della Banca di svolgere verifiche presso la controparte e di accedere alla documentazione, mentre la policy lo riserva espressamente e stabilisce che la dichiarazione annuale non lo sostituisce",
+      "evidenza": "clausole 13.1 e 13.2 della bozza; paragrafi 10.1 e 10.2 della policy interna",
+      "non_deve_affermare": "che la dichiarazione annuale di conformità sostituisca il diritto di verifica"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "subordinazione delle comunicazioni alle autorita al consenso",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 15.2 subordina al consenso scritto della controparte la comunicazione a terzi, comprese le autorità, delle informazioni sulle operazioni: la policy esclude che una clausola contrattuale possa produrre questo effetto",
+      "evidenza": "clausola 15.2 della bozza; paragrafo 9.2 della policy interna",
+      "non_deve_affermare": "che la clausola sia sanabile con l'aggiunta di una riserva generica per gli obblighi di legge"
+    },
+    {
+      "id": "I-17",
+      "etichetta": "preavviso per la chiusura per motivi di rischio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 14.3 fissa il preavviso di chiusura per motivi di rischio a novanta giorni, mentre la policy lo limita a cinque giorni lavorativi nei casi di divieto e nei casi di rischio non gestibile",
+      "evidenza": "clausola 14.3 della bozza; paragrafo 8.3 della policy interna",
+      "non_deve_affermare": "che novanta giorni siano ammissibili perché simmetrici al recesso ordinario"
+    },
+    {
+      "id": "I-18",
+      "etichetta": "titolari effettivi del socio costituito in trust",
+      "gravita": "alta",
+      "affermazione_richiesta": "il questionario non indica disponente e beneficiari di Sarvenko Trust, socio al ventiquattro per cento, e lo screening su quel soggetto risulta non eseguibile: l'assetto proprietario non è ricostruito",
+      "evidenza": "sezione 3 del questionario; riga di Sarvenko Trust nell'esito dello screening",
+      "non_deve_affermare": "che l'assetto proprietario sia ricostruito, o che la quota inferiore a un quarto renda irrilevante l'identificazione"
+    },
+    {
+      "id": "I-19",
+      "etichetta": "riscontro su persona politicamente esposta",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo screening restituisce su Nadir Kolstemp, titolare effettivo dichiarato, un riscontro su lista di persone politicamente esposte con anagrafica coincidente, relativo a un incarico cessato nel 2028: il riscontro riguarda il soggetto in perimetro e comporta misure rafforzate",
+      "evidenza": "riga di Nadir Kolstemp nell'esito dello screening, con anagrafica coincidente",
+      "non_deve_affermare": "che il riscontro sia irrilevante perché l'incarico è cessato, o che riguardi un omonimo"
+    },
+    {
+      "id": "I-20",
+      "etichetta": "istruttoria di apertura incompleta e autorizzazione mancante",
+      "gravita": "alta",
+      "affermazione_richiesta": "la policy pone il parere della funzione antiriciclaggio come condizione dell'autorizzazione della Direzione generale, e il fascicolo non contiene né il parere né l'autorizzazione; mancano inoltre le evidenze indipendenti sulla presenza fisica e l'identificazione dei titolari effettivi del trust",
+      "evidenza": "paragrafi 3.1 e 3.2 della policy interna; composizione del fascicolo",
+      "non_deve_affermare": "che l'istruttoria sia completa, o che l'autorizzazione sia stata rilasciata"
+    },
+    {
+      "id": "I-21",
+      "etichetta": "provenienza commerciale delle clausole difettose",
+      "gravita": "media",
+      "affermazione_richiesta": "la nota dell'unità Pagamenti esteri chiede espressamente l'utilizzo diretto del conto, l'esclusione dei filtri autonomi e il preavviso di centottanta giorni: le clausole difettose hanno origine in quella richiesta e la decisione non spetta all'unità che la propone",
+      "evidenza": "paragrafo 4 della nota del 27 giugno 2031; paragrafo 3.2 della policy interna",
+      "non_deve_affermare": "che la richiesta dell'unità vincoli l'esito della revisione"
+    },
+    {
+      "id": "I-22",
+      "etichetta": "esito complessivo e alternative all'apertura",
+      "gravita": "alta",
+      "affermazione_richiesta": "alla data di riferimento il rapporto non è apribile nei termini della bozza: le modifiche indicate sono condizione dell'apertura, e resta da valutare se l'assetto dichiarato dalla controparte consenta l'apertura anche con l'accordo corretto",
+      "evidenza": "insieme dei rilievi; divieti del paragrafo 4 della policy interna",
+      "non_deve_affermare": "che il rapporto sia apribile con le sole correzioni contrattuali, o che sia vietato in via definitiva"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "riscontro su omonimo nello screening",
+      "chiave_nel_criterio": "riscontro su omonimo",
+      "perche_non_e_issue": "il riscontro su Teodor Kolstemp cade su un soggetto con data di nascita e giurisdizione difformi da quelle dell'amministratore, e la colonna dell'anagrafica coincidente riporta l'assenza di coincidenza: non riguarda il soggetto in perimetro. Trattarlo come precedente dell'amministratore è errore da omonimia"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "volumi attesi dichiarati dall'unita commerciale",
+      "chiave_nel_criterio": "volumi attesi",
+      "perche_non_e_issue": "i volumi mensili attesi di euro 42.000.000,00 sono un dato di stima commerciale e concorrono alla classificazione del rischio: non costituiscono di per sé un rilievo sull'accordo. Segnalarli come clausola da modificare è sovra-segnalazione"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "clausola compromissoria dell'accordo",
+      "chiave_nel_criterio": "clausola compromissoria",
+      "perche_non_e_issue": "la clausola 16.2 riproduce la formulazione tipo dell'istituzione arbitrale indicata, con collegio di tre arbitri, sede e lingua determinate: non presenta profili di indeterminatezza. Segnalarla come rischio è sovra-segnalazione"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "preavviso di recesso ordinario di centottanta giorni",
+      "chiave_nel_criterio": "preavviso di recesso ordinario",
+      "perche_non_e_issue": "il preavviso di centottanta giorni della clausola 14.1 riguarda il recesso ordinario, che la policy non disciplina: il rilievo riguarda il preavviso per la chiusura per motivi di rischio della clausola 14.3, non quello ordinario. Estendere il rilievo al recesso ordinario è sovra-segnalazione"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "durata a tempo indeterminato dell'accordo",
+      "chiave_nel_criterio": "durata a tempo indeterminato",
+      "perche_non_e_issue": "la durata a tempo indeterminato della clausola 2.1 è l'assetto ordinario dei rapporti di corrispondenza e non è incompatibile con i presidi, che operano per tutta la durata. Segnalarla come profilo di rischio è errore"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "completamento delle operazioni in corso di regolamento",
+      "chiave_nel_criterio": "completamento delle operazioni in corso",
+      "perche_non_e_issue": "la clausola 14.4 prevede il completamento delle operazioni in corso di regolamento in caso di chiusura, previsione che la policy stessa fa salva al paragrafo 8.3. Segnalarla come ostacolo alla chiusura è errore"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "assenza di quotazione e di appartenenza a gruppo",
+      "chiave_nel_criterio": "assenza di quotazione",
+      "perche_non_e_issue": "il questionario dichiara che la controparte non è quotata e non appartiene a un gruppo bancario: sono dati anagrafici che concorrono alla valutazione, non anomalie autonome. Presentarli come red flag è sovra-segnalazione"
+    }
+  ],
+  "dati_mancanti": [
+    "parere della funzione antiriciclaggio sull'apertura del rapporto",
+    "autorizzazione della Direzione generale",
+    "evidenze indipendenti sulla presenza fisica e sulla sede di direzione effettiva",
+    "disponente e beneficiari di Sarvenko Trust e relativo screening",
+    "identificazione delle persone fisiche con quote inferiori al cinque per cento",
+    "elenco dei soggetti abilitati a operare direttamente sui conti della controparte",
+    "evidenza delle autorizzazioni necessarie nella giurisdizione della controparte per prestare il riscontro sulle operazioni",
+    "esiti di ispezioni dell'autorità di vigilanza della controparte, dichiarate come non svoltesi"
+  ],
+  "errori_bersaglio": [
+    "accettare la traslazione degli obblighi di verifica sulla controparte",
+    "affermare che la Banca deve verificare tutti i clienti della controparte",
+    "individuare il cliente della Banca nella clientela della controparte",
+    "accettare l'esclusione dei filtri autonomi per non duplicare i controlli",
+    "accettare l'utilizzo diretto del conto perché richiesto come condizione della trattativa",
+    "affermare che la controparte è priva di presenza fisica",
+    "ritenere il limite di riservatezza superabile con la sola motivazione della richiesta",
+    "ritenere che la dichiarazione annuale sostituisca il diritto di verifica",
+    "ritenere sanabile con una riserva generica la subordinazione delle comunicazioni alle autorità",
+    "ritenere irrilevante il riscontro su persona politicamente esposta perché l'incarico è cessato",
+    "attribuire all'amministratore il riscontro che cade su omonimo",
+    "ritenere irrilevante l'identificazione dei titolari effettivi del trust per la misura della quota",
+    "estendere al recesso ordinario il rilievo sul preavviso di chiusura per rischio",
+    "segnalare come rilievo volumi attesi, clausola compromissoria, durata indeterminata, completamento delle operazioni in corso o assenza di quotazione",
+    "affermare che la controparte è coinvolta in attività di riciclaggio",
+    "affermare che l'apertura è vietata in via definitiva"
+  ],
+  "funzione_degli_allegati": {
+    "01_bozza_accordo_di_corrispondenza.docx": "Documento da revisionare. Concentra tutti gli issue di allocazione: verifica della clientela integralmente traslata sulla controparte, esclusione dei filtri autonomi, conto a utilizzo diretto da parte di terzi, soglia di escalation e periodicità di riesame fuori dai limiti della policy, esclusione del diritto di verifica, subordinazione delle comunicazioni alle autorità al consenso della controparte.",
+    "02_policy_interna_rapporti_di_corrispondenza.pdf": "È lo standard convenzionale contro cui la bozza si misura: contiene il principio di non delegabilità, i divieti, le soglie, i termini e il diritto di verifica. È una scelta della Banca e per questo sta nel documento.",
+    "03_questionario_due_diligence_controparte.pdf": "Fonte dei fatti sulla controparte: presenza fisica, clientela, conti a utilizzo diretto, presidi, riservatezza e tempi di riscontro. È il documento che smentisce le dichiarazioni dell'articolo 4 e 5 della bozza.",
+    "04_scheda_rischio_paese.pdf": "Attribuisce la classe di rischio elevata e attiva per relazione le misure rafforzate e la periodicità di riesame più breve previste dalla policy.",
+    "05_nota_unita_pagamenti_esteri.pdf": "Documenta la pressione commerciale e la provenienza delle clausole difettose: è l'atto che spiega perché la bozza è scritta così, e contiene il controlled non-issue sui volumi.",
+    "06_screening_controparte_e_soggetti.csv": "Porta il riscontro su persona politicamente esposta, con anagrafica coincidente, e il riscontro su omonimo, con anagrafica difforme: la distinzione fra i due è il meccanismo dell'omonimia."
+  }
+}

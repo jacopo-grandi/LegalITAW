@@ -1,0 +1,175 @@
+{
+  "task_id": "WF2-074",
+  "lato_assistito": "Celsoria Medical S.p.A., acquirente di Peverano Devices S.r.l.",
+  "data_di_riferimento": "2029-03-12",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Preservazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il legal hold del 5 febbraio 2029 non comprende l'account del direttore vendite",
+      "evidenza": "01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a preservazione",
+      "conseguenza": "una fonte centrale resta esposta a cancellazione",
+      "azione": "estendere immediatamente il hold e bloccare l'autodeletion",
+      "dato_mancante": "manca l'immagine del telefono",
+      "errore_bersaglio": "attendere la conclusione delle interviste",
+      "fonte": "legal hold; art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Indipendenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'indagine è affidata al responsabile che approvava gli intermediari",
+      "evidenza": "01_delibera_cda_e_legal_hold.pdf, contenuto pertinente a indipendenza",
+      "conseguenza": "il mandato presenta un conflitto operativo",
+      "azione": "rimettere supervisione al comitato indipendente",
+      "dato_mancante": "manca una disclosure del conflitto",
+      "errore_bersaglio": "lasciare invariata la catena di riporto",
+      "fonte": "delibera; art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Flussi all'OdV",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'OdV ha ricevuto solo una sintesi priva degli allegati contabili",
+      "evidenza": "02_registro_odv_peverano.xlsx, contenuto pertinente a flussi all'odv",
+      "conseguenza": "la vigilanza non dispone delle evidenze sottostanti",
+      "azione": "aprire accesso controllato al fascicolo",
+      "dato_mancante": "manca il protocollo dei flussi",
+      "errore_bersaglio": "rinviare gli allegati al report finale",
+      "fonte": "verbale OdV; art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Risk assessment",
+      "gravita": "alta",
+      "affermazione_richiesta": "la mappa rischi della target non considera intermediari commerciali esteri",
+      "evidenza": "02_registro_odv_peverano.xlsx, contenuto pertinente a risk assessment",
+      "conseguenza": "il modello non copre il processo da cui nasce la segnalazione",
+      "azione": "eseguire gap analysis per processo e paese",
+      "dato_mancante": "manca il censimento degli agenti",
+      "errore_bersaglio": "aggiornare solo l'organigramma",
+      "fonte": "risk assessment; art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Poteri e spesa",
+      "gravita": "alta",
+      "affermazione_richiesta": "le procure consentono pagamenti a consulenti senza doppia firma fino a 180.000 euro",
+      "evidenza": "03_email_imo_procure_e_intermediari.eml, contenuto pertinente a poteri e spesa",
+      "conseguenza": "il controllo autorizzativo è disallineato dal rischio",
+      "azione": "introdurre doppia approvazione e verifica beneficiario",
+      "dato_mancante": "manca l'elenco dei delegati attivi",
+      "errore_bersaglio": "lasciare la soglia invariata",
+      "fonte": "matrice procure; art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Terze parti",
+      "gravita": "alta",
+      "affermazione_richiesta": "due agenti non hanno due diligence né clausola di audit",
+      "evidenza": "03_email_imo_procure_e_intermediari.eml, contenuto pertinente a terze parti",
+      "conseguenza": "il rapporto va sospeso o sottoposto a misure rafforzate",
+      "azione": "bloccare nuovi pagamenti e completare la verifica",
+      "dato_mancante": "mancano titolari effettivi e referenze",
+      "errore_bersaglio": "rinnovare automaticamente gli incarichi",
+      "fonte": "registro; modello 231"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Sistema disciplinare",
+      "gravita": "alta",
+      "affermazione_richiesta": "il regolamento della target non sanziona l'elusione dei controlli 231",
+      "evidenza": "04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a sistema disciplinare",
+      "conseguenza": "l'aggiornamento del modello richiede una leva disciplinare espressa",
+      "azione": "coordinare modifica, informativa e formazione",
+      "dato_mancante": "manca il testo del CCNL applicato",
+      "errore_bersaglio": "limitarsi a una comunicazione etica",
+      "fonte": "art. 6 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Formazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il 41 per cento della forza vendita non ha completato il corso",
+      "evidenza": "04_relazione_hr_disciplina_e_formazione.pdf, contenuto pertinente a formazione",
+      "conseguenza": "la misura non risulta attuata per il gruppo esposto",
+      "azione": "assegnare recupero e test con escalation",
+      "dato_mancante": "mancano dati sui neoassunti",
+      "errore_bersaglio": "chiudere l'azione alla pubblicazione del corso",
+      "fonte": "report LMS; art. 7 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Riparazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il piano non prevede ristoro del danno né messa a disposizione del profitto",
+      "evidenza": "05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a riparazione",
+      "conseguenza": "mancano due elementi da valutare ai fini delle condizioni riparatorie",
+      "azione": "quantificare danno, restituzioni e profitto",
+      "dato_mancante": "manca la stima finanziaria",
+      "errore_bersaglio": "confondere l'aggiornamento del modello con tutte le condotte riparatorie",
+      "fonte": "art. 17 D.Lgs. 231/2001"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Chiusura",
+      "gravita": "alta",
+      "affermazione_richiesta": "la chiusura è subordinata a test dei controlli e report al consiglio",
+      "evidenza": "05_nota_comitato_controllo_rischi.pdf, contenuto pertinente a chiusura",
+      "conseguenza": "la sola approvazione documentale non chiude la remediation",
+      "azione": "eseguire test a 30 e 90 giorni",
+      "dato_mancante": "manca il proprietario di due controlli",
+      "errore_bersaglio": "dichiarare chiuso il piano alla delibera",
+      "fonte": "mandato; artt. 6 e 7 D.Lgs. 231/2001"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "brand policy",
+      "chiave_nel_criterio": "brand policy",
+      "regola": "Il cambio di intestazione della policy non prova l'attuazione dei controlli."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "corso pubblicato",
+      "chiave_nel_criterio": "corso pubblicato",
+      "regola": "La pubblicazione del corso non equivale al completamento da parte degli addetti."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "verbale senza allegati",
+      "chiave_nel_criterio": "verbale senza allegati",
+      "regola": "La ricezione di una sintesi non dimostra che l'OdV abbia avuto accesso agli allegati."
+    }
+  ],
+  "calcoli": [
+    "2029-02-05",
+    "2029-03-12"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_delibera_cda_e_legal_hold.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_odv_peverano.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_imo_procure_e_intermediari.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_relazione_hr_disciplina_e_formazione.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_comitato_controllo_rischi.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

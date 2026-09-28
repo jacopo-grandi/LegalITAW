@@ -1,0 +1,5 @@
+data_disposizione;data_valuta;beneficiario;iban_beneficiario;causale;fattura_riferita;importo_eur;autorizzato_da;rendicontazione_allegata
+2030-10-30;2030-10-30;Tecnoassist Corniano S.r.l.;IT80X0342117401500000010049;anticipo contratto di consulenza 04.09.2030;18/2030;73200,00;Corrado Vaimbrosio;no
+2031-02-06;2031-02-06;Tecnoassist Corniano S.r.l.;IT80X0342117401500000010049;saldo corrispettivo commessa Casalvento;4/2031;181780,00;Corrado Vaimbrosio;no
+2031-02-06;2031-02-06;Studio Legale Cantavenna;IT19R0510312840500000010822;assistenza contrattuale commessa Casalvento;12/2031;18300,00;Costanza Bellandrio;si
+2031-03-19;2031-03-19;Certificazioni Idrotecniche Bardolino S.r.l.;IT51O0762114420500000011595;prove di collaudo su impianti;77/2031;26840,00;Corrado Vaimbrosio;si

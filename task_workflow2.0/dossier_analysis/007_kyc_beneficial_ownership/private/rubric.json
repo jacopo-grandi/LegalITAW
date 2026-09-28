@@ -1,0 +1,690 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-007",
+  "title": "KYC. Ricostruire il titolare effettivo di una struttura",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 42,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il file consegnato è un memo di ricostruzione della titolarità effettiva e contiene un elenco dei titolari effettivi.",
+      "pass_condition": "il file consegnato è un memo di ricostruzione della titolarità effettiva e contiene un elenco dei titolari effettivi.",
+      "fail_condition": "manca il memo, la ricostruzione non riguarda la titolarità effettiva o manca l’elenco dei titolari effettivi.",
+      "indifferent": "Il formato dell’elenco.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [struttura] Il file consegnato è un memo di ricostruzione della titolarità effettiva e contiene un elenco dei titolari effettivi."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Per ciascun titolare effettivo l'elenco porta due campi non vuoti: la base e il documento-fonte.",
+      "pass_condition": "per ciascun titolare effettivo l’elenco riporta sia la base sia il documento-fonte, in campi non vuoti.",
+      "fail_condition": "anche un solo titolare effettivo non ha entrambi i campi compilati.",
+      "indifferent": "L’ordine o la disposizione dei campi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] Per ciascun titolare effettivo l'elenco porta due campi non vuoti: la base e il documento-fonte."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "La base appartiene all'insieme chiuso: proprietà, beneficio economico, controllo.",
+      "pass_condition": "per ciascun titolare effettivo la base indicata è una fra proprietà, beneficio economico e controllo.",
+      "fail_condition": "anche una sola base manca o non appartiene alle tre categorie indicate.",
+      "indifferent": "Le spiegazioni ulteriori sulla base, purché la categoria richiesta sia esplicita.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] La base appartiene all'insieme chiuso: proprietà, beneficio economico, controllo."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Nessun riferimento normativo fuori dall'elenco chiuso: artt. 20 e 22 del D.Lgs. 231/2007. Ogni altra norma citata è invenzione o eccedenza.",
+      "pass_condition": "il deliverable cita soltanto artt. 20 e 22 D.Lgs. 231/2007.",
+      "fail_condition": "compare anche una sola norma diversa da artt. 20 e 22 D.Lgs. 231/2007, anche come ipotesi o esempio.",
+      "indifferent": "I rinvii ai documenti del fascicolo non sono norme.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.4 [assenza] Nessun riferimento normativo fuori dall'elenco chiuso: artt. 20 e 22 del D.Lgs. 231/2007. Ogni altra norma citata è invenzione o eccedenza.\n\nSEZIONE B — MERITO. Passa al judge."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable identifica Ostro Investimenti S.r.l. come socia di Larius Partecipazioni S.p.A. con il 45%.",
+      "pass_condition": "compaiono il nome e la quota del 45%.",
+      "fail_condition": "la partecipazione è attribuita a un altro soggetto, o è indicata una quota diversa.",
+      "indifferent": null,
+      "source": "visura Larius.",
+      "severity": "alta",
+      "raw_text": "B.1 primo azionista [issue: I-01] [tipo: presenza]\nVerifica: il deliverable identifica Ostro Investimenti S.r.l. come socia di Larius Partecipazioni S.p.A. con il 45%.\nPass se: compaiono il nome e la quota del 45%.\nFail se: la partecipazione è attribuita a un altro soggetto, o è indicata una quota diversa.\n— non passa al judge — Fonte: visura Larius. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable risale alla compagine di Ostro Investimenti e indica Bianca Rovelli al 55% e Tullio Ansaldi al 45%.",
+      "pass_condition": "compaiono entrambi i nomi con le rispettive quote.",
+      "fail_condition": "la compagine di Ostro non è ricostruita, o le quote sono diverse.",
+      "indifferent": null,
+      "source": "visura Ostro.",
+      "severity": "alta",
+      "raw_text": "B.2 risalita alle persone fisiche [issue: I-01] [tipo: presenza]\nVerifica: il deliverable risale alla compagine di Ostro Investimenti e indica Bianca Rovelli al 55% e Tullio Ansaldi al 45%.\nPass se: compaiono entrambi i nomi con le rispettive quote.\nFail se: la compagine di Ostro non è ricostruita, o le quote sono diverse.\n— non passa al judge — Fonte: visura Ostro. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica Ostro Investimenti S.r.l. fra i titolari effettivi.",
+      "pass_condition": "fra i titolari effettivi compaiono solo persone fisiche.",
+      "fail_condition": "Ostro compare nell'elenco dei titolari effettivi, anche in via strumentale.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.3 la società socia non è titolare effettivo [issue: I-01] [tipo: assenza]\nVerifica: il deliverable non indica Ostro Investimenti S.r.l. fra i titolari effettivi.\nPass se: fra i titolari effettivi compaiono solo persone fisiche.\nFail se: Ostro compare nell'elenco dei titolari effettivi, anche in via strumentale.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che Bianca Rovelli controlla Ostro Investimenti in forza del 55%.",
+      "pass_condition": "compare il controllo su Ostro, riferito a Bianca Rovelli.",
+      "fail_condition": "il controllo su Ostro non è affermato, o è attribuito ad altri.",
+      "indifferent": null,
+      "source": "visura Ostro; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.4 controllo sulla società interposta [issue: I-02] [tipo: presenza]\nVerifica: il deliverable afferma che Bianca Rovelli controlla Ostro Investimenti in forza del 55%.\nPass se: compare il controllo su Ostro, riferito a Bianca Rovelli.\nFail se: il controllo su Ostro non è affermato, o è attribuito ad altri.\n— non passa al judge — Fonte: visura Ostro; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che, controllando la società interposta, a Bianca Rovelli è imputata l'intera partecipazione che Ostro detiene in Larius.",
+      "pass_condition": "compare l'imputazione integrale della quota della società interposta.",
+      "fail_condition": "l'imputazione è parziale, proporzionale o non affermata.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.5 imputazione dell'intera partecipazione [issue: I-02] [tipo: presenza]\nVerifica: il deliverable afferma che, controllando la società interposta, a Bianca Rovelli è imputata l'intera partecipazione che Ostro detiene in Larius.\nPass se: compare l'imputazione integrale della quota della società interposta.\nFail se: l'imputazione è parziale, proporzionale o non affermata.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica nel 45% la partecipazione indiretta imputata a Bianca Rovelli e afferma che supera il 25%.",
+      "pass_condition": "compaiono il 45% e il superamento della soglia.",
+      "fail_condition": "è indicata una percentuale diversa, o il superamento della soglia non è affermato.",
+      "indifferent": null,
+      "source": "visura Larius; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.6 quota imputata [issue: I-02] [tipo: presenza]\nVerifica: il deliverable indica nel 45% la partecipazione indiretta imputata a Bianca Rovelli e afferma che supera il 25%.\nPass se: compaiono il 45% e il superamento della soglia.\nFail se: è indicata una percentuale diversa, o il superamento della soglia non è affermato.\n— non passa al judge — Fonte: visura Larius; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica Bianca Rovelli come titolare effettivo per proprietà indiretta.",
+      "pass_condition": "compare fra i titolari effettivi con base «proprietà» o «proprietà indiretta».",
+      "fail_condition": "non compare fra i titolari effettivi, o le è attribuita una base diversa.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.7 Bianca Rovelli è titolare effettivo [issue: I-02] [tipo: qualificazione]\nVerifica: il deliverable qualifica Bianca Rovelli come titolare effettivo per proprietà indiretta.\nPass se: compare fra i titolari effettivi con base «proprietà» o «proprietà indiretta».\nFail se: non compare fra i titolari effettivi, o le è attribuita una base diversa.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non calcola la partecipazione indiretta come prodotto delle quote lungo la catena societaria.",
+      "pass_condition": "non compare alcun calcolo per moltiplicazione delle quote.",
+      "fail_condition": "la partecipazione indiretta è ottenuta moltiplicando le quote.",
+      "indifferent": null,
+      "source": "decisione #7 di metodo_e_convenzioni; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.8 nessuna moltiplicazione lungo la catena [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non calcola la partecipazione indiretta come prodotto delle quote lungo la catena societaria.\nPass se: non compare alcun calcolo per moltiplicazione delle quote.\nFail se: la partecipazione indiretta è ottenuta moltiplicando le quote.\n— non passa al judge — Fonte: decisione #7 di metodo_e_convenzioni; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 24,75%, né altra percentuale inferiore al 25%, come partecipazione di Bianca Rovelli in Larius.",
+      "pass_condition": "quella percentuale non è associata a Bianca Rovelli.",
+      "fail_condition": "compare il 24,75% come sua partecipazione, anche se poi è inclusa fra i titolari effettivi.",
+      "indifferent": null,
+      "source": "55% × 45% = 24,75%, metodo errato a questa data.",
+      "severity": "alta",
+      "raw_text": "B.9 il 24,75% non compare [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non indica il 24,75%, né altra percentuale inferiore al 25%, come partecipazione di Bianca Rovelli in Larius.\nPass se: quella percentuale non è associata a Bianca Rovelli.\nFail se: compare il 24,75% come sua partecipazione, anche se poi è inclusa fra i titolari effettivi.\n— non passa al judge — Fonte: 55% × 45% = 24,75%, metodo errato a questa data. Gravità: alta."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non esclude Bianca Rovelli dai titolari effettivi per non superamento della soglia.",
+      "pass_condition": "nessuna esclusione motivata dal mancato superamento del 25% la riguarda.",
+      "fail_condition": "è esclusa, o indicata come sotto soglia.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.10 Bianca non è esclusa per sotto-soglia [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non esclude Bianca Rovelli dai titolari effettivi per non superamento della soglia.\nPass se: nessuna esclusione motivata dal mancato superamento del 25% la riguarda.\nFail se: è esclusa, o indicata come sotto soglia.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable individua in Renzo Malacrida il fiduciante della quota del 28% intestata a Fiduciaria Sant'Orso.",
+      "pass_condition": "compaiono il nome del fiduciante e il collegamento alla quota del 28%.",
+      "fail_condition": "il fiduciante non è individuato, o la quota è attribuita ad altri.",
+      "indifferent": null,
+      "source": "dichiarazione della fiduciaria.",
+      "severity": "alta",
+      "raw_text": "B.11 il fiduciante è individuato [issue: I-04] [tipo: presenza]\nVerifica: il deliverable individua in Renzo Malacrida il fiduciante della quota del 28% intestata a Fiduciaria Sant'Orso.\nPass se: compaiono il nome del fiduciante e il collegamento alla quota del 28%.\nFail se: il fiduciante non è individuato, o la quota è attribuita ad altri.\n— non passa al judge — Fonte: dichiarazione della fiduciaria. Gravità: alta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica Renzo Malacrida come titolare effettivo per proprietà.",
+      "pass_condition": "compare fra i titolari effettivi con base «proprietà» o «beneficio economico».",
+      "fail_condition": "non compare fra i titolari effettivi.",
+      "indifferent": null,
+      "source": "art. 20; dichiarazione della fiduciaria.",
+      "severity": "alta",
+      "raw_text": "B.12 Renzo Malacrida è titolare effettivo [issue: I-04] [tipo: qualificazione]\nVerifica: il deliverable qualifica Renzo Malacrida come titolare effettivo per proprietà.\nPass se: compare fra i titolari effettivi con base «proprietà» o «beneficio economico».\nFail se: non compare fra i titolari effettivi.\n— non passa al judge — Fonte: art. 20; dichiarazione della fiduciaria. Gravità: alta."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica Corrado Fassio come titolare effettivo per controllo.",
+      "pass_condition": "compare fra i titolari effettivi con base «controllo».",
+      "fail_condition": "non compare fra i titolari effettivi, o gli è attribuita una base di proprietà.",
+      "indifferent": null,
+      "source": "patto parasociale; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.13 Corrado Fassio è titolare effettivo [issue: I-05] [tipo: qualificazione]\nVerifica: il deliverable qualifica Corrado Fassio come titolare effettivo per controllo.\nPass se: compare fra i titolari effettivi con base «controllo».\nFail se: non compare fra i titolari effettivi, o gli è attribuita una base di proprietà.\n— non passa al judge — Fonte: patto parasociale; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riconduce il controllo di Corrado Fassio al patto parasociale.",
+      "pass_condition": "il patto parasociale è richiamato a sostegno, con almeno uno fra la designazione della maggioranza del consiglio, la designazione dell'amministratore delegato e il voto determinante sulle Materie Riservate.",
+      "fail_condition": "il controllo è affermato senza ancoraggio al patto.",
+      "indifferent": null,
+      "source": "patto parasociale.",
+      "severity": "alta",
+      "raw_text": "B.14 fondamento del controllo di Fassio [issue: I-05] [tipo: attribuzione]\nVerifica: il deliverable riconduce il controllo di Corrado Fassio al patto parasociale.\nPass se: il patto parasociale è richiamato a sostegno, con almeno uno fra la designazione della maggioranza del consiglio, la designazione dell'amministratore delegato e il voto determinante sulle Materie Riservate.\nFail se: il controllo è affermato senza ancoraggio al patto.\n— non passa al judge — Fonte: patto parasociale. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non esclude Corrado Fassio dai titolari effettivi perché la sua quota del 15% è inferiore al 25%.",
+      "pass_condition": "nessuna esclusione motivata dalla quota lo riguarda.",
+      "fail_condition": "è escluso, o citato come sotto soglia senza essere qualificato titolare effettivo per controllo.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.15 la soglia di proprietà non esclude il controllo [issue: I-05] [tipo: assenza]\nVerifica: il deliverable non esclude Corrado Fassio dai titolari effettivi perché la sua quota del 15% è inferiore al 25%.\nPass se: nessuna esclusione motivata dalla quota lo riguarda.\nFail se: è escluso, o citato come sotto soglia senza essere qualificato titolare effettivo per controllo.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable attribuisce a Bianca Rovelli la base della proprietà, non quella del controllo sulla società cliente.",
+      "pass_condition": "la sua base è indicata come proprietà o proprietà indiretta.",
+      "fail_condition": "le è attribuito il controllo di Larius, o la base non è indicata.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "media",
+      "raw_text": "B.16 base di Bianca Rovelli [issue: I-06] [tipo: qualificazione]\nVerifica: il deliverable attribuisce a Bianca Rovelli la base della proprietà, non quella del controllo sulla società cliente.\nPass se: la sua base è indicata come proprietà o proprietà indiretta.\nFail se: le è attribuito il controllo di Larius, o la base non è indicata.\n— non passa al judge — Fonte: art. 20. Gravità: media."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable attribuisce a Renzo Malacrida la base della proprietà o del beneficio economico, senza controllo gestorio.",
+      "pass_condition": "la sua base è indicata come proprietà o beneficio economico.",
+      "fail_condition": "gli è attribuito il controllo, o la base non è indicata.",
+      "indifferent": null,
+      "source": "dichiarazione della fiduciaria.",
+      "severity": "media",
+      "raw_text": "B.17 base di Renzo Malacrida [issue: I-06] [tipo: qualificazione]\nVerifica: il deliverable attribuisce a Renzo Malacrida la base della proprietà o del beneficio economico, senza controllo gestorio.\nPass se: la sua base è indicata come proprietà o beneficio economico.\nFail se: gli è attribuito il controllo, o la base non è indicata.\n— non passa al judge — Fonte: dichiarazione della fiduciaria. Gravità: media."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable attribuisce a Corrado Fassio la base del controllo, e non una proprietà rilevante.",
+      "pass_condition": "la sua base è indicata come controllo.",
+      "fail_condition": "gli è attribuita la proprietà come base della titolarità effettiva.",
+      "indifferent": null,
+      "source": "patto parasociale.",
+      "severity": "media",
+      "raw_text": "B.18 base di Corrado Fassio [issue: I-06] [tipo: qualificazione]\nVerifica: il deliverable attribuisce a Corrado Fassio la base del controllo, e non una proprietà rilevante.\nPass se: la sua base è indicata come controllo.\nFail se: gli è attribuita la proprietà come base della titolarità effettiva.\n— non passa al judge — Fonte: patto parasociale. Gravità: media."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica Fiduciaria Sant'Orso fra i titolari effettivi.",
+      "pass_condition": "la fiduciaria è descritta come intestataria formale.",
+      "fail_condition": "compare nell'elenco dei titolari effettivi.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.19 la fiduciaria non è titolare effettivo [issue: I-07] [tipo: assenza]\nVerifica: il deliverable non indica Fiduciaria Sant'Orso fra i titolari effettivi.\nPass se: la fiduciaria è descritta come intestataria formale.\nFail se: compare nell'elenco dei titolari effettivi.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica Càlaris Trust Company fra i titolari effettivi di Larius.",
+      "pass_condition": "la trust company è descritta come intestataria formale o come trustee.",
+      "fail_condition": "compare nell'elenco dei titolari effettivi della società cliente.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.20 il trustee non è titolare effettivo [issue: I-07] [tipo: assenza]\nVerifica: il deliverable non indica Càlaris Trust Company fra i titolari effettivi di Larius.\nPass se: la trust company è descritta come intestataria formale o come trustee.\nFail se: compare nell'elenco dei titolari effettivi della società cliente.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica l'autodichiarazione del titolare effettivo come incompleta.",
+      "pass_condition": "compare «incompleta», «da integrare», «non esaustiva» o «parziale», riferito all'autodichiarazione.",
+      "fail_condition": "è recepita come corretta, o è respinta in blocco come inattendibile.",
+      "indifferent": null,
+      "source": "autodichiarazione.",
+      "severity": "alta",
+      "raw_text": "B.21 autodichiarazione incompleta [issue: I-08] [tipo: qualificazione]\nVerifica: il deliverable qualifica l'autodichiarazione del titolare effettivo come incompleta.\nPass se: compare «incompleta», «da integrare», «non esaustiva» o «parziale», riferito all'autodichiarazione.\nFail se: è recepita come corretta, o è respinta in blocco come inattendibile.\n— non passa al judge — Fonte: autodichiarazione. Gravità: alta."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che l'autodichiarazione va integrata con Renzo Malacrida.",
+      "pass_condition": "il suo nome compare fra le integrazioni richieste.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "autodichiarazione; dichiarazione della fiduciaria.",
+      "severity": "alta",
+      "raw_text": "B.22 integrazione con Renzo Malacrida [issue: I-08] [tipo: presenza]\nVerifica: il deliverable indica che l'autodichiarazione va integrata con Renzo Malacrida.\nPass se: il suo nome compare fra le integrazioni richieste.\nFail se: non compare.\n— non passa al judge — Fonte: autodichiarazione; dichiarazione della fiduciaria. Gravità: alta."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che l'autodichiarazione va integrata con Corrado Fassio.",
+      "pass_condition": "il suo nome compare fra le integrazioni richieste.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "autodichiarazione; patto parasociale.",
+      "severity": "alta",
+      "raw_text": "B.23 integrazione con Corrado Fassio [issue: I-08] [tipo: presenza]\nVerifica: il deliverable indica che l'autodichiarazione va integrata con Corrado Fassio.\nPass se: il suo nome compare fra le integrazioni richieste.\nFail se: non compare.\n— non passa al judge — Fonte: autodichiarazione; patto parasociale. Gravità: alta."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non rimuove Bianca Rovelli dai titolari effettivi in conseguenza dell'inattendibilità dell'autodichiarazione.",
+      "pass_condition": "resta nell'elenco dei titolari effettivi.",
+      "fail_condition": "è rimossa, o messa in dubbio, perché l'autodichiarazione è risultata incompleta.",
+      "indifferent": null,
+      "source": "autodichiarazione.",
+      "severity": "alta",
+      "raw_text": "B.24 Bianca resta titolare effettivo [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non rimuove Bianca Rovelli dai titolari effettivi in conseguenza dell'inattendibilità dell'autodichiarazione.\nPass se: resta nell'elenco dei titolari effettivi.\nFail se: è rimossa, o messa in dubbio, perché l'autodichiarazione è risultata incompleta.\n— non passa al judge — Fonte: autodichiarazione. Gravità: alta."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica Tullio Ansaldi fra i titolari effettivi.",
+      "pass_condition": "il suo nome non compare nell'elenco.",
+      "fail_condition": "compare, anche in via dubitativa o «prudenziale».",
+      "indifferent": null,
+      "source": "visura Ostro; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.25 Tullio Ansaldi non è titolare effettivo [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non indica Tullio Ansaldi fra i titolari effettivi.\nPass se: il suo nome non compare nell'elenco.\nFail se: compare, anche in via dubitativa o «prudenziale».\n— non passa al judge — Fonte: visura Ostro; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che Tullio Ansaldi, con il 45% di Ostro, non la controlla e che non gli è quindi imputata la partecipazione di Ostro in Larius.",
+      "pass_condition": "compaiono il mancato controllo e la mancata imputazione.",
+      "fail_condition": "l'esclusione è affermata senza motivazione, o è motivata con la moltiplicazione delle quote.",
+      "indifferent": null,
+      "source": "visura Ostro; art. 20.",
+      "severity": "alta",
+      "raw_text": "B.26 Ansaldi non controlla la società interposta [issue: I-09] [tipo: presenza]\nVerifica: il deliverable afferma che Tullio Ansaldi, con il 45% di Ostro, non la controlla e che non gli è quindi imputata la partecipazione di Ostro in Larius.\nPass se: compaiono il mancato controllo e la mancata imputazione.\nFail se: l'esclusione è affermata senza motivazione, o è motivata con la moltiplicazione delle quote.\n— non passa al judge — Fonte: visura Ostro; art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica disponente, trustee, guardiano o beneficiari del Trust Maestrale fra i titolari effettivi di Larius.",
+      "pass_condition": "nessuno di essi compare nell'elenco dei titolari effettivi della società cliente.",
+      "fail_condition": "anche uno solo compare, o il trust è trattato come veicolo da attraversare per individuare titolari effettivi di Larius.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.27 i soggetti del trust non sono titolari effettivi di Larius [issue: I-10] [tipo: assenza]\nVerifica: il deliverable non indica disponente, trustee, guardiano o beneficiari del Trust Maestrale fra i titolari effettivi di Larius.\nPass se: nessuno di essi compare nell'elenco dei titolari effettivi della società cliente.\nFail se: anche uno solo compare, o il trust è trattato come veicolo da attraversare per individuare titolari effettivi di Larius.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il Trust Maestrale detiene il 12% di Larius, quota inferiore alla soglia rilevante.",
+      "pass_condition": "compaiono la quota del 12% e il suo essere sotto soglia.",
+      "fail_condition": "la quota è diversa, o il rapporto con la soglia non è indicato.",
+      "indifferent": null,
+      "source": "visura Larius.",
+      "severity": "media",
+      "raw_text": "B.28 la quota del trust è sotto soglia [issue: I-10] [tipo: presenza]\nVerifica: il deliverable afferma che il Trust Maestrale detiene il 12% di Larius, quota inferiore alla soglia rilevante.\nPass se: compaiono la quota del 12% e il suo essere sotto soglia.\nFail se: la quota è diversa, o il rapporto con la soglia non è indicato.\n— non passa al judge — Fonte: visura Larius. Gravità: media."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il Trust Maestrale non esercita controllo su Larius.",
+      "pass_condition": "l'assenza di controllo è affermata.",
+      "fail_condition": "al trust è attribuito controllo, o il punto non è trattato.",
+      "indifferent": null,
+      "source": "patto parasociale; atto istitutivo.",
+      "severity": "media",
+      "raw_text": "B.29 il trust non ha controllo [issue: I-10] [tipo: presenza]\nVerifica: il deliverable afferma che il Trust Maestrale non esercita controllo su Larius.\nPass se: l'assenza di controllo è affermata.\nFail se: al trust è attribuito controllo, o il punto non è trattato.\n— non passa al judge — Fonte: patto parasociale; atto istitutivo. Gravità: media."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica Emilio Vittadini fra i titolari effettivi.",
+      "pass_condition": "il suo nome non compare nell'elenco.",
+      "fail_condition": "compare, anche in via residuale, provvisoria o «in mancanza d'altro».",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.30 nessun ripiego sul legale rappresentante [issue: I-11] [tipo: assenza]\nVerifica: il deliverable non indica Emilio Vittadini fra i titolari effettivi.\nPass se: il suo nome non compare nell'elenco.\nFail se: compare, anche in via residuale, provvisoria o «in mancanza d'altro».\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il criterio residuale non si applica perché i titolari effettivi sono individuabili per proprietà e per controllo.",
+      "pass_condition": "la non applicazione è motivata con l'avvenuta individuazione.",
+      "fail_condition": "il criterio residuale è ignorato senza motivazione, o è applicato.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "media",
+      "raw_text": "B.31 ragione della non applicazione del criterio residuale [issue: I-11] [tipo: presenza]\nVerifica: il deliverable afferma che il criterio residuale non si applica perché i titolari effettivi sono individuabili per proprietà e per controllo.\nPass se: la non applicazione è motivata con l'avvenuta individuazione.\nFail se: il criterio residuale è ignorato senza motivazione, o è applicato.\n— non passa al judge — Fonte: art. 20. Gravità: media."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la dichiarazione della fiduciaria rende determinabile la titolarità effettiva della quota del 28%.",
+      "pass_condition": "la determinabilità è affermata e ancorata a quel documento.",
+      "fail_condition": "la quota è trattata come opaca nonostante la dichiarazione.",
+      "indifferent": null,
+      "source": "dichiarazione della fiduciaria.",
+      "severity": "alta",
+      "raw_text": "B.32 il 28% è determinabile [issue: I-12] [tipo: presenza]\nVerifica: il deliverable afferma che la dichiarazione della fiduciaria rende determinabile la titolarità effettiva della quota del 28%.\nPass se: la determinabilità è affermata e ancorata a quel documento.\nFail se: la quota è trattata come opaca nonostante la dichiarazione.\n— non passa al judge — Fonte: dichiarazione della fiduciaria. Gravità: alta."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non dichiara non determinabile la titolarità effettiva della società cliente né di una sua quota.",
+      "pass_condition": "nessuna quota è qualificata come non determinabile.",
+      "fail_condition": "la titolarità effettiva, o una sua parte, è dichiarata non determinabile.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.33 nessuna titolarità non determinabile [issue: I-12] [tipo: assenza]\nVerifica: il deliverable non dichiara non determinabile la titolarità effettiva della società cliente né di una sua quota.\nPass se: nessuna quota è qualificata come non determinabile.\nFail se: la titolarità effettiva, o una sua parte, è dichiarata non determinabile.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non propone l'astensione né la sospensione del rapporto.",
+      "pass_condition": "nessun obbligo di astensione è indicato.",
+      "fail_condition": "l'astensione è proposta, anche in via prudenziale.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.34 nessuna astensione [issue: I-12] [tipo: assenza]\nVerifica: il deliverable non propone l'astensione né la sospensione del rapporto.\nPass se: nessun obbligo di astensione è indicato.\nFail se: l'astensione è proposta, anche in via prudenziale.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable risponde che l'adeguata verifica può concludersi quanto all'identificazione dei titolari effettivi.",
+      "pass_condition": "la risposta al quesito conclusivo è affermativa.",
+      "fail_condition": "la risposta è negativa, o è rinviata a documentazione non ancora disponibile.",
+      "indifferent": null,
+      "source": "art. 20.",
+      "severity": "alta",
+      "raw_text": "B.35 la verifica può concludersi [issue: I-13] [tipo: presenza]\nVerifica: il deliverable risponde che l'adeguata verifica può concludersi quanto all'identificazione dei titolari effettivi.\nPass se: la risposta al quesito conclusivo è affermativa.\nFail se: la risposta è negativa, o è rinviata a documentazione non ancora disponibile.\n— non passa al judge — Fonte: art. 20. Gravità: alta."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica l'acquisizione del documento d'identità del fiduciante fra i completamenti necessari.",
+      "pass_condition": "il documento compare fra le azioni residue.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "dichiarazione della fiduciaria.",
+      "severity": "media",
+      "raw_text": "B.36 documento d'identità del fiduciante [issue: I-13] [tipo: presenza]\nVerifica: il deliverable indica l'acquisizione del documento d'identità del fiduciante fra i completamenti necessari.\nPass se: il documento compare fra le azioni residue.\nFail se: non compare.\n— non passa al judge — Fonte: dichiarazione della fiduciaria. Gravità: media."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica la correzione o integrazione dell'autodichiarazione fra i completamenti necessari.",
+      "pass_condition": "compare fra le azioni residue.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "autodichiarazione.",
+      "severity": "media",
+      "raw_text": "B.37 correzione dell'autodichiarazione [issue: I-13] [tipo: presenza]\nVerifica: il deliverable indica la correzione o integrazione dell'autodichiarazione fra i completamenti necessari.\nPass se: compare fra le azioni residue.\nFail se: non compare.\n— non passa al judge — Fonte: autodichiarazione. Gravità: media."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta i completamenti residui come impossibilità di determinare il titolare effettivo.",
+      "pass_condition": "sono qualificati come adempimenti procedurali o formali.",
+      "fail_condition": "sono presentati come ostacolo all'identificazione, o come ragione per non chiudere la verifica.",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.38 i completamenti non sono un'impossibilità [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non presenta i completamenti residui come impossibilità di determinare il titolare effettivo.\nPass se: sono qualificati come adempimenti procedurali o formali.\nFail se: sono presentati come ostacolo all'identificazione, o come ragione per non chiudere la verifica.\n— non passa al judge — Fonte: art. 20. Gravità: alta.\n\nSEZIONE C — DATE. Non applicabile: il workflow non computa termini."
+    }
+  ]
+}

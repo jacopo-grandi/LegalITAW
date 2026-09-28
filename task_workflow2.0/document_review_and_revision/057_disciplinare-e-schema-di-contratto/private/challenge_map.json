@@ -1,0 +1,209 @@
+{
+  "task_id": "WF2-057",
+  "lato_assistito": "Consorzio Idrico Terrafiore, stazione appaltante",
+  "data_di_riferimento": "2031-10-15",
+  "stato_fascicolo": "determina a contrarre adottata il 29 settembre 2031; progetto esecutivo approvato; disciplinare e schema di contratto in bozza alla versione del 6 ottobre 2031; nessuna pubblicazione avvenuta; pubblicazione prevista per il 20 ottobre 2031.",
+  "meccanismi_di_difficolta": [
+    "presenza contro adeguatezza in forma pura: la clausola di revisione dei prezzi esiste, è obbligatoria e sembra a posto, ma è tarata sui parametri di un'altra tipologia contrattuale",
+    "versioni incompatibili e gerarchia fra documenti: importo, termine di esecuzione, criterio e subappalto divergono fra disciplinare, schema e determina, e una clausola di prevalenza consoliderebbe i valori sbagliati",
+    "clausola favorevole al lato assistito: il lato assistito è la stazione appaltante, e anticipazione del prezzo, sopralluogo obbligatorio e differimento dell'accesso non sono sue esposizioni",
+    "fatti distribuiti: la qualificazione dell'appalto come appalto di lavori sta nella determina e governa i parametri di una clausola dello schema",
+    "presupposti che si deducono: l'intervallo fra pubblicazione e termine per le offerte va calcolato e confrontato con il minimo applicabile, che nessun documento enuncia"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "penale giornaliera fuori dall'intervallo di legge",
+      "gravita": "alta",
+      "affermazione_richiesta": "la penale giornaliera del 2,0 per mille prevista dalla clausola 12.1 dello schema eccede il limite superiore dell'intervallo consentito, che va dallo 0,5 all'1,5 per mille dell'ammontare netto contrattuale",
+      "evidenza": "clausola 12.1 dello schema di contratto",
+      "non_deve_affermare": "che la misura sia rimessa alla discrezionalità della stazione appaltante"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "tetto complessivo delle penali oltre il limite",
+      "gravita": "alta",
+      "affermazione_richiesta": "il tetto del 20 per cento previsto dalla clausola 12.2 dello schema eccede il limite complessivo del 10 per cento dell'ammontare netto contrattuale",
+      "evidenza": "clausola 12.2 dello schema di contratto",
+      "non_deve_affermare": "che il tetto sia liberamente determinabile nei documenti di gara"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "incoerenza interna fra penali e risoluzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 13.2 dello schema àncora la facoltà di risoluzione al superamento del 10 per cento delle penali, misura che la clausola 12.2 colloca a metà del proprio tetto: le due clausole non sono coerenti fra loro",
+      "evidenza": "clausole 12.2 e 13.2 dello schema, lette insieme",
+      "non_deve_affermare": "che l'incoerenza si risolva mantenendo il tetto del 20 per cento"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "parametri della revisione prezzi riferiti ad altra tipologia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 14 dello schema prevede la revisione dei prezzi ma la attiva al superamento del 5 per cento e ne riconosce l'80 per cento, parametri previsti per gli appalti di servizi e forniture, mentre l'appalto ha per oggetto lavori, per i quali la soglia è del 3 per cento e la quota riconosciuta del 90 per cento",
+      "evidenza": "clausole 14.2 e 14.3 dello schema; punto 5 della determina a contrarre, che qualifica l'appalto come appalto di lavori",
+      "non_deve_affermare": "che la clausola sia idonea perché prevede una revisione, o che la revisione sia facoltativa nei documenti di gara"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "obbligatorieta della clausola di revisione prezzi",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'inserimento della clausola di revisione prezzi nei documenti di gara iniziali è obbligatorio: il difetto della clausola 14 non è l'assenza ma la taratura dei parametri",
+      "evidenza": "clausola 14 dello schema; disciplina della revisione dei prezzi",
+      "non_deve_affermare": "che la clausola possa essere soppressa per semplificare i documenti"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "premio di accelerazione mancante per un appalto di lavori",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo schema non prevede il premio di accelerazione, che per i lavori pubblici va inserito nei documenti, e il quadro economico non contiene alcuna voce destinata a coprirlo",
+      "evidenza": "assenza di previsione nello schema; riga della voce destinata al premio di accelerazione nel quadro economico, pari a zero",
+      "non_deve_affermare": "che il premio sia rimesso alla scelta della stazione appaltante negli appalti di lavori"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "scostamento sull'importo a base di gara",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 2.2 del disciplinare somma gli oneri della sicurezza all'importo a base di gara e arriva a euro 2.801.000,00, mentre determina e quadro economico collocano l'importo complessivo dell'intervento a euro 2.740.000,00 con euro 2.679.000,00 soggetti a ribasso: lo scostamento è di euro 61.000,00",
+      "evidenza": "clausola 2.2 del disciplinare; punto 2 della determina; sezione A del quadro economico",
+      "non_deve_affermare": "che l'importo del disciplinare sia esatto, o che lo scostamento sia un arrotondamento"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "criterio residuale in caso di parita",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 5.2 del disciplinare introduce il minor prezzo come criterio residuale, mentre determina e clausola 5.1 fissano l'offerta economicamente più vantaggiosa: la previsione va sostituita con un criterio di sorteggio o di prevalenza del punteggio tecnico",
+      "evidenza": "clausole 5.1 e 5.2 del disciplinare; punto 3 della determina",
+      "non_deve_affermare": "che il minor prezzo possa operare come criterio residuale in una procedura aggiudicata con altro criterio"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "illecito professionale qualificato come esclusione automatica",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 6.3 del disciplinare qualifica il grave illecito professionale come causa di esclusione automatica e ne esclude la valutazione da parte della stazione appaltante, mentre si tratta di causa che richiede una valutazione della stazione appaltante",
+      "evidenza": "clausola 6.3 del disciplinare",
+      "non_deve_affermare": "che l'esclusione operi senza valutazione, o che l'illecito professionale non rilevi"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "termine di esecuzione disallineato fra i tre documenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il disciplinare e la determina indicano 420 giorni, lo schema 450 giorni: il termine dello schema va allineato a quello del progetto esecutivo",
+      "evidenza": "clausola 3.1 del disciplinare; punto 5 della determina; clausola 5.1 dello schema",
+      "non_deve_affermare": "che il termine dello schema prevalga perché il contratto è l'atto finale"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "limite al subappalto incompatibile fra i due documenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 8.2 del disciplinare dichiara di non porre limiti quantitativi al subappalto e la clausola 10.2 dello schema fissa un limite del 30 per cento: la contraddizione va risolta prima della pubblicazione",
+      "evidenza": "clausola 8.2 del disciplinare; clausola 10.2 dello schema",
+      "non_deve_affermare": "che il limite dello schema si applichi comunque per effetto della clausola di prevalenza"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "clausola di prevalenza dello schema",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 1.2 dello schema fa prevalere il contratto sui documenti di gara e ha per effetto di far prevalere i valori disallineati dello schema su quelli del disciplinare e della determina",
+      "evidenza": "clausola 1.2 dello schema, letta con le clausole 5.1 e 10.2 dello stesso",
+      "non_deve_affermare": "che la clausola di prevalenza risolva le incoerenze in modo accettabile"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "allegato richiamato dallo schema e non elencato fra i documenti di gara",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 1.1 dello schema include fra i documenti contrattuali il piano di manutenzione dell'opera, che la clausola 16.1 del disciplinare non elenca fra i documenti di gara",
+      "evidenza": "clausola 1.1 dello schema; clausola 16.1 del disciplinare",
+      "non_deve_affermare": "che il piano di manutenzione sia ricompreso negli elaborati del progetto esecutivo"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "validita della garanzia provvisoria inferiore alla durata dell'offerta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 10.2 del disciplinare fissa la validità della garanzia provvisoria a 90 giorni mentre la clausola 9.1 vincola l'offerta per 240 giorni: la garanzia non copre l'intero periodo di vincolo",
+      "evidenza": "clausole 9.1 e 10.2 del disciplinare",
+      "non_deve_affermare": "che l'impegno al rinnovo della clausola 10.3 sani il disallineamento"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "intervallo fra pubblicazione e termine per le offerte",
+      "gravita": "media",
+      "affermazione_richiesta": "fra la pubblicazione prevista per il 20 ottobre 2031 e il termine del 24 novembre 2031 intercorrono 35 giorni: il dato va verificato rispetto al termine minimo applicabile alla procedura",
+      "evidenza": "clausole 4.1 e 4.2 del disciplinare",
+      "non_deve_affermare": "che il termine sia conforme, o che sia non conforme, in assenza di verifica del minimo applicabile"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "assenza di copertura per la revisione dei prezzi nel quadro economico",
+      "gravita": "media",
+      "affermazione_richiesta": "il quadro economico non destina alcuna somma alla revisione dei prezzi: la clausola 14, una volta corretta, richiede una provvista",
+      "evidenza": "riga della voce destinata alla revisione dei prezzi nel quadro economico, pari a zero",
+      "non_deve_affermare": "che l'accantonamento per accordo bonario o la voce imprevisti coprano la revisione"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "esclusione degli oneri della sicurezza dal ribasso",
+      "chiave_nel_criterio": "oneri della sicurezza non soggetti a ribasso",
+      "perche_non_e_issue": "l'esclusione degli oneri della sicurezza dal ribasso è l'assetto ordinario e compare coerentemente in disciplinare, determina e quadro economico. Segnalarla come irregolarità è errore: il rilievo riguarda la somma degli oneri all'importo a base di gara, non la loro esclusione dal ribasso"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "differimento dell'accesso agli atti",
+      "chiave_nel_criterio": "differimento dell'accesso agli atti",
+      "perche_non_e_issue": "la clausola 13.1 del disciplinare rinvia alla disciplina vigente e prevede il differimento nei casi previsti: è una formulazione corrente e non introduce limitazioni proprie. Segnalarla è sovra-segnalazione"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "obbligatorieta del sopralluogo",
+      "chiave_nel_criterio": "obbligatorieta del sopralluogo",
+      "perche_non_e_issue": "la previsione del sopralluogo obbligatorio con attestazione, con richiesta entro un termine anteriore alla scadenza, è prassi ordinaria in appalti di lavori su reti esistenti. Presentarla come requisito che ostacola la partecipazione è sovra-segnalazione"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "anticipazione del prezzo al venti per cento",
+      "chiave_nel_criterio": "anticipazione del prezzo",
+      "perche_non_e_issue": "la clausola 14.1 del disciplinare prevede l'anticipazione previa garanzia fideiussoria: è l'assetto ordinario e favorisce la partecipazione. Segnalarla come esposizione della stazione appaltante è errore"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "riparto di giurisdizione fra le due clausole sulle controversie",
+      "chiave_nel_criterio": "riparto di giurisdizione",
+      "perche_non_e_issue": "la clausola 15.1 del disciplinare distingue le controversie sull'affidamento da quelle sull'esecuzione e la clausola 18.1 dello schema si limita alle seconde: le due previsioni sono coerenti fra loro. Segnalarle come contraddittorie è errore"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "soglia dei pagamenti in acconto",
+      "chiave_nel_criterio": "soglia dei pagamenti in acconto",
+      "perche_non_e_issue": "la clausola 11.1 dello schema fissa gli stati di avanzamento a euro 300.000,00, misura compatibile con l'importo dell'appalto: è una scelta di gestione della cassa e non un profilo di rischio. Segnalarla è sovra-segnalazione"
+    }
+  ],
+  "dati_mancanti": [
+    "piano di manutenzione dell'opera, richiamato dallo schema e non elencato fra i documenti di gara",
+    "capitolato speciale d'appalto, elencato fra i documenti di gara e non allegato",
+    "elaborati del progetto esecutivo",
+    "modelli di dichiarazione elencati fra i documenti di gara",
+    "termine minimo applicabile alla procedura, da verificare per il confronto con i 35 giorni previsti",
+    "provvista da destinare alla revisione dei prezzi e al premio di accelerazione"
+  ],
+  "errori_bersaglio": [
+    "ritenere la clausola di revisione dei prezzi idonea perché prevede una revisione",
+    "applicare all'appalto di lavori i parametri di servizi e forniture",
+    "proporre la soppressione della clausola di revisione dei prezzi",
+    "trattare la misura della penale come rimessa alla discrezionalità della stazione appaltante",
+    "risolvere l'incoerenza fra penali e risoluzione mantenendo il tetto del 20 per cento",
+    "qualificare il grave illecito professionale come causa di esclusione automatica",
+    "mantenere il termine di esecuzione dello schema perché il contratto è l'atto finale",
+    "ritenere che la clausola di prevalenza risolva le incoerenze",
+    "ritenere che l'impegno al rinnovo sani il disallineamento della garanzia",
+    "dichiarare conforme o non conforme l'intervallo di 35 giorni senza la verifica del minimo applicabile",
+    "segnalare come rilievo l'esclusione degli oneri dal ribasso, il differimento dell'accesso, il sopralluogo obbligatorio, l'anticipazione del prezzo, il riparto di giurisdizione o la soglia degli acconti",
+    "presumere che la procedura sarà impugnata o annullata"
+  ],
+  "funzione_degli_allegati": {
+    "01_bozza_disciplinare_di_gara.docx": "Documento da revisionare. Porta lo scostamento sull'importo, il criterio residuale incoerente, la qualificazione dell'illecito professionale come esclusione automatica, l'assenza di limiti al subappalto e la validità della garanzia disallineata dalla durata dell'offerta. Contiene anche i controlled non-issue.",
+    "02_bozza_schema_di_contratto.docx": "Documento da revisionare. Porta la penale fuori intervallo, il tetto complessivo oltre il limite, la clausola di revisione prezzi tarata su parametri di altra tipologia contrattuale, il termine di esecuzione disallineato, il limite al subappalto incompatibile con il disciplinare, il rinvio a un allegato non elencato e l'incoerenza interna fra penali e risoluzione.",
+    "03_determina_a_contrarre.pdf": "Fissa tipologia contrattuale, importo complessivo e criterio di aggiudicazione: è il termine di confronto per gli scostamenti dei due documenti da revisionare.",
+    "04_quadro_economico_intervento.csv": "Prova la composizione dell'importo e l'assenza di somme destinate alla revisione dei prezzi e al premio di accelerazione: fonda due lacune del quadro economico."
+  }
+}

@@ -1,0 +1,674 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-029",
+  "title": "Compliance. Red flag su un terzo che opera verso la pubblica amministrazione",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 41,
+  "criteria": [
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "ogni voce della sezione Scostamenti dai presidi del Modello riporta il presidio disatteso e il documento da cui il rilievo deriva.",
+      "pass_condition": "in ciascuna voce compaiono sia un riferimento a un protocollo della Parte Speciale A sia il nome di un documento del fascicolo",
+      "fail_condition": "almeno una voce non riporta il presidio oppure non riporta il documento.",
+      "indifferent": null,
+      "source": "01_task.md, riga sull'ancoraggio",
+      "severity": "media",
+      "raw_text": "A.3 ogni voce della sezione Scostamenti dai presidi del Modello riporta il presidio disatteso e il documento da cui il rilievo deriva.\nissue: A · tipo: struttura · gravità: media · judge: no · fonte: 01_task.md, riga sull'ancoraggio\nVerifica: ogni voce della sezione Scostamenti dai presidi del Modello riporta il presidio disatteso e il documento da cui il rilievo deriva.\nPass se: in ciascuna voce compaiono sia un riferimento a un protocollo della Parte Speciale A sia il nome di un documento del fascicolo\nFail se: almeno una voce non riporta il presidio oppure non riporta il documento."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "fail_condition": "compare un riferimento normativo estraneo all'elenco chiuso.",
+      "indifferent": null,
+      "source": "02_reference_pack.md",
+      "severity": "alta",
+      "raw_text": "A.4 il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nissue: A · tipo: assenza · gravità: alta · judge: no · fonte: 02_reference_pack.md\nVerifica: il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nPass se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFail se: compare un riferimento normativo estraneo all'elenco chiuso."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la due diligence sul terzo e' stata acquisita dopo la sottoscrizione del contratto.",
+      "pass_condition": "compare una fra: «successiva alla sottoscrizione», «dopo la firma del contratto», «acquisita ex post», «non preventiva»",
+      "fail_condition": "la successione temporale non e' rilevata, oppure la due diligence e' presentata come preventiva.",
+      "indifferent": null,
+      "source": "contratto; questionario; P.A.1",
+      "severity": "alta",
+      "raw_text": "B.1 il deliverable afferma che la due diligence sul terzo e' stata acquisita dopo la sottoscrizione del contratto.\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto; questionario; P.A.1\nVerifica: il deliverable afferma che la due diligence sul terzo e' stata acquisita dopo la sottoscrizione del contratto.\nPass se: compare una fra: «successiva alla sottoscrizione», «dopo la firma del contratto», «acquisita ex post», «non preventiva»\nFail se: la successione temporale non e' rilevata, oppure la due diligence e' presentata come preventiva."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce il rilievo sulla due diligence al protocollo P.A.1.",
+      "pass_condition": "il rilievo e' agganciato al protocollo P.A.1 oppure al protocollo sulla qualificazione dei terzi",
+      "fail_condition": "il rilievo non e' agganciato ad alcun protocollo.",
+      "indifferent": null,
+      "source": "Parte Speciale A, P.A.1",
+      "severity": "media",
+      "raw_text": "B.2 il deliverable riconduce il rilievo sulla due diligence al protocollo P.A.1.\nissue: I-01 · tipo: attribuzione · gravità: media · judge: sì · fonte: Parte Speciale A, P.A.1\nVerifica: il deliverable riconduce il rilievo sulla due diligence al protocollo P.A.1.\nPass se: il rilievo e' agganciato al protocollo P.A.1 oppure al protocollo sulla qualificazione dei terzi\nFail se: il rilievo non e' agganciato ad alcun protocollo."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'affidamento avrebbe dovuto essere autorizzato dal comitato controllo e rischi.",
+      "pass_condition": "compare l'affermazione che la competenza era del comitato controllo e rischi oppure che occorreva una delibera del comitato",
+      "fail_condition": "il deliverable non rileva che la competenza fosse del comitato controllo e rischi.",
+      "indifferent": null,
+      "source": "Parte Speciale A, P.A.2",
+      "severity": "alta",
+      "raw_text": "B.3 il deliverable afferma che l'affidamento avrebbe dovuto essere autorizzato dal comitato controllo e rischi.\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: Parte Speciale A, P.A.2\nVerifica: il deliverable afferma che l'affidamento avrebbe dovuto essere autorizzato dal comitato controllo e rischi.\nPass se: compare l'affermazione che la competenza era del comitato controllo e rischi oppure che occorreva una delibera del comitato\nFail se: il deliverable non rileva che la competenza fosse del comitato controllo e rischi."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il compenso complessivo atteso superava la soglia prevista dal protocollo.",
+      "pass_condition": "compare il confronto fra il compenso atteso e la soglia, oppure l'affermazione che la soglia era superata",
+      "fail_condition": "il confronto con la soglia non compare.",
+      "indifferent": null,
+      "source": "nota DC/2025/0037; P.A.2",
+      "severity": "alta",
+      "raw_text": "B.4 il deliverable afferma che il compenso complessivo atteso superava la soglia prevista dal protocollo.\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: nota DC/2025/0037; P.A.2\nVerifica: il deliverable afferma che il compenso complessivo atteso superava la soglia prevista dal protocollo.\nPass se: compare il confronto fra il compenso atteso e la soglia, oppure l'affermazione che la soglia era superata\nFail se: il confronto con la soglia non compare."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il compenso a risultato pattuito eccede il limite fissato dal protocollo.",
+      "pass_condition": "compare il confronto fra la percentuale pattuita e quella ammessa, oppure l'affermazione che il limite e' superato",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "contratto, art. 3; P.A.3",
+      "severity": "alta",
+      "raw_text": "B.5 il deliverable afferma che il compenso a risultato pattuito eccede il limite fissato dal protocollo.\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto, art. 3; P.A.3\nVerifica: il deliverable afferma che il compenso a risultato pattuito eccede il limite fissato dal protocollo.\nPass se: compare il confronto fra la percentuale pattuita e quella ammessa, oppure l'affermazione che il limite e' superato\nFail se: il rilievo non compare."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che nel contratto mancano la clausola risolutiva espressa e il diritto di verifica documentale.",
+      "pass_condition": "compaiono entrambe le mancanze riferite all'art. 8 del contratto o al protocollo P.A.4",
+      "fail_condition": "e' rilevata una sola delle due mancanze, oppure nessuna.",
+      "indifferent": null,
+      "source": "contratto, art. 8; P.A.4",
+      "severity": "alta",
+      "raw_text": "B.6 il deliverable afferma che nel contratto mancano la clausola risolutiva espressa e il diritto di verifica documentale.\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto, art. 8; P.A.4\nVerifica: il deliverable afferma che nel contratto mancano la clausola risolutiva espressa e il diritto di verifica documentale.\nPass se: compaiono entrambe le mancanze riferite all'art. 8 del contratto o al protocollo P.A.4\nFail se: e' rilevata una sola delle due mancanze, oppure nessuna."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il contratto e' privo di qualsiasi richiamo al Modello.",
+      "pass_condition": "non compare l'affermazione che il contratto non contiene alcun riferimento al Modello o al Codice etico",
+      "fail_condition": "il contratto e' presentato come privo di richiami al Modello.",
+      "indifferent": null,
+      "source": "contratto, art. 8",
+      "severity": "media",
+      "raw_text": "B.7 il deliverable non afferma che il contratto e' privo di qualsiasi richiamo al Modello.\nissue: I-04 · tipo: assenza · gravità: media · judge: sì · fonte: contratto, art. 8\nVerifica: il deliverable non afferma che il contratto e' privo di qualsiasi richiamo al Modello.\nPass se: non compare l'affermazione che il contratto non contiene alcun riferimento al Modello o al Codice etico\nFail se: il contratto e' presentato come privo di richiami al Modello."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la facolta' del terzo di avvalersi di altri soggetti non e' subordinata all'autorizzazione preventiva scritta richiesta dal protocollo.",
+      "pass_condition": "compare il confronto fra l'art. 7 del contratto e il protocollo P.A.5, oppure l'affermazione che manca l'autorizzazione preventiva",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "contratto, art. 7; P.A.5",
+      "severity": "media",
+      "raw_text": "B.8 il deliverable afferma che la facolta' del terzo di avvalersi di altri soggetti non e' subordinata all'autorizzazione preventiva scritta richiesta dal protocollo.\nissue: I-05 · tipo: presenza · gravità: media · judge: sì · fonte: contratto, art. 7; P.A.5\nVerifica: il deliverable afferma che la facolta' del terzo di avvalersi di altri soggetti non e' subordinata all'autorizzazione preventiva scritta richiesta dal protocollo.\nPass se: compare il confronto fra l'art. 7 del contratto e il protocollo P.A.5, oppure l'affermazione che manca l'autorizzazione preventiva\nFail se: il rilievo non compare."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica l'attivita' descritta nella mail del 3 novembre 2026 come eccedente l'oggetto del contratto.",
+      "pass_condition": "compare, riferita a quell'attivita', una fra: «eccede l'oggetto», «va oltre la segnalazione», «non rientra nell'incarico», «diversa da quella pattuita»",
+      "fail_condition": "l'attivita' e' ricondotta senza rilievi all'oggetto del contratto, oppure la qualificazione non compare.",
+      "indifferent": null,
+      "source": "mail del 3 novembre 2026; contratto, art. 1",
+      "severity": "alta",
+      "raw_text": "B.9 il deliverable qualifica l'attivita' descritta nella mail del 3 novembre 2026 come eccedente l'oggetto del contratto.\nissue: I-06 · tipo: qualificazione · gravità: alta · judge: sì · fonte: mail del 3 novembre 2026; contratto, art. 1\nVerifica: il deliverable qualifica l'attivita' descritta nella mail del 3 novembre 2026 come eccedente l'oggetto del contratto.\nPass se: compare, riferita a quell'attivita', una fra: «eccede l'oggetto», «va oltre la segnalazione», «non rientra nell'incarico», «diversa da quella pattuita»\nFail se: l'attivita' e' ricondotta senza rilievi all'oggetto del contratto, oppure la qualificazione non compare."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la risposta alla domanda 7 del questionario e' contraddetta dalla mail del 3 novembre 2026.",
+      "pass_condition": "compare l'affermazione che la dichiarazione resa nel questionario e' smentita, contraddetta o non veritiera alla luce della mail",
+      "fail_condition": "la contraddizione non e' rilevata.",
+      "indifferent": null,
+      "source": "questionario, domanda 7; mail del 3 novembre 2026",
+      "severity": "alta",
+      "raw_text": "B.10 il deliverable afferma che la risposta alla domanda 7 del questionario e' contraddetta dalla mail del 3 novembre 2026.\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: questionario, domanda 7; mail del 3 novembre 2026\nVerifica: il deliverable afferma che la risposta alla domanda 7 del questionario e' contraddetta dalla mail del 3 novembre 2026.\nPass se: compare l'affermazione che la dichiarazione resa nel questionario e' smentita, contraddetta o non veritiera alla luce della mail\nFail se: la contraddizione non e' rilevata."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable collega il direttore del provveditorato citato nella mail al responsabile del procedimento indicato nella comunicazione di aggiudicazione.",
+      "pass_condition": "il nome del direttore del provveditorato e' messo in relazione con il responsabile del procedimento della gara",
+      "fail_condition": "il collegamento non compare.",
+      "indifferent": null,
+      "source": "mail; comunicazione di aggiudicazione",
+      "severity": "media",
+      "raw_text": "B.11 il deliverable collega il direttore del provveditorato citato nella mail al responsabile del procedimento indicato nella comunicazione di aggiudicazione.\nissue: I-07 · tipo: attribuzione · gravità: media · judge: sì · fonte: mail; comunicazione di aggiudicazione\nVerifica: il deliverable collega il direttore del provveditorato citato nella mail al responsabile del procedimento indicato nella comunicazione di aggiudicazione.\nPass se: il nome del direttore del provveditorato e' messo in relazione con il responsabile del procedimento della gara\nFail se: il collegamento non compare."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il compenso a risultato e' stato liquidato senza la rendicontazione richiesta.",
+      "pass_condition": "compare una fra: «senza rendicontazione», «in assenza di rapporti di attivita'», «senza documentazione a supporto», «privo di riscontro documentale»",
+      "fail_condition": "la liquidazione e' riportata senza rilevare l'assenza di rendicontazione.",
+      "indifferent": null,
+      "source": "partitario; contratto, art. 6; P.A.6",
+      "severity": "alta",
+      "raw_text": "B.12 il deliverable afferma che il compenso a risultato e' stato liquidato senza la rendicontazione richiesta.\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: partitario; contratto, art. 6; P.A.6\nVerifica: il deliverable afferma che il compenso a risultato e' stato liquidato senza la rendicontazione richiesta.\nPass se: compare una fra: «senza rendicontazione», «in assenza di rapporti di attivita'», «senza documentazione a supporto», «privo di riscontro documentale»\nFail se: la liquidazione e' riportata senza rilevare l'assenza di rendicontazione."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable colloca la vicenda nell'area di rischio dei reati contro la pubblica amministrazione.",
+      "pass_condition": "compare il riferimento alla Parte Speciale A oppure all'art. 25 del D.Lgs. 231/2001 come area di rischio della vicenda",
+      "fail_condition": "la collocazione non compare.",
+      "indifferent": null,
+      "source": "Parte Speciale A, sezione 1; art. 25 D.Lgs. 231/2001",
+      "severity": "alta",
+      "raw_text": "B.13 il deliverable colloca la vicenda nell'area di rischio dei reati contro la pubblica amministrazione.\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: Parte Speciale A, sezione 1; art. 25 D.Lgs. 231/2001\nVerifica: il deliverable colloca la vicenda nell'area di rischio dei reati contro la pubblica amministrazione.\nPass se: compare il riferimento alla Parte Speciale A oppure all'art. 25 del D.Lgs. 231/2001 come area di rischio della vicenda\nFail se: la collocazione non compare."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la responsabilita' dell'ente presuppone che il fatto sia commesso nel suo interesse o a suo vantaggio.",
+      "pass_condition": "compare la formula «nell'interesse o a vantaggio» riferita alla responsabilita' dell'ente",
+      "fail_condition": "il presupposto non compare.",
+      "indifferent": null,
+      "source": "art. 5 D.Lgs. 231/2001",
+      "severity": "media",
+      "raw_text": "B.14 il deliverable afferma che la responsabilita' dell'ente presuppone che il fatto sia commesso nel suo interesse o a suo vantaggio.\nissue: I-09 · tipo: presenza · gravità: media · judge: sì · fonte: art. 5 D.Lgs. 231/2001\nVerifica: il deliverable afferma che la responsabilita' dell'ente presuppone che il fatto sia commesso nel suo interesse o a suo vantaggio.\nPass se: compare la formula «nell'interesse o a vantaggio» riferita alla responsabilita' dell'ente\nFail se: il presupposto non compare."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il fascicolo non consente di affermare che vi sia stata una dazione o una promessa di utilita'.",
+      "pass_condition": "compare una fra: «il fascicolo non consente di affermare», «non vi e' prova», «non risulta provato», «non e' dimostrato» riferito a una dazione o promessa",
+      "fail_condition": "il deliverable afferma o nega la dazione senza qualificare il limite probatorio.",
+      "indifferent": null,
+      "source": "insieme del fascicolo",
+      "severity": "alta",
+      "raw_text": "B.15 il deliverable afferma che il fascicolo non consente di affermare che vi sia stata una dazione o una promessa di utilita'.\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: insieme del fascicolo\nVerifica: il deliverable afferma che il fascicolo non consente di affermare che vi sia stata una dazione o una promessa di utilita'.\nPass se: compare una fra: «il fascicolo non consente di affermare», «non vi e' prova», «non risulta provato», «non e' dimostrato» riferito a una dazione o promessa\nFail se: il deliverable afferma o nega la dazione senza qualificare il limite probatorio."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che un reato e' stato commesso.",
+      "pass_condition": "non compare l'affermazione che sia stato commesso un reato di corruzione o altro reato presupposto",
+      "fail_condition": "il deliverable afferma la commissione di un reato.",
+      "indifferent": null,
+      "source": "insieme del fascicolo",
+      "severity": "alta",
+      "raw_text": "B.16 il deliverable non afferma che un reato e' stato commesso.\nissue: I-10 · tipo: assenza · gravità: alta · judge: sì · fonte: insieme del fascicolo\nVerifica: il deliverable non afferma che un reato e' stato commesso.\nPass se: non compare l'affermazione che sia stato commesso un reato di corruzione o altro reato presupposto\nFail se: il deliverable afferma la commissione di un reato."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che i flussi informativi verso l'Organismo di Vigilanza non sono stati trasmessi per i semestri successivi al primo.",
+      "pass_condition": "compare il rilievo sull'omessa trasmissione dell'elenco degli affidamenti all'Organismo di Vigilanza",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "verbale del 21 gennaio 2027; P.A.7",
+      "severity": "media",
+      "raw_text": "B.17 il deliverable afferma che i flussi informativi verso l'Organismo di Vigilanza non sono stati trasmessi per i semestri successivi al primo.\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: verbale del 21 gennaio 2027; P.A.7\nVerifica: il deliverable afferma che i flussi informativi verso l'Organismo di Vigilanza non sono stati trasmessi per i semestri successivi al primo.\nPass se: compare il rilievo sull'omessa trasmissione dell'elenco degli affidamenti all'Organismo di Vigilanza\nFail se: il rilievo non compare."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che, decorso il termine, il contratto si rinnova tacitamente per ventiquattro mesi.",
+      "pass_condition": "compare l'affermazione che il rinnovo e' per ventiquattro mesi oppure per un periodo pari alla durata iniziale",
+      "fail_condition": "il rinnovo tacito non e' indicato, oppure la sua durata non e' indicata, oppure e' indicata una durata diversa da ventiquattro mesi",
+      "indifferent": null,
+      "source": "contratto, art. 10",
+      "severity": "alta",
+      "raw_text": "B.18 il deliverable afferma che, decorso il termine, il contratto si rinnova tacitamente per ventiquattro mesi.\nissue: I-12 · tipo: presenza · gravità: alta · judge: sì · fonte: contratto, art. 10\nVerifica: il deliverable afferma che, decorso il termine, il contratto si rinnova tacitamente per ventiquattro mesi.\nPass se: compare l'affermazione che il rinnovo e' per ventiquattro mesi oppure per un periodo pari alla durata iniziale\nFail se: il rinnovo tacito non e' indicato, oppure la sua durata non e' indicata, oppure e' indicata una durata diversa da ventiquattro mesi."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti da acquisire i rapporti trimestrali di attivita'.",
+      "pass_condition": "compare la richiesta dei rapporti trimestrali, della rendicontazione o dei report di attivita' del terzo",
+      "fail_condition": "la richiesta non compare.",
+      "indifferent": null,
+      "source": "contratto, art. 6",
+      "severity": "media",
+      "raw_text": "B.19 il deliverable indica fra i documenti da acquisire i rapporti trimestrali di attivita'.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: contratto, art. 6\nVerifica: il deliverable indica fra i documenti da acquisire i rapporti trimestrali di attivita'.\nPass se: compare la richiesta dei rapporti trimestrali, della rendicontazione o dei report di attivita' del terzo\nFail se: la richiesta non compare."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica la sospensione dei pagamenti fra le azioni immediate.",
+      "pass_condition": "compare una fra: «sospendere i pagamenti», «sospensione dei pagamenti», «bloccare le liquidazioni»",
+      "fail_condition": "l'azione non compare.",
+      "indifferent": null,
+      "source": "partitario fornitore",
+      "severity": "media",
+      "raw_text": "B.20 il deliverable indica la sospensione dei pagamenti fra le azioni immediate.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: partitario fornitore\nVerifica: il deliverable indica la sospensione dei pagamenti fra le azioni immediate.\nPass se: compare una fra: «sospendere i pagamenti», «sospensione dei pagamenti», «bloccare le liquidazioni»\nFail se: l'azione non compare."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che la Societa' debba presentare una denuncia sulla base del fascicolo.",
+      "pass_condition": "non compare l'indicazione di presentare una denuncia o un esposto all'autorita' giudiziaria",
+      "fail_condition": "il deliverable indica la denuncia fra le azioni da compiere.",
+      "indifferent": null,
+      "source": "insieme del fascicolo",
+      "severity": "media",
+      "raw_text": "B.21 il deliverable non afferma che la Societa' debba presentare una denuncia sulla base del fascicolo.\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: insieme del fascicolo\nVerifica: il deliverable non afferma che la Societa' debba presentare una denuncia sulla base del fascicolo.\nPass se: non compare l'indicazione di presentare una denuncia o un esposto all'autorita' giudiziaria\nFail se: il deliverable indica la denuncia fra le azioni da compiere."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il direttore commerciale fosse privo di poteri di firma.",
+      "pass_condition": "non compare l'affermazione che il direttore commerciale non potesse sottoscrivere o impegnare la Societa'",
+      "fail_condition": "il rilievo e' costruito sul difetto di poteri di rappresentanza.",
+      "indifferent": null,
+      "source": "nota DC/2025/0037",
+      "severity": "media",
+      "raw_text": "B.22 il deliverable non afferma che il direttore commerciale fosse privo di poteri di firma.\nissue: I-02 · tipo: assenza · gravità: media · judge: sì · fonte: nota DC/2025/0037\nVerifica: il deliverable non afferma che il direttore commerciale fosse privo di poteri di firma.\nPass se: non compare l'affermazione che il direttore commerciale non potesse sottoscrivere o impegnare la Societa'\nFail se: il rilievo e' costruito sul difetto di poteri di rappresentanza."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che un compenso legato al risultato sia di per se' vietato.",
+      "pass_condition": "non compare l'affermazione che il compenso a risultato non sia ammesso",
+      "fail_condition": "il compenso a risultato e' presentato come vietato in quanto tale.",
+      "indifferent": null,
+      "source": "Parte Speciale A, P.A.3",
+      "severity": "media",
+      "raw_text": "B.23 il deliverable non afferma che un compenso legato al risultato sia di per se' vietato.\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: Parte Speciale A, P.A.3\nVerifica: il deliverable non afferma che un compenso legato al risultato sia di per se' vietato.\nPass se: non compare l'affermazione che il compenso a risultato non sia ammesso\nFail se: il compenso a risultato e' presentato come vietato in quanto tale."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il terzo si sia avvalso di subagenti.",
+      "pass_condition": "non compare l'affermazione che il terzo abbia effettivamente utilizzato collaboratori o subagenti",
+      "fail_condition": "il ricorso a subagenti e' dato per avvenuto.",
+      "indifferent": null,
+      "source": "contratto, art. 7",
+      "severity": "media",
+      "raw_text": "B.24 il deliverable non afferma che il terzo si sia avvalso di subagenti.\nissue: I-05 · tipo: assenza · gravità: media · judge: sì · fonte: contratto, art. 7\nVerifica: il deliverable non afferma che il terzo si sia avvalso di subagenti.\nPass se: non compare l'affermazione che il terzo abbia effettivamente utilizzato collaboratori o subagenti\nFail se: il ricorso a subagenti e' dato per avvenuto."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "simmetria del controllo: il deliverable non afferma che il termine per la disdetta e' gia' scaduto alla data del 4 febbraio 2027.",
+      "pass_condition": "non compare l'affermazione che il termine sia decorso o che il rinnovo sia ormai inevitabile",
+      "fail_condition": "il termine e' presentato come gia' scaduto.",
+      "indifferent": null,
+      "source": "contratto, art. 10",
+      "severity": "alta",
+      "raw_text": "B.25 simmetria del controllo: il deliverable non afferma che il termine per la disdetta e' gia' scaduto alla data del 4 febbraio 2027.\nissue: I-12 · tipo: assenza · gravità: alta · judge: sì · fonte: contratto, art. 10\nVerifica: simmetria del controllo: il deliverable non afferma che il termine per la disdetta e' gia' scaduto alla data del 4 febbraio 2027.\nPass se: non compare l'affermazione che il termine sia decorso o che il rinnovo sia ormai inevitabile\nFail se: il termine e' presentato come gia' scaduto."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come rilievo il meccanismo di rinnovo tacito in quanto tale.",
+      "pass_condition": "il rinnovo tacito non compare fra gli scostamenti dai presidi del Modello",
+      "fail_condition": "il rinnovo tacito e' presentato come violazione di un presidio.",
+      "indifferent": null,
+      "source": "contratto, art. 10",
+      "severity": "media",
+      "raw_text": "B.26 sovra-segnalazione: il deliverable non segnala come rilievo il meccanismo di rinnovo tacito in quanto tale.\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: contratto, art. 10\nVerifica: sovra-segnalazione: il deliverable non segnala come rilievo il meccanismo di rinnovo tacito in quanto tale.\nPass se: il rinnovo tacito non compare fra gli scostamenti dai presidi del Modello\nFail se: il rinnovo tacito e' presentato come violazione di un presidio."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala la recente costituzione della societa' terza fra gli indici di rischio.",
+      "pass_condition": "non compare il rilievo della recente costituzione della societa' terza",
+      "fail_condition": "la societa' terza e' presentata come di recente costituzione o come veicolo costituito per l'incarico.",
+      "indifferent": null,
+      "source": "visura, data di costituzione",
+      "severity": "media",
+      "raw_text": "B.27 sovra-segnalazione: il deliverable non segnala la recente costituzione della societa' terza fra gli indici di rischio.\nissue: I-01 · tipo: assenza · gravità: media · judge: sì · fonte: visura, data di costituzione\nVerifica: sovra-segnalazione: il deliverable non segnala la recente costituzione della societa' terza fra gli indici di rischio.\nPass se: non compare il rilievo della recente costituzione della societa' terza\nFail se: la societa' terza e' presentata come di recente costituzione o come veicolo costituito per l'incarico."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala anomalie nel conto di accredito dei pagamenti.",
+      "pass_condition": "non compare il rilievo di accrediti su conti diversi dal conto indicato in contratto",
+      "fail_condition": "i pagamenti sono presentati come eseguiti su conti anomali o mutati nel tempo.",
+      "indifferent": null,
+      "source": "partitario fornitore",
+      "severity": "media",
+      "raw_text": "B.28 sovra-segnalazione: il deliverable non segnala anomalie nel conto di accredito dei pagamenti.\nissue: I-08 · tipo: assenza · gravità: media · judge: sì · fonte: partitario fornitore\nVerifica: sovra-segnalazione: il deliverable non segnala anomalie nel conto di accredito dei pagamenti.\nPass se: non compare il rilievo di accrediti su conti diversi dal conto indicato in contratto\nFail se: i pagamenti sono presentati come eseguiti su conti anomali o mutati nel tempo."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala la domiciliazione della sede del terzo come indice di rischio.",
+      "pass_condition": "la domiciliazione presso uno studio professionale non compare fra gli indici di rischio",
+      "fail_condition": "la domiciliazione e' presentata come indice di rischio corruttivo.",
+      "indifferent": null,
+      "source": "visura, indirizzo della sede",
+      "severity": "media",
+      "raw_text": "B.29 sovra-segnalazione: il deliverable non segnala la domiciliazione della sede del terzo come indice di rischio.\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: visura, indirizzo della sede\nVerifica: sovra-segnalazione: il deliverable non segnala la domiciliazione della sede del terzo come indice di rischio.\nPass se: la domiciliazione presso uno studio professionale non compare fra gli indici di rischio\nFail se: la domiciliazione e' presentata come indice di rischio corruttivo."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala l'assenza di una clausola di esclusiva fra i rilievi.",
+      "pass_condition": "l'assenza di esclusiva non compare fra gli scostamenti dai presidi del Modello",
+      "fail_condition": "l'assenza di esclusiva e' presentata come rilievo.",
+      "indifferent": null,
+      "source": "contratto, art. 2",
+      "severity": "bassa",
+      "raw_text": "B.30 sovra-segnalazione: il deliverable non segnala l'assenza di una clausola di esclusiva fra i rilievi.\nissue: I-04 · tipo: assenza · gravità: bassa · judge: sì · fonte: contratto, art. 2\nVerifica: sovra-segnalazione: il deliverable non segnala l'assenza di una clausola di esclusiva fra i rilievi.\nPass se: l'assenza di esclusiva non compare fra gli scostamenti dai presidi del Modello\nFail se: l'assenza di esclusiva e' presentata come rilievo."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "divieto di presunzione dell'esito: il deliverable non afferma che la Societa' sara' ritenuta responsabile.",
+      "pass_condition": "non compare l'affermazione che l'ente rispondera' o sara' sanzionato",
+      "fail_condition": "il deliverable presuppone l'affermazione della responsabilita' dell'ente.",
+      "indifferent": null,
+      "source": "artt. 5 e 6 D.Lgs. 231/2001",
+      "severity": "alta",
+      "raw_text": "B.31 divieto di presunzione dell'esito: il deliverable non afferma che la Societa' sara' ritenuta responsabile.\nissue: I-09 · tipo: assenza · gravità: alta · judge: sì · fonte: artt. 5 e 6 D.Lgs. 231/2001\nVerifica: divieto di presunzione dell'esito: il deliverable non afferma che la Societa' sara' ritenuta responsabile.\nPass se: non compare l'affermazione che l'ente rispondera' o sara' sanzionato\nFail se: il deliverable presuppone l'affermazione della responsabilita' dell'ente."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 9 febbraio 2027 come termine entro cui comunicare la disdetta.",
+      "pass_condition": "compare «9 febbraio 2027» oppure «09/02/2027» come termine per la disdetta",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "contratto, art. 10",
+      "severity": "alta",
+      "raw_text": "C.1 il deliverable indica il 9 febbraio 2027 come termine entro cui comunicare la disdetta.\nissue: I-12 · tipo: valore · gravità: alta · judge: no · fonte: contratto, art. 10\nVerifica: il deliverable indica il 9 febbraio 2027 come termine entro cui comunicare la disdetta.\nPass se: compare «9 febbraio 2027» oppure «09/02/2027» come termine per la disdetta\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable espone il calcolo del termine come conteggio a ritroso di trenta giorni dalla scadenza del contratto.",
+      "pass_condition": "compare il riferimento a trenta giorni prima della scadenza, oppure il conteggio a ritroso dall'11 marzo 2027",
+      "fail_condition": "il calcolo non e' esposto.",
+      "indifferent": null,
+      "source": "contratto, art. 10",
+      "severity": "media",
+      "raw_text": "C.2 il deliverable espone il calcolo del termine come conteggio a ritroso di trenta giorni dalla scadenza del contratto.\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: contratto, art. 10\nVerifica: il deliverable espone il calcolo del termine come conteggio a ritroso di trenta giorni dalla scadenza del contratto.\nPass se: compare il riferimento a trenta giorni prima della scadenza, oppure il conteggio a ritroso dall'11 marzo 2027\nFail se: il calcolo non e' esposto."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 12 per cento come misura del compenso a risultato pattuito.",
+      "pass_condition": "compare «12 per cento» oppure «12%» riferito al compenso pattuito",
+      "fail_condition": "e' indicata una misura diversa.",
+      "indifferent": null,
+      "source": "contratto, art. 3",
+      "severity": "alta",
+      "raw_text": "C.3 il deliverable indica il 12 per cento come misura del compenso a risultato pattuito.\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: contratto, art. 3\nVerifica: il deliverable indica il 12 per cento come misura del compenso a risultato pattuito.\nPass se: compare «12 per cento» oppure «12%» riferito al compenso pattuito\nFail se: e' indicata una misura diversa."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 6 per cento come limite fissato dal protocollo.",
+      "pass_condition": "compare «6 per cento» oppure «6%» riferito al limite del protocollo",
+      "fail_condition": "e' indicato un limite diverso.",
+      "indifferent": null,
+      "source": "Parte Speciale A, P.A.3",
+      "severity": "alta",
+      "raw_text": "C.4 il deliverable indica il 6 per cento come limite fissato dal protocollo.\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: Parte Speciale A, P.A.3\nVerifica: il deliverable indica il 6 per cento come limite fissato dal protocollo.\nPass se: compare «6 per cento» oppure «6%» riferito al limite del protocollo\nFail se: e' indicato un limite diverso."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 220.800,00 il compenso a risultato liquidato.",
+      "pass_condition": "compare «220.800,00» oppure «220.800»",
+      "fail_condition": "e' indicato un importo diverso.",
+      "indifferent": null,
+      "source": "partitario, fattura 29/2026",
+      "severity": "alta",
+      "raw_text": "C.5 il deliverable indica in euro 220.800,00 il compenso a risultato liquidato.\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: partitario, fattura 29/2026\nVerifica: il deliverable indica in euro 220.800,00 il compenso a risultato liquidato.\nPass se: compare «220.800,00» oppure «220.800»\nFail se: e' indicato un importo diverso."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 100.000,00 la soglia oltre la quale l'affidamento richiede la delibera del comitato.",
+      "pass_condition": "compare «100.000,00» oppure «100.000»",
+      "fail_condition": "e' indicata una soglia diversa.",
+      "indifferent": null,
+      "source": "Parte Speciale A, P.A.2",
+      "severity": "media",
+      "raw_text": "C.6 il deliverable indica in euro 100.000,00 la soglia oltre la quale l'affidamento richiede la delibera del comitato.\nissue: I-02 · tipo: valore · gravità: media · judge: no · fonte: Parte Speciale A, P.A.2\nVerifica: il deliverable indica in euro 100.000,00 la soglia oltre la quale l'affidamento richiede la delibera del comitato.\nPass se: compare «100.000,00» oppure «100.000»\nFail se: e' indicata una soglia diversa."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica l'11 marzo 2027 come termine per la disdetta.",
+      "pass_condition": "non compare «11 marzo 2027» ne' «11/03/2027» come termine entro cui comunicare la disdetta",
+      "fail_condition": "la scadenza del contratto e' presentata come termine per la disdetta.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.7 il deliverable non indica l'11 marzo 2027 come termine per la disdetta.\nissue: I-12 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica l'11 marzo 2027 come termine per la disdetta.\nPass se: non compare «11 marzo 2027» ne' «11/03/2027» come termine entro cui comunicare la disdetta\nFail se: la scadenza del contratto e' presentata come termine per la disdetta."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica euro 110.400,00 come compenso liquidato.",
+      "pass_condition": "non compare «110.400,00» ne' «110.400» come importo corrisposto",
+      "fail_condition": "e' indicato come corrisposto l'importo risultante dall'applicazione del limite del protocollo.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.8 il deliverable non indica euro 110.400,00 come compenso liquidato.\nissue: I-08 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica euro 110.400,00 come compenso liquidato.\nPass se: non compare «110.400,00» ne' «110.400» come importo corrisposto\nFail se: e' indicato come corrisposto l'importo risultante dall'applicazione del limite del protocollo."
+    }
+  ]
+}

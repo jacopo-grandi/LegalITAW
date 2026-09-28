@@ -1,0 +1,38 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-008",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "Contratto_Sereni_redline.docx"
+  ],
+  "criteria_total": 36,
+  "proposals_count": 1,
+  "proposals": [
+    {
+      "criterion_id": "B.8",
+      "verification_class": "span",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "art. 2125 c.c.",
+        "articolo 2125 del codice civile"
+      ],
+      "value_types": [
+        "norma"
+      ],
+      "rationale": "nella nota compare «art. 2125 c.c.» o «articolo 2125 del codice civile».",
+      "combine": "single",
+      "check": {
+        "id": "WF2-008-B8",
+        "type": "required_regex",
+        "artifact": "Contratto_Sereni_redline.docx",
+        "patterns": [
+          "(?:art\\.\\\\s+2125\\\\s+c\\.c\\.|articolo\\\\s+2125\\\\s+del\\\\s+codice\\\\s+civile)"
+        ]
+      }
+    }
+  ]
+}

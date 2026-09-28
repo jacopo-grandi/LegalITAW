@@ -1,0 +1,20 @@
+{
+  "task_id": "WF2-089",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.P.R. 380/2001, artt. 11, 20, 24 e 32",
+      "url": "https://www.normattiva.it/eli/stato/DECRETO_DEL_PRESIDENTE_DELLA_REPUBBLICA/2001/06/06/380/CONSOLIDATED",
+      "funzione": "titolo, procedimento, agibilita' e varianti",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile, artt. 1655, 1665, 1667 e 1669",
+      "url": "https://www.normattiva.it/eli/id/1942/04/04/042U0262/CONSOLIDATED",
+      "funzione": "appalto, verifica, vizi e rovina",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

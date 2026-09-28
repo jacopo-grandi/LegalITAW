@@ -1,0 +1,1553 @@
+{
+  "task_id": "WF2-054",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 77,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "sono prodotti entrambi i file richiesti, `agreement_redline.docx` e `risk_note.md`.",
+      "match_criteria": "Oggetto del criterio: sono prodotti entrambi i file richiesti, `agreement_redline.docx` e `risk_note.md`.\nPASS se: i due file consegnati hanno nome `agreement_redline.docx` e `risk_note.md`.\nFAIL se: manca uno dei due file, oppure un file ha nome o estensione diversi.\nÈ indifferente: la presenza di file aggiuntivi.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "i due file consegnati hanno nome `agreement_redline.docx` e `risk_note.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.2",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il file `agreement_redline.docx` contiene revisioni tracciate.",
+      "match_criteria": "Oggetto del criterio: il file `agreement_redline.docx` contiene revisioni tracciate.\nPASS se: il documento contiene almeno una cancellazione e almeno una inserzione tracciate.\nFAIL se: il documento non contiene revisioni tracciate, oppure le modifiche sono rese con marcatori nel testo.\nÈ indifferente: il numero delle revisioni.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il documento contiene almeno una cancellazione e almeno una inserzione tracciate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il file `risk_note.md` non supera il limite di 2200 parole.",
+      "match_criteria": "Oggetto del criterio: il file `risk_note.md` non supera il limite di 2200 parole.\nPASS se: il conteggio delle parole del corpo di `risk_note.md` non supera 2200.\nFAIL se: il corpo di `risk_note.md` supera 2200 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo di `risk_note.md` non supera 2200.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "ogni rilievo della nota porta il riferimento alla clausola della bozza su cui incide e al documento che lo fonda.",
+      "match_criteria": "Oggetto del criterio: ogni rilievo della nota porta il riferimento alla clausola della bozza su cui incide e al documento che lo fonda.\nPASS se: accanto a ciascun rilievo compaiono il numero della clausola e il rinvio a un allegato.\nFAIL se: almeno un rilievo omette il riferimento alla clausola o il rinvio all'allegato.\nÈ indifferente: la forma del riferimento.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascun rilievo compaiono il numero della clausola e il rinvio a un allegato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "per ciascun rilievo di livello la nota indica il valore previsto dalla bozza e quello ammesso dalla policy interna.",
+      "match_criteria": "Oggetto del criterio: per ciascun rilievo di livello la nota indica il valore previsto dalla bozza e quello ammesso dalla policy interna.\nPASS se: per ciascun rilievo di livello compaiono i due valori.\nFAIL se: almeno un rilievo di livello omette uno dei due valori.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: public/01_task.md, richiesta sui livelli",
+      "pass_condition": "per ciascun rilievo di livello compaiono i due valori.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota distingue i rilievi che impongono una modifica da quelli che non la impongono.",
+      "match_criteria": "Oggetto del criterio: la nota distingue i rilievi che impongono una modifica da quelli che non la impongono.\nPASS se: compare una separazione fra i rilievi che impongono modifica e gli elementi che non la impongono.\nFAIL se: la nota presenta un elenco indistinto di osservazioni.\nÈ indifferente: le etichette usate per la separazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare una separazione fra i rilievi che impongono modifica e gli elementi che non la impongono.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole dell'accordo, ai paragrafi della policy e alle sezioni del questionario, che non sono fonti normative.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota qualifica le clausole 6.1 e 6.2 come traslazione sulla controparte di obblighi che restano in capo alla Banca.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica le clausole 6.1 e 6.2 come traslazione sulla controparte di obblighi che restano in capo alla Banca.\nPASS se: compare, riferita a quelle clausole, una fra: «traslazione di obblighi non trasferibili», «gli obblighi restano in capo alla Banca», «non delegabili alla controparte».\nFAIL se: le clausole sono presentate come ammissibili, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo al numero del paragrafo della policy.\nFonte di authoring: clausole 6.1 e 6.2 della bozza; paragrafo 2.1 della policy",
+      "pass_condition": "compare, riferita a quelle clausole, una fra: «traslazione di obblighi non trasferibili», «gli obblighi restano in capo alla Banca», «non delegabili alla controparte».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 6.2 sull'affidamento integrale alle verifiche della controparte.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 6.2 sull'affidamento integrale alle verifiche della controparte.\nPASS se: nel documento con revisioni tracciate la clausola 6.2 risulta cancellata o sostituita.\nFAIL se: la clausola 6.2 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 6.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 6.2 risulta cancellata o sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che la Banca deve ripetere la verifica su tutti i clienti della controparte.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che la Banca deve ripetere la verifica su tutti i clienti della controparte.\nPASS se: la nota non afferma che la Banca deve ripetere la verifica su tutti i clienti della controparte.\nFAIL se: compare l'affermazione che la Banca deve svolgere la verifica su tutti i clienti della controparte.\nÈ indifferente: l'indicazione dei casi in cui la verifica sui clienti della controparte è dovuta.\nFonte di authoring: paragrafo 2.3 della policy interna",
+      "pass_condition": "la nota non afferma che la Banca deve ripetere la verifica su tutti i clienti della controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota individua nella banca rispondente il cliente della Banca ai fini della verifica.",
+      "match_criteria": "Oggetto del criterio: la nota individua nella banca rispondente il cliente della Banca ai fini della verifica.\nPASS se: compare, riferita alla controparte, una fra: «è il cliente della Banca», «la verifica della Banca ha per oggetto la banca rispondente», «cliente ai fini della verifica».\nFAIL se: il cliente è individuato nella clientela della controparte, oppure è affermato che la Banca non ha alcun cliente da verificare, oppure l'individuazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo al numero del paragrafo della policy.\nFonte di authoring: paragrafo 2.2 della policy interna",
+      "pass_condition": "compare, riferita alla controparte, una fra: «è il cliente della Banca», «la verifica della Banca ha per oggetto la banca rispondente», «cliente ai fini della verifica».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 7.2 esclude i filtri autonomi della Banca sulle operazioni.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 7.2 esclude i filtri autonomi della Banca sulle operazioni.\nPASS se: compare l'indicazione che la clausola 7.2 esclude i filtri autonomi della Banca.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 7.2 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 7.2 esclude i filtri autonomi della Banca.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che la policy interna impone i filtri autonomi su tutte le operazioni indipendentemente dai controlli della controparte.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che la policy interna impone i filtri autonomi su tutte le operazioni indipendentemente dai controlli della controparte.\nPASS se: compare l'indicazione che i filtri autonomi sono imposti su tutte le operazioni.\nFAIL se: l'affermazione non compare, oppure i filtri sono presentati come facoltativi.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafo 7.1 della policy interna",
+      "pass_condition": "compare l'indicazione che i filtri autonomi sono imposti su tutte le operazioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 7.2.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 7.2.\nPASS se: nel documento con revisioni tracciate la clausola 7.2 risulta cancellata o sostituita.\nFAIL se: la clausola 7.2 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 7.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 7.2 risulta cancellata o sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che l'esclusione dei filtri autonomi è giustificata dall'esigenza di non duplicare i controlli o di non introdurre ritardi.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che l'esclusione dei filtri autonomi è giustificata dall'esigenza di non duplicare i controlli o di non introdurre ritardi.\nPASS se: la nota non afferma che l'esclusione dei filtri autonomi è giustificata dall'esigenza di non duplicare i controlli o di non introdurre ritardi.\nFAIL se: compare l'affermazione che l'esclusione è giustificata da una di quelle due esigenze.\nÈ indifferente: la menzione di quelle esigenze come motivazione addotta dalla bozza.\nFonte di authoring: clausola 7.2 della bozza",
+      "pass_condition": "la nota non afferma che l'esclusione dei filtri autonomi è giustificata dall'esigenza di non duplicare i controlli o di non introdurre ritardi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 3.2 consente ai clienti della controparte di operare direttamente sul conto senza preventiva comunicazione.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 3.2 consente ai clienti della controparte di operare direttamente sul conto senza preventiva comunicazione.\nPASS se: compare l'indicazione che la clausola 3.2 ammette l'utilizzo diretto del conto da parte di terzi senza preventiva comunicazione.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 3.2 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 3.2 ammette l'utilizzo diretto del conto da parte di terzi senza preventiva comunicazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica le tre condizioni che la policy interna pone all'utilizzo diretto del conto: autorizzazione espressa, identificazione preventiva dei soggetti abilitati e monitoraggio dedicato.",
+      "match_criteria": "Oggetto del criterio: la nota indica le tre condizioni che la policy interna pone all'utilizzo diretto del conto: autorizzazione espressa, identificazione preventiva dei soggetti abilitati e monitoraggio dedicato.\nPASS se: compaiono le tre condizioni previste dalla policy.\nFAIL se: sono indicate meno di tre condizioni, oppure le condizioni non sono indicate.\nÈ indifferente: l'ordine in cui le condizioni sono elencate.\nFonte di authoring: paragrafo 5.2 della policy interna",
+      "pass_condition": "compaiono le tre condizioni previste dalla policy.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 3.2.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 3.2.\nPASS se: nel documento con revisioni tracciate la clausola 3.2 risulta cancellata o sostituita.\nFAIL se: la clausola 3.2 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 3.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 3.2 risulta cancellata o sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che l'utilizzo diretto del conto è ammissibile in quanto condizione della trattativa posta dalla controparte.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che l'utilizzo diretto del conto è ammissibile in quanto condizione della trattativa posta dalla controparte.\nPASS se: la nota non afferma che l'utilizzo diretto del conto è ammissibile in quanto condizione della trattativa posta dalla controparte.\nFAIL se: compare l'affermazione che l'utilizzo diretto è ammissibile perché richiesto dalla controparte come condizione della trattativa.\nÈ indifferente: la menzione della richiesta della controparte come circostanza di fatto.\nFonte di authoring: nota dell'unità Pagamenti esteri; clausola 3.2 della bozza",
+      "pass_condition": "la nota non afferma che l'utilizzo diretto del conto è ammissibile in quanto condizione della trattativa posta dalla controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota fonda il rilievo sull'utilizzo diretto del conto anche sulla sezione 5 del questionario compilato dalla controparte.",
+      "match_criteria": "Oggetto del criterio: la nota fonda il rilievo sull'utilizzo diretto del conto anche sulla sezione 5 del questionario compilato dalla controparte.\nPASS se: il rilievo è ricondotto alla sezione del questionario che dichiara l'utilizzo diretto e l'assenza di identificazione preventiva.\nFAIL se: il rilievo è fondato soltanto sulla clausola dell'accordo, senza il riscontro nel questionario.\nÈ indifferente: il richiamo al numero della sezione.\nFonte di authoring: sezione 5 del questionario di due diligence",
+      "pass_condition": "il rilievo è ricondotto alla sezione del questionario che dichiara l'utilizzo diretto e l'assenza di identificazione preventiva.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che il questionario indica quattro dipendenti nella giurisdizione di costituzione, uffici di rappresentanza in due giurisdizioni e un consiglio che si riunisce a distanza.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che il questionario indica quattro dipendenti nella giurisdizione di costituzione, uffici di rappresentanza in due giurisdizioni e un consiglio che si riunisce a distanza.\nPASS se: compaiono almeno due dei tre elementi sulla struttura della controparte nella giurisdizione di costituzione.\nFAIL se: il rilievo non compare, oppure è indicato un solo elemento.\nÈ indifferente: l'ordine in cui gli elementi sono esposti.\nFonte di authoring: sezione 1 del questionario",
+      "pass_condition": "compaiono almeno due dei tre elementi sulla struttura della controparte nella giurisdizione di costituzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota qualifica la dichiarazione della clausola 5.1 come non documentata da evidenze indipendenti sulla presenza fisica.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica la dichiarazione della clausola 5.1 come non documentata da evidenze indipendenti sulla presenza fisica.\nPASS se: compare, riferita a quella dichiarazione, una fra: «non documentata da evidenze indipendenti», «da verificare con evidenze indipendenti», «la dichiarazione non esaurisce la verifica».\nFAIL se: la dichiarazione è presentata come bastevole, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo al numero del paragrafo della policy.\nFonte di authoring: clausola 5.1 della bozza; paragrafo 4.3 della policy interna",
+      "pass_condition": "compare, riferita a quella dichiarazione, una fra: «non documentata da evidenze indipendenti», «da verificare con evidenze indipendenti», «la dichiarazione non esaurisce la verifica».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che la controparte è priva di presenza fisica nella giurisdizione di costituzione.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che la controparte è priva di presenza fisica nella giurisdizione di costituzione.\nPASS se: la nota non afferma che la controparte è priva di presenza fisica nella giurisdizione di costituzione.\nFAIL se: compare l'affermazione che la controparte è priva di presenza fisica o che integra il divieto per assenza di presenza fisica.\nÈ indifferente: l'indicazione che la presenza fisica va accertata con evidenze indipendenti.\nFonte di authoring: sezione 1 del questionario; paragrafo 4.1 della policy",
+      "pass_condition": "la nota non afferma che la controparte è priva di presenza fisica nella giurisdizione di costituzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica come azione l'acquisizione di evidenze indipendenti sulla presenza fisica e sulla sede di direzione effettiva.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione l'acquisizione di evidenze indipendenti sulla presenza fisica e sulla sede di direzione effettiva.\nPASS se: compare l'indicazione di acquisire evidenze indipendenti sulla presenza fisica.\nFAIL se: l'azione non compare.\nÈ indifferente: il tipo di evidenze proposte.\nFonte di authoring: paragrafo 4.3 della policy interna",
+      "pass_condition": "compare l'indicazione di acquisire evidenze indipendenti sulla presenza fisica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che fra la clientela della controparte figurano società di cambio valuta non sottoposte a vigilanza prudenziale.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che fra la clientela della controparte figurano società di cambio valuta non sottoposte a vigilanza prudenziale.\nPASS se: compare l'indicazione che la clientela della controparte comprende enti privi di licenza o società di cambio valuta non vigilate.\nFAIL se: il rilievo non compare, oppure la clientela è presentata come composta di soli soggetti vigilati.\nÈ indifferente: il richiamo al numero della sezione.\nFonte di authoring: sezione 4 del questionario",
+      "pass_condition": "compare l'indicazione che la clientela della controparte comprende enti privi di licenza o società di cambio valuta non vigilate.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la controparte rende servizi a banche terze.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la controparte rende servizi a banche terze.\nPASS se: compare l'indicazione che la controparte rende servizi a banche terze.\nFAIL se: il rilievo non compare, oppure è affermato che la controparte non serve banche terze.\nÈ indifferente: il richiamo alla percentuale di clientela non residente.\nFonte di authoring: sezione 4 del questionario",
+      "pass_condition": "compare l'indicazione che la controparte rende servizi a banche terze.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 4.2 rende le dichiarazioni della controparte rese una sola volta e confermate per tutta la durata.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 4.2 rende le dichiarazioni della controparte rese una sola volta e confermate per tutta la durata.\nPASS se: compare l'indicazione che la clausola 4.2 prevede una conferma implicita delle dichiarazioni per tutta la durata.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 4.2 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 4.2 prevede una conferma implicita delle dichiarazioni per tutta la durata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 4.2 con l'obbligo di rinnovare le dichiarazioni e di comunicare senza indugio le variazioni.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 4.2 con l'obbligo di rinnovare le dichiarazioni e di comunicare senza indugio le variazioni.\nPASS se: nel documento con revisioni tracciate la clausola 4.2 risulta sostituita con un obbligo di rinnovo e di comunicazione senza indugio.\nFAIL se: la clausola 4.2 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la periodicità proposta per il rinnovo.\nFonte di authoring: clausola 4.2 della bozza; paragrafo 6.5 della policy",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 4.2 risulta sostituita con un obbligo di rinnovo e di comunicazione senza indugio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 10.1 àncora la comunicazione delle variazioni al riesame anziché richiederla senza indugio.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 10.1 àncora la comunicazione delle variazioni al riesame anziché richiederla senza indugio.\nPASS se: compare l'indicazione che la clausola 10.1 collega la comunicazione delle variazioni al riesame.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 10.1 della bozza; paragrafo 6.5 della policy",
+      "pass_condition": "compare l'indicazione che la clausola 10.1 collega la comunicazione delle variazioni al riesame.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 10.1 con l'obbligo di comunicazione senza indugio.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 10.1 con l'obbligo di comunicazione senza indugio.\nPASS se: nel documento con revisioni tracciate la clausola 10.1 risulta sostituita con un obbligo di comunicazione senza indugio.\nFAIL se: la clausola 10.1 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 10.1 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 10.1 risulta sostituita con un obbligo di comunicazione senza indugio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica in 36 mesi la periodicità del riesame prevista dalla bozza e in 12 mesi quella ammessa dalla policy per i rapporti a rischio elevato.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 36 mesi la periodicità del riesame prevista dalla bozza e in 12 mesi quella ammessa dalla policy per i rapporti a rischio elevato.\nPASS se: compaiono «36 mesi» e «12 mesi» come periodicità prevista e periodicità ammessa.; compaiono «trentasei mesi» e «dodici mesi» come periodicità prevista e periodicità ammessa.\nFAIL se: è indicata una periodicità diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 9.2 della bozza; paragrafo 6.4 della policy",
+      "pass_condition": "compaiono «36 mesi» e «12 mesi» come periodicità prevista e periodicità ammessa.; compaiono «trentasei mesi» e «dodici mesi» come periodicità prevista e periodicità ammessa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota collega la periodicità di dodici mesi alla classe di rischio elevata attribuita dalla scheda paese.",
+      "match_criteria": "Oggetto del criterio: la nota collega la periodicità di dodici mesi alla classe di rischio elevata attribuita dalla scheda paese.\nPASS se: il collegamento è fatto alla classe di rischio elevata attribuita dalla scheda di valutazione del rischio paese.\nFAIL se: la periodicità è indicata senza il collegamento alla classificazione del rischio.\nÈ indifferente: il richiamo al protocollo della scheda.\nFonte di authoring: scheda rischio paese; paragrafo 6.4 della policy",
+      "pass_condition": "il collegamento è fatto alla classe di rischio elevata attribuita dalla scheda di valutazione del rischio paese.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline riduce la periodicità del riesame prevista dalla clausola 9.2.",
+      "match_criteria": "Oggetto del criterio: il redline riduce la periodicità del riesame prevista dalla clausola 9.2.\nPASS se: nel documento con revisioni tracciate la periodicità di 36 mesi risulta sostituita da una periodicità più breve.\nFAIL se: la periodicità di 36 mesi resta invariata nel documento con revisioni tracciate.\nÈ indifferente: il valore esatto proposto, purché non superiore a dodici mesi.\nFonte di authoring: clausola 9.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la periodicità di 36 mesi risulta sostituita da una periodicità più breve.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica in euro 1.000.000,00 la soglia di escalation prevista dalla bozza e in euro 250.000,00 quella prevista dalla policy.",
+      "match_criteria": "Oggetto del criterio: la nota indica in euro 1.000.000,00 la soglia di escalation prevista dalla bozza e in euro 250.000,00 quella prevista dalla policy.\nPASS se: compaiono «euro 1.000.000,00» ed «euro 250.000,00» come soglia prevista e soglia ammessa.; compaiono «1.000.000,00» e «250.000,00» come soglia prevista e soglia ammessa.\nFAIL se: è indicata una soglia diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 12.2 della bozza; paragrafo 7.2 della policy",
+      "pass_condition": "compaiono «euro 1.000.000,00» ed «euro 250.000,00» come soglia prevista e soglia ammessa.; compaiono «1.000.000,00» e «250.000,00» come soglia prevista e soglia ammessa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che la policy impone l'approfondimento anche per le operazioni con indicatori di anomalia indipendentemente dall'importo.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che la policy impone l'approfondimento anche per le operazioni con indicatori di anomalia indipendentemente dall'importo.\nPASS se: compare l'indicazione che l'approfondimento è dovuto anche a prescindere dall'importo, in presenza di indicatori di anomalia.\nFAIL se: l'affermazione non compare, oppure l'approfondimento è presentato come legato al solo importo.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafo 7.2 della policy interna",
+      "pass_condition": "compare l'indicazione che l'approfondimento è dovuto anche a prescindere dall'importo, in presenza di indicatori di anomalia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline riduce la soglia di escalation prevista dalla clausola 12.2.",
+      "match_criteria": "Oggetto del criterio: il redline riduce la soglia di escalation prevista dalla clausola 12.2.\nPASS se: nel documento con revisioni tracciate la soglia di euro 1.000.000,00 risulta sostituita da una soglia inferiore.\nFAIL se: la soglia di euro 1.000.000,00 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: il valore esatto proposto, purché non superiore a euro 250.000,00.\nFonte di authoring: clausola 12.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la soglia di euro 1.000.000,00 risulta sostituita da una soglia inferiore.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 12.3 indirizza l'informativa alla sola funzione pagamenti esteri.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 12.3 indirizza l'informativa alla sola funzione pagamenti esteri.\nPASS se: compare l'indicazione che l'informativa è indirizzata alla sola funzione pagamenti esteri.\nFAIL se: il rilievo non compare, oppure l'indirizzamento è presentato come completo.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 12.3 della bozza",
+      "pass_condition": "compare l'indicazione che l'informativa è indirizzata alla sola funzione pagamenti esteri.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica in 15 giorni lavorativi il termine di riscontro previsto dalla bozza e in 5 giorni lavorativi quello atteso dalla policy.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 15 giorni lavorativi il termine di riscontro previsto dalla bozza e in 5 giorni lavorativi quello atteso dalla policy.\nPASS se: compaiono «15 giorni lavorativi» e «5 giorni lavorativi» come termine previsto e termine atteso.; compaiono «quindici giorni lavorativi» e «cinque giorni lavorativi» come termine previsto e termine atteso.\nFAIL se: è indicato un termine diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 11.4 della bozza; paragrafo 7.5 della policy",
+      "pass_condition": "compaiono «15 giorni lavorativi» e «5 giorni lavorativi» come termine previsto e termine atteso.; compaiono «quindici giorni lavorativi» e «cinque giorni lavorativi» come termine previsto e termine atteso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che il mancato riscontro nel termine costituisce fattore di rischio che attiva la valutazione della chiusura.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che il mancato riscontro nel termine costituisce fattore di rischio che attiva la valutazione della chiusura.\nPASS se: compare l'indicazione che il mancato riscontro nel termine attiva la valutazione della chiusura.\nFAIL se: l'affermazione non compare, oppure al mancato riscontro non è collegata alcuna conseguenza.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafi 7.5 e 8.2 della policy interna",
+      "pass_condition": "compare l'indicazione che il mancato riscontro nel termine attiva la valutazione della chiusura.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline riduce il termine di riscontro previsto dalla clausola 11.4.",
+      "match_criteria": "Oggetto del criterio: il redline riduce il termine di riscontro previsto dalla clausola 11.4.\nPASS se: nel documento con revisioni tracciate il termine di 15 giorni lavorativi risulta sostituito da un termine più breve.\nFAIL se: il termine di 15 giorni lavorativi resta invariato nel documento con revisioni tracciate.\nÈ indifferente: il valore esatto proposto, purché non superiore a cinque giorni lavorativi.\nFonte di authoring: clausola 11.4 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate il termine di 15 giorni lavorativi risulta sostituito da un termine più breve.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 11.3 subordina il riscontro ai limiti della riservatezza bancaria della giurisdizione della controparte.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 11.3 subordina il riscontro ai limiti della riservatezza bancaria della giurisdizione della controparte.\nPASS se: compare l'indicazione che la clausola 11.3 subordina il riscontro ai limiti della riservatezza della giurisdizione della controparte.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 11.3 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 11.3 subordina il riscontro ai limiti della riservatezza della giurisdizione della controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota collega quel rilievo alla dichiarazione del questionario secondo cui la trasmissione richiede l'autorizzazione dell'autorità di vigilanza locale.",
+      "match_criteria": "Oggetto del criterio: la nota collega quel rilievo alla dichiarazione del questionario secondo cui la trasmissione richiede l'autorizzazione dell'autorità di vigilanza locale.\nPASS se: il rilievo è ricondotto alla sezione del questionario sulla riservatezza e la cooperazione.\nFAIL se: il rilievo è fondato soltanto sulla clausola dell'accordo, senza il riscontro nel questionario.\nÈ indifferente: il richiamo alla riga della scheda paese sul segreto bancario.\nFonte di authoring: sezione 7 del questionario",
+      "pass_condition": "il rilievo è ricondotto alla sezione del questionario sulla riservatezza e la cooperazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota qualifica il diritto di informazione della Banca come inattuabile nei termini della bozza.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica il diritto di informazione della Banca come inattuabile nei termini della bozza.\nPASS se: compare, riferita al diritto di informazione, una fra: «inattuabile», «privo di effettivita», «non esercitabile nei termini della bozza».\nFAIL se: il diritto è presentato come esercitabile, oppure la qualificazione non compare.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 11.3 della bozza; sezione 7 del questionario",
+      "pass_condition": "compare, riferita al diritto di informazione, una fra: «inattuabile», «privo di effettivita», «non esercitabile nei termini della bozza».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che il limite di riservatezza si supera con la sola motivazione della richiesta.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che il limite di riservatezza si supera con la sola motivazione della richiesta.\nPASS se: la nota non afferma che il limite di riservatezza si supera con la sola motivazione della richiesta.\nFAIL se: compare l'affermazione che la formulazione motivata della richiesta supera il limite di riservatezza opposto dalla controparte.\nÈ indifferente: l'indicazione che la richiesta va comunque motivata.\nFonte di authoring: clausole 11.2 e 11.3 della bozza",
+      "pass_condition": "la nota non afferma che il limite di riservatezza si supera con la sola motivazione della richiesta.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 13.1 esclude il diritto della Banca di svolgere verifiche presso la controparte.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 13.1 esclude il diritto della Banca di svolgere verifiche presso la controparte.\nPASS se: compare l'indicazione che la clausola 13.1 esclude il diritto di verifica.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 13.1 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 13.1 esclude il diritto di verifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che la dichiarazione annuale di conformità non sostituisce il diritto di verifica.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che la dichiarazione annuale di conformità non sostituisce il diritto di verifica.\nPASS se: compare l'indicazione che la dichiarazione annuale non sostituisce il diritto di verifica.\nFAIL se: l'affermazione non compare, oppure la dichiarazione è presentata come equivalente.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: clausola 13.2 della bozza; paragrafo 10.2 della policy",
+      "pass_condition": "compare l'indicazione che la dichiarazione annuale non sostituisce il diritto di verifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sostituisce la clausola 13.1 introducendo il diritto di verifica presso la controparte.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la clausola 13.1 introducendo il diritto di verifica presso la controparte.\nPASS se: nel documento con revisioni tracciate la clausola 13.1 risulta sostituita con il diritto di svolgere verifiche presso la controparte.\nFAIL se: la clausola 13.1 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: il preavviso proposto per le verifiche.\nFonte di authoring: clausola 13.1 della bozza; paragrafo 10.1 della policy",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 13.1 risulta sostituita con il diritto di svolgere verifiche presso la controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 15.2 subordina al consenso della controparte la comunicazione di informazioni alle autorità.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 15.2 subordina al consenso della controparte la comunicazione di informazioni alle autorità.\nPASS se: compare l'indicazione che la clausola 15.2 subordina al consenso della controparte le comunicazioni alle autorità.\nFAIL se: il rilievo non compare, oppure la clausola è presentata come ammissibile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 15.2 della bozza",
+      "pass_condition": "compare l'indicazione che la clausola 15.2 subordina al consenso della controparte le comunicazioni alle autorità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline sopprime la subordinazione al consenso contenuta nella clausola 15.2.",
+      "match_criteria": "Oggetto del criterio: il redline sopprime la subordinazione al consenso contenuta nella clausola 15.2.\nPASS se: nel documento con revisioni tracciate la clausola 15.2 risulta cancellata o sostituita.\nFAIL se: la clausola 15.2 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: clausola 15.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la clausola 15.2 risulta cancellata o sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che la clausola 15.2 è sanabile con l'aggiunta di una riserva generica per gli obblighi di legge.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che la clausola 15.2 è sanabile con l'aggiunta di una riserva generica per gli obblighi di legge.\nPASS se: la nota non afferma che la clausola 15.2 è sanabile con l'aggiunta di una riserva generica per gli obblighi di legge.\nFAIL se: compare l'affermazione che una riserva generica per gli obblighi di legge rende la clausola 15.2 ammissibile.\nÈ indifferente: l'indicazione che la clausola va soppressa nella parte che subordina le comunicazioni.\nFonte di authoring: paragrafo 9.2 della policy interna",
+      "pass_condition": "la nota non afferma che la clausola 15.2 è sanabile con l'aggiunta di una riserva generica per gli obblighi di legge.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota indica in 90 giorni il preavviso di chiusura per motivi di rischio previsto dalla bozza e in 5 giorni lavorativi quello ammesso dalla policy.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 90 giorni il preavviso di chiusura per motivi di rischio previsto dalla bozza e in 5 giorni lavorativi quello ammesso dalla policy.\nPASS se: compaiono «90 giorni» e «5 giorni lavorativi» come preavviso previsto e preavviso ammesso.; compaiono «novanta giorni» e «cinque giorni lavorativi» come preavviso previsto e preavviso ammesso.\nFAIL se: è indicato un preavviso diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: clausola 14.3 della bozza; paragrafo 8.3 della policy",
+      "pass_condition": "compaiono «90 giorni» e «5 giorni lavorativi» come preavviso previsto e preavviso ammesso.; compaiono «novanta giorni» e «cinque giorni lavorativi» come preavviso previsto e preavviso ammesso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "il redline riduce il preavviso di chiusura per motivi di rischio previsto dalla clausola 14.3.",
+      "match_criteria": "Oggetto del criterio: il redline riduce il preavviso di chiusura per motivi di rischio previsto dalla clausola 14.3.\nPASS se: nel documento con revisioni tracciate il preavviso di 90 giorni risulta sostituito da un preavviso più breve.\nFAIL se: il preavviso di 90 giorni resta invariato nel documento con revisioni tracciate.\nÈ indifferente: il valore esatto proposto, purché non superiore a cinque giorni lavorativi.\nFonte di authoring: clausola 14.3 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate il preavviso di 90 giorni risulta sostituito da un preavviso più breve.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che il questionario non indica disponente e beneficiari di Sarvenko Trust, socio al ventiquattro per cento.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che il questionario non indica disponente e beneficiari di Sarvenko Trust, socio al ventiquattro per cento.\nPASS se: compare l'indicazione che disponente e beneficiari del socio costituito in trust non sono indicati.\nFAIL se: il rilievo non compare, oppure l'assetto è dato per ricostruito.\nÈ indifferente: il richiamo al numero della sezione.\nFonte di authoring: sezione 3 del questionario",
+      "pass_condition": "compare l'indicazione che disponente e beneficiari del socio costituito in trust non sono indicati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota collega quel rilievo all'esito non eseguibile dello screening su Sarvenko Trust.",
+      "match_criteria": "Oggetto del criterio: la nota collega quel rilievo all'esito non eseguibile dello screening su Sarvenko Trust.\nPASS se: il rilievo è ricondotto alla riga dello screening relativa a Sarvenko Trust, con esito non eseguibile.\nFAIL se: il rilievo è formulato senza il collegamento all'esito dello screening.\nÈ indifferente: il richiamo alla percentuale della quota.\nFonte di authoring: riga di Sarvenko Trust nell'esito dello screening",
+      "pass_condition": "il rilievo è ricondotto alla riga dello screening relativa a Sarvenko Trust, con esito non eseguibile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che la quota inferiore a un quarto rende irrilevante l'identificazione dei titolari effettivi del trust.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che la quota inferiore a un quarto rende irrilevante l'identificazione dei titolari effettivi del trust.\nPASS se: la nota non afferma che la quota inferiore a un quarto rende irrilevante l'identificazione dei titolari effettivi del trust.\nFAIL se: compare l'affermazione che la misura della quota rende irrilevante l'identificazione dei titolari effettivi del trust.\nÈ indifferente: l'indicazione della misura della quota come dato di fatto.\nFonte di authoring: sezione 3 del questionario",
+      "pass_condition": "la nota non afferma che la quota inferiore a un quarto rende irrilevante l'identificazione dei titolari effettivi del trust.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota riporta il riscontro su lista di persone politicamente esposte relativo a Nadir Kolstemp, titolare effettivo dichiarato.",
+      "match_criteria": "Oggetto del criterio: la nota riporta il riscontro su lista di persone politicamente esposte relativo a Nadir Kolstemp, titolare effettivo dichiarato.\nPASS se: compare l'indicazione del riscontro su persona politicamente esposta riferito a Nadir Kolstemp.\nFAIL se: il riscontro non è riportato, oppure è attribuito a un altro soggetto.\nÈ indifferente: l'indicazione dell'incarico e dell'anno di cessazione.\nFonte di authoring: riga di Nadir Kolstemp nell'esito dello screening",
+      "pass_condition": "compare l'indicazione del riscontro su persona politicamente esposta riferito a Nadir Kolstemp.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota fonda la rilevanza del riscontro sulla coincidenza dell'anagrafica.",
+      "match_criteria": "Oggetto del criterio: la nota fonda la rilevanza del riscontro sulla coincidenza dell'anagrafica.\nPASS se: la rilevanza è ricondotta alla colonna dello screening che riporta la coincidenza dell'anagrafica.\nFAIL se: la rilevanza è affermata senza indicare il dato che la sostiene.\nÈ indifferente: l'indicazione della fonte del riscontro.\nFonte di authoring: riga di Nadir Kolstemp nell'esito dello screening",
+      "pass_condition": "la rilevanza è ricondotta alla colonna dello screening che riporta la coincidenza dell'anagrafica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che il riscontro è irrilevante perché l'incarico è cessato.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che il riscontro è irrilevante perché l'incarico è cessato.\nPASS se: la nota non afferma che il riscontro è irrilevante perché l'incarico è cessato.\nFAIL se: compare l'affermazione che la cessazione dell'incarico rende il riscontro irrilevante o esclude le misure rafforzate.\nÈ indifferente: la menzione dell'anno di cessazione dell'incarico.\nFonte di authoring: riga di Nadir Kolstemp nell'esito dello screening",
+      "pass_condition": "la nota non afferma che il riscontro è irrilevante perché l'incarico è cessato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che il fascicolo non contiene il parere della funzione antiriciclaggio né l'autorizzazione della Direzione generale.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che il fascicolo non contiene il parere della funzione antiriciclaggio né l'autorizzazione della Direzione generale.\nPASS se: compare l'indicazione che parere e autorizzazione non risultano dagli atti.\nFAIL se: uno dei due atti è dato per esistente, oppure la lacuna non è dichiarata.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafo 3.2 della policy interna; composizione del fascicolo",
+      "pass_condition": "compare l'indicazione che parere e autorizzazione non risultano dagli atti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota qualifica il parere della funzione antiriciclaggio come condizione dell'autorizzazione all'apertura.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica il parere della funzione antiriciclaggio come condizione dell'autorizzazione all'apertura.\nPASS se: compare l'indicazione che il parere è condizione dell'autorizzazione.\nFAIL se: il parere è presentato come facoltativo, oppure la sua funzione non è indicata.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafo 3.2 della policy interna",
+      "pass_condition": "compare l'indicazione che il parere è condizione dell'autorizzazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota elenca gli elementi dell'istruttoria di apertura che il fascicolo non contiene.",
+      "match_criteria": "Oggetto del criterio: la nota elenca gli elementi dell'istruttoria di apertura che il fascicolo non contiene.\nPASS se: compaiono almeno due elementi mancanti fra evidenze indipendenti sulla presenza fisica, identificazione dei titolari effettivi del trust, parere della funzione antiriciclaggio e autorizzazione della Direzione generale.\nFAIL se: gli elementi mancanti non sono elencati, oppure ne è indicato uno solo.\nÈ indifferente: l'ordine in cui gli elementi sono elencati.\nFonte di authoring: paragrafo 3.1 della policy interna; composizione del fascicolo",
+      "pass_condition": "compaiono almeno due elementi mancanti fra evidenze indipendenti sulla presenza fisica, identificazione dei titolari effettivi del trust, parere della funzione antiriciclaggio e autorizzazione della Direzione generale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota rileva che l'utilizzo diretto del conto, l'esclusione dei filtri autonomi e il preavviso di centottanta giorni sono chiesti dalla nota dell'unità Pagamenti esteri.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che l'utilizzo diretto del conto, l'esclusione dei filtri autonomi e il preavviso di centottanta giorni sono chiesti dalla nota dell'unità Pagamenti esteri.\nPASS se: compare l'indicazione che almeno due di quelle tre clausole hanno origine nella richiesta dell'unità Pagamenti esteri.\nFAIL se: il rilievo non compare, oppure è indicata una sola clausola.\nÈ indifferente: il richiamo al protocollo della nota.\nFonte di authoring: paragrafo 4 della nota del 27 giugno 2031",
+      "pass_condition": "compare l'indicazione che almeno due di quelle tre clausole hanno origine nella richiesta dell'unità Pagamenti esteri.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che la richiesta dell'unità Pagamenti esteri vincola l'esito della revisione.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che la richiesta dell'unità Pagamenti esteri vincola l'esito della revisione.\nPASS se: la nota non afferma che la richiesta dell'unità Pagamenti esteri vincola l'esito della revisione.\nFAIL se: compare l'affermazione che la richiesta dell'unità commerciale vincola o determina l'esito della revisione.\nÈ indifferente: l'indicazione che la decisione spetta alla Direzione generale su parere della funzione antiriciclaggio.\nFonte di authoring: paragrafo 3.2 della policy interna",
+      "pass_condition": "la nota non afferma che la richiesta dell'unità Pagamenti esteri vincola l'esito della revisione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che il rapporto non è apribile nei termini della bozza.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che il rapporto non è apribile nei termini della bozza.\nPASS se: compare, riferita all'apertura, una fra: «non apribile nei termini della bozza», «le modifiche sono condizione dell'apertura», «l'accordo non è sottoscrivibile come è».\nFAIL se: l'affermazione non compare, oppure il rapporto è presentato come apribile senza modifiche. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'ordine in cui le condizioni sono elencate.\nFonte di authoring: insieme dei rilievi",
+      "pass_condition": "compare, riferita all'apertura, una fra: «non apribile nei termini della bozza», «le modifiche sono condizione dell'apertura», «l'accordo non è sottoscrivibile come è».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-22"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che resta da valutare se l'assetto dichiarato dalla controparte consenta l'apertura anche con l'accordo modificato.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che resta da valutare se l'assetto dichiarato dalla controparte consenta l'apertura anche con l'accordo modificato.\nPASS se: compare l'indicazione che, apportate le modifiche all'accordo, resta da valutare l'assetto dichiarato dalla controparte.\nFAIL se: l'affermazione non compare, oppure è affermato che le correzioni contrattuali esauriscono la valutazione.\nÈ indifferente: l'indicazione degli elementi dell'assetto che restano da valutare.\nFonte di authoring: divieti del paragrafo 4 della policy; sezioni 1, 4 e 5 del questionario",
+      "pass_condition": "compare l'indicazione che, apportate le modifiche all'accordo, resta da valutare l'assetto dichiarato dalla controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-22"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non afferma che l'apertura del rapporto è vietata in via definitiva.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che l'apertura del rapporto è vietata in via definitiva.\nPASS se: la nota non afferma che l'apertura del rapporto è vietata in via definitiva.\nFAIL se: compare l'affermazione che l'apertura è vietata o preclusa in via definitiva.\nÈ indifferente: l'indicazione dei divieti che potrebbero risultare integrati a esito delle verifiche.\nFonte di authoring: paragrafo 4 della policy interna",
+      "pass_condition": "la nota non afferma che l'apertura del rapporto è vietata in via definitiva.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-22"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non riporta il riscontro su omonimo relativo a Teodor Kolstemp come precedente dell'amministratore della controparte.",
+      "match_criteria": "Oggetto del criterio: la nota non riporta il riscontro su omonimo relativo a Teodor Kolstemp come precedente dell'amministratore della controparte.\nPASS se: la nota non riporta il riscontro su omonimo relativo a Teodor Kolstemp come precedente dell'amministratore della controparte.\nFAIL se: il riscontro relativo a Teodor Kolstemp è attribuito all'amministratore della controparte o compare fra i red flag che lo riguardano.\nÈ indifferente: la menzione del riscontro con l'indicazione delle difformità anagrafiche.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "la nota non riporta il riscontro su omonimo relativo a Teodor Kolstemp come precedente dell'amministratore della controparte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota afferma che il riscontro relativo a Teodor Kolstemp non riguarda il soggetto in perimetro.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che il riscontro relativo a Teodor Kolstemp non riguarda il soggetto in perimetro.\nPASS se: compare, riferita a quel riscontro, una fra: «non riguarda il soggetto in perimetro», «cade su omonimo», «anagrafica difforme».\nFAIL se: il riscontro è attribuito al soggetto in perimetro, oppure l'esito della verifica anagrafica non è affermato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione di quale dato anagrafico differisce.\nFonte di authoring: riga di Teodor Kolstemp nell'esito dello screening",
+      "pass_condition": "compare, riferita a quel riscontro, una fra: «non riguarda il soggetto in perimetro», «cade su omonimo», «anagrafica difforme».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non presenta i volumi attesi dichiarati dall'unità commerciale come clausola da modificare.",
+      "match_criteria": "Oggetto del criterio: la nota non presenta i volumi attesi dichiarati dall'unità commerciale come clausola da modificare.\nPASS se: la nota non presenta i volumi attesi dichiarati dall'unità commerciale come clausola da modificare.\nFAIL se: i volumi attesi compaiono fra i rilievi che impongono una modifica dell'accordo.\nÈ indifferente: la menzione dei volumi fra gli elementi che concorrono alla classificazione del rischio.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "la nota non presenta i volumi attesi dichiarati dall'unità commerciale come clausola da modificare.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non segnala come rischio la clausola compromissoria della clausola 16.2.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come rischio la clausola compromissoria della clausola 16.2.\nPASS se: la nota non segnala come rischio la clausola compromissoria della clausola 16.2.\nFAIL se: la clausola compromissoria compare fra i rilievi che impongono una modifica.\nÈ indifferente: la menzione della sede arbitrale nella descrizione dell'accordo.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "la nota non segnala come rischio la clausola compromissoria della clausola 16.2.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non estende al preavviso di recesso ordinario della clausola 14.1 il rilievo formulato sul preavviso di chiusura per motivi di rischio.",
+      "match_criteria": "Oggetto del criterio: la nota non estende al preavviso di recesso ordinario della clausola 14.1 il rilievo formulato sul preavviso di chiusura per motivi di rischio.\nPASS se: la nota non estende al preavviso di recesso ordinario della clausola 14.1 il rilievo formulato sul preavviso di chiusura per motivi di rischio.\nFAIL se: il preavviso di recesso ordinario di centottanta giorni compare fra i rilievi che impongono una modifica.\nÈ indifferente: la menzione del preavviso ordinario come termine di confronto.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "la nota non estende al preavviso di recesso ordinario della clausola 14.1 il rilievo formulato sul preavviso di chiusura per motivi di rischio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non segnala come profilo di rischio la durata a tempo indeterminato dell'accordo.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come profilo di rischio la durata a tempo indeterminato dell'accordo.\nPASS se: la nota non segnala come profilo di rischio la durata a tempo indeterminato dell'accordo.\nFAIL se: la durata a tempo indeterminato compare fra i rilievi che impongono una modifica.\nÈ indifferente: la menzione della durata nella descrizione dell'accordo.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "la nota non segnala come profilo di rischio la durata a tempo indeterminato dell'accordo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non segnala come ostacolo alla chiusura il completamento delle operazioni in corso di regolamento previsto dalla clausola 14.4.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come ostacolo alla chiusura il completamento delle operazioni in corso di regolamento previsto dalla clausola 14.4.\nPASS se: la nota non segnala come ostacolo alla chiusura il completamento delle operazioni in corso di regolamento previsto dalla clausola 14.4.\nFAIL se: il completamento delle operazioni in corso compare fra i rilievi che impongono una modifica o fra gli ostacoli alla chiusura.\nÈ indifferente: la menzione della previsione nella trattazione della chiusura.\nFonte di authoring: challenge map, N-06",
+      "pass_condition": "la nota non segnala come ostacolo alla chiusura il completamento delle operazioni in corso di regolamento previsto dalla clausola 14.4.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "la nota non presenta come red flag l'assenza di quotazione della controparte e la sua non appartenenza a un gruppo bancario.",
+      "match_criteria": "Oggetto del criterio: la nota non presenta come red flag l'assenza di quotazione della controparte e la sua non appartenenza a un gruppo bancario.\nPASS se: la nota non presenta come red flag l'assenza di quotazione della controparte e la sua non appartenenza a un gruppo bancario.\nFAIL se: l'assenza di quotazione o la non appartenenza a un gruppo compaiono fra i red flag.\nÈ indifferente: la menzione di quei dati fra le informazioni anagrafiche della controparte.\nFonte di authoring: challenge map, N-07",
+      "pass_condition": "la nota non presenta come red flag l'assenza di quotazione della controparte e la sua non appartenenza a un gruppo bancario.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-07"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "simmetria del controllo: la nota non tratta come provata l'assenza di presenza fisica mentre tratta come da verificare l'assetto proprietario del socio costituito in trust.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: la nota non tratta come provata l'assenza di presenza fisica mentre tratta come da verificare l'assetto proprietario del socio costituito in trust.\nPASS se: simmetria del controllo: la nota non tratta come provata l'assenza di presenza fisica mentre tratta come da verificare l'assetto proprietario del socio costituito in trust.\nFAIL se: l'assenza di presenza fisica è data per provata e nello stesso documento l'assetto proprietario del trust è dichiarato da verificare.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: sezioni 1 e 3 del questionario",
+      "pass_condition": "simmetria del controllo: la nota non tratta come provata l'assenza di presenza fisica mentre tratta come da verificare l'assetto proprietario del socio costituito in trust.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "divieto di presunzione dell'esito: la nota non afferma che la controparte è coinvolta in attività di riciclaggio.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: la nota non afferma che la controparte è coinvolta in attività di riciclaggio.\nPASS se: divieto di presunzione dell'esito: la nota non afferma che la controparte è coinvolta in attività di riciclaggio.\nFAIL se: compare l'affermazione che la controparte è coinvolta in attività di riciclaggio o che le operazioni attese sono di provenienza illecita.\nÈ indifferente: l'indicazione dei fattori di rischio che richiedono misure rafforzate.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: la nota non afferma che la controparte è coinvolta in attività di riciclaggio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "agreement_redline.docx"
+      ],
+      "title": "sovra-segnalazione: la nota non presenta come red flag la frequenza mensile di aggiornamento delle liste dichiarata dalla controparte, senza collegarla ad alcun rilievo sull'accordo.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: la nota non presenta come red flag la frequenza mensile di aggiornamento delle liste dichiarata dalla controparte, senza collegarla ad alcun rilievo sull'accordo.\nPASS se: sovra-segnalazione: la nota non presenta come red flag la frequenza mensile di aggiornamento delle liste dichiarata dalla controparte, senza collegarla ad alcun rilievo sull'accordo.\nFAIL se: la frequenza di aggiornamento delle liste compare fra i red flag autonomi, non collegata ad alcuna clausola.\nÈ indifferente: la menzione della frequenza fra gli elementi che concorrono alla valutazione dei presidi della controparte.\nFonte di authoring: sezione 6 del questionario",
+      "pass_condition": "sovra-segnalazione: la nota non presenta come red flag la frequenza mensile di aggiornamento delle liste dichiarata dalla controparte, senza collegarla ad alcun rilievo sull'accordo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

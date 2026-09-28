@@ -1,0 +1,61 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-037",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "matrice_rischi_antitrust.md"
+  ],
+  "criteria_total": 55,
+  "proposals_count": 2,
+  "proposals": [
+    {
+      "criterion_id": "C.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2028"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «2028» come anno dei dati rilevanti",
+      "combine": "single",
+      "check": {
+        "id": "WF2-037-C3",
+        "type": "required_regex",
+        "artifact": "matrice_rischi_antitrust.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?028(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "2028"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «2028» come anno del primo superamento della soglia",
+      "combine": "single",
+      "check": {
+        "id": "WF2-037-C4",
+        "type": "required_regex",
+        "artifact": "matrice_rischi_antitrust.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?028(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+timestamp;rapporto;evento;stato_risultante;operatore;riferimento
+2027-02-08 09:41:07;TR-0042 (transito);richiesta blocco su fondi in transito;BLOCCO TOTALE;m.ferrandi;AML/2027/0031
+2027-02-08 09:41:09;TR-0042 (transito);conferma applicazione blocco;BLOCCO TOTALE;sistema;AML/2027/0031
+2027-02-15 16:22:41;000000731204;richiesta blocco registrata a sistema;IN LAVORAZIONE;e.piubello;AML/2027/0044
+2027-02-19 11:03:55;000000731204;richiesta assegnata alla coda Operations;IN LAVORAZIONE;sistema;AML/2027/0044
+2027-03-03 10:12:33;000000731204;esecuzione disposizione DISP-2027-0009114;OPERATIVO;sistema;TRN VP27030300041982
+2027-03-09 10:05:18;000000731204;applicazione blocco;BLOCCO TOTALE;g.bonaldi;AML/2027/0044
+2027-03-09 10:05:20;000000731204;conferma applicazione blocco;BLOCCO TOTALE;sistema;AML/2027/0044

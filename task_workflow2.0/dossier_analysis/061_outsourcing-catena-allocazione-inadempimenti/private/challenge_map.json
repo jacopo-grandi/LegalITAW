@@ -1,0 +1,205 @@
+{
+  "task_id": "WF2-061",
+  "lato_assistito": "Arcomera Retail S.p.A., cliente dei servizi gestiti",
+  "data_di_riferimento": "2028-03-13",
+  "stato_fascicolo": "in corso, dopo due disservizi e prima del rinnovo",
+  "fonti_ammesse": [
+    "Codice civile, testo consolidato",
+    "Regolamento (UE) 2016/679, artt. 28, 33 e 34"
+  ],
+  "calcoli": [
+    "quadrature di importi e sequenze documentali indicate nel gold"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per sostituzione del subfornitore: inserire notifica preventiva e diritto di opposizione motivata",
+    "integrazione necessaria per causalita' ancora incompleta: sospendere l'attribuzione definitiva del primo incidente e acquisire i log"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_contratto_quadro_arcomera_veltragno.pdf",
+      "funzione": "Veltragno risponde delle attivita' dei propri ausiliari; massimale annuo EUR 1.800.000; service credit non esclusivi in caso di dolo o colpa grave."
+    },
+    {
+      "file": "02_allegato_sla_servizi_gestiti.pdf",
+      "funzione": "Disponibilita' mensile 99,95%; P1: presa in carico 15 minuti, ripristino 120 minuti; manutenzione programmata esclusa solo con preavviso di cinque giorni."
+    },
+    {
+      "file": "03_subcontratto_veltragno_nembrosa.pdf",
+      "funzione": "Disponibilita' 99,50%; ripristino P1 entro 240 minuti; crediti quale rimedio esclusivo; audit consentito soltanto a Veltragno con venti giorni di preavviso."
+    },
+    {
+      "file": "04_ordine_nembrosa_quadir.pdf",
+      "funzione": "Hosting in Milano; cifratura AES-256; sostituzione del data center ammessa con comunicazione successiva; nessun obbligo di exit assistance."
+    },
+    {
+      "file": "05_registro_incidenti_febbraio_2028.xlsx",
+      "funzione": "Il 6 febbraio il portale e' indisponibile per 187 minuti; il 22 febbraio per 94 minuti. Il secondo evento nasce da manutenzione comunicata soltanto il giorno precedente."
+    },
+    {
+      "file": "06_email_audit_e_rinnovo.eml",
+      "funzione": "Veltragno nega l'accesso ai log Quadir e propone rinnovo automatico; Nembrosa conferma di non avere ricevuto l'Allegato SLA di Arcomera."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "responsabilita' del contraente principale",
+      "gravita": "alta",
+      "affermazione_richiesta": "Veltragno resta responsabile verso Arcomera anche quando la causa si colloca a valle",
+      "azione_richiesta": "rifiutare ogni rinvio diretto del reclamo a Nembrosa",
+      "conseguenza": "la catena contrattuale non spezza il rapporto principale",
+      "evidenza": "doc. 01 clausola 12 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "SLA non trasferiti al primo subfornitore",
+      "gravita": "alta",
+      "affermazione_richiesta": "la soglia 99,50% e il ripristino a 240 minuti non coprono gli impegni 99,95% e 120 minuti",
+      "azione_richiesta": "imporre flow-down integrale o buffer misurabile",
+      "conseguenza": "Veltragno sopporta uno scoperto prestazionale",
+      "evidenza": "doc. 02 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "secondo livello privo di flow-down",
+      "gravita": "alta",
+      "affermazione_richiesta": "Quadir non assume tempi di ripristino ne' exit assistance",
+      "azione_richiesta": "estendere SLA, audit e uscita a Quadir",
+      "conseguenza": "un guasto del data center resta senza rimedio back-to-back",
+      "evidenza": "doc. 03 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "manutenzione non programmata",
+      "gravita": "alta",
+      "affermazione_richiesta": "il preavviso di un giorno non soddisfa la finestra di cinque giorni",
+      "azione_richiesta": "conteggiare i 94 minuti nella disponibilita' di febbraio",
+      "conseguenza": "l'esclusione SLA non opera",
+      "evidenza": "doc. 02 e doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "service credit non esclusivi nel contratto principale",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'esclusivita' pattuita a valle non limita i rimedi di Arcomera",
+      "azione_richiesta": "preservare risarcimento e rimedi contrattuali principali",
+      "conseguenza": "Veltragno non puo' trasferire a monte il limite di Nembrosa",
+      "evidenza": "doc. 01 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "audit interrotto nella catena",
+      "gravita": "alta",
+      "affermazione_richiesta": "Arcomera non puo' verificare direttamente i log dei soggetti a valle",
+      "azione_richiesta": "introdurre accesso per Arcomera o audit indipendente su Nembrosa e Quadir",
+      "conseguenza": "manca la prova tecnica per allocare i due incidenti",
+      "evidenza": "doc. 01, doc. 03 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "cambio di localizzazione",
+      "gravita": "media",
+      "affermazione_richiesta": "la comunicazione successiva sul data center non consente controllo preventivo",
+      "azione_richiesta": "richiedere autorizzazione preventiva per trasferimenti fuori dal perimetro concordato",
+      "conseguenza": "la governance dei dati dipende da una notifica tardiva",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "sub-responsabile non autorizzato",
+      "gravita": "media",
+      "affermazione_richiesta": "il fascicolo non prova l'autorizzazione specifica o generale a Quadir",
+      "azione_richiesta": "acquisire la catena di nomina e il registro delle opposizioni",
+      "conseguenza": "non e' dimostrata la regolarita' del sub-processing",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "exit assistance assente a valle",
+      "gravita": "media",
+      "affermazione_richiesta": "Veltragno promette novanta giorni di assistenza ma Quadir non e' vincolata",
+      "azione_richiesta": "replicare durata, formati e cooperazione nel contratto Quadir",
+      "conseguenza": "la migrazione puo' bloccarsi all'ultimo livello",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "massimali disallineati",
+      "gravita": "media",
+      "affermazione_richiesta": "il massimale Nembrosa di EUR 300.000 e' inferiore a quello assunto da Veltragno",
+      "azione_richiesta": "negoziare massimale e copertura assicurativa coerenti con l'esposizione",
+      "conseguenza": "resta una quota non recuperabile a valle",
+      "evidenza": "doc. 01 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "sostituzione del subfornitore",
+      "gravita": "media",
+      "affermazione_richiesta": "il rinnovo proposto non disciplina preavviso e opposizione alla sostituzione",
+      "azione_richiesta": "inserire notifica preventiva e diritto di opposizione motivata",
+      "conseguenza": "Arcomera non governa la composizione della catena",
+      "evidenza": "doc. 01 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "causalita' ancora incompleta",
+      "gravita": "media",
+      "affermazione_richiesta": "i log Quadir non sono nel fascicolo",
+      "azione_richiesta": "sospendere l'attribuzione definitiva del primo incidente e acquisire i log",
+      "conseguenza": "la responsabilita' contrattuale e la causa tecnica vanno tenute distinte",
+      "evidenza": "doc. 05 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "cifratura a riposo",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "AES-256",
+      "perche_non_e_issue": "AES-256 e' una misura dichiarata, non il difetto del caso",
+      "criterio_assenza": "B.38"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "primo evento unico",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "segnalazioni filiali",
+      "perche_non_e_issue": "le segnalazioni delle filiali descrivono la stessa indisponibilita' e non tre incidenti",
+      "criterio_assenza": "B.39"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "hosting iniziale a Milano",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "Milano",
+      "perche_non_e_issue": "la localizzazione iniziale coincide con il perimetro comunicato",
+      "criterio_assenza": "B.40"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "rinnovo ancora non firmato",
+      "oggetto": "doc. 06",
+      "chiave_nel_criterio": "rinnovo automatico",
+      "perche_non_e_issue": "la proposta non ha ancora modificato il contratto",
+      "criterio_assenza": "B.41"
+    }
+  ]
+}

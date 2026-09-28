@@ -1,0 +1,312 @@
+{
+  "task_id": "WF2-094",
+  "lato_assistito": "Immobiliare Cordevalle S.r.l., promissaria acquirente",
+  "committente": "responsabile immobiliare di Immobiliare Cordevalle S.r.l.",
+  "data_di_riferimento": "2026-10-06",
+  "stato_fascicolo": "preliminare sottoscritto e caparra versata; verifica tecnica e documentale in corso, con termine al 31 ottobre 2026; atto definitivo previsto entro il 20 gennaio 2027",
+  "meccanismi_di_difficolta": [
+    "gerarchia fra documenti: la segnalazione di variante sposta il termine di confronto dello scostamento rispetto al permesso originario",
+    "nomi simili: due soppalchi quasi identici in due corpi dello stesso fabbricato, uno assentito e uno no",
+    "presupposti di applicazione da dedurre: la soglia dei 5.000 metri quadrati e le soglie di tolleranza non compaiono in alcun allegato",
+    "dichiarazione di parte smentita dai documenti: la garanzia della venditrice e la relazione asseverata contro il rilievo metrico",
+    "lacuna contro presunzione: il mutamento di destinazione d'uso non è decidibile senza gli strumenti di programmazione commerciale, che il fascicolo non contiene",
+    "presenza contro adeguatezza: il certificato di destinazione urbanistica esiste ed è valido, e il difetto sta nel perimetro di ciò che prova"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "oggetto misto della compravendita",
+      "gravita": "alta",
+      "affermazione_richiesta": "la compravendita ha per oggetto un fabbricato e terreni: il certificato di destinazione urbanistica assolve all'obbligo relativo ai terreni, mentre per il fabbricato l'atto deve riportare, per dichiarazione dell'alienante, gli estremi del titolo edilizio, in forza di una disposizione diversa",
+      "evidenza": "06_contratto_preliminare.md, articolo 1; 01_certificato_destinazione_urbanistica.md",
+      "errore_bersaglio": "ricondurre all'obbligo del certificato di destinazione urbanistica anche il fabbricato, oppure ritenere il fascicolo completo perché il certificato è stato rilasciato"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "superficie dell'area pertinenziale",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'area di pertinenza è di 6.240 metri quadrati e supera i 5.000 metri quadrati: l'esclusione dall'obbligo di allegazione del certificato non opera",
+      "evidenza": "01_certificato_destinazione_urbanistica.md; 06_contratto_preliminare.md, punti 1.1 e 1.2",
+      "errore_bersaglio": "applicare l'esclusione per il solo fatto che i terreni sono pertinenza di un edificio censito al catasto fabbricati, senza verificare la superficie"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "perimetro probatorio del certificato",
+      "gravita": "alta",
+      "affermazione_richiesta": "il certificato esclude espressamente i vincoli imposti da altri enti e i vincoli del piano paesaggistico regionale non riportati sul piano regolatore: non prova l'assenza di vincoli sul compendio e serve una verifica autonoma",
+      "evidenza": "01_certificato_destinazione_urbanistica.md, clausole di riserva",
+      "errore_bersaglio": "concludere che il compendio è libero da vincoli perché il certificato non ne riporta alcuno"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "soppalco non assentito",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rilievo misura un soppalco praticabile di 56 metri quadrati nel corpo principale che non è descritto né nel permesso di costruire né nella segnalazione di variante",
+      "evidenza": "04_rilievo_metrico.md, punti 2 e 4; 02_permesso_di_costruire.md, punto 2; 03_scia_variante.md",
+      "errore_bersaglio": "confondere il soppalco del corpo principale con quello del corpo accessorio, che è assentito dalla variante, oppure sommare i due soppalchi in un unico scostamento"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "superamento della tolleranza costruttiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo scostamento di 56 metri quadrati sui 1.902 dichiarati nella variante è pari al 2,94 per cento e supera la tolleranza del 2 per cento; la graduazione delle soglie riguarda gli interventi realizzati entro il 24 maggio 2024 e, per le unità oltre 500 metri quadrati di superficie utile, la soglia resta comunque il 2 per cento",
+      "evidenza": "04_rilievo_metrico.md; 03_scia_variante.md; 02_permesso_di_costruire.md, annotazioni sulle date dei lavori",
+      "errore_bersaglio": "applicare una soglia superiore al 2 per cento invocando la graduazione, oppure calcolare lo scostamento sulla superficie del permesso originario ottenendo il 6,41 per cento"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "binario dell'accertamento di conformità",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo scostamento costituisce parziale difformità dal titolo, e l'accertamento di conformità applicabile è quello previsto per le parziali difformità e le variazioni essenziali, non quello previsto per l'assenza di titolo o la totale difformità",
+      "evidenza": "04_rilievo_metrico.md; artt. 34, 36 e 36-bis del testo unico dell'edilizia",
+      "errore_bersaglio": "trattare la sanatoria come istituto unitario, oppure ricondurre lo scostamento all'ipotesi di assenza di titolo"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "termine e regime del silenzio",
+      "gravita": "alta",
+      "affermazione_richiesta": "nel binario applicabile il termine è di quarantacinque giorni e il silenzio equivale ad accoglimento, mentre nell'altro binario il termine è di sessanta giorni e il silenzio equivale a rifiuto",
+      "evidenza": "artt. 36, comma 3, e 36-bis, comma 6, del testo unico dell'edilizia",
+      "errore_bersaglio": "attribuire al binario applicabile il termine di sessanta giorni o il silenzio-rifiuto"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "doppia conformità asimmetrica",
+      "gravita": "alta",
+      "affermazione_richiesta": "il presupposto richiede la conformità alla disciplina urbanistica vigente al momento della presentazione della domanda e la conformità ai requisiti della disciplina edilizia vigente al momento della realizzazione: le due conformità hanno contenuto diverso",
+      "evidenza": "art. 36-bis, comma 1, del testo unico dell'edilizia",
+      "errore_bersaglio": "richiedere la doppia conformità piena a entrambe le date, che è il presupposto dell'altro binario"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "oblazione",
+      "gravita": "media",
+      "affermazione_richiesta": "l'oblazione è pari al doppio del contributo di costruzione incrementato del 20 per cento per le parziali difformità, e l'incremento non si applica se l'intervento risulta conforme sia al momento della realizzazione sia al momento della domanda; il fascicolo non contiene il calcolo del contributo riferito alle opere in difformità",
+      "evidenza": "art. 36-bis, comma 5, del testo unico dell'edilizia; 02_permesso_di_costruire.md, importo del contributo versato",
+      "errore_bersaglio": "quantificare l'oblazione applicando al contributo complessivo di euro 74.180,00 il doppio e l'incremento, che riferisce all'intero intervento un criterio da commisurare alle sole opere in difformità"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "dotazione di parcheggio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la superficie pavimentata destinata a parcheggio è di 338 metri quadrati, inferiore ai 412 prescritti dal permesso e inferiore al 20 per cento della superficie utile rilevata richiesto dalle norme di attuazione: è violazione di una prescrizione del titolo e non semplice scostamento metrico",
+      "evidenza": "04_rilievo_metrico.md, punto 3; 02_permesso_di_costruire.md, punti 2 e 3.6; 01_certificato_destinazione_urbanistica.md, allegato, art. 31.3 delle norme di attuazione",
+      "errore_bersaglio": "trattare la differenza come tolleranza dimensionale, oppure calcolare la dotazione minima sulla superficie utile assentita anziché su quella rilevata"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "mutamento di destinazione d'uso",
+      "gravita": "alta",
+      "affermazione_richiesta": "la destinazione assentita è produttiva e direzionale e la destinazione voluta dall'acquirente è commerciale: si tratta di categorie funzionali diverse e quindi di mutamento rilevante, ma la conclusione sulla sua ammissibilità dipende dalla legge regionale e dagli strumenti comunali di programmazione commerciale, che il fascicolo non contiene",
+      "evidenza": "02_permesso_di_costruire.md, punti 2 e 3.4; 01_certificato_destinazione_urbanistica.md, allegato, art. 31.3 delle norme di attuazione; 06_contratto_preliminare.md, premesse; 04_rilievo_metrico.md, punti 5.2 e 5.3",
+      "errore_bersaglio": "concludere che il mutamento è ammissibile perché la zona ammette la destinazione commerciale, oppure che è inammissibile, senza rilevare che manca lo strumento di programmazione commerciale"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "tardività della segnalazione di agibilità",
+      "gravita": "media",
+      "affermazione_richiesta": "i lavori di finitura sono stati ultimati il 12 maggio 2025 e la segnalazione è stata presentata il 3 giugno 2025, oltre il termine di quindici giorni: la conseguenza è la sanzione amministrativa pecuniaria, e l'utilizzo dell'immobile può iniziare dalla data di presentazione",
+      "evidenza": "05_segnalazione_certificata_agibilita.md; 02_permesso_di_costruire.md, annotazione del 12 maggio 2025",
+      "errore_bersaglio": "dedurre dalla tardività l'inefficacia della segnalazione o l'illegittimità dell'utilizzo dell'immobile"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "rinvio a disposizione abrogata",
+      "gravita": "media",
+      "affermazione_richiesta": "la segnalazione di agibilità rinvia a una disposizione del testo unico dell'edilizia che è stata abrogata: il rinvio va rilevato, e la segnalazione resta retta dalla disposizione vigente in materia",
+      "evidenza": "05_segnalazione_certificata_agibilita.md, intestazione",
+      "errore_bersaglio": "dedurre dal rinvio errato la nullità o l'inefficacia della segnalazione, oppure non rilevare il rinvio"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "dichiarazione della venditrice smentita dal rilievo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la venditrice dichiara e garantisce che il fabbricato è conforme ai titoli e che non sussistono difformità: il rilievo metrico smentisce la dichiarazione, che va fatta valere",
+      "evidenza": "06_contratto_preliminare.md, punti 4.2 e 4.4; 04_rilievo_metrico.md, punto 4",
+      "errore_bersaglio": "riportare la dichiarazione della venditrice come stato accertato dell'immobile, oppure rilevare la difformità senza collegarla alla garanzia contrattuale"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "collocazione dei rilievi nelle condizioni del preliminare",
+      "gravita": "alta",
+      "affermazione_richiesta": "il preliminare distingue le difformità regolarizzabili, che obbligano a rinegoziare il prezzo mantenendo ferma la stipulazione, dalle difformità non regolarizzabili, che consentono il recesso: ciascun rilievo va collocato in una delle due categorie e la collocazione del mutamento di destinazione d'uso resta sospesa",
+      "evidenza": "06_contratto_preliminare.md, punti 5.1, 5.2 e 5.3",
+      "errore_bersaglio": "collocare tutti i rilievi fra le difformità regolarizzabili, oppure affermare che la difformità legittima il recesso senza verificare la regolarizzabilità"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "validità del certificato di destinazione urbanistica alla data dell'atto definitivo",
+      "chiave_nel_criterio": "scadenza del certificato di destinazione urbanistica",
+      "ragione": "il certificato è stato rilasciato il 15 luglio 2026 e conserva validità per un anno dal rilascio; l'atto definitivo è previsto entro il 20 gennaio 2027, quindi entro il periodo di validità",
+      "errore_bersaglio": "segnalare la necessità di richiedere un nuovo certificato prima dell'atto definitivo per intervenuta scadenza"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "altezza del fabbricato",
+      "chiave_nel_criterio": "altezza rilevata di 7,24 metri",
+      "ragione": "l'altezza rilevata coincide con quella dichiarata nella segnalazione di variante, che è il titolo da cui si misura la corrispondenza: non vi è alcuno scostamento non assentito",
+      "errore_bersaglio": "segnalare lo scarto di quattro centimetri rispetto all'altezza del permesso originario come difformità, ignorando che la variante lo ha assentito"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "termini di efficacia del permesso di costruire",
+      "chiave_nel_criterio": "decadenza del permesso di costruire",
+      "ragione": "i lavori sono stati iniziati il 2 settembre 2024, entro un anno dal rilascio del 18 marzo 2024, e ultimati il 12 maggio 2025: nessuno dei due termini è decorso inutilmente e la decadenza non è in discussione",
+      "errore_bersaglio": "segnalare un rischio di decadenza del titolo, o invocare una proroga legale dei termini, quando i lavori risultano già ultimati"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "clausola di non producibilità del certificato",
+      "chiave_nel_criterio": "clausola di non producibilità agli organi della pubblica amministrazione",
+      "ragione": "la clausola con cui il certificato dichiara di non poter essere prodotto agli organi della pubblica amministrazione è una formula standard che riguarda i rapporti con le amministrazioni, non l'idoneità del certificato all'allegazione all'atto di trasferimento",
+      "errore_bersaglio": "segnalare la clausola come limite che impedisce l'uso del certificato nell'atto notarile"
+    }
+  ],
+  "dati_mancanti": [
+    "la legge regionale in materia di variazioni essenziali, necessaria per qualificare il soppalco non assentito, e il regolamento edilizio comunale",
+    "lo strumento comunale di programmazione commerciale e la legge regionale in materia di commercio, che le norme di attuazione richiamano come condizione del mutamento di destinazione d'uso",
+    "il calcolo del contributo di costruzione riferito alle sole opere in difformità, necessario per quantificare l'oblazione",
+    "la verifica catastale di corrispondenza della planimetria depositata, che il rilievo dichiara di non avere eseguito",
+    "la verifica di conformità delle opere alle norme tecniche per le costruzioni, che richiede accesso agli atti strutturali depositati",
+    "l'esito di una verifica autonoma sui vincoli imposti da altri enti e sui vincoli del piano paesaggistico non riportati sul piano regolatore, che il certificato esclude dal proprio perimetro"
+  ],
+  "fonti_ammesse": [
+    "DPR 380/2001, artt. 9-bis, 15, 22, 23-ter, 24, 30, 32, 34, 34-bis, 36, 36-bis, 46",
+    "art. 1",
+    "D.Lgs. 42/2004, artt. 142, 146, 167",
+    "D.Lgs. 152/2006, art. 253"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "6 ottobre 2026",
+      "calcolo": "martedì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "rilascio del permesso di costruire",
+      "valore": "18 marzo 2024",
+      "calcolo": "lunedì; successivo al 31 dicembre 2025 non è: il titolo è anteriore, ma i lavori risultano ultimati e nessun termine è decorso inutilmente",
+      "fonte": "02_permesso_di_costruire.md"
+    },
+    {
+      "milestone": "inizio dei lavori",
+      "valore": "2 settembre 2024",
+      "calcolo": "entro un anno dal rilascio del titolo",
+      "fonte": "02_permesso_di_costruire.md, annotazioni"
+    },
+    {
+      "milestone": "presentazione della segnalazione di variante",
+      "valore": "14 febbraio 2025",
+      "calcolo": "anteriore alla dichiarazione di ultimazione dei lavori",
+      "fonte": "03_scia_variante.md"
+    },
+    {
+      "milestone": "ultimazione dei lavori di finitura",
+      "valore": "12 maggio 2025",
+      "calcolo": "lunedì",
+      "fonte": "02_permesso_di_costruire.md, annotazioni"
+    },
+    {
+      "milestone": "termine per la segnalazione certificata di agibilità",
+      "valore": "27 maggio 2025",
+      "calcolo": "quindici giorni dall'ultimazione dei lavori di finitura",
+      "fonte": "art. 24, comma 2, del testo unico dell'edilizia"
+    },
+    {
+      "milestone": "presentazione della segnalazione certificata di agibilità",
+      "valore": "3 giugno 2025",
+      "calcolo": "successiva al termine di 7 giorni",
+      "fonte": "05_segnalazione_certificata_agibilita.md"
+    },
+    {
+      "milestone": "rilascio del certificato di destinazione urbanistica",
+      "valore": "15 luglio 2026",
+      "calcolo": "mercoledì; alla data di riferimento sono decorsi 83 giorni",
+      "fonte": "01_certificato_destinazione_urbanistica.md"
+    },
+    {
+      "milestone": "termine di validità del certificato",
+      "valore": "15 luglio 2027",
+      "calcolo": "un anno dal rilascio, subordinato alla dichiarazione dell'alienante che non siano intervenute modificazioni degli strumenti urbanistici",
+      "fonte": "art. 30, comma 3, del testo unico dell'edilizia"
+    },
+    {
+      "milestone": "termine della verifica tecnica e documentale",
+      "valore": "31 ottobre 2026",
+      "calcolo": "successivo di 25 giorni alla data di riferimento",
+      "fonte": "06_contratto_preliminare.md, punto 5.1"
+    },
+    {
+      "milestone": "termine per la stipulazione dell'atto definitivo",
+      "valore": "20 gennaio 2027",
+      "calcolo": "anteriore di 176 giorni alla scadenza della validità del certificato",
+      "fonte": "06_contratto_preliminare.md, punto 3.1"
+    },
+    {
+      "milestone": "superficie dell'area pertinenziale",
+      "valore": "6.240 mq",
+      "calcolo": "superficie fondiaria del compendio; supera i 5.000 mq oltre i quali l'esclusione dall'obbligo di allegazione del certificato non opera",
+      "fonte": "06_contratto_preliminare.md, punto 1.2"
+    },
+    {
+      "milestone": "superficie utile assentita dal permesso di costruire",
+      "valore": "1.840,00 mq",
+      "calcolo": "dato dichiarato al punto 2 del titolo",
+      "fonte": "02_permesso_di_costruire.md"
+    },
+    {
+      "milestone": "superficie utile dichiarata nella segnalazione di variante",
+      "valore": "1.902,00 mq",
+      "calcolo": "1.840,00 + 62,00 mq del soppalco del corpo accessorio",
+      "fonte": "03_scia_variante.md"
+    },
+    {
+      "milestone": "superficie utile rilevata",
+      "valore": "1.958,00 mq",
+      "calcolo": "somma dei vani misurati; comprende un soppalco di 56,00 mq nel corpo principale non dichiarato in alcun titolo",
+      "fonte": "04_rilievo_metrico.md, punto 2"
+    },
+    {
+      "milestone": "scostamento non assentito di superficie utile",
+      "valore": "56 mq",
+      "calcolo": "1.958 - 1.902 = 56 mq; il termine di confronto è la superficie dichiarata nella variante, non quella del permesso originario",
+      "fonte": "04_rilievo_metrico.md e 03_scia_variante.md"
+    },
+    {
+      "milestone": "scostamento in percentuale",
+      "valore": "2,94 per cento",
+      "calcolo": "56 / 1.902 = 0,0294; sulla superficie del permesso originario si otterrebbe invece il 6,41 per cento, che è la derivazione da escludere",
+      "fonte": "04_rilievo_metrico.md"
+    },
+    {
+      "milestone": "altezza assentita, dichiarata e rilevata",
+      "valore": "7,20 / 7,24 / 7,24 m",
+      "calcolo": "l'altezza rilevata coincide con quella dichiarata nella variante: nessuno scostamento non assentito",
+      "fonte": "02_permesso_di_costruire.md, 03_scia_variante.md, 04_rilievo_metrico.md"
+    },
+    {
+      "milestone": "superficie a parcheggio prescritta e rilevata",
+      "valore": "412,00 mq contro 338,00 mq",
+      "calcolo": "differenza di 74 mq",
+      "fonte": "02_permesso_di_costruire.md e 04_rilievo_metrico.md"
+    },
+    {
+      "milestone": "dotazione minima di parcheggio",
+      "valore": "391,6 mq",
+      "calcolo": "20 per cento di 1.958 mq di superficie utile rilevata; la superficie rilevata di 338 mq resta inferiore di 53,6 mq. Sulla superficie utile assentita si otterrebbero 368 mq, che è la derivazione da escludere",
+      "fonte": "01_certificato_destinazione_urbanistica.md, allegato, art. 31.3"
+    }
+  ],
+  "funzione_allegati": {
+    "01_certificato_destinazione_urbanistica.md": "individua la zona e i parametri applicabili e, con le clausole di riserva, delimita ciò che il certificato non prova; l'allegato contiene la dotazione minima di parcheggio e il vincolo sul mutamento di destinazione",
+    "02_permesso_di_costruire.md": "fissa i dati dimensionali assentiti, la destinazione d'uso assentita, le prescrizioni e, con le annotazioni, le date di inizio e di ultimazione dei lavori",
+    "03_scia_variante.md": "è il titolo che assente una parte dello scostamento e contiene l'asseverazione che va confrontata con i parametri: sposta il termine di confronto dal permesso originario alla variante",
+    "04_rilievo_metrico.md": "è l'unico documento che misura lo stato di fatto; con l'elenco degli elementi non verificati delimita ciò che il fascicolo non consente di concludere",
+    "05_segnalazione_certificata_agibilita.md": "prova la data di presentazione rispetto all'ultimazione dei lavori e contiene il rinvio a una disposizione abrogata",
+    "06_contratto_preliminare.md": "contiene le dichiarazioni e garanzie della venditrice, il termine per l'atto definitivo e le condizioni che distinguono difformità regolarizzabili e non regolarizzabili",
+    "07_relazione_tecnica_asseverata.md": "è la dichiarazione di parte sullo stato legittimo, smentita dal rilievo, e contiene due valutazioni che non sono fatti"
+  }
+}

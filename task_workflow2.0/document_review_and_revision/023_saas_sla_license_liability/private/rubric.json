@@ -1,0 +1,1250 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-023",
+  "title": "SaaS. Rassegna della bozza di condizioni generali su livelli di servizio, licenza e responsabilità",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 77,
+  "criteria": [
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "I rilievi sono presentati in sequenza ordinata per priorità.",
+      "pass_condition": "i rilievi sono numerati o elencati in sequenza.",
+      "fail_condition": "i rilievi non sono numerati né elencati in sequenza.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "media",
+      "raw_text": "A.2 rilievi in sequenza ordinata\nissue: — · tipo: struttura · gravità: media · judge: no · fonte: prompt\nVerifica: I rilievi sono presentati in sequenza ordinata per priorità.\nPass se: i rilievi sono numerati o elencati in sequenza.\nFail se: i rilievi non sono numerati né elencati in sequenza."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene il testo contrattuale riscritto né una versione revisionata della bozza.",
+      "pass_condition": "non compare alcun testo di clausola riscritto in forma contrattuale.",
+      "fail_condition": "il deliverable contiene una versione revisionata della bozza, un redline o clausole riscritte in forma contrattuale.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "A.3 nessuna riscrittura del testo\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: prompt\nVerifica: Il deliverable non contiene il testo contrattuale riscritto né una versione revisionata della bozza.\nPass se: non compare alcun testo di clausola riscritto in forma contrattuale.\nFail se: il deliverable contiene una versione revisionata della bozza, un redline o clausole riscritte in forma contrattuale."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "Ogni rilievo riporta la clausola della bozza o dell'Allegato, oppure il documento del fascicolo, da cui deriva.",
+      "pass_condition": "ogni rilievo contiene un riferimento di articolo o il nome di un documento del fascicolo.",
+      "fail_condition": "almeno un rilievo è privo di riferimento.",
+      "indifferent": null,
+      "source": "public/01_task.md",
+      "severity": "alta",
+      "raw_text": "A.4 ancoraggio alla clausola\nissue: — · tipo: struttura · gravità: alta · judge: no · fonte: public/01_task.md\nVerifica: Ogni rilievo riporta la clausola della bozza o dell'Allegato, oppure il documento del fascicolo, da cui deriva.\nPass se: ogni rilievo contiene un riferimento di articolo o il nome di un documento del fascicolo.\nFail se: almeno un rilievo è privo di riferimento."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento normativo citato appartiene all'elenco.",
+      "fail_condition": "compare almeno un riferimento normativo fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": "reference pack",
+      "severity": "alta",
+      "raw_text": "A.5 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: Il deliverable non contiene riferimenti normativi estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento normativo citato appartiene all'elenco.\nFail se: compare almeno un riferimento normativo fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il termine per comunicare la disdetta dell'ordine in essere è già scaduto alla data di riferimento.",
+      "pass_condition": "compare l'affermazione che il termine di disdetta è scaduto, o decorso, o non più utilizzabile.",
+      "fail_condition": "l'affermazione non compare, oppure la disdetta è presentata come ancora possibile.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "B.1 termine per la disdetta scaduto\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable afferma che il termine per comunicare la disdetta dell'ordine in essere è già scaduto alla data di riferimento.\nPass se: compare l'affermazione che il termine di disdetta è scaduto, o decorso, o non più utilizzabile.\nFail se: l'affermazione non compare, oppure la disdetta è presentata come ancora possibile."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'ordine in essere si è rinnovato tacitamente e vincola il cliente per un ulteriore periodo di dodici mesi.",
+      "pass_condition": "compare l'affermazione che il rinnovo è già operato, o che il contratto è vincolante per un altro anno.",
+      "fail_condition": "l'affermazione non compare, oppure il contratto è presentato come in scadenza.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "B.2 rinnovo già operato\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable afferma che l'ordine in essere si è rinnovato tacitamente e vincola il cliente per un ulteriore periodo di dodici mesi.\nPass se: compare l'affermazione che il rinnovo è già operato, o che il contratto è vincolante per un altro anno.\nFail se: l'affermazione non compare, oppure il contratto è presentato come in scadenza."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la sottoscrizione della bozza farebbe cadere le condizioni particolari negoziate nell'ordine in essere.",
+      "pass_condition": "compare l'affermazione che la clausola di sostituzione della bozza travolge l'ordine in corso e le sue condizioni particolari.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza art. 20.2",
+      "severity": "alta",
+      "raw_text": "B.3 effetto sostitutivo dell'articolo 20.2\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 20.2\nVerifica: Il deliverable afferma che la sottoscrizione della bozza farebbe cadere le condizioni particolari negoziate nell'ordine in essere.\nPass se: compare l'affermazione che la clausola di sostituzione della bozza travolge l'ordine in corso e le sue condizioni particolari.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il contratto in essere cesserà alla scadenza del periodo iniziale.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il contratto cesserà il 31 gennaio 2030, o che il servizio si interromperà a quella data.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "B.4 divieto di presentare il contratto come cessante\nissue: I-01 · tipo: assenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable non afferma che il contratto in essere cesserà alla scadenza del periodo iniziale.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il contratto cesserà il 31 gennaio 2030, o che il servizio si interromperà a quella data."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica la disdetta come rimedio ancora praticabile per evitare il rinnovo in corso.",
+      "pass_condition": "non compare l'indicazione di inviare la disdetta per impedire il rinnovo già maturato.",
+      "fail_condition": "si consiglia di inviare la disdetta per evitare il rinnovo, o si afferma che il termine è ancora aperto.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "B.5 divieto di ritenere la disdetta ancora possibile\nissue: I-01 · tipo: assenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable non indica la disdetta come rimedio ancora praticabile per evitare il rinnovo in corso.\nPass se: non compare l'indicazione di inviare la disdetta per impedire il rinnovo già maturato.\nFail se: si consiglia di inviare la disdetta per evitare il rinnovo, o si afferma che il termine è ancora aperto."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che i minuti dei due fermi dell'anno sono stati esclusi dal computo della disponibilità in forza delle esclusioni dell'Allegato 1.",
+      "pass_condition": "compare l'affermazione che i due fermi non sono stati computati, o sono stati esclusi, in forza delle esclusioni previste dall'Allegato.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 3.2, lett. (c) e (d); report; rapporti di incidente",
+      "severity": "alta",
+      "raw_text": "B.6 esclusione dei due fermi dal computo\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato 1 art. 3.2, lett. (c) e (d); report; rapporti di incidente\nVerifica: Il deliverable afferma che i minuti dei due fermi dell'anno sono stati esclusi dal computo della disponibilità in forza delle esclusioni dell'Allegato 1.\nPass se: compare l'affermazione che i due fermi non sono stati computati, o sono stati esclusi, in forza delle esclusioni previste dall'Allegato.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable riconduce l'esclusione del primo fermo alla lettera sulle interruzioni riferibili a componenti di terzi e l'esclusione del secondo fermo alla lettera sulle interruzioni che non impediscono l'accesso alla totalità delle funzioni.",
+      "pass_condition": "compaiono entrambi gli ancoraggi, anche in forma sintetica.",
+      "fail_condition": "manca uno dei due ancoraggi, oppure le due esclusioni sono attribuite alla stessa lettera.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 3.2, lett. (c) e (d); rapporti di incidente",
+      "severity": "alta",
+      "raw_text": "B.7 ancoraggio alle due lettere di esclusione\nissue: I-02 · tipo: attribuzione · gravità: alta · judge: sì · fonte: Allegato 1 art. 3.2, lett. (c) e (d); rapporti di incidente\nVerifica: Il deliverable riconduce l'esclusione del primo fermo alla lettera sulle interruzioni riferibili a componenti di terzi e l'esclusione del secondo fermo alla lettera sulle interruzioni che non impediscono l'accesso alla totalità delle funzioni.\nPass se: compaiono entrambi gli ancoraggi, anche in forma sintetica.\nFail se: manca uno dei due ancoraggi, oppure le due esclusioni sono attribuite alla stessa lettera."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable chiede un limite ai minuti escludibili, oppure l'inclusione nel computo delle interruzioni riferibili all'infrastruttura utilizzata dal fornitore.",
+      "pass_condition": "compare almeno una delle due richieste.",
+      "fail_condition": "nessuna delle due richieste compare.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 3.2",
+      "severity": "alta",
+      "raw_text": "B.8 modifica richiesta sul metodo\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato 1 art. 3.2\nVerifica: Il deliverable chiede un limite ai minuti escludibili, oppure l'inclusione nel computo delle interruzioni riferibili all'infrastruttura utilizzata dal fornitore.\nPass se: compare almeno una delle due richieste.\nFail se: nessuna delle due richieste compare."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il livello di disponibilità del 99,5% sia stato violato.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il fornitore ha violato il livello di disponibilità contrattuale.",
+      "indifferent": null,
+      "source": "report; Allegato 1 art. 2.1",
+      "severity": "alta",
+      "raw_text": "B.9 divieto di affermare la violazione della soglia\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: report; Allegato 1 art. 2.1\nVerifica: Il deliverable non afferma che il livello di disponibilità del 99,5% sia stato violato.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il fornitore ha violato il livello di disponibilità contrattuale."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il credito di servizio è l'unico ed esclusivo rimedio del cliente per il mancato rispetto dei livelli di servizio.",
+      "pass_condition": "compare l'affermazione che il credito esclude ogni altra pretesa, anche risarcitoria.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza art. 6.2; Allegato 1 art. 4.5",
+      "severity": "alta",
+      "raw_text": "B.10 esclusività del rimedio\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 6.2; Allegato 1 art. 4.5\nVerifica: Il deliverable afferma che il credito di servizio è l'unico ed esclusivo rimedio del cliente per il mancato rispetto dei livelli di servizio.\nPass se: compare l'affermazione che il credito esclude ogni altra pretesa, anche risarcitoria.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable confronta la misura del credito di servizio con il costo dichiarato del fermo di marzo.",
+      "pass_condition": "compare il confronto fra l'importo del credito e il costo del fermo.",
+      "fail_condition": "il confronto non compare.",
+      "indifferent": null,
+      "source": "Allegato 1 artt. 4.1 e 4.2; nota interna § 4",
+      "severity": "alta",
+      "raw_text": "B.11 confronto fra credito e danno\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato 1 artt. 4.1 e 4.2; nota interna § 4\nVerifica: Il deliverable confronta la misura del credito di servizio con il costo dichiarato del fermo di marzo.\nPass se: compare il confronto fra l'importo del credito e il costo del fermo.\nFail se: il confronto non compare."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable chiede l'eliminazione dell'esclusività del rimedio, almeno oltre una soglia di durata o di gravità del disservizio.",
+      "pass_condition": "compare la richiesta di eliminare o circoscrivere l'esclusività del credito di servizio.",
+      "fail_condition": "la richiesta non compare.",
+      "indifferent": null,
+      "source": "bozza art. 6.2",
+      "severity": "alta",
+      "raw_text": "B.12 modifica richiesta sul rimedio\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 6.2\nVerifica: Il deliverable chiede l'eliminazione dell'esclusività del rimedio, almeno oltre una soglia di durata o di gravità del disservizio.\nPass se: compare la richiesta di eliminare o circoscrivere l'esclusività del credito di servizio.\nFail se: la richiesta non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il meccanismo del credito di servizio sia nullo.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "il credito di servizio è presentato come clausola nulla.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 4",
+      "severity": "media",
+      "raw_text": "B.13 divieto di affermare la nullità del credito\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 1 art. 4\nVerifica: Il deliverable non afferma che il meccanismo del credito di servizio sia nullo.\nPass se: quell'affermazione non compare.\nFail se: il credito di servizio è presentato come clausola nulla."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il termine di dieci giorni per chiedere il credito è incompatibile con la periodicità con cui il fornitore deve trasmettere il report.",
+      "pass_condition": "compare l'affermazione che il cliente non può conoscere i minuti da contestare entro il termine di decadenza, perché il report è dovuto con periodicità più lunga.",
+      "fail_condition": "l'affermazione non compare, oppure il termine di dieci giorni è presentato come praticabile.",
+      "indifferent": null,
+      "source": "Allegato 1 artt. 4.3 e 5.1",
+      "severity": "alta",
+      "raw_text": "B.14 decadenza impraticabile\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato 1 artt. 4.3 e 5.1\nVerifica: Il deliverable afferma che il termine di dieci giorni per chiedere il credito è incompatibile con la periodicità con cui il fornitore deve trasmettere il report.\nPass se: compare l'affermazione che il cliente non può conoscere i minuti da contestare entro il termine di decadenza, perché il report è dovuto con periodicità più lunga.\nFail se: l'affermazione non compare, oppure il termine di dieci giorni è presentato come praticabile."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable chiede che il termine decorra dal ricevimento del report, oppure che il credito sia riconosciuto senza necessità di richiesta.",
+      "pass_condition": "compare almeno una delle due richieste.",
+      "fail_condition": "nessuna delle due richieste compare.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 4.3",
+      "severity": "alta",
+      "raw_text": "B.15 modifica richiesta sul termine\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: Allegato 1 art. 4.3\nVerifica: Il deliverable chiede che il termine decorra dal ricevimento del report, oppure che il credito sia riconosciuto senza necessità di richiesta.\nPass se: compare almeno una delle due richieste.\nFail se: nessuna delle due richieste compare."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che il massimale di responsabilità della bozza è inferiore a quello negoziato nell'ordine in essere.",
+      "pass_condition": "compare l'affermazione che il massimale scende da dodici a tre mensilità, o che la bozza riduce il massimale rispetto all'ordine.",
+      "fail_condition": "l'affermazione non compare, oppure il massimale della bozza è presentato come invariato.",
+      "indifferent": null,
+      "source": "bozza art. 13.1; ordine, sezione 5.1",
+      "severity": "alta",
+      "raw_text": "B.16 riduzione del massimale\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 13.1; ordine, sezione 5.1\nVerifica: Il deliverable afferma che il massimale di responsabilità della bozza è inferiore a quello negoziato nell'ordine in essere.\nPass se: compare l'affermazione che il massimale scende da dodici a tre mensilità, o che la bozza riduce il massimale rispetto all'ordine.\nFail se: l'affermazione non compare, oppure il massimale della bozza è presentato come invariato."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la manleva per violazione di diritti di terzi è soggetta al medesimo massimale di responsabilità.",
+      "pass_condition": "compare l'affermazione che l'obbligo di manleva è limitato dal massimale dell'art. 13.1.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza artt. 13.1 e 14.2",
+      "severity": "alta",
+      "raw_text": "B.17 manleva assorbita dal massimale\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza artt. 13.1 e 14.2\nVerifica: Il deliverable afferma che la manleva per violazione di diritti di terzi è soggetta al medesimo massimale di responsabilità.\nPass se: compare l'affermazione che l'obbligo di manleva è limitato dal massimale dell'art. 13.1.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il massimale di responsabilità sia nullo in quanto tale.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "il massimale è presentato come nullo per il solo fatto di limitare la responsabilità.",
+      "indifferent": null,
+      "source": "bozza art. 13.1",
+      "severity": "media",
+      "raw_text": "B.18 divieto di affermare la nullità del massimale\nissue: I-05 · tipo: assenza · gravità: media · judge: sì · fonte: bozza art. 13.1\nVerifica: Il deliverable non afferma che il massimale di responsabilità sia nullo in quanto tale.\nPass se: quell'affermazione non compare.\nFail se: il massimale è presentato come nullo per il solo fatto di limitare la responsabilità."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable qualifica come nulla la previsione che estende la limitazione di responsabilità al caso di colpa grave.",
+      "pass_condition": "compare, riferita a quella previsione, la qualificazione di nullità, o di inefficacia, o di inoperatività.",
+      "fail_condition": "la qualificazione non compare, oppure la previsione è presentata come valida.",
+      "indifferent": null,
+      "source": "bozza art. 13.3; art. 1229 c.c.",
+      "severity": "alta",
+      "raw_text": "B.19 nullità della limitazione per colpa grave\nissue: I-06 · tipo: qualificazione · gravità: alta · judge: sì · fonte: bozza art. 13.3; art. 1229 c.c.\nVerifica: Il deliverable qualifica come nulla la previsione che estende la limitazione di responsabilità al caso di colpa grave.\nPass se: compare, riferita a quella previsione, la qualificazione di nullità, o di inefficacia, o di inoperatività.\nFail se: la qualificazione non compare, oppure la previsione è presentata come valida."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che l'intero articolo sulla limitazione di responsabilità sia nullo.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma la nullità dell'intero articolo 13, oppure dell'esclusione dei danni indiretti.",
+      "indifferent": null,
+      "source": "bozza art. 13",
+      "severity": "media",
+      "raw_text": "B.20 divieto di estendere la nullità\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: bozza art. 13\nVerifica: Il deliverable non afferma che l'intero articolo sulla limitazione di responsabilità sia nullo.\nPass se: quell'affermazione non compare.\nFail se: si afferma la nullità dell'intero articolo 13, oppure dell'esclusione dei danni indiretti."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la bozza non contiene l'approvazione specifica per iscritto delle clausole per cui è richiesta.",
+      "pass_condition": "compare l'affermazione che manca il blocco di approvazione specifica, o la doppia sottoscrizione, o l'approvazione ai sensi dell'articolo richiamato.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza, chiusura; art. 1341, co. 2, c.c.",
+      "severity": "alta",
+      "raw_text": "B.21 assenza dell'approvazione specifica\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza, chiusura; art. 1341, co. 2, c.c.\nVerifica: Il deliverable afferma che la bozza non contiene l'approvazione specifica per iscritto delle clausole per cui è richiesta.\nPass se: compare l'affermazione che manca il blocco di approvazione specifica, o la doppia sottoscrizione, o l'approvazione ai sensi dell'articolo richiamato.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che, in mancanza di quell'approvazione, le clausole per cui è richiesta non hanno effetto.",
+      "pass_condition": "compare l'affermazione che quelle clausole non hanno effetto, o sono inefficaci, o non sono opponibili al cliente.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "art. 1341, co. 2, c.c.",
+      "severity": "alta",
+      "raw_text": "B.22 conseguenza dell'assenza\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 1341, co. 2, c.c.\nVerifica: Il deliverable afferma che, in mancanza di quell'approvazione, le clausole per cui è richiesta non hanno effetto.\nPass se: compare l'affermazione che quelle clausole non hanno effetto, o sono inefficaci, o non sono opponibili al cliente.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable rileva che l'ordine in essere contiene invece il blocco di approvazione specifica.",
+      "pass_condition": "compare il richiamo al blocco di approvazione contenuto nell'ordine.",
+      "fail_condition": "il confronto non compare.",
+      "indifferent": null,
+      "source": "ordine, blocco di approvazione specifica",
+      "severity": "media",
+      "raw_text": "B.23 confronto con l'ordine in essere\nissue: I-07 · tipo: attribuzione · gravità: media · judge: sì · fonte: ordine, blocco di approvazione specifica\nVerifica: Il deliverable rileva che l'ordine in essere contiene invece il blocco di approvazione specifica.\nPass se: compare il richiamo al blocco di approvazione contenuto nell'ordine.\nFail se: il confronto non compare."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che l'intera bozza sia inefficace per mancanza dell'approvazione specifica.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che l'intero contratto, o l'intera bozza, è inefficace o nullo.",
+      "indifferent": null,
+      "source": "art. 1341, co. 2, c.c.",
+      "severity": "alta",
+      "raw_text": "B.24 divieto di estendere l'inefficacia\nissue: I-07 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 1341, co. 2, c.c.\nVerifica: Il deliverable non afferma che l'intera bozza sia inefficace per mancanza dell'approvazione specifica.\nPass se: quell'affermazione non compare.\nFail se: si afferma che l'intero contratto, o l'intera bozza, è inefficace o nullo."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non chiede al fornitore di inserire nella bozza il blocco di approvazione specifica per iscritto delle clausole elencate.",
+      "pass_condition": "non compare la richiesta di inserire quel blocco nella bozza.",
+      "fail_condition": "fra le modifiche da chiedere al fornitore compare l'inserimento dell'approvazione specifica per iscritto delle clausole elencate.",
+      "indifferent": null,
+      "source": "bozza artt. 5.2, 8, 13, 19.2",
+      "severity": "media",
+      "raw_text": "B.25 divieto di chiedere l'inserimento dell'approvazione specifica\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: bozza artt. 5.2, 8, 13, 19.2\nVerifica: Il deliverable non chiede al fornitore di inserire nella bozza il blocco di approvazione specifica per iscritto delle clausole elencate.\nPass se: non compare la richiesta di inserire quel blocco nella bozza.\nFail se: fra le modifiche da chiedere al fornitore compare l'inserimento dell'approvazione specifica per iscritto delle clausole elencate."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la sottoscrizione di un blocco di approvazione specifica proposto dal fornitore renderebbe efficaci le clausole elencate.",
+      "pass_condition": "compare l'affermazione che firmare quel blocco sanerebbe il difetto o renderebbe efficaci quelle clausole.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": "la collocazione dell'affermazione nel deliverable.",
+      "source": "bozza artt. 5.2, 8, 13, 19.2",
+      "severity": "bassa",
+      "raw_text": "B.26 effetto della sottoscrizione di un blocco proposto dal fornitore\nissue: I-07 · tipo: qualificazione · gravità: bassa · judge: sì · fonte: bozza artt. 5.2, 8, 13, 19.2\nVerifica: Il deliverable afferma che la sottoscrizione di un blocco di approvazione specifica proposto dal fornitore renderebbe efficaci le clausole elencate.\nPass se: compare l'affermazione che firmare quel blocco sanerebbe il difetto o renderebbe efficaci quelle clausole.\nFail se: l'affermazione non compare.\nIndifferente: la collocazione dell'affermazione nel deliverable."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la bozza applica il conguaglio al listino maggiorato e con effetto retroattivo, mentre l'ordine in essere lo esclude in entrambi i profili.",
+      "pass_condition": "compare l'affermazione che la bozza introduce la maggiorazione e la retroattività, che l'ordine escludeva.",
+      "fail_condition": "l'affermazione non compare, oppure il regime della bozza è presentato come coincidente con quello dell'ordine.",
+      "indifferent": null,
+      "source": "bozza art. 3.4; ordine, sezione 5.2",
+      "severity": "alta",
+      "raw_text": "B.27 conguaglio retroattivo e maggiorato\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 3.4; ordine, sezione 5.2\nVerifica: Il deliverable afferma che la bozza applica il conguaglio al listino maggiorato e con effetto retroattivo, mentre l'ordine in essere lo esclude in entrambi i profili.\nPass se: compare l'affermazione che la bozza introduce la maggiorazione e la retroattività, che l'ordine escludeva.\nFail se: l'affermazione non compare, oppure il regime della bozza è presentato come coincidente con quello dell'ordine."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la bozza consente al fornitore di verificare il numero di utenti in ogni momento, con cinque giorni di preavviso e mediante strumenti automatici integrati nel servizio.",
+      "pass_condition": "compare l'affermazione sulla facoltà di verifica e sui mezzi con cui si esercita.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza art. 3.3",
+      "severity": "media",
+      "raw_text": "B.28 verifica in ogni momento\nissue: I-08 · tipo: presenza · gravità: media · judge: sì · fonte: bozza art. 3.3\nVerifica: Il deliverable afferma che la bozza consente al fornitore di verificare il numero di utenti in ogni momento, con cinque giorni di preavviso e mediante strumenti automatici integrati nel servizio.\nPass se: compare l'affermazione sulla facoltà di verifica e sui mezzi con cui si esercita.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'uso della piattaforma da parte delle società del gruppo è fuori dal perimetro della licenza come definito dalla bozza.",
+      "pass_condition": "compare l'affermazione che le società del gruppo non sono coperte dalla licenza, o che il loro uso richiede un'autorizzazione o un ordine dedicato.",
+      "fail_condition": "l'affermazione non compare, oppure l'uso da parte del gruppo è presentato come consentito.",
+      "indifferent": null,
+      "source": "bozza art. 2.2; nota interna § 3",
+      "severity": "alta",
+      "raw_text": "B.29 uso da parte delle società del gruppo\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 2.2; nota interna § 3\nVerifica: Il deliverable afferma che l'uso della piattaforma da parte delle società del gruppo è fuori dal perimetro della licenza come definito dalla bozza.\nPass se: compare l'affermazione che le società del gruppo non sono coperte dalla licenza, o che il loro uso richiede un'autorizzazione o un ordine dedicato.\nFail se: l'affermazione non compare, oppure l'uso da parte del gruppo è presentato come consentito."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che gli account associati ai terminali di magazzino condivisi sono in contrasto con il divieto di condividere le credenziali.",
+      "pass_condition": "compare l'affermazione che i terminali condivisi violano il divieto di associare le credenziali a postazioni usate da più persone.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza art. 2.3; nota interna § 2",
+      "severity": "alta",
+      "raw_text": "B.30 postazioni condivise\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 2.3; nota interna § 2\nVerifica: Il deliverable afferma che gli account associati ai terminali di magazzino condivisi sono in contrasto con il divieto di condividere le credenziali.\nPass se: compare l'affermazione che i terminali condivisi violano il divieto di associare le credenziali a postazioni usate da più persone.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che l'accordo verbale con il referente commerciale valga come autorizzazione scritta del fornitore.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che l'estensione al gruppo è autorizzata, o regolarizzata, in forza dell'accordo verbale.",
+      "indifferent": null,
+      "source": "bozza art. 2.2; nota interna § 3",
+      "severity": "media",
+      "raw_text": "B.31 divieto di valorizzare l'accordo verbale\nissue: I-09 · tipo: assenza · gravità: media · judge: sì · fonte: bozza art. 2.2; nota interna § 3\nVerifica: Il deliverable non afferma che l'accordo verbale con il referente commerciale valga come autorizzazione scritta del fornitore.\nPass se: quell'affermazione non compare.\nFail se: si afferma che l'estensione al gruppo è autorizzata, o regolarizzata, in forza dell'accordo verbale."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la bozza consente al fornitore di modificare o dismettere funzioni senza attribuire al cliente recesso né riduzione del corrispettivo, e che l'ordine in essere lo vietava senza consenso scritto.",
+      "pass_condition": "compare l'affermazione sulla facoltà di modifica priva di rimedi e il confronto con il presidio dell'ordine.",
+      "fail_condition": "l'affermazione non compare, oppure manca il confronto con l'ordine.",
+      "indifferent": null,
+      "source": "bozza artt. 7.1 e 7.2; ordine, sezione 5.3",
+      "severity": "media",
+      "raw_text": "B.32 modifica unilaterale del servizio\nissue: I-10 · tipo: presenza · gravità: media · judge: sì · fonte: bozza artt. 7.1 e 7.2; ordine, sezione 5.3\nVerifica: Il deliverable afferma che la bozza consente al fornitore di modificare o dismettere funzioni senza attribuire al cliente recesso né riduzione del corrispettivo, e che l'ordine in essere lo vietava senza consenso scritto.\nPass se: compare l'affermazione sulla facoltà di modifica priva di rimedi e il confronto con il presidio dell'ordine.\nFail se: l'affermazione non compare, oppure manca il confronto con l'ordine."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la sospensione del servizio opera dopo quindici giorni di ritardo su qualunque importo, anche contestato, senza diffida, e che i corrispettivi continuano a maturare.",
+      "pass_condition": "compare l'affermazione sui presupposti della sospensione e sulla maturazione dei corrispettivi.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza artt. 8.1 e 8.2",
+      "severity": "media",
+      "raw_text": "B.33 sospensione senza diffida\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: bozza artt. 8.1 e 8.2\nVerifica: Il deliverable afferma che la sospensione del servizio opera dopo quindici giorni di ritardo su qualunque importo, anche contestato, senza diffida, e che i corrispettivi continuano a maturare.\nPass se: compare l'affermazione sui presupposti della sospensione e sulla maturazione dei corrispettivi.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che la clausola di sospensione sia nulla in quanto tale.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "la clausola di sospensione è presentata come nulla per il solo fatto di prevedere la sospensione.",
+      "indifferent": null,
+      "source": "bozza art. 8.1",
+      "severity": "media",
+      "raw_text": "B.34 divieto di affermare la nullità della sospensione\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: bozza art. 8.1\nVerifica: Il deliverable non afferma che la clausola di sospensione sia nulla in quanto tale.\nPass se: quell'affermazione non compare.\nFail se: la clausola di sospensione è presentata come nulla per il solo fatto di prevedere la sospensione."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'esportazione dei dati alla cessazione è resa nel solo formato proprietario del fornitore.",
+      "pass_condition": "compare l'affermazione sul formato proprietario dell'esportazione.",
+      "fail_condition": "l'affermazione non compare.",
+      "indifferent": null,
+      "source": "bozza art. 15.2",
+      "severity": "media",
+      "raw_text": "B.35 formato proprietario dell'esportazione\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: bozza art. 15.2\nVerifica: Il deliverable afferma che l'esportazione dei dati alla cessazione è resa nel solo formato proprietario del fornitore.\nPass se: compare l'affermazione sul formato proprietario dell'esportazione.\nFail se: l'affermazione non compare."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable confronta il periodo di conservazione dei dati dopo la cessazione con il tempo necessario a una migrazione indicato nel fascicolo.",
+      "pass_condition": "compare il confronto fra i trenta giorni di conservazione e i sei-nove mesi di migrazione.",
+      "fail_condition": "il confronto non compare.",
+      "indifferent": null,
+      "source": "bozza art. 15.2; nota interna § 6",
+      "severity": "media",
+      "raw_text": "B.36 conservazione e tempo di migrazione\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: bozza art. 15.2; nota interna § 6\nVerifica: Il deliverable confronta il periodo di conservazione dei dati dopo la cessazione con il tempo necessario a una migrazione indicato nel fascicolo.\nPass se: compare il confronto fra i trenta giorni di conservazione e i sei-nove mesi di migrazione.\nFail se: il confronto non compare."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione secondo cui per i due fermi sono stati riconosciuti i crediti di servizio è smentita dal report.",
+      "pass_condition": "compare l'affermazione che nessun credito risulta riconosciuto, o che il report riporta credito zero.",
+      "fail_condition": "l'affermazione della nota interna è recepita, oppure non è esaminata.",
+      "indifferent": null,
+      "source": "nota interna § 4; report",
+      "severity": "media",
+      "raw_text": "B.37 affermazione errata sui crediti riconosciuti\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: nota interna § 4; report\nVerifica: Il deliverable afferma che l'affermazione secondo cui per i due fermi sono stati riconosciuti i crediti di servizio è smentita dal report.\nPass se: compare l'affermazione che nessun credito risulta riconosciuto, o che il report riporta credito zero.\nFail se: l'affermazione della nota interna è recepita, oppure non è esaminata."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che l'affermazione secondo cui il regime di responsabilità non cambia è smentita dal confronto fra la bozza e l'ordine in essere.",
+      "pass_condition": "compare l'affermazione che quel rilievo è errato, perché il massimale scende.",
+      "fail_condition": "l'affermazione della mail è recepita, oppure non è esaminata.",
+      "indifferent": null,
+      "source": "mail; bozza art. 13.1; ordine, sezione 5.1",
+      "severity": "media",
+      "raw_text": "B.38 affermazione errata sul regime di responsabilità\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: mail; bozza art. 13.1; ordine, sezione 5.1\nVerifica: Il deliverable afferma che l'affermazione secondo cui il regime di responsabilità non cambia è smentita dal confronto fra la bozza e l'ordine in essere.\nPass se: compare l'affermazione che quel rilievo è errato, perché il massimale scende.\nFail se: l'affermazione della mail è recepita, oppure non è esaminata."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta l'affermazione secondo cui nel 2029 i livelli di servizio sono stati rispettati.",
+      "pass_condition": "non compare alcuna contestazione di quell'affermazione.",
+      "fail_condition": "si afferma che quell'affermazione del fornitore è falsa o non veritiera.",
+      "indifferent": null,
+      "source": "mail; report",
+      "severity": "media",
+      "raw_text": "B.39 simmetria sul rispetto dei livelli\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: mail; report\nVerifica: Il deliverable non contesta l'affermazione secondo cui nel 2029 i livelli di servizio sono stati rispettati.\nPass se: non compare alcuna contestazione di quell'affermazione.\nFail se: si afferma che quell'affermazione del fornitore è falsa o non veritiera."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta il dato dei trecentosei account attivi riportato dalla nota interna.",
+      "pass_condition": "non compare alcuna contestazione di quel dato.",
+      "fail_condition": "il dato dei trecentosei account è presentato come inattendibile o da verificare prima di quantificare l'esposizione.",
+      "indifferent": null,
+      "source": "nota interna § 2",
+      "severity": "media",
+      "raw_text": "B.40 simmetria sul numero di account\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: nota interna § 2\nVerifica: Il deliverable non contesta il dato dei trecentosei account attivi riportato dalla nota interna.\nPass se: non compare alcuna contestazione di quel dato.\nFail se: il dato dei trecentosei account è presentato come inattendibile o da verificare prima di quantificare l'esposizione."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "La risposta sulla mancata firma afferma che non sottoscrivere la bozza non interrompe il servizio, perché il contratto in essere è già rinnovato.",
+      "pass_condition": "compare l'affermazione che il servizio prosegue in forza del rinnovo già operato.",
+      "fail_condition": "si afferma che la mancata firma comporta l'interruzione del servizio, oppure la risposta non affronta il punto.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "B.41 conseguenza della mancata firma\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: La risposta sulla mancata firma afferma che non sottoscrivere la bozza non interrompe il servizio, perché il contratto in essere è già rinnovato.\nPass se: compare l'affermazione che il servizio prosegue in forza del rinnovo già operato.\nFail se: si afferma che la mancata firma comporta l'interruzione del servizio, oppure la risposta non affronta il punto."
+    },
+    {
+      "id": "B.42",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable afferma che la bozza non va sottoscritta nel testo attuale.",
+      "pass_condition": "compare l'affermazione che il testo non è sottoscrivibile così come è.",
+      "fail_condition": "l'affermazione non compare, oppure la sottoscrizione è presentata come indifferente.",
+      "indifferent": null,
+      "source": "prompt",
+      "severity": "alta",
+      "raw_text": "B.42 firmabilità\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: prompt\nVerifica: Il deliverable afferma che la bozza non va sottoscritta nel testo attuale.\nPass se: compare l'affermazione che il testo non è sottoscrivibile così come è.\nFail se: l'affermazione non compare, oppure la sottoscrizione è presentata come indifferente."
+    },
+    {
+      "id": "B.43",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Fra i punti su cui non cedere il deliverable indica il massimale di responsabilità con la manleva per violazione di diritti di terzi.",
+      "pass_condition": "quel punto compare fra i punti su cui non cedere",
+      "fail_condition": "quel punto non compare fra i punti su cui non cedere",
+      "indifferent": "l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere",
+      "source": "bozza artt. 13.1 e 14.2; ordine, sezione 5.1",
+      "severity": "alta",
+      "raw_text": "B.43 punti su cui non cedere: massimale e manleva\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza artt. 13.1 e 14.2; ordine, sezione 5.1\nVerifica: Fra i punti su cui non cedere il deliverable indica il massimale di responsabilità con la manleva per violazione di diritti di terzi.\nPass se: quel punto compare fra i punti su cui non cedere\nFail se: quel punto non compare fra i punti su cui non cedere\nIndifferente: l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere"
+    },
+    {
+      "id": "B.44",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il fornitore abbia falsificato, alterato o occultato i dati del report di disponibilità.",
+      "pass_condition": "quelle affermazioni non compaiono.",
+      "fail_condition": "si afferma che il report è falso, alterato, manipolato, o che il fornitore ha occultato i minuti di indisponibilità.",
+      "indifferent": null,
+      "source": "report",
+      "severity": "alta",
+      "raw_text": "B.44 sovra-segnalazione: report falsificato\nissue: N-01 · tipo: assenza · gravità: alta · judge: sì · fonte: report\nVerifica: Il deliverable non afferma che il fornitore abbia falsificato, alterato o occultato i dati del report di disponibilità.\nPass se: quelle affermazioni non compaiono.\nFail se: si afferma che il report è falso, alterato, manipolato, o che il fornitore ha occultato i minuti di indisponibilità."
+    },
+    {
+      "id": "B.45",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta il contenuto della clausola compromissoria come esposizione né ne chiede l'eliminazione per il suo contenuto.",
+      "pass_condition": "non compare alcun rilievo sul contenuto della clausola compromissoria.",
+      "fail_condition": "si chiede di eliminare o modificare la clausola compromissoria per il suo contenuto, o si presenta l'arbitrato come sfavorevole al cliente.",
+      "indifferent": null,
+      "source": "bozza art. 19.2",
+      "severity": "bassa",
+      "raw_text": "B.45 sovra-segnalazione: clausola compromissoria\nissue: N-02 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 19.2\nVerifica: Il deliverable non presenta il contenuto della clausola compromissoria come esposizione né ne chiede l'eliminazione per il suo contenuto.\nPass se: non compare alcun rilievo sul contenuto della clausola compromissoria.\nFail se: si chiede di eliminare o modificare la clausola compromissoria per il suo contenuto, o si presenta l'arbitrato come sfavorevole al cliente."
+    },
+    {
+      "id": "B.46",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta il corrispettivo giornaliero dell'assistenza alla migrazione come esposizione autonoma.",
+      "pass_condition": "non compare un rilievo autonomo sul corrispettivo dell'assistenza alla migrazione.",
+      "fail_condition": "il corrispettivo dell'assistenza alla migrazione è presentato come rilievo a sé.",
+      "indifferent": null,
+      "source": "bozza art. 15.3",
+      "severity": "bassa",
+      "raw_text": "B.46 sovra-segnalazione: corrispettivo della migrazione\nissue: N-03 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 15.3\nVerifica: Il deliverable non presenta il corrispettivo giornaliero dell'assistenza alla migrazione come esposizione autonoma.\nPass se: non compare un rilievo autonomo sul corrispettivo dell'assistenza alla migrazione.\nFail se: il corrispettivo dell'assistenza alla migrazione è presentato come rilievo a sé."
+    },
+    {
+      "id": "B.47",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non chiede l'innalzamento della soglia di disponibilità né la presenta come insufficiente in sé.",
+      "pass_condition": "non compare alcuna richiesta di innalzare la soglia né alcun rilievo sulla soglia in quanto tale.",
+      "fail_condition": "si chiede di innalzare il livello del 99,5%, o si presenta quella soglia come il difetto.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 2.1",
+      "severity": "media",
+      "raw_text": "B.47 sovra-segnalazione: soglia del 99,5%\nissue: N-04 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 1 art. 2.1\nVerifica: Il deliverable non chiede l'innalzamento della soglia di disponibilità né la presenta come insufficiente in sé.\nPass se: non compare alcuna richiesta di innalzare la soglia né alcun rilievo sulla soglia in quanto tale.\nFail se: si chiede di innalzare il livello del 99,5%, o si presenta quella soglia come il difetto."
+    },
+    {
+      "id": "B.48",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non contesta l'esclusione delle interruzioni di durata inferiore a quindici minuti consecutivi né la annovera fra le esclusioni che hanno assorbito i due fermi.",
+      "pass_condition": "non compare alcun rilievo su quella lettera, e i due fermi non le sono attribuiti.",
+      "fail_condition": "si contesta l'esclusione delle interruzioni inferiori a quindici minuti, oppure i due fermi sono attribuiti a quella esclusione.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 3.2, lett. (b)",
+      "severity": "media",
+      "raw_text": "B.48 sovra-segnalazione: esclusione sotto i quindici minuti\nissue: N-05 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 1 art. 3.2, lett. (b)\nVerifica: Il deliverable non contesta l'esclusione delle interruzioni di durata inferiore a quindici minuti consecutivi né la annovera fra le esclusioni che hanno assorbito i due fermi.\nPass se: non compare alcun rilievo su quella lettera, e i due fermi non le sono attribuiti.\nFail se: si contesta l'esclusione delle interruzioni inferiori a quindici minuti, oppure i due fermi sono attribuiti a quella esclusione."
+    },
+    {
+      "id": "B.49",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta la fatturazione anticipata annuale come esposizione o come peggioramento.",
+      "pass_condition": "non compare alcun rilievo sulla fatturazione anticipata.",
+      "fail_condition": "la fatturazione anticipata è presentata come esposizione o come modifica peggiorativa.",
+      "indifferent": null,
+      "source": "bozza art. 4.1",
+      "severity": "bassa",
+      "raw_text": "B.49 sovra-segnalazione: fatturazione anticipata\nissue: N-06 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 4.1\nVerifica: Il deliverable non presenta la fatturazione anticipata annuale come esposizione o come peggioramento.\nPass se: non compare alcun rilievo sulla fatturazione anticipata.\nFail se: la fatturazione anticipata è presentata come esposizione o come modifica peggiorativa."
+    },
+    {
+      "id": "B.50",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta l'obbligo di comunicare gli incrementi di utenti come esposizione autonoma.",
+      "pass_condition": "non compare un rilievo autonomo su quell'obbligo di comunicazione.",
+      "fail_condition": "l'obbligo di comunicazione dell'articolo 3.2 è presentato come rilievo a sé.",
+      "indifferent": null,
+      "source": "bozza art. 3.2",
+      "severity": "bassa",
+      "raw_text": "B.50 sovra-segnalazione: obbligo di comunicare gli incrementi\nissue: N-07 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 3.2\nVerifica: Il deliverable non presenta l'obbligo di comunicare gli incrementi di utenti come esposizione autonoma.\nPass se: non compare un rilievo autonomo su quell'obbligo di comunicazione.\nFail se: l'obbligo di comunicazione dell'articolo 3.2 è presentato come rilievo a sé."
+    },
+    {
+      "id": "B.51",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta l'impegno sulla copia di sicurezza giornaliera come esposizione per il cliente.",
+      "pass_condition": "non compare alcun rilievo che presenti l'articolo 12.3 come sfavorevole al cliente.",
+      "fail_condition": "l'impegno sulla copia di sicurezza è presentato come esposizione o come clausola da rinegoziare.",
+      "indifferent": null,
+      "source": "bozza art. 12.3",
+      "severity": "bassa",
+      "raw_text": "B.51 simmetria: copia di sicurezza\nissue: I-15 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 12.3\nVerifica: Il deliverable non presenta l'impegno sulla copia di sicurezza giornaliera come esposizione per il cliente.\nPass se: non compare alcun rilievo che presenti l'articolo 12.3 come sfavorevole al cliente.\nFail se: l'impegno sulla copia di sicurezza è presentato come esposizione o come clausola da rinegoziare."
+    },
+    {
+      "id": "B.52",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta la clausola di forza maggiore come esclusione di responsabilità a favore del solo fornitore.",
+      "pass_condition": "non compare quel rilievo.",
+      "fail_condition": "la clausola di forza maggiore è presentata come unilaterale o come esclusione a favore del solo fornitore.",
+      "indifferent": null,
+      "source": "bozza art. 16",
+      "severity": "bassa",
+      "raw_text": "B.52 simmetria: forza maggiore reciproca\nissue: I-15 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 16\nVerifica: Il deliverable non presenta la clausola di forza maggiore come esclusione di responsabilità a favore del solo fornitore.\nPass se: non compare quel rilievo.\nFail se: la clausola di forza maggiore è presentata come unilaterale o come esclusione a favore del solo fornitore."
+    },
+    {
+      "id": "B.53",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non presenta il divieto di cessione del contratto come vincolo posto al solo cliente.",
+      "pass_condition": "non compare quel rilievo.",
+      "fail_condition": "il divieto di cessione è presentato come vincolo unilaterale a carico del cliente.",
+      "indifferent": null,
+      "source": "bozza art. 17.1",
+      "severity": "bassa",
+      "raw_text": "B.53 simmetria: divieto di cessione reciproco\nissue: I-15 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza art. 17.1\nVerifica: Il deliverable non presenta il divieto di cessione del contratto come vincolo posto al solo cliente.\nPass se: non compare quel rilievo.\nFail se: il divieto di cessione è presentato come vincolo unilaterale a carico del cliente."
+    },
+    {
+      "id": "B.54",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il fornitore eserciterà la verifica sugli utenti, che sospenderà il servizio o che accetterà le modifiche richieste.",
+      "pass_condition": "quelle affermazioni non compaiono.",
+      "fail_condition": "si afferma che il fornitore eserciterà la verifica, che sospenderà il servizio, o che accetterà o rifiuterà le modifiche.",
+      "indifferent": null,
+      "source": "stato del fascicolo",
+      "severity": "media",
+      "raw_text": "B.54 presunzione: condotta del fornitore\nissue: I-16 · tipo: assenza · gravità: media · judge: sì · fonte: stato del fascicolo\nVerifica: Il deliverable non afferma che il fornitore eserciterà la verifica sugli utenti, che sospenderà il servizio o che accetterà le modifiche richieste.\nPass se: quelle affermazioni non compaiono.\nFail se: si afferma che il fornitore eserciterà la verifica, che sospenderà il servizio, o che accetterà o rifiuterà le modifiche."
+    },
+    {
+      "id": "B.55",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non afferma che il fermo di marzo si ripeterà.",
+      "pass_condition": "quell'affermazione non compare.",
+      "fail_condition": "si afferma che il fermo si ripeterà, o che l'infrastruttura è destinata a cedere di nuovo. C. DATE E VALORI CALCOLATI",
+      "indifferent": null,
+      "source": "rapporti di incidente",
+      "severity": "media",
+      "raw_text": "B.55 presunzione: ripetizione del fermo\nissue: I-16 · tipo: assenza · gravità: media · judge: sì · fonte: rapporti di incidente\nVerifica: Il deliverable non afferma che il fermo di marzo si ripeterà.\nPass se: quell'affermazione non compare.\nFail se: si afferma che il fermo si ripeterà, o che l'infrastruttura è destinata a cedere di nuovo."
+    },
+    {
+      "id": "B.56",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Fra i punti su cui non cedere il deliverable indica il regime degli utenti e del conguaglio.",
+      "pass_condition": "quel punto compare fra i punti su cui non cedere",
+      "fail_condition": "quel punto non compare fra i punti su cui non cedere",
+      "indifferent": "l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere",
+      "source": "bozza artt. 3.3 e 3.4; ordine, sezione 5.2",
+      "severity": "alta",
+      "raw_text": "B.56 punti su cui non cedere: utenti e conguaglio\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza artt. 3.3 e 3.4; ordine, sezione 5.2\nVerifica: Fra i punti su cui non cedere il deliverable indica il regime degli utenti e del conguaglio.\nPass se: quel punto compare fra i punti su cui non cedere\nFail se: quel punto non compare fra i punti su cui non cedere\nIndifferente: l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere"
+    },
+    {
+      "id": "B.57",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Fra i punti su cui non cedere il deliverable indica il perimetro della licenza.",
+      "pass_condition": "quel punto compare fra i punti su cui non cedere",
+      "fail_condition": "quel punto non compare fra i punti su cui non cedere",
+      "indifferent": "l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere",
+      "source": "bozza artt. 2.2 e 2.3",
+      "severity": "alta",
+      "raw_text": "B.57 punti su cui non cedere: perimetro della licenza\nissue: I-14 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza artt. 2.2 e 2.3\nVerifica: Fra i punti su cui non cedere il deliverable indica il perimetro della licenza.\nPass se: quel punto compare fra i punti su cui non cedere\nFail se: quel punto non compare fra i punti su cui non cedere\nIndifferente: l'ordine in cui i punti sono presentati; l'indicazione di ulteriori punti su cui non cedere"
+    },
+    {
+      "id": "B.58",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica fra i punti su cui non cedere la clausola compromissoria né la legge applicabile.",
+      "pass_condition": "né la clausola compromissoria né la legge applicabile compaiono fra i punti su cui non cedere",
+      "fail_condition": "una fra la clausola compromissoria e la legge applicabile compare fra i punti su cui non cedere",
+      "indifferent": null,
+      "source": "bozza artt. 19.1 e 19.2",
+      "severity": "media",
+      "raw_text": "B.58 punti su cui non cedere: nessuna clausola di rito\nissue: I-14 · tipo: assenza · gravità: media · judge: sì · fonte: bozza artt. 19.1 e 19.2\nVerifica: Il deliverable non indica fra i punti su cui non cedere la clausola compromissoria né la legge applicabile.\nPass se: né la clausola compromissoria né la legge applicabile compaiono fra i punti su cui non cedere\nFail se: una fra la clausola compromissoria e la legge applicabile compare fra i punti su cui non cedere"
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 2 novembre 2029 come ultimo giorno utile per la disdetta.",
+      "pass_condition": "compare la data del 2 novembre 2029 riferita al termine di disdetta.",
+      "fail_condition": "è indicata una data diversa, oppure il termine non è indicato.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "C.1 ultimo giorno utile per la disdetta\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: ordine, sezione 2\nVerifica: Il deliverable indica il 2 novembre 2029 come ultimo giorno utile per la disdetta.\nPass se: compare la data del 2 novembre 2029 riferita al termine di disdetta.\nFail se: è indicata una data diversa, oppure il termine non è indicato."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il termine di disdetta come novanta giorni anteriori alla scadenza del 31 gennaio 2030.",
+      "pass_condition": "compaiono il termine di novanta giorni e la data di scadenza da cui si conta a ritroso.",
+      "fail_condition": "il calcolo non è esposto.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "C.2 passaggio: novanta giorni prima della scadenza\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable espone il termine di disdetta come novanta giorni anteriori alla scadenza del 31 gennaio 2030.\nPass se: compaiono il termine di novanta giorni e la data di scadenza da cui si conta a ritroso.\nFail se: il calcolo non è esposto."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable non indica il 19 febbraio 2030 come termine per la disdetta.",
+      "pass_condition": "quella data non compare come termine di disdetta.",
+      "fail_condition": "il 19 febbraio 2030 è presentato come termine per la disdetta.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "C.3 derivazione errata: novanta giorni in avanti\nissue: I-01 · tipo: assenza · gravità: alta · judge: sì · fonte: ordine, sezione 2\nVerifica: Il deliverable non indica il 19 febbraio 2030 come termine per la disdetta.\nPass se: quella data non compare come termine di disdetta.\nFail se: il 19 febbraio 2030 è presentato come termine per la disdetta."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica il 31 gennaio 2031 come scadenza del contratto dopo il rinnovo tacito.",
+      "pass_condition": "compare la data del 31 gennaio 2031 riferita alla scadenza del contratto rinnovato.",
+      "fail_condition": "è indicata una data diversa, oppure la scadenza non è indicata.",
+      "indifferent": null,
+      "source": "ordine, sezione 2",
+      "severity": "alta",
+      "raw_text": "C.4 scadenza dopo il rinnovo\nissue: I-01 · tipo: valore · gravità: alta · judge: no · fonte: ordine, sezione 2\nVerifica: Il deliverable indica il 31 gennaio 2031 come scadenza del contratto dopo il rinnovo tacito.\nPass se: compare la data del 31 gennaio 2031 riferita alla scadenza del contratto rinnovato.\nFail se: è indicata una data diversa, oppure la scadenza non è indicata."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 99,98% come disponibilità del periodo calcolata secondo il metodo contrattuale.",
+      "pass_condition": "compare il valore 99,98% riferito alla disponibilità contrattuale.",
+      "fail_condition": "è indicato un valore diverso, oppure il valore non è indicato.",
+      "indifferent": null,
+      "source": "report",
+      "severity": "alta",
+      "raw_text": "C.5 disponibilità secondo il metodo contrattuale\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: report\nVerifica: Il deliverable indica 99,98% come disponibilità del periodo calcolata secondo il metodo contrattuale.\nPass se: compare il valore 99,98% riferito alla disponibilità contrattuale.\nFail se: è indicato un valore diverso, oppure il valore non è indicato."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 99,84% come disponibilità del periodo calcolata su tutti i minuti di indisponibilità rilevati.",
+      "pass_condition": "compare il valore 99,84% riferito alla disponibilità effettiva.",
+      "fail_condition": "è indicato un valore diverso, oppure il valore non è indicato.",
+      "indifferent": null,
+      "source": "report; rapporti di incidente",
+      "severity": "alta",
+      "raw_text": "C.6 disponibilità sull'indisponibilità effettiva\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: report; rapporti di incidente\nVerifica: Il deliverable indica 99,84% come disponibilità del periodo calcolata su tutti i minuti di indisponibilità rilevati.\nPass se: compare il valore 99,84% riferito alla disponibilità effettiva.\nFail se: è indicato un valore diverso, oppure il valore non è indicato."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 610 come numero dei minuti esclusi dal computo nel periodo.",
+      "pass_condition": "compare il valore 610 riferito ai minuti esclusi.",
+      "fail_condition": "è indicato un valore diverso, oppure il valore non è indicato.",
+      "indifferent": null,
+      "source": "report; rapporti di incidente",
+      "severity": "alta",
+      "raw_text": "C.7 minuti esclusi dal computo\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: report; rapporti di incidente\nVerifica: Il deliverable indica 610 come numero dei minuti esclusi dal computo nel periodo.\nPass se: compare il valore 610 riferito ai minuti esclusi.\nFail se: è indicato un valore diverso, oppure il valore non è indicato."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 3.480 euro come tetto mensile del credito di servizio.",
+      "pass_condition": "compare l'importo di 3.480 euro riferito al tetto mensile del credito.",
+      "fail_condition": "è indicato un importo diverso, oppure il tetto non è quantificato.",
+      "indifferent": null,
+      "source": "Allegato 1 art. 4.2",
+      "severity": "alta",
+      "raw_text": "C.8 tetto mensile del credito di servizio\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: Allegato 1 art. 4.2\nVerifica: Il deliverable indica 3.480 euro come tetto mensile del credito di servizio.\nPass se: compare l'importo di 3.480 euro riferito al tetto mensile del credito.\nFail se: è indicato un importo diverso, oppure il tetto non è quantificato."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica zero come importo dei crediti di servizio maturati nel periodo.",
+      "pass_condition": "compare l'indicazione che nessun credito è maturato, o che i crediti maturati sono pari a zero.",
+      "fail_condition": "è indicato un importo diverso da zero.",
+      "indifferent": null,
+      "source": "report",
+      "severity": "alta",
+      "raw_text": "C.9 credito maturato nel periodo\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: report\nVerifica: Il deliverable indica zero come importo dei crediti di servizio maturati nel periodo.\nPass se: compare l'indicazione che nessun credito è maturato, o che i crediti maturati sono pari a zero.\nFail se: è indicato un importo diverso da zero."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 66 come numero di utenti eccedenti rispetto a quelli licenziati.",
+      "pass_condition": "compare il valore 66 riferito all'eccedenza di utenti.",
+      "fail_condition": "è indicato un valore diverso, oppure l'eccedenza non è quantificata.",
+      "indifferent": null,
+      "source": "ordine, sezione 3; nota interna § 2",
+      "severity": "alta",
+      "raw_text": "C.10 eccedenza di utenti\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: ordine, sezione 3; nota interna § 2\nVerifica: Il deliverable indica 66 come numero di utenti eccedenti rispetto a quelli licenziati.\nPass se: compare il valore 66 riferito all'eccedenza di utenti.\nFail se: è indicato un valore diverso, oppure l'eccedenza non è quantificata."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 104.544 euro come conguaglio dovuto per un anno.",
+      "pass_condition": "compare l'importo di 104.544 euro riferito al conguaglio annuo.",
+      "fail_condition": "è indicato un importo diverso, oppure il conguaglio annuo non è quantificato.",
+      "indifferent": null,
+      "source": "bozza art. 3.4",
+      "severity": "alta",
+      "raw_text": "C.11 conguaglio annuo\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: bozza art. 3.4\nVerifica: Il deliverable indica 104.544 euro come conguaglio dovuto per un anno.\nPass se: compare l'importo di 104.544 euro riferito al conguaglio annuo.\nFail se: è indicato un importo diverso, oppure il conguaglio annuo non è quantificato."
+    },
+    {
+      "id": "C.12",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 313.632 euro come conguaglio dovuto per l'intera durata dell'ordine.",
+      "pass_condition": "compare l'importo di 313.632 euro riferito al conguaglio retroattivo.",
+      "fail_condition": "è indicato un importo diverso, oppure il conguaglio retroattivo non è quantificato.",
+      "indifferent": null,
+      "source": "bozza art. 3.4",
+      "severity": "alta",
+      "raw_text": "C.12 conguaglio retroattivo triennale\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: bozza art. 3.4\nVerifica: Il deliverable indica 313.632 euro come conguaglio dovuto per l'intera durata dell'ordine.\nPass se: compare l'importo di 313.632 euro riferito al conguaglio retroattivo.\nFail se: è indicato un importo diverso, oppure il conguaglio retroattivo non è quantificato."
+    },
+    {
+      "id": "C.13",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "Il deliverable espone il conguaglio come prodotto fra gli utenti eccedenti e il prezzo di listino maggiorato del venti per cento, esteso all'intera durata dell'ordine.",
+      "pass_condition": "compaiono la maggiorazione del venti per cento e l'estensione all'intera durata.",
+      "fail_condition": "il calcolo non è esposto, oppure manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "bozza art. 3.4",
+      "severity": "alta",
+      "raw_text": "C.13 passaggio: listino maggiorato e retroattività\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza art. 3.4\nVerifica: Il deliverable espone il conguaglio come prodotto fra gli utenti eccedenti e il prezzo di listino maggiorato del venti per cento, esteso all'intera durata dell'ordine.\nPass se: compaiono la maggiorazione del venti per cento e l'estensione all'intera durata.\nFail se: il calcolo non è esposto, oppure manca uno dei due elementi."
+    },
+    {
+      "id": "C.14",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 69.600 euro come massimale di responsabilità previsto dalla bozza.",
+      "pass_condition": "compare l'importo di 69.600 euro riferito al massimale della bozza.",
+      "fail_condition": "è indicato un importo diverso, oppure il massimale non è quantificato.",
+      "indifferent": null,
+      "source": "bozza art. 13.1",
+      "severity": "alta",
+      "raw_text": "C.14 massimale della bozza\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: bozza art. 13.1\nVerifica: Il deliverable indica 69.600 euro come massimale di responsabilità previsto dalla bozza.\nPass se: compare l'importo di 69.600 euro riferito al massimale della bozza.\nFail se: è indicato un importo diverso, oppure il massimale non è quantificato."
+    },
+    {
+      "id": "C.15",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "Il deliverable indica 278.400 euro come massimale di responsabilità previsto dall'ordine in essere.",
+      "pass_condition": "compare l'importo di 278.400 euro riferito al massimale dell'ordine.",
+      "fail_condition": "è indicato un importo diverso, oppure il massimale dell'ordine non è quantificato.",
+      "indifferent": null,
+      "source": "ordine, sezione 5.1",
+      "severity": "alta",
+      "raw_text": "C.15 massimale dell'ordine in essere\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: ordine, sezione 5.1\nVerifica: Il deliverable indica 278.400 euro come massimale di responsabilità previsto dall'ordine in essere.\nPass se: compare l'importo di 278.400 euro riferito al massimale dell'ordine.\nFail se: è indicato un importo diverso, oppure il massimale dell'ordine non è quantificato."
+    }
+  ]
+}

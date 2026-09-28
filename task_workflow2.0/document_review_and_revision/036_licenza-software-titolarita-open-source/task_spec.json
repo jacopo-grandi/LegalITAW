@@ -1,0 +1,126 @@
+{
+  "task_id": "WF2-036",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Software licensing. Titolarita' dei risultati, componenti a codice aperto, deposito del sorgente, verifica e responsabilita' per pretese di terzi",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2028-10-16",
+  "workflow_family": "document_review_and_revision",
+  "subtask": "targeted_redline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "ex ante",
+  "legal_area": [
+    "software licensing",
+    "A. Document review and revision",
+    "Contrattualistica",
+    "Ricerca normativa"
+  ],
+  "document_type": "ex ante",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "document_review_and_revision",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: contratto_redline.docx, nota_delle_modifiche.md. Per i DOCX di redline usa [[DEL:testo soppresso]], [[INS:testo inserito]] e [[NOTE:motivazione]].\n\n# Struttura del deliverable\n\nDue file.\n\n## File 1 — `contratto_redline.docx`\n\nLa bozza del documento 01 con le modifiche apportate **come revisioni tracciate**, non come testo\nriscritto: le parti soppresse devono restare visibili come cancellazioni e le parti aggiunte come\ninserimenti, con autore e data della revisione.\n\nLe revisioni devono riguardare esclusivamente gli articoli e le definizioni che ricadono nel perimetro\nindicato nell'incarico. Nessuna revisione negli articoli esclusi.\n\n## File 2 — `nota_delle_modifiche.md`\n\nLunghezza massima 2.200 parole. Sezioni obbligatorie, nell'ordine, con esattamente queste\nintestazioni:\n\n### 1. Sintesi delle modifiche\nUna tabella con: articolo o definizione, che cosa è stato modificato, ragione della modifica.\n\n### 2. Titolarità dei Risultati\n### 3. Componenti di terze parti e software a codice aperto\n### 4. Deposito del codice sorgente\n### 5. Verifica dell'uso del Software\n### 6. Responsabilità per pretese di terzi\n\nPer ciascuna delle sezioni da 2 a 6: il difetto del testo attuale, la modifica introdotta e il\nriferimento alla clausola o al documento da cui il difetto risulta.\n\n### 7. Affermazioni del fornitore da non dare per buone\nPunto per punto, quali affermazioni del referente commerciale non reggono e perché.\n\n### 8. Che cosa non è determinabile allo stato e che cosa serve\nCiò che il fascicolo non consente di stabilire e i documenti o le informazioni da acquisire.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "legal_correctness",
+      "redline_quality"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_bozza_contratto_licenza_e_sviluppo_v2.docx",
+    "public/documents/02_allegato_a_specifiche_funzionali.pdf",
+    "public/documents/03_allegato_b_componenti_di_terze_parti.pdf",
+    "public/documents/04_accordo_di_deposito_del_codice_sorgente.pdf",
+    "public/documents/05_contratto_dopera_sviluppatore_autonomo.pdf",
+    "public/documents/06_email_referente_commerciale.pdf",
+    "public/documents/07_nota_interna_responsabile_tecnologie.pdf"
+  ],
+  "expected_deliverables": [
+    "contratto_redline.docx",
+    "nota_delle_modifiche.md"
+  ],
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "legal_correctness",
+    "redline_quality",
+    "scope_discipline",
+    "artifact_conformity"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "docx_redline",
+  "document_preset": "contract_negotiation_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

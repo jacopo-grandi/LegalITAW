@@ -1,0 +1,993 @@
+{
+  "task_id": "WF2-084",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 49,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable usa esattamente il nome o i nomi richiesti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable usa esattamente il nome o i nomi richiesti.\nPASS se: Il nome del file coincide con il task.\nFAIL se: Il nome del file non coincide con il task.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "Il nome del file coincide con il task.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non cita fonti esterne all'elenco chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti esterne all'elenco chiuso.\nPASS se: Ogni fonte citata compare in 03_legal_sources.md.\nFAIL se: Compare almeno una fonte estranea all'elenco chiuso.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "Ogni fonte citata compare in 03_legal_sources.md.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable fissa la data di riferimento al 2029-10-31.",
+      "match_criteria": "Oggetto del criterio: Il deliverable fissa la data di riferimento al 2029-10-31.\nPASS se: Compare la data 2029-10-31 come data di riferimento.\nFAIL se: La data e' assente o diversa.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "Compare la data 2029-10-31 come data di riferimento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Ogni conclusione di merito indica almeno un documento o una fonte.",
+      "match_criteria": "Oggetto del criterio: Ogni conclusione di merito indica almeno un documento o una fonte.\nPASS se: Non vi sono conclusioni prive di ancoraggio.\nFAIL se: Almeno una conclusione e' priva di ancoraggio.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "Non vi sono conclusioni prive di ancoraggio.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che la policy copre la distribuzione ma omette servizi IT e garanzia infragruppo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la policy copre la distribuzione ma omette servizi IT e garanzia infragruppo.\nPASS se: L'affermazione compare riferita a «transazioni incomplete».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: mappatura intercompany",
+      "pass_condition": "L'affermazione compare riferita a «transazioni incomplete».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «transazioni incomplete» a mappatura intercompany.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «transazioni incomplete» a mappatura intercompany.\nPASS se: Il punto e' collegato a mappatura intercompany.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: mappatura intercompany",
+      "pass_condition": "Il punto e' collegato a mappatura intercompany.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «transazioni incomplete» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «transazioni incomplete» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: mappatura intercompany",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non afferma il contrario di questa proposizione: la policy copre la distribuzione ma omette servizi IT e garanzia infragruppo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma il contrario di questa proposizione: la policy copre la distribuzione ma omette servizi IT e garanzia infragruppo.\nPASS se: Non compare una proposizione contraria.\nFAIL se: Compare una proposizione contraria.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: mappatura intercompany",
+      "pass_condition": "Non compare una proposizione contraria.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che contratti e condotta mostrano che Keramo Italia gestisce resi e rischio credito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che contratti e condotta mostrano che Keramo Italia gestisce resi e rischio credito.\nPASS se: L'affermazione compare riferita a «delineazione».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratti e matrice funzioni",
+      "pass_condition": "L'affermazione compare riferita a «delineazione».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «delineazione» a contratti e matrice funzioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «delineazione» a contratti e matrice funzioni.\nPASS se: Il punto e' collegato a contratti e matrice funzioni.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratti e matrice funzioni",
+      "pass_condition": "Il punto e' collegato a contratti e matrice funzioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «delineazione» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «delineazione» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratti e matrice funzioni",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che la scelta della societa' italiana come tested party richiede confronto con le funzioni effettive.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la scelta della societa' italiana come tested party richiede confronto con le funzioni effettive.\nPASS se: L'affermazione compare riferita a «tested party».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy e matrice funzioni",
+      "pass_condition": "L'affermazione compare riferita a «tested party».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «tested party» a policy e matrice funzioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «tested party» a policy e matrice funzioni.\nPASS se: Il punto e' collegato a policy e matrice funzioni.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy e matrice funzioni",
+      "pass_condition": "Il punto e' collegato a policy e matrice funzioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «tested party» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «tested party» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy e matrice funzioni",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che il ROS va applicato a ricavi e costi della sola distribuzione delimitata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il ROS va applicato a ricavi e costi della sola distribuzione delimitata.\nPASS se: L'affermazione compare riferita a «indicatore ROS».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "L'affermazione compare riferita a «indicatore ROS».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «indicatore ROS» a policy economica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «indicatore ROS» a policy economica.\nPASS se: Il punto e' collegato a policy economica.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "Il punto e' collegato a policy economica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «indicatore ROS» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «indicatore ROS» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che la policy indica un target 2-4 per cento senza quartili o anno della ricerca.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la policy indica un target 2-4 per cento senza quartili o anno della ricerca.\nPASS se: L'affermazione compare riferita a «intervallo».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "L'affermazione compare riferita a «intervallo».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «intervallo» a policy economica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «intervallo» a policy economica.\nPASS se: Il punto e' collegato a policy economica.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "Il punto e' collegato a policy economica.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «intervallo» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «intervallo» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: policy economica",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che il ROS della distribuzione al 30 settembre e' 1,20 per cento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il ROS della distribuzione al 30 settembre e' 1,20 per cento.\nPASS se: L'affermazione compare riferita a «risultato 2029».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: conto economico segmentato",
+      "pass_condition": "L'affermazione compare riferita a «risultato 2029».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «risultato 2029» a conto economico segmentato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «risultato 2029» a conto economico segmentato.\nPASS se: Il punto e' collegato a conto economico segmentato.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: conto economico segmentato",
+      "pass_condition": "Il punto e' collegato a conto economico segmentato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «risultato 2029» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «risultato 2029» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: conto economico segmentato",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che la ricerca usa dati 2024-2026 e non documenta un refresh.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la ricerca usa dati 2024-2026 e non documenta un refresh.\nPASS se: L'affermazione compare riferita a «comparabili obsoleti».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "L'affermazione compare riferita a «comparabili obsoleti».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «comparabili obsoleti» a studio comparabili.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «comparabili obsoleti» a studio comparabili.\nPASS se: Il punto e' collegato a studio comparabili.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "Il punto e' collegato a studio comparabili.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «comparabili obsoleti» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «comparabili obsoleti» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che mancano stringa di ricerca, esclusioni e controllo di indipendenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che mancano stringa di ricerca, esclusioni e controllo di indipendenza.\nPASS se: L'affermazione compare riferita a «criteri di selezione».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "L'affermazione compare riferita a «criteri di selezione».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «criteri di selezione» a studio comparabili.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «criteri di selezione» a studio comparabili.\nPASS se: Il punto e' collegato a studio comparabili.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "Il punto e' collegato a studio comparabili.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «criteri di selezione» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «criteri di selezione» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che l'aggiustamento del capitale circolante e' citato ma non calcolato per singolo comparabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'aggiustamento del capitale circolante e' citato ma non calcolato per singolo comparabile.\nPASS se: L'affermazione compare riferita a «aggiustamenti».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "L'affermazione compare riferita a «aggiustamenti».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «aggiustamenti» a studio comparabili.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «aggiustamenti» a studio comparabili.\nPASS se: Il punto e' collegato a studio comparabili.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "Il punto e' collegato a studio comparabili.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «aggiustamenti» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «aggiustamenti» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: studio comparabili",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che il contratto servizi alloca costi marketing che la policy attribuisce alla capogruppo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il contratto servizi alloca costi marketing che la policy attribuisce alla capogruppo.\nPASS se: L'affermazione compare riferita a «accordi infragruppo».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratto servizi",
+      "pass_condition": "L'affermazione compare riferita a «accordi infragruppo».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «accordi infragruppo» a contratto servizi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «accordi infragruppo» a contratto servizi.\nPASS se: Il punto e' collegato a contratto servizi.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratto servizi",
+      "pass_condition": "Il punto e' collegato a contratto servizi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «accordi infragruppo» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «accordi infragruppo» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: contratto servizi",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che masterfile, local file e policy hanno perimetri e date diversi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che masterfile, local file e policy hanno perimetri e date diversi.\nPASS se: L'affermazione compare riferita a «documentazione».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: indice documentazione",
+      "pass_condition": "L'affermazione compare riferita a «documentazione».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «documentazione» a indice documentazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «documentazione» a indice documentazione.\nPASS se: Il punto e' collegato a indice documentazione.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: indice documentazione",
+      "pass_condition": "Il punto e' collegato a indice documentazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «documentazione» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «documentazione» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: indice documentazione",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable afferma che il pacchetto non contiene anni coperti, transazioni esatte e assunzioni critiche.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il pacchetto non contiene anni coperti, transazioni esatte e assunzioni critiche.\nPASS se: L'affermazione compare riferita a «ruling package».\nFAIL se: L'affermazione e' omessa o e' negata.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: bozza istanza",
+      "pass_condition": "L'affermazione compare riferita a «ruling package».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable attribuisce il punto «ruling package» a bozza istanza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable attribuisce il punto «ruling package» a bozza istanza.\nPASS se: Il punto e' collegato a bozza istanza.\nFAIL se: Il punto e' privo di fonte o attribuito a un allegato diverso.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: bozza istanza",
+      "pass_condition": "Il punto e' collegato a bozza istanza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable qualifica «ruling package» come questione da trattare nella conclusione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica «ruling package» come questione da trattare nella conclusione.\nPASS se: La questione produce una conseguenza operativa espressa.\nFAIL se: La questione e' descritta senza conseguenza operativa.\nÈ indifferente: La scelta di parole diverse non rileva se la proposizione resta univoca.\nFonte di authoring: bozza istanza",
+      "pass_condition": "La questione produce una conseguenza operativa espressa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non trasforma «marchio del gruppo» in un rilievo: l'uso del marchio non prova da solo un servizio remunerabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non trasforma «marchio del gruppo» in un rilievo: l'uso del marchio non prova da solo un servizio remunerabile.\nPASS se: «marchio del gruppo» non e' presentato come violazione o scadenza autonoma.\nFAIL se: Il fatto denominato marchio del gruppo e' presentato come rilievo autonomo.\nÈ indifferente: Il fatto puo' essere menzionato per escluderne la rilevanza.\nFonte di authoring: challenge map e documenti pubblici",
+      "pass_condition": "«marchio del gruppo» non e' presentato come violazione o scadenza autonoma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non trasforma «utile consolidato» in un rilievo: l'utile consolidato non sostituisce il risultato della transazione delimitata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non trasforma «utile consolidato» in un rilievo: l'utile consolidato non sostituisce il risultato della transazione delimitata.\nPASS se: «utile consolidato» non e' presentato come violazione o scadenza autonoma.\nFAIL se: Il fatto denominato utile consolidato e' presentato come rilievo autonomo.\nÈ indifferente: Il fatto puo' essere menzionato per escluderne la rilevanza.\nFonte di authoring: challenge map e documenti pubblici",
+      "pass_condition": "«utile consolidato» non e' presentato come violazione o scadenza autonoma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non trasforma «fattura in inglese» in un rilievo: la lingua inglese della fattura non e' un difetto di transfer pricing.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non trasforma «fattura in inglese» in un rilievo: la lingua inglese della fattura non e' un difetto di transfer pricing.\nPASS se: «fattura in inglese» non e' presentato come violazione o scadenza autonoma.\nFAIL se: Il fatto denominato fattura in inglese e' presentato come rilievo autonomo.\nÈ indifferente: Il fatto puo' essere menzionato per escluderne la rilevanza.\nFonte di authoring: challenge map e documenti pubblici",
+      "pass_condition": "«fattura in inglese» non e' presentato come violazione o scadenza autonoma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable non trasforma «aliquota estera» in un rilievo: la differenza di aliquota non determina da sola il metodo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non trasforma «aliquota estera» in un rilievo: la differenza di aliquota non determina da sola il metodo.\nPASS se: «aliquota estera» non e' presentato come violazione o scadenza autonoma.\nFAIL se: Il fatto denominato aliquota estera e' presentato come rilievo autonomo.\nÈ indifferente: Il fatto puo' essere menzionato per escluderne la rilevanza.\nFonte di authoring: challenge map e documenti pubblici",
+      "pass_condition": "«aliquota estera» non e' presentato come violazione o scadenza autonoma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable distingue fatti, inferenze e dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable distingue fatti, inferenze e dati mancanti.\nPASS se: Le tre categorie risultano riconoscibili.\nFAIL se: Fatti e inferenze sono confusi.\nFonte di authoring: contratto comune e challenge map",
+      "pass_condition": "Le tre categorie risultano riconoscibili.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "C"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable evita simmetria artificiale fra tesi sostenute e smentite dai documenti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita simmetria artificiale fra tesi sostenute e smentite dai documenti.\nPASS se: Il peso delle conclusioni segue le prove.\nFAIL se: Tesi smentite ricevono lo stesso peso delle tesi documentate.\nFonte di authoring: contratto comune e challenge map",
+      "pass_condition": "Il peso delle conclusioni segue le prove.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "C"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable evita sovra-segnalazione di coincidenze neutrali.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita sovra-segnalazione di coincidenze neutrali.\nPASS se: Le coincidenze neutrali non diventano rilievi.\nFAIL se: Una coincidenza neutrale e' presentata come rilievo.\nFonte di authoring: contratto comune e challenge map",
+      "pass_condition": "Le coincidenze neutrali non diventano rilievi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "C"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "tp_policy_review.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito o di fatti non provati.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito o di fatti non provati.\nPASS se: Le conclusioni restano entro il fascicolo.\nFAIL se: Compare una previsione dell'esito o un fatto non provato.\nFonte di authoring: contratto comune e challenge map",
+      "pass_condition": "Le conclusioni restano entro il fascicolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "C"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "1.0-draft"
+  }
+}

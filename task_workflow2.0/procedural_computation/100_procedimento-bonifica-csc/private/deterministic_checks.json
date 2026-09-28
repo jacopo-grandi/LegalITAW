@@ -1,0 +1,157 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-100",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "remediation_timeline.md"
+  ],
+  "criteria_total": 38,
+  "proposals_count": 6,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "27 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «27 ottobre 2026» come data alla quale la timeline è riferita",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-A3",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?:27°?\\s+ottobre(?:\\s+2026)?|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "22 settembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «22 settembre 2026» riferita al termine di ventiquattro ore",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-C1",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?:22°?\\s+settembre(?:\\s+2026)?|0?22\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*2026|0?22\\s*[/.\\-]\\s*0?9\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "23 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «23 ottobre 2026» riferita al termine per il piano di caratterizzazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-C2",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?:23°?\\s+ottobre(?:\\s+2026)?|0?23\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?23\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "658"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare la misura «658» riferita al nichel detratta l'incertezza estesa",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-C4",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?<![\\d.,])658(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "26 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «26 novembre 2026» riferita all'autorizzazione del piano",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-C5",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?:26°?\\s+novembre(?:\\s+2026)?|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "26 maggio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «26 maggio 2027» riferita alla trasmissione delle risultanze della caratterizzazione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-100-C6",
+        "type": "required_regex",
+        "artifact": "remediation_timeline.md",
+        "patterns": [
+          "(?:(?:26°?\\s+maggio(?:\\s+2027)?|0?26\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*2027|0?26\\s*[/.\\-]\\s*0?5\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "task_id": "WF2-092",
+  "lato_assistito": "Solmarino Software S.r.l., che fornisce il prodotto come apparecchiatura installata presso il cliente e come servizio erogato in cloud",
+  "committente": "direttrice tecnica di Solmarino Software S.r.l.",
+  "data_di_riferimento": "2026-11-05",
+  "stato_fascicolo": "audit in corso; versione 5.1.4 in esercizio, versione 5.2 pianificata per il 26 novembre 2026; parere legale e atto di cessione non acquisiti",
+  "meccanismi_di_difficolta": [
+    "fatti distribuiti: l'obbligo dipende dall'incrocio fra inventario, canale di fornitura della scheda di prodotto e dichiarazione della nota interna",
+    "presupposti di applicazione da dedurre: il presupposto della modifica vale per una licenza e non per l'altra, e il fascicolo non lo dichiara",
+    "nomi simili: coppie di componenti che condividono canale e collegamento e differiscono per un solo attributo, modificato o non modificato, versione unica o versione successiva",
+    "dichiarazione di parte smentita dai documenti: la garanzia contrattuale sull'assenza di obblighi di divulgazione contro l'inventario",
+    "presenza contro adeguatezza: il file NOTICE esiste e cita i pacchetti, ma non riproduce gli avvisi che la licenza impone di riprodurre"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "pianificatore AGPL modificato e raggiungibile dalla rete",
+      "gravita": "alta",
+      "affermazione_richiesta": "il pianificatore corvenza-scheduler 4.2.1 è distribuito con licenza AGPL-3.0-only, è stato modificato localmente ed è eseguito nel servizio in cloud, dove gli utenti del cliente lo raggiungono attraverso il portale e attraverso l'interfaccia programmatica: la versione modificata deve offrire agli utenti che vi interagiscono a distanza la possibilità di ricevere il codice sorgente corrispondente",
+      "evidenza": "02_inventario_dipendenze.csv, riga di corvenza-scheduler; 03_notice_e_intestazioni.md; 01_scheda_prodotto_e_fornitura.md, punti 2.2 e 5; 08_email_responsabile_sviluppo.md",
+      "errore_bersaglio": "escludere l'obbligo perché nessun eseguibile è consegnato al cliente, confondendo il presupposto della sezione 13 dell'AGPL con quello del conveying"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "menzione delle modifiche sui file Apache",
+      "gravita": "alta",
+      "affermazione_richiesta": "tre file del pacchetto algen-crypto sono stati modificati e le loro intestazioni riportano soltanto l'avviso di licenza originale: va apposto su ciascun file modificato un avviso in evidenza che dichiari la modifica",
+      "evidenza": "03_notice_e_intestazioni.md, parte seconda, tre file di algen-crypto; 02_inventario_dipendenze.csv; 08_email_responsabile_sviluppo.md, paragrafo sulla cifratura",
+      "errore_bersaglio": "ritenere l'obbligo assolto dalla presenza dell'avviso di licenza originale, oppure trattarlo come adempimento assorbito dal file NOTICE"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "avvisi di attribuzione non riprodotti",
+      "gravita": "alta",
+      "affermazione_richiesta": "il pacchetto belfonte-parser include un proprio file NOTICE con avvisi di attribuzione che il NOTICE distribuito con la piattaforma non riproduce: il contenuto va riprodotto in una delle collocazioni ammesse",
+      "evidenza": "03_notice_e_intestazioni.md, parte prima e contenuto del NOTICE di belfonte-parser; 02_inventario_dipendenze.csv",
+      "errore_bersaglio": "ritenere l'obbligo assolto dall'elencazione del pacchetto fra i componenti Apache nel NOTICE del prodotto, che è un'attribuzione diversa da quella richiesta"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "combinazione fra Apache-2.0 e GPL-2.0-only",
+      "gravita": "alta",
+      "affermazione_richiesta": "meridolo-compress è distribuito con licenza GPL-2.0-only ed è collegato staticamente, nello stesso modulo consegnato al cliente, con algen-crypto distribuito con licenza Apache-2.0: la combinazione va rilevata come incompatibile e risolta prima della distribuzione",
+      "evidenza": "02_inventario_dipendenze.csv, righe di meridolo-compress e algen-crypto",
+      "errore_bersaglio": "trattare la combinazione come ammissibile perché entrambe le licenze sono licenze di software libero, oppure risolverla con la sola aggiunta di un avviso"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "richiesta scritta del codice sorgente corrispondente",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta del cliente del 21 ottobre 2026 riguarda i componenti installati sull'apparecchiatura di sua proprietà e va evasa comprendendo gli script necessari alla generazione, all'installazione e all'esecuzione del codice oggetto; se la consegna avviene mediante archivio in rete, va dichiarato per quanto tempo l'archivio resta disponibile",
+      "evidenza": "06_richiesta_codice_sorgente.md; 01_scheda_prodotto_e_fornitura.md, punto 2.1; 02_inventario_dipendenze.csv, canale di distribuzione",
+      "errore_bersaglio": "estendere il perimetro della consegna ai moduli erogati come servizio, che il cliente non riceve in forma eseguibile e che la sua stessa richiesta esclude, oppure limitare la consegna al codice dei componenti senza gli script"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "componente GPL-3.0 modificato e distribuito sull'appliance",
+      "gravita": "alta",
+      "affermazione_richiesta": "quadrelli-render 2.2.0 è distribuito con licenza GPL-3.0-only, è stato modificato ed è collegato staticamente nel modulo solmarino-report installato sull'apparecchiatura: va verificato il perimetro dell'opera così come distribuita, perché la licenza si applica all'insieme e non alla sola porzione modificata",
+      "evidenza": "02_inventario_dipendenze.csv, riga di quadrelli-render; 03_notice_e_intestazioni.md; 01_scheda_prodotto_e_fornitura.md, punto 2.1",
+      "errore_bersaglio": "circoscrivere la conseguenza al solo pacchetto modificato, oppure presentare come già accertato che il modulo costituisca un mero aggregato"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "componente EUPL esposto agli utenti del portale",
+      "gravita": "alta",
+      "affermazione_richiesta": "aurendo-forms 6.3.0 è distribuito con licenza EUPL-1.2, non è stato modificato ed espone agli utenti del portale la funzione di compilazione guidata: la messa a disposizione online dell'accesso alle funzionalità essenziali rientra nella nozione di distribuzione o comunicazione della licenza, e l'obbligo non dipende dalla modifica",
+      "evidenza": "02_inventario_dipendenze.csv, riga di aurendo-forms; 04_verbale_comitato_tecnico.md, punto 2; 08_email_responsabile_sviluppo.md, paragrafo sul portale",
+      "errore_bersaglio": "escludere l'obbligo perché il componente non è stato modificato, trasponendo all'EUPL il presupposto della sezione 13 dell'AGPL"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "componenti senza licenza dichiarata",
+      "gravita": "alta",
+      "affermazione_richiesta": "otto componenti dell'inventario non dichiarano alcuna licenza, e cinque di essi sono distribuiti sull'apparecchiatura: l'assenza di dichiarazione non equivale a una licenza permissiva e la posizione va risolta prima della distribuzione",
+      "evidenza": "02_inventario_dipendenze.csv, righe con il campo della licenza vuoto e relativi canali di distribuzione",
+      "errore_bersaglio": "trattare i componenti senza licenza come utilizzabili in via residuale, oppure indicarli come problema documentale da sanare aggiornando l'inventario"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "titolo sul codec scritto da un collaboratore esterno",
+      "gravita": "alta",
+      "affermazione_richiesta": "ferlaino-codec 2.8.1 è stato scritto da un collaboratore esterno, non dichiara licenza e non risulta alcun atto di cessione sottoscritto: il titolo di Solmarino non è dimostrato dal fascicolo e non si presume, perché la regola che attribuisce al datore di lavoro i diritti di utilizzazione economica riguarda il lavoratore dipendente",
+      "evidenza": "02_inventario_dipendenze.csv, riga di ferlaino-codec; 03_notice_e_intestazioni.md, ultima intestazione; 04_verbale_comitato_tecnico.md, punto 3",
+      "errore_bersaglio": "affermare che il titolo spetta a Solmarino perché il codec è stato scritto nell'ambito del rapporto di collaborazione, applicando al collaboratore esterno la regola prevista per il lavoratore dipendente"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "dichiarazione contrattuale smentita dall'inventario",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'articolo 4.2 del contratto contiene la dichiarazione e garanzia che nessun componente di terze parti impone obblighi di divulgazione del codice sorgente, e il confronto con l'inventario la smentisce: la posizione contrattuale va gestita e non lasciata in piedi",
+      "evidenza": "05_contratto_fornitura.md, articolo 4.2; 02_inventario_dipendenze.csv",
+      "errore_bersaglio": "trattare l'articolo 4.2 come clausola di stile, oppure ritenere il punto risolto dal limite di responsabilità dell'articolo 5.3"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "delibera condizionata a un parere mai acquisito",
+      "gravita": "media",
+      "affermazione_richiesta": "il comitato tecnico ha deliberato il 4 giugno 2026 l'adozione del pianificatore subordinatamente all'acquisizione del parere dell'ufficio legale, e il fascicolo non contiene alcun parere: la condizione della delibera non risulta soddisfatta",
+      "evidenza": "04_verbale_comitato_tecnico.md, punto 1; 07_piano_di_rilascio.md, punto 5.1",
+      "errore_bersaglio": "affermare che il parere è stato reso, oppure presentare la messa in produzione come conforme alla delibera perché il componente è in esercizio dal 14 settembre 2026"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "rilascio non condizionato ai rimedi",
+      "gravita": "alta",
+      "affermazione_richiesta": "il piano di rilascio non annovera fra le condizioni di rilascio le attività di conformità ancora aperte, e il rilascio del 26 novembre 2026 aggiorna sia il servizio in cloud sia le apparecchiature installate: i rimedi che incidono sulla distribuzione vanno chiusi prima di quella data",
+      "evidenza": "07_piano_di_rilascio.md, punti 2, 3, 4, 5 e 6",
+      "errore_bersaglio": "accettare la conclusione del responsabile rilasci secondo cui le attività aperte non impediscono l'esecuzione, che è una dichiarazione sulla procedura interna e non una valutazione sugli obblighi di licenza"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "componente AGPL non modificato nel servizio in cloud",
+      "chiave_nel_criterio": "tessitura-queue",
+      "ragione": "il pacchetto tessitura-queue 1.9.0 è distribuito con licenza AGPL-3.0-only ma è usato senza modifiche: l'obbligo della sezione 13 è formulato in termini di modifica del programma e sul testo della licenza non scatta",
+      "errore_bersaglio": "indicare tessitura-queue fra i componenti che impongono l'offerta del codice sorgente agli utenti remoti, per assimilazione a corvenza-scheduler"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "componente GPL-2.0-or-later nella stessa combinazione",
+      "chiave_nel_criterio": "vestrigo-imaging",
+      "ragione": "vestrigo-imaging 5.0.2 è distribuito con licenza GPL-2.0-or-later ed è collegato staticamente insieme allo stesso componente Apache-2.0: l'opzione della versione successiva consente di collocare la combinazione sotto la versione 3 della GPL, che la Free Software Foundation dichiara compatibile con la Apache-2.0",
+      "errore_bersaglio": "indicare vestrigo-imaging come incompatibile insieme a meridolo-compress, senza distinguere fra la licenza limitata a una versione e quella che ammette le versioni successive"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "componente GPL-3.0 modificato per il solo uso interno",
+      "chiave_nel_criterio": "nabissa-loader",
+      "ragione": "nabissa-loader 1.0.4 è modificato ma resta sui sistemi interni di Solmarino e non è consegnato ad alcun destinatario: la licenza consente di realizzare e usare una versione modificata senza distribuirla, e in tal caso non impone il rilascio del sorgente",
+      "errore_bersaglio": "indicare nabissa-loader fra i componenti per cui va rilasciato il codice sorgente, perché modificato"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "componenti Apache-2.0 eseguiti nel servizio in cloud",
+      "chiave_nel_criterio": "obbligo di divulgazione del sorgente per i componenti Apache-2.0",
+      "ragione": "la Apache License 2.0 non contiene disposizioni relative all'uso in rete: l'esecuzione di un componente Apache nel servizio in cloud non fa nascere alcun obbligo di divulgazione del codice sorgente",
+      "errore_bersaglio": "estendere ai componenti Apache-2.0 eseguiti in cloud l'obbligo di offerta del sorgente proprio dell'AGPL"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "categoria di opera derivata attribuita alla GPL-3.0",
+      "chiave_nel_criterio": "definizione di opera derivata",
+      "ragione": "il testo della GPL-3.0 non usa la categoria dell'opera derivata: parla di opera basata sul programma, di versione modificata e di opera coperta. La nozione di opera derivata appartiene al diritto d'autore applicabile, non alla licenza",
+      "errore_bersaglio": "attribuire alla GPL-3.0 una definizione di opera derivata e farne derivare il perimetro dell'obbligo"
+    }
+  ],
+  "dati_mancanti": [
+    "il parere dell'ufficio legale richiesto dalla delibera del comitato tecnico del 4 giugno 2026",
+    "l'atto di cessione dei diritti sul codec di trama, trasmesso al collaboratore esterno il 12 marzo 2025 e mai restituito sottoscritto",
+    "il testo di licenza dei cinque componenti senza licenza dichiarata distribuiti sull'apparecchiatura, e l'esito della verifica presso le rispettive origini",
+    "il perimetro tecnico del collegamento fra i moduli del prodotto, che l'inventario descrive come statico o dinamico ma non delimita in termini di opera",
+    "l'elenco degli utenti del cliente che accedono all'interfaccia programmatica dell'orchestratore e il periodo in cui l'accesso è stato attivo",
+    "la data in cui l'inventario delle dipendenze è stato per la prima volta trasmesso al cliente, diversa dalla trasmissione del 6 ottobre 2026 riferita nella sua lettera"
+  ],
+  "fonti_ammesse": [
+    "L. 633/1941, artt. 1, 2 n. 8, 12-bis, 64-bis, 64-ter, 64-quater",
+    "artt. 4, 5, 6, 8",
+    "sezioni 0, 1, 5, 6, 13",
+    "sezione 13",
+    "sezioni 3 e 4",
+    "voce #apache2",
+    "voci #UnreleasedMods, #InternalDistribution, #AGPLv3InteractingRemotely, #UnreleasedModsAGPL",
+    "artt. 1 e 5 e appendice"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "5 novembre 2026",
+      "calcolo": "giovedì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "quadratura dell'inventario delle dipendenze",
+      "valore": "148 componenti",
+      "calcolo": "96 permissivi + 21 a copyleft debole + 23 a copyleft forte o reciproco + 8 senza licenza dichiarata = 148, pari al totale dichiarato in testata al file",
+      "fonte": "02_inventario_dipendenze.csv"
+    },
+    {
+      "milestone": "componenti senza licenza dichiarata",
+      "valore": "8 componenti",
+      "calcolo": "righe con il campo licenza_spdx vuoto",
+      "fonte": "02_inventario_dipendenze.csv"
+    },
+    {
+      "milestone": "ripartizione per canale dei componenti senza licenza dichiarata",
+      "valore": "5 sull'apparecchiatura, 2 nel solo servizio in cloud, 1 su strumenti interni",
+      "calcolo": "5 + 2 + 1 = 8",
+      "fonte": "02_inventario_dipendenze.csv"
+    },
+    {
+      "milestone": "componenti a copyleft forte o reciproco",
+      "valore": "23 componenti",
+      "calcolo": "comprende GPL-2.0-only, GPL-2.0-or-later, GPL-3.0, AGPL-3.0 ed EUPL-1.2",
+      "fonte": "02_inventario_dipendenze.csv"
+    },
+    {
+      "milestone": "delibera che subordina l'adozione del pianificatore al parere legale",
+      "valore": "4 giugno 2026",
+      "calcolo": "alla data di riferimento sono decorsi 154 giorni senza che il parere risulti acquisito",
+      "fonte": "04_verbale_comitato_tecnico.md, punto 1"
+    },
+    {
+      "milestone": "richiesta scritta del cliente sul codice sorgente",
+      "valore": "21 ottobre 2026",
+      "calcolo": "precede la data di riferimento di 15 giorni",
+      "fonte": "06_richiesta_codice_sorgente.md"
+    },
+    {
+      "milestone": "congelamento delle funzionalità",
+      "valore": "6 novembre 2026",
+      "calcolo": "successivo di 1 giorno alla data di riferimento",
+      "fonte": "07_piano_di_rilascio.md"
+    },
+    {
+      "milestone": "rilascio agli ambienti dei clienti",
+      "valore": "26 novembre 2026",
+      "calcolo": "successivo di 21 giorni alla data di riferimento",
+      "fonte": "07_piano_di_rilascio.md"
+    },
+    {
+      "milestone": "avvio dell'aggiornamento delle apparecchiature installate",
+      "valore": "30 novembre 2026",
+      "calcolo": "successivo di 4 giorni al rilascio",
+      "fonte": "07_piano_di_rilascio.md"
+    }
+  ],
+  "funzione_allegati": {
+    "01_scheda_prodotto_e_fornitura.md": "stabilisce quali moduli sono consegnati al cliente in forma eseguibile, quali sono erogati come servizio e quali componenti sono raggiungibili dalla rete pubblica: è la fonte del canale di fornitura, che nessun altro allegato dà",
+    "02_inventario_dipendenze.csv": "prova per ciascun componente licenza dichiarata, modalità di collegamento, presenza di modifiche locali e canale di distribuzione; contiene i conteggi che devono quadrare",
+    "03_notice_e_intestazioni.md": "prova che i file modificati non riportano la menzione della modifica e che il NOTICE del prodotto non riproduce gli avvisi di attribuzione di un pacchetto a monte",
+    "04_verbale_comitato_tecnico.md": "documenta che l'adozione di un componente è stata deliberata sotto condizione di un parere mai acquisito, e che il titolo su un componente resta aperto",
+    "05_contratto_fornitura.md": "contiene la dichiarazione e garanzia sull'assenza di obblighi di divulgazione, che il confronto con l'inventario smentisce, e definisce il perimetro della fornitura come appliance e come servizio",
+    "06_richiesta_codice_sorgente.md": "è la richiesta scritta che apre l'obbligo di consegna e che ne delimita il perimetro ai soli componenti installati sull'apparecchiatura",
+    "07_piano_di_rilascio.md": "mostra che le attività di conformità non figurano fra le condizioni di rilascio e fissa la data rispetto alla quale i rimedi vanno collocati",
+    "08_email_responsabile_sviluppo.md": "è la dichiarazione di parte su quali componenti sono stati modificati, su quali non lo sono e su come sono raggiungibili: va tenuta distinta dai fatti che l'inventario documenta"
+  }
+}

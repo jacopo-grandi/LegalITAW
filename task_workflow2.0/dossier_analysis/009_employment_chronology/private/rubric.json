@@ -1,0 +1,482 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-009",
+  "title": "Chronology reconstruction — vicenda disciplinare (formazione/invio/ricezione/efficacia)",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 29,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la risposta consegna un file documento scaricabile che contiene la cronologia in forma di tabella.",
+      "pass_condition": "è presente un file con estensione .docx, .pdf, .xlsx o .md e il file contiene almeno una tabella.",
+      "fail_condition": "la cronologia compare solo nel corpo della risposta, oppure il file non contiene alcuna tabella.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 file e formato [tipo: valore]\nVerifica: la risposta consegna un file documento scaricabile che contiene la cronologia in forma di tabella.\nPass se: è presente un file con estensione .docx, .pdf, .xlsx o .md e il file contiene almeno una tabella.\nFail se: la cronologia compare solo nel corpo della risposta, oppure il file non contiene alcuna tabella."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la tabella ha sei colonne: formazione; invio/spedizione; ricezione/consegna; efficacia; fonte; conflitti.",
+      "pass_condition": "compaiono tutte e sei le intestazioni, nelle forme ammesse: «formazione», «data di formazione», «redazione»; «invio», «spedizione»; «ricezione», «consegna»; «efficacia», «decorrenza degli effetti»; «fonte», «documento»; «conflitti», «anomalie», «contraddizioni».",
+      "fail_condition": "manca almeno una delle sei colonne.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 colonne obbligatorie [tipo: valore]\nVerifica: la tabella ha sei colonne: formazione; invio/spedizione; ricezione/consegna; efficacia; fonte; conflitti.\nPass se: compaiono tutte e sei le intestazioni, nelle forme ammesse: «formazione», «data di formazione», «redazione»; «invio», «spedizione»; «ricezione», «consegna»; «efficacia», «decorrenza degli effetti»; «fonte», «documento»; «conflitti», «anomalie», «contraddizioni».\nFail se: manca almeno una delle sei colonne."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "le righe della tabella sono ordinate per data di efficacia crescente.",
+      "pass_condition": "le righe della tabella sono ordinate in modo crescente secondo la data di efficacia.",
+      "fail_condition": "l’ordine di una o più righe con efficacia determinabile non segue la data di efficacia crescente.",
+      "indifferent": "La posizione delle righe la cui efficacia è indicata come non determinabile; a parità di data, il loro ordine reciproco.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 ordinamento [tipo: struttura]\nVerifica: le righe della tabella sono ordinate per data di efficacia crescente.\nFail se: l'ordine delle righe non segue la colonna efficacia.\nIndifferente: la posizione delle righe la cui efficacia è indicata come non determinabile."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni riga della tabella ha la cella «fonte» compilata con il nome o il numero di un documento del fascicolo.",
+      "pass_condition": "ogni riga della tabella ha compilata la cella «fonte» con il nome o il numero di un documento del fascicolo.",
+      "fail_condition": "la cella «fonte» è vuota anche in una sola riga, oppure non identifica un documento del fascicolo.",
+      "indifferent": "La forma del riferimento al documento, purché il nome o il numero consenta di identificarlo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 ancoraggio al documento [tipo: struttura]\nVerifica: ogni riga della tabella ha la cella «fonte» compilata con il nome o il numero di un documento del fascicolo.\nFail se: almeno una riga ha la cella fonte vuota."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di formazione della contestazione disciplinare il 6 maggio.",
+      "pass_condition": "nella riga della contestazione la colonna formazione riporta il 6 maggio.",
+      "fail_condition": "riporta una data diversa, oppure la cella è vuota.",
+      "indifferent": null,
+      "source": "02_contestazione_disciplinare.pdf.",
+      "severity": "alta",
+      "raw_text": "B.1 contestazione, formazione [issue: I-01] [tipo: valore]\nVerifica: il deliverable indica come data di formazione della contestazione disciplinare il 6 maggio.\nPass se: nella riga della contestazione la colonna formazione riporta il 6 maggio.\nFail se: riporta una data diversa, oppure la cella è vuota.\n— Fonte: 02_contestazione_disciplinare.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di spedizione della contestazione disciplinare il 7 maggio.",
+      "pass_condition": "nella riga della contestazione la colonna invio/spedizione riporta il 7 maggio.",
+      "fail_condition": "riporta una data diversa, oppure la cella è vuota.",
+      "indifferent": null,
+      "source": "03_avviso_ricevimento_raccomandata.pdf.",
+      "severity": "alta",
+      "raw_text": "B.2 contestazione, spedizione [issue: I-01] [tipo: valore]\nVerifica: il deliverable indica come data di spedizione della contestazione disciplinare il 7 maggio.\nPass se: nella riga della contestazione la colonna invio/spedizione riporta il 7 maggio.\nFail se: riporta una data diversa, oppure la cella è vuota.\n— Fonte: 03_avviso_ricevimento_raccomandata.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di consegna della contestazione disciplinare l'11 maggio.",
+      "pass_condition": "nella riga della contestazione la colonna ricezione/consegna riporta l'11 maggio.",
+      "fail_condition": "riporta una data diversa, oppure la cella è vuota.",
+      "indifferent": null,
+      "source": "03_avviso_ricevimento_raccomandata.pdf.",
+      "severity": "alta",
+      "raw_text": "B.3 contestazione, consegna [issue: I-01] [tipo: valore]\nVerifica: il deliverable indica come data di consegna della contestazione disciplinare l'11 maggio.\nPass se: nella riga della contestazione la colonna ricezione/consegna riporta l'11 maggio.\nFail se: riporta una data diversa, oppure la cella è vuota.\n— Fonte: 03_avviso_ricevimento_raccomandata.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la stessa data come data di formazione e come data di consegna della contestazione disciplinare.",
+      "pass_condition": "le celle formazione e ricezione/consegna della riga della contestazione portano date diverse.",
+      "fail_condition": "le due celle portano la stessa data, oppure per la contestazione è indicata una sola data complessiva.",
+      "indifferent": null,
+      "source": "02 + 03.",
+      "severity": "alta",
+      "raw_text": "B.4 contestazione, date non collassate [issue: I-01] [tipo: assenza]\nVerifica: il deliverable non indica la stessa data come data di formazione e come data di consegna della contestazione disciplinare.\nPass se: le celle formazione e ricezione/consegna della riga della contestazione portano date diverse.\nFail se: le due celle portano la stessa data, oppure per la contestazione è indicata una sola data complessiva.\n— Fonte: 02 + 03. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di efficacia della contestazione disciplinare l'11 maggio.",
+      "pass_condition": "nella riga della contestazione la colonna efficacia riporta l'11 maggio.",
+      "fail_condition": "riporta una data diversa, oppure la cella è vuota.",
+      "indifferent": null,
+      "source": "03_avviso_ricevimento_raccomandata.pdf.",
+      "severity": "alta",
+      "raw_text": "B.5 contestazione, efficacia [issue: I-02] [tipo: valore]\nVerifica: il deliverable indica come data di efficacia della contestazione disciplinare l'11 maggio.\nPass se: nella riga della contestazione la colonna efficacia riporta l'11 maggio.\nFail se: riporta una data diversa, oppure la cella è vuota.\n— Fonte: 03_avviso_ricevimento_raccomandata.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 6 maggio come data di efficacia della contestazione disciplinare.",
+      "pass_condition": "il 6 maggio non compare nella colonna efficacia della riga della contestazione.",
+      "fail_condition": "la colonna efficacia della contestazione riporta il 6 maggio.",
+      "indifferent": null,
+      "source": "02_contestazione_disciplinare.pdf, data in calce.",
+      "severity": "alta",
+      "raw_text": "B.6 contestazione, efficacia non dalla redazione [issue: I-02] [tipo: assenza]\nVerifica: il deliverable non indica il 6 maggio come data di efficacia della contestazione disciplinare.\nPass se: il 6 maggio non compare nella colonna efficacia della riga della contestazione.\nFail se: la colonna efficacia della contestazione riporta il 6 maggio.\n— Fonte: 02_contestazione_disciplinare.pdf, data in calce. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come data di efficacia della lettera di licenziamento il 16 maggio.",
+      "pass_condition": "nella riga del licenziamento la colonna efficacia riporta il 16 maggio.",
+      "fail_condition": "riporta una data diversa, oppure la cella è vuota.",
+      "indifferent": null,
+      "source": "09_ricevuta_PEC_licenziamento.pdf.",
+      "severity": "alta",
+      "raw_text": "B.7 licenziamento, efficacia [issue: I-02] [tipo: valore]\nVerifica: il deliverable indica come data di efficacia della lettera di licenziamento il 16 maggio.\nPass se: nella riga del licenziamento la colonna efficacia riporta il 16 maggio.\nFail se: riporta una data diversa, oppure la cella è vuota.\n— Fonte: 09_ricevuta_PEC_licenziamento.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 15 maggio come data di efficacia della lettera di licenziamento.",
+      "pass_condition": "il 15 maggio non compare nella colonna efficacia della riga del licenziamento.",
+      "fail_condition": "la colonna efficacia del licenziamento riporta il 15 maggio.",
+      "indifferent": null,
+      "source": "08_lettera_licenziamento.pdf, data in calce.",
+      "severity": "alta",
+      "raw_text": "B.8 licenziamento, efficacia non dalla data in calce [issue: I-02] [tipo: assenza]\nVerifica: il deliverable non indica il 15 maggio come data di efficacia della lettera di licenziamento.\nPass se: il 15 maggio non compare nella colonna efficacia della riga del licenziamento.\nFail se: la colonna efficacia del licenziamento riporta il 15 maggio.\n— Fonte: 08_lettera_licenziamento.pdf, data in calce. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable riporta come discordante la data del colloquio indicata nell'email di convocazione, il 12 maggio, rispetto alla data del verbale del colloquio, il 13 maggio.",
+      "pass_condition": "compaiono entrambe le date riferite al colloquio e, riferita ad esse, una fra: «discordanza», «discrepanza», «contraddizione», «conflitto», «le due date non coincidono».",
+      "fail_condition": "compare una sola delle due date, oppure compaiono entrambe senza alcuna delle formulazioni elencate.",
+      "indifferent": null,
+      "source": "04_email_convocazione_colloquio.pdf + 05_verbale_colloquio.pdf.",
+      "severity": "alta",
+      "raw_text": "B.9 colloquio, discordanza segnalata [issue: I-03] [tipo: presenza]\nVerifica: il deliverable riporta come discordante la data del colloquio indicata nell'email di convocazione, il 12 maggio, rispetto alla data del verbale del colloquio, il 13 maggio.\nPass se: compaiono entrambe le date riferite al colloquio e, riferita ad esse, una fra: «discordanza», «discrepanza», «contraddizione», «conflitto», «le due date non coincidono».\nFail se: compare una sola delle due date, oppure compaiono entrambe senza alcuna delle formulazioni elencate.\n— Fonte: 04_email_convocazione_colloquio.pdf + 05_verbale_colloquio.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica come data del colloquio una sola delle due date, 12 o 13 maggio, in assenza dell'indicazione della discordanza.",
+      "pass_condition": "dove è indicata una sola data del colloquio, nella stessa riga compare l'indicazione della discordanza.",
+      "fail_condition": "una delle due date è indicata come data del colloquio e l'altra non compare in alcuna cella.",
+      "indifferent": null,
+      "source": "04 + 05.",
+      "severity": "alta",
+      "raw_text": "B.10 colloquio, nessuna scelta d'ufficio [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non indica come data del colloquio una sola delle due date, 12 o 13 maggio, in assenza dell'indicazione della discordanza.\nPass se: dove è indicata una sola data del colloquio, nella stessa riga compare l'indicazione della discordanza.\nFail se: una delle due date è indicata come data del colloquio e l'altra non compare in alcuna cella.\n— Fonte: 04 + 05. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica come collocazione temporale del fatto contestato la settimana del 27 aprile.",
+      "pass_condition": "compare, riferito al fatto contestato, il 27 aprile o la settimana del 27 aprile.",
+      "fail_condition": "al fatto contestato è associata una data diversa, oppure il fatto contestato non compare nella cronologia.",
+      "indifferent": null,
+      "source": "02_contestazione_disciplinare.pdf.",
+      "severity": "media",
+      "raw_text": "B.11 evento contestato [issue: I-04] [tipo: valore]\nVerifica: il deliverable indica come collocazione temporale del fatto contestato la settimana del 27 aprile.\nPass se: compare, riferito al fatto contestato, il 27 aprile o la settimana del 27 aprile.\nFail se: al fatto contestato è associata una data diversa, oppure il fatto contestato non compare nella cronologia.\n— Fonte: 02_contestazione_disciplinare.pdf. Gravità: media."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica il 4 maggio come data della segnalazione interna del fatto.",
+      "pass_condition": "il 4 maggio compare riferito all'email interna HR.",
+      "fail_condition": "riporta una data diversa, oppure l'email interna non compare nella cronologia.",
+      "indifferent": null,
+      "source": "01_email_interna_HR.pdf.",
+      "severity": "media",
+      "raw_text": "B.12 segnalazione interna [issue: I-04] [tipo: valore]\nVerifica: il deliverable indica il 4 maggio come data della segnalazione interna del fatto.\nPass se: il 4 maggio compare riferito all'email interna HR.\nFail se: riporta una data diversa, oppure l'email interna non compare nella cronologia.\n— Fonte: 01_email_interna_HR.pdf. Gravità: media."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica il 4 maggio come data del fatto contestato.",
+      "pass_condition": "il 4 maggio compare solo come data della segnalazione interna.",
+      "fail_condition": "il 4 maggio è indicato come data in cui il fatto contestato si è verificato.",
+      "indifferent": null,
+      "source": "01 + 02.",
+      "severity": "alta",
+      "raw_text": "B.13 evento e scoperta distinti [issue: I-04] [tipo: assenza]\nVerifica: il deliverable non indica il 4 maggio come data del fatto contestato.\nPass se: il 4 maggio compare solo come data della segnalazione interna.\nFail se: il 4 maggio è indicato come data in cui il fatto contestato si è verificato.\n— Fonte: 01 + 02. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il termine per presentare le giustificazioni decorre dalla consegna della contestazione dell'11 maggio.",
+      "pass_condition": "compare, riferito al termine per le giustificazioni, la decorrenza dall'11 maggio o dalla consegna/ricezione della contestazione.",
+      "fail_condition": "la decorrenza è ancorata al 6 maggio o al 7 maggio, oppure la decorrenza non compare.",
+      "indifferent": null,
+      "source": "03 + 02.",
+      "severity": "alta",
+      "raw_text": "B.14 decorrenza del termine a difesa [issue: I-05] [tipo: presenza]\nVerifica: il deliverable afferma che il termine per presentare le giustificazioni decorre dalla consegna della contestazione dell'11 maggio.\nPass se: compare, riferito al termine per le giustificazioni, la decorrenza dall'11 maggio o dalla consegna/ricezione della contestazione.\nFail se: la decorrenza è ancorata al 6 maggio o al 7 maggio, oppure la decorrenza non compare.\n— Fonte: 03 + 02. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable segnala la prossimità temporale fra la scadenza del termine per le giustificazioni e la data del licenziamento.",
+      "pass_condition": "compare una fra: «ravvicinate», «prossime», «a distanza di pochi giorni», «intervallo ristretto», riferita ai due momenti.",
+      "fail_condition": "i due momenti sono riportati senza alcuna delle formulazioni elencate.",
+      "indifferent": "l'indicazione del numero di giorni di intervallo.",
+      "source": "03 + 06 + 08.",
+      "severity": "media",
+      "raw_text": "B.15 prossimità fra termine e licenziamento [issue: I-05] [tipo: presenza]\nVerifica: il deliverable segnala la prossimità temporale fra la scadenza del termine per le giustificazioni e la data del licenziamento.\nPass se: compare una fra: «ravvicinate», «prossime», «a distanza di pochi giorni», «intervallo ristretto», riferita ai due momenti.\nFail se: i due momenti sono riportati senza alcuna delle formulazioni elencate.\nIndifferente: l'indicazione del numero di giorni di intervallo.\n— Fonte: 03 + 06 + 08. Gravità: media."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il termine per le giustificazioni non è stato rispettato.",
+      "pass_condition": "non compare l'affermazione che il termine è stato violato, compresso o non rispettato.",
+      "fail_condition": "compare una fra: «termine non rispettato», «termine violato», «giustificazioni non attese».",
+      "indifferent": null,
+      "source": "prompt, oggetto del deliverable.",
+      "severity": "alta",
+      "raw_text": "B.16 nessun giudizio sul termine a difesa [issue: I-05] [tipo: assenza]\nVerifica: il deliverable non afferma che il termine per le giustificazioni non è stato rispettato.\nPass se: non compare l'affermazione che il termine è stato violato, compresso o non rispettato.\nFail se: compare una fra: «termine non rispettato», «termine violato», «giustificazioni non attese».\n— Fonte: prompt, oggetto del deliverable. Gravità: alta."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "per la lettera di licenziamento il deliverable riporta separatamente la ricevuta di accettazione e la ricevuta di consegna della PEC.",
+      "pass_condition": "compaiono, riferite alla PEC del licenziamento, sia «accettazione» sia «consegna», con i rispettivi momenti.",
+      "fail_condition": "compare un solo momento della PEC, oppure i due momenti non sono distinti.",
+      "indifferent": null,
+      "source": "09_ricevuta_PEC_licenziamento.pdf.",
+      "severity": "alta",
+      "raw_text": "B.17 PEC, accettazione e consegna distinte [issue: I-06] [tipo: presenza]\nVerifica: per la lettera di licenziamento il deliverable riporta separatamente la ricevuta di accettazione e la ricevuta di consegna della PEC.\nPass se: compaiono, riferite alla PEC del licenziamento, sia «accettazione» sia «consegna», con i rispettivi momenti.\nFail se: compare un solo momento della PEC, oppure i due momenti non sono distinti.\n— Fonte: 09_ricevuta_PEC_licenziamento.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica l'accettazione della PEC come momento di efficacia della lettera di licenziamento.",
+      "pass_condition": "nella colonna efficacia del licenziamento compare la consegna, non l'accettazione.",
+      "fail_condition": "la colonna efficacia riporta la data o l'ora dell'accettazione.",
+      "indifferent": null,
+      "source": "09_ricevuta_PEC_licenziamento.pdf.",
+      "severity": "alta",
+      "raw_text": "B.18 PEC, efficacia dalla consegna [issue: I-06] [tipo: assenza]\nVerifica: il deliverable non indica l'accettazione della PEC come momento di efficacia della lettera di licenziamento.\nPass se: nella colonna efficacia del licenziamento compare la consegna, non l'accettazione.\nFail se: la colonna efficacia riporta la data o l'ora dell'accettazione.\n— Fonte: 09_ricevuta_PEC_licenziamento.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable applica anche alle giustificazioni della lavoratrice la distinzione fra formazione, invio e consegna.",
+      "pass_condition": "per le giustificazioni sono compilate le celle formazione e ricezione/consegna con i momenti risultanti dalla ricevuta PEC.",
+      "fail_condition": "per le giustificazioni compare una sola data, oppure le celle formazione o consegna sono vuote.",
+      "indifferent": null,
+      "source": "06_giustificazioni_lavoratrice.pdf + 07_ricevuta_PEC_giustificazioni.pdf.",
+      "severity": "alta",
+      "raw_text": "B.19 simmetria del controllo — giustificazioni [issue: I-07] [tipo: presenza]\nVerifica: il deliverable applica anche alle giustificazioni della lavoratrice la distinzione fra formazione, invio e consegna.\nPass se: per le giustificazioni sono compilate le celle formazione e ricezione/consegna con i momenti risultanti dalla ricevuta PEC.\nFail se: per le giustificazioni compare una sola data, oppure le celle formazione o consegna sono vuote.\n— Fonte: 06_giustificazioni_lavoratrice.pdf + 07_ricevuta_PEC_giustificazioni.pdf. Gravità: alta."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come retrodatazione o come vizio la distanza fra la data della contestazione, 6 maggio, e la data della sua spedizione, 7 maggio.",
+      "pass_condition": "riferito a quelle due date non compare nessuna fra: «retrodatazione», «retrodatata», «vizio», «irregolarità», «anomalia».",
+      "fail_condition": "compare una di quelle qualificazioni.",
+      "indifferent": "la semplice indicazione delle due date in celle diverse.",
+      "source": "02 + 03.",
+      "severity": "alta",
+      "raw_text": "B.20 non-issue — distanza formazione/spedizione [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non qualifica come retrodatazione o come vizio la distanza fra la data della contestazione, 6 maggio, e la data della sua spedizione, 7 maggio.\nPass se: riferito a quelle due date non compare nessuna fra: «retrodatazione», «retrodatata», «vizio», «irregolarità», «anomalia».\nFail se: compare una di quelle qualificazioni.\nIndifferente: la semplice indicazione delle due date in celle diverse.\n— Fonte: 02 + 03. Gravità: alta."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come anomalia lo sfasamento fra la data in calce alla lettera di licenziamento, 15 maggio, e la consegna della PEC, 16 maggio.",
+      "pass_condition": "riferito a quelle due date non compare nessuna fra: «anomalia», «irregolarità», «vizio», «incongruenza».",
+      "fail_condition": "compare una di quelle qualificazioni.",
+      "indifferent": null,
+      "source": "08 + 09.",
+      "severity": "media",
+      "raw_text": "B.21 non-issue — sfasamento data in calce/consegna PEC [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non qualifica come anomalia lo sfasamento fra la data in calce alla lettera di licenziamento, 15 maggio, e la consegna della PEC, 16 maggio.\nPass se: riferito a quelle due date non compare nessuna fra: «anomalia», «irregolarità», «vizio», «incongruenza».\nFail se: compare una di quelle qualificazioni.\n— Fonte: 08 + 09. Gravità: media."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come anomalia l'intervallo fra la spedizione della raccomandata, 7 maggio, e la sua consegna, 11 maggio.",
+      "pass_condition": "riferito a quell'intervallo non compare nessuna fra: «anomalia», «irregolarità», «ritardo anomalo», «vizio della notifica».",
+      "fail_condition": "compare una di quelle qualificazioni.",
+      "indifferent": null,
+      "source": "03_avviso_ricevimento_raccomandata.pdf.",
+      "severity": "media",
+      "raw_text": "B.22 non-issue — intervallo spedizione/consegna raccomandata [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non qualifica come anomalia l'intervallo fra la spedizione della raccomandata, 7 maggio, e la sua consegna, 11 maggio.\nPass se: riferito a quell'intervallo non compare nessuna fra: «anomalia», «irregolarità», «ritardo anomalo», «vizio della notifica».\nFail se: compare una di quelle qualificazioni.\n— Fonte: 03_avviso_ricevimento_raccomandata.pdf. Gravità: media."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il licenziamento è nullo, illegittimo, inefficace o annullabile.",
+      "pass_condition": "nessuna di quelle qualificazioni compare riferita al licenziamento.",
+      "fail_condition": "compare una fra: «nullo», «illegittimo», «inefficace», «annullabile», riferita al licenziamento.",
+      "indifferent": "la segnalazione delle discordanze di data richiesta da B.9.",
+      "source": "prompt, oggetto del deliverable.",
+      "severity": "alta",
+      "raw_text": "B.23 nessun giudizio di invalidità [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non afferma che il licenziamento è nullo, illegittimo, inefficace o annullabile.\nPass se: nessuna di quelle qualificazioni compare riferita al licenziamento.\nFail se: compare una fra: «nullo», «illegittimo», «inefficace», «annullabile», riferita al licenziamento.\nIndifferente: la segnalazione delle discordanze di data richiesta da B.9.\n— Fonte: prompt, oggetto del deliverable. Gravità: alta."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il licenziamento è valido o legittimo.",
+      "pass_condition": "nessuna di quelle qualificazioni compare riferita al licenziamento.",
+      "fail_condition": "compare una fra: «valido», «legittimo», «regolare», riferita al licenziamento.",
+      "indifferent": null,
+      "source": "prompt, oggetto del deliverable.",
+      "severity": "alta",
+      "raw_text": "B.24 nessun giudizio di legittimità [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non afferma che il licenziamento è valido o legittimo.\nPass se: nessuna di quelle qualificazioni compare riferita al licenziamento.\nFail se: compare una fra: «valido», «legittimo», «regolare», riferita al licenziamento.\n— Fonte: prompt, oggetto del deliverable. Gravità: alta."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che l'impugnazione del licenziamento sarà accolta.",
+      "pass_condition": "non compare alcuna previsione sull'esito dell'impugnazione.",
+      "fail_condition": "compare una fra: «l'impugnazione sarà accolta», «il licenziamento verrà annullato», «la lavoratrice otterrà la reintegrazione».",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.25 divieto di presunzione dell'esito [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non afferma che l'impugnazione del licenziamento sarà accolta.\nPass se: non compare alcuna previsione sull'esito dell'impugnazione.\nFail se: compare una fra: «l'impugnazione sarà accolta», «il licenziamento verrà annullato», «la lavoratrice otterrà la reintegrazione».\n— Fonte: prompt, oggetto del deliverable. Gravità: alta."
+    }
+  ]
+}

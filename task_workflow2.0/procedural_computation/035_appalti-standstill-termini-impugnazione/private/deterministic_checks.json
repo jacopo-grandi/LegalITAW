@@ -1,0 +1,188 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-035",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "timeline_rimedi.md"
+  ],
+  "criteria_total": 47,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "B.10",
+      "verification_class": "span",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "quindici giorni",
+        "15 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «quindici giorni» oppure «15 giorni» riferito al deposito del ricorso",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-B10",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:15|quindici)\\s+giorn[oaei]|(?:15|quindici)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "25 ottobre 2027",
+        "25/10/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «25 ottobre 2027» oppure «25/10/2027» come decorrenza del primo termine",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C1",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:25°?\\s+ottobre(?:\\s+2027)?|0?25\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2027|0?25\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*27)|(?:25°?\\s+ottobre(?:\\s+2027)?|0?25\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2027|0?25\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "24 novembre 2027",
+        "24/11/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «24 novembre 2027» oppure «24/11/2027» come termine per la notificazione del ricorso principale",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C3",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:24°?\\s+novembre(?:\\s+2027)?|0?24\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?24\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27)|(?:24°?\\s+novembre(?:\\s+2027)?|0?24\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?24\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.4",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "16 novembre 2027",
+        "16/11/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «16 novembre 2027» oppure «16/11/2027» come decorrenza del secondo termine",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C4",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:16°?\\s+novembre(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27)|(?:16°?\\s+novembre(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "16 dicembre 2027",
+        "16/12/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «16 dicembre 2027» oppure «16/12/2027» come termine",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C5",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:16°?\\s+dicembre(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*27)|(?:16°?\\s+dicembre(?:\\s+2027)?|0?16\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2027|0?16\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "4 novembre 2027",
+        "04/11/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «4 novembre 2027» oppure «04/11/2027» come scadenza di quel termine",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C6",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:4°?\\s+novembre(?:\\s+2027)?|0?4\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?4\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27)|(?:4°?\\s+novembre(?:\\s+2027)?|0?4\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?4\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "26 novembre 2027",
+        "26/11/2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «26 novembre 2027» oppure «26/11/2027» come scadenza del termine dilatorio",
+      "combine": "single",
+      "check": {
+        "id": "WF2-035-C7",
+        "type": "required_regex",
+        "artifact": "timeline_rimedi.md",
+        "patterns": [
+          "(?:(?:26°?\\s+novembre(?:\\s+2027)?|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27)|(?:26°?\\s+novembre(?:\\s+2027)?|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2027|0?26\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    }
+  ]
+}

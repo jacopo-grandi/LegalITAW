@@ -1,0 +1,186 @@
+{
+  "task_id": "WF2-067",
+  "lato_assistito": "Banca Selvatica S.p.A., finanziatrice",
+  "data_di_riferimento": "2028-11-07",
+  "stato_fascicolo": "cure period in corso",
+  "fonti_ammesse": [
+    "Codice civile, testo consolidato",
+    "D.lgs. 21 maggio 2004, n. 170, garanzie finanziarie"
+  ],
+  "calcoli": [
+    "cure: 7,8,9,10,13,14,15,16,17,20 novembre = 10 giorni lavorativi",
+    "EUR 4.480.000 - EUR 620.000 = EUR 3.860.000"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per giorni non lavorativi: mostrare il conteggio giorno per giorno",
+    "integrazione necessaria per saldo iniziale: calcolare residuo provvisorio EUR 3.860.000 dopo compensazione"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_contratto_finanziamento.pdf",
+      "funzione": "Rata non pagata il 4 novembre 2028; diffida ricevuta il 6 novembre; cure period dieci giorni lavorativi escluso il giorno di ricezione; accelerazione con ulteriore comunicazione."
+    },
+    {
+      "file": "02_fideiussione_sidera.pdf",
+      "funzione": "Pagamento entro tre giorni lavorativi da richiesta scritta successiva all'accelerazione; massimale EUR 2.000.000."
+    },
+    {
+      "file": "03_pegno_quote.pdf",
+      "funzione": "Escussione dopo accelerazione e preavviso di cinque giorni lavorativi al datore; valutazione indipendente prima dell'appropriazione."
+    },
+    {
+      "file": "04_garanzia_finanziaria_conto.pdf",
+      "funzione": "Conto vincolato EUR 620.000; escussione al verificarsi dell'Evento di Escussione mediante compensazione, con rendiconto."
+    },
+    {
+      "file": "05_ipoteca_e_titolo.pdf",
+      "funzione": "Ipoteca di primo grado; contratto notarile esecutivo; prima dell'esecuzione immobiliare occorrono precetto e decorso del termine indicato nell'atto."
+    },
+    {
+      "file": "06_accordo_intercreditorio.pdf",
+      "funzione": "Proventi: costi, garanzia finanziaria, pegno quote, fideiussione, ipoteca; nessun recupero oltre debito, interessi e costi."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "cure period",
+      "gravita": "alta",
+      "affermazione_richiesta": "dal 6 novembre decorrono dieci giorni lavorativi escludendo il dies a quo",
+      "azione_richiesta": "fissare scadenza al 20 novembre 2028",
+      "conseguenza": "prima non si accelera",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "accelerazione separata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la diffida non contiene dichiarazione di accelerazione",
+      "azione_richiesta": "inviare atto successivo dopo il 20 novembre",
+      "conseguenza": "la scadenza anticipata non e' automatica",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "fideiussione subordinata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta e' valida solo dopo accelerazione",
+      "azione_richiesta": "calendarizzare domanda e tre giorni lavorativi",
+      "conseguenza": "una bozza anticipata non produce mora",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "pegno quote",
+      "gravita": "alta",
+      "affermazione_richiesta": "servono accelerazione, preavviso e valutazione",
+      "azione_richiesta": "sequenziare i tre passaggi",
+      "conseguenza": "appropriazione immediata sarebbe prematura",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "conto come garanzia finanziaria",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'Evento di Escussione coincide con accelerazione valida",
+      "azione_richiesta": "compensare dopo l'evento e rendicontare",
+      "conseguenza": "il saldo riduce il debito residuo",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "ipoteca",
+      "gravita": "media",
+      "affermazione_richiesta": "il titolo esecutivo non elimina precetto e termine",
+      "azione_richiesta": "preparare precetto dopo accelerazione",
+      "conseguenza": "l'esecuzione immobiliare ha sequenza propria",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "waterfall",
+      "gravita": "media",
+      "affermazione_richiesta": "i proventi seguono ordine contrattuale",
+      "azione_richiesta": "aggiornare debito dopo ogni recupero",
+      "conseguenza": "le garanzie sono parallele ma il credito e' unico",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "valutazione indipendente",
+      "gravita": "media",
+      "affermazione_richiesta": "manca la perizia sulle quote",
+      "azione_richiesta": "nominare esperto prima dell'appropriazione",
+      "conseguenza": "il valore non puo' essere fissato dalla banca sola",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "giorni non lavorativi",
+      "gravita": "media",
+      "affermazione_richiesta": "11, 12, 18 e 19 novembre non contano",
+      "azione_richiesta": "mostrare il conteggio giorno per giorno",
+      "conseguenza": "la scadenza non e' 16 novembre",
+      "evidenza": "calendario",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "saldo iniziale",
+      "gravita": "media",
+      "affermazione_richiesta": "debito EUR 4.480.000 e conto EUR 620.000",
+      "azione_richiesta": "calcolare residuo provvisorio EUR 3.860.000 dopo compensazione",
+      "conseguenza": "gli altri massimali si applicano al residuo",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "covenant sanato a settembre",
+      "oggetto": "doc. 01",
+      "chiave_nel_criterio": "settembre",
+      "perche_non_e_issue": "non e' l'evento attuale",
+      "criterio_assenza": "B.24"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "bozza di richiesta al garante",
+      "oggetto": "fascicolo email",
+      "chiave_nel_criterio": "bozza",
+      "perche_non_e_issue": "non risulta inviata",
+      "criterio_assenza": "B.25"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "ipoteca di primo grado",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "primo grado",
+      "perche_non_e_issue": "il grado e' confermato e non e' una lacuna",
+      "criterio_assenza": "B.26"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "conto capiente solo in parte",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "EUR 620.000",
+      "perche_non_e_issue": "la capienza parziale non invalida la garanzia",
+      "criterio_assenza": "B.27"
+    }
+  ]
+}

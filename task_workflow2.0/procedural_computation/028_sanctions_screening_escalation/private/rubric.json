@@ -1,0 +1,754 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-028",
+  "title": "AML. Audit dei termini su una posizione emersa dallo screening sanzionatorio",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 46,
+  "criteria": [
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "la matrice degli adempimenti riporta per ogni riga le colonne adempimento, fatto da cui decorre il termine, termine, compiuto il, qualificazione, documento di riferimento.",
+      "pass_condition": "le sei colonne compaiono nell'intestazione della matrice",
+      "fail_condition": "manca una colonna.",
+      "indifferent": null,
+      "source": "public/01_task.md",
+      "severity": "media",
+      "raw_text": "A.3 la matrice degli adempimenti riporta per ogni riga le colonne adempimento, fatto da cui decorre il termine, termine, compiuto il, qualificazione, documento di riferimento.\nissue: A · tipo: struttura · gravità: media · judge: no · fonte: public/01_task.md\nVerifica: la matrice degli adempimenti riporta per ogni riga le colonne adempimento, fatto da cui decorre il termine, termine, compiuto il, qualificazione, documento di riferimento.\nPass se: le sei colonne compaiono nell'intestazione della matrice\nFail se: manca una colonna."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "fail_condition": "compare un riferimento normativo estraneo all'elenco chiuso.",
+      "indifferent": null,
+      "source": "02_reference_pack.md",
+      "severity": "alta",
+      "raw_text": "A.4 il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nissue: A · tipo: assenza · gravità: alta · judge: no · fonte: 02_reference_pack.md\nVerifica: il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nPass se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFail se: compare un riferimento normativo estraneo all'elenco chiuso."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che i fondi del rapporto n. 000000731204 sono soggetti a congelamento per la designazione diretta di Sernaglia Commodities S.r.l.",
+      "pass_condition": "compare la designazione diretta della societa' come presupposto del congelamento",
+      "fail_condition": "il congelamento e' escluso, non trattato o fondato soltanto sulle quote dei soci",
+      "indifferent": null,
+      "source": "report dei riscontri, alert AL-2027-0032",
+      "severity": "alta",
+      "raw_text": "B.1 designazione diretta della cliente\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: report dei riscontri, alert AL-2027-0032\nVerifica: il deliverable afferma che i fondi del rapporto n. 000000731204 sono soggetti a congelamento per la designazione diretta di Sernaglia Commodities S.r.l.\nPass se: compare la designazione diretta della societa' come presupposto del congelamento\nFail se: il congelamento e' escluso, non trattato o fondato soltanto sulle quote dei soci"
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce il congelamento alla designazione diretta della cliente efficace dal 13 gennaio 2027.",
+      "pass_condition": "la conclusione e' agganciata al report dei riscontri e alla data di efficacia",
+      "fail_condition": "la conclusione e' agganciata soltanto alla visura o all'assetto dei soci",
+      "indifferent": null,
+      "source": "report dei riscontri, alert AL-2027-0032",
+      "severity": "media",
+      "raw_text": "B.2 designazione diretta della cliente\nissue: I-01 · tipo: attribuzione · gravità: alta · judge: sì · fonte: report dei riscontri, alert AL-2027-0032\nVerifica: il deliverable riconduce il congelamento alla designazione diretta della cliente efficace dal 13 gennaio 2027.\nPass se: la conclusione e' agganciata al report dei riscontri e alla data di efficacia\nFail se: la conclusione e' agganciata soltanto alla visura o all'assetto dei soci"
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable distingue la designazione diretta della societa' dal suo assetto proprietario.",
+      "pass_condition": "la visura e le quote sono trattate come informazioni di contesto e non come presupposto della misura",
+      "fail_condition": "il deliverable calcola una soglia di proprieta' per fondare il congelamento",
+      "indifferent": null,
+      "source": "report dei riscontri; visura, sezione 4",
+      "severity": "alta",
+      "raw_text": "B.3 designazione diretta della cliente\nissue: I-02 · tipo: presenza · gravità: alta · judge: sì · fonte: report dei riscontri; visura, sezione 4\nVerifica: il deliverable distingue la designazione diretta della societa' dal suo assetto proprietario.\nPass se: la visura e le quote sono trattate come informazioni di contesto e non come presupposto della misura\nFail se: il deliverable calcola una soglia di proprieta' per fondare il congelamento"
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che per il rapporto della societa' l'obbligo di comunicazione decorre dall'entrata in vigore della designazione diretta di Sernaglia Commodities S.r.l.",
+      "pass_condition": "la decorrenza e' agganciata all'entrata in vigore della designazione diretta della cliente, oppure alla data di efficacia del provvedimento che la include direttamente nell'elenco dei soggetti designati",
+      "fail_condition": "la decorrenza e' agganciata alla designazione di un socio, alla data del decreto oppure alla data della sua pubblicazione",
+      "indifferent": null,
+      "source": "report dei riscontri, alert AL-2027-0032",
+      "severity": "alta",
+      "raw_text": "B.4 designazione diretta della cliente\nissue: I-03 · tipo: presenza · gravità: alta · judge: sì · fonte: report dei riscontri, alert AL-2027-0032\nVerifica: il deliverable afferma che per il rapporto della societa' l'obbligo di comunicazione decorre dall'entrata in vigore della designazione diretta di Sernaglia Commodities S.r.l.\nPass se: la decorrenza e' agganciata all'entrata in vigore della designazione diretta della cliente, oppure alla data di efficacia del provvedimento che la include direttamente nell'elenco dei soggetti designati\nFail se: la decorrenza e' agganciata alla designazione di un socio, alla data del decreto oppure alla data della sua pubblicazione"
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica come tardiva la comunicazione trasmessa il 26 febbraio 2027.",
+      "pass_condition": "compare, riferita a quella comunicazione, una fra: «tardiva», «fuori termine», «oltre il termine», «in ritardo»",
+      "fail_condition": "la comunicazione e' qualificata come tempestiva, oppure la qualificazione non compare.",
+      "indifferent": null,
+      "source": "ricevuta di trasmissione del 26/02/2027",
+      "severity": "alta",
+      "raw_text": "B.5 il deliverable qualifica come tardiva la comunicazione trasmessa il 26 febbraio 2027.\nissue: I-04 · tipo: qualificazione · gravità: alta · judge: sì · fonte: ricevuta di trasmissione del 26/02/2027\nVerifica: il deliverable qualifica come tardiva la comunicazione trasmessa il 26 febbraio 2027.\nPass se: compare, riferita a quella comunicazione, una fra: «tardiva», «fuori termine», «oltre il termine», «in ritardo»\nFail se: la comunicazione e' qualificata come tempestiva, oppure la qualificazione non compare."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che per i fondi destinati a Vartex Metal Trading Ltd il termine decorre dalla data in cui i fondi sono stati detenuti.",
+      "pass_condition": "la decorrenza e' agganciata all'accredito sul conto di transito, alla detenzione dei fondi oppure alla data di ricezione dei fondi",
+      "fail_condition": "la decorrenza e' agganciata alla data di entrata in vigore della designazione.",
+      "indifferent": null,
+      "source": "avviso di accredito",
+      "severity": "alta",
+      "raw_text": "B.6 il deliverable afferma che per i fondi destinati a Vartex Metal Trading Ltd il termine decorre dalla data in cui i fondi sono stati detenuti.\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: avviso di accredito\nVerifica: il deliverable afferma che per i fondi destinati a Vartex Metal Trading Ltd il termine decorre dalla data in cui i fondi sono stati detenuti.\nPass se: la decorrenza e' agganciata all'accredito sul conto di transito, alla detenzione dei fondi oppure alla data di ricezione dei fondi\nFail se: la decorrenza e' agganciata alla data di entrata in vigore della designazione."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica come omessa la comunicazione relativa ai fondi destinati a Vartex Metal Trading Ltd.",
+      "pass_condition": "compare, riferita a quella posizione, una fra: «omessa», «non effettuata», «non risulta trasmessa», «mancante»",
+      "fail_condition": "la comunicazione e' data per effettuata, oppure la posizione non e' trattata.",
+      "indifferent": null,
+      "source": "assenza di comunicazioni nel fascicolo",
+      "severity": "alta",
+      "raw_text": "B.7 il deliverable qualifica come omessa la comunicazione relativa ai fondi destinati a Vartex Metal Trading Ltd.\nissue: I-06 · tipo: qualificazione · gravità: alta · judge: sì · fonte: assenza di comunicazioni nel fascicolo\nVerifica: il deliverable qualifica come omessa la comunicazione relativa ai fondi destinati a Vartex Metal Trading Ltd.\nPass se: compare, riferita a quella posizione, una fra: «omessa», «non effettuata», «non risulta trasmessa», «mancante»\nFail se: la comunicazione e' data per effettuata, oppure la posizione non e' trattata."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il congelamento del rapporto della societa' e' stato disposto in ritardo rispetto al momento in cui l'obbligo e' sorto.",
+      "pass_condition": "compare, riferita alla nota del 15 febbraio 2027, una fra: «in ritardo», «tardivo», «oltre un mese dopo», «con un mese di ritardo»",
+      "fail_condition": "la data della nota e' riportata senza alcuna qualificazione del ritardo.",
+      "indifferent": null,
+      "source": "nota interna AML/2027/0044",
+      "severity": "alta",
+      "raw_text": "B.8 il deliverable afferma che il congelamento del rapporto della societa' e' stato disposto in ritardo rispetto al momento in cui l'obbligo e' sorto.\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: nota interna AML/2027/0044\nVerifica: il deliverable afferma che il congelamento del rapporto della societa' e' stato disposto in ritardo rispetto al momento in cui l'obbligo e' sorto.\nPass se: compare, riferita alla nota del 15 febbraio 2027, una fra: «in ritardo», «tardivo», «oltre un mese dopo», «con un mese di ritardo»\nFail se: la data della nota e' riportata senza alcuna qualificazione del ritardo."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la misura di congelamento opera senza necessita' di un provvedimento dell'autorita'.",
+      "pass_condition": "compare una fra: «opera di diritto», «opera automaticamente», «non richiede un provvedimento dell'autorita'», «e' immediata»",
+      "fail_condition": "il deliverable subordina la misura a un provvedimento dell'autorita', oppure il passaggio non compare.",
+      "indifferent": null,
+      "source": "art. 5 D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.9 il deliverable afferma che la misura di congelamento opera senza necessita' di un provvedimento dell'autorita'.\nissue: I-07 · tipo: presenza · gravità: media · judge: sì · fonte: art. 5 D.Lgs. 109/2007\nVerifica: il deliverable afferma che la misura di congelamento opera senza necessita' di un provvedimento dell'autorita'.\nPass se: compare una fra: «opera di diritto», «opera automaticamente», «non richiede un provvedimento dell'autorita'», «e' immediata»\nFail se: il deliverable subordina la misura a un provvedimento dell'autorita', oppure il passaggio non compare."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che fra la disposizione del congelamento e l'applicazione del blocco il rapporto e' rimasto operativo.",
+      "pass_condition": "compare l'affermazione che il rapporto e' rimasto operativo, movimentabile o non bloccato in quel periodo",
+      "fail_condition": "il deliverable tratta il rapporto come bloccato dalla data della nota interna.",
+      "indifferent": null,
+      "source": "log del sistema dispositivo",
+      "severity": "alta",
+      "raw_text": "B.10 il deliverable afferma che fra la disposizione del congelamento e l'applicazione del blocco il rapporto e' rimasto operativo.\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: log del sistema dispositivo\nVerifica: il deliverable afferma che fra la disposizione del congelamento e l'applicazione del blocco il rapporto e' rimasto operativo.\nPass se: compare l'affermazione che il rapporto e' rimasto operativo, movimentabile o non bloccato in quel periodo\nFail se: il deliverable tratta il rapporto come bloccato dalla data della nota interna."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce al log del sistema dispositivo la data di applicazione del blocco.",
+      "pass_condition": "la data e' agganciata al log, al sistema dispositivo oppure al registro degli stati di blocco",
+      "fail_condition": "la data non e' agganciata ad alcun documento.",
+      "indifferent": null,
+      "source": "log del sistema dispositivo",
+      "severity": "media",
+      "raw_text": "B.11 il deliverable riconduce al log del sistema dispositivo la data di applicazione del blocco.\nissue: I-08 · tipo: attribuzione · gravità: media · judge: sì · fonte: log del sistema dispositivo\nVerifica: il deliverable riconduce al log del sistema dispositivo la data di applicazione del blocco.\nPass se: la data e' agganciata al log, al sistema dispositivo oppure al registro degli stati di blocco\nFail se: la data non e' agganciata ad alcun documento."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica come nullo l'atto di trasferimento eseguito il 3 marzo 2027.",
+      "pass_condition": "compare, riferita a quell'operazione, una fra: «nullo», «nullita'», «privo di effetti in quanto nullo»",
+      "fail_condition": "l'operazione e' qualificata come annullabile, inefficace, irregolare, oppure la qualificazione non compare.",
+      "indifferent": null,
+      "source": "art. 5, co. 1 e 3, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "B.12 il deliverable qualifica come nullo l'atto di trasferimento eseguito il 3 marzo 2027.\nissue: I-09 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 5, co. 1 e 3, D.Lgs. 109/2007\nVerifica: il deliverable qualifica come nullo l'atto di trasferimento eseguito il 3 marzo 2027.\nPass se: compare, riferita a quell'operazione, una fra: «nullo», «nullita'», «privo di effetti in quanto nullo»\nFail se: l'operazione e' qualificata come annullabile, inefficace, irregolare, oppure la qualificazione non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'operazione del 3 marzo 2027 e' stata eseguita in violazione del congelamento.",
+      "pass_condition": "compare l'affermazione che l'operazione e' stata eseguita nonostante il congelamento, in violazione della misura oppure in contrasto con il divieto",
+      "fail_condition": "l'operazione e' riportata senza rilevare la violazione.",
+      "indifferent": null,
+      "source": "estratto conto; disposizione DISP-2027-0009114",
+      "severity": "alta",
+      "raw_text": "B.13 il deliverable afferma che l'operazione del 3 marzo 2027 e' stata eseguita in violazione del congelamento.\nissue: I-09 · tipo: presenza · gravità: alta · judge: sì · fonte: estratto conto; disposizione DISP-2027-0009114\nVerifica: il deliverable afferma che l'operazione del 3 marzo 2027 e' stata eseguita in violazione del congelamento.\nPass se: compare l'affermazione che l'operazione e' stata eseguita nonostante il congelamento, in violazione della misura oppure in contrasto con il divieto\nFail se: l'operazione e' riportata senza rilevare la violazione."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la segnalazione di operazione sospetta non assolve l'obbligo di comunicazione delle misure di congelamento.",
+      "pass_condition": "compare una fra: «obblighi distinti e autonomi», «non sostituisce», «non assolve», «adempimenti autonomi», «obblighi separati»",
+      "fail_condition": "la segnalazione e' presentata come sostitutiva della comunicazione, oppure il rapporto fra i due adempimenti non e' trattato.",
+      "indifferent": null,
+      "source": "comunicato UIF del 18 agosto 2022",
+      "severity": "alta",
+      "raw_text": "B.14 il deliverable afferma che la segnalazione di operazione sospetta non assolve l'obbligo di comunicazione delle misure di congelamento.\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: comunicato UIF del 18 agosto 2022\nVerifica: il deliverable afferma che la segnalazione di operazione sospetta non assolve l'obbligo di comunicazione delle misure di congelamento.\nPass se: compare una fra: «obblighi distinti e autonomi», «non sostituisce», «non assolve», «adempimenti autonomi», «obblighi separati»\nFail se: la segnalazione e' presentata come sostitutiva della comunicazione, oppure il rapporto fra i due adempimenti non e' trattato."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la comunicazione dei dati su operazioni e rapporti riconducibili ai soggetti designati e' dovuta e non risulta effettuata.",
+      "pass_condition": "compare l'affermazione che quella comunicazione e' dovuta e non e' stata effettuata",
+      "fail_condition": "l'adempimento non compare fra quelli dovuti.",
+      "indifferent": null,
+      "source": "art. 7, co. 2, D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.15 il deliverable afferma che la comunicazione dei dati su operazioni e rapporti riconducibili ai soggetti designati e' dovuta e non risulta effettuata.\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: art. 7, co. 2, D.Lgs. 109/2007\nVerifica: il deliverable afferma che la comunicazione dei dati su operazioni e rapporti riconducibili ai soggetti designati e' dovuta e non risulta effettuata.\nPass se: compare l'affermazione che quella comunicazione e' dovuta e non e' stata effettuata\nFail se: l'adempimento non compare fra quelli dovuti."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non attribuisce alla comunicazione dei dati su operazioni e rapporti un termine di trenta giorni.",
+      "pass_condition": "a quella comunicazione non e' associato un termine espresso in giorni",
+      "fail_condition": "a quella comunicazione e' associato il termine di trenta giorni o altro termine espresso in giorni.",
+      "indifferent": null,
+      "source": "art. 7, co. 2, D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.16 il deliverable non attribuisce alla comunicazione dei dati su operazioni e rapporti un termine di trenta giorni.\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: art. 7, co. 2, D.Lgs. 109/2007\nVerifica: il deliverable non attribuisce alla comunicazione dei dati su operazioni e rapporti un termine di trenta giorni.\nPass se: a quella comunicazione non e' associato un termine espresso in giorni\nFail se: a quella comunicazione e' associato il termine di trenta giorni o altro termine espresso in giorni."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la richiesta della cliente di chiudere il rapporto e trasferire il saldo non puo' essere accolta.",
+      "pass_condition": "compare una fra: «non puo' essere accolta», «non e' possibile dare seguito», «va rifiutata», «non e' eseguibile»",
+      "fail_condition": "la richiesta e' presentata come accoglibile, oppure non e' trattata.",
+      "indifferent": null,
+      "source": "nota del gestore del 4 marzo 2027",
+      "severity": "alta",
+      "raw_text": "B.17 il deliverable afferma che la richiesta della cliente di chiudere il rapporto e trasferire il saldo non puo' essere accolta.\nissue: I-12 · tipo: presenza · gravità: alta · judge: sì · fonte: nota del gestore del 4 marzo 2027\nVerifica: il deliverable afferma che la richiesta della cliente di chiudere il rapporto e trasferire il saldo non puo' essere accolta.\nPass se: compare una fra: «non puo' essere accolta», «non e' possibile dare seguito», «va rifiutata», «non e' eseguibile»\nFail se: la richiesta e' presentata come accoglibile, oppure non e' trattata."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il trasferimento del saldo sia possibile previa comunicazione all'autorita'.",
+      "pass_condition": "non compare l'affermazione che una comunicazione o un'informativa all'autorita' renda eseguibile il trasferimento",
+      "fail_condition": "il trasferimento e' presentato come eseguibile previa comunicazione.",
+      "indifferent": null,
+      "source": "art. 5, co. 1 e 4, D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.18 il deliverable non afferma che il trasferimento del saldo sia possibile previa comunicazione all'autorita'.\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: art. 5, co. 1 e 4, D.Lgs. 109/2007\nVerifica: il deliverable non afferma che il trasferimento del saldo sia possibile previa comunicazione all'autorita'.\nPass se: non compare l'affermazione che una comunicazione o un'informativa all'autorita' renda eseguibile il trasferimento\nFail se: il trasferimento e' presentato come eseguibile previa comunicazione."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti mancanti la nota interna AML/2027/0031.",
+      "pass_condition": "compare la richiesta della nota AML/2027/0031 oppure della nota interna richiamata dal log per il conto di transito",
+      "fail_condition": "la lacuna non e' segnalata.",
+      "indifferent": null,
+      "source": "log del sistema, riga dell'08/02/2027",
+      "severity": "media",
+      "raw_text": "B.19 il deliverable indica fra i documenti mancanti la nota interna AML/2027/0031.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: log del sistema, riga dell'08/02/2027\nVerifica: il deliverable indica fra i documenti mancanti la nota interna AML/2027/0031.\nPass se: compare la richiesta della nota AML/2027/0031 oppure della nota interna richiamata dal log per il conto di transito\nFail se: la lacuna non e' segnalata."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti mancanti la valutazione dell'alert AL-2027-0032.",
+      "pass_condition": "compare la richiesta della valutazione, dell'istruttoria o dell'esito dell'alert AL-2027-0032",
+      "fail_condition": "la lacuna non e' segnalata.",
+      "indifferent": null,
+      "source": "report dei riscontri",
+      "severity": "media",
+      "raw_text": "B.20 il deliverable indica fra i documenti mancanti la valutazione dell'alert AL-2027-0032.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: report dei riscontri\nVerifica: il deliverable indica fra i documenti mancanti la valutazione dell'alert AL-2027-0032.\nPass se: compare la richiesta della valutazione, dell'istruttoria o dell'esito dell'alert AL-2027-0032\nFail se: la lacuna non e' segnalata."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che Sernaglia Commodities S.r.l. e' direttamente inclusa nell'elenco dei soggetti designati.",
+      "pass_condition": "la designazione diretta della societa' compare",
+      "fail_condition": "la societa' e' descritta soltanto come posseduta o controllata da soggetti designati",
+      "indifferent": null,
+      "source": "report dei riscontri",
+      "severity": "media",
+      "raw_text": "B.21 designazione diretta della cliente\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: report dei riscontri\nVerifica: il deliverable afferma che Sernaglia Commodities S.r.l. e' direttamente inclusa nell'elenco dei soggetti designati.\nPass se: la designazione diretta della societa' compare\nFail se: la societa' e' descritta soltanto come posseduta o controllata da soggetti designati"
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non fonda il congelamento sulla quota singola del 30 per cento.",
+      "pass_condition": "la quota non e' usata come presupposto della misura",
+      "fail_condition": "la quota del 30 per cento e' indicata come ragione del congelamento",
+      "indifferent": null,
+      "source": "visura, sezione 4; report dei riscontri",
+      "severity": "alta",
+      "raw_text": "B.22 designazione diretta della cliente\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: visura, sezione 4; report dei riscontri\nVerifica: il deliverable non fonda il congelamento sulla quota singola del 30 per cento.\nPass se: la quota non e' usata come presupposto della misura\nFail se: la quota del 30 per cento e' indicata come ragione del congelamento"
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica la data del decreto di designazione come decorrenza del termine per il rapporto della societa'.",
+      "pass_condition": "la decorrenza non e' fissata alla data del decreto ne' alla data della sua pubblicazione",
+      "fail_condition": "la decorrenza e' fissata all'11 gennaio 2027 o al 12 gennaio 2027.",
+      "indifferent": null,
+      "source": "art. 7, co. 1, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "B.23 il deliverable non indica la data del decreto di designazione come decorrenza del termine per il rapporto della societa'.\nissue: I-03 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 7, co. 1, D.Lgs. 109/2007\nVerifica: il deliverable non indica la data del decreto di designazione come decorrenza del termine per il rapporto della societa'.\nPass se: la decorrenza non e' fissata alla data del decreto ne' alla data della sua pubblicazione\nFail se: la decorrenza e' fissata all'11 gennaio 2027 o al 12 gennaio 2027."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica la data di entrata in vigore della designazione di Vartex Metal Trading Ltd come decorrenza del termine per quella posizione.",
+      "pass_condition": "la decorrenza della posizione sul conto di transito non e' fissata al 3 novembre 2026",
+      "fail_condition": "la decorrenza e' fissata al 3 novembre 2026.",
+      "indifferent": null,
+      "source": "art. 7, co. 1, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "B.24 il deliverable non indica la data di entrata in vigore della designazione di Vartex Metal Trading Ltd come decorrenza del termine per quella posizione.\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 7, co. 1, D.Lgs. 109/2007\nVerifica: il deliverable non indica la data di entrata in vigore della designazione di Vartex Metal Trading Ltd come decorrenza del termine per quella posizione.\nPass se: la decorrenza della posizione sul conto di transito non e' fissata al 3 novembre 2026\nFail se: la decorrenza e' fissata al 3 novembre 2026."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il congelamento richiede un provvedimento dell'autorita' per operare.",
+      "pass_condition": "non compare l'affermazione che occorra un provvedimento, un'autorizzazione o un'istruzione dell'autorita'",
+      "fail_condition": "il congelamento e' subordinato a un provvedimento dell'autorita'.",
+      "indifferent": null,
+      "source": "art. 5 D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.25 il deliverable non afferma che il congelamento richiede un provvedimento dell'autorita' per operare.\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: art. 5 D.Lgs. 109/2007\nVerifica: il deliverable non afferma che il congelamento richiede un provvedimento dell'autorita' per operare.\nPass se: non compare l'affermazione che occorra un provvedimento, un'autorizzazione o un'istruzione dell'autorita'\nFail se: il congelamento e' subordinato a un provvedimento dell'autorita'."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il rapporto era bloccato dal 15 febbraio 2027.",
+      "pass_condition": "non compare l'affermazione che il blocco fosse operativo dalla data della nota interna",
+      "fail_condition": "il rapporto e' presentato come bloccato dal 15 febbraio 2027.",
+      "indifferent": null,
+      "source": "log del sistema dispositivo",
+      "severity": "alta",
+      "raw_text": "B.26 il deliverable non afferma che il rapporto era bloccato dal 15 febbraio 2027.\nissue: I-08 · tipo: assenza · gravità: alta · judge: sì · fonte: log del sistema dispositivo\nVerifica: il deliverable non afferma che il rapporto era bloccato dal 15 febbraio 2027.\nPass se: non compare l'affermazione che il blocco fosse operativo dalla data della nota interna\nFail se: il rapporto e' presentato come bloccato dal 15 febbraio 2027."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "simmetria del controllo: il deliverable non presenta come ancora pendente il termine relativo ai fondi destinati a Vartex Metal Trading Ltd.",
+      "pass_condition": "non compare l'affermazione che quel termine e' in corso o non ancora scaduto",
+      "fail_condition": "il termine e' presentato come pendente alla data di riferimento.",
+      "indifferent": null,
+      "source": "art. 7, co. 1, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "B.27 simmetria del controllo: il deliverable non presenta come ancora pendente il termine relativo ai fondi destinati a Vartex Metal Trading Ltd.\nissue: I-06 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 7, co. 1, D.Lgs. 109/2007\nVerifica: simmetria del controllo: il deliverable non presenta come ancora pendente il termine relativo ai fondi destinati a Vartex Metal Trading Ltd.\nPass se: non compare l'affermazione che quel termine e' in corso o non ancora scaduto\nFail se: il termine e' presentato come pendente alla data di riferimento."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non indica la posizione riferita a Rutka Silvano fra quelle che generano obblighi.",
+      "pass_condition": "il riscontro su Rutka non e' presentato come posizione da congelare o da comunicare",
+      "fail_condition": "il riscontro su Rutka e' trattato come posizione attiva.",
+      "indifferent": null,
+      "source": "report dei riscontri, alert AL-2027-0034",
+      "severity": "alta",
+      "raw_text": "B.28 sovra-segnalazione: il deliverable non indica la posizione riferita a Rutka Silvano fra quelle che generano obblighi.\nissue: I-09 · tipo: assenza · gravità: alta · judge: sì · fonte: report dei riscontri, alert AL-2027-0034\nVerifica: sovra-segnalazione: il deliverable non indica la posizione riferita a Rutka Silvano fra quelle che generano obblighi.\nPass se: il riscontro su Rutka non e' presentato come posizione da congelare o da comunicare\nFail se: il riscontro su Rutka e' trattato come posizione attiva."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non somma le quote dei soci per fondare il congelamento.",
+      "pass_condition": "non compare alcun calcolo aggregato delle quote come presupposto della misura",
+      "fail_condition": "il congelamento e' fondato sulla somma 30 + 22 o sull'inclusione della quota di Todeschin",
+      "indifferent": null,
+      "source": "visura, sezione 4; report dei riscontri",
+      "severity": "media",
+      "raw_text": "B.29 designazione diretta della cliente\nissue: I-02 · tipo: assenza · gravità: alta · judge: sì · fonte: visura, sezione 4; report dei riscontri\nVerifica: il deliverable non somma le quote dei soci per fondare il congelamento.\nPass se: non compare alcun calcolo aggregato delle quote come presupposto della misura\nFail se: il congelamento e' fondato sulla somma 30 + 22 o sull'inclusione della quota di Todeschin"
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata comunicazione al Nucleo speciale di polizia valutaria.",
+      "pass_condition": "la mancata comunicazione al Nucleo speciale di polizia valutaria non compare fra le irregolarita'",
+      "fail_condition": "la mancata comunicazione al Nucleo speciale di polizia valutaria e' segnalata come irregolarita'.",
+      "indifferent": null,
+      "source": "art. 7, co. 3, D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.30 sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata comunicazione al Nucleo speciale di polizia valutaria.\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: art. 7, co. 3, D.Lgs. 109/2007\nVerifica: sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata comunicazione al Nucleo speciale di polizia valutaria.\nPass se: la mancata comunicazione al Nucleo speciale di polizia valutaria non compare fra le irregolarita'\nFail se: la mancata comunicazione al Nucleo speciale di polizia valutaria e' segnalata come irregolarita'."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata chiusura del rapporto.",
+      "pass_condition": "la chiusura del rapporto non compare fra gli adempimenti dovuti o fra le irregolarita'",
+      "fail_condition": "la mancata chiusura del rapporto e' segnalata come irregolarita' o come adempimento dovuto.",
+      "indifferent": null,
+      "source": "art. 5 D.Lgs. 109/2007",
+      "severity": "media",
+      "raw_text": "B.31 sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata chiusura del rapporto.\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: art. 5 D.Lgs. 109/2007\nVerifica: sovra-segnalazione: il deliverable non segnala come irregolarita' la mancata chiusura del rapporto.\nPass se: la chiusura del rapporto non compare fra gli adempimenti dovuti o fra le irregolarita'\nFail se: la mancata chiusura del rapporto e' segnalata come irregolarita' o come adempimento dovuto."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non presenta la segnalazione di operazione sospetta del 18 febbraio 2027 come duplicazione o come adempimento non dovuto.",
+      "pass_condition": "la segnalazione non e' qualificata come duplicazione, come superflua o come non dovuta",
+      "fail_condition": "la segnalazione e' presentata come duplicazione o come adempimento non dovuto.",
+      "indifferent": null,
+      "source": "art. 35 D.Lgs. 231/2007",
+      "severity": "media",
+      "raw_text": "B.32 sovra-segnalazione: il deliverable non presenta la segnalazione di operazione sospetta del 18 febbraio 2027 come duplicazione o come adempimento non dovuto.\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: art. 35 D.Lgs. 231/2007\nVerifica: sovra-segnalazione: il deliverable non presenta la segnalazione di operazione sospetta del 18 febbraio 2027 come duplicazione o come adempimento non dovuto.\nPass se: la segnalazione non e' qualificata come duplicazione, come superflua o come non dovuta\nFail se: la segnalazione e' presentata come duplicazione o come adempimento non dovuto."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "divieto di presunzione dell'esito: il deliverable non afferma che l'istituto sara' sanzionato.",
+      "pass_condition": "non compare l'affermazione che una sanzione sara' irrogata o che l'autorita' adottera' un provvedimento sanzionatorio",
+      "fail_condition": "il deliverable presuppone l'irrogazione di una sanzione.",
+      "indifferent": null,
+      "source": "-",
+      "severity": "media",
+      "raw_text": "B.33 divieto di presunzione dell'esito: il deliverable non afferma che l'istituto sara' sanzionato.\nissue: I-09 · tipo: assenza · gravità: media · judge: sì · fonte: -\nVerifica: divieto di presunzione dell'esito: il deliverable non afferma che l'istituto sara' sanzionato.\nPass se: non compare l'affermazione che una sanzione sara' irrogata o che l'autorita' adottera' un provvedimento sanzionatorio\nFail se: il deliverable presuppone l'irrogazione di una sanzione."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 13 gennaio 2027 come fatto da cui decorre il termine per il rapporto della societa'.",
+      "pass_condition": "compare «13 gennaio 2027» oppure «13/01/2027» come decorrenza",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "report dei riscontri, alert AL-2027-0032",
+      "severity": "alta",
+      "raw_text": "C.1 il deliverable indica il 13 gennaio 2027 come fatto da cui decorre il termine per il rapporto della societa'.\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: report dei riscontri, alert AL-2027-0032\nVerifica: il deliverable indica il 13 gennaio 2027 come fatto da cui decorre il termine per il rapporto della societa'.\nPass se: compare «13 gennaio 2027» oppure «13/01/2027» come decorrenza\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 12 febbraio 2027 come termine della comunicazione per il rapporto della societa'.",
+      "pass_condition": "compare «12 febbraio 2027» oppure «12/02/2027» come termine",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "art. 7, co. 1, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "C.2 il deliverable indica il 12 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: art. 7, co. 1, D.Lgs. 109/2007\nVerifica: il deliverable indica il 12 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nPass se: compare «12 febbraio 2027» oppure «12/02/2027» come termine\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il giorno da cui il termine decorre non si computa.",
+      "pass_condition": "compare una fra: «il giorno iniziale non si computa», «a decorrere dal giorno successivo», «escluso il giorno di decorrenza», «dal 14 gennaio 2027»",
+      "fail_condition": "il passaggio non compare, oppure il termine e' contato includendo il giorno iniziale.",
+      "indifferent": null,
+      "source": "computo dei termini a giorni",
+      "severity": "media",
+      "raw_text": "C.3 il deliverable afferma che il giorno da cui il termine decorre non si computa.\nissue: I-04 · tipo: presenza · gravità: media · judge: sì · fonte: computo dei termini a giorni\nVerifica: il deliverable afferma che il giorno da cui il termine decorre non si computa.\nPass se: compare una fra: «il giorno iniziale non si computa», «a decorrere dal giorno successivo», «escluso il giorno di decorrenza», «dal 14 gennaio 2027»\nFail se: il passaggio non compare, oppure il termine e' contato includendo il giorno iniziale."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica l'8 febbraio 2027 come fatto da cui decorre il termine per i fondi destinati a Vartex Metal Trading Ltd.",
+      "pass_condition": "compare «8 febbraio 2027» oppure «08/02/2027» come decorrenza",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "avviso di accredito su conto di transito",
+      "severity": "alta",
+      "raw_text": "C.4 il deliverable indica l'8 febbraio 2027 come fatto da cui decorre il termine per i fondi destinati a Vartex Metal Trading Ltd.\nissue: I-05 · tipo: valore · gravità: alta · judge: no · fonte: avviso di accredito su conto di transito\nVerifica: il deliverable indica l'8 febbraio 2027 come fatto da cui decorre il termine per i fondi destinati a Vartex Metal Trading Ltd.\nPass se: compare «8 febbraio 2027» oppure «08/02/2027» come decorrenza\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 10 marzo 2027 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.",
+      "pass_condition": "compare «10 marzo 2027» oppure «10/03/2027» come termine",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "art. 7, co. 1, D.Lgs. 109/2007",
+      "severity": "alta",
+      "raw_text": "C.5 il deliverable indica il 10 marzo 2027 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.\nissue: I-06 · tipo: valore · gravità: alta · judge: no · fonte: art. 7, co. 1, D.Lgs. 109/2007\nVerifica: il deliverable indica il 10 marzo 2027 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.\nPass se: compare «10 marzo 2027» oppure «10/03/2027» come termine\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 26 febbraio 2027 come data di trasmissione della comunicazione relativa al rapporto della societa'.",
+      "pass_condition": "compare «26 febbraio 2027» oppure «26/02/2027» come data di trasmissione",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "ricevuta di trasmissione",
+      "severity": "media",
+      "raw_text": "C.6 il deliverable indica il 26 febbraio 2027 come data di trasmissione della comunicazione relativa al rapporto della societa'.\nissue: I-04 · tipo: valore · gravità: media · judge: no · fonte: ricevuta di trasmissione\nVerifica: il deliverable indica il 26 febbraio 2027 come data di trasmissione della comunicazione relativa al rapporto della societa'.\nPass se: compare «26 febbraio 2027» oppure «26/02/2027» come data di trasmissione\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 9 marzo 2027 come data di applicazione del blocco sul rapporto.",
+      "pass_condition": "compare «9 marzo 2027» oppure «09/03/2027» come data di applicazione del blocco",
+      "fail_condition": "e' indicata una data diversa.",
+      "indifferent": null,
+      "source": "log del sistema dispositivo",
+      "severity": "alta",
+      "raw_text": "C.7 il deliverable indica il 9 marzo 2027 come data di applicazione del blocco sul rapporto.\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: log del sistema dispositivo\nVerifica: il deliverable indica il 9 marzo 2027 come data di applicazione del blocco sul rapporto.\nPass se: compare «9 marzo 2027» oppure «09/03/2027» come data di applicazione del blocco\nFail se: e' indicata una data diversa."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 48.200,00 l'importo dell'operazione eseguita in violazione del congelamento.",
+      "pass_condition": "compare «48.200,00» oppure «48.200»",
+      "fail_condition": "e' indicato un importo diverso.",
+      "indifferent": null,
+      "source": "estratto conto, movimento del 03/03/2027",
+      "severity": "alta",
+      "raw_text": "C.8 il deliverable indica in euro 48.200,00 l'importo dell'operazione eseguita in violazione del congelamento.\nissue: I-09 · tipo: valore · gravità: alta · judge: no · fonte: estratto conto, movimento del 03/03/2027\nVerifica: il deliverable indica in euro 48.200,00 l'importo dell'operazione eseguita in violazione del congelamento.\nPass se: compare «48.200,00» oppure «48.200»\nFail se: e' indicato un importo diverso."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 10 febbraio 2027 come termine della comunicazione per il rapporto della societa'.",
+      "pass_condition": "non compare «10 febbraio 2027» ne' «10/02/2027» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla data del decreto.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.9 il deliverable non indica il 10 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nissue: I-04 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 10 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nPass se: non compare «10 febbraio 2027» ne' «10/02/2027» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla data del decreto."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica l'11 febbraio 2027 come termine della comunicazione per il rapporto della societa'.",
+      "pass_condition": "non compare «11 febbraio 2027» ne' «11/02/2027» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla data di pubblicazione del decreto.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.10 il deliverable non indica l'11 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nissue: I-04 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica l'11 febbraio 2027 come termine della comunicazione per il rapporto della societa'.\nPass se: non compare «11 febbraio 2027» ne' «11/02/2027» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla data di pubblicazione del decreto."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 3 dicembre 2026 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.",
+      "pass_condition": "non compare «3 dicembre 2026» ne' «03/12/2026» come termine",
+      "fail_condition": "e' indicato come termine il risultato di trenta giorni dalla data di entrata in vigore della designazione.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.11 il deliverable non indica il 3 dicembre 2026 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 3 dicembre 2026 come termine della comunicazione per i fondi destinati a Vartex Metal Trading Ltd.\nPass se: non compare «3 dicembre 2026» ne' «03/12/2026» come termine\nFail se: e' indicato come termine il risultato di trenta giorni dalla data di entrata in vigore della designazione."
+    }
+  ]
+}

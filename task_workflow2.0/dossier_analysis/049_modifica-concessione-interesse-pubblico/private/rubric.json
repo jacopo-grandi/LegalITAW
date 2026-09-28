@@ -1,0 +1,1313 @@
+{
+  "task_id": "WF2-049",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 65,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non cita fonti estranee al reference pack chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti estranee al reference pack chiuso.\nPASS se: ogni fonte normativa appartiene al reference pack\nFAIL se: Fallisce se una regola decisiva è fondata su una fonte normativa assente dal reference pack.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni fonte normativa appartiene al reference pack",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici.\nPASS se: Il testo afferma: la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: contratto, articolo 3",
+      "pass_condition": "Il testo afferma: la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici» (I-01) è attribuita al documento 01_contratto_concessione.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici» (I-01) è attribuita al documento 01_contratto_concessione.pdf.\nPASS se: il deliverable enuncia la conclusione «la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_contratto_concessione.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_contratto_concessione.pdf = «Contratto di concessione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_contratto_concessione.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_contratto_concessione.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: usare l'oggetto come parametro della natura.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: usare l'oggetto come parametro della natura.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È rispettato il limite: non estendere l'oggetto per analogia.",
+      "match_criteria": "Oggetto del criterio: È rispettato il limite: non estendere l'oggetto per analogia.\nPASS se: Il testo evita espressamente l'errore descritto nel limite.\nFAIL se: il testo commette l'errore descritto nel limite, oppure non affronta il punto.\nÈ indifferente: l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - cautela",
+      "pass_condition": "Il testo evita espressamente l'errore descritto nel limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la proposta aggiunge 420 stalli, colonnine e proroga di sei anni.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la proposta aggiunge 420 stalli, colonnine e proroga di sei anni.\nPASS se: compare \"la proposta aggiunge 420 stalli, colonnine e proroga di sei anni\" nel contesto di modifica proposta\nFAIL se: Nel contesto di modifica proposta il valore è assente, diverso da \"la proposta aggiunge 420 stalli, colonnine e proroga di sei anni\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: proposta del 18 luglio 2026",
+      "pass_condition": "compare \"la proposta aggiunge 420 stalli, colonnine e proroga di sei anni\" nel contesto di modifica proposta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la proposta aggiunge 420 stalli, colonnine e proroga di sei anni» (I-02) è attribuita al documento 03_proposta_modifica.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la proposta aggiunge 420 stalli, colonnine e proroga di sei anni» (I-02) è attribuita al documento 03_proposta_modifica.pdf.\nPASS se: il deliverable enuncia la conclusione «la proposta aggiunge 420 stalli, colonnine e proroga di sei anni» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_proposta_modifica.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_proposta_modifica.pdf = «Proposta del concessionario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_proposta_modifica.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la proposta aggiunge 420 stalli, colonnine e proroga di sei anni» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_proposta_modifica.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: scomporre le tre componenti.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: scomporre le tre componenti.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È rispettato il limite: non valutarle come pacchetto indivisibile.",
+      "match_criteria": "Oggetto del criterio: È rispettato il limite: non valutarle come pacchetto indivisibile.\nPASS se: Il testo evita espressamente l'errore descritto nel limite.\nFAIL se: il testo commette l'errore descritto nel limite, oppure non affronta il punto.\nÈ indifferente: l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - cautela",
+      "pass_condition": "Il testo evita espressamente l'errore descritto nel limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il valore stimato originario è euro 38.400.000.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il valore stimato originario è euro 38.400.000.\nPASS se: compare \"euro 38.400.000\" nel contesto di valore originario\nFAIL se: Nel contesto di valore originario il valore è assente, diverso da \"euro 38.400.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: quadro economico allegato al bando",
+      "pass_condition": "compare \"euro 38.400.000\" nel contesto di valore originario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «il valore stimato originario è euro 38.400.000» (I-03) è attribuita al documento 02_pef_originario.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il valore stimato originario è euro 38.400.000» (I-03) è attribuita al documento 02_pef_originario.xlsx.\nPASS se: il deliverable enuncia la conclusione «il valore stimato originario è euro 38.400.000» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_pef_originario.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_pef_originario.xlsx = «PEF originario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_pef_originario.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «il valore stimato originario è euro 38.400.000» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_pef_originario.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: usare questo denominatore per i confronti.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: usare questo denominatore per i confronti.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È rispettato il limite: non usare i ricavi già maturati.",
+      "match_criteria": "Oggetto del criterio: È rispettato il limite: non usare i ricavi già maturati.\nPASS se: Il testo evita espressamente l'errore descritto nel limite.\nFAIL se: il testo commette l'errore descritto nel limite, oppure non affronta il punto.\nÈ indifferente: l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - cautela",
+      "pass_condition": "Il testo evita espressamente l'errore descritto nel limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il valore incrementale stimato è euro 9.840.000.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il valore incrementale stimato è euro 9.840.000.\nPASS se: compare \"euro 9.840.000\" nel contesto di valore modifica\nFAIL se: Nel contesto di valore modifica il valore è assente, diverso da \"euro 9.840.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: quadro valore: nuovi ricavi e contributo",
+      "pass_condition": "compare \"euro 9.840.000\" nel contesto di valore modifica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «il valore incrementale stimato è euro 9.840.000» (I-04) è attribuita ai documenti 03_proposta_modifica.pdf e 08_quadro_valore.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il valore incrementale stimato è euro 9.840.000» (I-04) è attribuita ai documenti 03_proposta_modifica.pdf e 08_quadro_valore.xlsx.\nPASS se: il deliverable enuncia la conclusione «il valore incrementale stimato è euro 9.840.000» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 08_quadro_valore.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_proposta_modifica.pdf = «Proposta del concessionario»; 08_quadro_valore.xlsx = «Quadro del valore della concessione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_proposta_modifica.pdf + 08_quadro_valore.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «il valore incrementale stimato è euro 9.840.000» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 08_quadro_valore.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: verificare il calcolo prima della delibera.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: verificare il calcolo prima della delibera.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È rispettato il limite: non usare il solo costo lavori.",
+      "match_criteria": "Oggetto del criterio: È rispettato il limite: non usare il solo costo lavori.\nPASS se: Il testo evita espressamente l'errore descritto nel limite.\nFAIL se: il testo commette l'errore descritto nel limite, oppure non affronta il punto.\nÈ indifferente: l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - cautela",
+      "pass_condition": "Il testo evita espressamente l'errore descritto nel limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la modifica vale il 25,625% del valore originario.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la modifica vale il 25,625% del valore originario.\nPASS se: compare \"25,625%\" nel contesto di percentuale\nFAIL se: Nel contesto di percentuale il valore è assente, diverso da \"25,625%\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: 9.840.000 diviso 38.400.000",
+      "pass_condition": "compare \"25,625%\" nel contesto di percentuale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la modifica vale il 25,625% del valore originario» (I-05) è attribuita ai documenti 02_pef_originario.xlsx e 08_quadro_valore.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la modifica vale il 25,625% del valore originario» (I-05) è attribuita ai documenti 02_pef_originario.xlsx e 08_quadro_valore.xlsx.\nPASS se: il deliverable enuncia la conclusione «la modifica vale il 25,625% del valore originario» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_pef_originario.xlsx e 08_quadro_valore.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_pef_originario.xlsx = «PEF originario»; 08_quadro_valore.xlsx = «Quadro del valore della concessione»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_pef_originario.xlsx + 08_quadro_valore.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «la modifica vale il 25,625% del valore originario» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_pef_originario.xlsx e 08_quadro_valore.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: riportare metodo e risultato.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: riportare metodo e risultato.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È rispettato il limite: non arrotondare al 20%.",
+      "match_criteria": "Oggetto del criterio: È rispettato il limite: non arrotondare al 20%.\nPASS se: Il testo evita espressamente l'errore descritto nel limite.\nFAIL se: il testo commette l'errore descritto nel limite, oppure non affronta il punto.\nÈ indifferente: l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - cautela",
+      "pass_condition": "Il testo evita espressamente l'errore descritto nel limite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario.\nPASS se: Il testo afferma: gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: relazione tecnica descrive integrazione del sistema, non costi del cambio",
+      "pass_condition": "Il testo afferma: gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario» (I-06) è attribuita al documento 05_relazione_tecnica.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario» (I-06) è attribuita al documento 05_relazione_tecnica.pdf.\nPASS se: il deliverable enuncia la conclusione «gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_relazione_tecnica.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_relazione_tecnica.pdf = «Relazione tecnica»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_relazione_tecnica.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_relazione_tecnica.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: acquisire analisi sulle alternative.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: acquisire analisi sulle alternative.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026.\nPASS se: Il testo afferma: il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: studio domanda mostra recupero nel 2024-2025",
+      "pass_condition": "Il testo afferma: il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026» (I-07) è attribuita al documento 06_studio_domanda.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026» (I-07) è attribuita al documento 06_studio_domanda.pdf.\nPASS se: il deliverable enuncia la conclusione «il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_studio_domanda.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 06_studio_domanda.pdf = «Studio della domanda»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/06_studio_domanda.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_studio_domanda.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: isolare eventi nuovi e impatto residuo.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: isolare eventi nuovi e impatto residuo.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: l'aggiunta di gestione energetica altererebbe la natura della concessione.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'aggiunta di gestione energetica altererebbe la natura della concessione.\nPASS se: Il testo afferma: l'aggiunta di gestione energetica altererebbe la natura della concessione.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota ambientale propone servizio su edifici comunali non connesso ai parcheggi",
+      "pass_condition": "Il testo afferma: l'aggiunta di gestione energetica altererebbe la natura della concessione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «l'aggiunta di gestione energetica altererebbe la natura della concessione» (I-08) è attribuita ai documenti 01_contratto_concessione.pdf e 09_nota_ambientale.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'aggiunta di gestione energetica altererebbe la natura della concessione» (I-08) è attribuita ai documenti 01_contratto_concessione.pdf e 09_nota_ambientale.pdf.\nPASS se: il deliverable enuncia la conclusione «l'aggiunta di gestione energetica altererebbe la natura della concessione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_contratto_concessione.pdf e 09_nota_ambientale.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_contratto_concessione.pdf = «Contratto di concessione»; 09_nota_ambientale.pdf = «Nota ambientale»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_contratto_concessione.pdf + 09_nota_ambientale.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'aggiunta di gestione energetica altererebbe la natura della concessione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_contratto_concessione.pdf e 09_nota_ambientale.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: separare quel servizio e valutare nuova procedura.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: separare quel servizio e valutare nuova procedura.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune.\nPASS se: compare \"la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune\" nel contesto di rischio operativo\nFAIL se: Nel contesto di rischio operativo il valore è assente, diverso da \"la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: proposta garantisce euro 2.100.000 annui",
+      "pass_condition": "compare \"la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune\" nel contesto di rischio operativo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune» (I-09) è attribuita ai documenti 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune» (I-09) è attribuita ai documenti 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.\nPASS se: il deliverable enuncia la conclusione «la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_proposta_modifica.pdf = «Proposta del concessionario»; 07_parere_finanziario.pdf = «Parere finanziario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_proposta_modifica.pdf + 07_parere_finanziario.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: eliminare o ridisegnare la garanzia.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: eliminare o ridisegnare la garanzia.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione.\nPASS se: Il testo afferma: la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: PEF non separa recupero capitale e rendimento",
+      "pass_condition": "Il testo afferma: la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione» (I-10) è attribuita ai documenti 02_pef_originario.xlsx e 03_proposta_modifica.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione» (I-10) è attribuita ai documenti 02_pef_originario.xlsx e 03_proposta_modifica.pdf.\nPASS se: il deliverable enuncia la conclusione «la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_pef_originario.xlsx e 03_proposta_modifica.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_pef_originario.xlsx = «PEF originario»; 03_proposta_modifica.pdf = «Proposta del concessionario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_pef_originario.xlsx + 03_proposta_modifica.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 02_pef_originario.xlsx e 03_proposta_modifica.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: richiedere modello per scenari.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: richiedere modello per scenari.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il PEF originario assumeva 1.180.000 ingressi annui.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il PEF originario assumeva 1.180.000 ingressi annui.\nPASS se: compare \"1.180.000 ingressi\" nel contesto di PEF originario\nFAIL se: Nel contesto di PEF originario il valore è assente, diverso da \"1.180.000 ingressi\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: PEF, foglio domanda",
+      "pass_condition": "compare \"1.180.000 ingressi\" nel contesto di PEF originario",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «il PEF originario assumeva 1.180.000 ingressi annui» (I-11) è attribuita al documento 02_pef_originario.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il PEF originario assumeva 1.180.000 ingressi annui» (I-11) è attribuita al documento 02_pef_originario.xlsx.\nPASS se: il deliverable enuncia la conclusione «il PEF originario assumeva 1.180.000 ingressi annui» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_pef_originario.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_pef_originario.xlsx = «PEF originario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_pef_originario.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «il PEF originario assumeva 1.180.000 ingressi annui» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_pef_originario.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: confrontare serie storica omogenea.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: confrontare serie storica omogenea.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto.\nPASS se: compare \"1.094.000 ingressi\" nel contesto di domanda aggiornata\nFAIL se: Nel contesto di domanda aggiornata il valore è assente, diverso da \"1.094.000 ingressi\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: studio domanda e calcolo",
+      "pass_condition": "compare \"1.094.000 ingressi\" nel contesto di domanda aggiornata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto» (I-12) è attribuita al documento 06_studio_domanda.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto» (I-12) è attribuita al documento 06_studio_domanda.pdf.\nPASS se: il deliverable enuncia la conclusione «la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_studio_domanda.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 06_studio_domanda.pdf = «Studio della domanda»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/06_studio_domanda.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_studio_domanda.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: misurare lo scostamento e il nesso economico.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: misurare lo scostamento e il nesso economico.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio.\nPASS se: compare \"euro 3.200.000\" nel contesto di contributo pubblico\nFAIL se: Nel contesto di contributo pubblico il valore è assente, diverso da \"euro 3.200.000\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: proposta e parere finanziario",
+      "pass_condition": "compare \"euro 3.200.000\" nel contesto di contributo pubblico",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio» (I-13) è attribuita ai documenti 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio» (I-13) è attribuita ai documenti 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.\nPASS se: il deliverable enuncia la conclusione «il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_proposta_modifica.pdf = «Proposta del concessionario»; 07_parere_finanziario.pdf = «Parere finanziario»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_proposta_modifica.pdf + 07_parere_finanziario.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 03_proposta_modifica.pdf e 07_parere_finanziario.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: includerlo nella valutazione complessiva.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: includerlo nella valutazione complessiva.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi.\nPASS se: Il testo afferma: la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: delibera numero 44",
+      "pass_condition": "Il testo afferma: la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi» (I-14) è attribuita al documento 04_delibera_indirizzo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi» (I-14) è attribuita al documento 04_delibera_indirizzo.pdf.\nPASS se: il deliverable enuncia la conclusione «la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_delibera_indirizzo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_delibera_indirizzo.pdf = «Delibera di indirizzo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_delibera_indirizzo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_delibera_indirizzo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: integrare istruttoria con opzioni e indicatori.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: integrare istruttoria con opzioni e indicatori.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: la bozza di avviso è incompleta su natura e valore della modifica.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la bozza di avviso è incompleta su natura e valore della modifica.\nPASS se: compare \"la bozza di avviso è incompleta su natura e valore della modifica\" nel contesto di pubblicità\nFAIL se: Nel contesto di pubblicità il valore è assente, diverso da \"la bozza di avviso è incompleta su natura e valore della modifica\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: bozza riporta solo lavori per euro 4.600.000",
+      "pass_condition": "compare \"la bozza di avviso è incompleta su natura e valore della modifica\" nel contesto di pubblicità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «la bozza di avviso è incompleta su natura e valore della modifica» (I-15) è attribuita al documento 10_corrispondenza_e_avviso.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la bozza di avviso è incompleta su natura e valore della modifica» (I-15) è attribuita al documento 10_corrispondenza_e_avviso.eml.\nPASS se: il deliverable enuncia la conclusione «la bozza di avviso è incompleta su natura e valore della modifica» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 10_corrispondenza_e_avviso.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 10_corrispondenza_e_avviso.eml = «Corrispondenza e bozza avviso»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/10_corrispondenza_e_avviso.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «la bozza di avviso è incompleta su natura e valore della modifica» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 10_corrispondenza_e_avviso.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: allineare avviso a tutte le componenti.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: allineare avviso a tutte le componenti.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Verifica una sola conclusione: mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente.\nPASS se: Il testo afferma: mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: fascicolo contiene note istruttorie non firmate",
+      "pass_condition": "Il testo afferma: mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "La conclusione «mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente» (I-16) è attribuita ai documenti 07_parere_finanziario.pdf, 09_nota_ambientale.pdf e 10_corrispondenza_e_avviso.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente» (I-16) è attribuita ai documenti 07_parere_finanziario.pdf, 09_nota_ambientale.pdf e 10_corrispondenza_e_avviso.eml.\nPASS se: il deliverable enuncia la conclusione «mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 07_parere_finanziario.pdf, 09_nota_ambientale.pdf e 10_corrispondenza_e_avviso.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_parere_finanziario.pdf = «Parere finanziario»; 09_nota_ambientale.pdf = «Nota ambientale»; 10_corrispondenza_e_avviso.eml = «Corrispondenza e bozza avviso»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_parere_finanziario.pdf + 09_nota_ambientale.pdf + 10_corrispondenza_e_avviso.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 07_parere_finanziario.pdf, 09_nota_ambientale.pdf e 10_corrispondenza_e_avviso.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "È proposta l'azione: porre i tre pareri come gate.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: porre i tre pareri come gate.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: modifica indivisibile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: modifica indivisibile.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: modifica indivisibile.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: integrazione uguale infungibilità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: integrazione uguale infungibilità.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: integrazione uguale infungibilità.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: calo domanda del 30%.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: calo domanda del 30%.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: calo domanda del 30%.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: garanzia ricavi neutra.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: garanzia ricavi neutra.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: garanzia ricavi neutra.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: servizio energetico nell'oggetto originario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: servizio energetico nell'oggetto originario.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: servizio energetico nell'oggetto originario.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: avviso sul solo costo lavori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: avviso sul solo costo lavori.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: avviso sul solo costo lavori.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: note istruttorie come pareri.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: note istruttorie come pareri.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: note istruttorie come pareri.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-07"
+    },
+    {
+      "id": "B.61",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: proroga necessaria per definizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: proroga necessaria per definizione.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: proroga necessaria per definizione.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-08"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.\nPASS se: sono trattati fatti di entrambi i segni\nFAIL se: una delle due direzioni è sistematicamente omessa.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "sono trattati fatti di entrambi i segni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable evita la sovra-segnalazione dei rischi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la sovra-segnalazione dei rischi.\nPASS se: gli elementi neutri sono mantenuti distinti dai rischi\nFAIL se: Fallisce se almeno un elemento neutro o favorevole è qualificato come rischio concreto senza un fatto o una regola che lo sostenga.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "gli elementi neutri sono mantenuti distinti dai rischi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "issue_matrix.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito su dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito su dati mancanti.\nPASS se: le lacune restano esplicite\nFAIL se: Fallisce se almeno una lacuna dichiarata nel fascicolo è colmata con un fatto dato per certo.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "le lacune restano esplicite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

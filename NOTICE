@@ -1,0 +1,10 @@
+LegalITA-W includes benchmark schema conventions and criterion-based all-pass
+scoring work adapted from Harvey LAB:
+
+https://github.com/harveyai/harvey-labs
+
+Harvey LAB is distributed under the MIT License.
+Copyright (c) 2026 Harvey AI.
+
+The MIT License text and the retained copyright notice are included in the
+root LICENSE file.

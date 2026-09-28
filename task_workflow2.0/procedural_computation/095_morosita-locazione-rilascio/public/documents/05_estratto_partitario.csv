@@ -1,0 +1,19 @@
+# Sartiglia Immobiliare S.r.l. - partitario del rapporto di locazione
+# Conduttrice: Vernasca Ottica S.r.l. - immobile: Rovigo, corso del Popolo 118
+# Estrazione del 4 agosto 2026 dal sistema contabile
+# Canone mensile: 3.150,00 euro, scadenza il giorno 5 di ciascun mese
+scadenza,causale,importo_dovuto,data_incasso,importo_incassato,saldo_partita,note
+2025-11-05,canone novembre 2025,3150.00,2025-11-04,3150.00,0.00,
+2025-12-05,canone dicembre 2025,3150.00,2025-12-05,3150.00,0.00,
+2026-01-05,canone gennaio 2026,3150.00,2026-01-07,3150.00,0.00,bonifico con due giorni di ritardo
+2026-02-05,canone febbraio 2026,3150.00,2026-02-05,3150.00,0.00,
+2026-03-05,canone marzo 2026,3150.00,2026-03-11,3150.00,0.00,bonifico con sei giorni di ritardo
+2026-04-05,canone aprile 2026,3150.00,,0.00,3150.00,non pervenuto
+2026-04-14,oneri accessori esercizio 2025,486.00,,0.00,486.00,richiesta trasmessa con il rendiconto approvato il 28 marzo 2026
+2026-05-05,canone maggio 2026,3150.00,,0.00,3150.00,non pervenuto
+2026-06-05,canone giugno 2026,3150.00,,0.00,3150.00,non pervenuto
+2026-07-05,canone luglio 2026,3150.00,,0.00,3150.00,non pervenuto
+2026-08-05,canone agosto 2026,3150.00,,0.00,3150.00,non pervenuto
+# Totale partite aperte alla data di estrazione: 16.236,00 euro
+# Di cui canoni: 15.750,00 euro; di cui oneri accessori: 486,00 euro
+# Deposito cauzionale in essere: 9.450,00 euro, non imputato a conto canoni

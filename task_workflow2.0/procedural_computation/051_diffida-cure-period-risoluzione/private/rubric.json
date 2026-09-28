@@ -1,0 +1,773 @@
+{
+  "task_id": "WF2-051",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable è prodotto come file `contract_deadline_audit.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `contract_deadline_audit.md`.\nPASS se: il file consegnato ha nome `contract_deadline_audit.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `contract_deadline_audit.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non supera il limite di 1800 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 1800 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 1800.\nFAIL se: il corpo del deliverable supera 1800 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 1800.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "ogni data indicata nella sezione della cronologia porta il riferimento al documento del fascicolo da cui è ricavata.",
+      "match_criteria": "Oggetto del criterio: ogni data indicata nella sezione della cronologia porta il riferimento al documento del fascicolo da cui è ricavata.\nPASS se: accanto a ciascuna data compare il rinvio a uno dei tre allegati.\nFAIL se: almeno una data della cronologia non porta alcun rinvio a un allegato.\nÈ indifferente: la forma del rinvio, numero di documento o titolo; per le date calcolate basta il rinvio all'allegato da cui parte il calcolo; la data di riferimento indicata nella consegna, che non richiede fonte.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascuna data compare il rinvio a uno dei tre allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole del contratto, che non sono fonti normative.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il 13 marzo 2031 come scadenza del termine di dieci giorni della clausola 14.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 13 marzo 2031 come scadenza del termine di dieci giorni della clausola 14.2.\nPASS se: compare «13 marzo 2031» come scadenza del termine della clausola 14.2.; compare «13/03/2031» come scadenza del termine della clausola 14.2.\nFAIL se: è indicata una data diversa, oppure la scadenza del termine della clausola 14.2 non è indicata.\nÈ indifferente: l'indicazione dell'ora.\nFonte di authoring: clausola 14.2; date_verificate.md",
+      "pass_condition": "compare «13 marzo 2031» come scadenza del termine della clausola 14.2.; compare «13/03/2031» come scadenza del termine della clausola 14.2.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable fa decorrere il termine della clausola 14.2 dalla ricezione della PEC del 3 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable fa decorrere il termine della clausola 14.2 dalla ricezione della PEC del 3 marzo 2031.\nPASS se: la decorrenza è ricondotta a una fra: «ricezione della PEC», «ricevuta di avvenuta consegna», «consegna della comunicazione del 3 marzo 2031».\nFAIL se: la decorrenza è ricondotta al collaudo del 24 febbraio 2031, alla data di invio del messaggio, oppure l'atto di decorrenza non è indicato.\nÈ indifferente: il richiamo alla clausola 16 sul momento di ricezione.\nFonte di authoring: clausole 14.2 e 16; ricevuta di consegna",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «ricezione della PEC», «ricevuta di avvenuta consegna», «consegna della comunicazione del 3 marzo 2031».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il giorno di ricezione della contestazione non si computa nel termine.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il giorno di ricezione della contestazione non si computa nel termine.\nPASS se: compare l'affermazione che il giorno iniziale non si computa.; compare l'affermazione che il termine decorre dal giorno successivo alla ricezione.\nFAIL se: il termine è computato includendo il 3 marzo 2031, oppure la regola di computo non compare.\nÈ indifferente: la citazione della norma sul computo dei termini.\nFonte di authoring: art. 2963, co. 2 c.c.",
+      "pass_condition": "compare l'affermazione che il giorno iniziale non si computa.; compare l'affermazione che il termine decorre dal giorno successivo alla ricezione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica il 18 marzo 2031 come scadenza del termine di quindici giorni assegnato al punto 4 della PEC.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 18 marzo 2031 come scadenza del termine di quindici giorni assegnato al punto 4 della PEC.\nPASS se: compare «18 marzo 2031» come scadenza del termine di quindici giorni.; compare «18/03/2031» come scadenza del termine di quindici giorni.\nFAIL se: è indicata una data diversa, oppure la scadenza del termine di quindici giorni non è indicata.\nÈ indifferente: l'indicazione dell'ora.\nFonte di authoring: punto 4 della PEC; date_verificate.md",
+      "pass_condition": "compare «18 marzo 2031» come scadenza del termine di quindici giorni.; compare «18/03/2031» come scadenza del termine di quindici giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta il 13 marzo 2031 come scadenza del termine della diffida.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il 13 marzo 2031 come scadenza del termine della diffida.\nPASS se: il deliverable non presenta il 13 marzo 2031 come scadenza del termine della diffida.\nFAIL se: il 13 marzo 2031 è indicato come termine entro cui il Fornitore deve adempiere a seguito della diffida.\nÈ indifferente: la menzione del 13 marzo 2031 come scadenza del termine della clausola 14.2.\nFonte di authoring: punti 3 e 4 della PEC",
+      "pass_condition": "il deliverable non presenta il 13 marzo 2031 come scadenza del termine della diffida.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable espone come due sequenze distinte il termine di rimedio della clausola 14.2 e il termine della diffida.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone come due sequenze distinte il termine di rimedio della clausola 14.2 e il termine della diffida.\nPASS se: le due scadenze compaiono come voci separate della cronologia, ciascuna con la propria fonte.\nFAIL se: le due scadenze sono presentate come un unico termine, oppure una sola delle due compare.\nÈ indifferente: l'ordine in cui le due sequenze sono esposte.\nFonte di authoring: punti 3 e 4 della PEC; clausole 14.2 e 14.4",
+      "pass_condition": "le due scadenze compaiono come voci separate della cronologia, ciascuna con la propria fonte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica come diversi gli effetti che il decorso di ciascuno dei due termini può produrre.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come diversi gli effetti che il decorso di ciascuno dei due termini può produrre.\nPASS se: compare l'indicazione che il decorso del termine della clausola 14.2 apre la facoltà di dichiarazione, mentre il decorso del termine di quindici giorni riguarda l'intimazione ad adempiere.\nFAIL se: ai due termini è attribuito il medesimo effetto, oppure gli effetti non sono distinti.\nÈ indifferente: l'ordine di trattazione dei due effetti.\nFonte di authoring: clausole 14.4 e 14.5; art. 1454 c.c.",
+      "pass_condition": "compare l'indicazione che il decorso del termine della clausola 14.2 apre la facoltà di dichiarazione, mentre il decorso del termine di quindici giorni riguarda l'intimazione ad adempiere.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che la clausola risolutiva espressa richiede una dichiarazione del Committente successiva all'inadempimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la clausola risolutiva espressa richiede una dichiarazione del Committente successiva all'inadempimento.\nPASS se: compare l'affermazione che occorre una dichiarazione di volersi avvalere della clausola risolutiva.\nFAIL se: la necessità della dichiarazione non è affermata, oppure è presentata come facoltativa ai fini della risoluzione.\nÈ indifferente: il richiamo alla clausola 14.5.\nFonte di authoring: clausole 14.4 e 14.5; art. 1456 c.c.",
+      "pass_condition": "compare l'affermazione che occorre una dichiarazione di volersi avvalere della clausola risolutiva.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non afferma che il contratto si risolve di diritto alla scadenza del termine di dieci giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il contratto si risolve di diritto alla scadenza del termine di dieci giorni.\nPASS se: il deliverable non afferma che il contratto si risolve di diritto alla scadenza del termine di dieci giorni.\nFAIL se: compare l'affermazione che alla scadenza del termine della clausola 14.2 il contratto è risolto di diritto o automaticamente.\nÈ indifferente: la riproduzione, come citazione del punto 5 della PEC, della frase del Committente.\nFonte di authoring: clausola 14.5",
+      "pass_condition": "il deliverable non afferma che il contratto si risolve di diritto alla scadenza del termine di dieci giorni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica l'avvertimento del punto 5 della PEC come annuncio anteriore all'inadempimento del termine e non come dichiarazione ai sensi della clausola 14.4.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'avvertimento del punto 5 della PEC come annuncio anteriore all'inadempimento del termine e non come dichiarazione ai sensi della clausola 14.4.\nPASS se: compare, riferita a quel punto, una fra: «non integra la dichiarazione», «non vale come dichiarazione di avvalersi della clausola risolutiva», «annuncio preventivo».\nFAIL se: l'avvertimento è qualificato come dichiarazione di avvalersi della clausola risolutiva, oppure la qualificazione non compare.\nÈ indifferente: il giudizio sull'opportunità della formulazione usata dal Committente.\nFonte di authoring: punto 5 della PEC; clausola 14.4",
+      "pass_condition": "compare, riferita a quel punto, una fra: «non integra la dichiarazione», «non vale come dichiarazione di avvalersi della clausola risolutiva», «annuncio preventivo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable rileva che il fascicolo non contiene comunicazioni posteriori al 3 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il fascicolo non contiene comunicazioni posteriori al 3 marzo 2031.\nPASS se: compare l'indicazione che dopo il 3 marzo 2031 il fascicolo non contiene atti.\nFAIL se: il rilievo non compare, oppure sono dati per esistenti atti successivi.\nÈ indifferente: l'elenco dei documenti che il Committente dovrebbe reperire.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare l'indicazione che dopo il 3 marzo 2031 il fascicolo non contiene atti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica come azione la predisposizione della dichiarazione ai sensi della clausola 14.4 da valutare dopo la scadenza dei termini.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la predisposizione della dichiarazione ai sensi della clausola 14.4 da valutare dopo la scadenza dei termini.\nPASS se: compare l'indicazione di predisporre una dichiarazione di avvalersi della clausola risolutiva.\nFAIL se: l'azione non compare.\nÈ indifferente: la forma proposta per la dichiarazione.\nFonte di authoring: clausola 14.4",
+      "pass_condition": "compare l'indicazione di predisporre una dichiarazione di avvalersi della clausola risolutiva.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica il termine di dieci giorni della clausola 14.2 come termine di rimedio pattuito e non come termine dell'intimazione ad adempiere.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il termine di dieci giorni della clausola 14.2 come termine di rimedio pattuito e non come termine dell'intimazione ad adempiere.\nPASS se: compare, riferita al termine di dieci giorni, una fra: «termine di rimedio contrattuale», «cure period contrattuale», «termine pattuito dalle parti».\nFAIL se: il termine di dieci giorni è qualificato come diffida ad adempiere, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla clausola 14.3.\nFonte di authoring: clausola 14.2; art. 1454 c.c.",
+      "pass_condition": "compare, riferita al termine di dieci giorni, una fra: «termine di rimedio contrattuale», «cure period contrattuale», «termine pattuito dalle parti».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il termine dell'intimazione ad adempiere non può essere inferiore a quindici giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine dell'intimazione ad adempiere non può essere inferiore a quindici giorni.\nPASS se: compare l'indicazione del limite minimo di quindici giorni per l'intimazione ad adempiere.\nFAIL se: il limite minimo non compare, oppure è indicato in una misura diversa.\nÈ indifferente: il richiamo alle eccezioni al limite minimo.\nFonte di authoring: art. 1454, co. 2 c.c.",
+      "pass_condition": "compare l'indicazione del limite minimo di quindici giorni per l'intimazione ad adempiere.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che al 14 marzo 2031 il contratto non risulta risolto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che al 14 marzo 2031 il contratto non risulta risolto.\nPASS se: compare, riferita alla data di riferimento, una fra: «il contratto non risulta risolto», «il rapporto è ancora in essere», «la risoluzione non si è prodotta».\nFAIL se: il contratto è presentato come risolto, oppure lo stato del rapporto alla data di riferimento non è affermato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione delle condizioni al verificarsi delle quali la risoluzione potrebbe prodursi.\nFonte di authoring: cronologia; clausole 14.4 e 14.5",
+      "pass_condition": "compare, riferita alla data di riferimento, una fra: «il contratto non risulta risolto», «il rapporto è ancora in essere», «la risoluzione non si è prodotta».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta come già opponibile al Fornitore una risoluzione del contratto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come già opponibile al Fornitore una risoluzione del contratto.\nPASS se: il deliverable non presenta come già opponibile al Fornitore una risoluzione del contratto.\nFAIL se: compare l'affermazione che la risoluzione è opponibile o efficace nei confronti del Fornitore alla data di riferimento.\nÈ indifferente: la descrizione degli effetti che la risoluzione produrrebbe una volta perfezionata.\nFonte di authoring: clausola 14.4",
+      "pass_condition": "il deliverable non presenta come già opponibile al Fornitore una risoluzione del contratto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non consente di stabilire se l'inadempimento sia stato rimosso entro il 13 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non consente di stabilire se l'inadempimento sia stato rimosso entro il 13 marzo 2031.\nPASS se: compare, riferita all'esito del termine di rimedio, una fra: «non risulta dagli atti», «il fascicolo non lo documenta», «non determinabile con i documenti disponibili».\nFAIL se: l'esito del termine di rimedio è dato per accertato in un senso o nell'altro, oppure la lacuna non è dichiarata.\nÈ indifferente: il numero di documenti indicati come necessari.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare, riferita all'esito del termine di rimedio, una fra: «non risulta dagli atti», «il fascicolo non lo documenta», «non determinabile con i documenti disponibili».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica quali documenti occorrono per accertare l'esito del termine di rimedio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali documenti occorrono per accertare l'esito del termine di rimedio.\nPASS se: compare l'indicazione di almeno un documento da acquisire, fra verbale di nuova prova di resa, rapporto di intervento e corrispondenza successiva al 3 marzo 2031.\nFAIL se: la lacuna è dichiarata senza indicare che cosa serve per colmarla.\nÈ indifferente: il numero di documenti elencati.\nFonte di authoring: public/01_task.md, richiesta sui dati mancanti",
+      "pass_condition": "compare l'indicazione di almeno un documento da acquisire, fra verbale di nuova prova di resa, rapporto di intervento e corrispondenza successiva al 3 marzo 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica l'installazione del ricambio entro il 7 marzo 2031 come dichiarazione del Fornitore a verbale e non come fatto accaduto.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'installazione del ricambio entro il 7 marzo 2031 come dichiarazione del Fornitore a verbale e non come fatto accaduto.\nPASS se: compare, riferita a quell'installazione, una fra: «dichiarazione di intenti», «impegno assunto a verbale», «annunciata e non documentata».\nFAIL se: l'installazione del ricambio è presentata come avvenuta, oppure la qualificazione non compare.\nÈ indifferente: la menzione della causa tecnica indicata dal Fornitore.\nFonte di authoring: paragrafo 6 del verbale di collaudo",
+      "pass_condition": "compare, riferita a quell'installazione, una fra: «dichiarazione di intenti», «impegno assunto a verbale», «annunciata e non documentata».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non afferma che la resa contrattuale è stata ripristinata.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la resa contrattuale è stata ripristinata.\nPASS se: il deliverable non afferma che la resa contrattuale è stata ripristinata.\nFAIL se: compare l'affermazione che la linea ha raggiunto la resa della clausola 5.1 dopo il collaudo.\nÈ indifferente: l'ipotesi, dichiarata come tale, che il ricambio possa aver risolto l'anomalia.\nFonte di authoring: assenza di una seconda prova di resa nel fascicolo",
+      "pass_condition": "il deliverable non afferma che la resa contrattuale è stata ripristinata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che il giudizio sull'importanza dell'inadempimento non è formulabile sui dati del fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il giudizio sull'importanza dell'inadempimento non è formulabile sui dati del fascicolo.\nPASS se: compare, riferita all'importanza dell'inadempimento, una fra: «non determinabile con i dati disponibili», «il fascicolo non contiene i dati necessari», «richiede dati di produzione non presenti».\nFAIL se: l'importanza dell'inadempimento è affermata o esclusa sulla base dei soli dati del fascicolo, oppure la questione non è trattata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo alla norma sull'importanza dell'inadempimento.\nFonte di authoring: paragrafo 5 del verbale; art. 1455 c.c.",
+      "pass_condition": "compare, riferita all'importanza dell'inadempimento, una fra: «non determinabile con i dati disponibili», «il fascicolo non contiene i dati necessari», «richiede dati di produzione non presenti».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica quali dati di produzione occorrono per valutare l'importanza dell'inadempimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali dati di produzione occorrono per valutare l'importanza dell'inadempimento.\nPASS se: compare l'indicazione di almeno un dato fra volumi lavorati, scarti, fermate e ore di indisponibilità della linea dal 24 febbraio 2031.\nFAIL se: la questione è dichiarata indeterminabile senza indicare quali dati servono.\nÈ indifferente: il numero di dati elencati.\nFonte di authoring: public/01_task.md, richiesta sui dati mancanti",
+      "pass_condition": "compare l'indicazione di almeno un dato fra volumi lavorati, scarti, fermate e ore di indisponibilità della linea dal 24 febbraio 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable qualifica come commisurata alla prestazione inesatta la sospensione del pagamento del saldo.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come commisurata alla prestazione inesatta la sospensione del pagamento del saldo.\nPASS se: compare, riferita alla sospensione del saldo, una fra: «in proporzione», «commisurata», «parziale e proporzionata alla difformita».\nFAIL se: la sospensione integrale del saldo è presentata come dovuta per il solo fatto della contestazione, oppure la questione della misura non è trattata.\nÈ indifferente: il richiamo alla norma sull'eccezione di inadempimento.\nFonte di authoring: punto 6 della PEC; art. 1460 c.c.",
+      "pass_condition": "compare, riferita alla sospensione del saldo, una fra: «in proporzione», «commisurata», «parziale e proporzionata alla difformita».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable afferma che la ripetizione dell'acconto di euro 180.000,00 presuppone il perfezionamento di un rimedio risolutorio.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la ripetizione dell'acconto di euro 180.000,00 presuppone il perfezionamento di un rimedio risolutorio.\nPASS se: compare l'indicazione che la restituzione dell'acconto dipende dal perfezionamento della risoluzione.\nFAIL se: l'acconto è presentato come ripetibile alla data di riferimento, oppure la condizione non è indicata.\nÈ indifferente: il richiamo alla norma sugli effetti della risoluzione.\nFonte di authoring: clausola 6.2; art. 1458 c.c.",
+      "pass_condition": "compare l'indicazione che la restituzione dell'acconto dipende dal perfezionamento della risoluzione.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable indica come azione l'inventario delle prestazioni ricevute prima di formulare domande restitutorie.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione l'inventario delle prestazioni ricevute prima di formulare domande restitutorie.\nPASS se: compare l'indicazione di inventariare le prestazioni ricevute, con menzione dell'impianto installato o della licenza software.\nFAIL se: l'azione non compare.\nÈ indifferente: il dettaglio delle voci inventariate.\nFonte di authoring: clausole 6.2 e 9.2; art. 1458 c.c.",
+      "pass_condition": "compare l'indicazione di inventariare le prestazioni ricevute, con menzione dell'impianto installato o della licenza software.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta il 13 marzo 2031 come risultato di un computo decorrente dal collaudo del 24 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il 13 marzo 2031 come risultato di un computo decorrente dal collaudo del 24 febbraio 2031.\nPASS se: il deliverable non presenta il 13 marzo 2031 come risultato di un computo decorrente dal collaudo del 24 febbraio 2031.\nFAIL se: il 13 marzo 2031 è ricavato da un termine che decorre dal collaudo.\nÈ indifferente: la menzione del collaudo come fatto che ha originato la contestazione.\nFonte di authoring: clausola 14.2",
+      "pass_condition": "il deliverable non presenta il 13 marzo 2031 come risultato di un computo decorrente dal collaudo del 24 febbraio 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta la scadenza del termine della clausola 14.2 come risultato di un computo in giorni lavorativi.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta la scadenza del termine della clausola 14.2 come risultato di un computo in giorni lavorativi.\nPASS se: il deliverable non presenta la scadenza del termine della clausola 14.2 come risultato di un computo in giorni lavorativi.\nFAIL se: la scadenza è ricavata contando dieci giorni lavorativi.\nÈ indifferente: la menzione del giorno della settimana in cui la scadenza cade.\nFonte di authoring: clausola 14.2",
+      "pass_condition": "il deliverable non presenta la scadenza del termine della clausola 14.2 come risultato di un computo in giorni lavorativi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non presenta il 18 marzo 2031 come risultato di un termine di quindici giorni decorrente dal collaudo del 24 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il 18 marzo 2031 come risultato di un termine di quindici giorni decorrente dal collaudo del 24 febbraio 2031.\nPASS se: il deliverable non presenta il 18 marzo 2031 come risultato di un termine di quindici giorni decorrente dal collaudo del 24 febbraio 2031.\nFAIL se: il 18 marzo 2031 è ricavato da un termine che decorre dal collaudo.\nÈ indifferente: la menzione della data del collaudo nella cronologia.\nFonte di authoring: punto 4 della PEC",
+      "pass_condition": "il deliverable non presenta il 18 marzo 2031 come risultato di un termine di quindici giorni decorrente dal collaudo del 24 febbraio 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non segnala come rischio la clausola compromissoria della clausola 15.2, che devolve le controversie ad arbitrato secondo il Regolamento della Camera Arbitrale di Milano.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio la clausola compromissoria della clausola 15.2, che devolve le controversie ad arbitrato secondo il Regolamento della Camera Arbitrale di Milano.\nPASS se: il deliverable non segnala come rischio la clausola compromissoria della clausola 15.2, che devolve le controversie ad arbitrato secondo il Regolamento della Camera Arbitrale di Milano.\nFAIL se: la clausola compromissoria della clausola 15.2 compare fra i profili di rischio o fra le clausole da modificare.\nÈ indifferente: la menzione della sede arbitrale nella descrizione del contratto.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non segnala come rischio la clausola compromissoria della clausola 15.2, che devolve le controversie ad arbitrato secondo il Regolamento della Camera Arbitrale di Milano.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non segnala come esposizione del Committente la licenza non trasferibile dei moduli software prevista dalla clausola 9.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come esposizione del Committente la licenza non trasferibile dei moduli software prevista dalla clausola 9.2.\nPASS se: il deliverable non segnala come esposizione del Committente la licenza non trasferibile dei moduli software prevista dalla clausola 9.2.\nFAIL se: la licenza non trasferibile della clausola 9.2 compare fra i profili di rischio.\nÈ indifferente: la menzione della licenza software nell'inventario delle prestazioni ricevute.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non segnala come esposizione del Committente la licenza non trasferibile dei moduli software prevista dalla clausola 9.2.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "il deliverable non segnala come irregolarità il computo del termine della clausola 14.2 in giorni di calendario.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come irregolarità il computo del termine della clausola 14.2 in giorni di calendario.\nPASS se: il deliverable non segnala come irregolarità il computo del termine della clausola 14.2 in giorni di calendario.\nFAIL se: il computo in giorni di calendario compare fra le irregolarità o fra i profili di rischio.\nÈ indifferente: la menzione del computo in giorni di calendario nella spiegazione della scadenza.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non segnala come irregolarità il computo del termine della clausola 14.2 in giorni di calendario.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provata l'installazione del ricambio del 7 marzo 2031 mentre tratta come non provato l'esito del termine di rimedio.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provata l'installazione del ricambio del 7 marzo 2031 mentre tratta come non provato l'esito del termine di rimedio.\nPASS se: simmetria del controllo: il deliverable non tratta come provata l'installazione del ricambio del 7 marzo 2031 mentre tratta come non provato l'esito del termine di rimedio.\nFAIL se: l'installazione del ricambio è data per avvenuta e nello stesso deliverable l'esito del termine di rimedio è dichiarato non documentato.\nÈ indifferente: l'ordine in cui i due fatti sono trattati.\nFonte di authoring: verbale di collaudo; composizione del fascicolo",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provata l'installazione del ricambio del 7 marzo 2031 mentre tratta come non provato l'esito del termine di rimedio.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il Fornitore non ha rimosso l'inadempimento entro il 13 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il Fornitore non ha rimosso l'inadempimento entro il 13 marzo 2031.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che il Fornitore non ha rimosso l'inadempimento entro il 13 marzo 2031.\nFAIL se: compare l'affermazione che l'inadempimento non è stato rimosso entro il termine.\nÈ indifferente: l'indicazione della verifica da compiere alla scadenza del termine.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che il Fornitore non ha rimosso l'inadempimento entro il 13 marzo 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "contract_deadline_audit.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la sottoscrizione del verbale di collaudo con riserva.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio la sottoscrizione del verbale di collaudo con riserva.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio la sottoscrizione del verbale di collaudo con riserva.\nFAIL se: la sottoscrizione con riserva compare fra i profili di rischio o fra gli elementi che indeboliscono la posizione del Committente.\nÈ indifferente: la menzione della riserva come fatto che conserva le contestazioni.\nFonte di authoring: paragrafo 7 del verbale di collaudo",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la sottoscrizione del verbale di collaudo con riserva.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

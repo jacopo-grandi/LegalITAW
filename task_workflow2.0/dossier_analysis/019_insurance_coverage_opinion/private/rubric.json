@@ -1,0 +1,498 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-019",
+  "title": "Assicurativo. Parere di copertura su richieste di risarcimento",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 30,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable tratta separatamente le tre richieste di risarcimento (Cofrid, Talamone, Marimonti).",
+      "pass_condition": "il deliverable tratta separatamente tutte e tre le richieste di risarcimento: Cofrid, Talamone e Marimonti.",
+      "fail_condition": "anche una sola delle tre richieste manca o non è trattata separatamente.",
+      "indifferent": "La struttura e l’ordine delle tre sezioni.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 (struttura) il deliverable tratta separatamente le tre richieste di risarcimento (Cofrid, Talamone, Marimonti)."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "nessun riferimento normativo estraneo all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "il deliverable cita soltanto art. 1901 c.c.; artt. 1913 e 1915 c.c.; art. 1917, comma 3, c.c.; art. 1932 c.c.",
+      "fail_condition": "compare anche una sola norma o decisione giurisprudenziale fuori da questo elenco, anche come ipotesi o esempio.",
+      "indifferent": "I riferimenti alle clausole della polizza, agli allegati e ai documenti del fascicolo non sono norme.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 (assenza) nessun riferimento normativo estraneo all'elenco chiuso delle fonti del reference pack."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la richiesta di Cofrid Impianti come coperta dalla polizza RCP 8-4471-092.",
+      "pass_condition": "compare, riferita a quella richiesta, una fra: «coperta», «operativa», «in garanzia», «indennizzabile».",
+      "fail_condition": "la richiesta di Cofrid è qualificata come non coperta, oppure la qualificazione non compare.",
+      "indifferent": "l'indicazione dell'importo.",
+      "source": "polizza art. 8 + scheda di polizza.",
+      "severity": "alta",
+      "raw_text": "B.1 esito Cofrid (issue: I-01) (tipo: qualificazione)\nVerifica: il deliverable qualifica la richiesta di Cofrid Impianti come coperta dalla polizza RCP 8-4471-092.\nPass se: compare, riferita a quella richiesta, una fra: «coperta», «operativa», «in garanzia», «indennizzabile».\nFail se: la richiesta di Cofrid è qualificata come non coperta, oppure la qualificazione non compare.\nIndifferente: l'indicazione dell'importo.\n—— non passa al judge —— Fonte: polizza art. 8 + scheda di polizza. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il reclamo di Marimonti Alimentari come non coperto dalla polizza.",
+      "pass_condition": "compare, riferita a quel reclamo, una fra: «non coperta», «non operativa», «fuori garanzia», «esclusa dalla copertura».",
+      "fail_condition": "il reclamo è qualificato come coperto, oppure la qualificazione non compare.",
+      "indifferent": "la quantificazione del danno reclamato.",
+      "source": "reclamo Marimonti, fornitura del 18/11/2025, vs scheda di polizza.",
+      "severity": "alta",
+      "raw_text": "B.2 esito Marimonti (issue: I-02) (tipo: qualificazione)\nVerifica: il deliverable qualifica il reclamo di Marimonti Alimentari come non coperto dalla polizza.\nPass se: compare, riferita a quel reclamo, una fra: «non coperta», «non operativa», «fuori garanzia», «esclusa dalla copertura».\nFail se: il reclamo è qualificato come coperto, oppure la qualificazione non compare.\nIndifferente: la quantificazione del danno reclamato.\n—— non passa al judge —— Fonte: reclamo Marimonti, fornitura del 18/11/2025, vs scheda di polizza. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che la fornitura oggetto del reclamo Marimonti è anteriore alla data di messa in circolazione dalla quale opera la polizza.",
+      "pass_condition": "compare l'affermazione che la fornitura, o il prodotto, o il fatto, è anteriore alla data indicata nella scheda di polizza, oppure anteriore al 1° luglio 2026.",
+      "fail_condition": "l'esito negativo è ricondotto ad altra ragione, oppure non è motivato.",
+      "indifferent": "il richiamo alla data della richiesta.",
+      "source": "scheda di polizza, «Data di messa in circolazione».",
+      "severity": "alta",
+      "raw_text": "B.3 ragione dell'esito Marimonti (issue: I-02) (tipo: presenza)\nVerifica: il deliverable afferma che la fornitura oggetto del reclamo Marimonti è anteriore alla data di messa in circolazione dalla quale opera la polizza.\nPass se: compare l'affermazione che la fornitura, o il prodotto, o il fatto, è anteriore alla data indicata nella scheda di polizza, oppure anteriore al 1° luglio 2026.\nFail se: l'esito negativo è ricondotto ad altra ragione, oppure non è motivato.\nIndifferente: il richiamo alla data della richiesta.\n—— non passa al judge —— Fonte: scheda di polizza, «Data di messa in circolazione». Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable contesta la parte della clausola che imputa tutte le spese di resistenza dentro il massimale, distinguendola dalla scelta del difensore.",
+      "pass_condition": "il limite inderogabile dell'art. 1917, comma 3, è applicato alla quota di spese e la questione del legale designato è trattata separatamente.",
+      "fail_condition": "tutte le spese sono considerate integralmente comprese nel massimale, oppure l'intera clausola è liquidata come invalida senza distinguere i due profili.",
+      "indifferent": "la citazione degli articoli del codice civile.",
+      "source": "polizza art. 14 + lettera del liquidatore 10/03/2028; artt. 1917, co. 3 e 1932 c.c.",
+      "severity": "alta",
+      "raw_text": "B.4 spese di difesa (issue: I-03) (tipo: presenza)\nVerifica: il deliverable contesta la parte della clausola che imputa tutte le spese di resistenza dentro il massimale, distinguendola dalla scelta del difensore.\nPass se: il limite inderogabile dell'art. 1917, comma 3, è applicato alla quota di spese e la questione del legale designato è trattata separatamente.\nFail se: tutte le spese sono considerate integralmente comprese nel massimale, oppure l'intera clausola è liquidata come invalida senza distinguere i due profili.\nIndifferente: la citazione degli articoli del codice civile.\n—— non passa al judge —— Fonte: polizza art. 14 + lettera del liquidatore 10/03/2028; artt. 1917, co. 3 e 1932 c.c. Gravità: alta."
+    },
+    {
+      "id": "B.4a",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la previsione sui legali designati è automaticamente nulla sulla sola base del testo della clausola.",
+      "pass_condition": "il deliverable non afferma che la previsione sui legali designati è nulla sulla sola base del testo della clausola; se ne contesta la validità, lo fa subordinandola alla gestione concreta della lite, all'assunzione della difesa da parte della compagnia o a un conflitto di interessi.",
+      "fail_condition": "la designazione del legale è dichiarata nulla o non opponibile senza condizioni, oppure la nullità è presentata come probabile senza indicare da quali circostanze concrete dipende.",
+      "indifferent": null,
+      "source": "polizza art. 14 + art. 1917, co. 3 c.c.",
+      "severity": "media",
+      "raw_text": "B.4a scelta del difensore non automaticamente invalida (issue: I-03) (tipo: assenza)\nVerifica: il deliverable non afferma che la previsione sui legali designati è automaticamente nulla sulla sola base del testo della clausola.\nPass se: l'eventuale contestazione è subordinata alla gestione concreta della lite, all'assunzione della difesa da parte della compagnia o a un conflitto di interessi.\nFail se: la designazione del legale è dichiarata senz'altro nulla o non opponibile senza alcuna condizione.\n—— non passa al judge —— Fonte: polizza art. 14 + art. 1917, co. 3 c.c. Gravità: media."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il ritardo nella denuncia del sinistro Cofrid non comporta la perdita del diritto al risarcimento.",
+      "pass_condition": "compare una fra: «non comporta decadenza», «non fa perdere il diritto», «non determina la perdita della copertura», «la decadenza non opera».",
+      "fail_condition": "il deliverable afferma che il diritto al risarcimento è decaduto, oppure il punto non è trattato.",
+      "indifferent": "il richiamo alla riduzione del risarcimento.",
+      "source": "polizza art. 13 + lettera del liquidatore; artt. 1915, co. 2 e 1932 c.c.",
+      "severity": "alta",
+      "raw_text": "B.5 denuncia tardiva (issue: I-05) (tipo: presenza)\nVerifica: il deliverable afferma che il ritardo nella denuncia del sinistro Cofrid non comporta la perdita del diritto al risarcimento.\nPass se: compare una fra: «non comporta decadenza», «non fa perdere il diritto», «non determina la perdita della copertura», «la decadenza non opera».\nFail se: il deliverable afferma che il diritto al risarcimento è decaduto, oppure il punto non è trattato.\nIndifferente: il richiamo alla riduzione del risarcimento.\n—— non passa al judge —— Fonte: polizza art. 13 + lettera del liquidatore; artt. 1915, co. 2 e 1932 c.c. Gravità: alta."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che alla compagnia spetta al più una riduzione del risarcimento in ragione del pregiudizio sofferto.",
+      "pass_condition": "compare una fra: «riduzione dell'indennizzo», «riduzione del risarcimento», «indennizzo ridotto in proporzione al pregiudizio».",
+      "fail_condition": "al ritardo non è ricollegata alcuna conseguenza, oppure vi è ricollegata la sola decadenza.",
+      "indifferent": "la quantificazione della riduzione.",
+      "source": "art. 1915, co. 2 c.c.",
+      "severity": "alta",
+      "raw_text": "B.6 conseguenza del ritardo nella denuncia (issue: I-05) (tipo: presenza)\nVerifica: il deliverable afferma che alla compagnia spetta al più una riduzione del risarcimento in ragione del pregiudizio sofferto.\nPass se: compare una fra: «riduzione dell'indennizzo», «riduzione del risarcimento», «indennizzo ridotto in proporzione al pregiudizio».\nFail se: al ritardo non è ricollegata alcuna conseguenza, oppure vi è ricollegata la sola decadenza.\nIndifferente: la quantificazione della riduzione.\n—— non passa al judge —— Fonte: art. 1915, co. 2 c.c. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la richiesta di Talamone Ittica come non coperta perché pervenuta mentre la garanzia era sospesa.",
+      "pass_condition": "compare, riferita a quella richiesta, l'indicazione di garanzia «sospesa» al momento in cui la richiesta è pervenuta.",
+      "fail_condition": "la richiesta è qualificata come coperta, oppure l'esito negativo è ricondotto ad altra ragione.",
+      "indifferent": "il richiamo al comportamento dell'intermediario.",
+      "source": "quietanza Q/2028/0041127 + lettera Talamone 19/01/2028.",
+      "severity": "alta",
+      "raw_text": "B.7 esito Talamone (issue: I-06) (tipo: qualificazione)\nVerifica: il deliverable qualifica la richiesta di Talamone Ittica come non coperta perché pervenuta mentre la garanzia era sospesa.\nPass se: compare, riferita a quella richiesta, l'indicazione di garanzia «sospesa» al momento in cui la richiesta è pervenuta.\nFail se: la richiesta è qualificata come coperta, oppure l'esito negativo è ricondotto ad altra ragione.\nIndifferente: il richiamo al comportamento dell'intermediario.\n—— non passa al judge —— Fonte: quietanza Q/2028/0041127 + lettera Talamone 19/01/2028. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la garanzia è rimasta sospesa per l'intero mese di gennaio 2028.",
+      "pass_condition": "il periodo di sospensione non è indicato come coincidente con il mese di gennaio 2028, né come decorrente dal 1° gennaio 2028.",
+      "fail_condition": "la sospensione è indicata come estesa a tutto gennaio 2028 o come decorrente dalla scadenza della rata.",
+      "indifferent": null,
+      "source": "affermazione della compagnia, lettera 10/03/2028; art. 1901, co. 2 c.c.",
+      "severity": "alta",
+      "raw_text": "B.8 estensione della sospensione (issue: I-06) (tipo: assenza)\nVerifica: il deliverable non afferma che la garanzia è rimasta sospesa per l'intero mese di gennaio 2028.\nPass se: il periodo di sospensione non è indicato come coincidente con il mese di gennaio 2028, né come decorrente dal 1° gennaio 2028.\nFail se: la sospensione è indicata come estesa a tutto gennaio 2028 o come decorrente dalla scadenza della rata.\n—— non passa al judge —— Fonte: affermazione della compagnia, lettera 10/03/2028; art. 1901, co. 2 c.c. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che il pagamento tardivo della rata ha risolto la polizza o l'ha resa inefficace.",
+      "pass_condition": "la polizza non è indicata come risolta, cessata, decaduta o priva di effetto per il ritardo nel pagamento.",
+      "fail_condition": "il ritardo è presentato come causa di risoluzione o di inefficacia della polizza.",
+      "indifferent": null,
+      "source": "quietanza del 27/01/2028.",
+      "severity": "media",
+      "raw_text": "B.9 effetto del ritardo sul contratto (issue: I-07) (tipo: assenza)\nVerifica: il deliverable non afferma che il pagamento tardivo della rata ha risolto la polizza o l'ha resa inefficace.\nPass se: la polizza non è indicata come risolta, cessata, decaduta o priva di effetto per il ritardo nel pagamento.\nFail se: il ritardo è presentato come causa di risoluzione o di inefficacia della polizza.\n—— non passa al judge —— Fonte: quietanza del 27/01/2028. Gravità: media."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica la voce relativa alla fornitura in sostituzione delle valvole come esclusa dalla garanzia.",
+      "pass_condition": "compare, riferita a quella voce, una fra: «esclusa», «non indennizzabile», «non coperta», «a carico dell'assicurato».",
+      "fail_condition": "la voce è trattata come indennizzabile, oppure non è distinta dalle altre voci.",
+      "indifferent": "la denominazione usata per la voce.",
+      "source": "polizza art. 11 lett. a + richiesta Cofrid.",
+      "severity": "alta",
+      "raw_text": "B.10 esclusione della fornitura sostitutiva (issue: I-08) (tipo: qualificazione)\nVerifica: il deliverable qualifica la voce relativa alla fornitura in sostituzione delle valvole come esclusa dalla garanzia.\nPass se: compare, riferita a quella voce, una fra: «esclusa», «non indennizzabile», «non coperta», «a carico dell'assicurato».\nFail se: la voce è trattata come indennizzabile, oppure non è distinta dalle altre voci.\nIndifferente: la denominazione usata per la voce.\n—— non passa al judge —— Fonte: polizza art. 11 lett. a + richiesta Cofrid. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica come rientranti nella garanzia i danni all'impianto e alla merce stoccata del terzo.",
+      "pass_condition": "quelle voci sono indicate come coperte, indennizzabili o in garanzia.",
+      "fail_condition": "sono indicate come escluse, oppure non sono distinte dalla voce di sostituzione.",
+      "indifferent": "la ripartizione fra le singole sottovoci.",
+      "source": "polizza art. 7 + richiesta Cofrid.",
+      "severity": "alta",
+      "raw_text": "B.11 danni a cose del terzo (issue: I-08) (tipo: qualificazione)\nVerifica: il deliverable qualifica come rientranti nella garanzia i danni all'impianto e alla merce stoccata del terzo.\nPass se: quelle voci sono indicate come coperte, indennizzabili o in garanzia.\nFail se: sono indicate come escluse, oppure non sono distinte dalla voce di sostituzione.\nIndifferente: la ripartizione fra le singole sottovoci.\n—— non passa al judge —— Fonte: polizza art. 7 + richiesta Cofrid. Gravità: alta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che alle richieste pervenute nel 2028 si applicano i valori introdotti dall'appendice n. 1.",
+      "pass_condition": "compare l'indicazione che massimale e franchigia sono quelli dell'appendice, oppure quelli in vigore alla data della richiesta.",
+      "fail_condition": "sono indicati i valori originari della scheda di polizza, oppure i valori in vigore alla data della fornitura.",
+      "indifferent": "l'ordine in cui i due valori sono esposti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 versione applicabile (issue: I-09) (tipo: presenza)\nVerifica: il deliverable afferma che alle richieste pervenute nel 2028 si applicano i valori introdotti dall'appendice n. 1.\nPass se: compare l'indicazione che massimale e franchigia sono quelli dell'appendice, oppure quelli in vigore alla data della richiesta.\nFail se: sono indicati i valori originari della scheda di polizza, oppure i valori in vigore alla data della fornitura.\nIndifferente: l'ordine in cui i due valori sono esposti.\n—— non passa al judge —— Fonte: appendice n. 1 del 01/12/2027. Gravità: media.\n\nChiusura obbligatoria"
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come nulla, invalida o vessatoria la clausola che lega la garanzia alla richiesta di risarcimento (art. 8 della polizza). (N.1)",
+      "pass_condition": "il deliverable non qualifica come nulla, invalida o vessatoria la clausola dell’art. 8 della polizza che collega la garanzia alla richiesta di risarcimento.",
+      "fail_condition": "la clausola è definita anche una sola volta nulla, invalida o vessatoria, anche come ipotesi o esempio.",
+      "indifferent": "La descrizione neutra del contenuto della clausola.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 (assenza) il deliverable non qualifica come nulla, invalida o vessatoria la clausola che lega la garanzia alla richiesta di risarcimento (art. 8 della polizza). (N.1)"
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la franchigia per sinistro. (N.2)",
+      "pass_condition": "il deliverable non segnala come criticità la franchigia per sinistro.",
+      "fail_condition": "la franchigia per sinistro è presentata come criticità o rischio anche una sola volta.",
+      "indifferent": "La menzione neutra della franchigia e del suo importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 (assenza) il deliverable non segnala come criticità la franchigia per sinistro. (N.2)"
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità la clausola di regolazione del premio sul fatturato. (N.3)",
+      "pass_condition": "il deliverable non segnala come criticità la clausola di regolazione del premio sul fatturato.",
+      "fail_condition": "la clausola di regolazione del premio sul fatturato è presentata come criticità o rischio anche una sola volta.",
+      "indifferent": "La menzione neutra della clausola.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 (assenza) il deliverable non segnala come criticità la clausola di regolazione del premio sul fatturato. (N.3)"
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica la polizza RCT 2-9930-518 di Ostiense Danni come applicabile a una delle tre richieste. (N.4)",
+      "pass_condition": "il deliverable non indica la polizza RCT 2-9930-518 di Ostiense Danni come applicabile a nessuna delle tre richieste.",
+      "fail_condition": "la polizza RCT 2-9930-518 di Ostiense Danni è indicata come applicabile, anche solo in parte o in via ipotetica, a una qualsiasi delle tre richieste.",
+      "indifferent": "La menzione della polizza solo per escluderne l’applicazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 (assenza) il deliverable non indica la polizza RCT 2-9930-518 di Ostiense Danni come applicabile a una delle tre richieste. (N.4)"
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità l'assunzione della gestione della vertenza da parte della compagnia. (N.5)",
+      "pass_condition": "il deliverable non segnala come criticità l’assunzione della gestione della vertenza da parte della compagnia.",
+      "fail_condition": "l’assunzione della gestione della vertenza è presentata come criticità o rischio anche una sola volta.",
+      "indifferent": "La descrizione neutra della gestione della vertenza.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 (assenza) il deliverable non segnala come criticità l'assunzione della gestione della vertenza da parte della compagnia. (N.5)"
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come criticità il massimale aggregato per periodo assicurativo. (N.6)",
+      "pass_condition": "il deliverable non segnala come criticità il massimale aggregato per periodo assicurativo.",
+      "fail_condition": "il massimale aggregato per periodo è presentato come criticità o rischio anche una sola volta.",
+      "indifferent": "La menzione neutra del massimale e del suo funzionamento.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 (assenza) il deliverable non segnala come criticità il massimale aggregato per periodo assicurativo. (N.6)"
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come tardiva la denuncia del sinistro Talamone. (N.7)",
+      "pass_condition": "il deliverable non qualifica come tardiva la denuncia del sinistro Talamone.",
+      "fail_condition": "la denuncia Talamone è definita tardiva o fuori termine anche una sola volta.",
+      "indifferent": "La menzione della data della denuncia, se non qualificata come tardiva.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 (assenza) il deliverable non segnala come tardiva la denuncia del sinistro Talamone. (N.7)"
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la responsabilità di Valdirosa verso i tre clienti è accertata. (presunzione dell'esito)",
+      "pass_condition": "il deliverable non afferma che la responsabilità di Valdirosa verso Cofrid, Talamone e Marimonti sia accertata.",
+      "fail_condition": "la responsabilità verso anche uno solo dei tre clienti è presentata come accertata, anche come ipotesi o esempio.",
+      "indifferent": "La valutazione della copertura assicurativa, distinta dall’accertamento della responsabilità.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 (assenza) il deliverable non afferma che la responsabilità di Valdirosa verso i tre clienti è accertata. (presunzione dell'esito)"
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica di denunciare immediatamente anche il reclamo Marimonti, pur qualificandolo prima facie fuori dalla retroattività, per preservare la posizione e consentire la valutazione della compagnia.",
+      "pass_condition": "compare un'azione immediata di denuncia o riserva verso la compagnia.",
+      "fail_condition": "il reclamo non ancora denunciato è lasciato senza azione.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 denuncia prudenziale Marimonti (issue: I-10) (tipo: presenza)\nVerifica: il deliverable indica di denunciare immediatamente anche il reclamo Marimonti, pur qualificandolo prima facie fuori dalla retroattività, per preservare la posizione e consentire la valutazione della compagnia.\nPass se: compare un'azione immediata di denuncia o riserva verso la compagnia.\nFail se: il reclamo non ancora denunciato è lasciato senza azione.\n—— non passa al judge —— Fonte: fascicolo alla data del 16/03/2028 + reclamo Marimonti. Gravità: media."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica € 118.500,00 come voce esclusa dalla garanzia nella richiesta Cofrid.",
+      "pass_condition": "il deliverable indica € 118.500,00 come voce esclusa dalla garanzia nella richiesta Cofrid.",
+      "fail_condition": "manca l’importo € 118.500,00 o è attribuito a una voce diversa o a una richiesta diversa.",
+      "indifferent": "Il formato di esposizione dell’importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 (valore) il deliverable indica € 118.500,00 come voce esclusa dalla garanzia nella richiesta Cofrid."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica € 867.900,00 come importo riferibile alla garanzia nella richiesta Cofrid.",
+      "pass_condition": "il deliverable indica € 867.900,00 come importo riferibile alla garanzia nella richiesta Cofrid.",
+      "fail_condition": "manca l’importo € 867.900,00 o è attribuito a una voce diversa o a una richiesta diversa.",
+      "indifferent": "Il formato di esposizione dell’importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 (valore) il deliverable indica € 867.900,00 come importo riferibile alla garanzia nella richiesta Cofrid."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica € 15.000,00 come franchigia applicabile.",
+      "pass_condition": "il deliverable indica € 15.000,00 come franchigia applicabile.",
+      "fail_condition": "manca € 15.000,00 o una franchigia di importo diverso è indicata come applicabile.",
+      "indifferent": "Il formato di esposizione dell’importo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 (valore) il deliverable indica € 15.000,00 come franchigia applicabile."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica € 5.000,00 come franchigia applicabile.",
+      "pass_condition": "il deliverable non indica € 5.000,00 come franchigia applicabile.",
+      "fail_condition": "€ 5.000,00 è indicato come franchigia applicabile, anche solo in un esempio o come alternativa.",
+      "indifferent": "La menzione di € 5.000,00 per una voce diversa dalla franchigia applicabile.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 (assenza) il deliverable non indica € 5.000,00 come franchigia applicabile."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non indica € 986.400,00 per intero come importo riferibile alla garanzia.",
+      "pass_condition": "il deliverable non indica l’intero importo di € 986.400,00 come riferibile alla garanzia.",
+      "fail_condition": "l’intero importo di € 986.400,00 è indicato come riferibile alla garanzia, anche solo in un esempio o come alternativa.",
+      "indifferent": "La menzione di € 986.400,00 per descrivere il totale della richiesta, senza attribuirlo per intero alla garanzia.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 (assenza) il deliverable non indica € 986.400,00 per intero come importo riferibile alla garanzia."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica € 852.900,00 come importo netto della richiesta Cofrid dopo la franchigia, fermo l'accertamento della responsabilità e dell'indennizzo.",
+      "pass_condition": "il deliverable indica € 852.900,00 come importo netto della richiesta Cofrid dopo la franchigia, mantenendo fermo l’accertamento della responsabilità e dell’indennizzo.",
+      "fail_condition": "manca l’importo netto di € 852.900,00, è attribuito a una voce diversa, oppure è presentato come somma definitivamente dovuta senza riserva sull’accertamento della responsabilità e dell’indennizzo.",
+      "indifferent": "il formato dell'importo (con o senza decimali, simbolo o sigla dell'euro).",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 (valore) il deliverable indica € 852.900,00 come importo netto della richiesta Cofrid dopo la franchigia, fermo l'accertamento della responsabilità e dell'indennizzo.\n\nNOTA\n\nDenuncia tardiva. L'art. 1915 c.c. distingue: la perdita del diritto all'indennità consegue alla sola omissione dolosa, mentre l'omissione o il ritardo colposi danno luogo, ai sensi del secondo comma, alla riduzione dell'indennità in ragione del pregiudizio sofferto dall'assicuratore. L'art. 1932 c.c. include il secondo comma dell'art. 1915 fra le disposizioni inderogabili se non in senso più favorevole all'assicurato: la clausola dell'art. 13 di polizza, che commina la decadenza per il ritardo colposo, è quindi nulla e sostituita di diritto dalla disciplina legale. È il fondamento di B.5 e B.6. Lo stesso art. 1932 rende inderogabile in pejus il terzo comma dell'art. 1917 c.c., ed è il fondamento di B.4 sulle spese di difesa."
+    }
+  ]
+}

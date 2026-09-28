@@ -1,0 +1,124 @@
+{
+  "task_id": "WF2-031",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Fiscale. Dossier dei red flag su una target in acquisizione",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2028-03-09",
+  "workflow_family": "dossier_analysis",
+  "subtask": "due_diligence_memo",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "in corso",
+  "legal_area": [
+    "fiscale / due diligence tributaria",
+    "B. Dossier analysis",
+    "Corporate / M&A",
+    "Compliance & Regulatory"
+  ],
+  "document_type": "in corso",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "dossier_analysis",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: red_flag_fiscali.md.\n\n# Struttura del deliverable\n\nFile da produrre: `red_flag_fiscali.md`. Lunghezza massima 2.200 parole.\nSezioni obbligatorie, nell'ordine:\n\n## 1. Sintesi per la decisione\nNon piu' di dieci righe: quanto vale l'esposizione fiscale complessiva e quali sono i punti che\nincidono sulla trattativa.\n\n## 2. Matrice dei red flag fiscali\nUna tabella con una riga per rilievo e le colonne: identificativo, oggetto, periodo d'imposta,\ndocumento da cui risulta, natura del rilievo, esposizione stimata, copertura contrattuale, azione\nrichiesta. Ogni riga porta il documento da cui deriva.\n\n## 3. Calcoli\nPer ciascun importo e ciascuna scadenza della matrice, i passaggi seguiti.\n\n## 4. Che cosa non e' un rilievo\nGli elementi del fascicolo che potrebbero sembrare critici e non lo sono, con la ragione.\n\n## 5. Copertura contrattuale e periodi scoperti\nChe cosa la bozza di contratto copre e che cosa non copre.\n\n## 6. Perdite fiscali: utilizzabilita' dopo l'acquisto\nLa risposta per il comitato investimenti, con il percorso seguito.\n\n## 7. Elementi mancanti dal fascicolo\nI documenti da richiedere e che cosa non e' determinabile allo stato.\n\n## 8. Che cosa fare\nLe azioni da compiere prima dell'esecuzione, in ordine.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "cross_document_reasoning",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_processo_verbale_di_constatazione.pdf",
+    "public/documents/02_bilancio_2027.pdf",
+    "public/documents/03_bilancio_2026.pdf",
+    "public/documents/04_atto_di_cessione_di_ramo_d_azienda.pdf",
+    "public/documents/05_bozza_contratto_di_compravendita_di_quote.docx",
+    "public/documents/06_documentazione_nazionale_prezzi_di_trasferimento.pdf",
+    "public/documents/07_comunicazione_di_irregolarita.pdf",
+    "public/documents/08_quietanza_modello_f24.pdf",
+    "public/documents/09_nota_del_direttore_amministrativo.docx"
+  ],
+  "expected_deliverable": "red_flag_fiscali.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "cross_document_reasoning",
+    "legal_correctness",
+    "false_positive_control",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

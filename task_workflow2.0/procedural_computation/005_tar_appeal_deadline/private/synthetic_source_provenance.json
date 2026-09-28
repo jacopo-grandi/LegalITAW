@@ -1,0 +1,23 @@
+{
+  "schema_version": "synthetic_source_provenance_v1",
+  "task_id": "WF2-005",
+  "public_document": "public/documents/03_email_informale_23_luglio_2026.pdf",
+  "decision": "D-07-A-with-fallback-B",
+  "decision_date": "2026-08-21",
+  "source_attachment_id": "attachment:2e9fb2fe-320c-4c88-b617-90a541ab3fcb",
+  "source_retrieval_status": "listed_in_notion_but_inaccessible",
+  "materialization_status": "synthetic_reconstruction",
+  "sha256": "a94e51224970dec7d917bfd5a1af24ab5943d47cf2123957f7e16a0782340743",
+  "generator": "scripts/build_wf2_005_synthetic_email.py",
+  "reconstruction_constraints": [
+    "email informale datata 23 luglio 2026",
+    "atto non ancora adottato né protocollato",
+    "assenza di testo finale o dispositivo",
+    "trasmissione formale annunciata come successiva"
+  ],
+  "limitations": [
+    "non è una copia dell'allegato Notion originale",
+    "non può essere usata come gold evidence oltre ai fatti ricostruiti dichiarati",
+    "richiede sostituzione se il file originale torna accessibile"
+  ]
+}

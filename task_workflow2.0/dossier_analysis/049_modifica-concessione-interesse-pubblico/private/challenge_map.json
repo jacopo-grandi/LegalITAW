@@ -1,0 +1,263 @@
+{
+  "task_id": "WF2-049",
+  "lato_assistito": "Comune di Pietracalma, ente concedente",
+  "data_di_riferimento": "2026-08-31",
+  "stato_del_fascicolo": "proposta di modifica ricevuta; nessun atto aggiuntivo approvato o pubblicato",
+  "fonti_ammesse": [
+    "contracts"
+  ],
+  "dati_mancanti": [
+    "acquisire analisi sulle alternative",
+    "richiedere modello per scenari"
+  ],
+  "calcoli": [
+    "sei anni",
+    "euro 38.400.000",
+    "euro 9.840.000",
+    "25,625%",
+    "euro 2.100.000",
+    "92,71%",
+    "euro 3.200.000",
+    "euro 4.600.000"
+  ],
+  "errori_bersaglio": [
+    "modifica indivisibile",
+    "integrazione uguale infungibilità",
+    "calo domanda del 30%",
+    "garanzia ricavi neutra",
+    "servizio energetico nell'oggetto originario",
+    "avviso sul solo costo lavori",
+    "note istruttorie come pareri",
+    "proroga necessaria per definizione"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "oggetto originario",
+      "gravita": "alta",
+      "affermazione_richiesta": "la concessione riguarda parcheggi e mobilità nel centro, non la gestione energetica di edifici",
+      "evidenza": "contratto, articolo 3",
+      "azione": "usare l'oggetto come parametro della natura",
+      "cautela": "non estendere l'oggetto per analogia"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "modifica proposta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la proposta aggiunge 420 stalli, colonnine e proroga di sei anni",
+      "evidenza": "proposta del 18 luglio 2026",
+      "azione": "scomporre le tre componenti",
+      "cautela": "non valutarle come pacchetto indivisibile"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "valore originario",
+      "gravita": "alta",
+      "affermazione_richiesta": "il valore stimato originario è euro 38.400.000",
+      "evidenza": "quadro economico allegato al bando",
+      "azione": "usare questo denominatore per i confronti",
+      "cautela": "non usare i ricavi già maturati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "valore modifica",
+      "gravita": "alta",
+      "affermazione_richiesta": "il valore incrementale stimato è euro 9.840.000",
+      "evidenza": "quadro valore: nuovi ricavi e contributo",
+      "azione": "verificare il calcolo prima della delibera",
+      "cautela": "non usare il solo costo lavori"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "percentuale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la modifica vale il 25,625% del valore originario",
+      "evidenza": "9.840.000 diviso 38.400.000",
+      "azione": "riportare metodo e risultato",
+      "cautela": "non arrotondare al 20%"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "lavori supplementari",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli stalli aggiuntivi possono essere tecnicamente integrati ma manca la prova dell'infungibilità del concessionario",
+      "evidenza": "relazione tecnica descrive integrazione del sistema, non costi del cambio",
+      "azione": "acquisire analisi sulle alternative",
+      "cautela": "non usare integrazione come sinonimo di impossibilità di sostituzione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "circostanze imprevedibili",
+      "gravita": "alta",
+      "affermazione_richiesta": "il calo domanda 2020-2022 è storico e non spiega da solo la modifica del 2026",
+      "evidenza": "studio domanda mostra recupero nel 2024-2025",
+      "azione": "isolare eventi nuovi e impatto residuo",
+      "cautela": "non chiamare imprevedibile un dato già assorbito"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "natura generale",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'aggiunta di gestione energetica altererebbe la natura della concessione",
+      "evidenza": "nota ambientale propone servizio su edifici comunali non connesso ai parcheggi",
+      "azione": "separare quel servizio e valutare nuova procedura",
+      "cautela": "non inserirlo nell'atto aggiuntivo"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "rischio operativo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la garanzia comunale di ricavi minimi trasferirebbe una parte sostanziale del rischio al Comune",
+      "evidenza": "proposta garantisce euro 2.100.000 annui",
+      "azione": "eliminare o ridisegnare la garanzia",
+      "cautela": "non presentarla come mero riequilibrio"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "durata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la proroga di sei anni richiede prova di necessità rispetto agli investimenti e alla remunerazione",
+      "evidenza": "PEF non separa recupero capitale e rendimento",
+      "azione": "richiedere modello per scenari",
+      "cautela": "non usare la durata come variabile di chiusura"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "PEF originario",
+      "gravita": "alta",
+      "affermazione_richiesta": "il PEF originario assumeva 1.180.000 ingressi annui",
+      "evidenza": "PEF, foglio domanda",
+      "azione": "confrontare serie storica omogenea",
+      "cautela": "non usare accessi giornalieri come ingressi"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "domanda aggiornata",
+      "gravita": "alta",
+      "affermazione_richiesta": "la domanda 2025 è 1.094.000 ingressi, pari al 92,71% dell'assunto",
+      "evidenza": "studio domanda e calcolo",
+      "azione": "misurare lo scostamento e il nesso economico",
+      "cautela": "non descrivere un crollo del 30%"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "contributo pubblico",
+      "gravita": "alta",
+      "affermazione_richiesta": "il nuovo contributo di euro 3.200.000 incide sul valore e sul rischio",
+      "evidenza": "proposta e parere finanziario",
+      "azione": "includerlo nella valutazione complessiva",
+      "cautela": "non trattarlo come finanziamento neutro"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "interesse pubblico",
+      "gravita": "alta",
+      "affermazione_richiesta": "la delibera di indirizzo richiama riduzione traffico ma non confronta alternative e costi",
+      "evidenza": "delibera numero 44",
+      "azione": "integrare istruttoria con opzioni e indicatori",
+      "cautela": "non usare una formula apodittica"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "pubblicità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza di avviso è incompleta su natura e valore della modifica",
+      "evidenza": "bozza riporta solo lavori per euro 4.600.000",
+      "azione": "allineare avviso a tutte le componenti",
+      "cautela": "non pubblicare un valore parziale"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "pareri",
+      "gravita": "alta",
+      "affermazione_richiesta": "mancano parere legale definitivo, validazione PEF e verifica ambientale sulla nuova componente",
+      "evidenza": "fascicolo contiene note istruttorie non firmate",
+      "azione": "porre i tre pareri come gate",
+      "cautela": "non presentare le note come pareri favorevoli"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "modifica indivisibile",
+      "chiave_nel_criterio": "modifica indivisibile"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "integrazione uguale infungibilità",
+      "chiave_nel_criterio": "integrazione uguale infungibilità"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "calo domanda del 30%",
+      "chiave_nel_criterio": "calo domanda del 30%"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "garanzia ricavi neutra",
+      "chiave_nel_criterio": "garanzia ricavi neutra"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "servizio energetico nell'oggetto originario",
+      "chiave_nel_criterio": "servizio energetico nell'oggetto originario"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "avviso sul solo costo lavori",
+      "chiave_nel_criterio": "avviso sul solo costo lavori"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "note istruttorie come pareri",
+      "chiave_nel_criterio": "note istruttorie come pareri"
+    },
+    {
+      "id": "N-08",
+      "oggetto": "proroga necessaria per definizione",
+      "chiave_nel_criterio": "proroga necessaria per definizione"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_contratto_concessione.pdf",
+      "funzione": "Contratto di concessione"
+    },
+    {
+      "file": "02_pef_originario.xlsx",
+      "funzione": "PEF originario"
+    },
+    {
+      "file": "03_proposta_modifica.pdf",
+      "funzione": "Proposta del concessionario"
+    },
+    {
+      "file": "04_delibera_indirizzo.pdf",
+      "funzione": "Delibera di indirizzo"
+    },
+    {
+      "file": "05_relazione_tecnica.pdf",
+      "funzione": "Relazione tecnica"
+    },
+    {
+      "file": "06_studio_domanda.pdf",
+      "funzione": "Studio della domanda"
+    },
+    {
+      "file": "07_parere_finanziario.pdf",
+      "funzione": "Parere finanziario"
+    },
+    {
+      "file": "08_quadro_valore.xlsx",
+      "funzione": "Quadro del valore della concessione"
+    },
+    {
+      "file": "09_nota_ambientale.pdf",
+      "funzione": "Nota ambientale"
+    },
+    {
+      "file": "10_corrispondenza_e_avviso.eml",
+      "funzione": "Corrispondenza e bozza avviso"
+    }
+  ]
+}

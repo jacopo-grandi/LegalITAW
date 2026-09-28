@@ -1,0 +1,122 @@
+{
+  "task_id": "WF2-052",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Decreto ingiuntivo, opposizione e provvisoria esecuzione",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2031-06-18",
+  "workflow_family": "procedural_computation",
+  "subtask": "procedural_timeline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "medium",
+  "legal_area": [
+    "Litigation & Arbitration",
+    "C. Procedural computation",
+    "Contenzioso",
+    "Contrattualistica"
+  ],
+  "document_type": "medium",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: procedural_map.md.\n\n# WF2-052 - Struttura del deliverable\n\nProdurre `procedural_map.md`. Limite complessivo: 2600 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Posizione processuale e stato del titolo\nVeste che l'opponente assume, qualificazione del rapporto e stato del titolo alla data di riferimento.\n\n### 2. Computo del termine di opposizione\nPassaggi del calcolo: durata, giorno di decorrenza e atto da cui si ricava, scadenza nominale, eventuale proroga, scadenza effettiva, tempo residuo.\n\n### 3. Termini e scadenze del giudizio\nTabella delle scadenze con data o termine, adempimento, soggetto onerato e conseguenza dell'inosservanza; verifica del calendario che la bozza si è data.\n\n### 4. Provvisoria esecuzione e sospensione\nStato dell'esecuzione provvisoria, presupposti delle istanze delle due parti e riformulazione delle domande della bozza.\n\n### 5. Perimetro del contestabile\nComposizione dell'importo ingiunto, importo contestabile sulla base dei documenti, importo contestato dalla bozza e scostamento.\n\n### 6. Prove, mediazione, istanze e dati mancanti\nValore probatorio dei documenti, oneri di prova, condizione di procedibilità, scenari alternativi con titolo, importo eseguibile e prossima istanza, dati mancanti, elementi che non costituiscono profili di rischio.\n\nOgni conclusione distingue il fatto documentato, l'inferenza, la questione controversa, la lacuna e l'azione. Le fonti normative sono soltanto quelle del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_decreto_ingiuntivo_412_2031.pdf",
+    "public/documents/02_relata_notifica_20_maggio_2031.pdf",
+    "public/documents/03_bozza_citazione_in_opposizione.docx",
+    "public/documents/04_estratto_partite_creditore.csv",
+    "public/documents/05_pec_opposta_3_aprile_2031.pdf",
+    "public/documents/06_contratto_somministrazione.pdf",
+    "public/documents/07_delibera_amministratore_unico.pdf"
+  ],
+  "expected_deliverable": "procedural_map.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

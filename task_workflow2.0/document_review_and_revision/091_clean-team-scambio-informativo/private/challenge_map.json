@@ -1,0 +1,260 @@
+{
+  "task_id": "WF2-091",
+  "lato_assistito": "Tramontina Azionamenti S.p.A., co-fondatrice della joint venture",
+  "committente": "responsabile affari legali di Tramontina Azionamenti S.p.A.",
+  "data_di_riferimento": "2026-10-14",
+  "stato_fascicolo": "trattativa in corso; bozza di protocollo rimandata dalla controparte e non sottoscritta; nessuna reazione registrata all'accesso del 5 e 6 ottobre 2026",
+  "meccanismi_di_difficolta": [
+    "presenza contro adeguatezza: l'obbligo di aggregazione della clausola 6.2 esiste ma è svuotato da un'eccezione rimessa al richiedente",
+    "ruolo formale contro ruolo sostanziale: il direttore vendite è designato membro del clean team e decide sconti, target per cliente e allocazione dei volumi",
+    "fatti distribuiti: il cumulo di ruoli emerge solo incrociando l'organigramma con le clausole 4.2 e 7.1, e l'incidente solo incrociando il registro accessi con l'email",
+    "presupposti di applicazione da dedurre: le soglie non compaiono nel fascicolo, i soli dati di fatturato sono in un allegato del term sheet",
+    "condotta contro clausola: la proposta di coordinamento commerciale non è un difetto di drafting e non si corregge in redline"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "ruolo sostanziale e cumulo di ruoli del direttore vendite",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.2 impone di designare il direttore vendite fra i membri del clean team; il direttore vendite di Tramontina decide sconti, target per cliente e allocazione dei volumi ed è al tempo stesso project manager con delega alla gestione operativa delle richieste informative: la designazione va rimossa, il criterio di esclusione va riferito alla partecipazione alle decisioni commerciali e il cumulo di ruoli va vietato dal testo",
+      "evidenza": "clausole 4.2 e 7.1 e Allegato A della bozza; 04_organigramma_e_deleghe.md, nota alla posizione di direttore vendite",
+      "errore_bersaglio": "trattare la designazione come conforme perché la clausola prevede comunque la sottoscrizione della dichiarazione di impegno; limitarsi a cancellare il nome dall'Allegato A lasciando in piedi l'obbligo di designazione della clausola 4.2; risolvere il cumulo sostituendo la persona anziché vietandolo, cosicché il problema si ripresenta con il successore"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "accesso indifferenziato alla sala documentale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 5.2 dà a tutti i membri del clean team e a tutti i consulenti ammessi accesso all'intero contenuto della sala documentale e degrada la classificazione a valore informativo: va sostituita con una matrice di accesso che distingua raccolta, analisi e destinatario della restituzione",
+      "evidenza": "clausola 5.2 della bozza; 06_log_accessi_data_room.csv, matrice dei gruppi",
+      "errore_bersaglio": "considerare sufficiente la presenza della classificazione dell'Allegato B, senza rilevare che la clausola la priva di effetto"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "download sui dispositivi personali",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 5.3 consente il download dei documenti sui dispositivi in uso ai membri del clean team: per i documenti che contengono informazioni commercialmente sensibili il download va escluso",
+      "evidenza": "clausola 5.3 della bozza; 05_email_direttore_vendite.md; 06_log_accessi_data_room.csv, eventi del 5 ottobre 2026",
+      "errore_bersaglio": "ritenere la clausola accettabile perché impone la conservazione riservata, che è un obbligo di comportamento e non una misura tecnica"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "eccezione che svuota l'aggregazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 6.2 prevede la restituzione aggregata ma vi aggiunge l'eccezione della forma disaggregata per singolo cliente ove necessario alla finalità ammessa: l'eccezione va soppressa",
+      "evidenza": "clausola 6.2 della bozza; punto 4.2 del term sheet",
+      "errore_bersaglio": "registrare la clausola come conforme perché l'obbligo di aggregazione è presente, senza rilevare che l'eccezione lo rende disponibile al richiedente"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "destinatari della restituzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 6.3 rimette al richiedente l'indicazione dei destinatari della restituzione: i destinatari vanno vincolati alla matrice di accesso e va esclusa la restituzione a chi partecipa alle decisioni di prezzo, sconto e volumi",
+      "evidenza": "clausola 6.3 della bozza; voce 22 di 03_data_request_list.md",
+      "errore_bersaglio": "trattare la clausola come neutra perché non nomina alcun destinatario"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "documenti derivati",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 6.4 riguarda le sole elaborazioni intermedie dei consulenti: appunti, fogli di lavoro e ogni documento derivato devono ereditare la classificazione del documento di origine",
+      "evidenza": "clausola 6.4 della bozza; 05_email_direttore_vendite.md, allegato al messaggio",
+      "errore_bersaglio": "considerare il punto già coperto dall'obbligo generale di riservatezza della clausola 3.2"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "approvazione delle nuove richieste",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 7.1 affida l'approvazione delle nuove richieste informative al project manager: l'approvazione va spostata al clean team lead con il visto del consulente legale incaricato del profilo concorrenziale, prima dell'inoltro",
+      "evidenza": "clausola 7.1 della bozza; colonna delle approvazioni di 03_data_request_list.md, voci 18, 19 e 22",
+      "errore_bersaglio": "ritenere il presidio sufficiente perché la data request list registra comunque il soggetto approvante"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "richieste informative inammissibili nel flusso",
+      "gravita": "alta",
+      "affermazione_richiesta": "la voce 18 chiede prezzi netti 2027, sconti programmati e volumi mensili per singolo cliente con la denominazione del cliente e va ritirata dal flusso; la voce 22 chiede di restituire ai referenti commerciali delle parti la marginalità per singolo cliente delle prime dieci posizioni e va rifiutata",
+      "evidenza": "03_data_request_list.md, voci 18 e 22; 05_email_direttore_vendite.md",
+      "errore_bersaglio": "ritenere la voce 18 ammissibile a condizione che transiti dal clean team, che è la condizione di accesso e non un criterio di ammissibilità del dato; risolvere la voce 22 imponendo l'aggregazione, senza rilevare che il destinatario indicato è la struttura commerciale"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "classe di restituzione sotto la convenzione",
+      "gravita": "media",
+      "affermazione_richiesta": "la classe D è composta da quattro clienti e non soddisfa la convenzione di almeno cinque unità fissata dal term sheet: la restituzione sulla classe D va sospesa o la classe ricomposta",
+      "evidenza": "punto 4.2 del term sheet; voce 21 di 03_data_request_list.md",
+      "errore_bersaglio": "considerare la classe D ammissibile perché il punto 4.3 del term sheet la elenca fra le classi concordate"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "riunioni congiunte senza presidio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 8.1 rende facoltativa la presenza dei consulenti ed esclude la verbalizzazione: le riunioni fra le parti richiedono ordine del giorno preventivo, presenza necessaria del consulente legale e verbale delle informazioni condivise",
+      "evidenza": "clausola 8.1 della bozza; 05_email_direttore_vendite.md, chiusura del messaggio",
+      "errore_bersaglio": "considerare il presidio assicurato dalla clausola 8.2, che vieta di discutere dati disaggregati ma non lascia traccia di ciò che è stato discusso"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "durata senza termine",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 9.1 ancora l'efficacia al completamento della valutazione: il termine va fissato al provvedimento conclusivo del procedimento di autorizzazione o, se anteriore, alla comunicazione di abbandono dell'operazione",
+      "evidenza": "clausola 9.1 della bozza; punti 5.1 e 6.1 del term sheet",
+      "errore_bersaglio": "ritenere il termine determinato perché il completamento della valutazione è un evento futuro certo"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "perimetro della distruzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 10.1 e la bozza di certificato limitano la distruzione ai file caricati nella sala documentale: il perimetro va esteso a documenti derivati, copie locali e backup, con una copia di difesa segregata affidata ai responsabili affari legali e con termine dichiarato",
+      "evidenza": "clausola 10.1 della bozza; 07_bozza_certificato_distruzione.md, punti 1.1 e 4.1",
+      "errore_bersaglio": "ritenere il presidio completo perché il certificato contiene la dichiarazione che non residuano copie sui sistemi della sala documentale"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "autoqualificazione di conformità",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 3.3 afferma che l'adozione del protocollo assicura il rispetto della normativa in materia di concorrenza: l'affermazione va soppressa perché è una qualificazione che le parti non possono attribuirsi con un contratto",
+      "evidenza": "clausola 3.3 della bozza",
+      "errore_bersaglio": "lasciare la clausola in piedi come dichiarazione di intenti innocua, oppure segnalarla come nulla anziché come inopportuna"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "incidente di accesso",
+      "gravita": "alta",
+      "affermazione_richiesta": "il 5 e il 6 ottobre 2026 un'utenza appartenente al gruppo con accesso indifferenziato ha visualizzato e scaricato due file classificati CT-RESTRICTED e ne ha conservato copia su dispositivo locale, e nel registro non risulta alcuna revoca, sospensione o segnalazione: occorre sospendere l'utenza, ricostruire il materiale visto e recuperare o distruggere la copia locale",
+      "evidenza": "06_log_accessi_data_room.csv, eventi dal 2026-10-05T17:22:41 al 2026-10-06T09:15:02; 05_email_direttore_vendite.md",
+      "errore_bersaglio": "trattare l'episodio come un difetto del testo da correggere in redline, anziché come un adempimento da eseguire subito e indipendentemente dalla revisione"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "proposta di coordinamento delle iniziative commerciali",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'email propone di allineare con la controparte il calendario delle campagne promozionali del primo trimestre 2027: la condotta va interrotta immediatamente e non può essere risolta con una clausola del protocollo",
+      "evidenza": "05_email_direttore_vendite.md, secondo punto del messaggio",
+      "errore_bersaglio": "trattare la proposta come una questione di perimetro informativo, affrontandola solo con l'aggiunta di una clausola sulle riunioni"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "regime di controllo applicabile all'operazione",
+      "gravita": "media",
+      "affermazione_richiesta": "sui dati dell'Allegato 1 il fatturato realizzato in Italia dall'insieme delle parti non raggiunge la soglia aggregata mentre entrambe superano quella individuale: non sorge l'obbligo di comunicazione preventiva, e l'operazione resta fra quelle di cui l'Autorità può richiedere la notifica",
+      "evidenza": "02_term_sheet_joint_venture.md, Allegato 1",
+      "errore_bersaglio": "dedurre l'obbligo di notifica dalla sola presenza della condizione sospensiva del punto 5.1 del term sheet, senza confrontare i dati di fatturato con le soglie"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "listino di vendita 2026 pubblicato sul sito della controparte",
+      "chiave_nel_criterio": "listino di vendita 2026 pubblicato sul sito",
+      "ragione": "la voce 20 riguarda un documento che la controparte ha già pubblicato sul proprio sito istituzionale: non è un'informazione riservata e la sua circolazione non richiede presidio",
+      "errore_bersaglio": "segnalare la voce 20 come richiesta da ritirare, per assimilazione alle voci 18 e 22"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "capacità produttiva installata per stabilimento in forma aggregata",
+      "chiave_nel_criterio": "capacità produttiva installata per stabilimento",
+      "ragione": "le voci 16 e 19 chiedono un dato aggregato per stabilimento, privo di riferimenti a clienti e a prezzi, necessario al modello finanziario: il dato aggregato è esattamente la forma che il presidio richiede",
+      "errore_bersaglio": "segnalare la voce 19 come violazione insieme alla voce 18, perché entrambe risultano approvate dal project manager"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "divieto di perfezionamento prima della decisione dell'Autorità",
+      "chiave_nel_criterio": "divieto di perfezionare l'operazione prima della decisione dell'Autorità",
+      "ragione": "sui dati del fascicolo l'operazione non ha dimensione comunitaria e non raggiunge la soglia aggregata nazionale: non è soggetta a comunicazione preventiva e non esiste alcun obbligo di sospensione da rispettare. Resta il potere dell'Autorità di ordinare la sospensione in caso di istruttoria e di imporre misure ripristinatorie a operazione già realizzata",
+      "errore_bersaglio": "affermare che il perfezionamento è vietato fino alla decisione dell'Autorità, trasponendo la regola di sospensione propria delle concentrazioni di dimensione comunitaria"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "trattamento del dato grezzo da parte del consulente indipendente",
+      "chiave_nel_criterio": "trattamento del dato grezzo da parte del consulente indipendente",
+      "ragione": "la clausola 6.1 affida l'elaborazione delle informazioni sensibili ai consulenti ammessi, muniti di lettera di incarico, vincolati alla riservatezza e con separazione dichiarata rispetto all'attività commerciale del cliente: è la soluzione che le linee direttrici descrivono come misura di riduzione del rischio",
+      "errore_bersaglio": "segnalare come esposizione il fatto che il consulente veda il dato grezzo, chiedendo che anche il consulente riceva soltanto dati aggregati"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "clausola penale reciproca da 150.000 euro",
+      "chiave_nel_criterio": "clausola penale di cui al punto 11.2",
+      "ragione": "la penale del punto 11.2 opera in modo simmetrico a carico della parte inadempiente e lascia salvo il maggior danno: non costituisce un'esposizione propria del lato assistito",
+      "errore_bersaglio": "segnalare la penale come rischio per Tramontina, quando è una clausola che opera anche a suo favore"
+    }
+  ],
+  "dati_mancanti": [
+    "la matrice dei permessi effettivamente configurata sulla piattaforma prima del 28 settembre 2026: il registro riporta la configurazione alla data di esportazione, non la sua storia",
+    "l'elenco dei file effettivamente aperti dall'utenza MUNARI.C il 5 ottobre 2026 all'interno della cartella riservata, che il registro riporta come singola visualizzazione di cartella",
+    "l'ordine del giorno della riunione congiunta del 16 ottobre 2026 e l'elenco dei partecipanti",
+    "la lettera di incarico del consulente legale della controparte e il perimetro della separazione dichiarata per il suo personale",
+    "la conferma se la copia salvata sul dispositivo locale sia stata ulteriormente trasmessa o duplicata"
+  ],
+  "fonti_ammesse": [
+    "art. 101",
+    "L. 287/1990, artt. 2, 16, 17, 18, 19",
+    "punti 371, 385, 389, 390, 391, 393, 394, 406, 407, 408",
+    "artt. 1 e 7",
+    "provvedimento n. 31873 del 10 marzo 2026"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "14 ottobre 2026",
+      "calcolo": "mercoledì, giorno feriale",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "visualizzazione della cartella riservata da parte dell'utenza CT-ALL",
+      "valore": "5 ottobre 2026, ore 17:22",
+      "calcolo": "precede la data di riferimento di 9 giorni",
+      "fonte": "06_log_accessi_data_room.csv"
+    },
+    {
+      "milestone": "download del prospetto della marginalità",
+      "valore": "6 ottobre 2026",
+      "calcolo": "precede la data di riferimento di 8 giorni; il messaggio interno è dello stesso giorno",
+      "fonte": "06_log_accessi_data_room.csv e 05_email_direttore_vendite.md"
+    },
+    {
+      "milestone": "riunione congiunta fissata",
+      "valore": "16 ottobre 2026",
+      "calcolo": "successiva di 2 giorni alla data di riferimento",
+      "fonte": "05_email_direttore_vendite.md"
+    },
+    {
+      "milestone": "numerosità delle classi di restituzione",
+      "valore": "A=7, B=6, C=5, D=4 clienti",
+      "calcolo": "la convenzione del punto 4.2 del term sheet richiede almeno 5 clienti per classe: la classe D con quattro clienti non la soddisfa",
+      "fonte": "02_term_sheet_joint_venture.md e 03_data_request_list.md, voce 21"
+    },
+    {
+      "milestone": "fatturato aggregato realizzato in Italia dalle due parti",
+      "valore": "349.800.000 euro",
+      "calcolo": "198.100.000 + 151.700.000 = 349.800.000",
+      "fonte": "02_term_sheet_joint_venture.md, Allegato 1"
+    },
+    {
+      "milestone": "confronto con la soglia riferita all'insieme delle imprese interessate",
+      "valore": "349.800.000 < 595.000.000",
+      "calcolo": "la soglia aggregata vigente al freeze non è raggiunta: non sorge l'obbligo di comunicazione preventiva",
+      "fonte": "art. 16, comma 1, L. 287/1990 e provv. AGCM 31873/2026"
+    },
+    {
+      "milestone": "confronto con la soglia riferita individualmente ad almeno due imprese",
+      "valore": "198.100.000 e 151.700.000 > 36.000.000",
+      "calcolo": "entrambe le parti la superano: una sola delle due soglie è superata",
+      "fonte": "art. 16, comma 1, L. 287/1990 e provv. AGCM 31873/2026"
+    },
+    {
+      "milestone": "fatturato mondiale aggregato",
+      "valore": "382.800.000 euro",
+      "calcolo": "214.500.000 + 168.300.000 = 382.800.000; resta sotto i 5 miliardi di euro richiamati dall'art. 16, comma 1-bis",
+      "fonte": "02_term_sheet_joint_venture.md, Allegato 1"
+    }
+  ],
+  "funzione_allegati": {
+    "01_bozza_protocollo_clean_team.docx": "è il testo da revisionare; ospita i difetti di livello e di definizione sui quali si misura la review",
+    "02_term_sheet_joint_venture.md": "fissa la definizione convenzionale di restituzione aggregata, l'autonomia commerciale delle parti fino al closing e, in Allegato 1, i dati di fatturato da cui si deduce il regime di controllo delle concentrazioni applicabile",
+    "03_data_request_list.md": "documenta quali informazioni sono state chieste, da chi sono state approvate e la composizione nominativa delle classi di restituzione",
+    "04_organigramma_e_deleghe.md": "prova quali posizioni decidono su prezzi, sconti e allocazione dei volumi: è l'unica fonte che consente di distinguere il ruolo formale dal ruolo sostanziale",
+    "05_email_direttore_vendite.md": "documenta l'accesso al materiale riservato, la sua conservazione su dispositivo locale e una proposta di coordinamento delle iniziative commerciali future",
+    "06_log_accessi_data_room.csv": "prova la sequenza degli accessi, la configurazione indifferenziata dei permessi e l'assenza di qualunque revoca, sospensione o segnalazione di incidente",
+    "07_bozza_certificato_distruzione.md": "mostra il perimetro ristretto della distruzione proposta e l'assenza di una copia di difesa segregata"
+  }
+}

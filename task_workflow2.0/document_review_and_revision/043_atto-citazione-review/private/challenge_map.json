@@ -1,0 +1,251 @@
+{
+  "task_id": "WF2-043",
+  "lato_assistito": "Mosaico Termico S.r.l., attrice in preparazione",
+  "data_di_riferimento": "2026-08-24",
+  "stato_del_fascicolo": "bozza non notificata; trattativa interrotta, prescrizione non imminente",
+  "fonti_ammesse": [
+    "cpc",
+    "cc"
+  ],
+  "dati_mancanti": [
+    "inserire un segnaposto istruttorio e chiedere visura e procura",
+    "togliere la quantificazione dalla domanda o chiedere i giustificativi",
+    "chiedere istruzioni e graduare le domande"
+  ],
+  "calcoli": [
+    "centoventi giorni liberi",
+    "euro 876.000",
+    "euro 214.000",
+    "euro 35.000",
+    "euro 88.400",
+    "euro 214.000"
+  ],
+  "errori_bersaglio": [
+    "domanda di penale euro 35.000",
+    "danno stimato come già sostenuto",
+    "udienza del 30 novembre 2026",
+    "Tribunale di Parma senza riserva",
+    "collaudo senza riserve",
+    "capitoli valutativi",
+    "interessi sull'intero corrispettivo",
+    "numerazione duplicata"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "parti e rappresentanza",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza identifica Mosaico Termico come attrice ma omette il potere del firmatario",
+      "evidenza": "visura e procura non sono nel fascicolo; la bozza nomina solo il legale rappresentante",
+      "azione": "inserire un segnaposto istruttorio e chiedere visura e procura",
+      "cautela": "non inventare la carica sociale"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "competenza territoriale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza indica il Tribunale di Parma senza sviluppare il foro pattizio di Modena",
+      "evidenza": "articolo 19 del contratto indica Modena in via esclusiva",
+      "azione": "correggere l'ufficio giudiziario salvo diversa istruzione motivata",
+      "cautela": "non mantenere Parma per la sola sede dell'attrice"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "vocatio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la data d'udienza deve rispettare almeno centoventi giorni liberi dalla notificazione in Italia",
+      "evidenza": "la bozza prevede notifica il 2 settembre e udienza il 30 novembre 2026",
+      "azione": "sostituire la data con campo da calcolare al momento della notifica",
+      "cautela": "non fissare oggi un'udienza incompatibile"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "avvertimenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza contiene un avvertimento incompleto sulle decadenze del convenuto",
+      "evidenza": "il paragrafo finale omette il richiamo alla difesa tecnica e al patrocinio a spese dello Stato",
+      "azione": "sostituire l'avvertimento con testo completo da convalidare",
+      "cautela": "non considerare sanato il vizio perché il convenuto potrebbe costituirsi"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "contratto e variante",
+      "gravita": "alta",
+      "affermazione_richiesta": "il corrispettivo finale deriva dal contratto e dalla variante accettata",
+      "evidenza": "euro 780.000 base più euro 96.000 di variante",
+      "azione": "allegare e numerare entrambi i documenti",
+      "cautela": "non descrivere la variante come mera offerta"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "pagamenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "restano insoluti euro 214.000 di capitale",
+      "evidenza": "prospetto: fatture 876.000, pagamenti 662.000",
+      "azione": "esporre il calcolo in un paragrafo autonomo",
+      "cautela": "non chiedere nuovamente somme pagate"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "collaudo con riserva",
+      "gravita": "alta",
+      "affermazione_richiesta": "il collaudo del 12 febbraio 2026 è sottoscritto con una riserva sulla taratura",
+      "evidenza": "verbale, riga 7, e successiva chiusura tecnica del 3 marzo",
+      "azione": "allegare entrambi gli eventi in sequenza",
+      "cautela": "non qualificare il collaudo come privo di riserve"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "inadempimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la contestazione riguarda il mancato saldo dopo la chiusura della taratura",
+      "evidenza": "PEC del 10 marzo assegna dieci giorni e richiama la chiusura del 3 marzo",
+      "azione": "collegare scadenza, diffida e persistenza dell'insoluto",
+      "cautela": "non imputare alla convenuta un rifiuto anteriore alla scadenza"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "penale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la penale di euro 35.000 riguarda il ritardo di accesso al sito imputabile al committente",
+      "evidenza": "ordine di variante e verbale di cantiere attribuiscono cinque giorni al committente",
+      "azione": "eliminare la domanda di penale contro la convenuta",
+      "cautela": "non trasformare una clausola a favore della controparte in credito dell'attrice"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "danno ulteriore",
+      "gravita": "alta",
+      "affermazione_richiesta": "il danno ulteriore di euro 88.400 è solo stimato e non documentato",
+      "evidenza": "il prospetto interno non contiene fatture o ordini di terzi",
+      "azione": "togliere la quantificazione dalla domanda o chiedere i giustificativi",
+      "cautela": "non presentare la stima interna come costo sostenuto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "interessi",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli interessi vanno calcolati per fattura e scadenza, non sull'intero corrispettivo",
+      "evidenza": "quattro fatture hanno scadenze e residui diversi",
+      "azione": "allegare una tabella dei residui con dies a quo",
+      "cautela": "non usare la data del contratto come decorrenza"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "domanda di risoluzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la risoluzione è incompatibile con la domanda di saldo per prestazione integralmente eseguita se non chiarita",
+      "evidenza": "la bozza cumula risoluzione, adempimento e restituzione senza graduazione",
+      "azione": "chiedere istruzioni e graduare le domande",
+      "cautela": "non mantenere domande logicamente incompatibili sullo stesso piano"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "mezzi di prova",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza deve indicare prova documentale distinta per ogni fatto principale",
+      "evidenza": "i documenti 2-7 coprono contratto, variante, collaudo, contestazione e importi",
+      "azione": "numerare le produzioni e richiamarle nel fatto pertinente",
+      "cautela": "non usare un rinvio cumulativo a tutti gli allegati"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "capitoli testimoniali",
+      "gravita": "alta",
+      "affermazione_richiesta": "i capitoli testimoniali proposti sono valutativi e privi di indicazione dei testi",
+      "evidenza": "la bozza chiede di provare che il lavoro fu eseguito a regola d'arte",
+      "azione": "convertire in fatti specifici solo dopo istruzioni su nominativi e circostanze",
+      "cautela": "non inserire nominativi non presenti nel fascicolo"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "conclusioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "le conclusioni devono limitare la condanna al capitale documentato e agli accessori calcolabili",
+      "evidenza": "il fascicolo prova euro 214.000 ma non la penale né il danno stimato",
+      "azione": "riscrivere petitum e valore della causa",
+      "cautela": "non lasciare in conclusioni importi eliminati dal fatto"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "coerenza allegati",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'indice documenti deve distinguere relazione tecnica e verbale di collaudo",
+      "evidenza": "la bozza li chiama entrambi documento 4",
+      "azione": "rinumerare e aggiornare ogni richiamo",
+      "cautela": "non lasciare numerazioni duplicate"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "domanda di penale euro 35.000",
+      "chiave_nel_criterio": "domanda di penale euro 35.000"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "danno stimato come già sostenuto",
+      "chiave_nel_criterio": "danno stimato come già sostenuto"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "udienza del 30 novembre 2026",
+      "chiave_nel_criterio": "udienza del 30 novembre 2026"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "Tribunale di Parma senza riserva",
+      "chiave_nel_criterio": "Tribunale di Parma senza riserva"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "collaudo senza riserve",
+      "chiave_nel_criterio": "collaudo senza riserve"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "capitoli valutativi",
+      "chiave_nel_criterio": "capitoli valutativi"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "interessi sull'intero corrispettivo",
+      "chiave_nel_criterio": "interessi sull'intero corrispettivo"
+    },
+    {
+      "id": "N-08",
+      "oggetto": "numerazione duplicata",
+      "chiave_nel_criterio": "numerazione duplicata"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_bozza_atto_citazione.docx",
+      "funzione": "Bozza dell'atto di citazione"
+    },
+    {
+      "file": "02_contratto_installazione.pdf",
+      "funzione": "Contratto di installazione"
+    },
+    {
+      "file": "03_ordine_variante.pdf",
+      "funzione": "Ordine di variante"
+    },
+    {
+      "file": "04_verbale_collaudo.pdf",
+      "funzione": "Verbale di collaudo"
+    },
+    {
+      "file": "05_pec_contestazione.pdf",
+      "funzione": "PEC di contestazione"
+    },
+    {
+      "file": "06_relazione_tecnica.pdf",
+      "funzione": "Relazione tecnica"
+    },
+    {
+      "file": "07_prospetto_danni.xlsx",
+      "funzione": "Prospetto dei danni"
+    }
+  ]
+}

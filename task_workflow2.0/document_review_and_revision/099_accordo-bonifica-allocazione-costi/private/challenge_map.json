@@ -1,0 +1,253 @@
+{
+  "task_id": "WF2-099",
+  "lato_assistito": "Vetrerie Malaspino S.p.A., proprietaria del sito e non responsabile della contaminazione",
+  "committente": "presidente del consiglio di amministrazione di Vetrerie Malaspino S.p.A.",
+  "data_di_riferimento": "2026-12-09",
+  "stato_fascicolo": "bozza dell'accordo circolata dai legali del proponente e non negoziata; sottoscrizione prevista per il 15 dicembre 2026 e non avvenuta; progetto operativo approvato e lavori non avviati; nessuna ordinanza né diffida notificata alla proprietaria",
+  "meccanismi_di_difficolta": [
+    "presenza contro adeguatezza: l'alea esiste, è espressa in percentuale, è a carico della controparte e non è il difetto; il difetto è la clausola immediatamente successiva",
+    "gerarchia fra documenti: il termine di ultimazione manca nell'accordo e sta nel decreto, e la clausola dell'accordo che fissa il solo avvio lo colloca oltre un termine scaduto",
+    "data del documento contro data di efficacia: il termine di avvio dei lavori decorre dalla notifica del decreto e non dalla sua adozione, e le due date distano sette giorni",
+    "definizione convenzionale contro regola di legge: il completamento è definito dalle parti come comunicazione del proponente, mentre l'accertamento del completamento è attribuito dalla legge a un'autorità determinata",
+    "evidenze incomplete: gli obiettivi di bonifica ai quali il vincolo di risultato va ancorato non sono nel fascicolo, e la nota della tecnica chiude l'elenco di ciò che manca",
+    "esposizione non quantificabile: la clausola sull'eccedenza non ha tetto e il computo esclude per iscritto cinque categorie di oneri, quindi la misura dell'esposizione va dichiarata indeterminabile indicando che cosa la determina",
+    "dichiarazione di parte da smentire: la mail del committente contiene otto affermazioni, di cui cinque da correggere e tre da confermare"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "perimetro degli interventi",
+      "gravita": "media",
+      "affermazione_richiesta": "la definizione di interventi rinvia al progetto operativo approvato senza identificarlo per estremi e senza comprendere le attività che l'autorità prescriva in corso d'opera: il rinvio va ancorato al decreto del 22 luglio 2026 e agli elaborati ivi richiamati, ed esteso alle prescrizioni sopravvenute",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 2.1; 02_decreto_regionale_approvazione_progetto.md, punti 1 e 8",
+      "errore_bersaglio": "accettare il rinvio generico, oppure limitare il perimetro agli elaborati esistenti escludendo le prescrizioni successive"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "standard di bonifica",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 3.3 consente al proponente di scegliere l'alternativa di minore costo fra quelle conformi alla normativa, senza ancorarla agli obiettivi di bonifica fissati dal documento di analisi di rischio e richiamati dal decreto: la scelta va vincolata al conseguimento di quegli obiettivi",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 3.3; 02_decreto_regionale_approvazione_progetto.md, punto 3",
+      "errore_bersaglio": "sopprimere la facoltà di scelta, che è legittima perché il proponente sostiene i costi, anziché vincolarne il risultato"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "obiettivi di bonifica non nel fascicolo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il documento di analisi di rischio e la tavola 6 degli elaborati, che contengono gli obiettivi di bonifica, non sono nel fascicolo: senza di essi il vincolo di risultato non è verificabile e l'acquisizione va richiesta prima della firma",
+      "evidenza": "06_nota_del_consulente.md, punti 4.1 e 4.2",
+      "errore_bersaglio": "dichiarare che il vincolo di risultato non è formulabile senza indicare quale documento serve, oppure non rilevare la lacuna"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "accertamento del completamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 2.2 fa coincidere il completamento con la comunicazione del proponente, mentre il completamento degli interventi e la loro conformità al progetto approvato sono accertati dalla provincia mediante certificazione sulla base della relazione tecnica dell'agenzia regionale: la definizione va spostata su quell'atto",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 2.2; art. 248, comma 2, del codice dell'ambiente",
+      "errore_bersaglio": "accettare la definizione convenzionale, oppure attribuire alla certificazione effetti che il testo di legge non le attribuisce"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "esposizione oltre l'alea",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.3 pone a carico della proprietaria l'intera eccedenza oltre la somma di costo base e alea, cioè oltre 851.000 euro, senza alcun limite di importo: è l'unica esposizione economica della proprietaria e non è quantificata né quantificabile sul fascicolo",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausole 4.3 e 4.4; 03_computo_metrico.md",
+      "errore_bersaglio": "presentare l'esposizione come coperta dall'alea, oppure quantificarla in una cifra che il fascicolo non consente di ricavare"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "approvazione preventiva dell'eccedenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 4.4 esclude espressamente ogni comunicazione preventiva sul superamento della somma di costo base e alea: l'eccedenza va posta a carico del proponente salvo previa approvazione scritta della proprietaria, e va introdotto un obbligo di comunicazione tempestiva e di rendiconto periodico",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausole 4.3 e 4.4",
+      "errore_bersaglio": "introdurre la sola approvazione preventiva senza l'obbligo di comunicazione, o viceversa"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "termine di esecuzione e proroghe",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'accordo fissa il solo termine di avvio e non contiene alcun termine di ultimazione, mentre il decreto impone di ultimare gli interventi entro diciotto mesi dal termine di avvio: il termine del decreto va recepito, con la disciplina delle proroghe per le sospensioni disposte dall'autorità e per le circostanze non imputabili, e con un obbligo di rendiconto sugli scostamenti",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausole 5.1 e 5.2; 02_decreto_regionale_approvazione_progetto.md, punti 4 e 5",
+      "errore_bersaglio": "affermare che l'accordo contiene un termine di ultimazione, oppure introdurre un termine convenzionale diverso da quello del decreto"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "accesso al sito",
+      "gravita": "media",
+      "affermazione_richiesta": "la clausola 6.1 consente l'accesso a tutto il sito, per tutta la durata necessaria, senza preavviso e senza limitazioni di orario: l'accesso va circoscritto alle aree interessate e subordinato a preavviso e a orari, con salvezza dell'emergenza e con la previsione che il diniego motivato da ragioni di sicurezza non costituisce inadempimento della proprietaria",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 6.1",
+      "errore_bersaglio": "sopprimere il diritto di accesso, che è funzionale all'esecuzione degli interventi a carico del proponente, anziché disciplinarlo"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "obblighi di legge della proprietaria",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 7.2 impegna la proprietaria ad astenersi dal comunicare con l'autorità, mentre il proprietario che rilevi il superamento o il pericolo concreto e attuale del superamento delle soglie di contaminazione deve darne comunicazione alle amministrazioni e attuare le misure di prevenzione, e conserva la facoltà di intervenire volontariamente: entrambe le posizioni vanno fatte salve",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 7.2; art. 245, commi 1 e 2, del codice dell'ambiente",
+      "errore_bersaglio": "sopprimere l'intera clausola invece di far salvi gli obblighi e la facoltà di legge, oppure fare salvo il solo obbligo di comunicazione"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "partecipazione ai rapporti con l'autorità",
+      "gravita": "media",
+      "affermazione_richiesta": "l'accordo non riconosce alla proprietaria alcun diritto di conoscere in anticipo le istanze del proponente all'autorità né di assistere agli incontri: il diritto va introdotto, perché dai provvedimenti dipendono prescrizioni e vincoli che gravano sul sito",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 7.1",
+      "errore_bersaglio": "chiedere di sottrarre al proponente la titolarità dei rapporti con l'autorità, che gli spetta come soggetto proponente, anziché introdurre il diritto di partecipazione"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "contaminazione sopravvenuta",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 8.1 pone integralmente a carico della proprietaria gli oneri relativi alla contaminazione rilevata in corso d'opera e non risultante dagli elaborati: gli oneri vanno posti al proponente quando le sostanze appartengono alle classi analitiche già riscontrate, con onere di provare il contrario a suo carico",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausole 2.5 e 8.1; 04_contratto_di_locazione_cessato.md, verbale di restituzione, punto 5",
+      "errore_bersaglio": "addossare al proponente ogni contaminazione sopravvenuta senza distinguere le classi analitiche, oppure lasciare l'onere alla proprietaria"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "ampiezza della rinuncia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 9.1 fa rinunciare la proprietaria a ogni pretesa presente e futura con la sola sottoscrizione, quindi prima e indipendentemente dall'esecuzione degli interventi: la rinuncia va spostata al rilascio della certificazione e limitata alle matrici e alle aree che essa riguarda, con salvezza del diritto di rivalsa nel caso in cui sia la proprietaria a provvedere alla bonifica",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 9.1; art. 253, comma 4, del codice dell'ambiente",
+      "errore_bersaglio": "sopprimere la rinuncia, che è la controprestazione dell'accordo, anziché condizionarla e delimitarla"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "garanzia finanziaria a favore della proprietaria",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'accordo non prevede alcuna garanzia a favore della proprietaria a fronte degli obblighi del proponente: la garanzia va introdotta, commisurata alla somma di costo base e alea e svincolabile al rilascio della certificazione, e va tenuta distinta dalle garanzie che il decreto pone a carico del proponente in favore della regione",
+      "evidenza": "01_bozza_accordo_bonifica.docx, clausola 4; 02_decreto_regionale_approvazione_progetto.md, punto 7",
+      "errore_bersaglio": "confondere la garanzia contrattuale con quella prestata alla regione, oppure introdurre la garanzia senza indicare il momento dello svincolo"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "termine di avvio dei lavori decorso",
+      "gravita": "alta",
+      "affermazione_richiesta": "il decreto imponeva l'avvio dei lavori entro novanta giorni dalla notifica del 29 luglio 2026, cioè entro il 27 ottobre 2026, e alla data di riferimento nessun cantiere è stato allestito: la clausola 5.1, che fa partire i lavori sessanta giorni dopo la sottoscrizione, collocherebbe l'avvio oltre tre mesi dopo un termine già scaduto; l'intervento non passa dal testo dell'accordo",
+      "evidenza": "02_decreto_regionale_approvazione_progetto.md, punto 5 e relata di notifica; 06_nota_del_consulente.md, punto 3; 01_bozza_accordo_bonifica.docx, clausola 5.1",
+      "errore_bersaglio": "computare i novanta giorni dalla data del decreto anziché dalla notifica, oppure trattare il ritardo come inadempimento contrattuale anziché come inadempimento verso l'autorità"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "misura dell'alea",
+      "chiave_nel_criterio": "misura dell'alea",
+      "ragione": "l'alea è pari al quindici per cento del costo base e resta interamente a carico del proponente: la misura non è il difetto della clausola, ed è coerente con un computo metrico redatto su prezzario e senza somme a disposizione per imprevisti; il difetto sta nell'imputazione dell'eccedenza e nell'assenza di approvazione preventiva",
+      "errore_bersaglio": "chiedere la soppressione dell'alea o la riduzione della sua misura come intervento sull'assetto economico"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "scelta dell'appaltatore",
+      "chiave_nel_criterio": "scelta dell'appaltatore",
+      "ragione": "l'accordo individua l'appaltatore per denominazione, sede ed estremi dell'iscrizione all'Albo nazionale dei gestori ambientali per la categoria relativa alla bonifica dei siti, e prevede la comunicazione della sua sostituzione: non è un adempimento mancante, fermo restando che il provvedimento di iscrizione non è nel fascicolo",
+      "errore_bersaglio": "indicare fra gli interventi la richiesta di individuare l'appaltatore o di verificarne l'iscrizione come condizione della firma"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "esclusione del lucro cessante",
+      "chiave_nel_criterio": "esclusione del lucro cessante",
+      "ragione": "la clausola 10.1 esclude il lucro cessante, i danni indiretti e la perdita di avviamento in modo reciproco per entrambe le parti: opera anche a favore della proprietaria e non incide sugli oneri di bonifica, che sono danno emergente",
+      "errore_bersaglio": "chiedere la soppressione o l'unilateralizzazione della clausola 10.1"
+    }
+  ],
+  "dati_mancanti": [
+    "il documento di analisi di rischio approvato nella seduta del 30 marzo 2023 e la tavola 6 degli elaborati di progetto, che contengono gli obiettivi di bonifica",
+    "gli elaborati grafici del progetto operativo, compresa la tavola 4 con il modello del volume di scavo, da cui sono desunte le quantità del computo",
+    "i rapporti di prova della caratterizzazione, da cui è desunta la percentuale di terreni pericolosi assunta nel computo",
+    "ogni comunicazione di avvio dei lavori e ogni istanza di proroga o di rimodulazione dei termini del decreto",
+    "la documentazione relativa alla prestazione delle garanzie finanziarie in favore della regione",
+    "il provvedimento di iscrizione all'Albo dell'appaltatore indicato nella bozza",
+    "il costo stimato dell'intervento risultante dal computo allegato al progetto operativo, che il decreto individua come base di calcolo delle garanzie e che non coincide necessariamente con il costo base dell'accordo"
+  ],
+  "fonti_ammesse": [
+    "D.Lgs. 152/2006, artt. 240, 242, 244, 245, 248, 250, 253"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "9 dicembre 2026",
+      "calcolo": "mercoledì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "costo base degli interventi concordati",
+      "valore": "740.000 euro",
+      "calcolo": "somma delle undici voci del computo metrico allegato",
+      "fonte": "03_computo_metrico.md"
+    },
+    {
+      "milestone": "alea contrattuale a carico del proponente",
+      "valore": "111.000 euro",
+      "calcolo": "quindici per cento di 740.000 euro",
+      "fonte": "01_bozza_accordo_bonifica.docx, clausole 2.4 e 4.2"
+    },
+    {
+      "milestone": "esposizione massima entro l'alea",
+      "valore": "851.000 euro",
+      "calcolo": "740.000 più 111.000 uguale 851.000; oltre tale somma la clausola 4.3 pone l'eccedenza a carico della proprietaria",
+      "fonte": "quadratura fra clausole 2.4 e 4.2 e 03_computo_metrico.md"
+    },
+    {
+      "milestone": "esposizione della proprietaria nella bozza",
+      "valore": "non determinabile",
+      "calcolo": "la clausola 4.3 pone a carico della proprietaria l'intera eccedenza oltre 851.000 euro, senza alcun limite di importo e senza obbligo di comunicazione preventiva",
+      "fonte": "01_bozza_accordo_bonifica.docx, clausole 4.3 e 4.4"
+    },
+    {
+      "milestone": "approvazione del progetto operativo",
+      "valore": "22 luglio 2026",
+      "calcolo": "mercoledì",
+      "fonte": "02_decreto_regionale_approvazione_progetto.md"
+    },
+    {
+      "milestone": "notifica del decreto di approvazione",
+      "valore": "29 luglio 2026",
+      "calcolo": "mercoledì",
+      "fonte": "02_decreto_regionale_approvazione_progetto.md, relata di notifica"
+    },
+    {
+      "milestone": "termine per l'avvio dei lavori fissato dal decreto",
+      "valore": "27 ottobre 2026",
+      "calcolo": "novanta giorni dalla notifica del decreto; alla data di riferimento il termine è decorso da 43 giorni e i lavori non risultano avviati",
+      "fonte": "02_decreto_regionale_approvazione_progetto.md, punto 5"
+    },
+    {
+      "milestone": "derivazione errata: novanta giorni dalla data del decreto",
+      "valore": "20 ottobre 2026",
+      "calcolo": "il termine decorre dalla notifica e non dall'adozione del provvedimento",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "termine di esecuzione fissato dal decreto",
+      "valore": "27 aprile 2028",
+      "calcolo": "diciotto mesi dal termine di avvio dei lavori",
+      "fonte": "02_decreto_regionale_approvazione_progetto.md, punto 4"
+    },
+    {
+      "milestone": "data prevista di sottoscrizione dell'accordo",
+      "valore": "15 dicembre 2026",
+      "calcolo": "martedì; indicata nella corrispondenza fra le parti",
+      "fonte": "05_email_della_proprietaria.md"
+    },
+    {
+      "milestone": "avvio dei lavori secondo la clausola 5.1 della bozza",
+      "valore": "13 febbraio 2027",
+      "calcolo": "sessanta giorni dalla sottoscrizione; è posteriore di 109 giorni al termine fissato dal decreto, già decorso",
+      "fonte": "01_bozza_accordo_bonifica.docx, clausola 5.1"
+    },
+    {
+      "milestone": "cessazione della locazione",
+      "valore": "30 giugno 2021",
+      "calcolo": "data del verbale di restituzione, che contiene la riserva sullo stato del suolo",
+      "fonte": "04_contratto_di_locazione_cessato.md"
+    }
+  ],
+  "funzione_allegati": {
+    "01_bozza_accordo_bonifica.docx": "è il documento da revisionare: contiene le definizioni convenzionali del perimetro, del completamento e dell'alea, e le clausole su cui gli interventi incidono",
+    "02_decreto_regionale_approvazione_progetto.md": "fissa gli obiettivi di bonifica per rinvio, il termine di avvio dei lavori e il termine di esecuzione, imputa gli interventi al proponente e pone a suo carico le garanzie finanziarie verso la regione",
+    "03_computo_metrico.md": "quantifica il costo base e delimita per iscritto le voci escluse dal computo: è la base della quadratura economica e dell'esposizione residua",
+    "04_contratto_di_locazione_cessato.md": "documenta il titolo per cui il proponente ha esercitato l'attività nel sito e la riserva contenuta nel verbale di restituzione sullo stato del suolo",
+    "05_email_della_proprietaria.md": "porta le affermazioni del committente da verificare, di cui alcune da correggere e alcune da confermare, e la data prevista di sottoscrizione",
+    "06_nota_del_consulente.md": "chiude l'elenco della documentazione non reperita e attesta che alla data di riferimento nessun cantiere è stato allestito"
+  }
+}

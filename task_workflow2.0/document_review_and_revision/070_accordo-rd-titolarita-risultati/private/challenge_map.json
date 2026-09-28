@@ -1,0 +1,215 @@
+{
+  "task_id": "WF2-070",
+  "lato_assistito": "Eterea Robotics S.p.A., finanziatrice industriale",
+  "data_di_riferimento": "2029-11-12",
+  "stato_fascicolo": "negoziazione prima dell'avvio del progetto",
+  "fonti_ammesse": [
+    "Legge 22 aprile 1941, n. 633",
+    "D.lgs. 10 febbraio 2005, n. 30, Codice della proprieta' industriale"
+  ],
+  "calcoli": [
+    "quadrature di importi e sequenze documentali indicate nel gold"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per dataset di terzi: acquisire base contrattuale e limiti d'uso",
+    "integrazione necessaria per cessazione distruttiva: far sopravvivere sfruttamento e copia archivio"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_accordo_rd_draft.docx",
+      "funzione": "draft"
+    },
+    {
+      "file": "02_allegato_background.pdf",
+      "funzione": "Eterea: firmware Ardea 4.2 e dataset motori; Cobalt: sensore Cobalto-S e libreria di calibrazione; nessun codice sorgente depositato."
+    },
+    {
+      "file": "03_piano_lavoro.pdf",
+      "funzione": "Tre work package con team misti; prototipo e algoritmo di manutenzione predittiva; budget Eterea EUR 1.800.000."
+    },
+    {
+      "file": "04_contratti_ricercatori.pdf",
+      "funzione": "Due ricercatori Cobalt sono dipendenti; una data scientist opera come autonoma con clausola generica 'risultati al committente'."
+    },
+    {
+      "file": "05_policy_open_source_pubblicazioni.pdf",
+      "funzione": "Pubblicazione scientifica con preavviso 15 giorni; componenti Apache-2.0 e MIT approvati; copyleft forte richiede consenso scritto."
+    },
+    {
+      "file": "06_email_brevetto_e_demo.eml",
+      "funzione": "Cobalt vuole depositare da sola un brevetto sul controllo adattivo e presentare demo pubblica il 20 dicembre, prima della revisione brevettuale."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Background assorbito",
+      "gravita": "alta",
+      "affermazione_richiesta": "la comunione automatica trasferisce asset preesistenti",
+      "azione_richiesta": "preservare titolarita' e allegato chiuso",
+      "conseguenza": "il progetto riceve una licenza di scopo",
+      "evidenza": "doc. 01 art. 4 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Background incompleto",
+      "gravita": "alta",
+      "affermazione_richiesta": "manca il codice sorgente e la versione depositata",
+      "azione_richiesta": "allegare hash, versione e materiali minimi",
+      "conseguenza": "la licenza deve avere oggetto verificabile",
+      "evidenza": "doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Foreground tutto a Cobalt",
+      "gravita": "alta",
+      "affermazione_richiesta": "il testo ignora team misti e finanziamento Eterea",
+      "azione_richiesta": "attribuire risultati esclusivi e congiunti per contributo",
+      "conseguenza": "la titolarita' segue la creazione documentata",
+      "evidenza": "doc. 01 art. 5 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "licenza revocabile e interna",
+      "gravita": "alta",
+      "affermazione_richiesta": "Eterea non puo' industrializzare o trasferire",
+      "azione_richiesta": "rendere licenza perpetua, trasferibile e sublicenziabile nel campo",
+      "conseguenza": "il finanziatore puo' sfruttare il progetto",
+      "evidenza": "doc. 01",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "regole sui risultati congiunti",
+      "gravita": "alta",
+      "affermazione_richiesta": "mancano gestione, costi e licenze reciproche",
+      "azione_richiesta": "introdurre governance paritetica",
+      "conseguenza": "la contitolarita' non resta indeterminata",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "collaboratrice autonoma",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola generica non identifica diritti e risultati",
+      "azione_richiesta": "ottenere atto scritto specifico",
+      "conseguenza": "la catena dei diritti va provata",
+      "evidenza": "doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "evidenza delle cessioni",
+      "gravita": "media",
+      "affermazione_richiesta": "nessuna Parte deve esibire gli atti",
+      "azione_richiesta": "introdurre obbligo di conservazione ed evidenza",
+      "conseguenza": "la garanzia diventa verificabile",
+      "evidenza": "doc. 01 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "brevetti unilaterali",
+      "gravita": "media",
+      "affermazione_richiesta": "Cobalt puo' depositare e abbandonare da sola",
+      "azione_richiesta": "usare comitato e diritto di subentro",
+      "conseguenza": "un Risultato congiunto non dipende da una sola Parte",
+      "evidenza": "doc. 01 e doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "demo prima della tutela",
+      "gravita": "media",
+      "affermazione_richiesta": "la demo del 20 dicembre puo' anticipare il deposito",
+      "azione_richiesta": "sospendere divulgazione fino alla revisione brevettuale",
+      "conseguenza": "la novita' non va compromessa",
+      "evidenza": "doc. 06",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "preavviso pubblicazione breve",
+      "gravita": "media",
+      "affermazione_richiesta": "quindici giorni non bastano per brevetto e riservatezza",
+      "azione_richiesta": "portare a sessanta con differimento fino a novanta",
+      "conseguenza": "la pubblicazione accademica resta possibile",
+      "evidenza": "doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "open source non governato",
+      "gravita": "media",
+      "affermazione_richiesta": "ogni licenza e' ammessa senza registro",
+      "azione_richiesta": "prevedere SBOM e approvazione per copyleft forte",
+      "conseguenza": "le licenze permissive restano utilizzabili",
+      "evidenza": "doc. 01 e doc. 05",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "dataset di terzi",
+      "gravita": "media",
+      "affermazione_richiesta": "il dataset motori non ha scheda di provenienza",
+      "azione_richiesta": "acquisire base contrattuale e limiti d'uso",
+      "conseguenza": "non si promette titolarita' non provata",
+      "evidenza": "doc. 01 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "cessazione distruttiva",
+      "gravita": "media",
+      "affermazione_richiesta": "terminano anche licenze necessarie ai risultati",
+      "azione_richiesta": "far sopravvivere sfruttamento e copia archivio",
+      "conseguenza": "la cessazione non annulla investimenti maturati",
+      "evidenza": "doc. 01 art. 10",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "riconoscimento inventori",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "inventori",
+      "perche_non_e_issue": "l'attribuzione personale non sottrae diritti economici",
+      "criterio_assenza": "B.36"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "componenti Apache-2.0 e MIT",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "Apache-2.0",
+      "perche_non_e_issue": "sono gia' approvati con obblighi di avviso",
+      "criterio_assenza": "B.37"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "pubblicazione scientifica",
+      "oggetto": "doc. 05",
+      "chiave_nel_criterio": "pubblicazione",
+      "perche_non_e_issue": "il principio e' ammesso; va coordinato con brevetto e segreto",
+      "criterio_assenza": "B.38"
+    },
+    {
+      "id": "N-04",
+      "etichetta": "budget Eterea",
+      "oggetto": "doc. 03",
+      "chiave_nel_criterio": "EUR 1.800.000",
+      "perche_non_e_issue": "il finanziamento da solo non prova paternita' inventiva",
+      "criterio_assenza": "B.39"
+    }
+  ]
+}

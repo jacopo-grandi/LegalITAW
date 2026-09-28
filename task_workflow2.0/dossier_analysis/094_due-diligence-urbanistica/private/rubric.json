@@ -1,0 +1,1133 @@
+{
+  "task_id": "WF2-094",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 56,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente real_estate_red_flag_matrix.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente real_estate_red_flag_matrix.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 6 ottobre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 6 ottobre 2026.\nPASS se: compare «6 ottobre 2026» come data alla quale l'analisi è riferita\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «6 ottobre 2026» come data alla quale l'analisi è riferita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Ogni rilievo indica se poggia su un fatto accertato dal rilievo, su una dichiarazione della venditrice o su un dato mancante.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica se poggia su un fatto accertato dal rilievo, su una dichiarazione della venditrice o su un dato mancante.\nPASS se: ciascuna voce riporta uno dei tre stati probatori\nFAIL se: una o più voci non riportano alcuno stato probatorio.\nÈ indifferente: le etichette usate per i tre stati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta uno dei tre stati probatori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Ogni rilievo indica la gravità.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica la gravità.\nPASS se: ciascuna voce riporta un livello di gravità\nFAIL se: una o più voci non riportano la gravità.\nÈ indifferente: la scala usata per la gravità.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta un livello di gravità",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Ogni rilievo indica la conseguenza sul closing e l'azione da compiere.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica la conseguenza sul closing e l'azione da compiere.\nPASS se: ciascuna voce riporta sia la conseguenza sul closing sia l'azione\nFAIL se: una o più voci riportano solo uno dei due elementi.\nÈ indifferente: l'ordine in cui i due elementi compaiono.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta sia la conseguenza sul closing sia l'azione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Ogni rilievo indica il documento del fascicolo da cui i dati provengono.",
+      "match_criteria": "Oggetto del criterio: Ogni rilievo indica il documento del fascicolo da cui i dati provengono.\nPASS se: ciascuna voce riporta il nome di almeno un allegato\nFAIL se: una o più voci non riportano alcun allegato.\nÈ indifferente: il numero degli allegati citati per voce.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta il nome di almeno un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non cita norme assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme assenti dal reference pack.\nPASS se: Il deliverable non cita norme assenti dal reference pack.\nFAIL se: compare un riferimento a un atto o a un articolo che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola voce.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la compravendita ha per oggetto sia un fabbricato sia terreni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la compravendita ha per oggetto sia un fabbricato sia terreni.\nPASS se: compare l'affermazione che l'oggetto comprende il fabbricato e i terreni pertinenziali\nFAIL se: l'oggetto è trattato come unitario, oppure la composizione non è rilevata.\nÈ indifferente: l'indicazione degli identificativi catastali.\nFonte di authoring: 06_contratto_preliminare.md, articolo 1",
+      "pass_condition": "compare l'affermazione che l'oggetto comprende il fabbricato e i terreni pertinenziali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che per il fabbricato l'atto deve riportare, per dichiarazione dell'alienante, gli estremi del titolo edilizio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che per il fabbricato l'atto deve riportare, per dichiarazione dell'alienante, gli estremi del titolo edilizio.\nPASS se: compare l'affermazione che l'atto deve riportare gli estremi del titolo edilizio del fabbricato\nFAIL se: l'adempimento relativo al fabbricato non è indicato, oppure è ricondotto all'obbligo di allegazione del certificato di destinazione urbanistica.\nÈ indifferente: il richiamo alla confermabilità dell'atto.\nFonte di authoring: art. 46 del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'atto deve riportare gli estremi del titolo edilizio del fabbricato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica in 6.240 metri quadrati la superficie dell'area di pertinenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 6.240 metri quadrati la superficie dell'area di pertinenza.\nPASS se: compare la misura «6.240» riferita alla superficie fondiaria o all'area di pertinenza\nFAIL se: è indicata una misura diversa, oppure la misura non compare.\nÈ indifferente: l'unità di misura usata.\nFonte di authoring: 06_contratto_preliminare.md, punto 1.2",
+      "pass_condition": "compare la misura «6.240» riferita alla superficie fondiaria o all'area di pertinenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'esclusione dall'obbligo di allegazione del certificato non opera perché la superficie dell'area di pertinenza supera la soglia.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'esclusione dall'obbligo di allegazione del certificato non opera perché la superficie dell'area di pertinenza supera la soglia.\nPASS se: compare l'affermazione che l'esclusione non opera per il superamento della soglia di superficie\nFAIL se: è affermato che l'esclusione opera, oppure la verifica della soglia non compare.\nÈ indifferente: l'indicazione del valore della soglia.\nFonte di authoring: art. 30, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'esclusione non opera per il superamento della soglia di superficie",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il certificato esclude dal proprio perimetro i vincoli imposti da altri enti e i vincoli del piano paesaggistico non riportati sul piano regolatore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il certificato esclude dal proprio perimetro i vincoli imposti da altri enti e i vincoli del piano paesaggistico non riportati sul piano regolatore.\nPASS se: compare l'affermazione che il certificato contiene riserve che escludono quei vincoli\nFAIL se: le clausole di riserva non sono rilevate.\nÈ indifferente: l'elenco degli enti richiamati dalla clausola.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md, clausole di riserva",
+      "pass_condition": "compare l'affermazione che il certificato contiene riserve che escludono quei vincoli",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica come necessaria una verifica autonoma sui vincoli non coperti dal certificato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica come necessaria una verifica autonoma sui vincoli non coperti dal certificato.\nPASS se: fra le azioni compare la verifica autonoma sui vincoli esclusi dal certificato\nFAIL se: l'azione non è indicata.\nÈ indifferente: l'indicazione degli enti presso cui svolgere la verifica.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md",
+      "pass_condition": "fra le azioni compare la verifica autonoma sui vincoli esclusi dal certificato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che il compendio è libero da vincoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il compendio è libero da vincoli.\nPASS se: Il deliverable non afferma che il compendio è libero da vincoli.\nFAIL se: è affermato che sul compendio non gravano vincoli, o che l'assenza di vincoli risulta dal certificato.\nÈ indifferente: l'indicazione dei vincoli che il certificato riporta.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md",
+      "pass_condition": "Il deliverable non afferma che il compendio è libero da vincoli.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il soppalco del corpo principale non è descritto in alcun titolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il soppalco del corpo principale non è descritto in alcun titolo.\nPASS se: compare l'affermazione che il soppalco del corpo principale non figura né nel permesso di costruire né nella segnalazione di variante\nFAIL se: il soppalco non assentito non è individuato, oppure è confuso con quello del corpo accessorio.\nÈ indifferente: l'indicazione dell'altezza libera del soppalco.\nFonte di authoring: 04_rilievo_metrico.md, punti 2 e 4",
+      "pass_condition": "compare l'affermazione che il soppalco del corpo principale non figura né nel permesso di costruire né nella segnalazione di variante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non tratta come non assentito il soppalco del corpo accessorio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non tratta come non assentito il soppalco del corpo accessorio.\nPASS se: Il deliverable non tratta come non assentito il soppalco del corpo accessorio.\nFAIL se: il soppalco del corpo accessorio è indicato fra le opere non assentite, o le superfici dei due soppalchi sono sommate in un unico scostamento.\nÈ indifferente: la menzione del soppalco del corpo accessorio fra gli elementi verificati.\nFonte di authoring: 03_scia_variante.md; 04_rilievo_metrico.md, punto 4",
+      "pass_condition": "Il deliverable non tratta come non assentito il soppalco del corpo accessorio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable calcola lo scostamento rispetto alla superficie utile dichiarata nella segnalazione di variante.",
+      "match_criteria": "Oggetto del criterio: Il deliverable calcola lo scostamento rispetto alla superficie utile dichiarata nella segnalazione di variante.\nPASS se: compare l'affermazione che il termine di confronto è la superficie dichiarata nella variante\nFAIL se: lo scostamento è calcolato rispetto alla superficie del permesso originario.\nÈ indifferente: la menzione di entrambe le superfici a fini descrittivi.\nFonte di authoring: 03_scia_variante.md; 04_rilievo_metrico.md",
+      "pass_condition": "compare l'affermazione che il termine di confronto è la superficie dichiarata nella variante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che lo scostamento supera la tolleranza del 2 per cento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che lo scostamento supera la tolleranza del 2 per cento.\nPASS se: compare l'affermazione che la tolleranza del 2 per cento è superata\nFAIL se: è affermato che lo scostamento rientra nella tolleranza, oppure il confronto non compare.\nÈ indifferente: il richiamo alla natura di tolleranza costruttiva.\nFonte di authoring: art. 34-bis, comma 1, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che la tolleranza del 2 per cento è superata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la graduazione delle soglie di tolleranza non si applica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la graduazione delle soglie di tolleranza non si applica.\nPASS se: compare l'affermazione che la graduazione non si applica, per la data dei lavori oppure per la dimensione dell'unità\nFAIL se: è applicata una soglia superiore al 2 per cento invocando la graduazione.\nÈ indifferente: quale delle due ragioni è addotta, purché ne sia addotta almeno una.\nFonte di authoring: art. 34-bis, comma 1-bis, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che la graduazione non si applica, per la data dei lavori oppure per la dimensione dell'unità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica lo scostamento come parziale difformità dal titolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica lo scostamento come parziale difformità dal titolo.\nPASS se: compare, riferita allo scostamento, una fra: «parziale difformità»; «difformità parziale»; «parzialmente difforme dal titolo»\nFAIL se: lo scostamento è qualificato come assenza di titolo, come totale difformità o come tolleranza.\nÈ indifferente: il richiamo alla possibile qualificazione come variazione essenziale, se accompagnato dall'indicazione che dipende dalla legge regionale.\nFonte di authoring: 04_rilievo_metrico.md; art. 34 del testo unico dell'edilizia",
+      "pass_condition": "compare, riferita allo scostamento, una fra: «parziale difformità»; «difformità parziale»; «parzialmente difforme dal titolo»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'accertamento di conformità applicabile è quello previsto per le parziali difformità e le variazioni essenziali.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'accertamento di conformità applicabile è quello previsto per le parziali difformità e le variazioni essenziali.\nPASS se: compare l'affermazione che si applica l'accertamento di conformità previsto per le parziali difformità\nFAIL se: è indicato l'accertamento previsto per l'assenza di titolo o per la totale difformità, oppure la sanatoria è trattata come istituto unitario.\nÈ indifferente: il numero dell'articolo citato, purché il regime descritto sia quello corretto.\nFonte di authoring: artt. 36 e 36-bis del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che si applica l'accertamento di conformità previsto per le parziali difformità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica in quarantacinque giorni il termine del procedimento applicabile.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in quarantacinque giorni il termine del procedimento applicabile.\nPASS se: compare il termine «quarantacinque giorni» riferito al procedimento di accertamento di conformità applicabile\nFAIL se: è indicato un termine diverso, oppure il termine non compare.\nÈ indifferente: l'indicazione del termine dell'altro binario a fini di confronto.\nFonte di authoring: art. 36-bis, comma 6, del testo unico dell'edilizia",
+      "pass_condition": "compare il termine «quarantacinque giorni» riferito al procedimento di accertamento di conformità applicabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica il silenzio nel binario applicabile come accoglimento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il silenzio nel binario applicabile come accoglimento.\nPASS se: compare, riferito al silenzio, una fra: «si intende accolta»; «silenzio-accoglimento»; «silenzio assenso»\nFAIL se: il silenzio è qualificato come rifiuto.\nÈ indifferente: il richiamo al regime opposto dell'altro binario a fini di confronto.\nFonte di authoring: art. 36-bis, comma 6, del testo unico dell'edilizia",
+      "pass_condition": "compare, riferito al silenzio, una fra: «si intende accolta»; «silenzio-accoglimento»; «silenzio assenso»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il presupposto richiede la conformità urbanistica al momento della domanda e la conformità ai requisiti edilizi al momento della realizzazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il presupposto richiede la conformità urbanistica al momento della domanda e la conformità ai requisiti edilizi al momento della realizzazione.\nPASS se: compare l'affermazione che le due conformità sono riferite a due momenti diversi\nFAIL se: è richiesta la conformità piena a entrambe le date, oppure l'asimmetria non è rilevata.\nÈ indifferente: l'ordine in cui i due profili sono esposti.\nFonte di authoring: art. 36-bis, comma 1, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che le due conformità sono riferite a due momenti diversi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che l'oblazione è pari al doppio del contributo di costruzione incrementato del 20 per cento per le parziali difformità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'oblazione è pari al doppio del contributo di costruzione incrementato del 20 per cento per le parziali difformità.\nPASS se: compare l'indicazione del doppio del contributo di costruzione con l'incremento del 20 per cento\nFAIL se: è indicato un criterio diverso, oppure il criterio non compare.\nÈ indifferente: il richiamo all'ipotesi in cui l'incremento non si applica.\nFonte di authoring: art. 36-bis, comma 5, del testo unico dell'edilizia",
+      "pass_condition": "compare l'indicazione del doppio del contributo di costruzione con l'incremento del 20 per cento",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che il fascicolo non contiene il contributo di costruzione riferito alle sole opere in difformità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il fascicolo non contiene il contributo di costruzione riferito alle sole opere in difformità.\nPASS se: compare l'affermazione che manca il calcolo del contributo riferito alle opere in difformità\nFAIL se: l'oblazione è quantificata, oppure la lacuna non è dichiarata.\nÈ indifferente: la richiesta di acquisire il calcolo dal Comune.\nFonte di authoring: 02_permesso_di_costruire.md",
+      "pass_condition": "compare l'affermazione che manca il calcolo del contributo riferito alle opere in difformità",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non quantifica l'oblazione applicando il criterio all'intero contributo di costruzione dell'intervento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non quantifica l'oblazione applicando il criterio all'intero contributo di costruzione dell'intervento.\nPASS se: Il deliverable non quantifica l'oblazione applicando il criterio all'intero contributo di costruzione dell'intervento.\nFAIL se: l'oblazione è quantificata applicando il doppio e l'incremento al contributo complessivo versato per l'intero intervento.\nÈ indifferente: la menzione dell'importo complessivo del contributo a fini descrittivi.\nFonte di authoring: 02_permesso_di_costruire.md",
+      "pass_condition": "Il deliverable non quantifica l'oblazione applicando il criterio all'intero contributo di costruzione dell'intervento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la superficie destinata a parcheggio è inferiore sia a quella prescritta dal permesso sia alla dotazione minima delle norme di attuazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la superficie destinata a parcheggio è inferiore sia a quella prescritta dal permesso sia alla dotazione minima delle norme di attuazione.\nPASS se: compare l'affermazione del doppio scostamento, rispetto al permesso e rispetto alla dotazione minima\nFAIL se: è rilevato un solo scostamento, oppure nessuno.\nÈ indifferente: l'ordine dei due confronti.\nFonte di authoring: 04_rilievo_metrico.md; 02_permesso_di_costruire.md; 01_certificato_destinazione_urbanistica.md, allegato",
+      "pass_condition": "compare l'affermazione del doppio scostamento, rispetto al permesso e rispetto alla dotazione minima",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable calcola la dotazione minima sul 20 per cento della superficie utile rilevata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable calcola la dotazione minima sul 20 per cento della superficie utile rilevata.\nPASS se: compare l'indicazione che la dotazione minima è il 20 per cento della superficie utile rilevata\nFAIL se: la dotazione minima è calcolata sulla superficie utile assentita dal permesso.\nÈ indifferente: l'esposizione anche del calcolo sulla superficie assentita a fini di confronto.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md, allegato, art. 31.3",
+      "pass_condition": "compare l'indicazione che la dotazione minima è il 20 per cento della superficie utile rilevata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica la carenza di parcheggio come violazione di una prescrizione del titolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la carenza di parcheggio come violazione di una prescrizione del titolo.\nPASS se: compare, riferita alla carenza, una fra: «violazione di prescrizione»; «prescrizione del titolo non rispettata»; «inosservanza di una prescrizione»\nFAIL se: la carenza è qualificata come scostamento dimensionale o come tolleranza.\nÈ indifferente: il richiamo alla scelta della proprietà di mantenere l'area a verde.\nFonte di authoring: 02_permesso_di_costruire.md, punto 3.6",
+      "pass_condition": "compare, riferita alla carenza, una fra: «violazione di prescrizione»; «prescrizione del titolo non rispettata»; «inosservanza di una prescrizione»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la destinazione assentita e quella voluta appartengono a categorie funzionali diverse.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la destinazione assentita e quella voluta appartengono a categorie funzionali diverse.\nPASS se: compare l'affermazione che si tratta di categorie funzionali diverse\nFAIL se: le due destinazioni sono trattate come appartenenti alla stessa categoria.\nÈ indifferente: l'indicazione delle denominazioni delle categorie.\nFonte di authoring: 02_permesso_di_costruire.md, punto 2; art. 23-ter del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che si tratta di categorie funzionali diverse",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica il mutamento come urbanisticamente rilevante.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il mutamento come urbanisticamente rilevante.\nPASS se: compare, riferito al mutamento, una fra: «urbanisticamente rilevante»; «mutamento rilevante»; «rilevante ai fini urbanistici»\nFAIL se: il mutamento è qualificato come irrilevante o come consentito senza titolo.\nÈ indifferente: il richiamo alla possibilità di eseguirlo senza opere.\nFonte di authoring: art. 23-ter del testo unico dell'edilizia",
+      "pass_condition": "compare, riferito al mutamento, una fra: «urbanisticamente rilevante»; «mutamento rilevante»; «rilevante ai fini urbanistici»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la conclusione sull'ammissibilità del mutamento non è raggiungibile sul fascicolo e indica che mancano lo strumento comunale di programmazione commerciale e la legge regionale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la conclusione sull'ammissibilità del mutamento non è raggiungibile sul fascicolo e indica che mancano lo strumento comunale di programmazione commerciale e la legge regionale.\nPASS se: compare l'affermazione che la conclusione resta sospesa e l'indicazione dei due documenti mancanti\nFAIL se: è formulata una conclusione sull'ammissibilità, oppure è dichiarata l'impossibilità di concludere senza indicare che cosa manca.\nÈ indifferente: l'indicazione di uno solo dei due documenti, purché sia indicato lo strumento di programmazione commerciale.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md, allegato; 04_rilievo_metrico.md, punti 5.2 e 5.3",
+      "pass_condition": "compare l'affermazione che la conclusione resta sospesa e l'indicazione dei due documenti mancanti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la segnalazione di agibilità è stata presentata oltre il termine di quindici giorni dall'ultimazione dei lavori di finitura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la segnalazione di agibilità è stata presentata oltre il termine di quindici giorni dall'ultimazione dei lavori di finitura.\nPASS se: compare l'affermazione che la presentazione è avvenuta oltre il termine di quindici giorni\nFAIL se: la presentazione è indicata come tempestiva, oppure il confronto non compare.\nÈ indifferente: il numero dei giorni di ritardo.\nFonte di authoring: 05_segnalazione_certificata_agibilita.md; 02_permesso_di_costruire.md, annotazioni",
+      "pass_condition": "compare l'affermazione che la presentazione è avvenuta oltre il termine di quindici giorni",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica la conseguenza della tardività come sanzione amministrativa pecuniaria.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la conseguenza della tardività come sanzione amministrativa pecuniaria.\nPASS se: compare, riferita alla tardività, una fra: «sanzione amministrativa pecuniaria»; «sanzione pecuniaria»; «sanzione amministrativa»\nFAIL se: la conseguenza è indicata come inefficacia della segnalazione o come illegittimità dell'utilizzo.\nÈ indifferente: l'indicazione dell'intervallo dell'importo.\nFonte di authoring: art. 24, comma 3, del testo unico dell'edilizia",
+      "pass_condition": "compare, riferita alla tardività, una fra: «sanzione amministrativa pecuniaria»; «sanzione pecuniaria»; «sanzione amministrativa»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non afferma che l'utilizzo dell'immobile è illegittimo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che l'utilizzo dell'immobile è illegittimo.\nPASS se: Il deliverable non afferma che l'utilizzo dell'immobile è illegittimo.\nFAIL se: è affermato che l'immobile non è utilizzabile, o che l'utilizzo in corso è illegittimo.\nÈ indifferente: l'indicazione che l'utilizzo può iniziare dalla data di presentazione.\nFonte di authoring: art. 24, comma 6, del testo unico dell'edilizia",
+      "pass_condition": "Il deliverable non afferma che l'utilizzo dell'immobile è illegittimo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la segnalazione di agibilità rinvia a una disposizione abrogata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la segnalazione di agibilità rinvia a una disposizione abrogata.\nPASS se: compare l'affermazione che la disposizione richiamata nell'intestazione della segnalazione è abrogata\nFAIL se: il rinvio non è rilevato.\nÈ indifferente: l'indicazione dell'atto che ha disposto l'abrogazione.\nFonte di authoring: 05_segnalazione_certificata_agibilita.md, intestazione",
+      "pass_condition": "compare l'affermazione che la disposizione richiamata nell'intestazione della segnalazione è abrogata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non fa derivare dal rinvio errato l'inefficacia della segnalazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non fa derivare dal rinvio errato l'inefficacia della segnalazione.\nPASS se: Il deliverable non fa derivare dal rinvio errato l'inefficacia della segnalazione.\nFAIL se: è affermato che la segnalazione è nulla, inefficace o da ripresentare per effetto del rinvio alla disposizione abrogata.\nÈ indifferente: la proposta di rettificare l'intestazione.\nFonte di authoring: art. 24 del testo unico dell'edilizia",
+      "pass_condition": "Il deliverable non fa derivare dal rinvio errato l'inefficacia della segnalazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la dichiarazione della venditrice sulla conformità ai titoli è smentita dal rilievo metrico.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la dichiarazione della venditrice sulla conformità ai titoli è smentita dal rilievo metrico.\nPASS se: compare l'affermazione che la garanzia sulla conformità è smentita dal rilievo\nFAIL se: la dichiarazione della venditrice è riportata come stato accertato dell'immobile, oppure la difformità è rilevata senza collegarla alla garanzia.\nÈ indifferente: il richiamo alla dichiarazione sull'assenza di atti di accertamento.\nFonte di authoring: 06_contratto_preliminare.md, punti 4.2 e 4.4",
+      "pass_condition": "compare l'affermazione che la garanzia sulla conformità è smentita dal rilievo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable qualifica come valutazioni di parte le considerazioni della relazione asseverata sull'irrilevanza del soppalco interno e sulla dotazione a verde.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica come valutazioni di parte le considerazioni della relazione asseverata sull'irrilevanza del soppalco interno e sulla dotazione a verde.\nPASS se: compare, riferita a quelle considerazioni, una fra: «valutazione di parte»; «giudizio del tecnico della venditrice»; «non è un fatto accertato»\nFAIL se: le considerazioni sono riportate come asseverazioni o come fatti.\nÈ indifferente: il richiamo alla qualifica del tecnico come progettista e direttore dei lavori.\nFonte di authoring: 07_relazione_tecnica_asseverata.md, punto 4",
+      "pass_condition": "compare, riferita a quelle considerazioni, una fra: «valutazione di parte»; «giudizio del tecnico della venditrice»; «non è un fatto accertato»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable colloca lo scostamento di superficie utile fra le difformità per cui il preliminare prevede la rinegoziazione del prezzo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable colloca lo scostamento di superficie utile fra le difformità per cui il preliminare prevede la rinegoziazione del prezzo.\nPASS se: compare la collocazione dello scostamento fra le difformità regolarizzabili con rinegoziazione del prezzo\nFAIL se: lo scostamento è collocato fra le difformità non regolarizzabili, oppure la collocazione non è indicata.\nÈ indifferente: l'indicazione dell'importo su cui rinegoziare.\nFonte di authoring: 06_contratto_preliminare.md, punto 5.2",
+      "pass_condition": "compare la collocazione dello scostamento fra le difformità regolarizzabili con rinegoziazione del prezzo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable afferma che la collocazione del mutamento di destinazione d'uso fra le due categorie del preliminare non è determinabile sul fascicolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la collocazione del mutamento di destinazione d'uso fra le due categorie del preliminare non è determinabile sul fascicolo.\nPASS se: compare l'affermazione che la collocazione del mutamento di destinazione d'uso resta sospesa\nFAIL se: il mutamento di destinazione è collocato in una delle due categorie, oppure il punto non è trattato.\nÈ indifferente: l'indicazione del termine del 31 ottobre 2026 per la verifica.\nFonte di authoring: 06_contratto_preliminare.md, punti 5.1, 5.2 e 5.3",
+      "pass_condition": "compare l'affermazione che la collocazione del mutamento di destinazione d'uso resta sospesa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non indica la necessità di un nuovo certificato di destinazione urbanistica per intervenuta scadenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica la necessità di un nuovo certificato di destinazione urbanistica per intervenuta scadenza.\nPASS se: Il deliverable non indica la necessità di un nuovo certificato di destinazione urbanistica per intervenuta scadenza.\nFAIL se: è indicata la scadenza del certificato di destinazione urbanistica come rilievo o come adempimento da compiere prima dell'atto definitivo.\nÈ indifferente: l'osservazione che la validità è subordinata alla dichiarazione dell'alienante sull'assenza di modificazioni degli strumenti urbanistici.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md; 06_contratto_preliminare.md, punto 3.1",
+      "pass_condition": "Il deliverable non indica la necessità di un nuovo certificato di destinazione urbanistica per intervenuta scadenza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non indica l'altezza rilevata fra gli scostamenti non assentiti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'altezza rilevata fra gli scostamenti non assentiti.\nPASS se: Il deliverable non indica l'altezza rilevata fra gli scostamenti non assentiti.\nFAIL se: l'altezza rilevata di 7,24 metri è indicata come difformità rispetto al titolo.\nÈ indifferente: la menzione dell'altezza fra gli elementi verificati e corrispondenti.\nFonte di authoring: 03_scia_variante.md; 04_rilievo_metrico.md",
+      "pass_condition": "Il deliverable non indica l'altezza rilevata fra gli scostamenti non assentiti.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non segnala un rischio di decadenza del permesso di costruire.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non segnala un rischio di decadenza del permesso di costruire.\nPASS se: Il deliverable non segnala un rischio di decadenza del permesso di costruire.\nFAIL se: è indicata la decadenza del permesso di costruire fra i rilievi, o è invocata una proroga dei termini.\nÈ indifferente: la menzione delle date di inizio e ultimazione fra gli elementi verificati.\nFonte di authoring: 02_permesso_di_costruire.md, annotazioni",
+      "pass_condition": "Il deliverable non segnala un rischio di decadenza del permesso di costruire.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come limite la clausola di non producibilità agli organi della pubblica amministrazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come limite la clausola di non producibilità agli organi della pubblica amministrazione.\nPASS se: Il deliverable non presenta come limite la clausola di non producibilità agli organi della pubblica amministrazione.\nFAIL se: la clausola di non producibilità agli organi della pubblica amministrazione è indicata come limite all'utilizzabilità del certificato nell'atto.\nÈ indifferente: la menzione della clausola fra le formule del certificato.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md",
+      "pass_condition": "Il deliverable non presenta come limite la clausola di non producibilità agli organi della pubblica amministrazione.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non attribuisce alle opere assentite dalla segnalazione di variante lo stesso trattamento delle opere non assentite.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce alle opere assentite dalla segnalazione di variante lo stesso trattamento delle opere non assentite.\nPASS se: Il deliverable non attribuisce alle opere assentite dalla segnalazione di variante lo stesso trattamento delle opere non assentite.\nFAIL se: le opere descritte nella segnalazione di variante sono elencate fra quelle prive di titolo.\nÈ indifferente: la menzione della variante fra i titoli che disciplinano l'immobile.\nFonte di authoring: 03_scia_variante.md",
+      "pass_condition": "Il deliverable non attribuisce alle opere assentite dalla segnalazione di variante lo stesso trattamento delle opere non assentite.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non presenta come acquisito l'esito dell'accertamento di conformità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come acquisito l'esito dell'accertamento di conformità.\nPASS se: Il deliverable non presenta come acquisito l'esito dell'accertamento di conformità.\nFAIL se: è affermato che la domanda di accertamento di conformità sarà accolta, o che la difformità è sanabile con certezza.\nÈ indifferente: l'indicazione dei presupposti da verificare per l'accoglimento.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presenta come acquisito l'esito dell'accertamento di conformità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica in 1.958 metri quadrati la superficie utile rilevata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 1.958 metri quadrati la superficie utile rilevata.\nPASS se: compare la misura «1.958» riferita alla superficie utile rilevata\nFAIL se: è indicata una misura diversa, oppure la misura non compare.\nÈ indifferente: l'unità di misura usata.\nFonte di authoring: 04_rilievo_metrico.md, punto 2",
+      "pass_condition": "compare la misura «1.958» riferita alla superficie utile rilevata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica in 56 metri quadrati lo scostamento non assentito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 56 metri quadrati lo scostamento non assentito.\nPASS se: compare la misura «56» riferita allo scostamento non assentito di superficie utile\nFAIL se: è indicata una misura diversa, oppure lo scostamento non compare.\nÈ indifferente: l'unità di misura usata.\nFonte di authoring: 04_rilievo_metrico.md",
+      "pass_condition": "compare la misura «56» riferita allo scostamento non assentito di superficie utile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica nel 2,94 per cento lo scostamento percentuale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica nel 2,94 per cento lo scostamento percentuale.\nPASS se: compare la percentuale «2,94» riferita allo scostamento\nFAIL se: è indicata una percentuale diversa, oppure la percentuale non compare.\nÈ indifferente: il numero di decimali usato.\nFonte di authoring: 04_rilievo_metrico.md e 03_scia_variante.md",
+      "pass_condition": "compare la percentuale «2,94» riferita allo scostamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non calcola lo scostamento percentuale sulla superficie utile del permesso originario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non calcola lo scostamento percentuale sulla superficie utile del permesso originario.\nPASS se: Il deliverable non calcola lo scostamento percentuale sulla superficie utile del permesso originario.\nFAIL se: lo scostamento percentuale è calcolato dividendo la differenza rispetto alla superficie del permesso originario, oppure è indicato come «6,41».\nÈ indifferente: la menzione della superficie del permesso originario a fini descrittivi.\nFonte di authoring: 02_permesso_di_costruire.md e 03_scia_variante.md",
+      "pass_condition": "Il deliverable non calcola lo scostamento percentuale sulla superficie utile del permesso originario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica in 391,6 metri quadrati la dotazione minima di parcheggio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 391,6 metri quadrati la dotazione minima di parcheggio.\nPASS se: compare la misura «391,6» riferita alla dotazione minima di parcheggio\nFAIL se: è indicata una misura diversa, oppure la dotazione minima non compare.\nÈ indifferente: l'arrotondamento del valore.\nFonte di authoring: 01_certificato_destinazione_urbanistica.md, allegato, art. 31.3",
+      "pass_condition": "compare la misura «391,6» riferita alla dotazione minima di parcheggio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable non calcola la dotazione minima di parcheggio sulla superficie utile assentita dal permesso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non calcola la dotazione minima di parcheggio sulla superficie utile assentita dal permesso.\nPASS se: Il deliverable non calcola la dotazione minima di parcheggio sulla superficie utile assentita dal permesso.\nFAIL se: la dotazione minima è indicata come «368» metri quadrati o è calcolata sul 20 per cento della superficie utile assentita dal permesso.\nÈ indifferente: la menzione della superficie assentita a fini descrittivi.\nFonte di authoring: 02_permesso_di_costruire.md",
+      "pass_condition": "Il deliverable non calcola la dotazione minima di parcheggio sulla superficie utile assentita dal permesso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 31 ottobre 2026 come termine della verifica prevista dal preliminare.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 31 ottobre 2026 come termine della verifica prevista dal preliminare.\nPASS se: compare la data «31 ottobre 2026» riferita al termine della verifica\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo alla data dell'atto definitivo.\nFonte di authoring: 06_contratto_preliminare.md, punto 5.1",
+      "pass_condition": "compare la data «31 ottobre 2026» riferita al termine della verifica",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "real_estate_red_flag_matrix.md"
+      ],
+      "title": "Il deliverable indica il 20 gennaio 2027 come termine per la stipulazione dell'atto definitivo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 20 gennaio 2027 come termine per la stipulazione dell'atto definitivo.\nPASS se: compare la data «20 gennaio 2027» riferita all'atto definitivo\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo alla scadenza della validità del certificato.\nFonte di authoring: 06_contratto_preliminare.md, punto 3.1",
+      "pass_condition": "compare la data «20 gennaio 2027» riferita all'atto definitivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "N-01"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

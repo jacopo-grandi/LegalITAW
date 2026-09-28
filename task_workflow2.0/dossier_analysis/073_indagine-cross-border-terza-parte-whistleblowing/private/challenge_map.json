@@ -1,0 +1,179 @@
+{
+  "task_id": "WF2-073",
+  "lato_assistito": "Brumalto Pharma S.p.A., società italiana che indaga sul distributore Kestrel Meridian Pte. Ltd.",
+  "data_di_riferimento": "2029-11-08",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Segnalante",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'identità della segnalante è contenuta solo nell'allegato cifrato del canale",
+      "evidenza": "01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante",
+      "conseguenza": "l'accesso va limitato al team autorizzato",
+      "azione": "separare identità e contenuto investigativo",
+      "dato_mancante": "manca il consenso alla divulgazione",
+      "errore_bersaglio": "inoltrare l'allegato al distributore",
+      "fonte": "D.Lgs. 24/2023; registro canale"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Ritorsione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il blocco del bonus della segnalante è successivo di tre giorni alla segnalazione",
+      "evidenza": "01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione",
+      "conseguenza": "la prossimità temporale impone una verifica autonoma",
+      "azione": "congelare la decisione sul bonus",
+      "dato_mancante": "manca la motivazione anteriore del responsabile",
+      "errore_bersaglio": "considerare il blocco estraneo senza indagine",
+      "fonte": "report HR; D.Lgs. 24/2023"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Flusso sospetto",
+      "gravita": "alta",
+      "affermazione_richiesta": "tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato",
+      "evidenza": "02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto",
+      "conseguenza": "il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari",
+      "azione": "acquisire contratti, conti e deliverable",
+      "dato_mancante": "manca la titolarità effettiva del subagente",
+      "errore_bersaglio": "accettare il questionario come prova conclusiva",
+      "fonte": "mastro; questionario due diligence"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Privilegio esterno",
+      "gravita": "alta",
+      "affermazione_richiesta": "le interviste dirette dallo studio esterno sono separate dai colloqui HR",
+      "evidenza": "02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno",
+      "conseguenza": "la segregazione sostiene la rivendicazione di riservatezza difensiva",
+      "azione": "marcare e custodire separatamente i work product",
+      "dato_mancante": "manca una valutazione per ciascun documento",
+      "errore_bersaglio": "etichettare privilegiato tutto il data set",
+      "fonte": "lettera d'incarico; protocollo"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Legale interno",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'email del legale interno contiene anche istruzioni commerciali",
+      "evidenza": "03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno",
+      "conseguenza": "il solo mittente non consente una rivendicazione indiscriminata",
+      "azione": "separare consulenza legale e contenuto operativo",
+      "dato_mancante": "manca il thread precedente",
+      "errore_bersaglio": "presumere privilegiata ogni email del legale interno",
+      "fonte": "email; disciplina applicabile al contesto"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Legal hold",
+      "gravita": "alta",
+      "affermazione_richiesta": "il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali",
+      "evidenza": "03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold",
+      "conseguenza": "la conservazione è incompleta per i messaggi mobili indicati nella segnalazione",
+      "azione": "estendere il hold a telefoni, chat e backup",
+      "dato_mancante": "manca l'inventario dei dispositivi",
+      "errore_bersaglio": "considerare sufficiente la mailbox",
+      "fonte": "legal hold; art. 5 GDPR"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Catena di custodia",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'esportazione del portatile non registra hash né operatore",
+      "evidenza": "04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia",
+      "conseguenza": "l'autenticità della copia resta contestabile",
+      "azione": "ripetere l'acquisizione con hash e registro",
+      "dato_mancante": "manca la disponibilità del dispositivo",
+      "errore_bersaglio": "descrivere la copia come forense",
+      "fonte": "verbale forense"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Base giuridica",
+      "gravita": "alta",
+      "affermazione_richiesta": "il dataset include dati sanitari estranei all'ipotesi investigativa",
+      "evidenza": "04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica",
+      "conseguenza": "la raccolta richiede minimizzazione e una base distinta per le categorie particolari",
+      "azione": "escludere o isolare i file sanitari",
+      "dato_mancante": "manca la mappa delle basi giuridiche",
+      "errore_bersaglio": "trattare l'interesse legittimo come base unica",
+      "fonte": "artt. 5, 6 e 9 GDPR"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Trasferimento USA",
+      "gravita": "alta",
+      "affermazione_richiesta": "il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC",
+      "evidenza": "05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa",
+      "conseguenza": "il trasferimento va sospeso e ricostruito",
+      "azione": "chiudere SCC, valutazione del trasferimento e misure supplementari",
+      "dato_mancante": "manca la verifica di adesione a un quadro di adeguatezza",
+      "errore_bersaglio": "sanare retroattivamente il caricamento",
+      "fonte": "artt. 44-49 GDPR; log"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Onward transfer Singapore",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'accesso del consulente di Singapore è un trasferimento ulteriore distinto",
+      "evidenza": "05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore",
+      "conseguenza": "serve una base del capo V riferita anche a quell'accesso",
+      "azione": "revocare l'accesso finché la catena non è documentata",
+      "dato_mancante": "mancano sub-responsabili e luogo di hosting",
+      "errore_bersaglio": "assorbirlo nel trasferimento USA",
+      "fonte": "artt. 44-49 GDPR; ACL"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "pseudonimo contabile",
+      "chiave_nel_criterio": "pseudonimo contabile",
+      "regola": "Il codice usato nel mastro non coincide con l'identità protetta della segnalante."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "link scaduto",
+      "chiave_nel_criterio": "link scaduto",
+      "regola": "La scadenza del link di caricamento non prova la cancellazione dei file già acquisiti."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "importi arrotondati",
+      "chiave_nel_criterio": "importi arrotondati",
+      "regola": "L'arrotondamento degli importi nel report non dimostra da solo una manipolazione contabile."
+    }
+  ],
+  "calcoli": [
+    "2029-10-22",
+    "2029-11-08"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_registro_canale_wb_2029_44.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_istruttorio_kestrel.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_fermo_conservativo_mailbox.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_verbale_acquisizione_forense.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_nota_ufficio_privacy_trasferimenti.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": [
+    "privilegio",
+    "conservazione",
+    "trasferimenti di dati"
+  ]
+}

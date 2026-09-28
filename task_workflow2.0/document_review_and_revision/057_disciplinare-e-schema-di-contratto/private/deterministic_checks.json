@@ -1,0 +1,115 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-057",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "tender_review.md"
+  ],
+  "criteria_total": 51,
+  "proposals_count": 4,
+  "proposals": [
+    {
+      "criterion_id": "B.16",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 2.740.000,00",
+        "euro 2.679.000,00",
+        "2.740.000,00",
+        "2.679.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 2.740.000,00» ed «euro 2.679.000,00» come importo complessivo e importo soggetto a ribasso.; compaiono «2.740.000,00» e «2.679.000,00» come importo complessivo e importo soggetto a rib",
+      "combine": "single",
+      "check": {
+        "id": "WF2-057-B16",
+        "type": "required_regex",
+        "artifact": "tender_review.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?740[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?679[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?740[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?679[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.18",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 61.000,00",
+        "61.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 61.000,00» come scostamento.; compare «61.000,00» come scostamento.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-057-B18",
+        "type": "required_regex",
+        "artifact": "tender_review.md",
+        "patterns": [
+          "(?:(?<![\\d.,])61[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])61[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.23",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "420 giorni",
+        "450 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compaiono «420 giorni» e «450 giorni» come termini rispettivamente di disciplinare e determina e di schema.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-057-B23",
+        "type": "required_regex",
+        "artifact": "tender_review.md",
+        "patterns": [
+          "(?:(?:420)\\s+giorn[oaei]|(?:450)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.30",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "240 giorni",
+        "90 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compaiono «240 giorni» e «90 giorni» come durata del vincolo dell'offerta e validità della garanzia.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-057-B30",
+        "type": "required_regex",
+        "artifact": "tender_review.md",
+        "patterns": [
+          "(?:(?:240)\\s+giorn[oaei]|(?:90|novanta)\\s+giorn[oaei])"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-058",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "procedure_timeline.md"
+  ],
+  "criteria_total": 44,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "B.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "8 aprile 2031",
+        "08/04/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «8 aprile 2031» come giorno di decorrenza degli effetti delle misure.; compare «08/04/2031» come giorno di decorrenza degli effetti delle misure.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B1",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:8°?\\s+aprile(?:\\s+2031)?|0?8\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?8\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31)|(?:8°?\\s+aprile(?:\\s+2031)?|0?8\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?8\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "9 aprile 2031",
+        "09/04/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «9 aprile 2031» come termine per il ricorso.; compare «09/04/2031» come termine per il ricorso.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B5",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:9°?\\s+aprile(?:\\s+2031)?|0?9\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?9\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31)|(?:9°?\\s+aprile(?:\\s+2031)?|0?9\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?9\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "28 aprile 2031",
+        "28/04/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «28 aprile 2031» come termine per l'iscrizione del numero di ruolo.; compare «28/04/2031» come termine per l'iscrizione del numero di ruolo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B7",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:28°?\\s+aprile(?:\\s+2031)?|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31)|(?:28°?\\s+aprile(?:\\s+2031)?|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2031|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.9",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "dieci giorni",
+        "10 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare «dieci giorni» come termine per la fissazione dell'udienza.; compare «10 giorni» come termine per la fissazione dell'udienza.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B9",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:10|dieci)\\s+giorn[oaei]|(?:10|dieci)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.10",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "trenta giorni",
+        "centoventi giorni",
+        "30 giorni",
+        "120 giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compaiono «trenta giorni» e «centoventi giorni» come limiti della durata iniziale.; compaiono «30 giorni» e «120 giorni» come limiti della durata iniziale.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B10",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:30|trenta)\\s+giorn[oaei]|(?:120|centoventi)\\s+giorn[oaei]|(?:30|trenta)\\s+giorn[oaei]|(?:120|centoventi)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.13",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "31 gennaio 2031",
+        "31/01/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «31 gennaio 2031» come data della situazione patrimoniale.; compare «31/01/2031» come data della situazione patrimoniale.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B13",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?:31°?\\s+gennaio(?:\\s+2031)?|0?31\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2031|0?31\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*31)|(?:31°?\\s+gennaio(?:\\s+2031)?|0?31\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2031|0?31\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.17",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 410.000,00",
+        "410.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 410.000,00» come ammontare dei crediti dei lavoratori.; compare «410.000,00» come ammontare dei crediti dei lavoratori.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-058-B17",
+        "type": "required_regex",
+        "artifact": "procedure_timeline.md",
+        "patterns": [
+          "(?:(?<![\\d.,])410[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])410[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

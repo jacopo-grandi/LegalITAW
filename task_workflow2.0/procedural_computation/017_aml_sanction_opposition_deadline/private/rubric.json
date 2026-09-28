@@ -1,0 +1,690 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-017",
+  "title": "AML. Termine per l'opposizione al decreto sanzionatorio",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 42,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable è un memo consegnato come file di testo.",
+      "pass_condition": "è presente un file con estensione .docx, .pdf o .md che contiene il memo.",
+      "fail_condition": "il contenuto resta nel corpo della risposta senza file.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 memo consegnato\nissue: — · tipo: presenza · gravità: alta · judge: no · fonte: prompt\nVerifica: il deliverable è un memo consegnato come file di testo.\nPass se: è presente un file con estensione .docx, .pdf o .md che contiene il memo.\nFail se: il contenuto resta nel corpo della risposta senza file."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo presenta una sola data come scadenza del termine per impugnare.",
+      "pass_condition": "una sola data è presentata come scadenza e le altre date compaiono con funzione diversa e dichiarata.",
+      "fail_condition": "due o più date sono presentate come scadenza, anche in via alternativa o prudenziale, oppure la scadenza non è isolabile.",
+      "indifferent": "la ripetizione della stessa data in più punti del memo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 scadenza unica e non ambigua\nissue: — · tipo: struttura · gravità: alta · judge: sì · fonte: prompt\nVerifica: il memo presenta una sola data come scadenza del termine per impugnare.\nPass se: una sola data è presentata come scadenza e le altre date compaiono con funzione diversa e dichiarata.\nFail se: due o più date sono presentate come scadenza, anche in via alternativa o prudenziale, oppure la scadenza non è isolabile.\nIndifferente: la ripetizione della stessa data in più punti del memo."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "ogni data indicata nel memo è accompagnata dal titolo di uno dei tre documenti allegati e da un riferimento normativo con articolo e comma.",
+      "pass_condition": "per ciascuna data compaiono entrambi i riferimenti.",
+      "fail_condition": "almeno una data è priva dell'indicazione del documento o della norma con articolo e comma.",
+      "indifferent": "la forma della citazione e la sua collocazione, in linea o in nota; la data di riferimento indicata nella consegna, che non richiede fonte.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 ancoraggio di ogni data\nissue: — · tipo: struttura · gravità: media · judge: sì · fonte: prompt\nVerifica: ogni data indicata nel memo è accompagnata dal titolo di uno dei tre documenti allegati e da un riferimento normativo con articolo e comma.\nPass se: per ciascuna data compaiono entrambi i riferimenti.\nFail se: almeno una data è priva dell'indicazione del documento o della norma con articolo e comma.\nIndifferente: la forma della citazione e la sua collocazione, in linea o in nota."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non contiene riferimenti normativi o giurisprudenziali estranei all'elenco chiuso delle fonti del reference pack.",
+      "pass_condition": "ogni riferimento appartiene all'elenco.",
+      "fail_condition": "compare almeno un riferimento fuori elenco. B. MERITO",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 fonti nell'elenco chiuso\nissue: — · tipo: assenza · gravità: alta · judge: no · fonte: reference pack\nVerifica: il memo non contiene riferimenti normativi o giurisprudenziali estranei all'elenco chiuso delle fonti del reference pack.\nPass se: ogni riferimento appartiene all'elenco.\nFail se: compare almeno un riferimento fuori elenco."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica come atto da compiere entro il termine il deposito del ricorso in opposizione.",
+      "pass_condition": "l'atto da compiere entro il termine è il deposito del ricorso. Varianti accettate: «deposito del ricorso», «depositare il ricorso», «il ricorso va depositato», «ricorso depositato in cancelleria».",
+      "fail_condition": "l'atto da compiere entro il termine è la notificazione del ricorso alla controparte, oppure non è indicato alcun atto.",
+      "indifferent": "la menzione della possibilità di deposito a mezzo del servizio postale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.1 atto da compiere\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo indica come atto da compiere entro il termine il deposito del ricorso in opposizione.\nPass se: l'atto da compiere entro il termine è il deposito del ricorso.\nVarianti accettate: «deposito del ricorso», «depositare il ricorso», «il ricorso va depositato», «ricorso depositato in cancelleria».\nFail se: l'atto da compiere entro il termine è la notificazione del ricorso alla controparte, oppure non è indicato alcun atto.\nIndifferente: la menzione della possibilità di deposito a mezzo del servizio postale."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica il Tribunale di Brescia come giudice davanti al quale proporre il ricorso.",
+      "pass_condition": "compare «Tribunale di Brescia».",
+      "fail_condition": "«Tribunale di Brescia» non compare.",
+      "indifferent": "l'indicazione della sezione o dell'ufficio interno.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.2 giudice competente\nissue: I-02 · tipo: valore · gravità: alta · judge: no · fonte: art. 6, co. 2 e co. 4, lett. f, D.Lgs. 150/2011\nVerifica: il memo indica il Tribunale di Brescia come giudice davanti al quale proporre il ricorso.\nPass se: compare «Tribunale di Brescia».\nFail se: «Tribunale di Brescia» non compare.\nIndifferente: l'indicazione della sezione o dell'ufficio interno."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo afferma che il giudice è quello del luogo in cui è stata commessa la violazione.",
+      "pass_condition": "la competenza è ancorata al luogo della violazione. Varianti accettate: «luogo in cui è stata commessa la violazione», «luogo della violazione», «luogo di commissione della violazione».",
+      "fail_condition": "la competenza è ancorata al luogo di residenza del destinatario, alla sede dell'ufficio che ha emesso il decreto o all'importo della sanzione, oppure non è indicato alcun criterio.",
+      "indifferent": "la menzione del comune di Salò accanto a quella del Tribunale di Brescia.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.3 criterio della competenza\nissue: I-02 · tipo: presenza · gravità: media · judge: sì · fonte: art. 6, co. 2, D.Lgs. 150/2011\nVerifica: il memo afferma che il giudice è quello del luogo in cui è stata commessa la violazione.\nPass se: la competenza è ancorata al luogo della violazione.\nVarianti accettate: «luogo in cui è stata commessa la violazione», «luogo della violazione», «luogo di commissione della violazione».\nFail se: la competenza è ancorata al luogo di residenza del destinatario, alla sede dell'ufficio che ha emesso il decreto o all'importo della sanzione, oppure non è indicato alcun criterio.\nIndifferente: la menzione del comune di Salò accanto a quella del Tribunale di Brescia."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il giudice di pace come giudice competente.",
+      "pass_condition": "il giudice di pace non è indicato come giudice davanti al quale proporre il ricorso.",
+      "fail_condition": "il giudice di pace è indicato come competente, in via principale o alternativa.",
+      "indifferent": "la menzione del giudice di pace per escluderlo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.4 giudice di pace escluso\nissue: I-02 · tipo: assenza · gravità: media · judge: sì · fonte: art. 6, co. 4, lett. f, D.Lgs. 150/2011\nVerifica: il memo non indica il giudice di pace come giudice competente.\nPass se: il giudice di pace non è indicato come giudice davanti al quale proporre il ricorso.\nFail se: il giudice di pace è indicato come competente, in via principale o alternativa.\nIndifferente: la menzione del giudice di pace per escluderlo."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il giudice amministrativo come giudice competente.",
+      "pass_condition": "né il TAR né il tribunale amministrativo regionale né il Consiglio di Stato sono indicati come giudice davanti al quale proporre il ricorso.",
+      "fail_condition": "uno di questi è indicato come competente.",
+      "indifferent": "la menzione del giudice amministrativo per escluderlo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.5 giudice amministrativo escluso\nissue: I-02 · tipo: assenza · gravità: media · judge: sì · fonte: art. 6 D.Lgs. 150/2011\nVerifica: il memo non indica il giudice amministrativo come giudice competente.\nPass se: né il TAR né il tribunale amministrativo regionale né il Consiglio di Stato sono indicati come giudice davanti al quale proporre il ricorso.\nFail se: uno di questi è indicato come competente.\nIndifferente: la menzione del giudice amministrativo per escluderlo."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica in sessanta giorni la durata del termine per impugnare.",
+      "pass_condition": "compare «sessanta giorni» oppure «60 giorni» riferito al termine per impugnare.",
+      "fail_condition": "la durata indicata è diversa, oppure non è indicata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.6 durata del termine\nissue: I-03 · tipo: valore · gravità: alta · judge: no · fonte: art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo indica in sessanta giorni la durata del termine per impugnare.\nPass se: compare «sessanta giorni» oppure «60 giorni» riferito al termine per impugnare.\nFail se: la durata indicata è diversa, oppure non è indicata."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo riconduce la durata di sessanta giorni alla residenza all'estero del destinatario del decreto.",
+      "pass_condition": "la durata è collegata alla residenza all'estero. Varianti accettate: «resiede all'estero», «residenza all'estero», «residente in Svizzera», «residente a Losanna».",
+      "fail_condition": "la durata di sessanta giorni è affermata senza alcun riferimento alla residenza all'estero, oppure è ricondotta all'oblazione indicata nell'atto di contestazione.",
+      "indifferent": "la menzione dell'iscrizione all'AIRE.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.7 presupposto della durata\nissue: I-03 · tipo: attribuzione · gravità: alta · judge: sì · fonte: art. 6, co. 6, D.Lgs. 150/2011; Allegato 2 e Allegato 3\nVerifica: il memo riconduce la durata di sessanta giorni alla residenza all'estero del destinatario del decreto.\nPass se: la durata è collegata alla residenza all'estero.\nVarianti accettate: «resiede all'estero», «residenza all'estero», «residente in Svizzera», «residente a Losanna».\nFail se: la durata di sessanta giorni è affermata senza alcun riferimento alla residenza all'estero, oppure è ricondotta all'oblazione indicata nell'atto di contestazione.\nIndifferente: la menzione dell'iscrizione all'AIRE."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica in trenta giorni la durata del termine per impugnare.",
+      "pass_condition": "nessuna durata di trenta giorni è riferita al termine per impugnare.",
+      "fail_condition": "la durata del termine per impugnare è indicata in trenta giorni, anche in via alternativa o prudenziale.",
+      "indifferent": "la menzione dei trenta giorni previsti dal decreto per il pagamento della sanzione e dei trenta giorni previsti dall'atto di contestazione per gli scritti difensivi.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.8 trenta giorni esclusi\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo non indica in trenta giorni la durata del termine per impugnare.\nPass se: nessuna durata di trenta giorni è riferita al termine per impugnare.\nFail se: la durata del termine per impugnare è indicata in trenta giorni, anche in via alternativa o prudenziale.\nIndifferente: la menzione dei trenta giorni previsti dal decreto per il pagamento della sanzione e dei trenta giorni previsti dall'atto di contestazione per gli scritti difensivi."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo ricava il fatto da cui decorre il termine dall'avviso di ricevimento della raccomandata internazionale.",
+      "pass_condition": "il fatto di decorrenza è ricondotto a quel documento. Varianti accettate: «avviso di ricevimento», «ricevuta di consegna», «Allegato 3», «modello CN 07».",
+      "fail_condition": "il fatto di decorrenza è ricondotto al decreto, all'atto di contestazione o a nessun documento.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.9 fonte del fatto di decorrenza\nissue: I-04 · tipo: attribuzione · gravità: alta · judge: sì · fonte: Allegato 3\nVerifica: il memo ricava il fatto da cui decorre il termine dall'avviso di ricevimento della raccomandata internazionale.\nPass se: il fatto di decorrenza è ricondotto a quel documento.\nVarianti accettate: «avviso di ricevimento», «ricevuta di consegna», «Allegato 3», «modello CN 07».\nFail se: il fatto di decorrenza è ricondotto al decreto, all'atto di contestazione o a nessun documento."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo qualifica come fatto di decorrenza la consegna del decreto al destinatario.",
+      "pass_condition": "il fatto di decorrenza è la consegna o la ricezione del decreto. Varianti accettate: «consegna», «ricezione», «notificazione perfezionata con la consegna», «avvenuta consegna».",
+      "fail_condition": "il fatto di decorrenza è qualificato come adozione, emissione, protocollazione o spedizione del decreto.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.10 qualificazione del fatto di decorrenza\nissue: I-04 · tipo: qualificazione · gravità: alta · judge: sì · fonte: art. 6, co. 6, D.Lgs. 150/2011; Allegato 3\nVerifica: il memo qualifica come fatto di decorrenza la consegna del decreto al destinatario.\nPass se: il fatto di decorrenza è la consegna o la ricezione del decreto.\nVarianti accettate: «consegna», «ricezione», «notificazione perfezionata con la consegna», «avvenuta consegna».\nFail se: il fatto di decorrenza è qualificato come adozione, emissione, protocollazione o spedizione del decreto."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 21 settembre 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "il 21 settembre 2026 non è presentato come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dal 21 settembre 2026.",
+      "indifferent": "la menzione del 21 settembre 2026 come data del decreto.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.11 data del decreto non è dies a quo\nissue: I-05 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 2\nVerifica: il memo non indica il 21 settembre 2026 come fatto da cui decorre il termine.\nPass se: il 21 settembre 2026 non è presentato come momento di decorrenza.\nFail se: il termine è fatto decorrere dal 21 settembre 2026.\nIndifferente: la menzione del 21 settembre 2026 come data del decreto."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 25 settembre 2026 come fatto da cui decorre il termine.",
+      "pass_condition": "il 25 settembre 2026 non è presentato come momento di decorrenza.",
+      "fail_condition": "il termine è fatto decorrere dal 25 settembre 2026.",
+      "indifferent": "la menzione del 25 settembre 2026 come data di spedizione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.12 spedizione non è dies a quo\nissue: I-05 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 3\nVerifica: il memo non indica il 25 settembre 2026 come fatto da cui decorre il termine.\nPass se: il 25 settembre 2026 non è presentato come momento di decorrenza.\nFail se: il termine è fatto decorrere dal 25 settembre 2026.\nIndifferente: la menzione del 25 settembre 2026 come data di spedizione."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 3 giugno 2026 come fatto da cui decorre il termine per impugnare.",
+      "pass_condition": "il 3 giugno 2026 non è presentato come momento di decorrenza del termine per impugnare.",
+      "fail_condition": "il termine per impugnare è fatto decorrere dalla notifica dell'atto di contestazione.",
+      "indifferent": "la menzione del 3 giugno 2026 come data di notifica della contestazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.13 contestazione non è dies a quo\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 1\nVerifica: il memo non indica il 3 giugno 2026 come fatto da cui decorre il termine per impugnare.\nPass se: il 3 giugno 2026 non è presentato come momento di decorrenza del termine per impugnare.\nFail se: il termine per impugnare è fatto decorrere dalla notifica dell'atto di contestazione.\nIndifferente: la menzione del 3 giugno 2026 come data di notifica della contestazione."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non afferma che il termine per impugnare è scaduto.",
+      "pass_condition": "il termine per impugnare non è presentato come decorso, scaduto o perduto.",
+      "fail_condition": "il memo afferma che il termine per impugnare è scaduto, o che l'impugnazione non è più proponibile.",
+      "indifferent": "l'affermazione che l'oblazione indicata nell'atto di contestazione non è più esercitabile.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.14 termine non scaduto\nissue: I-06 · tipo: assenza · gravità: alta · judge: sì · fonte: Allegato 1; Allegato 3\nVerifica: il memo non afferma che il termine per impugnare è scaduto.\nPass se: il termine per impugnare non è presentato come decorso, scaduto o perduto.\nFail se: il memo afferma che il termine per impugnare è scaduto, o che l'impugnazione non è più proponibile.\nIndifferente: l'affermazione che l'oblazione indicata nell'atto di contestazione non è più esercitabile."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo afferma che l'istanza di applicazione della sanzione in misura ridotta va presentata prima della scadenza del termine per impugnare.",
+      "pass_condition": "l'istanza è collocata prima di quella scadenza. Varianti accettate: «prima della scadenza del termine», «entro lo stesso termine per impugnare», «prima del 7 dicembre 2026».",
+      "fail_condition": "il memo afferma che l'istanza può essere presentata dopo la scadenza, oppure non indica alcun momento.",
+      "indifferent": "la menzione della preclusione quinquennale e dei termini per il pagamento successivo all'accoglimento.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.15 istanza di riduzione: momento\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 68 D.Lgs. 231/2007; Allegato 2, avvertenze\nVerifica: il memo afferma che l'istanza di applicazione della sanzione in misura ridotta va presentata prima della scadenza del termine per impugnare.\nPass se: l'istanza è collocata prima di quella scadenza.\nVarianti accettate: «prima della scadenza del termine», «entro lo stesso termine per impugnare», «prima del 7 dicembre 2026».\nFail se: il memo afferma che l'istanza può essere presentata dopo la scadenza, oppure non indica alcun momento.\nIndifferente: la menzione della preclusione quinquennale e dei termini per il pagamento successivo all'accoglimento."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo afferma che, se l'istanza è presentata tempestivamente, i termini per l'impugnazione restano sospesi secondo l'art. 68.",
+      "pass_condition": "compare l'effetto sospensivo collegato all'istanza tempestiva e alla successiva scansione prevista dalla norma. Varianti accettate: «sospende il termine», «termini per l'impugnazione sospesi», «la decorrenza resta sospesa».",
+      "fail_condition": "il memo afferma che l'istanza non incide sul termine, oppure omette l'effetto sospensivo.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.16 istanza di riduzione: effetto sospensivo\nissue: I-07 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 68 D.Lgs. 231/2007\nVerifica: il memo afferma che, se l'istanza è presentata tempestivamente, i termini per l'impugnazione restano sospesi secondo l'art. 68.\nPass se: compare l'effetto sospensivo collegato all'istanza tempestiva e alla successiva scansione prevista dalla norma.\nVarianti accettate: «sospende il termine», «termini per l'impugnazione sospesi», «la decorrenza resta sospesa».\nFail se: il memo afferma che l'istanza non incide sul termine, oppure omette l'effetto sospensivo."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non presenta l'istanza come mezzo per riaprire un termine già scaduto o ottenere tempo indeterminato.",
+      "pass_condition": "l'effetto è subordinato alla presentazione prima del 7 dicembre 2026 e circoscritto alla procedura dell'art. 68.",
+      "fail_condition": "il memo afferma che l'istanza può essere presentata dopo la scadenza, riapre il termine o consente di attendere senza monitorare gli eventi successivi.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.17 tempo aggiuntivo non illimitato\nissue: I-07 · tipo: assenza · gravità: media · judge: sì · fonte: art. 68 D.Lgs. 231/2007\nVerifica: il memo non presenta l'istanza come mezzo per riaprire un termine già scaduto o ottenere tempo indeterminato.\nPass se: l'effetto è subordinato alla presentazione prima del 7 dicembre 2026 e circoscritto alla procedura dell'art. 68.\nFail se: il memo afferma che l'istanza può essere presentata dopo la scadenza, riapre il termine o consente di attendere senza monitorare gli eventi successivi."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo consiglia di conferire subito il mandato, presentare l'eventuale istanza prima del 7 dicembre e presidiare separatamente la decisione ministeriale, il pagamento e la tutela giudiziale.",
+      "pass_condition": "le tre azioni sono distinte e non è suggerita un'attesa passiva.",
+      "fail_condition": "il memo consiglia di non incaricare il difensore o di attendere senza monitoraggio l'esito dell'istanza.",
+      "indifferent": "la presentazione contestuale del ricorso, se motivata come scelta prudenziale.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.18 risposta al quesito\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 68 D.Lgs. 231/2007; art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo consiglia di conferire subito il mandato, presentare l'eventuale istanza prima del 7 dicembre e presidiare separatamente la decisione ministeriale, il pagamento e la tutela giudiziale.\nPass se: le tre azioni sono distinte e non è suggerita un'attesa passiva.\nFail se: il memo consiglia di non incaricare il difensore o di attendere senza monitoraggio l'esito dell'istanza.\nIndifferente: la presentazione contestuale del ricorso, se motivata come scelta prudenziale."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non presenta come scadenza del termine una data diversa dal 7 dicembre 2026 in ragione di prudenza.",
+      "pass_condition": "la data presentata come scadenza è il 7 dicembre 2026.",
+      "fail_condition": "il memo presenta come scadenza una data anteriore qualificandola come prudenziale o cautelativa, oppure una data posteriore.",
+      "indifferent": "il consiglio di depositare il ricorso con qualche giorno di margine, purché la scadenza resti indicata al 7 dicembre 2026.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.19 simmetria del controllo\nissue: I-09 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo non presenta come scadenza del termine una data diversa dal 7 dicembre 2026 in ragione di prudenza.\nPass se: la data presentata come scadenza è il 7 dicembre 2026.\nFail se: il memo presenta come scadenza una data anteriore qualificandola come prudenziale o cautelativa, oppure una data posteriore.\nIndifferente: il consiglio di depositare il ricorso con qualche giorno di margine, purché la scadenza resti indicata al 7 dicembre 2026."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non segnala come problema l'indirizzo di Salò al quale è stato notificato l'atto di contestazione.",
+      "pass_condition": "l'indirizzo di Salò non è presentato come vizio, irregolarità o ragione di incertezza sul termine.",
+      "fail_condition": "l'indirizzo di Salò è presentato come vizio della notifica o come ragione per applicare trenta giorni.",
+      "indifferent": "la menzione dell'indirizzo di Salò nella ricostruzione dei fatti e come luogo della violazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.20 rumore: indirizzo italiano\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 1\nVerifica: il memo non segnala come problema l'indirizzo di Salò al quale è stato notificato l'atto di contestazione.\nPass se: l'indirizzo di Salò non è presentato come vizio, irregolarità o ragione di incertezza sul termine.\nFail se: l'indirizzo di Salò è presentato come vizio della notifica o come ragione per applicare trenta giorni.\nIndifferente: la menzione dell'indirizzo di Salò nella ricostruzione dei fatti e come luogo della violazione."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non usa l'importo di 12.000 euro per determinare il giudice competente.",
+      "pass_condition": "l'importo non è presentato come criterio di individuazione del giudice.",
+      "fail_condition": "il memo ricava dall'importo, o dal suo confronto con una soglia di valore, l'individuazione del giudice competente.",
+      "indifferent": "la menzione dell'importo nella ricostruzione dei fatti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.21 rumore: importo della sanzione\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 2\nVerifica: il memo non usa l'importo di 12.000 euro per determinare il giudice competente.\nPass se: l'importo non è presentato come criterio di individuazione del giudice.\nFail se: il memo ricava dall'importo, o dal suo confronto con una soglia di valore, l'individuazione del giudice competente.\nIndifferente: la menzione dell'importo nella ricostruzione dei fatti."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non segnala come vizio la mancata indicazione della durata del termine nelle avvertenze del decreto.",
+      "pass_condition": "le avvertenze non sono presentate come incomplete, irregolari o viziate.",
+      "fail_condition": "il memo qualifica come vizio, illegittimità o motivo di rimessione in termini l'assenza dell'indicazione della durata.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.22 rumore: avvertenze del decreto\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 2\nVerifica: il memo non segnala come vizio la mancata indicazione della durata del termine nelle avvertenze del decreto.\nPass se: le avvertenze non sono presentate come incomplete, irregolari o viziate.\nFail se: il memo qualifica come vizio, illegittimità o motivo di rimessione in termini l'assenza dell'indicazione della durata."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non segnala come problema la notifica per posta raccomandata internazionale.",
+      "pass_condition": "la notifica per posta non è presentata come invalida, irregolare o inidonea a far decorrere il termine.",
+      "fail_condition": "il memo afferma che la notifica avrebbe dovuto avvenire con posta elettronica certificata o per via consolare, o che la notifica per posta è invalida.",
+      "indifferent": "la descrizione della modalità di notifica nella ricostruzione dei fatti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.23 rumore: modalità di notifica\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: Allegato 3\nVerifica: il memo non segnala come problema la notifica per posta raccomandata internazionale.\nPass se: la notifica per posta non è presentata come invalida, irregolare o inidonea a far decorrere il termine.\nFail se: il memo afferma che la notifica avrebbe dovuto avvenire con posta elettronica certificata o per via consolare, o che la notifica per posta è invalida.\nIndifferente: la descrizione della modalità di notifica nella ricostruzione dei fatti."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non presenta come anomalia il fatto che l'opposizione non sospenda l'efficacia esecutiva del decreto.",
+      "pass_condition": "la mancata sospensione automatica non è presentata come vizio o come problema del decreto.",
+      "fail_condition": "il memo qualifica come illegittima o anomala la persistente esecutività del decreto in pendenza dell'opposizione.",
+      "indifferent": "la menzione della possibilità di chiedere al giudice la sospensione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.24 rumore: efficacia esecutiva\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: art. 6, co. 7, D.Lgs. 150/2011\nVerifica: il memo non presenta come anomalia il fatto che l'opposizione non sospenda l'efficacia esecutiva del decreto.\nPass se: la mancata sospensione automatica non è presentata come vizio o come problema del decreto.\nFail se: il memo qualifica come illegittima o anomala la persistente esecutività del decreto in pendenza dell'opposizione.\nIndifferente: la menzione della possibilità di chiedere al giudice la sospensione."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non presenta come irregolarità lo scarto fra la data del decreto e la data di spedizione.",
+      "pass_condition": "lo scarto fra 21 e 25 settembre 2026 non è presentato come retrodatazione, anomalia o vizio.",
+      "fail_condition": "il memo qualifica quello scarto come retrodatazione o irregolarità.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.25 rumore: sfasamento adozione-spedizione\nissue: I-10 · tipo: assenza · gravità: bassa · judge: sì · fonte: Allegato 2; Allegato 3\nVerifica: il memo non presenta come irregolarità lo scarto fra la data del decreto e la data di spedizione.\nPass se: lo scarto fra 21 e 25 settembre 2026 non è presentato come retrodatazione, anomalia o vizio.\nFail se: il memo qualifica quello scarto come retrodatazione o irregolarità."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non presume l'accoglimento dell'istanza di applicazione della sanzione in misura ridotta.",
+      "pass_condition": "l'accoglimento non è dato per avvenuto né per certo.",
+      "fail_condition": "il memo afferma che la sanzione sarà ridotta a un terzo, o che il procedimento si chiuderà con l'accoglimento.",
+      "indifferent": "l'indicazione dell'importo che risulterebbe in caso di accoglimento.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.26 divieto di presunzione: esito dell'istanza\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: art. 68 D.Lgs. 231/2007\nVerifica: il memo non presume l'accoglimento dell'istanza di applicazione della sanzione in misura ridotta.\nPass se: l'accoglimento non è dato per avvenuto né per certo.\nFail se: il memo afferma che la sanzione sarà ridotta a un terzo, o che il procedimento si chiuderà con l'accoglimento.\nIndifferente: l'indicazione dell'importo che risulterebbe in caso di accoglimento."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non prospetta la rimessione in termini per errore scusabile.",
+      "pass_condition": "non compaiono «rimessione in termini» né «errore scusabile».",
+      "fail_condition": "una delle due è prospettata come rimedio disponibile.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.27 divieto di presunzione: rimessione in termini\nissue: I-11 · tipo: assenza · gravità: media · judge: no · fonte: —\nVerifica: il memo non prospetta la rimessione in termini per errore scusabile.\nPass se: non compaiono «rimessione in termini» né «errore scusabile».\nFail se: una delle due è prospettata come rimedio disponibile."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non applica la sospensione feriale al computo del termine.",
+      "pass_condition": "la sospensione feriale non è usata per spostare la scadenza.",
+      "fail_condition": "il memo aggiunge giorni alla scadenza in ragione della sospensione feriale, o indica una scadenza motivata da essa.",
+      "indifferent": "l'affermazione che la sospensione feriale non rileva nel caso di specie.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.28 divieto di presunzione: sospensione feriale\nissue: I-11 · tipo: assenza · gravità: media · judge: sì · fonte: L. 742/1969\nVerifica: il memo non applica la sospensione feriale al computo del termine.\nPass se: la sospensione feriale non è usata per spostare la scadenza.\nFail se: il memo aggiunge giorni alla scadenza in ragione della sospensione feriale, o indica una scadenza motivata da essa.\nIndifferente: l'affermazione che la sospensione feriale non rileva nel caso di specie."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica che il Ministero decide sull'istanza nei trenta giorni successivi.",
+      "pass_condition": "compare il termine di trenta giorni riferito alla decisione ministeriale.",
+      "fail_condition": "compare un termine diverso, oppure la scansione è omessa.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.29 decisione ministeriale\nissue: I-07 · tipo: valore · gravità: media · judge: sì · fonte: art. 68 D.Lgs. 231/2007\nVerifica: il memo indica che il Ministero decide sull'istanza nei trenta giorni successivi.\nPass se: compare il termine di trenta giorni riferito alla decisione ministeriale.\nFail se: compare un termine diverso, oppure la scansione è omessa."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica che, in caso di accoglimento, il pagamento va effettuato entro novanta giorni dalla comunicazione e collega a tale scansione l'effetto sospensivo.",
+      "pass_condition": "compaiono i novanta giorni, l'accoglimento e la sospensione dei termini per l'impugnazione.",
+      "fail_condition": "il pagamento è presentato come immediato, il termine è diverso o l'effetto sospensivo è omesso. C. VALORI CALCOLATI",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "B.30 pagamento dopo l'accoglimento\nissue: I-07 · tipo: valore · gravità: alta · judge: sì · fonte: art. 68 D.Lgs. 231/2007\nVerifica: il memo indica che, in caso di accoglimento, il pagamento va effettuato entro novanta giorni dalla comunicazione e collega a tale scansione l'effetto sospensivo.\nPass se: compaiono i novanta giorni, l'accoglimento e la sospensione dei termini per l'impugnazione.\nFail se: il pagamento è presentato come immediato, il termine è diverso o l'effetto sospensivo è omesso."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica l'8 ottobre 2026 come data del fatto da cui decorre il termine.",
+      "pass_condition": "compare l'8 ottobre 2026 con quella funzione.",
+      "fail_condition": "compare una data diversa, oppure la data non compare.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.1 fatto da cui decorre il termine\nissue: I-04 · tipo: valore · gravità: alta · judge: no · fonte: Allegato 3\nVerifica: il memo indica l'8 ottobre 2026 come data del fatto da cui decorre il termine.\nPass se: compare l'8 ottobre 2026 con quella funzione.\nFail se: compare una data diversa, oppure la data non compare."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo indica il 7 dicembre 2026 come scadenza ordinaria del termine per il deposito del ricorso in opposizione, prima di considerare l'eventuale sospensione ex art. 68.",
+      "pass_condition": "compare il 7 dicembre 2026 con la funzione di scadenza ordinaria o termine entro cui presentare l'istanza.",
+      "fail_condition": "compare una data diversa, oppure la scadenza non è indicata.",
+      "indifferent": "la menzione del giorno della settimana; l'effetto sospensivo di una domanda tempestiva.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.2 scadenza ordinaria del termine\nissue: I-09 · tipo: valore · gravità: alta · judge: no · fonte: calcolo, art. 6, co. 6, D.Lgs. 150/2011\nVerifica: il memo indica il 7 dicembre 2026 come scadenza ordinaria del termine per il deposito del ricorso in opposizione, prima di considerare l'eventuale sospensione ex art. 68.\nPass se: compare il 7 dicembre 2026 con la funzione di scadenza ordinaria o termine entro cui presentare l'istanza.\nFail se: compare una data diversa, oppure la scadenza non è indicata.\nIndifferente: la menzione del giorno della settimana; l'effetto sospensivo di una domanda tempestiva."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 2 settembre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "il 2 settembre 2026 non è presentato come scadenza del termine per impugnare.",
+      "fail_condition": "lo è.",
+      "indifferent": "la menzione del 2 settembre 2026 come scadenza del pagamento in misura ridotta previsto dall'atto di contestazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.3 derivazione errata: oblazione\nissue: I-06 · tipo: assenza · gravità: alta · judge: sì · fonte: Allegato 1\nVerifica: il memo non indica il 2 settembre 2026 come scadenza del termine per impugnare.\nPass se: il 2 settembre 2026 non è presentato come scadenza del termine per impugnare.\nFail se: lo è.\nIndifferente: la menzione del 2 settembre 2026 come scadenza del pagamento in misura ridotta previsto dall'atto di contestazione."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 21 ottobre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.4 derivazione errata: trenta giorni dalla data del decreto\nissue: I-05 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica\nVerifica: il memo non indica il 21 ottobre 2026 come scadenza del termine per impugnare.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 26 ottobre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.5 derivazione errata: trenta giorni dalla spedizione\nissue: I-05 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica\nVerifica: il memo non indica il 26 ottobre 2026 come scadenza del termine per impugnare.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 9 novembre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.6 derivazione errata: trenta giorni dalla consegna\nissue: I-03 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica\nVerifica: il memo non indica il 9 novembre 2026 come scadenza del termine per impugnare.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 20 novembre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.7 derivazione errata: sessanta giorni dalla data del decreto\nissue: I-05 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica\nVerifica: il memo non indica il 20 novembre 2026 come scadenza del termine per impugnare.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "unclassified",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il memo non indica il 24 novembre 2026 come scadenza del termine per impugnare.",
+      "pass_condition": "quella data non compare come scadenza.",
+      "fail_condition": "compare come scadenza.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "C.8 derivazione errata: sessanta giorni dalla spedizione\nissue: I-05 · tipo: assenza · gravità: media · judge: no · fonte: diagnostica\nVerifica: il memo non indica il 24 novembre 2026 come scadenza del termine per impugnare.\nPass se: quella data non compare come scadenza.\nFail se: compare come scadenza."
+    }
+  ]
+}

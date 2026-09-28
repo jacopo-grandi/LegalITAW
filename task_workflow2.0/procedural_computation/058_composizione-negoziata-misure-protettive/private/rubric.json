@@ -1,0 +1,893 @@
+{
+  "task_id": "WF2-058",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 44,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable è prodotto come file `procedure_timeline.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `procedure_timeline.md`.\nPASS se: il file consegnato ha nome `procedure_timeline.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `procedure_timeline.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non supera il limite di 2400 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2400 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2400.\nFAIL se: il corpo del deliverable supera 2400 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2400.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "la sezione delle scadenze riporta per ciascuna voce data, adempimento, soggetto onerato e conseguenza dell'inosservanza.",
+      "match_criteria": "Oggetto del criterio: la sezione delle scadenze riporta per ciascuna voce data, adempimento, soggetto onerato e conseguenza dell'inosservanza.\nPASS se: ciascuna voce della sezione delle scadenze porta i quattro elementi.\nFAIL se: almeno una voce omette uno dei quattro elementi.\nÈ indifferente: l'ordine delle colonne.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce della sezione delle scadenze porta i quattro elementi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "ogni data indicata porta il riferimento al documento del fascicolo da cui è ricavata.",
+      "match_criteria": "Oggetto del criterio: ogni data indicata porta il riferimento al documento del fascicolo da cui è ricavata.\nPASS se: accanto a ciascuna data compare il rinvio a uno dei cinque allegati.\nFAIL se: almeno una data non porta alcun rinvio a un allegato.\nÈ indifferente: la forma del rinvio, numero di documento o titolo; per le date calcolate basta il rinvio all'allegato da cui parte il calcolo; la data di riferimento indicata nella consegna, che non richiede fonte.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascuna data compare il rinvio a uno dei cinque allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo ai protocolli e ai codici pratica del fascicolo.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica l'8 aprile 2031 come giorno da cui le misure protettive producono effetto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'8 aprile 2031 come giorno da cui le misure protettive producono effetto.\nPASS se: compare «8 aprile 2031» come giorno di decorrenza degli effetti delle misure.; compare «08/04/2031» come giorno di decorrenza degli effetti delle misure.\nFAIL se: è indicato un altro giorno, oppure la decorrenza degli effetti non è indicata.\nÈ indifferente: l'indicazione dell'ora di estrazione della visura.\nFonte di authoring: iscrizione prot. 2031/0455; date_verificate.md",
+      "pass_condition": "compare «8 aprile 2031» come giorno di decorrenza degli effetti delle misure.; compare «08/04/2031» come giorno di decorrenza degli effetti delle misure.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable riconduce la decorrenza degli effetti alla pubblicazione dell'istanza nel Registro delle Imprese.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la decorrenza degli effetti alla pubblicazione dell'istanza nel Registro delle Imprese.\nPASS se: la decorrenza è ricondotta a una fra: «pubblicazione nel Registro delle Imprese», «iscrizione dell'istanza di misure protettive», «pubblicita legale dell'istanza».\nFAIL se: la decorrenza è ricondotta al decreto di conferma, alla nomina dell'esperto o alla trasmissione dell'istanza, oppure l'atto di decorrenza non è indicato.\nÈ indifferente: il richiamo al numero di protocollo dell'iscrizione.\nFonte di authoring: visura dell'8 aprile 2031",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «pubblicazione nel Registro delle Imprese», «iscrizione dell'istanza di misure protettive», «pubblicita legale dell'istanza».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non afferma che le misure protettive producono effetto dal decreto di conferma del tribunale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che le misure protettive producono effetto dal decreto di conferma del tribunale.\nPASS se: il deliverable non afferma che le misure protettive producono effetto dal decreto di conferma del tribunale.\nFAIL se: compare l'affermazione che le misure operano dalla conferma o dal provvedimento del tribunale.\nÈ indifferente: l'indicazione che il decreto conferma, modifica o revoca misure già operanti.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "il deliverable non afferma che le misure protettive producono effetto dal decreto di conferma del tribunale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non indica il 27 marzo 2031 come giorno da cui le misure producono effetto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 27 marzo 2031 come giorno da cui le misure producono effetto.\nPASS se: il deliverable non indica il 27 marzo 2031 come giorno da cui le misure producono effetto.\nFAIL se: il 27 marzo 2031 è indicato come giorno di decorrenza degli effetti delle misure.\nÈ indifferente: la menzione del 27 marzo 2031 come data di trasmissione dell'istanza.\nFonte di authoring: visura dell'8 aprile 2031",
+      "pass_condition": "il deliverable non indica il 27 marzo 2031 come giorno da cui le misure producono effetto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica il 9 aprile 2031 come termine per il deposito del ricorso al tribunale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 9 aprile 2031 come termine per il deposito del ricorso al tribunale.\nPASS se: compare «9 aprile 2031» come termine per il ricorso.; compare «09/04/2031» come termine per il ricorso.\nFAIL se: è indicata una data diversa, oppure il termine per il ricorso non è indicato.\nÈ indifferente: l'indicazione dell'orario di deposito.\nFonte di authoring: computo dalla pubblicazione; date_verificate.md",
+      "pass_condition": "compare «9 aprile 2031» come termine per il ricorso.; compare «09/04/2031» come termine per il ricorso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che l'omissione del ricorso nel termine fa cessare gli effetti delle misure protettive.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'omissione del ricorso nel termine fa cessare gli effetti delle misure protettive.\nPASS se: compare l'indicazione che, in mancanza del ricorso nel termine, le misure cessano di produrre effetto.\nFAIL se: la conseguenza dell'omissione non è indicata, oppure è indicata una conseguenza diversa.\nÈ indifferente: il richiamo all'articolo che disciplina il procedimento.\nFonte di authoring: disciplina del procedimento sulle misure protettive",
+      "pass_condition": "compare l'indicazione che, in mancanza del ricorso nel termine, le misure cessano di produrre effetto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica il 28 aprile 2031 come termine per l'iscrizione del numero di ruolo nel Registro delle Imprese.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 28 aprile 2031 come termine per l'iscrizione del numero di ruolo nel Registro delle Imprese.\nPASS se: compare «28 aprile 2031» come termine per l'iscrizione del numero di ruolo.; compare «28/04/2031» come termine per l'iscrizione del numero di ruolo.\nFAIL se: è indicata una data diversa, oppure il termine non è indicato.\nÈ indifferente: l'indicazione del soggetto che cura materialmente l'iscrizione.\nFonte di authoring: computo dalla pubblicazione; date_verificate.md",
+      "pass_condition": "compare «28 aprile 2031» come termine per l'iscrizione del numero di ruolo.; compare «28/04/2031» come termine per l'iscrizione del numero di ruolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable qualifica l'inosservanza del termine di venti giorni come causa di inefficacia delle misure protettive.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'inosservanza del termine di venti giorni come causa di inefficacia delle misure protettive.\nPASS se: compare, riferita a quell'inosservanza, una fra: «inefficacia delle misure», «le misure divengono inefficaci», «perdita di efficacia».\nFAIL se: l'inosservanza è presentata come priva di conseguenze, oppure la conseguenza indicata è diversa dall'inefficacia, oppure la qualificazione non compare.\nÈ indifferente: il richiamo all'articolo che disciplina il procedimento.\nFonte di authoring: disciplina del procedimento sulle misure protettive",
+      "pass_condition": "compare, riferita a quell'inosservanza, una fra: «inefficacia delle misure», «le misure divengono inefficaci», «perdita di efficacia».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica in dieci giorni dal deposito del ricorso il termine entro cui il tribunale fissa l'udienza.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in dieci giorni dal deposito del ricorso il termine entro cui il tribunale fissa l'udienza.\nPASS se: compare «dieci giorni» come termine per la fissazione dell'udienza.; compare «10 giorni» come termine per la fissazione dell'udienza.\nFAIL se: è indicato un termine diverso, oppure il termine non è indicato.\nÈ indifferente: l'indicazione della modalità di svolgimento dell'udienza.\nFonte di authoring: disciplina del procedimento sulle misure protettive",
+      "pass_condition": "compare «dieci giorni» come termine per la fissazione dell'udienza.; compare «10 giorni» come termine per la fissazione dell'udienza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica in trenta giorni il limite minimo e in centoventi giorni il limite massimo della durata che il tribunale può assegnare alle misure.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in trenta giorni il limite minimo e in centoventi giorni il limite massimo della durata che il tribunale può assegnare alle misure.\nPASS se: compaiono «trenta giorni» e «centoventi giorni» come limiti della durata iniziale.; compaiono «30 giorni» e «120 giorni» come limiti della durata iniziale.\nFAIL se: sono indicati limiti diversi, oppure i limiti della durata iniziale non sono indicati.\nÈ indifferente: l'indicazione della durata che il tribunale potrebbe scegliere nel caso concreto.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "compaiono «trenta giorni» e «centoventi giorni» come limiti della durata iniziale.; compaiono «30 giorni» e «120 giorni» come limiti della durata iniziale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica in duecentoquaranta giorni la durata massima complessiva delle misure comprese le proroghe.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in duecentoquaranta giorni la durata massima complessiva delle misure comprese le proroghe.\nPASS se: compare «duecentoquaranta giorni» come durata massima complessiva.; compare «240 giorni» come durata massima complessiva.\nFAIL se: è indicata una durata massima diversa, oppure il limite complessivo non è indicato.\nÈ indifferente: l'indicazione del numero di proroghe.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "compare «duecentoquaranta giorni» come durata massima complessiva.; compare «240 giorni» come durata massima complessiva.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non afferma che le misure protettive possono durare per l'intera durata della composizione negoziata.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che le misure protettive possono durare per l'intera durata della composizione negoziata.\nPASS se: il deliverable non afferma che le misure protettive possono durare per l'intera durata della composizione negoziata.\nFAIL se: compare l'affermazione che le misure durano quanto la composizione negoziata o che seguono la durata delle trattative.\nÈ indifferente: l'indicazione che la composizione negoziata ha una propria durata distinta.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "il deliverable non afferma che le misure protettive possono durare per l'intera durata della composizione negoziata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica il 31 gennaio 2031 come data di aggiornamento della situazione patrimoniale depositata.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 31 gennaio 2031 come data di aggiornamento della situazione patrimoniale depositata.\nPASS se: compare «31 gennaio 2031» come data della situazione patrimoniale.; compare «31/01/2031» come data della situazione patrimoniale.\nFAIL se: è indicata una data diversa, oppure la data del documento non è rilevata.\nÈ indifferente: l'indicazione delle voci contenute nel documento.\nFonte di authoring: punto 4, numero 3, dell'istanza; date_verificate.md",
+      "pass_condition": "compare «31 gennaio 2031» come data della situazione patrimoniale.; compare «31/01/2031» come data della situazione patrimoniale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable rileva che alla data di pubblicazione la situazione patrimoniale depositata ha un'anzianità superiore al limite di sessanta giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che alla data di pubblicazione la situazione patrimoniale depositata ha un'anzianità superiore al limite di sessanta giorni.\nPASS se: compare l'indicazione che il documento supera il limite di anzianità di sessanta giorni alla data rilevante.\nFAIL se: il rilievo non compare, oppure il documento è presentato come conforme al requisito di aggiornamento.\nÈ indifferente: il numero esatto di giorni di anzianità indicato.\nFonte di authoring: punto 4 dell'istanza; visura dell'8 aprile 2031",
+      "pass_condition": "compare l'indicazione che il documento supera il limite di anzianità di sessanta giorni alla data rilevante.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica come azione l'aggiornamento e il deposito di una nuova situazione patrimoniale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione l'aggiornamento e il deposito di una nuova situazione patrimoniale.\nPASS se: compare l'indicazione di aggiornare e depositare la situazione patrimoniale.\nFAIL se: l'azione non compare.\nÈ indifferente: la data alla quale la nuova situazione dovrebbe essere aggiornata.\nFonte di authoring: punto 4 dell'istanza",
+      "pass_condition": "compare l'indicazione di aggiornare e depositare la situazione patrimoniale.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che i crediti dei lavoratori sono esclusi dalle misure protettive.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che i crediti dei lavoratori sono esclusi dalle misure protettive.\nPASS se: compare l'indicazione che i crediti dei lavoratori restano fuori dall'ambito delle misure protettive.\nFAIL se: i crediti dei lavoratori sono presentati come coperti dalle misure, oppure l'esclusione non è affermata.\nÈ indifferente: il richiamo all'articolo che dispone l'esclusione.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "compare l'indicazione che i crediti dei lavoratori restano fuori dall'ambito delle misure protettive.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica in euro 410.000,00 l'ammontare dei crediti dei lavoratori esclusi dalle misure.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 410.000,00 l'ammontare dei crediti dei lavoratori esclusi dalle misure.\nPASS se: compare «euro 410.000,00» come ammontare dei crediti dei lavoratori.; compare «410.000,00» come ammontare dei crediti dei lavoratori.\nFAIL se: è indicato un ammontare diverso, oppure l'ammontare non è isolato.\nÈ indifferente: l'indicazione del fondo per il trattamento di fine rapporto, che è voce distinta.\nFonte di authoring: situazione patrimoniale; elenco delle categorie di creditori nell'istanza",
+      "pass_condition": "compare «euro 410.000,00» come ammontare dei crediti dei lavoratori.; compare «410.000,00» come ammontare dei crediti dei lavoratori.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable qualifica la sospensione delle linee comunicata dalla banca come consentita nella finestra che va dalla pubblicazione alla conferma delle misure.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la sospensione delle linee comunicata dalla banca come consentita nella finestra che va dalla pubblicazione alla conferma delle misure.\nPASS se: compare, riferita alla sospensione, una fra: «consentita fino alla conferma», «ammessa nella fase anteriore alla conferma», «legittima solo fino al provvedimento di conferma».\nFAIL se: la sospensione è presentata come in ogni caso illegittima, oppure come consentita senza limite temporale, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla disciplina prudenziale.\nFonte di authoring: punto 1 della lettera del 10 aprile 2031",
+      "pass_condition": "compare, riferita alla sospensione, una fra: «consentita fino alla conferma», «ammessa nella fase anteriore alla conferma», «legittima solo fino al provvedimento di conferma».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica come azione la contestazione della prosecuzione della sospensione dopo la conferma delle misure.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la contestazione della prosecuzione della sospensione dopo la conferma delle misure.\nPASS se: compare l'indicazione di contestare la sospensione se prosegue dopo la conferma.\nFAIL se: l'azione non compare.\nÈ indifferente: la forma proposta per la contestazione.\nFonte di authoring: punto 1 della lettera del 10 aprile 2031",
+      "pass_condition": "compare l'indicazione di contestare la sospensione se prosegue dopo la conferma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable qualifica come vietata la revoca degli affidamenti annunciata dalla banca, in quanto motivata con il mancato pagamento di debiti anteriori.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come vietata la revoca degli affidamenti annunciata dalla banca, in quanto motivata con il mancato pagamento di debiti anteriori.\nPASS se: compare, riferita a quella revoca, una fra: «ricade nel divieto», «non è consentita perché fondata sui soli debiti pregressi», «vietata in quanto motivata dal mancato pagamento anteriore».\nFAIL se: la revoca è presentata come consentita, oppure la qualificazione non compare.\nÈ indifferente: il giudizio sulla motivazione alternativa addotta al punto 3 della lettera.\nFonte di authoring: punto 2 della lettera del 10 aprile 2031",
+      "pass_condition": "compare, riferita a quella revoca, una fra: «ricade nel divieto», «non è consentita perché fondata sui soli debiti pregressi», «vietata in quanto motivata dal mancato pagamento anteriore».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable fonda quella qualificazione sulle rate scadute il 31 gennaio e il 28 febbraio 2031 nominate dalla banca.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda quella qualificazione sulle rate scadute il 31 gennaio e il 28 febbraio 2031 nominate dalla banca.\nPASS se: la qualificazione è ricondotta a una fra: «rate scadute il 31 gennaio e il 28 febbraio 2031», «rate anteriori alla pubblicazione», «punto 2 della lettera».\nFAIL se: la qualificazione è affermata senza indicare la motivazione addotta dalla banca.\nÈ indifferente: l'indicazione dell'importo delle rate.\nFonte di authoring: punto 2 della lettera del 10 aprile 2031",
+      "pass_condition": "la qualificazione è ricondotta a una fra: «rate scadute il 31 gennaio e il 28 febbraio 2031», «rate anteriori alla pubblicazione», «punto 2 della lettera».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che il decreto ingiuntivo notificato il 10 marzo 2031 resta valido.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il decreto ingiuntivo notificato il 10 marzo 2031 resta valido.\nPASS se: compare, riferita al decreto ingiuntivo, una fra: «resta valido», «conserva efficacia come titolo», «non è travolto dalle misure».\nFAIL se: il decreto è presentato come inefficace o nullo, oppure la sua sorte non è trattata.\nÈ indifferente: l'indicazione dello stato del termine per l'opposizione.\nFonte di authoring: punto 6 dell'istanza",
+      "pass_condition": "compare, riferita al decreto ingiuntivo, una fra: «resta valido», «conserva efficacia come titolo», «non è travolto dalle misure».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable qualifica l'effetto delle misure sul decreto come limitato all'inizio o alla prosecuzione delle azioni esecutive e cautelari.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'effetto delle misure sul decreto come limitato all'inizio o alla prosecuzione delle azioni esecutive e cautelari.\nPASS se: compare l'indicazione che le misure impediscono di iniziare o proseguire azioni esecutive e cautelari sul patrimonio.\nFAIL se: alle misure è attribuito l'effetto di annullare il titolo, oppure l'effetto non è precisato.\nÈ indifferente: il richiamo all'articolo che disciplina gli effetti.\nFonte di authoring: disciplina delle misure protettive",
+      "pass_condition": "compare l'indicazione che le misure impediscono di iniziare o proseguire azioni esecutive e cautelari sul patrimonio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non afferma che il decreto ingiuntivo è divenuto inefficace per effetto della pubblicazione dell'istanza.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il decreto ingiuntivo è divenuto inefficace per effetto della pubblicazione dell'istanza.\nPASS se: il deliverable non afferma che il decreto ingiuntivo è divenuto inefficace per effetto della pubblicazione dell'istanza.\nFAIL se: compare l'affermazione che il decreto ingiuntivo è inefficace, nullo o travolto per effetto della pubblicazione.\nÈ indifferente: l'indicazione che il credito ingiunto resta soggetto alle trattative.\nFonte di authoring: punto 6 dell'istanza",
+      "pass_condition": "il deliverable non afferma che il decreto ingiuntivo è divenuto inefficace per effetto della pubblicazione dell'istanza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable qualifica l'inibitoria del ritiro degli impianti come misura cautelare specifica distinta dalle misure protettive.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'inibitoria del ritiro degli impianti come misura cautelare specifica distinta dalle misure protettive.\nPASS se: compare, riferita all'inibitoria, una fra: «misura cautelare specifica», «provvedimento cautelare distinto», «non rientra nelle misure protettive».\nFAIL se: l'inibitoria è presentata come effetto automatico della pubblicazione, oppure la qualificazione non compare.\nÈ indifferente: l'indicazione del valore dei canoni maturati.\nFonte di authoring: punto 5 dell'istanza",
+      "pass_condition": "compare, riferita all'inibitoria, una fra: «misura cautelare specifica», «provvedimento cautelare distinto», «non rientra nelle misure protettive».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica come azione la motivazione specifica dell'inibitoria nel ricorso al tribunale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la motivazione specifica dell'inibitoria nel ricorso al tribunale.\nPASS se: compare l'indicazione di motivare l'inibitoria nel ricorso, distintamente dalla richiesta di conferma delle misure.\nFAIL se: l'azione non compare.\nÈ indifferente: il contenuto proposto per la motivazione.\nFonte di authoring: punto 5 dell'istanza",
+      "pass_condition": "compare l'indicazione di motivare l'inibitoria nel ricorso, distintamente dalla richiesta di conferma delle misure.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che al 15 aprile 2031 il decreto del tribunale non risulta dagli atti.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che al 15 aprile 2031 il decreto del tribunale non risulta dagli atti.\nPASS se: compare, riferita al decreto del tribunale, una fra: «non risulta dagli atti», «non è nel fascicolo», «la conferma non risulta intervenuta».\nFAIL se: la conferma è data per intervenuta o per negata, oppure lo stato del procedimento non è affermato.\nÈ indifferente: l'indicazione della data entro cui il decreto dovrebbe intervenire.\nFonte di authoring: visura dell'8 aprile 2031; composizione del fascicolo",
+      "pass_condition": "compare, riferita al decreto del tribunale, una fra: «non risulta dagli atti», «non è nel fascicolo», «la conferma non risulta intervenuta».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che l'iscrizione del numero di ruolo non risulta dalla visura.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'iscrizione del numero di ruolo non risulta dalla visura.\nPASS se: compare l'indicazione che nella visura non compare l'iscrizione del numero di ruolo.\nFAIL se: l'iscrizione è data per avvenuta, oppure la verifica non compare.\nÈ indifferente: il rilievo che la visura è estratta l'8 aprile 2031.\nFonte di authoring: visura dell'8 aprile 2031",
+      "pass_condition": "compare l'indicazione che nella visura non compare l'iscrizione del numero di ruolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable indica quali documenti occorrono per accertare lo stato del procedimento davanti al tribunale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali documenti occorrono per accertare lo stato del procedimento davanti al tribunale.\nPASS se: compare l'indicazione di almeno un documento fra ricevuta di deposito del ricorso, decreto di fissazione dell'udienza e visura aggiornata.\nFAIL se: la lacuna è dichiarata senza indicare che cosa serve per colmarla.\nÈ indifferente: il numero di documenti elencati.\nFonte di authoring: public/01_task.md, richiesta sui dati mancanti",
+      "pass_condition": "compare l'indicazione di almeno un documento fra ricevuta di deposito del ricorso, decreto di fissazione dell'udienza e visura aggiornata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable afferma che il tribunale può revocare o abbreviare le misure in ogni momento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il tribunale può revocare o abbreviare le misure in ogni momento.\nPASS se: compare l'indicazione che la revoca o l'abbreviazione delle misure è possibile in ogni momento del procedimento.\nFAIL se: le misure confermate sono presentate come intangibili fino alla scadenza, oppure la questione non è trattata.\nÈ indifferente: l'indicazione dei presupposti della revoca.\nFonte di authoring: disciplina del procedimento sulle misure protettive",
+      "pass_condition": "compare l'indicazione che la revoca o l'abbreviazione delle misure è possibile in ogni momento del procedimento.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non indica un termine per il ricorso al tribunale decorrente dalla nomina dell'esperto del 2 aprile 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica un termine per il ricorso al tribunale decorrente dalla nomina dell'esperto del 2 aprile 2031.\nPASS se: il deliverable non indica un termine per il ricorso al tribunale decorrente dalla nomina dell'esperto del 2 aprile 2031.\nFAIL se: il termine per il ricorso è fatto decorrere dalla nomina dell'esperto.\nÈ indifferente: la menzione del 2 aprile 2031 come data della nomina.\nFonte di authoring: computo dalla pubblicazione",
+      "pass_condition": "il deliverable non indica un termine per il ricorso al tribunale decorrente dalla nomina dell'esperto del 2 aprile 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non presenta il termine di venti giorni come decorrente dalla trasmissione dell'istanza del 27 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il termine di venti giorni come decorrente dalla trasmissione dell'istanza del 27 marzo 2031.\nPASS se: il deliverable non presenta il termine di venti giorni come decorrente dalla trasmissione dell'istanza del 27 marzo 2031.\nFAIL se: il termine di venti giorni è fatto decorrere dal 27 marzo 2031.\nÈ indifferente: la menzione del 27 marzo 2031 nella cronologia.\nFonte di authoring: computo dalla pubblicazione",
+      "pass_condition": "il deliverable non presenta il termine di venti giorni come decorrente dalla trasmissione dell'istanza del 27 marzo 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non segnala come criticità l'indipendenza dell'esperto nominato.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come criticità l'indipendenza dell'esperto nominato.\nPASS se: il deliverable non segnala come criticità l'indipendenza dell'esperto nominato.\nFAIL se: l'indipendenza dell'esperto compare fra i profili di rischio o fra le criticità del procedimento.\nÈ indifferente: la menzione della dichiarazione di indipendenza nella cronologia.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non segnala come criticità l'indipendenza dell'esperto nominato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non segnala come omissione la mancata richiesta di limitazione della pubblicita dell'istanza.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come omissione la mancata richiesta di limitazione della pubblicita dell'istanza.\nPASS se: il deliverable non segnala come omissione la mancata richiesta di limitazione della pubblicita dell'istanza.\nFAIL se: la mancata richiesta di limitazione della pubblicita compare fra le omissioni o fra i profili di rischio.\nÈ indifferente: la menzione della pubblicita legale come condizione di operatività delle misure.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non segnala come omissione la mancata richiesta di limitazione della pubblicita dell'istanza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non segnala come profilo di rischio la disponibilità della banca alla partecipazione agli incontri convocati dall'esperto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come profilo di rischio la disponibilità della banca alla partecipazione agli incontri convocati dall'esperto.\nPASS se: il deliverable non segnala come profilo di rischio la disponibilità della banca alla partecipazione agli incontri convocati dall'esperto.\nFAIL se: la disponibilità della banca a partecipare agli incontri compare fra i profili di rischio.\nÈ indifferente: la menzione della disponibilità nella descrizione della posizione della banca.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non segnala come profilo di rischio la disponibilità della banca alla partecipazione agli incontri convocati dall'esperto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "il deliverable non afferma che la perdita del periodo di gennaio 2031 preclude l'accesso alla composizione negoziata.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la perdita del periodo di gennaio 2031 preclude l'accesso alla composizione negoziata.\nPASS se: il deliverable non afferma che la perdita del periodo di gennaio 2031 preclude l'accesso alla composizione negoziata.\nFAIL se: la perdita del periodo è presentata come fatto che preclude l'accesso alla composizione negoziata o che ne impone la chiusura.\nÈ indifferente: la menzione della perdita del periodo fra i dati della situazione patrimoniale.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non afferma che la perdita del periodo di gennaio 2031 preclude l'accesso alla composizione negoziata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provata la conferma delle misure mentre tratta come non provata l'iscrizione del numero di ruolo.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provata la conferma delle misure mentre tratta come non provata l'iscrizione del numero di ruolo.\nPASS se: simmetria del controllo: il deliverable non tratta come provata la conferma delle misure mentre tratta come non provata l'iscrizione del numero di ruolo.\nFAIL se: la conferma delle misure è data per intervenuta e nello stesso deliverable l'iscrizione del numero di ruolo è dichiarata non risultante.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: visura dell'8 aprile 2031",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provata la conferma delle misure mentre tratta come non provata l'iscrizione del numero di ruolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il tribunale confermerà le misure protettive.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il tribunale confermerà le misure protettive.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che il tribunale confermerà le misure protettive.\nFAIL se: compare l'affermazione che il tribunale confermerà le misure o che la conferma è certa.\nÈ indifferente: l'indicazione delle condizioni al verificarsi delle quali la conferma sarebbe probabile.\nFonte di authoring: disciplina del procedimento sulle misure protettive",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che il tribunale confermerà le misure protettive.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedure_timeline.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il ricorso alla piattaforma telematica per la trasmissione dell'istanza.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio il ricorso alla piattaforma telematica per la trasmissione dell'istanza.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio il ricorso alla piattaforma telematica per la trasmissione dell'istanza.\nFAIL se: la trasmissione tramite piattaforma telematica compare fra i profili di rischio o fra le irregolarità.\nÈ indifferente: la menzione della piattaforma nella descrizione dell'atto di apertura.\nFonte di authoring: istanza; visura",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il ricorso alla piattaforma telematica per la trasmissione dell'istanza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

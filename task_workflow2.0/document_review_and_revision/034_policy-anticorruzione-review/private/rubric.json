@@ -1,0 +1,913 @@
+{
+  "task_id": "WF2-034",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 45,
+  "criteria": [
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "ogni riga delle tabelle delle sezioni 2 e 3 riporta la clausola o l'allegato da cui il rilievo deriva.",
+      "match_criteria": "Oggetto del criterio: ogni riga delle tabelle delle sezioni 2 e 3 riporta la clausola o l'allegato da cui il rilievo deriva.\nPASS se: in ciascuna riga la colonna della clausola e' compilata\nFAIL se: una o piu' righe non indicano la clausola o l'allegato.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "in ciascuna riga la colonna della clausola e' compilata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nPASS se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFAIL se: compare un riferimento estraneo all'elenco chiuso.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non contiene testo riformulato delle clausole della bozza.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene testo riformulato delle clausole della bozza.\nPASS se: non compare alcun blocco di testo introdotto da una formula di riscrittura quale «il testo dell'articolo … e' sostituito dal seguente», «nuova formulazione», «testo proposto», «si propone il seguente testo»\nFAIL se: compare almeno un blocco di testo presentato come nuova formulazione di una clausola.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "non compare alcun blocco di testo introdotto da una formula di riscrittura quale «il testo dell'articolo … e' sostituito dal seguente», «nuova formulazione», «testo proposto», «si propone il seguente testo»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che il limite dell'articolo 5.2 opera per singola erogazione e non per destinatario.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il limite dell'articolo 5.2 opera per singola erogazione e non per destinatario.\nPASS se: compare l'affermazione che manca un limite cumulativo, un tetto annuo per destinatario oppure un'aggregazione delle erogazioni\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 5.2",
+      "pass_condition": "compare l'affermazione che manca un limite cumulativo, un tetto annuo per destinatario oppure un'aggregazione delle erogazioni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che in assenza di limite cumulativo la regola si aggira frazionando le erogazioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che in assenza di limite cumulativo la regola si aggira frazionando le erogazioni.\nPASS se: compare una fra: «frazionamento», «frazionando», «erogazioni ripetute», «piu' omaggi allo stesso destinatario»\nFAIL se: la conseguenza non e' indicata.\nFonte di authoring: bozza, art. 5.2",
+      "pass_condition": "compare una fra: «frazionamento», «frazionando», «erogazioni ripetute», «piu' omaggi allo stesso destinatario»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che l'articolo 5.3 confligge con il divieto assoluto posto dal codice etico.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'articolo 5.3 confligge con il divieto assoluto posto dal codice etico.\nPASS se: compare il riferimento al conflitto fra l'articolo 5.3 della bozza e l'articolo 4 del codice etico, oppure fra la deroga per il modico valore e il divieto assoluto in vigore\nFAIL se: il conflitto non e' rilevato.\nFonte di authoring: bozza, art. 5.3; codice etico, art. 4",
+      "pass_condition": "compare il riferimento al conflitto fra l'articolo 5.3 della bozza e l'articolo 4 del codice etico, oppure fra la deroga per il modico valore e il divieto assoluto in vigore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che il codice etico prevale sulla policy oppure che il conflitto va risolto dal consiglio di amministrazione prima dell'approvazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il codice etico prevale sulla policy oppure che il conflitto va risolto dal consiglio di amministrazione prima dell'approvazione.\nPASS se: compare una fra: «il codice etico prevale», «prevale il codice etico», «la policy deve conformarsi al codice etico», «il conflitto va risolto prima dell'approvazione»\nFAIL se: il deliverable afferma che la policy prevale sul codice etico in quanto successiva, oppure non indica come risolvere il conflitto.\nFonte di authoring: codice etico, art. 9",
+      "pass_condition": "compare una fra: «il codice etico prevale», «prevale il codice etico», «la policy deve conformarsi al codice etico», «il conflitto va risolto prima dell'approvazione»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che la bozza non definisce il modico valore.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la bozza non definisce il modico valore.\nPASS se: compare l'affermazione che il modico valore non e' definito, non e' quantificato oppure e' privo di un criterio\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, artt. 3 e 5.3",
+      "pass_condition": "compare l'affermazione che il modico valore non e' definito, non e' quantificato oppure e' privo di un criterio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non afferma che il limite di euro 150,00 dell'articolo 5.2 si applica anche agli omaggi a pubblici ufficiali.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il limite di euro 150,00 dell'articolo 5.2 si applica anche agli omaggi a pubblici ufficiali.\nPASS se: non compare l'affermazione che il limite dell'articolo 5.2 valga per i pubblici ufficiali\nFAIL se: il limite dell'articolo 5.2 e' esteso agli omaggi a pubblici ufficiali.\nFonte di authoring: bozza, artt. 5.2 e 5.3",
+      "pass_condition": "non compare l'affermazione che il limite dell'articolo 5.2 valga per i pubblici ufficiali",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable segnala come rilievo il rimborso delle spese dell'accompagnatore previsto dall'articolo 6.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable segnala come rilievo il rimborso delle spese dell'accompagnatore previsto dall'articolo 6.2.\nPASS se: compare il riferimento all'accompagnatore fra i rilievi\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 6.2",
+      "pass_condition": "compare il riferimento all'accompagnatore fra i rilievi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che manca il divieto di ospitalita' verso soggetti che stiano decidendo su affari della societa'.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che manca il divieto di ospitalita' verso soggetti che stiano decidendo su affari della societa'.\nPASS se: compare l'affermazione che manca il divieto durante gare, affidamenti, autorizzazioni o procedure decisorie in corso\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 6",
+      "pass_condition": "compare l'affermazione che manca il divieto durante gare, affidamenti, autorizzazioni o procedure decisorie in corso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che la verifica sul beneficiario delle sponsorizzazioni scatta solo oltre la soglia.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la verifica sul beneficiario delle sponsorizzazioni scatta solo oltre la soglia.\nPASS se: compare l'affermazione che sotto la soglia non e' prevista alcuna verifica\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 7.3",
+      "pass_condition": "compare l'affermazione che sotto la soglia non e' prevista alcuna verifica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che la verifica dell'articolo 7.3 non comprende l'accertamento dei collegamenti fra il beneficiario e i soggetti che decidono su affari della societa'.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la verifica dell'articolo 7.3 non comprende l'accertamento dei collegamenti fra il beneficiario e i soggetti che decidono su affari della societa'.\nPASS se: compare il riferimento alla mancata verifica dei collegamenti, dei rapporti o della riconducibilita' del beneficiario a decisori\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 7.3",
+      "pass_condition": "compare il riferimento alla mancata verifica dei collegamenti, dei rapporti o della riconducibilita' del beneficiario a decisori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che la due diligence sugli intermediari non e' rinnovata dopo la stipula.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la due diligence sugli intermediari non e' rinnovata dopo la stipula.\nPASS se: compare una fra: «non e' previsto il rinnovo», «non e' rinnovata», «manca l'aggiornamento periodico», «la verifica resta ferma alla data iniziale», «resta ferma alla data della stipula»\nFAIL se: il punto non e' trattato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: bozza, art. 9.1",
+      "pass_condition": "compare una fra: «non e' previsto il rinnovo», «non e' rinnovata», «manca l'aggiornamento periodico», «la verifica resta ferma alla data iniziale», «resta ferma alla data della stipula»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non afferma che la bozza non prevede alcuna verifica sugli intermediari.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la bozza non prevede alcuna verifica sugli intermediari.\nPASS se: non compare l'affermazione che la due diligence iniziale manchi\nFAIL se: la due diligence iniziale e' presentata come assente.\nFonte di authoring: bozza, art. 9.1",
+      "pass_condition": "non compare l'affermazione che la due diligence iniziale manchi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable segnala come rilievo il secondo periodo dell'articolo 9.4 sul pagamento a soggetto diverso o in Paese diverso.",
+      "match_criteria": "Oggetto del criterio: il deliverable segnala come rilievo il secondo periodo dell'articolo 9.4 sul pagamento a soggetto diverso o in Paese diverso.\nPASS se: compare il riferimento al pagamento su conto intestato a soggetto diverso oppure acceso in un Paese diverso\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 9.4",
+      "pass_condition": "compare il riferimento al pagamento su conto intestato a soggetto diverso oppure acceso in un Paese diverso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica come intervento la soppressione del secondo periodo dell'articolo 9.4.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come intervento la soppressione del secondo periodo dell'articolo 9.4.\nPASS se: compare una fra: «sopprimere», «eliminare», «espungere», «cancellare» riferita a quella previsione\nFAIL se: l'intervento indicato consiste nel subordinare la previsione a condizioni ulteriori anziche' nella sua soppressione.\nFonte di authoring: bozza, art. 9.4",
+      "pass_condition": "compare una fra: «sopprimere», «eliminare», «espungere», «cancellare» riferita a quella previsione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che nella matrice l'autorizzazione e' attribuita al medesimo soggetto che propone la spesa.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che nella matrice l'autorizzazione e' attribuita al medesimo soggetto che propone la spesa.\nPASS se: compare una fra: «coincidenza fra proponente e autorizzante», «chi propone autorizza», «attribuita al medesimo soggetto che propone», «difetto di segregazione», «assenza di separazione dei ruoli»\nFAIL se: il punto non e' trattato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: Allegato 1",
+      "pass_condition": "compare una fra: «coincidenza fra proponente e autorizzante», «chi propone autorizza», «attribuita al medesimo soggetto che propone», «difetto di segregazione», «assenza di separazione dei ruoli»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable nomina entrambe le righe della matrice affette dal difetto: l'ospitalita' fino a euro 1.000,00 e la sponsorizzazione fino a euro 25.000,00.",
+      "match_criteria": "Oggetto del criterio: il deliverable nomina entrambe le righe della matrice affette dal difetto: l'ospitalita' fino a euro 1.000,00 e la sponsorizzazione fino a euro 25.000,00.\nPASS se: compaiono entrambe le righe della matrice\nFAIL se: e' nominata una sola delle due righe, oppure nessuna.\nFonte di authoring: Allegato 1",
+      "pass_condition": "compaiono entrambe le righe della matrice",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable segnala come rilievo la regolarizzazione successiva prevista dall'articolo 10.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable segnala come rilievo la regolarizzazione successiva prevista dall'articolo 10.2.\nPASS se: compare il riferimento all'autorizzazione richiesta dopo l'operazione, oppure alla sanatoria entro trenta giorni\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 10.2",
+      "pass_condition": "compare il riferimento all'autorizzazione richiesta dopo l'operazione, oppure alla sanatoria entro trenta giorni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non indica come intervento la sola riduzione del termine di trenta giorni.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica come intervento la sola riduzione del termine di trenta giorni.\nPASS se: non compare l'indicazione di ridurre il termine mantenendo la possibilita' di autorizzazione successiva\nFAIL se: l'intervento indicato consiste nella riduzione del termine.\nFonte di authoring: bozza, art. 10.2",
+      "pass_condition": "non compare l'indicazione di ridurre il termine mantenendo la possibilita' di autorizzazione successiva",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che l'ambito soggettivo della bozza e' piu' ristretto di quello del codice etico.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'ambito soggettivo della bozza e' piu' ristretto di quello del codice etico.\nPASS se: compare l'affermazione che la policy si applica ai soli dipendenti mentre il codice etico si rivolge anche a terzi\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 2; codice etico, art. 2",
+      "pass_condition": "compare l'affermazione che la policy si applica ai soli dipendenti mentre il codice etico si rivolge anche a terzi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non afferma che l'estensione ai terzi e' assicurata dalle clausole contrattuali previste dall'articolo 9.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'estensione ai terzi e' assicurata dalle clausole contrattuali previste dall'articolo 9.2.\nPASS se: non compare l'affermazione che l'articolo 9.2 supplisca alla ristrettezza dell'ambito soggettivo\nFAIL se: la clausola contrattuale dell'articolo 9.2 e' presentata come rimedio che elimina il rilievo sull'ambito soggettivo.\nFonte di authoring: bozza, artt. 2 e 9.2",
+      "pass_condition": "non compare l'affermazione che l'articolo 9.2 supplisca alla ristrettezza dell'ambito soggettivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che manca il divieto dei pagamenti di facilitazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che manca il divieto dei pagamenti di facilitazione.\nPASS se: compare una fra: «pagamenti di facilitazione», «facilitation payment», «pagamenti per accelerare attivita' di routine»\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, testo integrale",
+      "pass_condition": "compare una fra: «pagamenti di facilitazione», «facilitation payment», «pagamenti per accelerare attivita' di routine»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che manca il registro degli omaggi e delle ospitalita'.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che manca il registro degli omaggi e delle ospitalita'.\nPASS se: compare una fra: «registro degli omaggi», «registro delle ospitalita'», «assenza di registrazione delle erogazioni»\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, artt. 5, 6 e 14",
+      "pass_condition": "compare una fra: «registro degli omaggi», «registro delle ospitalita'», «assenza di registrazione delle erogazioni»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che l'articolo 11.1 non garantisce la riservatezza dell'identita' del segnalante.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'articolo 11.1 non garantisce la riservatezza dell'identita' del segnalante.\nPASS se: compare l'affermazione che l'identita' del segnalante viene comunicata a soggetti diversi da quelli competenti, oppure che la riservatezza non e' garantita\nFAIL se: il punto non e' trattato.\nFonte di authoring: bozza, art. 11.1; artt. 4 e 12 D.Lgs. 24/2023",
+      "pass_condition": "compare l'affermazione che l'identita' del segnalante viene comunicata a soggetti diversi da quelli competenti, oppure che la riservatezza non e' garantita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che l'articolo 11.1 confligge con la procedura sulle segnalazioni in vigore.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'articolo 11.1 confligge con la procedura sulle segnalazioni in vigore.\nPASS se: compare il riferimento al contrasto fra l'articolo 11.1 e la procedura sulle segnalazioni, oppure fra il superiore gerarchico e l'ufficio autonomo dedicato\nFAIL se: il conflitto con la procedura in vigore non e' rilevato.\nFonte di authoring: procedura sulle segnalazioni, artt. 3 e 4",
+      "pass_condition": "compare il riferimento al contrasto fra l'articolo 11.1 e la procedura sulle segnalazioni, oppure fra il superiore gerarchico e l'ufficio autonomo dedicato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable non afferma che il divieto di ritorsione dell'articolo 11.2 rende conforme il canale previsto dall'articolo 11.1.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il divieto di ritorsione dell'articolo 11.2 rende conforme il canale previsto dall'articolo 11.1.\nPASS se: non compare l'affermazione che l'articolo 11.2 sani il difetto del canale\nFAIL se: il divieto di ritorsione e' presentato come elemento che rende conforme il canale.\nFonte di authoring: bozza, art. 11.2",
+      "pass_condition": "non compare l'affermazione che l'articolo 11.2 sani il difetto del canale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica fra gli elementi mancanti l'Allegato 2 richiamato dall'articolo 7.3.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra gli elementi mancanti l'Allegato 2 richiamato dall'articolo 7.3.\nPASS se: compare la richiesta dell'Allegato 2, del questionario di verifica sul beneficiario oppure del documento richiamato dall'articolo 7.3\nFAIL se: la richiesta non compare.\nFonte di authoring: bozza, art. 7.3; verbale del comitato",
+      "pass_condition": "compare la richiesta dell'Allegato 2, del questionario di verifica sul beneficiario oppure del documento richiamato dall'articolo 7.3",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable afferma che la review non consente di esprimersi sulla tenuta complessiva del modello di organizzazione, gestione e controllo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la review non consente di esprimersi sulla tenuta complessiva del modello di organizzazione, gestione e controllo.\nPASS se: compare una fra: «non e' possibile esprimersi», «non consente di esprimersi», «esula dalla presente review», «non e' valutabile sulla base del fascicolo» riferito al modello\nFAIL se: il deliverable esprime una valutazione sulla tenuta complessiva del modello.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare una fra: «non e' possibile esprimersi», «non consente di esprimersi», «esula dalla presente review», «non e' valutabile sulla base del fascicolo» riferito al modello",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non indica fra le richieste della direzione commerciale accoglibili quella relativa al pagamento su conto di soggetto diverso.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non indica fra le richieste della direzione commerciale accoglibili quella relativa al pagamento su conto di soggetto diverso.\nPASS se: quella richiesta non compare fra quelle accoglibili\nFAIL se: la richiesta e' indicata come accoglibile.\nFonte di authoring: messaggio della direzione commerciale; bozza, art. 9.4",
+      "pass_condition": "quella richiesta non compare fra quelle accoglibili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta la misura della soglia di euro 150,00 come rilievo autonomo.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta la misura della soglia di euro 150,00 come rilievo autonomo.\nPASS se: la misura della soglia non compare fra i rilievi\nFAIL se: il valore di euro 150,00 e' segnalato come inadeguato in se'.\nFonte di authoring: bozza, art. 5.2",
+      "pass_condition": "la misura della soglia non compare fra i rilievi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come rilievo il divieto di omaggi in denaro dell'articolo 5.1.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come rilievo il divieto di omaggi in denaro dell'articolo 5.1.\nPASS se: il divieto di omaggi in denaro non compare fra i rilievi\nFAIL se: l'articolo 5.1 e' segnalato come rilievo.\nFonte di authoring: bozza, art. 5.1",
+      "pass_condition": "il divieto di omaggi in denaro non compare fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come insufficiente la formazione prevista dall'articolo 12.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come insufficiente la formazione prevista dall'articolo 12.\nPASS se: la formazione non compare fra i rilievi\nFAIL se: la periodicita' o il contenuto della formazione sono segnalati come rilievo.\nFonte di authoring: bozza, art. 12; verbale del comitato",
+      "pass_condition": "la formazione non compare fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come mancante il richiamo al sistema disciplinare.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come mancante il richiamo al sistema disciplinare.\nPASS se: il sistema disciplinare non compare fra gli elementi mancanti\nFAIL se: l'assenza del richiamo al sistema disciplinare e' segnalata come rilievo.\nFonte di authoring: bozza, art. 13",
+      "pass_condition": "il sistema disciplinare non compare fra gli elementi mancanti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come inadeguato il periodo di conservazione di dieci anni previsto dall'articolo 14.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come inadeguato il periodo di conservazione di dieci anni previsto dall'articolo 14.\nPASS se: il periodo di conservazione non compare fra i rilievi\nFAIL se: la durata della conservazione e' segnalata come inadeguata.\nFonte di authoring: bozza, art. 14",
+      "pass_condition": "il periodo di conservazione non compare fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come rilievo la disciplina delle erogazioni liberali dell'articolo 8.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come rilievo la disciplina delle erogazioni liberali dell'articolo 8.\nPASS se: le erogazioni liberali non compaiono fra i rilievi\nFAIL se: l'articolo 8 e' segnalato come rilievo.\nFonte di authoring: bozza, art. 8; Allegato 1",
+      "pass_condition": "le erogazioni liberali non compaiono fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non indica come accoglibile la richiesta di elevare dal cinque per cento al nove per cento il limite al compenso degli intermediari.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non indica come accoglibile la richiesta di elevare dal cinque per cento al nove per cento il limite al compenso degli intermediari.\nPASS se: quella richiesta non compare fra quelle accoglibili\nFAIL se: l'elevazione del limite e' indicata come accoglibile.\nFonte di authoring: messaggio della direzione commerciale; bozza, art. 9.3",
+      "pass_condition": "quella richiesta non compare fra quelle accoglibili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non afferma che l'ospitalita' e' vietata in quanto tale dalla bozza.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non afferma che l'ospitalita' e' vietata in quanto tale dalla bozza.\nPASS se: non compare l'affermazione che la bozza vieti l'ospitalita'\nFAIL se: l'ospitalita' e' presentata come vietata dalla bozza.\nFonte di authoring: bozza, art. 6.1",
+      "pass_condition": "non compare l'affermazione che la bozza vieti l'ospitalita'",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il consiglio di amministrazione approvera' o respingera' la bozza.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il consiglio di amministrazione approvera' o respingera' la bozza.\nPASS se: non compare alcuna previsione sull'esito della seduta del consiglio\nFAIL se: l'esito della deliberazione del consiglio e' presentato come noto.\nFonte di authoring: verbale del comitato controllo e rischi",
+      "pass_condition": "non compare alcuna previsione sull'esito della seduta del consiglio",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica euro 150,00 come limite per singola erogazione previsto dall'articolo 5.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 150,00 come limite per singola erogazione previsto dall'articolo 5.2.\nPASS se: compare «150» riferito al limite per singola erogazione\nFAIL se: e' indicato un importo diverso, oppure il limite non e' indicato.\nFonte di authoring: bozza, art. 5.2",
+      "pass_condition": "compare «150» riferito al limite per singola erogazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica euro 25.000,00 come soglia oltre la quale scatta la verifica sul beneficiario.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 25.000,00 come soglia oltre la quale scatta la verifica sul beneficiario.\nPASS se: compare «25.000» come soglia della verifica\nFAIL se: e' indicato un importo diverso, oppure la soglia non e' indicata.\nFonte di authoring: bozza, art. 7.3",
+      "pass_condition": "compare «25.000» come soglia della verifica",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica euro 1.000,00 come soglia dell'ospitalita' autorizzata dal proponente.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 1.000,00 come soglia dell'ospitalita' autorizzata dal proponente.\nPASS se: compare «1.000» come soglia dell'ospitalita'\nFAIL se: e' indicato un importo diverso, oppure la soglia non e' indicata.\nFonte di authoring: Allegato 1",
+      "pass_condition": "compare «1.000» come soglia dell'ospitalita'",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica trenta giorni come termine della regolarizzazione successiva prevista dall'articolo 10.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica trenta giorni come termine della regolarizzazione successiva prevista dall'articolo 10.2.\nPASS se: compare «trenta giorni» oppure «30 giorni» riferito alla regolarizzazione successiva\nFAIL se: e' indicato un termine diverso, oppure il termine non e' indicato.\nFonte di authoring: bozza, art. 10.2",
+      "pass_condition": "compare «trenta giorni» oppure «30 giorni» riferito alla regolarizzazione successiva",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "nota_di_review.md"
+      ],
+      "title": "il deliverable indica il 3 dicembre 2032 come data della seduta del consiglio di amministrazione entro cui la review deve essere utilizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 3 dicembre 2032 come data della seduta del consiglio di amministrazione entro cui la review deve essere utilizzabile.\nPASS se: compare «3 dicembre 2032» oppure «03/12/2032»\nFAIL se: e' indicata una data diversa, oppure la data non e' indicata.\nFonte di authoring: verbale del comitato controllo e rischi",
+      "pass_condition": "compare «3 dicembre 2032» oppure «03/12/2032»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-16"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

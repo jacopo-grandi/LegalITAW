@@ -1,0 +1,12 @@
+{
+  "task_id": "WF2-033",
+  "freeze_normativo": "2026-08-28",
+  "nota": "Elenco chiuso delle fonti del reference pack, visibile al modello in public/03_legal_sources.md. I documenti del fascicolo non contengono riferimenti normativi: l'array 'riferimenti_dei_documenti' e' vuoto per costruzione.",
+  "fonti": [
+    {"id": "F1", "riferimento": "art. 33 Reg. UE 2016/679", "testo_breve": "il titolare notifica la violazione all'autorita' di controllo senza ingiustificato ritardo e, ove possibile, entro 72 ore dal momento in cui ne e' venuto a conoscenza, a meno che sia improbabile che presenti un rischio per i diritti e le liberta' delle persone fisiche", "url": "https://www.brocardi.it/regolamento-privacy-ue/capo-iv/sezione-2/art33.html", "verificata_il": "2026-08-28"},
+    {"id": "F2", "riferimento": "art. 34 Reg. UE 2016/679", "testo_breve": "comunicazione della violazione all'interessato quando la violazione e' suscettibile di presentare un rischio elevato; casi in cui la comunicazione non e' richiesta", "url": "https://www.brocardi.it/regolamento-privacy-ue/capo-iv/sezione-2/art34.html", "verificata_il": "2026-08-28"},
+    {"id": "F3", "riferimento": "art. 1917 c.c.", "testo_breve": "assicurazione della responsabilita' civile; le spese sostenute per resistere all'azione del danneggiato sono a carico dell'assicuratore nei limiti del quarto della somma assicurata", "url": "https://www.brocardi.it/codice-civile/libro-quarto/titolo-iii/capo-xx/sezione-ii/art1917.html", "verificata_il": "2026-08-28"},
+    {"id": "F4", "riferimento": "art. 1932 c.c.", "testo_breve": "le disposizioni indicate, fra cui l'art. 1917, terzo e quarto comma, non possono essere derogate se non in senso piu' favorevole all'assicurato; le clausole meno favorevoli sono sostituite di diritto", "url": "https://www.brocardi.it/codice-civile/libro-quarto/titolo-iii/capo-xx/art1932.html", "verificata_il": "2026-08-28"}
+  ],
+  "riferimenti_dei_documenti": []
+}

@@ -1,0 +1,151 @@
+{
+  "task_id": "WF2-082",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "classificazione professionale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la banca invoca lo status professionale su richiesta senza produrre la valutazione dei requisiti",
+      "evidenza": "modulo di classificazione incompleto"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "servizio prestato",
+      "gravita": "alta",
+      "affermazione_richiesta": "le email contengono una raccomandazione personalizzata e non una mera esecuzione",
+      "evidenza": "email del 12 e 14 marzo 2027"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "test di adeguatezza",
+      "gravita": "alta",
+      "affermazione_richiesta": "la raccomandazione richiedeva di verificare conoscenza, situazione finanziaria e obiettivi",
+      "evidenza": "questionario e Regolamento 2017/565"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "conoscenza dei derivati",
+      "gravita": "alta",
+      "affermazione_richiesta": "il questionario indica esperienza in cambi a termine ma nessuna operazione in swap",
+      "evidenza": "questionario cliente"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "capacita' di sostenere perdite",
+      "gravita": "media",
+      "affermazione_richiesta": "il dossier non quantifica liquidita' e impegni finanziari rispetto agli scenari negativi",
+      "evidenza": "questionario e bilancio"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "obiettivo di copertura",
+      "gravita": "media",
+      "affermazione_richiesta": "il nozionale di EUR 12 milioni supera il debito variabile residuo di EUR 8 milioni dal 18 marzo 2029",
+      "evidenza": "contratto finanziamento e conferma swap"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "durata non allineata",
+      "gravita": "media",
+      "affermazione_richiesta": "lo swap termina due anni dopo il finanziamento coperto",
+      "evidenza": "conferma swap e piano ammortamento"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "scenari precontrattuali",
+      "gravita": "media",
+      "affermazione_richiesta": "il foglio informativo non mostra uno scenario di tassi negativi prolungati",
+      "evidenza": "foglio informativo"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "mark-to-market iniziale",
+      "gravita": "media",
+      "affermazione_richiesta": "il valore iniziale indicato come zero non e' accompagnato da curva, spread o costo implicito",
+      "evidenza": "conferma e scheda pricing"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "costi aggregati",
+      "gravita": "media",
+      "affermazione_richiesta": "manca un importo monetario aggregato dei costi e oneri",
+      "evidenza": "scheda costi"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "metodo di valutazione",
+      "gravita": "media",
+      "affermazione_richiesta": "la stima della banca usa una curva del 28 giugno mentre il perito usa quella del 30 giugno",
+      "evidenza": "report banca e perizia"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "differenza di MTM",
+      "gravita": "media",
+      "affermazione_richiesta": "il valore banca e' meno EUR 1.840.000 e il valore del perito meno EUR 1.210.000; scarto EUR 630.000",
+      "evidenza": "report banca e perizia"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "flussi gia' regolati",
+      "gravita": "media",
+      "affermazione_richiesta": "i differenziali netti pagati sono EUR 430.000 e non vanno sommati due volte al costo di chiusura",
+      "evidenza": "estratti conto"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "quantificazione alternativa",
+      "gravita": "media",
+      "affermazione_richiesta": "occorre separare costo di chiusura, flussi storici e differenziale attribuibile al metodo",
+      "evidenza": "perizia e estratti conto"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "causalita'",
+      "gravita": "media",
+      "affermazione_richiesta": "manca il controfattuale della copertura che il cliente avrebbe stipulato con informazione completa",
+      "evidenza": "assenza nel fascicolo"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "nessuna previsione",
+      "gravita": "media",
+      "affermazione_richiesta": "le divergenze documentali non consentono di prevedere accoglimento o importo liquidabile",
+      "evidenza": "limiti del fascicolo"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "firma digitale",
+      "oggetto": "firma digitale",
+      "chiave_nel_criterio": "firma digitale",
+      "perche_non_e_issue": "la firma digitale della conferma non prova la comprensione economica del prodotto",
+      "criterio_assenza": "Il deliverable non presenta firma digitale come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "andamento successivo dei tassi",
+      "oggetto": "andamento successivo dei tassi",
+      "chiave_nel_criterio": "andamento successivo dei tassi",
+      "perche_non_e_issue": "il ribasso successivo dei tassi non dimostra da solo una violazione precontrattuale",
+      "criterio_assenza": "Il deliverable non presenta andamento successivo dei tassi come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "contabilita' di copertura",
+      "oggetto": "contabilita' di copertura",
+      "chiave_nel_criterio": "contabilita' di copertura",
+      "perche_non_e_issue": "la mancata hedge accounting non coincide con l'inadeguatezza MiFID",
+      "criterio_assenza": "Il deliverable non presenta contabilita' di copertura come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "rating interno",
+      "oggetto": "rating interno",
+      "chiave_nel_criterio": "rating interno",
+      "perche_non_e_issue": "il rating creditizio BB riguarda il rischio di credito e non sostituisce il profilo d'investimento",
+      "criterio_assenza": "Il deliverable non presenta rating interno come rilievo autonomo."
+    }
+  ]
+}

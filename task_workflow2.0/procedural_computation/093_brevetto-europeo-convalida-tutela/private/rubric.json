@@ -1,0 +1,1293 @@
+{
+  "task_id": "WF2-093",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 64,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente patent_timeline.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente patent_timeline.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 10 novembre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 10 novembre 2026.\nPASS se: compare «10 novembre 2026» come data alla quale la ricostruzione è riferita\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «10 novembre 2026» come data alla quale la ricostruzione è riferita",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "La cronologia distingue eventi avvenuti, scadenze calcolate, passaggi futuri condizionati e date non determinabili.",
+      "match_criteria": "Oggetto del criterio: La cronologia distingue eventi avvenuti, scadenze calcolate, passaggi futuri condizionati e date non determinabili.\nPASS se: ciascuna riga della cronologia porta uno dei quattro stati\nFAIL se: una o più righe non portano alcuno stato, oppure gli stati usati sono meno di quattro.\nÈ indifferente: le etichette usate per i quattro stati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna riga della cronologia porta uno dei quattro stati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Ogni evento della cronologia indica il documento del fascicolo da cui risulta.",
+      "match_criteria": "Oggetto del criterio: Ogni evento della cronologia indica il documento del fascicolo da cui risulta.\nPASS se: ciascuna riga riporta il nome di un allegato\nFAIL se: una o più righe non riportano alcun allegato.\nÈ indifferente: la forma del riferimento al documento.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna riga riporta il nome di un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Ogni termine calcolato indica l'evento da cui decorre.",
+      "match_criteria": "Oggetto del criterio: Ogni termine calcolato indica l'evento da cui decorre.\nPASS se: ciascun termine riporta l'evento di decorrenza\nFAIL se: uno o più termini non indicano l'evento di decorrenza.\nÈ indifferente: la forma dell'indicazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta l'evento di decorrenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Ogni termine calcolato riporta il calcolo seguito.",
+      "match_criteria": "Oggetto del criterio: Ogni termine calcolato riporta il calcolo seguito.\nPASS se: ciascun termine riporta il passaggio aritmetico o la regola di computo applicata\nFAIL se: uno o più termini riportano il solo risultato.\nÈ indifferente: il livello di dettaglio del calcolo.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta il passaggio aritmetico o la regola di computo applicata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non cita norme o disposizioni assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme o disposizioni assenti dal reference pack.\nPASS se: Il deliverable non cita norme o disposizioni assenti dal reference pack.\nFAIL se: compare un riferimento a un atto, a un articolo, a una regola o a una disposizione che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola riga.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme o disposizioni assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza dei termini post-concessione alla pubblicazione della menzione della concessione nel Bollettino europeo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza dei termini post-concessione alla pubblicazione della menzione della concessione nel Bollettino europeo.\nPASS se: compare l'affermazione che i termini decorrono dalla pubblicazione della menzione della concessione\nFAIL se: la decorrenza è ricondotta alla data di deposito, alla pubblicazione della domanda o alla decisione di concessione.\nÈ indifferente: il richiamo al numero del fascicolo del Bollettino.\nFonte di authoring: 01_estratto_bollettino_concessione.md",
+      "pass_condition": "compare l'affermazione che i termini decorrono dalla pubblicazione della menzione della concessione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la data di pubblicazione della menzione è la data del fascicolo del Bollettino.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la data di pubblicazione della menzione è la data del fascicolo del Bollettino.\nPASS se: compare l'affermazione che la data della menzione è quella del fascicolo\nFAIL se: è indicata come data della menzione una data diversa da quella del fascicolo.\nÈ indifferente: l'osservazione che il record della sezione non riporta il codice della data di pubblicazione.\nFonte di authoring: 01_estratto_bollettino_concessione.md, nota d'archivio",
+      "pass_condition": "compare l'affermazione che la data della menzione è quella del fascicolo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il termine per proporre opposizione è di nove mesi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine per proporre opposizione è di nove mesi.\nPASS se: compare l'indicazione del termine di nove mesi per l'opposizione\nFAIL se: è indicata una durata diversa, oppure la durata non compare.\nÈ indifferente: il richiamo alla regola di computo dei termini a mesi.\nFonte di authoring: art. 99(1) della Convenzione",
+      "pass_condition": "compare l'indicazione del termine di nove mesi per l'opposizione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che l'atto di opposizione è stato depositato entro il termine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'atto di opposizione è stato depositato entro il termine.\nPASS se: compare l'affermazione che il deposito dell'atto è avvenuto entro la scadenza\nFAIL se: il deposito è indicato come tardivo, oppure la tempestività dell'atto non è esaminata.\nÈ indifferente: il richiamo al timbro di ricezione.\nFonte di authoring: 05_atto_opposizione.md",
+      "pass_condition": "compare l'affermazione che il deposito dell'atto è avvenuto entro la scadenza",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable esamina separatamente la data di deposito dell'atto e la data del pagamento della tassa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable esamina separatamente la data di deposito dell'atto e la data del pagamento della tassa.\nPASS se: le due date sono esaminate come elementi distinti\nFAIL se: l'esame si arresta alla data di deposito dell'atto.\nÈ indifferente: l'ordine in cui i due elementi sono trattati.\nFonte di authoring: 05_atto_opposizione.md; 06_estratto_conto_deposito_epo.md",
+      "pass_condition": "le due date sono esaminate come elementi distinti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la data di valuta dell'addebito della tassa è successiva alla scadenza del termine di opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la data di valuta dell'addebito della tassa è successiva alla scadenza del termine di opposizione.\nPASS se: compare l'affermazione che la data di valuta è posteriore alla scadenza\nFAIL se: è usata la data di registrazione dell'addebito, oppure il rapporto fra le due date non è esaminato.\nÈ indifferente: il richiamo alla ragione dello scarto fra registrazione e valuta.\nFonte di authoring: 06_estratto_conto_deposito_epo.md",
+      "pass_condition": "compare l'affermazione che la data di valuta è posteriore alla scadenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable qualifica l'opposizione come non proposta.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica l'opposizione come non proposta.\nPASS se: compare, riferita all'opposizione, una fra: «si considera non proposta»; «non si considera proposta»; «considerata non presentata»\nFAIL se: l'opposizione è qualificata come pendente, come ammissibile o come inammissibile.\nÈ indifferente: il richiamo alla facoltà dell'Ufficio di trascurare importi minimi mancanti.\nFonte di authoring: art. 99(1) della Convenzione; Guidelines D-IV, 1.2.1",
+      "pass_condition": "compare, riferita all'opposizione, una fra: «si considera non proposta»; «non si considera proposta»; «considerata non presentata»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non qualifica l'esito come rigetto per inammissibilità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non qualifica l'esito come rigetto per inammissibilità.\nPASS se: Il deliverable non qualifica l'esito come rigetto per inammissibilità.\nFAIL se: l'esito del mancato pagamento nel termine è presentato come inammissibilità dell'opposizione.\nÈ indifferente: il richiamo all'inammissibilità in relazione a carenze diverse dal pagamento.\nFonte di authoring: Guidelines D-IV, 1.2.1; Regola 77 della Convenzione",
+      "pass_condition": "Il deliverable non qualifica l'esito come rigetto per inammissibilità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica di far valere la circostanza presso l'Ufficio europeo dei brevetti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica di far valere la circostanza presso l'Ufficio europeo dei brevetti.\nPASS se: fra le azioni compare la segnalazione o l'istanza all'Ufficio sulla data di valuta del pagamento\nFAIL se: la circostanza è rilevata senza indicare alcuna iniziativa.\nÈ indifferente: la forma dell'iniziativa proposta.\nFonte di authoring: 06_estratto_conto_deposito_epo.md",
+      "pass_condition": "fra le azioni compare la segnalazione o l'istanza all'Ufficio sulla data di valuta del pagamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la pendenza dell'opposizione non sospende l'efficacia del brevetto.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la pendenza dell'opposizione non sospende l'efficacia del brevetto.\nPASS se: compare l'affermazione che l'opposizione non sospende l'efficacia del brevetto\nFAIL se: è affermato che il brevetto è inefficace o sospeso in pendenza dell'opposizione.\nÈ indifferente: il richiamo all'effetto retroattivo dell'eventuale revoca.\nFonte di authoring: artt. 68 e 99(2) della Convenzione",
+      "pass_condition": "compare l'affermazione che l'opposizione non sospende l'efficacia del brevetto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la tutela in Italia può essere azionata nonostante la pendenza dell'opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la tutela in Italia può essere azionata nonostante la pendenza dell'opposizione.\nPASS se: compare l'affermazione che l'azione in Italia può essere promossa\nFAIL se: è affermato che occorre attendere la definizione dell'opposizione.\nÈ indifferente: il richiamo alla facoltà di intervento del presunto contraffattore nell'opposizione.\nFonte di authoring: artt. 99(2) e 105 della Convenzione",
+      "pass_condition": "compare l'affermazione che l'azione in Italia può essere promossa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica che l'Ufficio può accelerare il procedimento di opposizione se informato della pendenza di un'azione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica che l'Ufficio può accelerare il procedimento di opposizione se informato della pendenza di un'azione.\nPASS se: compare l'indicazione della possibilità di accelerazione su informativa relativa all'azione nazionale\nFAIL se: la possibilità di accelerazione non è menzionata.\nÈ indifferente: la scelta di proporre o non proporre l'informativa.\nFonte di authoring: Guidelines E-VIII, 5",
+      "pass_condition": "compare l'indicazione della possibilità di accelerazione su informativa relativa all'azione nazionale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la convalida italiana richiede la traduzione dell'intero testo del brevetto concesso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la convalida italiana richiede la traduzione dell'intero testo del brevetto concesso.\nPASS se: compare l'affermazione che la traduzione riguarda l'intero testo del brevetto concesso\nFAIL se: è affermato che la convalida richiedeva la traduzione delle sole rivendicazioni.\nÈ indifferente: il richiamo alla dichiarazione di conformità.\nFonte di authoring: art. 56, comma 3, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che la traduzione riguarda l'intero testo del brevetto concesso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la traduzione è stata depositata entro il termine.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la traduzione è stata depositata entro il termine.\nPASS se: compare l'affermazione che il deposito della traduzione è avvenuto entro il termine di tre mesi\nFAIL se: il deposito è indicato come tardivo, oppure la tempestività non è esaminata.\nÈ indifferente: il richiamo al numero di deposito telematico.\nFonte di authoring: 03_deposito_traduzione_italiana.md",
+      "pass_condition": "compare l'affermazione che il deposito della traduzione è avvenuto entro il termine di tre mesi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable qualifica il brevetto come avente effetto in Italia.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il brevetto come avente effetto in Italia.\nPASS se: compare, riferita al brevetto, una fra: «ha effetto in Italia»; «efficace in Italia»; «convalidato in Italia»\nFAIL se: è affermato che il brevetto è privo di effetto in Italia.\nÈ indifferente: il richiamo alla conferma dell'ambito di protezione in pendenza di opposizione.\nFonte di authoring: art. 56 del Codice della proprietà industriale",
+      "pass_condition": "compare, riferita al brevetto, una fra: «ha effetto in Italia»; «efficace in Italia»; «convalidato in Italia»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la rivendicazione 7 del testo concesso indica tre stimatori alternativi mentre la traduzione depositata indica il solo filtro di Kalman.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la rivendicazione 7 del testo concesso indica tre stimatori alternativi mentre la traduzione depositata indica il solo filtro di Kalman.\nPASS se: compare l'affermazione della difformità fra le due formulazioni della rivendicazione 7\nFAIL se: la difformità non è rilevata, oppure è descritta come irrilevante.\nÈ indifferente: l'indicazione dei nomi dei tre stimatori.\nFonte di authoring: 02_testo_di_concessione_rivendicazioni.md; 03_deposito_traduzione_italiana.md",
+      "pass_condition": "compare l'affermazione della difformità fra le due formulazioni della rivendicazione 7",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable qualifica la traduzione come conferente una protezione meno estesa.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la traduzione come conferente una protezione meno estesa.\nPASS se: compare, riferita alla traduzione, una fra: «protezione meno estesa»; «portata più ristretta»; «ambito più limitato»\nFAIL se: la difformità è qualificata come errore materiale irrilevante, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla dichiarazione di conformità sottoscritta.\nFonte di authoring: art. 57, comma 2, del Codice della proprietà industriale",
+      "pass_condition": "compare, riferita alla traduzione, una fra: «protezione meno estesa»; «portata più ristretta»; «ambito più limitato»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che, per la portata della protezione in Italia, fa fede la traduzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, per la portata della protezione in Italia, fa fede la traduzione.\nPASS se: compare l'affermazione che in Italia fa fede la traduzione perché conferisce una protezione meno estesa\nFAIL se: è affermato che fa fede in ogni caso il testo nella lingua del procedimento.\nÈ indifferente: il richiamo al principio generale sull'autenticità del testo nella lingua di procedura.\nFonte di authoring: art. 57, commi 1 e 2, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che in Italia fa fede la traduzione perché conferisce una protezione meno estesa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la regola per cui fa fede la traduzione non si applica nel giudizio di nullità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la regola per cui fa fede la traduzione non si applica nel giudizio di nullità.\nPASS se: compare l'affermazione che l'eccezione riguarda il giudizio di nullità\nFAIL se: l'eccezione non è menzionata.\nÈ indifferente: il richiamo alla corrispondente disposizione della Convenzione.\nFonte di authoring: art. 57, comma 3, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che l'eccezione riguarda il giudizio di nullità",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non presenta la restrizione come indebolimento della posizione del titolare anche in nullità.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la restrizione come indebolimento della posizione del titolare anche in nullità.\nPASS se: Il deliverable non presenta la restrizione come indebolimento della posizione del titolare anche in nullità.\nFAIL se: è affermato che la traduzione restrittiva riduce l'oggetto dell'accertamento di nullità o espone il brevetto a un'azione di nullità più ampia.\nÈ indifferente: l'indicazione che la restrizione opera in contraffazione.\nFonte di authoring: art. 57, comma 3, del Codice della proprietà industriale",
+      "pass_condition": "Il deliverable non presenta la restrizione come indebolimento della posizione del titolare anche in nullità.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il deposito di una traduzione rettificata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il deposito di una traduzione rettificata.\nPASS se: fra le azioni compare il deposito della traduzione rettificata\nFAIL se: il deposito della traduzione rettificata non è indicato.\nÈ indifferente: l'indicazione del momento del deposito.\nFonte di authoring: art. 57, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "fra le azioni compare il deposito della traduzione rettificata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la traduzione rettificata esplica effetti solo dopo essere stata resa accessibile al pubblico presso l'Ufficio italiano brevetti e marchi ovvero notificata al presunto contraffattore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la traduzione rettificata esplica effetti solo dopo essere stata resa accessibile al pubblico presso l'Ufficio italiano brevetti e marchi ovvero notificata al presunto contraffattore.\nPASS se: compare l'affermazione che l'efficacia dipende dalla messa a disposizione del pubblico o dalla notificazione al presunto contraffattore\nFAIL se: è affermato che il solo deposito rende opponibile la rettifica, oppure la condizione di efficacia non compare.\nÈ indifferente: la scelta fra le due modalità.\nFonte di authoring: art. 57, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che l'efficacia dipende dalla messa a disposizione del pubblico o dalla notificazione al presunto contraffattore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non attribuisce alla traduzione rettificata effetto retroattivo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce alla traduzione rettificata effetto retroattivo.\nPASS se: Il deliverable non attribuisce alla traduzione rettificata effetto retroattivo.\nFAIL se: è affermato che la rettifica opera dalla data del deposito originario della traduzione o dalla concessione.\nÈ indifferente: l'indicazione della data da cui la rettifica opererà.\nFonte di authoring: art. 57, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "Il deliverable non attribuisce alla traduzione rettificata effetto retroattivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che è salvo lo sfruttamento a titolo gratuito di chi in buona fede abbia iniziato l'attuazione quando questa non costituiva contraffazione secondo la traduzione inizialmente depositata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che è salvo lo sfruttamento a titolo gratuito di chi in buona fede abbia iniziato l'attuazione quando questa non costituiva contraffazione secondo la traduzione inizialmente depositata.\nPASS se: compare l'affermazione della salvezza del preuso in buona fede\nFAIL se: la salvezza del preuso non è menzionata.\nÈ indifferente: il richiamo agli effettivi preparativi oltre all'attuazione.\nFonte di authoring: art. 57, comma 5, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione della salvezza del preuso in buona fede",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il fascicolo non consente di stabilire da quando il dispositivo concorrente è distribuito in Italia.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il fascicolo non consente di stabilire da quando il dispositivo concorrente è distribuito in Italia.\nPASS se: compare l'affermazione che la data di prima immissione sul mercato italiano non risulta dal fascicolo\nFAIL se: è indicata una data di prima immissione sul mercato, oppure la lacuna non è dichiarata.\nÈ indifferente: la richiesta di acquisire il dato.\nFonte di authoring: 07_rapporto_test_buy.md, punto 5.3",
+      "pass_condition": "compare l'affermazione che la data di prima immissione sul mercato italiano non risulta dal fascicolo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il rapporto tecnico non contiene il confronto elemento per elemento fra le rivendicazioni e il dispositivo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il rapporto tecnico non contiene il confronto elemento per elemento fra le rivendicazioni e il dispositivo.\nPASS se: compare l'affermazione che il confronto elemento per elemento non è stato eseguito\nFAIL se: il rapporto è presentato come contenente il confronto, oppure la lacuna non è rilevata.\nÈ indifferente: il richiamo al punto del rapporto che lo dichiara.\nFonte di authoring: 07_rapporto_test_buy.md, punto 5.1",
+      "pass_condition": "compare l'affermazione che il confronto elemento per elemento non è stato eseguito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica che il confronto deve esaminare ciascun elemento della rivendicazione 1.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica che il confronto deve esaminare ciascun elemento della rivendicazione 1.\nPASS se: compare l'indicazione di un confronto per ciascun elemento della rivendicazione 1\nFAIL se: il confronto è indicato in termini generici, oppure è riferito alla sola rivendicazione 7.\nÈ indifferente: l'estensione del confronto anche alle rivendicazioni dipendenti.\nFonte di authoring: 02_testo_di_concessione_rivendicazioni.md",
+      "pass_condition": "compare l'indicazione di un confronto per ciascun elemento della rivendicazione 1",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non ricava la corrispondenza tecnica dalle diciture del manuale d'uso o della scheda tecnica del distributore.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non ricava la corrispondenza tecnica dalle diciture del manuale d'uso o della scheda tecnica del distributore.\nPASS se: Il deliverable non ricava la corrispondenza tecnica dalle diciture del manuale d'uso o della scheda tecnica del distributore.\nFAIL se: la corrispondenza fra il dispositivo e le rivendicazioni è affermata sulla base delle diciture del manuale o della scheda tecnica.\nÈ indifferente: la citazione di quelle diciture come indizio da verificare.\nFonte di authoring: 07_rapporto_test_buy.md, punto 3.5",
+      "pass_condition": "Il deliverable non ricava la corrispondenza tecnica dalle diciture del manuale d'uso o della scheda tecnica del distributore.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che la diffida non è presupposto della tutela cautelare.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la diffida non è presupposto della tutela cautelare.\nPASS se: compare l'affermazione che la tutela cautelare non richiede la previa diffida\nFAIL se: la diffida è presentata come condizione per agire.\nÈ indifferente: l'osservazione che la diffida documenta la conoscenza dell'illecito da parte del destinatario.\nFonte di authoring: 08_diffida_contraffazione.md",
+      "pass_condition": "compare l'affermazione che la tutela cautelare non richiede la previa diffida",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable qualifica il termine di quindici giorni assegnato nella diffida come convenzionale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica il termine di quindici giorni assegnato nella diffida come convenzionale.\nPASS se: compare, riferito a quel termine, una fra: «termine convenzionale»; «assegnato dalla parte»; «non è un termine di legge»\nFAIL se: il termine è presentato come termine di legge o di decadenza.\nÈ indifferente: il richiamo alla data di scadenza del termine.\nFonte di authoring: 08_diffida_contraffazione.md",
+      "pass_condition": "compare, riferito a quel termine, una fra: «termine convenzionale»; «assegnato dalla parte»; «non è un termine di legge»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable colloca la messa in opponibilità della traduzione rettificata prima della richiesta di misure cautelari.",
+      "match_criteria": "Oggetto del criterio: Il deliverable colloca la messa in opponibilità della traduzione rettificata prima della richiesta di misure cautelari.\nPASS se: nella sequenza proposta la rettifica opponibile precede la richiesta cautelare\nFAIL se: la richiesta cautelare precede la rettifica opponibile, oppure l'ordine non è indicato.\nÈ indifferente: il numero dei passaggi intermedi.\nFonte di authoring: art. 57, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "nella sequenza proposta la rettifica opponibile precede la richiesta cautelare",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable colloca la costruzione del confronto tecnico prima della scelta fra descrizione, sequestro e inibitoria.",
+      "match_criteria": "Oggetto del criterio: Il deliverable colloca la costruzione del confronto tecnico prima della scelta fra descrizione, sequestro e inibitoria.\nPASS se: nella sequenza proposta il confronto tecnico precede la scelta dello strumento\nFAIL se: lo strumento è scelto prima della costruzione del confronto.\nÈ indifferente: la scelta dello strumento fra quelli disponibili.\nFonte di authoring: artt. 129 e 131 del Codice della proprietà industriale",
+      "pass_condition": "nella sequenza proposta il confronto tecnico precede la scelta dello strumento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable elenca fra gli strumenti disponibili la descrizione, il sequestro e l'inibitoria.",
+      "match_criteria": "Oggetto del criterio: Il deliverable elenca fra gli strumenti disponibili la descrizione, il sequestro e l'inibitoria.\nPASS se: i tre strumenti compaiono tutti fra quelli indicati\nFAIL se: manca uno dei tre strumenti.\nÈ indifferente: l'inclusione dell'ordine di ritiro dal commercio fra gli strumenti.\nFonte di authoring: artt. 129 e 131 del Codice della proprietà industriale",
+      "pass_condition": "i tre strumenti compaiono tutti fra quelli indicati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il termine per iniziare il giudizio di merito, se il giudice non lo stabilisce, è il più lungo fra venti giorni lavorativi e trentuno giorni di calendario.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine per iniziare il giudizio di merito, se il giudice non lo stabilisce, è il più lungo fra venti giorni lavorativi e trentuno giorni di calendario.\nPASS se: compare l'indicazione di entrambi i termini alternativi e della prevalenza del più lungo\nFAIL se: è indicato uno solo dei due termini, oppure non è indicata la prevalenza del più lungo.\nÈ indifferente: il richiamo alla decorrenza dalla pronuncia in udienza o dalla comunicazione.\nFonte di authoring: art. 132, comma 2, del Codice della proprietà industriale",
+      "pass_condition": "compare l'indicazione di entrambi i termini alternativi e della prevalenza del più lungo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable usa la scadenza della gara come elemento di fatto sull'urgenza.",
+      "match_criteria": "Oggetto del criterio: Il deliverable usa la scadenza della gara come elemento di fatto sull'urgenza.\nPASS se: la scadenza della gara compare fra gli elementi di fatto rilevanti per l'urgenza\nFAIL se: la scadenza della gara non è utilizzata, oppure è presentata come termine giuridico che condiziona l'iniziativa.\nÈ indifferente: il richiamo al requisito tecnico del disciplinare.\nFonte di authoring: 09_avviso_gara_ospedaliera.md",
+      "pass_condition": "la scadenza della gara compare fra gli elementi di fatto rilevanti per l'urgenza",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non afferma che il concorrente partecipa alla gara.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non afferma che il concorrente partecipa alla gara.\nPASS se: Il deliverable non afferma che il concorrente partecipa alla gara.\nFAIL se: è affermato che il concorrente ha presentato o presenterà offerta nella gara.\nÈ indifferente: l'osservazione che il requisito tecnico del disciplinare corrisponde alla funzione del dispositivo concorrente.\nFonte di authoring: 09_avviso_gara_ospedaliera.md",
+      "pass_condition": "Il deliverable non afferma che il concorrente partecipa alla gara.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica se sia possibile ottenere una misura prima della scadenza della gara e da quali passaggi ciò dipende.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica se sia possibile ottenere una misura prima della scadenza della gara e da quali passaggi ciò dipende.\nPASS se: la risposta al direttore commerciale indica i passaggi da compiere e non un esito\nFAIL se: la risposta afferma che il concorrente sarà bloccato prima della gara, oppure che non è possibile fare nulla senza indicare che cosa manca.\nÈ indifferente: il tono della risposta.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "la risposta al direttore commerciale indica i passaggi da compiere e non un esito",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non segnala un ritardo o una decadenza relativi all'annualità italiana.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non segnala un ritardo o una decadenza relativi all'annualità italiana.\nPASS se: Il deliverable non segnala un ritardo o una decadenza relativi all'annualità italiana.\nFAIL se: il pagamento dell'annualità del 26 giugno 2026 è presentato come tardivo, o è indicata l'applicazione di un diritto di mora o una decadenza.\nÈ indifferente: la menzione dell'annualità fra gli adempimenti verificati e regolari.\nFonte di authoring: 04_ricevuta_annualita.md",
+      "pass_condition": "Il deliverable non segnala un ritardo o una decadenza relativi all'annualità italiana.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non presenta la mancata convalida della designazione tedesca come rischio per l'azione in Italia.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la mancata convalida della designazione tedesca come rischio per l'azione in Italia.\nPASS se: Il deliverable non presenta la mancata convalida della designazione tedesca come rischio per l'azione in Italia.\nFAIL se: la mancata convalida della designazione tedesca è indicata fra i rischi o fra i punti da sanare prima di agire in Italia.\nÈ indifferente: la menzione della designazione fra gli elementi verificati.\nFonte di authoring: 10_nota_consulente_brevetti.md, punto 4.1",
+      "pass_condition": "Il deliverable non presenta la mancata convalida della designazione tedesca come rischio per l'azione in Italia.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non presenta la pendenza della domanda divisionale come elemento che indebolisce il titolo azionato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta la pendenza della domanda divisionale come elemento che indebolisce il titolo azionato.\nPASS se: Il deliverable non presenta la pendenza della domanda divisionale come elemento che indebolisce il titolo azionato.\nFAIL se: la domanda divisionale n. 25171188.4 è indicata come elemento di debolezza del brevetto concesso o come ragione per attendere.\nÈ indifferente: la menzione della divisionale fra gli elementi verificati.\nFonte di authoring: 10_nota_consulente_brevetti.md, punto 4.2",
+      "pass_condition": "Il deliverable non presenta la pendenza della domanda divisionale come elemento che indebolisce il titolo azionato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non indica la mancata richiesta della consulenza tecnica preventiva fra le omissioni da sanare.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica la mancata richiesta della consulenza tecnica preventiva fra le omissioni da sanare.\nPASS se: Il deliverable non indica la mancata richiesta della consulenza tecnica preventiva fra le omissioni da sanare.\nFAIL se: la mancata richiesta della consulenza tecnica preventiva è indicata fra le omissioni o fra gli adempimenti preliminari mancanti.\nÈ indifferente: la proposta di ricorrervi come opzione.\nFonte di authoring: 10_nota_consulente_brevetti.md, punto 4.3",
+      "pass_condition": "Il deliverable non indica la mancata richiesta della consulenza tecnica preventiva fra le omissioni da sanare.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non presenta il difetto sul pagamento della tassa come problema anche del lato assistito.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta il difetto sul pagamento della tassa come problema anche del lato assistito.\nPASS se: Il deliverable non presenta il difetto sul pagamento della tassa come problema anche del lato assistito.\nFAIL se: il difetto sul pagamento della tassa di opposizione è descritto come rischio o come criticità per Nevalta.\nÈ indifferente: l'osservazione che la circostanza va verificata prima di farla valere.\nFonte di authoring: 06_estratto_conto_deposito_epo.md",
+      "pass_condition": "Il deliverable non presenta il difetto sul pagamento della tassa come problema anche del lato assistito.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non presenta come acquisiti l'esito dell'opposizione né l'accertamento della contraffazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come acquisiti l'esito dell'opposizione né l'accertamento della contraffazione.\nPASS se: Il deliverable non presenta come acquisiti l'esito dell'opposizione né l'accertamento della contraffazione.\nFAIL se: è affermato che l'opposizione sarà dichiarata non proposta, oppure che la contraffazione sussiste.\nÈ indifferente: l'indicazione della probabilità dei due esiti come valutazione riservata al committente.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presenta come acquisiti l'esito dell'opposizione né l'accertamento della contraffazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 28 gennaio 2026 come data di pubblicazione della menzione della concessione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 28 gennaio 2026 come data di pubblicazione della menzione della concessione.\nPASS se: compare la data «28 gennaio 2026» riferita alla pubblicazione della menzione\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo al numero del fascicolo.\nFonte di authoring: 01_estratto_bollettino_concessione.md",
+      "pass_condition": "compare la data «28 gennaio 2026» riferita alla pubblicazione della menzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 28 ottobre 2026 come scadenza del termine di opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 28 ottobre 2026 come scadenza del termine di opposizione.\nPASS se: compare la data «28 ottobre 2026» riferita alla scadenza del termine di opposizione\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: l'osservazione che il giorno non è festivo.\nFonte di authoring: art. 99(1) della Convenzione",
+      "pass_condition": "compare la data «28 ottobre 2026» riferita alla scadenza del termine di opposizione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non computa il termine di opposizione dalla data di deposito della domanda.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa il termine di opposizione dalla data di deposito della domanda.\nPASS se: Il deliverable non computa il termine di opposizione dalla data di deposito della domanda.\nFAIL se: il termine di opposizione è computato dal 14 giugno 2019, o è indicata come sua scadenza una data derivata da quel giorno.\nÈ indifferente: la menzione della data di deposito in altra funzione.\nFonte di authoring: 01_estratto_bollettino_concessione.md",
+      "pass_condition": "Il deliverable non computa il termine di opposizione dalla data di deposito della domanda.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non computa il termine di opposizione dalla pubblicazione della domanda.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa il termine di opposizione dalla pubblicazione della domanda.\nPASS se: Il deliverable non computa il termine di opposizione dalla pubblicazione della domanda.\nFAIL se: il termine di opposizione è computato dal 16 dicembre 2020, o è indicata come sua scadenza una data derivata da quel giorno.\nÈ indifferente: la menzione della pubblicazione della domanda in altra funzione.\nFonte di authoring: 10_nota_consulente_brevetti.md, cronologia",
+      "pass_condition": "Il deliverable non computa il termine di opposizione dalla pubblicazione della domanda.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 27 ottobre 2026 come data di deposito dell'atto di opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 27 ottobre 2026 come data di deposito dell'atto di opposizione.\nPASS se: compare la data «27 ottobre 2026» riferita al deposito dell'atto\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo al numero della ricevuta di deposito.\nFonte di authoring: 05_atto_opposizione.md",
+      "pass_condition": "compare la data «27 ottobre 2026» riferita al deposito dell'atto",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 29 ottobre 2026 come data di valuta del pagamento della tassa di opposizione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 29 ottobre 2026 come data di valuta del pagamento della tassa di opposizione.\nPASS se: compare la data «29 ottobre 2026» riferita alla valuta del pagamento\nFAIL se: è indicata una data diversa, oppure è usata la data di registrazione dell'addebito.\nÈ indifferente: il richiamo all'importo della tassa.\nFonte di authoring: 06_estratto_conto_deposito_epo.md",
+      "pass_condition": "compare la data «29 ottobre 2026» riferita alla valuta del pagamento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 28 aprile 2026 come scadenza del termine per il deposito della traduzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 28 aprile 2026 come scadenza del termine per il deposito della traduzione.\nPASS se: compare la data «28 aprile 2026» riferita alla scadenza del termine per la traduzione\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: il richiamo alla durata di tre mesi.\nFonte di authoring: art. 56, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "compare la data «28 aprile 2026» riferita alla scadenza del termine per la traduzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 24 aprile 2026 come data di deposito della traduzione italiana.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 24 aprile 2026 come data di deposito della traduzione italiana.\nPASS se: compare la data «24 aprile 2026» riferita al deposito della traduzione\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo al numero di deposito telematico.\nFonte di authoring: 03_deposito_traduzione_italiana.md",
+      "pass_condition": "compare la data «24 aprile 2026» riferita al deposito della traduzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il termine di opposizione e il termine per la traduzione decorrono dal medesimo evento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine di opposizione e il termine per la traduzione decorrono dal medesimo evento.\nPASS se: compare l'affermazione che i due termini decorrono dalla pubblicazione della menzione della concessione\nFAIL se: ai due termini sono attribuite decorrenze diverse.\nÈ indifferente: l'ordine in cui i due termini sono esposti.\nFonte di authoring: art. 99(1) della Convenzione; art. 56, comma 4, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che i due termini decorrono dalla pubblicazione della menzione della concessione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 30 giugno 2026 come scadenza dell'annualità dovuta nel 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 30 giugno 2026 come scadenza dell'annualità dovuta nel 2026.\nPASS se: compare la data «30 giugno 2026» riferita alla scadenza dell'annualità\nFAIL se: è indicata una data diversa, oppure la scadenza non compare.\nÈ indifferente: l'indicazione dell'importo versato.\nFonte di authoring: art. 227, comma 1, del Codice della proprietà industriale",
+      "pass_condition": "compare la data «30 giugno 2026» riferita alla scadenza dell'annualità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il mese di riferimento dell'annualità è quello in cui è caduta la data di deposito della domanda europea.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il mese di riferimento dell'annualità è quello in cui è caduta la data di deposito della domanda europea.\nPASS se: compare l'affermazione che il mese di riferimento è quello del deposito della domanda\nFAIL se: il mese di riferimento è ricondotto alla concessione, alla convalida o alla pubblicazione della menzione.\nÈ indifferente: il richiamo al codice tributo usato per il versamento.\nFonte di authoring: art. 227, comma 1, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che il mese di riferimento è quello del deposito della domanda",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable non computa la scadenza dell'annualità dal mese della concessione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa la scadenza dell'annualità dal mese della concessione.\nPASS se: Il deliverable non computa la scadenza dell'annualità dal mese della concessione.\nFAIL se: la scadenza dell'annualità è indicata nell'ultimo giorno del mese di gennaio o in altra data derivata dal mese della concessione.\nÈ indifferente: la menzione del mese della concessione in altra funzione.\nFonte di authoring: 04_ricevuta_annualita.md",
+      "pass_condition": "Il deliverable non computa la scadenza dell'annualità dal mese della concessione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable afferma che il termine per l'inizio del giudizio di merito non è determinabile alla data di riferimento e indica che manca il provvedimento da cui decorrerebbe.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine per l'inizio del giudizio di merito non è determinabile alla data di riferimento e indica che manca il provvedimento da cui decorrerebbe.\nPASS se: compare l'affermazione che il termine non è determinabile e l'indicazione che manca il provvedimento cautelare da cui decorre\nFAIL se: è indicata una data determinata per l'inizio del giudizio di merito, oppure è affermato che il termine non è determinabile senza indicare che cosa manca.\nÈ indifferente: l'esposizione di un calcolo su una data ipotetica, purché dichiarata come tale.\nFonte di authoring: art. 132, comma 2, del Codice della proprietà industriale",
+      "pass_condition": "compare l'affermazione che il termine non è determinabile e l'indicazione che manca il provvedimento cautelare da cui decorre",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "patent_timeline.md"
+      ],
+      "title": "Il deliverable indica il 15 dicembre 2026 come termine di presentazione delle offerte nella gara.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 15 dicembre 2026 come termine di presentazione delle offerte nella gara.\nPASS se: compare la data «15 dicembre 2026» riferita al termine di presentazione delle offerte\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: l'indicazione dell'ora e della data della prima seduta pubblica.\nFonte di authoring: 09_avviso_gara_ospedaliera.md",
+      "pass_condition": "compare la data «15 dicembre 2026» riferita al termine di presentazione delle offerte",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

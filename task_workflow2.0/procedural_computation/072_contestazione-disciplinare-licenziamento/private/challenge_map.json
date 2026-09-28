@@ -1,0 +1,177 @@
+{
+  "task_id": "WF2-072",
+  "lato_assistito": "Roccapiana Servizi S.r.l., datore di lavoro di Elisa Varisco",
+  "data_di_riferimento": "2029-05-14",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Conoscenza del fatto",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'azienda ha completato la conoscenza documentata del fatto il 2 maggio 2029",
+      "evidenza": "01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto",
+      "conseguenza": "l'immediatezza va verificata dal completamento dell'audit, non dal solo fatto del 27 aprile",
+      "azione": "conservare il rapporto e i log",
+      "dato_mancante": "manca prova di conoscenza anticipata",
+      "errore_bersaglio": "far decorrere tutto dal 29 aprile",
+      "fonte": "rapporto audit"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Specificità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la lettera del 3 maggio indica operazione, ora, cliente e regola contestata",
+      "evidenza": "01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità",
+      "conseguenza": "l'addebito è individuato nei suoi elementi materiali",
+      "azione": "non aggiungere fatti nuovi nella decisione",
+      "dato_mancante": "manca il filmato completo",
+      "errore_bersaglio": "descrivere l'addebito come generico",
+      "fonte": "lettera di contestazione"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Pubblicità del codice",
+      "gravita": "alta",
+      "affermazione_richiesta": "il codice disciplinare risulta affisso dal 4 gennaio 2028",
+      "evidenza": "01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice",
+      "conseguenza": "il fascicolo prova la conoscibilità delle regole aziendali",
+      "azione": "allegare foto e verbale",
+      "dato_mancante": "manca prova di successive rimozioni",
+      "errore_bersaglio": "ritenere sufficiente la sola intranet",
+      "fonte": "art. 7 legge 300/1970; verbale"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Termine difensivo",
+      "gravita": "alta",
+      "affermazione_richiesta": "i cinque giorni minimi risultano trascorsi prima del licenziamento dell'11 maggio 2029",
+      "evidenza": "02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo",
+      "conseguenza": "la decisione non e prematura per il solo intervallo temporale",
+      "azione": "documentare il computo",
+      "dato_mancante": "il CCNL potrebbe prevedere un termine più lungo",
+      "errore_bersaglio": "contare il giorno della consegna come primo giorno",
+      "fonte": "art. 7 legge 300/1970"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Difese scritte",
+      "gravita": "alta",
+      "affermazione_richiesta": "le giustificazioni sono state ricevute il 7 maggio 2029",
+      "evidenza": "02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte",
+      "conseguenza": "devono essere valutate nella motivazione",
+      "azione": "confrontare ciascuna difesa con i log",
+      "dato_mancante": "manca un allegato richiamato dalla lavoratrice",
+      "errore_bersaglio": "ignorare le difese perché depositate dopo cinque giorni",
+      "fonte": "PEC del 7 maggio"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Audizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'audizione richiesta si è svolta il 10 maggio 2029 con assistenza sindacale",
+      "evidenza": "03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione",
+      "conseguenza": "il passaggio difensivo richiesto risulta eseguito",
+      "azione": "conservare firme e delega",
+      "dato_mancante": "manca la registrazione audio, che non è necessaria",
+      "errore_bersaglio": "negare che vi sia stata audizione",
+      "fonte": "verbale di audizione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Decisione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la lettera di licenziamento usa gli stessi fatti della contestazione",
+      "evidenza": "03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione",
+      "conseguenza": "non emerge una mutazione dell'addebito",
+      "azione": "mantenere separati fatti e valutazione",
+      "dato_mancante": "manca il dato sui precedenti disciplinari",
+      "errore_bersaglio": "aggiungere l'assenza del 30 aprile come motivo",
+      "fonte": "lettere del 3 e 13 maggio"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Ricezione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il licenziamento risulta ricevuto l'11 maggio 2029",
+      "evidenza": "03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione",
+      "conseguenza": "da questa data decorre il termine di impugnazione",
+      "azione": "archiviare la ricevuta",
+      "dato_mancante": "manca una seconda modalità di consegna",
+      "errore_bersaglio": "usare la data di redazione del 12 maggio",
+      "fonte": "ricevuta; art. 6 legge 604/1966"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Prima decadenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di sessanta giorni scade il 10 luglio 2029",
+      "evidenza": "04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza",
+      "conseguenza": "l'impugnazione stragiudiziale deve pervenire entro il 10 luglio 2029",
+      "azione": "attivare il monitoraggio fino al 12 luglio 2029",
+      "dato_mancante": "non è ancora pervenuta impugnazione",
+      "errore_bersaglio": "indicare 13 luglio 2029",
+      "fonte": "art. 6 legge 604/1966"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Seconda decadenza",
+      "gravita": "alta",
+      "affermazione_richiesta": "il successivo termine di centottanta giorni non è ancora databile",
+      "evidenza": "04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza",
+      "conseguenza": "la decorrenza dipenderà dall'atto di impugnazione",
+      "azione": "ricalcolare alla ricezione dell'atto",
+      "dato_mancante": "manca la data dell'impugnazione",
+      "errore_bersaglio": "calcolarlo dalla data del licenziamento",
+      "fonte": "art. 6 legge 604/1966"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "copia intranet",
+      "chiave_nel_criterio": "copia intranet",
+      "regola": "La presenza di una copia in intranet non cancella la prova dell'affissione fisica."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "registrazione audio",
+      "chiave_nel_criterio": "registrazione audio",
+      "regola": "L'assenza di audio non smentisce da sola il verbale di audizione firmato."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "seconda consegna",
+      "chiave_nel_criterio": "seconda consegna",
+      "regola": "L'assenza di una seconda modalità non invalida la ricevuta di consegna disponibile."
+    }
+  ],
+  "calcoli": [
+    "2028-01-04",
+    "2029-04-27",
+    "2029-05-02",
+    "2029-05-03",
+    "2029-05-07",
+    "2029-05-10",
+    "2029-05-11",
+    "2029-07-10"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_atti_procedimento_varisco.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_registro_procedimento_varisco.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_scambi_audizione_e_recesso.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_nota_studio_termini_impugnazione.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

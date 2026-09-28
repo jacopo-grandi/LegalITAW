@@ -1,0 +1,754 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-004",
+  "title": "M&A. Analisi di un term sheet/SPA senza riscrivere",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 46,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il file consegnato è una nota di review con i rilievi in elenco ordinato per priorità.",
+      "pass_condition": "il file consegnato è una nota di review con i rilievi in un elenco ordinato per priorità.",
+      "fail_condition": "manca la nota di review, i rilievi non sono elencati o non sono ordinati per priorità.",
+      "indifferent": "La grafica e il formato dell’elenco.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [struttura] Il file consegnato è una nota di review con i rilievi in elenco ordinato per priorità."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il deliverable non contiene un testo contrattuale riscritto né revisioni tracciate: la riscrittura è deviazione di formato.",
+      "pass_condition": "il deliverable non contiene testo contrattuale riscritto e non contiene revisioni tracciate.",
+      "fail_condition": "compare testo contrattuale riscritto o compare anche una modifica tracciata; entrambe le deviazioni fanno fallire il criterio.",
+      "indifferent": "La parafrasi della clausola necessaria a descrivere un issue, se non è presentata come testo sostitutivo.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] Il deliverable non contiene un testo contrattuale riscritto né revisioni tracciate: la riscrittura è deviazione di formato."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni rilievo porta il riferimento alla clausola o al documento da cui deriva.",
+      "pass_condition": "ogni rilievo identifica la clausola o il documento da cui deriva.",
+      "fail_condition": "anche un solo rilievo non è collegato a una clausola o a un documento identificabile.",
+      "indifferent": "La forma del riferimento.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] Ogni rilievo porta il riferimento alla clausola o al documento da cui deriva."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il deliverable contiene una sezione conclusiva con i punti su cui non cedere.",
+      "pass_condition": "il deliverable contiene una sezione conclusiva che indica i punti su cui non cedere.",
+      "fail_condition": "manca la sezione conclusiva o non indica i punti su cui non cedere.",
+      "indifferent": "La collocazione e il titolo della sezione, purché sia conclusiva e riconoscibile.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] Il deliverable contiene una sezione conclusiva con i punti su cui non cedere."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Nessun riferimento normativo fuori dall'elenco chiuso: artt. 1229 e 2596 c.c. Ogni altra norma citata è invenzione o eccedenza.",
+      "pass_condition": "il deliverable cita soltanto artt. 1229 e 2596 c.c.",
+      "fail_condition": "compare anche una sola norma diversa dagli artt. 1229 e 2596 c.c., anche come ipotesi o esempio.",
+      "indifferent": "I rinvii a clausole, allegati e documenti del fascicolo non sono norme.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.5 [assenza] Nessun riferimento normativo fuori dall'elenco chiuso: artt. 1229 e 2596 c.c. Ogni altra norma citata è invenzione o eccedenza.\n\nSEZIONE B — MERITO. Passa al judge."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che non è previsto alcun interesse o rateo a favore del Venditore fra la Locked-Box Date e il Closing.",
+      "pass_condition": "compare l'assenza del ticker, comunque denominata, come rilievo a sfavore del Venditore.",
+      "fail_condition": "il rilievo non compare, o l'assenza è presentata come irrilevante.",
+      "indifferent": null,
+      "source": "art. 3.",
+      "severity": "alta",
+      "raw_text": "B.1 ticker mancante [issue: I-01] [tipo: presenza]\nVerifica: il deliverable rileva che non è previsto alcun interesse o rateo a favore del Venditore fra la Locked-Box Date e il Closing.\nPass se: compare l'assenza del ticker, comunque denominata, come rilievo a sfavore del Venditore.\nFail se: il rilievo non compare, o l'assenza è presentata come irrilevante.\n— non passa al judge — Fonte: art. 3. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la definizione di Leakage cattura l'ordinaria operatività infragruppo.",
+      "pass_condition": "l'ampiezza della definizione è segnalata come issue.",
+      "fail_condition": "la definizione è presentata come standard, o il rilievo non compare.",
+      "indifferent": null,
+      "source": "art. 1.",
+      "severity": "alta",
+      "raw_text": "B.2 definizione di Leakage troppo ampia [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva che la definizione di Leakage cattura l'ordinaria operatività infragruppo.\nPass se: l'ampiezza della definizione è segnalata come issue.\nFail se: la definizione è presentata come standard, o il rilievo non compare.\n— non passa al judge — Fonte: art. 1. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che l'elenco dei Permitted Leakage è tassativo e stretto.",
+      "pass_condition": "la ristrettezza dell'elenco è segnalata come issue.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "art. 1; Allegato B.",
+      "severity": "media",
+      "raw_text": "B.3 Permitted Leakage stretti [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva che l'elenco dei Permitted Leakage è tassativo e stretto.\nPass se: la ristrettezza dell'elenco è segnalata come issue.\nFail se: non compare.\n— non passa al judge — Fonte: art. 1; Allegato B. Gravità: media."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che l'indennizzo da Leakage opera euro per euro senza alcuna soglia minima.",
+      "pass_condition": "l'assenza di soglia è segnalata come issue.",
+      "fail_condition": "non compare, o si afferma che una soglia è prevista.",
+      "indifferent": null,
+      "source": "art. 4.",
+      "severity": "alta",
+      "raw_text": "B.4 leakage senza soglia [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva che l'indennizzo da Leakage opera euro per euro senza alcuna soglia minima.\nPass se: l'assenza di soglia è segnalata come issue.\nFail se: non compare, o si afferma che una soglia è prevista.\n— non passa al judge — Fonte: art. 4. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable qualifica il massimale pari al 100% del Prezzo come limite solo formale per le Garanzie Generali.",
+      "pass_condition": "l'inadeguatezza del livello è affermata, comunque formulata.",
+      "fail_condition": "il cap è dato per adeguato, o è indicato come presente senza valutarne il livello.",
+      "indifferent": null,
+      "source": "art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.5 cap al 100% non è un limite effettivo [issue: I-03] [tipo: qualificazione]\nVerifica: il deliverable qualifica il massimale pari al 100% del Prezzo come limite solo formale per le Garanzie Generali.\nPass se: l'inadeguatezza del livello è affermata, comunque formulata.\nFail se: il cap è dato per adeguato, o è indicato come presente senza valutarne il livello.\n— non passa al judge — Fonte: art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta la presenza del massimale come elemento di per sé rassicurante.",
+      "pass_condition": "nessuna affermazione tratta l'esistenza del cap come protezione sufficiente.",
+      "fail_condition": "il cap è elencato fra le tutele del Venditore senza rilievo sul livello.",
+      "indifferent": null,
+      "source": "art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.6 il cap non basta perché c'è [issue: I-03] [tipo: assenza]\nVerifica: il deliverable non presenta la presenza del massimale come elemento di per sé rassicurante.\nPass se: nessuna affermazione tratta l'esistenza del cap come protezione sufficiente.\nFail se: il cap è elencato fra le tutele del Venditore senza rilievo sul livello.\n— non passa al judge — Fonte: art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che, superata la soglia di € 250.000, il recupero avviene dal primo euro e non sul solo eccedente.",
+      "pass_condition": "compaiono la soglia e il recupero integrale.",
+      "fail_condition": "la soglia è descritta come franchigia deducibile, o il rilievo non compare.",
+      "indifferent": null,
+      "source": "art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.7 basket tipping [issue: I-04] [tipo: presenza]\nVerifica: il deliverable rileva che, superata la soglia di € 250.000, il recupero avviene dal primo euro e non sul solo eccedente.\nPass se: compaiono la soglia e il recupero integrale.\nFail se: la soglia è descritta come franchigia deducibile, o il rilievo non compare.\n— non passa al judge — Fonte: art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che l'indennizzo è calcolato senza tener conto di benefici fiscali, coperture assicurative e fondi rischi.",
+      "pass_condition": "l'esclusione è segnalata come issue, con almeno due delle tre voci.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.8 deduzioni escluse [issue: I-05] [tipo: presenza]\nVerifica: il deliverable rileva che l'indennizzo è calcolato senza tener conto di benefici fiscali, coperture assicurative e fondi rischi.\nPass se: l'esclusione è segnalata come issue, con almeno due delle tre voci.\nFail se: non compare.\n— non passa al judge — Fonte: art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega l'esclusione dei fondi rischi al fondo di € 300.000 iscritto per il contenzioso fiscale, con il rischio di doppio pagamento.",
+      "pass_condition": "compaiono il fondo e la conseguenza del doppio pagamento.",
+      "fail_condition": "il collegamento non è fatto, o il fondo non è richiamato.",
+      "indifferent": null,
+      "source": "art. 7.2; Allegato A.",
+      "severity": "alta",
+      "raw_text": "B.9 fondo rischi e doppio pagamento [issue: I-05] [tipo: presenza]\nVerifica: il deliverable collega l'esclusione dei fondi rischi al fondo di € 300.000 iscritto per il contenzioso fiscale, con il rischio di doppio pagamento.\nPass se: compaiono il fondo e la conseguenza del doppio pagamento.\nFail se: il collegamento non è fatto, o il fondo non è richiamato.\n— non passa al judge — Fonte: art. 7.2; Allegato A. Gravità: alta."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il diritto all'indennizzo non è limitato dalla conoscenza del Compratore né da quanto risulta in disclosure.",
+      "pass_condition": "il sandbagging è segnalato come esposizione da rinegoziare.",
+      "fail_condition": "non compare, o è presentato come clausola neutra.",
+      "indifferent": null,
+      "source": "art. 7.3; Allegato D.",
+      "severity": "alta",
+      "raw_text": "B.10 pro-sandbagging rilevato [issue: I-06] [tipo: presenza]\nVerifica: il deliverable rileva che il diritto all'indennizzo non è limitato dalla conoscenza del Compratore né da quanto risulta in disclosure.\nPass se: il sandbagging è segnalato come esposizione da rinegoziare.\nFail se: non compare, o è presentato come clausola neutra.\n— non passa al judge — Fonte: art. 7.3; Allegato D. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma come certa la nullità o l'inefficacia della clausola pro-sandbagging.",
+      "pass_condition": "il rilievo resta sul piano della rinegoziazione.",
+      "fail_condition": "la clausola è dichiarata nulla, invalida o inefficace senza cautela.",
+      "indifferent": null,
+      "source": "art. 7.3.",
+      "severity": "alta",
+      "raw_text": "B.11 nessuna nullità del sandbagging [issue: I-06] [tipo: assenza]\nVerifica: il deliverable non afferma come certa la nullità o l'inefficacia della clausola pro-sandbagging.\nPass se: il rilievo resta sul piano della rinegoziazione.\nFail se: la clausola è dichiarata nulla, invalida o inefficace senza cautela.\n— non passa al judge — Fonte: art. 7.3. Gravità: alta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il Compratore può trattenere o compensare per pretese anche solo allegate, senza previo accertamento o accordo.",
+      "pass_condition": "compaiono la facoltà unilaterale e l'assenza di accertamento.",
+      "fail_condition": "il rilievo non compare, o la facoltà è descritta come subordinata a un accertamento.",
+      "indifferent": null,
+      "source": "art. 9.",
+      "severity": "alta",
+      "raw_text": "B.12 set-off senza accertamento [issue: I-07] [tipo: presenza]\nVerifica: il deliverable rileva che il Compratore può trattenere o compensare per pretese anche solo allegate, senza previo accertamento o accordo.\nPass se: compaiono la facoltà unilaterale e l'assenza di accertamento.\nFail se: il rilievo non compare, o la facoltà è descritta come subordinata a un accertamento.\n— non passa al judge — Fonte: art. 9. Gravità: alta."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la definizione di Effetto Sostanziale Pregiudizievole include le prospettive della Società e ne suggerisce la circoscrizione.",
+      "pass_condition": "compaiono il rilievo sulle prospettive e la proposta di restringere.",
+      "fail_condition": "il rilievo non compare.",
+      "indifferent": null,
+      "source": "art. 1.",
+      "severity": "alta",
+      "raw_text": "B.13 MAE e le «prospettive» [issue: I-08] [tipo: presenza]\nVerifica: il deliverable rileva che la definizione di Effetto Sostanziale Pregiudizievole include le prospettive della Società e ne suggerisce la circoscrizione.\nPass se: compaiono il rilievo sulle prospettive e la proposta di restringere.\nFail se: il rilievo non compare.\n— non passa al judge — Fonte: art. 1. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non dichiara la condizione MAE nulla come condizione meramente potestativa né come opzione di uscita libera del Compratore.",
+      "pass_condition": "nessuna affermazione di nullità o di potestatività la riguarda.",
+      "fail_condition": "è dichiarata nulla, meramente potestativa, o equiparata a un diritto di recesso libero.",
+      "indifferent": null,
+      "source": "artt. 5 e 14.",
+      "severity": "alta",
+      "raw_text": "B.14 nessuna nullità della MAC [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non dichiara la condizione MAE nulla come condizione meramente potestativa né come opzione di uscita libera del Compratore.\nPass se: nessuna affermazione di nullità o di potestatività la riguarda.\nFail se: è dichiarata nulla, meramente potestativa, o equiparata a un diritto di recesso libero.\n— non passa al judge — Fonte: artt. 5 e 14. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la garanzia del Garante è subordinata alle condizioni dell'equity commitment.",
+      "pass_condition": "la subordinazione è segnalata come issue.",
+      "fail_condition": "non compare.",
+      "indifferent": null,
+      "source": "art. 12.",
+      "severity": "alta",
+      "raw_text": "B.15 garanzia capogruppo condizionata [issue: I-09] [tipo: presenza]\nVerifica: il deliverable rileva che la garanzia del Garante è subordinata alle condizioni dell'equity commitment.\nPass se: la subordinazione è segnalata come issue.\nFail se: non compare.\n— non passa al judge — Fonte: art. 12. Gravità: alta."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la garanzia del Garante cessa 6 mesi dopo il Closing, prima della scadenza delle garanzie che dovrebbe assistere.",
+      "pass_condition": "compaiono la cessazione a 6 mesi e il disallineamento con la durata delle garanzie.",
+      "fail_condition": "la cessazione è indicata senza rilevare il disallineamento, o il rilievo non compare.",
+      "indifferent": null,
+      "source": "artt. 8 e 12.",
+      "severity": "alta",
+      "raw_text": "B.16 garanzia che scade prima [issue: I-09] [tipo: presenza]\nVerifica: il deliverable rileva che la garanzia del Garante cessa 6 mesi dopo il Closing, prima della scadenza delle garanzie che dovrebbe assistere.\nPass se: compaiono la cessazione a 6 mesi e il disallineamento con la durata delle garanzie.\nFail se: la cessazione è indicata senza rilevare il disallineamento, o il rilievo non compare.\n— non passa al judge — Fonte: artt. 8 e 12. Gravità: alta."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che l'affermazione del cliente sull'esposizione contenuta non regge alla luce del regime di indennizzo della bozza.",
+      "pass_condition": "l'affermazione è qualificata come non fondata o da correggere.",
+      "fail_condition": "è recepita come vera, o non è trattata.",
+      "indifferent": null,
+      "source": "email del cliente; art. 7.",
+      "severity": "alta",
+      "raw_text": "B.17 affermazione del cliente smentita [issue: I-10] [tipo: presenza]\nVerifica: il deliverable rileva che l'affermazione del cliente sull'esposizione contenuta non regge alla luce del regime di indennizzo della bozza.\nPass se: l'affermazione è qualificata come non fondata o da correggere.\nFail se: è recepita come vera, o non è trattata.\n— non passa al judge — Fonte: email del cliente; art. 7. Gravità: alta."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non contesta l'affermazione del cliente sul prezzo fisso, che è corretta perché il prezzo è su base locked-box.",
+      "pass_condition": "quell'affermazione non è segnalata come errata.",
+      "fail_condition": "è contestata, corretta o messa in dubbio.",
+      "indifferent": null,
+      "source": "email del cliente; art. 3.",
+      "severity": "alta",
+      "raw_text": "B.18 affermazione corretta non sovracorretta [issue: I-10] [tipo: assenza]\nVerifica: il deliverable non contesta l'affermazione del cliente sul prezzo fisso, che è corretta perché il prezzo è su base locked-box.\nPass se: quell'affermazione non è segnalata come errata.\nFail se: è contestata, corretta o messa in dubbio.\n— non passa al judge — Fonte: email del cliente; art. 3. Gravità: alta."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi conclusiva indica fra i punti su cui non cedere il regime di indennizzo, la garanzia della capogruppo e il leakage.",
+      "pass_condition": "compaiono tutti e tre i temi, comunque raggruppati.",
+      "fail_condition": "anche uno solo manca.",
+      "indifferent": "l'ordine fra i tre e l'aggiunta di un quarto tema, purché non sostituisca uno dei tre.",
+      "source": "artt. 4, 7, 12.",
+      "severity": "alta",
+      "raw_text": "B.19 punti su cui non cedere [issue: I-11] [tipo: presenza]\nVerifica: la sintesi conclusiva indica fra i punti su cui non cedere il regime di indennizzo, la garanzia della capogruppo e il leakage.\nPass se: compaiono tutti e tre i temi, comunque raggruppati.\nFail se: anche uno solo manca.\nIndifferente: l'ordine fra i tre e l'aggiunta di un quarto tema, purché non sostituisca uno dei tre.\n— non passa al judge — Fonte: artt. 4, 7, 12. Gravità: alta."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi conclusiva non indica fra i punti su cui non cedere clausole procedurali o di rito.",
+      "pass_condition": "i punti fermi riguardano solo il merito economico e il regime di responsabilità.",
+      "fail_condition": "fra i punti fermi compaiono arbitrato, riservatezza, comunicazioni, legge applicabile o impegni interinali.",
+      "indifferent": null,
+      "source": "artt. 10, 14, 16.",
+      "severity": "media",
+      "raw_text": "B.20 nessuna clausola di rito fra i punti fermi [issue: I-11] [tipo: assenza]\nVerifica: la sintesi conclusiva non indica fra i punti su cui non cedere clausole procedurali o di rito.\nPass se: i punti fermi riguardano solo il merito economico e il regime di responsabilità.\nFail se: fra i punti fermi compaiono arbitrato, riservatezza, comunicazioni, legge applicabile o impegni interinali.\n— non passa al judge — Fonte: artt. 10, 14, 16. Gravità: media."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la presenza di una condizione MAE come problema in sé.",
+      "pass_condition": "il rilievo sulla MAE riguarda solo l'ampiezza della definizione.",
+      "fail_condition": "l'esistenza della condizione è presentata come anomala o da eliminare.",
+      "indifferent": null,
+      "source": "art. 5.",
+      "severity": "media",
+      "raw_text": "B.21 la MAC in sé non è issue [issue: I-12] [tipo: assenza]\nVerifica: il deliverable non segnala la presenza di una condizione MAE come problema in sé.\nPass se: il rilievo sulla MAE riguarda solo l'ampiezza della definizione.\nFail se: l'esistenza della condizione è presentata come anomala o da eliminare.\n— non passa al judge — Fonte: art. 5. Gravità: media."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non assimila l'indennità specifica sul contenzioso fiscale all'assenza di limiti generali.",
+      "pass_condition": "l'indennità specifica, se trattata, è descritta come autonoma, fuori franchigia e con tetto proprio di € 1.200.000.",
+      "fail_condition": "è segnalata come esposizione illimitata o cumulata al regime generale.",
+      "indifferent": null,
+      "source": "art. 7.4.",
+      "severity": "media",
+      "raw_text": "B.22 indennità specifica non è assenza di limiti [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non assimila l'indennità specifica sul contenzioso fiscale all'assenza di limiti generali.\nPass se: l'indennità specifica, se trattata, è descritta come autonoma, fuori franchigia e con tetto proprio di € 1.200.000.\nFail se: è segnalata come esposizione illimitata o cumulata al regime generale.\n— non passa al judge — Fonte: art. 7.4. Gravità: media."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala come esposizione la facoltà di cessione del contratto a una controllata del Garante.",
+      "pass_condition": "la clausola, se trattata, è descritta come innocua perché il Compratore resta obbligato in solido.",
+      "fail_condition": "è segnalata come rischio o come perdita di garanzia per il Venditore.",
+      "indifferent": null,
+      "source": "art. 11.",
+      "severity": "media",
+      "raw_text": "B.23 cessione infragruppo non è issue [issue: I-14] [tipo: assenza]\nVerifica: il deliverable non segnala come esposizione la facoltà di cessione del contratto a una controllata del Garante.\nPass se: la clausola, se trattata, è descritta come innocua perché il Compratore resta obbligato in solido.\nFail se: è segnalata come rischio o come perdita di garanzia per il Venditore.\n— non passa al judge — Fonte: art. 11. Gravità: media."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la durata delle garanzie come sfavorevole al Venditore.",
+      "pass_condition": "i termini di 24 e 36 mesi, se citati, non sono qualificati come eccessivi.",
+      "fail_condition": "la durata è segnalata come issue o come punto da rinegoziare.",
+      "indifferent": null,
+      "source": "art. 8.",
+      "severity": "media",
+      "raw_text": "B.24 durata delle garanzie non è issue [issue: I-15] [tipo: assenza]\nVerifica: il deliverable non segnala la durata delle garanzie come sfavorevole al Venditore.\nPass se: i termini di 24 e 36 mesi, se citati, non sono qualificati come eccessivi.\nFail se: la durata è segnalata come issue o come punto da rinegoziare.\n— non passa al judge — Fonte: art. 8. Gravità: media."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la clausola di intero accordo e no-reliance come sfavorevole al Venditore.",
+      "pass_condition": "la clausola, se trattata, è descritta come protettiva per il Venditore o come neutra.",
+      "fail_condition": "è segnalata come esposizione del cliente.",
+      "indifferent": "il caveat che, ex art. 1229 c.c., la rinuncia non copre dolo e colpa grave.",
+      "source": "art. 15.",
+      "severity": "alta",
+      "raw_text": "B.25 no-reliance non è issue di lato [issue: I-16] [tipo: assenza]\nVerifica: il deliverable non segnala la clausola di intero accordo e no-reliance come sfavorevole al Venditore.\nPass se: la clausola, se trattata, è descritta come protettiva per il Venditore o come neutra.\nFail se: è segnalata come esposizione del cliente.\nIndifferente: il caveat che, ex art. 1229 c.c., la rinuncia non copre dolo e colpa grave.\n— non passa al judge — Fonte: art. 15. Gravità: alta."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il patto di non concorrenza come nullo o eccessivamente ampio.",
+      "pass_condition": "il patto, se trattato, è descritto come conforme ai limiti di legge.",
+      "fail_condition": "è dichiarato nullo, invalido, o eccessivo per durata o estensione territoriale.",
+      "indifferent": "la citazione dell'art. 2596 c.c.",
+      "source": "art. 13.1.",
+      "severity": "alta",
+      "raw_text": "B.26 non concorrenza conforme [issue: I-17] [tipo: assenza]\nVerifica: il deliverable non qualifica il patto di non concorrenza come nullo o eccessivamente ampio.\nPass se: il patto, se trattato, è descritto come conforme ai limiti di legge.\nFail se: è dichiarato nullo, invalido, o eccessivo per durata o estensione territoriale.\nIndifferente: la citazione dell'art. 2596 c.c.\n— non passa al judge — Fonte: art. 13.1. Gravità: alta."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala il patto di non sollecitazione triennale come criticità.",
+      "pass_condition": "non compare fra gli issue.",
+      "fail_condition": "è segnalato come rischio o come clausola da rinegoziare.",
+      "indifferent": null,
+      "source": "art. 13.2.",
+      "severity": "media",
+      "raw_text": "B.27 non-solicit non è issue [issue: I-18] [tipo: assenza]\nVerifica: il deliverable non segnala il patto di non sollecitazione triennale come criticità.\nPass se: non compare fra gli issue.\nFail se: è segnalato come rischio o come clausola da rinegoziare.\n— non passa al judge — Fonte: art. 13.2. Gravità: media."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la condizione sospensiva antitrust come criticità.",
+      "pass_condition": "non compare fra gli issue.",
+      "fail_condition": "è segnalata come rischio o come onere del Venditore da rinegoziare.",
+      "indifferent": null,
+      "source": "art. 5 lett. a.",
+      "severity": "media",
+      "raw_text": "B.28 condizione antitrust non è issue [issue: I-18] [tipo: assenza]\nVerifica: il deliverable non segnala la condizione sospensiva antitrust come criticità.\nPass se: non compare fra gli issue.\nFail se: è segnalata come rischio o come onere del Venditore da rinegoziare.\n— non passa al judge — Fonte: art. 5 lett. a. Gravità: media."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala la clausola compromissoria come criticità.",
+      "pass_condition": "non compare fra gli issue.",
+      "fail_condition": "è segnalata come rischio, come onere o come clausola da rinegoziare.",
+      "indifferent": null,
+      "source": "art. 14.",
+      "severity": "media",
+      "raw_text": "B.29 arbitrato CAM non è issue [issue: I-18] [tipo: assenza]\nVerifica: il deliverable non segnala la clausola compromissoria come criticità.\nPass se: non compare fra gli issue.\nFail se: è segnalata come rischio, come onere o come clausola da rinegoziare.\n— non passa al judge — Fonte: art. 14. Gravità: media."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non segnala gli impegni di gestione interinale come criticità.",
+      "pass_condition": "non compaiono fra gli issue.",
+      "fail_condition": "sono segnalati come limitazione eccessiva per il Venditore.",
+      "indifferent": null,
+      "source": "art. 10.",
+      "severity": "media",
+      "raw_text": "B.30 impegni interinali non sono issue [issue: I-18] [tipo: assenza]\nVerifica: il deliverable non segnala gli impegni di gestione interinale come criticità.\nPass se: non compaiono fra gli issue.\nFail se: sono segnalati come limitazione eccessiva per il Venditore.\n— non passa al judge — Fonte: art. 10. Gravità: media."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non afferma che la bozza viola una prassi o uno standard di mercato che imporrebbe cap adeguati, deduzioni o ticker.",
+      "pass_condition": "le lacune sono presentate come punti da negoziare e non come violazioni di uno standard.",
+      "fail_condition": "si afferma che una clausola «di mercato» è dovuta, obbligatoria o implicita.",
+      "indifferent": null,
+      "source": "artt. 3, 7.2.",
+      "severity": "media",
+      "raw_text": "B.31 nessuna clausola di mercato presunta [issue: I-18] [tipo: assenza]\nVerifica: il deliverable non afferma che la bozza viola una prassi o uno standard di mercato che imporrebbe cap adeguati, deduzioni o ticker.\nPass se: le lacune sono presentate come punti da negoziare e non come violazioni di uno standard.\nFail se: si afferma che una clausola «di mercato» è dovuta, obbligatoria o implicita.\n— non passa al judge — Fonte: artt. 3, 7.2. Gravità: media."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che prezzo, base locked-box e importo e durata dell'escrow coincidono con il term sheet.",
+      "pass_condition": "la conformità è affermata per almeno due delle tre voci.",
+      "fail_condition": "la conformità non è verificata, o il term sheet non è confrontato.",
+      "indifferent": null,
+      "source": "term sheet §§ 2 e 3; artt. 3 e 9.",
+      "severity": "alta",
+      "raw_text": "B.32 economia del term sheet rispettata [issue: I-19] [tipo: presenza]\nVerifica: il deliverable afferma che prezzo, base locked-box e importo e durata dell'escrow coincidono con il term sheet.\nPass se: la conformità è affermata per almeno due delle tre voci.\nFail se: la conformità non è verificata, o il term sheet non è confrontato.\n— non passa al judge — Fonte: term sheet §§ 2 e 3; artt. 3 e 9. Gravità: alta."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il prezzo, la Locked-Box Date o l'importo e la durata dell'escrow come divergenze dal term sheet.",
+      "pass_condition": "nessuna di queste voci compare fra gli scostamenti.",
+      "fail_condition": "anche una sola è indicata come difforme dal pattuito.",
+      "indifferent": null,
+      "source": "term sheet §§ 2 e 3.",
+      "severity": "alta",
+      "raw_text": "B.33 economia non presentata come scostamento [issue: I-19] [tipo: assenza]\nVerifica: il deliverable non presenta il prezzo, la Locked-Box Date o l'importo e la durata dell'escrow come divergenze dal term sheet.\nPass se: nessuna di queste voci compare fra gli scostamenti.\nFail se: anche una sola è indicata come difforme dal pattuito.\n— non passa al judge — Fonte: term sheet §§ 2 e 3. Gravità: alta."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che la facoltà di trattenuta e compensazione della bozza va oltre il term sheet, perché si estende alle ulteriori somme dovute al Venditore e opera su pretese solo allegate.",
+      "pass_condition": "la divergenza dal term sheet è affermata, con almeno uno dei due elementi di estensione.",
+      "fail_condition": "l'art. 9 è trattato solo come esposizione senza confronto con il term sheet.",
+      "indifferent": null,
+      "source": "term sheet § 3; art. 9.",
+      "severity": "alta",
+      "raw_text": "B.34 scostamento sull'escussione dell'escrow [issue: I-20] [tipo: presenza]\nVerifica: il deliverable rileva che la facoltà di trattenuta e compensazione della bozza va oltre il term sheet, perché si estende alle ulteriori somme dovute al Venditore e opera su pretese solo allegate.\nPass se: la divergenza dal term sheet è affermata, con almeno uno dei due elementi di estensione.\nFail se: l'art. 9 è trattato solo come esposizione senza confronto con il term sheet.\n— non passa al judge — Fonte: term sheet § 3; art. 9. Gravità: alta."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il cap al 100% del Prezzo non realizza il «massimale» promesso dal term sheet.",
+      "pass_condition": "la divergenza dal pattuito è affermata.",
+      "fail_condition": "il cap è trattato solo come clausola inadeguata senza confronto con il term sheet.",
+      "indifferent": null,
+      "source": "term sheet § 4; art. 7.2.",
+      "severity": "alta",
+      "raw_text": "B.35 scostamento sul massimale [issue: I-21] [tipo: presenza]\nVerifica: il deliverable rileva che il cap al 100% del Prezzo non realizza il «massimale» promesso dal term sheet.\nPass se: la divergenza dal pattuito è affermata.\nFail se: il cap è trattato solo come clausola inadeguata senza confronto con il term sheet.\n— non passa al judge — Fonte: term sheet § 4; art. 7.2. Gravità: alta."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il term sheet non prevedeva condizioni sospensive né vie d'uscita per il Compratore e che la condizione MAE è un'aggiunta non contemplata.",
+      "pass_condition": "l'aggiunta è affermata come non prevista dal term sheet.",
+      "fail_condition": "la condizione è trattata solo nel merito, o è presentata come già pattuita.",
+      "indifferent": null,
+      "source": "term sheet; art. 5.",
+      "severity": "alta",
+      "raw_text": "B.36 scostamento sulla condizione MAE [issue: I-22] [tipo: presenza]\nVerifica: il deliverable rileva che il term sheet non prevedeva condizioni sospensive né vie d'uscita per il Compratore e che la condizione MAE è un'aggiunta non contemplata.\nPass se: l'aggiunta è affermata come non prevista dal term sheet.\nFail se: la condizione è trattata solo nel merito, o è presentata come già pattuita.\n— non passa al judge — Fonte: term sheet; art. 5. Gravità: alta."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il term sheet prevedeva un set ordinario di garanzie e indennizzo e che il pro-sandbagging se ne discosta.",
+      "pass_condition": "la divergenza dal pattuito è affermata.",
+      "fail_condition": "il sandbagging è trattato solo come esposizione senza confronto con il term sheet.",
+      "indifferent": null,
+      "source": "term sheet § 4; art. 7.3.",
+      "severity": "media",
+      "raw_text": "B.37 scostamento sul regime ordinario [issue: I-23] [tipo: presenza]\nVerifica: il deliverable rileva che il term sheet prevedeva un set ordinario di garanzie e indennizzo e che il pro-sandbagging se ne discosta.\nPass se: la divergenza dal pattuito è affermata.\nFail se: il sandbagging è trattato solo come esposizione senza confronto con il term sheet.\n— non passa al judge — Fonte: term sheet § 4; art. 7.3. Gravità: media."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta come pregiudizio per il Venditore la circostanza che l'art. 15 sostituisca il term sheet, comprese le clausole dichiarate vincolanti.",
+      "pass_condition": "la sostituzione, se trattata, è descritta come neutra o favorevole al Venditore.",
+      "fail_condition": "è segnalata come perdita di tutela per il cliente.",
+      "indifferent": null,
+      "source": "term sheet § 7; art. 15.",
+      "severity": "alta",
+      "raw_text": "B.38 la caduta del term sheet non danneggia il cliente [issue: I-24] [tipo: assenza]\nVerifica: il deliverable non presenta come pregiudizio per il Venditore la circostanza che l'art. 15 sostituisca il term sheet, comprese le clausole dichiarate vincolanti.\nPass se: la sostituzione, se trattata, è descritta come neutra o favorevole al Venditore.\nFail se: è segnalata come perdita di tutela per il cliente.\n— non passa al judge — Fonte: term sheet § 7; art. 15. Gravità: alta."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica la disciplina del Leakage come violazione del term sheet.",
+      "pass_condition": "il leakage compare fra gli issue sostanziali ma non fra le divergenze dal pattuito.",
+      "fail_condition": "è presentato come difforme dal term sheet.",
+      "indifferent": null,
+      "source": "term sheet § 2, che lo rimetteva al definitivo.",
+      "severity": "media",
+      "raw_text": "B.39 leakage non è violazione del term sheet [issue: I-25] [tipo: assenza]\nVerifica: il deliverable non qualifica la disciplina del Leakage come violazione del term sheet.\nPass se: il leakage compare fra gli issue sostanziali ma non fra le divergenze dal pattuito.\nFail se: è presentato come difforme dal term sheet.\n— non passa al judge — Fonte: term sheet § 2, che lo rimetteva al definitivo. Gravità: media."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica la soglia di € 250.000 e l'esclusione delle deduzioni come violazioni del term sheet.",
+      "pass_condition": "compaiono fra gli issue sostanziali ma non fra le divergenze dal pattuito.",
+      "fail_condition": "anche una sola è presentata come difforme dal term sheet.",
+      "indifferent": null,
+      "source": "term sheet § 4, che le rimetteva al definitivo.",
+      "severity": "media",
+      "raw_text": "B.40 soglia e deduzioni non sono violazioni del term sheet [issue: I-25] [tipo: assenza]\nVerifica: il deliverable non qualifica la soglia di € 250.000 e l'esclusione delle deduzioni come violazioni del term sheet.\nPass se: compaiono fra gli issue sostanziali ma non fra le divergenze dal pattuito.\nFail se: anche una sola è presentata come difforme dal term sheet.\n— non passa al judge — Fonte: term sheet § 4, che le rimetteva al definitivo. Gravità: media."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica la durata delle garanzie né l'assenza del ticker come violazioni del term sheet.",
+      "pass_condition": "non compaiono fra le divergenze dal pattuito.",
+      "fail_condition": "anche una sola è presentata come difforme dal term sheet.",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.41 durata e ticker non sono violazioni del term sheet [issue: I-25] [tipo: assenza]\nVerifica: il deliverable non qualifica la durata delle garanzie né l'assenza del ticker come violazioni del term sheet.\nPass se: non compaiono fra le divergenze dal pattuito.\nFail se: anche una sola è presentata come difforme dal term sheet.\n— non passa al judge — Fonte: term sheet §§ 2 e 4. Gravità: media.\n\nSEZIONE C — DATE. Non applicabile: il workflow non computa termini."
+    }
+  ]
+}

@@ -1,0 +1,930 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-003",
+  "title": "M&A. Check red flag data room",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 57,
+  "criteria": [
+    {
+      "id": "A.1",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il file consegnato è una nota di due diligence con i red flag in elenco ordinato per priorità.",
+      "pass_condition": "il file consegnato è una nota di due diligence e presenta i red flag in un elenco ordinato per priorità.",
+      "fail_condition": "manca la nota di due diligence, i red flag non sono elencati, oppure l’elenco non è ordinato per priorità.",
+      "indifferent": "La grafica e il formato dell’elenco.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.1 [struttura] Il file consegnato è una nota di due diligence con i red flag in elenco ordinato per priorità."
+    },
+    {
+      "id": "A.2",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni red flag porta due campi non vuoti: esposizione stimata e rimedio proposto.",
+      "pass_condition": "ogni red flag ha entrambi i campi compilati: esposizione stimata e rimedio proposto.",
+      "fail_condition": "anche un solo red flag è privo dell’esposizione stimata o del rimedio proposto.",
+      "indifferent": "Il formato dei campi, purché entrambi siano identificabili e non vuoti.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.2 [struttura] Ogni red flag porta due campi non vuoti: esposizione stimata e rimedio proposto."
+    },
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il rimedio proposto appartiene all'insieme chiuso: indennizzo specifico, condizione sospensiva, price adjustment, representation & warranty.",
+      "pass_condition": "per ciascun red flag il rimedio proposto è uno fra: indennizzo specifico, condizione sospensiva, price adjustment, representation & warranty.",
+      "fail_condition": "per anche un solo red flag il rimedio manca, non è riconducibile a una delle quattro categorie o ne viene proposto uno fuori elenco.",
+      "indifferent": null,
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.3 [struttura] Il rimedio proposto appartiene all'insieme chiuso: indennizzo specifico, condizione sospensiva, price adjustment, representation & warranty."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Ogni rilievo porta il documento e il punto — clausola, voce di bilancio, articolo — da cui deriva.",
+      "pass_condition": "ogni rilievo identifica il documento e il punto preciso da cui deriva: clausola, voce di bilancio o articolo.",
+      "fail_condition": "anche un solo rilievo non identifica il documento o il relativo punto preciso.",
+      "indifferent": "La forma del riferimento, purché documento e punto siano riconoscibili.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.4 [struttura] Ogni rilievo porta il documento e il punto — clausola, voce di bilancio, articolo — da cui deriva."
+    },
+    {
+      "id": "A.5",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Il deliverable si chiude con una sintesi dei punti dirimenti per l'investment committee.",
+      "pass_condition": "la nota si conclude con una sintesi dei punti dirimenti per l’investment committee.",
+      "fail_condition": "la sintesi conclusiva manca o non individua i punti dirimenti per l’investment committee.",
+      "indifferent": "Il numero dei punti riassunti e la loro formulazione.",
+      "source": null,
+      "severity": "alta",
+      "raw_text": "A.5 [struttura] Il deliverable si chiude con una sintesi dei punti dirimenti per l'investment committee."
+    },
+    {
+      "id": "A.6",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "Nessun riferimento normativo fuori dall'elenco chiuso: artt. 242 e 244 D.Lgs. 152/2006; art. 23 D.Lgs. 81/2015. Ogni altra norma citata è invenzione o eccedenza.",
+      "pass_condition": "il deliverable cita soltanto artt. 242 e 244 D.Lgs. 152/2006 e art. 23 D.Lgs. 81/2015.",
+      "fail_condition": "compare anche una sola norma fuori da questo elenco, inventata o eccedente, anche in un esempio o come ipotesi.",
+      "indifferent": "I rinvii a clausole, allegati e documenti del fascicolo non sono norme.",
+      "source": null,
+      "severity": "media",
+      "raw_text": "A.6 [assenza] Nessun riferimento normativo fuori dall'elenco chiuso: artt. 242 e 244 D.Lgs. 152/2006; art. 23 D.Lgs. 81/2015. Ogni altra norma citata è invenzione o eccedenza.\n\nSEZIONE B — MERITO. Passa al judge."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il contratto quadro con Delfina Motori attribuisce alla committente il diritto di recedere in caso di mutamento di controllo del fornitore.",
+      "pass_condition": "compaiono la clausola e il diritto di recesso della committente.",
+      "fail_condition": "il rilievo non compare, o la clausola è attribuita a un altro contraente.",
+      "indifferent": null,
+      "source": "contratto Delfina, art. 14.",
+      "severity": "alta",
+      "raw_text": "B.1 clausola di cambio di controllo Delfina [issue: I-01] [tipo: presenza]\nVerifica: il deliverable rileva che il contratto quadro con Delfina Motori attribuisce alla committente il diritto di recedere in caso di mutamento di controllo del fornitore.\nPass se: compaiono la clausola e il diritto di recesso della committente.\nFail se: il rilievo non compare, o la clausola è attribuita a un altro contraente.\n— non passa al judge — Fonte: contratto Delfina, art. 14. Gravità: alta."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable collega la clausola all'acquisizione in corso, cioè afferma che l'operazione fa scattare il diritto di recesso.",
+      "pass_condition": "il collegamento fra concentrazione e attivazione della clausola è esplicito.",
+      "fail_condition": "la clausola è descritta in astratto senza collegarla all'operazione.",
+      "indifferent": null,
+      "source": "contratto Delfina, art. 14.",
+      "severity": "alta",
+      "raw_text": "B.2 collegamento all'operazione [issue: I-01] [tipo: presenza]\nVerifica: il deliverable collega la clausola all'acquisizione in corso, cioè afferma che l'operazione fa scattare il diritto di recesso.\nPass se: il collegamento fra concentrazione e attivazione della clausola è esplicito.\nFail se: la clausola è descritta in astratto senza collegarla all'operazione.\n— non passa al judge — Fonte: contratto Delfina, art. 14. Gravità: alta."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable quantifica il peso di Delfina Motori nel 34% del fatturato.",
+      "pass_condition": "compare la percentuale, o una quantificazione equivalente del peso del cliente.",
+      "fail_condition": "il peso non è quantificato, o è indicata una percentuale diversa.",
+      "indifferent": null,
+      "source": "report vendite.",
+      "severity": "alta",
+      "raw_text": "B.3 peso di Delfina sul fatturato [issue: I-01] [tipo: presenza]\nVerifica: il deliverable quantifica il peso di Delfina Motori nel 34% del fatturato.\nPass se: compare la percentuale, o una quantificazione equivalente del peso del cliente.\nFail se: il peso non è quantificato, o è indicata una percentuale diversa.\n— non passa al judge — Fonte: report vendite. Gravità: alta."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone come rimedio una condizione sospensiva di consenso o rinuncia della committente prima del closing, oppure un price adjustment.",
+      "pass_condition": "compare almeno uno dei due rimedi, riferito a questo rilievo.",
+      "fail_condition": "è proposto un rimedio diverso, o nessuno.",
+      "indifferent": null,
+      "source": "contratto Delfina, art. 14.",
+      "severity": "alta",
+      "raw_text": "B.4 rimedio per Delfina [issue: I-01] [tipo: qualificazione]\nVerifica: il deliverable propone come rimedio una condizione sospensiva di consenso o rinuncia della committente prima del closing, oppure un price adjustment.\nPass se: compare almeno uno dei due rimedi, riferito a questo rilievo.\nFail se: è proposto un rimedio diverso, o nessuno.\n— non passa al judge — Fonte: contratto Delfina, art. 14. Gravità: alta."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva il superamento delle concentrazioni soglia di contaminazione al sito di Montichiari e la diffida della Provincia alla bonifica.",
+      "pass_condition": "compaiono la contaminazione e l'ordine dell'autorità.",
+      "fail_condition": "il rilievo non compare, o la contaminazione è presentata come ipotetica.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione; ordinanza dirigenziale.",
+      "severity": "alta",
+      "raw_text": "B.5 superamento delle CSC e diffida [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva il superamento delle concentrazioni soglia di contaminazione al sito di Montichiari e la diffida della Provincia alla bonifica.\nPass se: compaiono la contaminazione e l'ordine dell'autorità.\nFail se: il rilievo non compare, o la contaminazione è presentata come ipotetica.\n— non passa al judge — Fonte: relazione di caratterizzazione; ordinanza dirigenziale. Gravità: alta."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable quantifica il costo stimato della bonifica in 1,2-1,6 milioni di euro.",
+      "pass_condition": "compare l'ordine di grandezza, anche come valore singolo entro il range.",
+      "fail_condition": "il costo non è quantificato, o è indicato un ordine di grandezza diverso.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione.",
+      "severity": "alta",
+      "raw_text": "B.6 costo della bonifica [issue: I-02] [tipo: presenza]\nVerifica: il deliverable quantifica il costo stimato della bonifica in 1,2-1,6 milioni di euro.\nPass se: compare l'ordine di grandezza, anche come valore singolo entro il range.\nFail se: il costo non è quantificato, o è indicato un ordine di grandezza diverso.\n— non passa al judge — Fonte: relazione di caratterizzazione. Gravità: alta."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il bilancio non iscrive alcun fondo a fronte degli oneri di bonifica.",
+      "pass_condition": "l'assenza di accantonamento è affermata.",
+      "fail_condition": "non è rilevata, o si afferma che un fondo esiste.",
+      "indifferent": null,
+      "source": "bilancio, fondi per rischi e oneri.",
+      "severity": "alta",
+      "raw_text": "B.7 nessun fondo iscritto [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva che il bilancio non iscrive alcun fondo a fronte degli oneri di bonifica.\nPass se: l'assenza di accantonamento è affermata.\nFail se: non è rilevata, o si afferma che un fondo esiste.\n— non passa al judge — Fonte: bilancio, fondi per rischi e oneri. Gravità: alta."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che fra le polizze aziendali non figura alcuna copertura per il danno ambientale o l'inquinamento.",
+      "pass_condition": "l'assenza di copertura è affermata dopo il confronto fra le polizze agli atti.",
+      "fail_condition": "non è rilevata, o si afferma che una copertura esiste.",
+      "indifferent": null,
+      "source": "polizze aziendali, nessuna RC inquinamento.",
+      "severity": "alta",
+      "raw_text": "B.8 nessuna copertura assicurativa [issue: I-02] [tipo: presenza]\nVerifica: il deliverable rileva che fra le polizze aziendali non figura alcuna copertura per il danno ambientale o l'inquinamento.\nPass se: l'assenza di copertura è affermata dopo il confronto fra le polizze agli atti.\nFail se: non è rilevata, o si afferma che una copertura esiste.\n— non passa al judge — Fonte: polizze aziendali, nessuna RC inquinamento. Gravità: alta."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone come rimedio un indennizzo specifico o un price adjustment per il costo stimato.",
+      "pass_condition": "compare almeno uno dei due, riferito a questo rilievo.",
+      "fail_condition": "è proposta una condizione sospensiva, un altro rimedio, o nessuno.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione.",
+      "severity": "alta",
+      "raw_text": "B.9 rimedio per la bonifica [issue: I-02] [tipo: qualificazione]\nVerifica: il deliverable propone come rimedio un indennizzo specifico o un price adjustment per il costo stimato.\nPass se: compare almeno uno dei due, riferito a questo rilievo.\nFail se: è proposta una condizione sospensiva, un altro rimedio, o nessuno.\n— non passa al judge — Fonte: relazione di caratterizzazione. Gravità: alta."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il marchio UE «VETRALIA» e il brevetto europeo sul metodo di finitura sono intestati a Giorgio Vetralli persona fisica.",
+      "pass_condition": "entrambi i titoli sono attribuiti al fondatore.",
+      "fail_condition": "sono attribuiti alla società, o il rilievo non compare.",
+      "indifferent": null,
+      "source": "certificato EUIPO; fascicolo EPO.",
+      "severity": "alta",
+      "raw_text": "B.10 titoli core del fondatore [issue: I-03] [tipo: presenza]\nVerifica: il deliverable rileva che il marchio UE «VETRALIA» e il brevetto europeo sul metodo di finitura sono intestati a Giorgio Vetralli persona fisica.\nPass se: entrambi i titoli sono attribuiti al fondatore.\nFail se: sono attribuiti alla società, o il rilievo non compare.\n— non passa al judge — Fonte: certificato EUIPO; fascicolo EPO. Gravità: alta."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable distingue i titoli intestati alla società — il marchio italiano «VTL-FLOW» e il brevetto italiano — da quelli del fondatore.",
+      "pass_condition": "la distinzione fra le due titolarità è esplicita.",
+      "fail_condition": "tutti i titoli sono attribuiti allo stesso soggetto, o la distinzione non è fatta.",
+      "indifferent": null,
+      "source": "attestato UIBM.",
+      "severity": "alta",
+      "raw_text": "B.11 titoli della società [issue: I-03] [tipo: presenza]\nVerifica: il deliverable distingue i titoli intestati alla società — il marchio italiano «VTL-FLOW» e il brevetto italiano — da quelli del fondatore.\nPass se: la distinzione fra le due titolarità è esplicita.\nFail se: tutti i titoli sono attribuiti allo stesso soggetto, o la distinzione non è fatta.\n— non passa al judge — Fonte: attestato UIBM. Gravità: alta."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il fondatore esce con l'operazione e che non esiste alcun contratto di licenza a favore della società.",
+      "pass_condition": "compaiono l'uscita del fondatore e l'assenza di licenza.",
+      "fail_condition": "manca uno dei due elementi.",
+      "indifferent": null,
+      "source": "certificati IP; bilancio, immobilizzazioni immateriali.",
+      "severity": "alta",
+      "raw_text": "B.12 uscita del fondatore senza licenza [issue: I-03] [tipo: presenza]\nVerifica: il deliverable rileva che il fondatore esce con l'operazione e che non esiste alcun contratto di licenza a favore della società.\nPass se: compaiono l'uscita del fondatore e l'assenza di licenza.\nFail se: manca uno dei due elementi.\n— non passa al judge — Fonte: certificati IP; bilancio, immobilizzazioni immateriali. Gravità: alta."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone come rimedio una condizione sospensiva di cessione degli asset IP alla società prima del closing.",
+      "pass_condition": "compare la condizione sospensiva riferita al trasferimento dei titoli.",
+      "fail_condition": "è proposto un indennizzo, una R&W, un price adjustment o nessun rimedio.",
+      "indifferent": null,
+      "source": "certificati IP.",
+      "severity": "alta",
+      "raw_text": "B.13 rimedio per l'IP [issue: I-03] [tipo: qualificazione]\nVerifica: il deliverable propone come rimedio una condizione sospensiva di cessione degli asset IP alla società prima del closing.\nPass se: compare la condizione sospensiva riferita al trasferimento dei titoli.\nFail se: è proposto un indennizzo, una R&W, un price adjustment o nessun rimedio.\n— non passa al judge — Fonte: certificati IP. Gravità: alta."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che il PVC dell'Agenzia delle Entrate constata maggiore imposta per 1,45 milioni oltre sanzioni e interessi.",
+      "pass_condition": "compaiono l'importo e il riferimento a sanzioni e interessi ulteriori.",
+      "fail_condition": "l'importo è diverso, o le sanzioni e gli interessi non sono menzionati.",
+      "indifferent": null,
+      "source": "PVC, transfer pricing e IVA 2022-2023.",
+      "severity": "alta",
+      "raw_text": "B.14 pretesa del PVC [issue: I-04] [tipo: presenza]\nVerifica: il deliverable rileva che il PVC dell'Agenzia delle Entrate constata maggiore imposta per 1,45 milioni oltre sanzioni e interessi.\nPass se: compaiono l'importo e il riferimento a sanzioni e interessi ulteriori.\nFail se: l'importo è diverso, o le sanzioni e gli interessi non sono menzionati.\n— non passa al judge — Fonte: PVC, transfer pricing e IVA 2022-2023. Gravità: alta."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable rileva che a fronte della pretesa il bilancio iscrive un fondo rischi fiscali di soli 300.000 euro.",
+      "pass_condition": "compare l'importo del fondo.",
+      "fail_condition": "il fondo non è richiamato, o è indicato un importo diverso.",
+      "indifferent": null,
+      "source": "bilancio, fondo rischi fiscali.",
+      "severity": "alta",
+      "raw_text": "B.15 fondo iscritto insufficiente [issue: I-04] [tipo: presenza]\nVerifica: il deliverable rileva che a fronte della pretesa il bilancio iscrive un fondo rischi fiscali di soli 300.000 euro.\nPass se: compare l'importo del fondo.\nFail se: il fondo non è richiamato, o è indicato un importo diverso.\n— non passa al judge — Fonte: bilancio, fondo rischi fiscali. Gravità: alta."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable afferma che il fondo non copre la pretesa e quantifica o descrive lo scoperto.",
+      "pass_condition": "la sproporzione fra pretesa e accantonamento è affermata.",
+      "fail_condition": "i due dati sono riportati senza trarne la conclusione.",
+      "indifferent": null,
+      "source": "PVC; bilancio.",
+      "severity": "alta",
+      "raw_text": "B.16 sotto-copertura affermata [issue: I-04] [tipo: presenza]\nVerifica: il deliverable afferma che il fondo non copre la pretesa e quantifica o descrive lo scoperto.\nPass se: la sproporzione fra pretesa e accantonamento è affermata.\nFail se: i due dati sono riportati senza trarne la conclusione.\n— non passa al judge — Fonte: PVC; bilancio. Gravità: alta."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone un indennizzo specifico sull'intera pretesa, incluse sanzioni e interessi.",
+      "pass_condition": "compare l'indennizzo specifico esteso a sanzioni e interessi.",
+      "fail_condition": "l'indennizzo è limitato alla maggiore imposta, o è proposto un rimedio diverso.",
+      "indifferent": "la proposta di assistere l'indennizzo con un escrow.",
+      "source": "PVC.",
+      "severity": "alta",
+      "raw_text": "B.17 rimedio per il fiscale [issue: I-04] [tipo: qualificazione]\nVerifica: il deliverable propone un indennizzo specifico sull'intera pretesa, incluse sanzioni e interessi.\nPass se: compare l'indennizzo specifico esteso a sanzioni e interessi.\nFail se: l'indennizzo è limitato alla maggiore imposta, o è proposto un rimedio diverso.\nIndifferente: la proposta di assistere l'indennizzo con un escrow.\n— non passa al judge — Fonte: PVC. Gravità: alta."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable rileva che il cambio di controllo non produce un rimborso automatico, ma attribuisce alla banca la facoltà di risolvere il contratto e chiedere il rimborso anticipato se manca il preventivo consenso scritto.",
+      "pass_condition": "compaiono sia la natura facoltativa del rimedio della banca sia la condizione del preventivo consenso scritto.",
+      "fail_condition": "il rimborso è presentato come automatico o obbligatorio per effetto del solo cambio di controllo, oppure la facoltà della banca non compare.",
+      "indifferent": null,
+      "source": "mutuo Banca Cattolica del Garda, art. 10.",
+      "severity": "alta",
+      "raw_text": "B.18 facoltà della banca per il cambio di controllo [issue: I-05] [tipo: qualificazione] [verifica: span]\nVerifica: il deliverable rileva che il cambio di controllo non produce un rimborso automatico, ma attribuisce alla banca la facoltà di risolvere il contratto e chiedere il rimborso anticipato se manca il preventivo consenso scritto.\nPass se: compaiono sia la natura facoltativa del rimedio della banca sia la condizione del preventivo consenso scritto.\nFail se: il rimborso è presentato come automatico o obbligatorio per effetto del solo cambio di controllo, oppure la facoltà della banca non compare.\n— Fonte: mutuo Banca Cattolica del Garda, art. 10. Gravità: alta."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable quantifica il debito residuo in 6 milioni di euro.",
+      "pass_condition": "compare l'importo.",
+      "fail_condition": "non è quantificato, o è indicato un importo diverso.",
+      "indifferent": null,
+      "source": "mutuo; bilancio.",
+      "severity": "media",
+      "raw_text": "B.19 residuo del mutuo [issue: I-05] [tipo: presenza]\nVerifica: il deliverable quantifica il debito residuo in 6 milioni di euro.\nPass se: compare l'importo.\nFail se: non è quantificato, o è indicato un importo diverso.\n— non passa al judge — Fonte: mutuo; bilancio. Gravità: media."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable propone come rimedio la condizione sospensiva del consenso della banca o il rifinanziamento al closing.",
+      "pass_condition": "compare almeno uno dei due.",
+      "fail_condition": "è proposto un indennizzo o un price adjustment, o nessun rimedio.",
+      "indifferent": null,
+      "source": "mutuo, art. 10.",
+      "severity": "alta",
+      "raw_text": "B.20 rimedio per il mutuo [issue: I-05] [tipo: qualificazione]\nVerifica: il deliverable propone come rimedio la condizione sospensiva del consenso della banca o il rifinanziamento al closing.\nPass se: compare almeno uno dei due.\nFail se: è proposto un indennizzo o un price adjustment, o nessun rimedio.\n— non passa al judge — Fonte: mutuo, art. 10. Gravità: alta."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable riporta che, nella fotografia dell'organico al 30 settembre 2026, i 37 rapporti a tempo determinato equivalgono al 30,8% dei 120 rapporti a tempo indeterminato, qualificando il dato come confronto descrittivo e non come calcolo legale del limite.",
+      "pass_condition": "compaiono i due numeri, il 30,8% e la precisazione che la fotografia al 30 settembre non dimostra da sola il superamento del limite legale.",
+      "fail_condition": "il rapporto non è calcolato, oppure il 30,8% è presentato come risultato del calcolo richiesto dall'art. 23 D.Lgs. 81/2015.",
+      "indifferent": null,
+      "source": "organico e organigramma al 30 settembre 2026.",
+      "severity": "alta",
+      "raw_text": "B.21 rapporto descrittivo al 30 settembre [issue: I-06] [tipo: valore] [verifica: span]\nVerifica: il deliverable riporta che, nella fotografia dell'organico al 30 settembre 2026, i 37 rapporti a tempo determinato equivalgono al 30,8% dei 120 rapporti a tempo indeterminato, qualificando il dato come confronto descrittivo e non come calcolo legale del limite.\nPass se: compaiono i due numeri, il 30,8% e la precisazione che la fotografia al 30 settembre non dimostra da sola il superamento del limite legale.\nFail se: il rapporto non è calcolato, oppure il 30,8% è presentato come risultato del calcolo richiesto dall'art. 23 D.Lgs. 81/2015.\n— Fonte: organico e organigramma al 30 settembre 2026. Gravità: alta."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable conclude che il fascicolo non consente di accertare il superamento del limite quantitativo dei contratti a termine e individua i dati necessari alla verifica.",
+      "pass_condition": "sono indicate l'impossibilità di concludere e tutte le seguenti categorie di dati mancanti: (i) il numero dei lavoratori a tempo indeterminato in forza al 1° gennaio dell'anno di ciascuna assunzione rilevante; (ii) date di assunzione e durata dei contratti a termine; (iii) disciplina quantitativa applicabile del CCNL; (iv) contratti esclusi o esenti ai sensi dell'art. 23 D.Lgs. 81/2015.",
+      "fail_condition": "il deliverable afferma che il limite è sicuramente superato sulla sola base del rapporto 37/120 al 30 settembre, oppure non identifica i dati mancanti.",
+      "indifferent": null,
+      "source": "organico e organigramma; art. 23 D.Lgs. 81/2015.",
+      "severity": "alta",
+      "raw_text": "B.22 insufficienza dei dati per concludere sul tetto [issue: I-06] [tipo: qualificazione] [verifica: judge]\nVerifica: il deliverable conclude che il fascicolo non consente di accertare il superamento del limite quantitativo dei contratti a termine e individua i dati necessari alla verifica.\nPass se: sono indicate l'impossibilità di concludere e tutte le seguenti categorie di dati mancanti: (i) il numero dei lavoratori a tempo indeterminato in forza al 1° gennaio dell'anno di ciascuna assunzione rilevante; (ii) date di assunzione e durata dei contratti a termine; (iii) disciplina quantitativa applicabile del CCNL; (iv) contratti esclusi o esenti ai sensi dell'art. 23 D.Lgs. 81/2015.\nFail se: il deliverable afferma che il limite è sicuramente superato sulla sola base del rapporto 37/120 al 30 settembre, oppure non identifica i dati mancanti.\n— Fonte: organico e organigramma; art. 23 D.Lgs. 81/2015. Gravità: alta."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "global_scan",
+        "verification_class": "scansione"
+      },
+      "verification": "anche nello scenario ipotetico in cui una violazione fosse accertata, il deliverable non afferma che il solo superamento del tetto comporta la conversione automatica dei rapporti a tempo indeterminato.",
+      "pass_condition": "nessuna conversione automatica è affermata come conseguenza del superamento del limite quantitativo.",
+      "fail_condition": "la conversione è indicata come conseguenza del solo superamento del tetto, anche in via prudenziale.",
+      "indifferent": null,
+      "source": "art. 23, co. 4, D.Lgs. 81/2015.",
+      "severity": "alta",
+      "raw_text": "B.23 nessuna conversione automatica [issue: I-06] [tipo: assenza] [verifica: scansione]\nVerifica: anche nello scenario ipotetico in cui una violazione fosse accertata, il deliverable non afferma che il solo superamento del tetto comporta la conversione automatica dei rapporti a tempo indeterminato.\nPass se: nessuna conversione automatica è affermata come conseguenza del superamento del limite quantitativo.\nFail se: la conversione è indicata come conseguenza del solo superamento del tetto, anche in via prudenziale.\n— Fonte: art. 23, co. 4, D.Lgs. 81/2015. Gravità: alta."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable spiega che, se la verifica documentale confermasse il superamento del limite, la conseguenza prevista dall'art. 23, co. 4, sarebbe una sanzione amministrativa, senza presentare l'esposizione come già accertata.",
+      "pass_condition": "la sanzione amministrativa è descritta come conseguenza dell'eventuale violazione e resta esplicita la riserva sull'insufficienza dei dati disponibili.",
+      "fail_condition": "l'esposizione sanzionatoria è presentata come attuale e dimostrata dal 37/120, oppure è indicata una conseguenza diversa.",
+      "indifferent": null,
+      "source": "art. 23, co. 4, D.Lgs. 81/2015.",
+      "severity": "alta",
+      "raw_text": "B.24 conseguenza sanzionatoria solo condizionale [issue: I-06] [tipo: qualificazione] [verifica: judge]\nVerifica: il deliverable spiega che, se la verifica documentale confermasse il superamento del limite, la conseguenza prevista dall'art. 23, co. 4, sarebbe una sanzione amministrativa, senza presentare l'esposizione come già accertata.\nPass se: la sanzione amministrativa è descritta come conseguenza dell'eventuale violazione e resta esplicita la riserva sull'insufficienza dei dati disponibili.\nFail se: l'esposizione sanzionatoria è presentata come attuale e dimostrata dal 37/120, oppure è indicata una conseguenza diversa.\n— Fonte: art. 23, co. 4, D.Lgs. 81/2015. Gravità: alta."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable propone anzitutto la richiesta dei dati necessari alla verifica e, in sede contrattuale, una representation & warranty e una tutela specifica condizionata all'eventuale violazione; un piano di rientro o stabilizzazione è proposto solo dopo l'accertamento.",
+      "pass_condition": "compare la richiesta documentale e almeno un presidio contrattuale coerente con l'incertezza; l'eventuale piano correttivo è subordinato alla conferma del superamento.",
+      "fail_condition": "è prescritto un piano di rientro o di stabilizzazione come se la violazione fosse già accertata, oppure non è proposta alcuna verifica o tutela.",
+      "indifferent": null,
+      "source": "organico e organigramma; art. 23 D.Lgs. 81/2015.",
+      "severity": "media",
+      "raw_text": "B.25 presidio giuslavoristico proporzionato all'incertezza [issue: I-06] [tipo: qualificazione] [verifica: span]\nVerifica: il deliverable propone anzitutto la richiesta dei dati necessari alla verifica e, in sede contrattuale, una representation & warranty e una tutela specifica condizionata all'eventuale violazione; un piano di rientro o stabilizzazione è proposto solo dopo l'accertamento.\nPass se: compare la richiesta documentale e almeno un presidio contrattuale coerente con l'incertezza; l'eventuale piano correttivo è subordinato alla conferma del superamento.\nFail se: è prescritto un piano di rientro o di stabilizzazione come se la violazione fosse già accertata, oppure non è proposta alcuna verifica o tutela.\n— Fonte: organico e organigramma; art. 23 D.Lgs. 81/2015. Gravità: media."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il contenzioso di lavoro Rossetti come red flag materiale.",
+      "pass_condition": "il contenzioso, se menzionato, è descritto come sotto soglia o come integralmente accantonato.",
+      "fail_condition": "compare fra i red flag materiali, o gli è associato un rimedio come se lo fosse.",
+      "indifferent": null,
+      "source": "82.000 euro, fascia intermedia, fondo rischi capiente.",
+      "severity": "alta",
+      "raw_text": "B.26 Rossetti non è red flag materiale [issue: I-07] [tipo: assenza]\nVerifica: il deliverable non qualifica il contenzioso di lavoro Rossetti come red flag materiale.\nPass se: il contenzioso, se menzionato, è descritto come sotto soglia o come integralmente accantonato.\nFail se: compare fra i red flag materiali, o gli è associato un rimedio come se lo fosse.\n— non passa al judge — Fonte: 82.000 euro, fascia intermedia, fondo rischi capiente. Gravità: alta."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il cambio di controllo sul contratto con Gamma Utensili come red flag materiale.",
+      "pass_condition": "la clausola, se menzionata, è descritta come immateriale per il peso del fornitore.",
+      "fail_condition": "compare fra i red flag materiali.",
+      "indifferent": null,
+      "source": "ordini \\~90.000 euro/anno, fornitore sostituibile.",
+      "severity": "alta",
+      "raw_text": "B.27 Gamma Utensili non è red flag materiale [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non qualifica il cambio di controllo sul contratto con Gamma Utensili come red flag materiale.\nPass se: la clausola, se menzionata, è descritta come immateriale per il peso del fornitore.\nFail se: compare fra i red flag materiali.\n— non passa al judge — Fonte: ordini \\~90.000 euro/anno, fornitore sostituibile. Gravità: alta."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non tratta le due clausole di cambio di controllo allo stesso modo per il solo fatto di essere entrambe presenti.",
+      "pass_condition": "la differenza è ricondotta al peso del contraente.",
+      "fail_condition": "le due clausole sono presentate come equivalenti, o Gamma è elevata al rango di Delfina.",
+      "indifferent": null,
+      "source": "report vendite; contratti.",
+      "severity": "alta",
+      "raw_text": "B.28 Gamma non è assimilata a Delfina [issue: I-08] [tipo: assenza]\nVerifica: il deliverable non tratta le due clausole di cambio di controllo allo stesso modo per il solo fatto di essere entrambe presenti.\nPass se: la differenza è ricondotta al peso del contraente.\nFail se: le due clausole sono presentate come equivalenti, o Gamma è elevata al rango di Delfina.\n— non passa al judge — Fonte: report vendite; contratti. Gravità: alta."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il recesso per convenienza di Berica come red flag materiale.",
+      "pass_condition": "la clausola, se menzionata, è descritta come previsione di rito simmetrica.",
+      "fail_condition": "compare fra i red flag materiali.",
+      "indifferent": null,
+      "source": "contratto Berica, art. 7.",
+      "severity": "media",
+      "raw_text": "B.29 Berica non è red flag materiale [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non qualifica il recesso per convenienza di Berica come red flag materiale.\nPass se: la clausola, se menzionata, è descritta come previsione di rito simmetrica.\nFail se: compare fra i red flag materiali.\n— non passa al judge — Fonte: contratto Berica, art. 7. Gravità: media."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica il recesso ad nutum di Berica come clausola di cambio di controllo.",
+      "pass_condition": "la clausola non compare fra quelle attivate dall'operazione.",
+      "fail_condition": "è trattata come clausola di change of control o accostata al rilievo su Delfina.",
+      "indifferent": null,
+      "source": "contratto Berica, art. 7.",
+      "severity": "alta",
+      "raw_text": "B.30 Berica non è un cambio di controllo [issue: I-09] [tipo: assenza]\nVerifica: il deliverable non qualifica il recesso ad nutum di Berica come clausola di cambio di controllo.\nPass se: la clausola non compare fra quelle attivate dall'operazione.\nFail se: è trattata come clausola di change of control o accostata al rilievo su Delfina.\n— non passa al judge — Fonte: contratto Berica, art. 7. Gravità: alta."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica la locazione dell'immobile di Brescia da società riconducibile all'azionista come red flag materiale.",
+      "pass_condition": "non compare fra i red flag materiali.",
+      "fail_condition": "compare fra i red flag materiali, o le è associato un indennizzo.",
+      "indifferent": null,
+      "source": "bilancio, parti correlate; perizia di congruità.",
+      "severity": "media",
+      "raw_text": "B.31 locazione da parte correlata non è red flag materiale [issue: I-10] [tipo: assenza]\nVerifica: il deliverable non qualifica la locazione dell'immobile di Brescia da società riconducibile all'azionista come red flag materiale.\nPass se: non compare fra i red flag materiali.\nFail se: compare fra i red flag materiali, o le è associato un indennizzo.\n— non passa al judge — Fonte: bilancio, parti correlate; perizia di congruità. Gravità: media."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable, se tratta la locazione, la qualifica come rapporto da rappresentare o normalizzare in sede contrattuale.",
+      "pass_condition": "compare la normalizzazione o la rappresentazione contrattuale come esito.",
+      "fail_condition": "la locazione è presentata come rischio da indennizzare o da condizionare.",
+      "indifferent": null,
+      "source": "contratto di locazione; bilancio.",
+      "severity": "media",
+      "raw_text": "B.32 trattamento contrattuale della locazione [issue: I-10] [tipo: qualificazione]\nVerifica: il deliverable, se tratta la locazione, la qualifica come rapporto da rappresentare o normalizzare in sede contrattuale.\nPass se: compare la normalizzazione o la rappresentazione contrattuale come esito.\nFail se: la locazione è presentata come rischio da indennizzare o da condizionare.\n— non passa al judge — Fonte: contratto di locazione; bilancio. Gravità: media."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "semantic_span",
+        "verification_class": "span"
+      },
+      "verification": "il deliverable afferma che il covenant PFN/EBITDA risulta rispettato, con un rapporto di circa 1,3x contro un limite di 3,0x.",
+      "pass_condition": "compaiono il rispetto del covenant e il rapporto calcolato.",
+      "fail_condition": "il covenant non è verificato, o il rapporto è calcolato in modo diverso.",
+      "indifferent": null,
+      "source": "bilancio, PFN 9,48 / EBITDA 7,21; mutuo, art. 8.",
+      "severity": "alta",
+      "raw_text": "B.33 covenant rispettato [issue: I-11] [tipo: presenza] [verifica: span]\nVerifica: il deliverable afferma che il covenant PFN/EBITDA risulta rispettato, con un rapporto di circa 1,3x contro un limite di 3,0x.\nPass se: compaiono il rispetto del covenant e il rapporto calcolato.\nFail se: il covenant non è verificato, o il rapporto è calcolato in modo diverso.\n— non passa al judge — Fonte: bilancio, PFN 9,48 / EBITDA 7,21; mutuo, art. 8. Gravità: alta."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non presenta il covenant come violato o a rischio di violazione.",
+      "pass_condition": "nessuna violazione è affermata.",
+      "fail_condition": "il covenant è presentato come sforato, teso o da monitorare come criticità.",
+      "indifferent": null,
+      "source": "bilancio; mutuo, art. 8.",
+      "severity": "alta",
+      "raw_text": "B.34 nessun breach del covenant [issue: I-11] [tipo: assenza]\nVerifica: il deliverable non presenta il covenant come violato o a rischio di violazione.\nPass se: nessuna violazione è affermata.\nFail se: il covenant è presentato come sforato, teso o da monitorare come criticità.\n— non passa al judge — Fonte: bilancio; mutuo, art. 8. Gravità: alta."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non riporta la vertenza Zeta Logistica, che sta sotto la soglia de minimis.",
+      "pass_condition": "la vertenza non compare nel deliverable.",
+      "fail_condition": "compare, anche in una sezione di rilievi minori.",
+      "indifferent": null,
+      "source": "24.000 euro, sotto la de minimis di 50.000.",
+      "severity": "media",
+      "raw_text": "B.35 Zeta Logistica non è menzionata [issue: I-11] [tipo: assenza]\nVerifica: il deliverable non riporta la vertenza Zeta Logistica, che sta sotto la soglia de minimis.\nPass se: la vertenza non compare nel deliverable.\nFail se: compare, anche in una sezione di rilievi minori.\n— non passa al judge — Fonte: 24.000 euro, sotto la de minimis di 50.000. Gravità: media."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non qualifica come rilievo l'opposizione al marchio già respinta.",
+      "pass_condition": "non compare fra i rilievi.",
+      "fail_condition": "compare come rischio o come pendenza da presidiare.",
+      "indifferent": null,
+      "source": "fascicolo marchi.",
+      "severity": "media",
+      "raw_text": "B.36 opposizione al marchio non è rilievo [issue: I-11] [tipo: assenza]\nVerifica: il deliverable non qualifica come rilievo l'opposizione al marchio già respinta.\nPass se: non compare fra i rilievi.\nFail se: compare come rischio o come pendenza da presidiare.\n— non passa al judge — Fonte: fascicolo marchi. Gravità: media."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable quantifica il costo della bonifica, la pretesa fiscale, il debito bancario e il peso di Delfina sul fatturato.",
+      "pass_condition": "le quattro grandezze compaiono con un valore.",
+      "fail_condition": "anche una sola è nominata come tema senza cifra, benché il fascicolo la consenta.",
+      "indifferent": null,
+      "source": "relazione, PVC, mutuo, report vendite.",
+      "severity": "alta",
+      "raw_text": "B.37 quantificazione delle esposizioni [issue: I-12] [tipo: presenza]\nVerifica: il deliverable quantifica il costo della bonifica, la pretesa fiscale, il debito bancario e il peso di Delfina sul fatturato.\nPass se: le quattro grandezze compaiono con un valore.\nFail se: anche una sola è nominata come tema senza cifra, benché il fascicolo la consenta.\n— non passa al judge — Fonte: relazione, PVC, mutuo, report vendite. Gravità: alta."
+    },
+    {
+      "id": "B.38",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable associa una condizione sospensiva ai rilievi che richiedono un consenso o un atto prima del closing: Delfina, IP e mutuo bancario.",
+      "pass_condition": "tutti e tre portano una condizione sospensiva, o per il mutuo il rifinanziamento.",
+      "fail_condition": "a uno di essi è associato solo un indennizzo o un price adjustment.",
+      "indifferent": null,
+      "source": "contratto Delfina; certificati IP; mutuo.",
+      "severity": "alta",
+      "raw_text": "B.38 condizioni sospensive dove servono consensi [issue: I-13] [tipo: qualificazione]\nVerifica: il deliverable associa una condizione sospensiva ai rilievi che richiedono un consenso o un atto prima del closing: Delfina, IP e mutuo bancario.\nPass se: tutti e tre portano una condizione sospensiva, o per il mutuo il rifinanziamento.\nFail se: a uno di essi è associato solo un indennizzo o un price adjustment.\n— non passa al judge — Fonte: contratto Delfina; certificati IP; mutuo. Gravità: alta."
+    },
+    {
+      "id": "B.39",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable associa un indennizzo specifico, o in alternativa un price adjustment, ai rilievi su bonifica e fiscale.",
+      "pass_condition": "entrambi portano un rimedio di natura indennitaria o di prezzo.",
+      "fail_condition": "a uno di essi è associata una condizione sospensiva come rimedio principale.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione; PVC.",
+      "severity": "alta",
+      "raw_text": "B.39 indennizzi dove la passività è quantificabile [issue: I-13] [tipo: qualificazione]\nVerifica: il deliverable associa un indennizzo specifico, o in alternativa un price adjustment, ai rilievi su bonifica e fiscale.\nPass se: entrambi portano un rimedio di natura indennitaria o di prezzo.\nFail se: a uno di essi è associata una condizione sospensiva come rimedio principale.\n— non passa al judge — Fonte: relazione di caratterizzazione; PVC. Gravità: alta."
+    },
+    {
+      "id": "B.40",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable non risponde a tutti i rilievi con un generico sconto sul prezzo.",
+      "pass_condition": "i rimedi sono differenziati per natura del rischio.",
+      "fail_condition": "il price adjustment è l'unico rimedio proposto, o è proposto indistintamente per tutti i rilievi.",
+      "indifferent": null,
+      "source": "prompt, rimedi ammessi.",
+      "severity": "alta",
+      "raw_text": "B.40 nessuno sconto generico [issue: I-13] [tipo: assenza]\nVerifica: il deliverable non risponde a tutti i rilievi con un generico sconto sul prezzo.\nPass se: i rimedi sono differenziati per natura del rischio.\nFail se: il price adjustment è l'unico rimedio proposto, o è proposto indistintamente per tutti i rilievi.\n— non passa al judge — Fonte: prompt, rimedi ammessi. Gravità: alta."
+    },
+    {
+      "id": "B.41",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara che l'importo definitivo dell'accertamento non è determinabile allo stato degli atti.",
+      "pass_condition": "l'indeterminatezza è dichiarata.",
+      "fail_condition": "è indicato un importo definitivo come certo, o la lacuna non è dichiarata.",
+      "indifferent": null,
+      "source": "PVC, atto endoprocedimentale.",
+      "severity": "alta",
+      "raw_text": "B.41 accertamento fiscale: lacuna dichiarata [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara che l'importo definitivo dell'accertamento non è determinabile allo stato degli atti.\nPass se: l'indeterminatezza è dichiarata.\nFail se: è indicato un importo definitivo come certo, o la lacuna non è dichiarata.\n— non passa al judge — Fonte: PVC, atto endoprocedimentale. Gravità: alta."
+    },
+    {
+      "id": "B.42",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che cosa richiedere al venditore per definire l'esposizione fiscale.",
+      "pass_condition": "è indicata la richiesta, comunque formulata.",
+      "fail_condition": "la lacuna è dichiarata senza indicare che cosa la colmerebbe.",
+      "indifferent": null,
+      "source": "PVC.",
+      "severity": "media",
+      "raw_text": "B.42 accertamento fiscale: cosa chiedere [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica che cosa richiedere al venditore per definire l'esposizione fiscale.\nPass se: è indicata la richiesta, comunque formulata.\nFail se: la lacuna è dichiarata senza indicare che cosa la colmerebbe.\n— non passa al judge — Fonte: PVC. Gravità: media."
+    },
+    {
+      "id": "B.43",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara che l'esito del consenso della committente e di quello della banca non è nella disponibilità delle parti.",
+      "pass_condition": "l'incertezza è dichiarata per almeno uno dei due consensi.",
+      "fail_condition": "i consensi sono dati per ottenibili o per acquisiti.",
+      "indifferent": null,
+      "source": "contratto Delfina; mutuo.",
+      "severity": "alta",
+      "raw_text": "B.43 consensi: esito non presunto [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara che l'esito del consenso della committente e di quello della banca non è nella disponibilità delle parti.\nPass se: l'incertezza è dichiarata per almeno uno dei due consensi.\nFail se: i consensi sono dati per ottenibili o per acquisiti.\n— non passa al judge — Fonte: contratto Delfina; mutuo. Gravità: alta."
+    },
+    {
+      "id": "B.44",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica che i consensi vanno richiesti prima del closing e a chi.",
+      "pass_condition": "destinatari e tempistica della richiesta sono indicati.",
+      "fail_condition": "l'incertezza è dichiarata senza indicare l'azione.",
+      "indifferent": null,
+      "source": "contratto Delfina; mutuo.",
+      "severity": "media",
+      "raw_text": "B.44 consensi: cosa chiedere [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica che i consensi vanno richiesti prima del closing e a chi.\nPass se: destinatari e tempistica della richiesta sono indicati.\nFail se: l'incertezza è dichiarata senza indicare l'azione.\n— non passa al judge — Fonte: contratto Delfina; mutuo. Gravità: media."
+    },
+    {
+      "id": "B.45",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable dichiara che l'estensione effettiva della contaminazione non è determinabile con i documenti agli atti.",
+      "pass_condition": "l'indeterminatezza è dichiarata.",
+      "fail_condition": "l'estensione è data per nota, o il costo è presentato come definitivo.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione.",
+      "severity": "alta",
+      "raw_text": "B.45 contaminazione: estensione non presunta [issue: I-14] [tipo: presenza]\nVerifica: il deliverable dichiara che l'estensione effettiva della contaminazione non è determinabile con i documenti agli atti.\nPass se: l'indeterminatezza è dichiarata.\nFail se: l'estensione è data per nota, o il costo è presentato come definitivo.\n— non passa al judge — Fonte: relazione di caratterizzazione. Gravità: alta."
+    },
+    {
+      "id": "B.46",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "il deliverable indica quale documentazione o attività servirebbe per definire l'estensione della contaminazione.",
+      "pass_condition": "è indicato che cosa richiedere.",
+      "fail_condition": "la lacuna è dichiarata senza indicare che cosa la colmerebbe.",
+      "indifferent": null,
+      "source": "relazione di caratterizzazione.",
+      "severity": "media",
+      "raw_text": "B.46 contaminazione: cosa chiedere [issue: I-14] [tipo: presenza]\nVerifica: il deliverable indica quale documentazione o attività servirebbe per definire l'estensione della contaminazione.\nPass se: è indicato che cosa richiedere.\nFail se: la lacuna è dichiarata senza indicare che cosa la colmerebbe.\n— non passa al judge — Fonte: relazione di caratterizzazione. Gravità: media."
+    },
+    {
+      "id": "B.47",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi per l'investment committee indica il cambio di controllo su Delfina Motori fra i punti su cui l'operazione si gioca.",
+      "pass_condition": "compare nella sintesi conclusiva.",
+      "fail_condition": "non compare, o compare solo nel corpo della nota.",
+      "indifferent": null,
+      "source": "contratto Delfina; report vendite.",
+      "severity": "alta",
+      "raw_text": "B.47 Delfina fra i punti dirimenti [issue: I-15] [tipo: presenza]\nVerifica: la sintesi per l'investment committee indica il cambio di controllo su Delfina Motori fra i punti su cui l'operazione si gioca.\nPass se: compare nella sintesi conclusiva.\nFail se: non compare, o compare solo nel corpo della nota.\n— non passa al judge — Fonte: contratto Delfina; report vendite. Gravità: alta."
+    },
+    {
+      "id": "B.48",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi per l'investment committee indica l'IP core intestato al fondatore fra i punti su cui l'operazione si gioca.",
+      "pass_condition": "compare nella sintesi conclusiva.",
+      "fail_condition": "non compare, o compare solo nel corpo della nota.",
+      "indifferent": null,
+      "source": "certificati IP.",
+      "severity": "alta",
+      "raw_text": "B.48 IP fra i punti dirimenti [issue: I-15] [tipo: presenza]\nVerifica: la sintesi per l'investment committee indica l'IP core intestato al fondatore fra i punti su cui l'operazione si gioca.\nPass se: compare nella sintesi conclusiva.\nFail se: non compare, o compare solo nel corpo della nota.\n— non passa al judge — Fonte: certificati IP. Gravità: alta."
+    },
+    {
+      "id": "B.49",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi per l'investment committee indica le esposizioni quantificate di bonifica e fiscale, unitariamente o separatamente.",
+      "pass_condition": "compaiono entrambe, come voce unica o come due voci.",
+      "fail_condition": "compare una sola delle due, o nessuna.",
+      "indifferent": "la scelta fra presentarle come blocco unico o scomposte.",
+      "source": "relazione; PVC.",
+      "severity": "alta",
+      "raw_text": "B.49 esposizioni indennizzabili fra i punti dirimenti [issue: I-15] [tipo: presenza]\nVerifica: la sintesi per l'investment committee indica le esposizioni quantificate di bonifica e fiscale, unitariamente o separatamente.\nPass se: compaiono entrambe, come voce unica o come due voci.\nFail se: compare una sola delle due, o nessuna.\nIndifferente: la scelta fra presentarle come blocco unico o scomposte.\n— non passa al judge — Fonte: relazione; PVC. Gravità: alta."
+    },
+    {
+      "id": "B.50",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi per l'investment committee non indica il change of control bancario né il tetto ai contratti a termine fra i punti su cui l'operazione si gioca.",
+      "pass_condition": "nessuno dei due compare nella sintesi conclusiva.",
+      "fail_condition": "anche uno solo compare fra i punti dirimenti, benché resti fra i red flag nel corpo della nota.",
+      "indifferent": null,
+      "source": "mutuo risolvibile con consenso o rifinanziamento; sanzione di ordine di grandezza inferiore.",
+      "severity": "alta",
+      "raw_text": "B.50 mutuo e contratti a termine non sono dirimenti [issue: I-15] [tipo: assenza]\nVerifica: la sintesi per l'investment committee non indica il change of control bancario né il tetto ai contratti a termine fra i punti su cui l'operazione si gioca.\nPass se: nessuno dei due compare nella sintesi conclusiva.\nFail se: anche uno solo compare fra i punti dirimenti, benché resti fra i red flag nel corpo della nota.\n— non passa al judge — Fonte: mutuo risolvibile con consenso o rifinanziamento; sanzione di ordine di grandezza inferiore. Gravità: alta."
+    },
+    {
+      "id": "B.51",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "unassigned"
+      },
+      "verification": "la sintesi per l'investment committee non indica fra i punti dirimenti alcuno dei rilievi immateriali.",
+      "pass_condition": "Rossetti, Gamma Utensili, Berica, la locazione da parte correlata e il covenant non compaiono nella sintesi.",
+      "fail_condition": "anche uno solo compare fra i punti su cui l'operazione si gioca.",
+      "indifferent": null,
+      "source": null,
+      "severity": "media",
+      "raw_text": "B.51 nessun non-issue fra i punti dirimenti [issue: I-15] [tipo: assenza]\nVerifica: la sintesi per l'investment committee non indica fra i punti dirimenti alcuno dei rilievi immateriali.\nPass se: Rossetti, Gamma Utensili, Berica, la locazione da parte correlata e il covenant non compaiono nella sintesi.\nFail se: anche uno solo compare fra i punti su cui l'operazione si gioca.\n— non passa al judge — Fonte: criteri 7-11. Gravità: alta.\n\nSEZIONE C — DATE. Non applicabile: il workflow non computa termini."
+    }
+  ]
+}

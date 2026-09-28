@@ -1,0 +1,14 @@
+{
+  "task_id": "WF2-066",
+  "data_di_congelamento": "2026-09-02",
+  "nota": "Elenco chiuso: le citazioni del deliverable si verificano contro queste fonti.",
+  "fonti": [
+    {
+      "id": "F1",
+      "riferimento": "D.lgs. 12 gennaio 2019, n. 14, art. 166",
+      "url": "https://www.normattiva.it/eli/id/2019/02/14/19G00007/CONSOLIDATED",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte ufficiale primaria"
+    }
+  ]
+}

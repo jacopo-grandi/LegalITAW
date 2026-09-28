@@ -1,0 +1,84 @@
+{
+  "task_id": "WF2-060",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 19, co. 1, lett. g) e co. 3",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "il rifiuto espresso o tacito della restituzione di tributi è atto autonomamente impugnabile; gli atti diversi da quelli elencati non sono autonomamente impugnabili",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 21",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "termine di sessanta giorni dalla notificazione dell'atto; il ricorso avverso il rifiuto tacito è proponibile dopo novanta giorni dalla domanda e fino alla prescrizione del diritto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 1, co. 2",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "rinvio alle norme del codice di procedura civile per quanto non disposto, in quanto compatibili",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 12",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "assistenza tecnica e valore della controversia",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 22",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "costituzione in giudizio del ricorrente e documentazione da depositare",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 31 dicembre 1992, n. 546 - art. 47",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:1992-12-31;546",
+      "regola_sostenuta": "sospensione dell'atto impugnato in presenza di danno grave e irreparabile",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 155 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "computo dei termini; proroga di diritto al primo giorno seguente non festivo e proroga per la scadenza nel giorno di sabato degli atti processuali compiuti fuori udienza",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 7 ottobre 1969, n. 742 - art. 1",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1969-10-07;742",
+      "regola_sostenuta": "sospensione dei termini processuali dal 1 al 31 agosto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.P.R. 26 ottobre 1972, n. 633 - artt. 30 e 38-bis",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:presidente.repubblica:decreto:1972-10-26;633",
+      "regola_sostenuta": "presupposti del rimborso dell'eccedenza detraibile e procedura di erogazione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 31 agosto 2022, n. 130 - art. 1",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2022-08-31;130",
+      "regola_sostenuta": "denominazione delle corti di giustizia tributaria di primo e secondo grado in luogo delle commissioni tributarie provinciali e regionali",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 30 dicembre 2023, n. 220 - art. 2",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2023-12-30;220",
+      "regola_sostenuta": "abrogazione dell'istituto del reclamo e della mediazione nel processo tributario",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

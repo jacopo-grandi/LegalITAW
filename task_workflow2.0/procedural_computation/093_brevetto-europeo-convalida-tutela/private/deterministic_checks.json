@@ -1,0 +1,229 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-093",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "patent_timeline.md"
+  ],
+  "criteria_total": 64,
+  "proposals_count": 9,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "10 novembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «10 novembre 2026» come data alla quale la ricostruzione è riferita",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-A3",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:10°?\\s+novembre(?:\\s+2026)?|0?10\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*2026|0?10\\s*[/.\\-]\\s*0?11\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "28 gennaio 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «28 gennaio 2026» riferita alla pubblicazione della menzione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C1",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:28°?\\s+gennaio(?:\\s+2026)?|0?28\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2026|0?28\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "28 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «28 ottobre 2026» riferita alla scadenza del termine di opposizione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C2",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:28°?\\s+ottobre(?:\\s+2026)?|0?28\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?28\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.5",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "27 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «27 ottobre 2026» riferita al deposito dell'atto",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C5",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:27°?\\s+ottobre(?:\\s+2026)?|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?27\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.6",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "29 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «29 ottobre 2026» riferita alla valuta del pagamento",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C6",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:29°?\\s+ottobre(?:\\s+2026)?|0?29\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?29\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "28 aprile 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «28 aprile 2026» riferita alla scadenza del termine per la traduzione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C7",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:28°?\\s+aprile(?:\\s+2026)?|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2026|0?28\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "24 aprile 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «24 aprile 2026» riferita al deposito della traduzione",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C8",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:24°?\\s+aprile(?:\\s+2026)?|0?24\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*2026|0?24\\s*[/.\\-]\\s*0?4\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.10",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "30 giugno 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «30 giugno 2026» riferita alla scadenza dell'annualità",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C10",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:30°?\\s+giugno(?:\\s+2026)?|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*2026|0?30\\s*[/.\\-]\\s*0?6\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.14",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "15 dicembre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «15 dicembre 2026» riferita al termine di presentazione delle offerte",
+      "combine": "single",
+      "check": {
+        "id": "WF2-093-C14",
+        "type": "required_regex",
+        "artifact": "patent_timeline.md",
+        "patterns": [
+          "(?:(?:15°?\\s+dicembre(?:\\s+2026)?|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*2026|0?15\\s*[/.\\-]\\s*0?12\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    }
+  ]
+}

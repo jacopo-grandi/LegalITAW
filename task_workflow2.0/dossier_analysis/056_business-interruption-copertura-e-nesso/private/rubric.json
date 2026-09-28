@@ -1,0 +1,1533 @@
+{
+  "task_id": "WF2-056",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 76,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable è prodotto come file `coverage_opinion.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `coverage_opinion.md`.\nPASS se: il file consegnato ha nome `coverage_opinion.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `coverage_opinion.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non supera il limite di 2800 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2800 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2800.\nFAIL se: il corpo del deliverable supera 2800 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2800.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "la quantificazione è esposta per passaggi successivi, ciascuno con il proprio importo.",
+      "match_criteria": "Oggetto del criterio: la quantificazione è esposta per passaggi successivi, ciascuno con il proprio importo.\nPASS se: nella sezione della quantificazione ogni passaggio porta il proprio importo.\nFAIL se: la quantificazione è esposta con il solo importo finale, oppure almeno un passaggio non porta l'importo.\nÈ indifferente: la forma tabellare o discorsiva della quantificazione.\nFonte di authoring: public/01_task.md, richiesta sul percorso",
+      "pass_condition": "nella sezione della quantificazione ogni passaggio porta il proprio importo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "ogni dato numerico utilizzato nella quantificazione porta il riferimento al documento da cui è ricavato.",
+      "match_criteria": "Oggetto del criterio: ogni dato numerico utilizzato nella quantificazione porta il riferimento al documento da cui è ricavato.\nPASS se: accanto a ciascun dato numerico compare il rinvio a uno degli allegati.\nFAIL se: almeno un dato numerico non porta alcun rinvio a un allegato.\nÈ indifferente: la forma del rinvio.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascun dato numerico compare il rinvio a uno degli allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole di polizza e alle voci del conto economico, che non sono fonti normative.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la garanzia della sezione B opera.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la garanzia della sezione B opera.\nPASS se: compare, riferita alla sezione B, una fra: «la garanzia opera», «la copertura è operante», «il sinistro è in garanzia».\nFAIL se: la garanzia è presentata come non operante, oppure l'operatività non è affermata.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 1.2 delle condizioni particolari",
+      "pass_condition": "compare, riferita alla sezione B, una fra: «la garanzia opera», «la copertura è operante», «il sinistro è in garanzia».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable fonda l'operatività sull'indennizzabilità del danno materiale ai sensi della sezione A, indipendentemente dall'importo liquidato.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda l'operatività sull'indennizzabilità del danno materiale ai sensi della sezione A, indipendentemente dall'importo liquidato.\nPASS se: l'operatività è ricondotta all'indennizzabilità del danno materiale in sezione A, con l'indicazione che l'importo liquidato è irrilevante.\nFAIL se: l'operatività è fondata sull'importo liquidato in sezione A, oppure il presupposto non è indicato.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 1.2 delle condizioni particolari",
+      "pass_condition": "l'operatività è ricondotta all'indennizzabilità del danno materiale in sezione A, con l'indicazione che l'importo liquidato è irrilevante.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la macchina continua è ricompresa nella partita macchinario, attrezzature e impianti della sezione A.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la macchina continua è ricompresa nella partita macchinario, attrezzature e impianti della sezione A.\nPASS se: compare l'indicazione che il bene danneggiato è ricompreso nella partita macchinario, attrezzature e impianti.\nFAIL se: l'affermazione non compare, oppure il bene è presentato come non assicurato.\nÈ indifferente: l'indicazione della somma assicurata della partita.\nFonte di authoring: sezione A della scheda di polizza",
+      "pass_condition": "compare l'indicazione che il bene danneggiato è ricompreso nella partita macchinario, attrezzature e impianti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la tesi del punto 1 della lettera di riserva non regge.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la tesi del punto 1 della lettera di riserva non regge.\nPASS se: compare, riferita al punto 1 della lettera di riserva, una fra: «non regge», «non è fondata», «non è sostenibile».\nFAIL se: la tesi è presentata come fondata, oppure non è valutata.\nÈ indifferente: il tono con cui la valutazione è espressa.\nFonte di authoring: punto 1 della lettera di riserva",
+      "pass_condition": "compare, riferita al punto 1 della lettera di riserva, una fra: «non regge», «non è fondata», «non è sostenibile».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable fonda quella valutazione sulla circostanza che la scheda assicura per partite e non elenca i singoli beni.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda quella valutazione sulla circostanza che la scheda assicura per partite e non elenca i singoli beni.\nPASS se: la valutazione è ricondotta alla struttura per partite della sezione A della scheda.\nFAIL se: la valutazione è affermata senza indicare il dato della scheda su cui si fonda.\nÈ indifferente: l'indicazione del numero delle partite.\nFonte di authoring: sezione A della scheda di polizza",
+      "pass_condition": "la valutazione è ricondotta alla struttura per partite della sezione A della scheda.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la tesi del punto 7 della lettera di riserva non regge.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la tesi del punto 7 della lettera di riserva non regge.\nPASS se: compare, riferita al punto 7 della lettera di riserva, una fra: «non regge», «non è fondata», «non è sostenibile».\nFAIL se: la tesi è presentata come fondata, oppure non è valutata.\nÈ indifferente: il tono con cui la valutazione è espressa.\nFonte di authoring: punto 7 della lettera di riserva",
+      "pass_condition": "compare, riferita al punto 7 della lettera di riserva, una fra: «non regge», «non è fondata», «non è sostenibile».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable fonda quella valutazione sul rapporto dei vigili del fuoco, che riferisce l'interdizione all'area del reparto e non all'attività dello stabilimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda quella valutazione sul rapporto dei vigili del fuoco, che riferisce l'interdizione all'area del reparto e non all'attività dello stabilimento.\nPASS se: la valutazione è ricondotta al paragrafo del rapporto dei vigili del fuoco sui provvedimenti.\nFAIL se: la valutazione è affermata senza il riscontro nel rapporto dei vigili del fuoco.\nÈ indifferente: l'indicazione del numero del paragrafo.\nFonte di authoring: paragrafo 6 del rapporto dei vigili del fuoco",
+      "pass_condition": "la valutazione è ricondotta al paragrafo del rapporto dei vigili del fuoco sui provvedimenti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che l'esclusione riguarda i provvedimenti dell'autorità non connessi al danno materiale.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'esclusione riguarda i provvedimenti dell'autorità non connessi al danno materiale.\nPASS se: compare l'indicazione che l'esclusione riguarda i provvedimenti non connessi al danno materiale.\nFAIL se: l'affermazione non compare, oppure l'esclusione è presentata come riferita a ogni provvedimento dell'autorità.\nÈ indifferente: il richiamo alla lettera della clausola.\nFonte di authoring: clausola 12.1, lettera a), delle condizioni particolari",
+      "pass_condition": "compare l'indicazione che l'esclusione riguarda i provvedimenti non connessi al danno materiale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica l'11 gennaio 2031 come giorno di decorrenza del periodo di indennizzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'11 gennaio 2031 come giorno di decorrenza del periodo di indennizzo.\nPASS se: compare «11 gennaio 2031» come giorno di decorrenza del periodo di indennizzo.; compare «11/01/2031» come giorno di decorrenza del periodo di indennizzo.\nFAIL se: è indicato un giorno di decorrenza diverso, oppure la decorrenza non è indicata.\nÈ indifferente: l'indicazione dell'ora del sinistro.\nFonte di authoring: clausola 3.1 delle condizioni particolari; date_verificate.md",
+      "pass_condition": "compare «11 gennaio 2031» come giorno di decorrenza del periodo di indennizzo.; compare «11/01/2031» come giorno di decorrenza del periodo di indennizzo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica l'11 gennaio 2032 come scadenza del periodo di indennizzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'11 gennaio 2032 come scadenza del periodo di indennizzo.\nPASS se: compare «11 gennaio 2032» come scadenza del periodo di indennizzo.; compare «11/01/2032» come scadenza del periodo di indennizzo.\nFAIL se: è indicata una scadenza diversa, oppure la scadenza non è indicata.\nÈ indifferente: l'indicazione del numero di mesi.\nFonte di authoring: periodo indicato nella scheda di polizza; date_verificate.md",
+      "pass_condition": "compare «11 gennaio 2032» come scadenza del periodo di indennizzo.; compare «11/01/2032» come scadenza del periodo di indennizzo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la scadenza del periodo di indennizzo non si proroga pur cadendo in giorno festivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la scadenza del periodo di indennizzo non si proroga pur cadendo in giorno festivo.\nPASS se: compare l'indicazione che la scadenza non si proroga perché è un termine convenzionale di durata e non un termine per l'adempimento.\nFAIL se: l'affermazione non compare, oppure la scadenza è presentata come prorogabile.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 3.3 delle condizioni particolari",
+      "pass_condition": "compare l'indicazione che la scadenza non si proroga perché è un termine convenzionale di durata e non un termine per l'adempimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non indica il 12 gennaio 2032 come scadenza del periodo di indennizzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 12 gennaio 2032 come scadenza del periodo di indennizzo.\nPASS se: il deliverable non indica il 12 gennaio 2032 come scadenza del periodo di indennizzo.\nFAIL se: il 12 gennaio 2032 è indicato come scadenza del periodo di indennizzo.\nÈ indifferente: la menzione del giorno della settimana in cui la scadenza cade.\nFonte di authoring: clausola 3.3 delle condizioni particolari",
+      "pass_condition": "il deliverable non indica il 12 gennaio 2032 come scadenza del periodo di indennizzo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che al 30 settembre 2031 il periodo di indennizzo è ancora aperto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che al 30 settembre 2031 il periodo di indennizzo è ancora aperto.\nPASS se: compare, riferita alla data di riferimento, una fra: «il periodo di indennizzo è ancora aperto», «il periodo non è scaduto», «la garanzia è ancora in corso».\nFAIL se: il periodo è presentato come chiuso, oppure lo stato del periodo non è affermato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione dei giorni residui.\nFonte di authoring: data di riferimento; scadenza calcolata",
+      "pass_condition": "compare, riferita alla data di riferimento, una fra: «il periodo di indennizzo è ancora aperto», «il periodo non è scaduto», «la garanzia è ancora in corso».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non afferma che il periodo di indennizzo si è chiuso con la ripresa a regime del 18 agosto 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il periodo di indennizzo si è chiuso con la ripresa a regime del 18 agosto 2031.\nPASS se: il deliverable non afferma che il periodo di indennizzo si è chiuso con la ripresa a regime del 18 agosto 2031.\nFAIL se: compare l'affermazione che il periodo di indennizzo si è chiuso con la ripresa a regime.\nÈ indifferente: l'indicazione che dopo la ripresa a regime non risulta ulteriore perdita.\nFonte di authoring: clausola 3.2 delle condizioni particolari",
+      "pass_condition": "il deliverable non afferma che il periodo di indennizzo si è chiuso con la ripresa a regime del 18 agosto 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 6.750.000,00 il margine di contribuzione dell'esercizio anteriore al sinistro.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 6.750.000,00 il margine di contribuzione dell'esercizio anteriore al sinistro.\nPASS se: compare «euro 6.750.000,00» come margine di contribuzione dell'esercizio 2030.; compare «6.750.000,00» come margine di contribuzione dell'esercizio 2030.\nFAIL se: è indicato un margine diverso, oppure il margine di riferimento non è indicato.\nÈ indifferente: l'indicazione del valore della produzione e dei costi variabili.\nFonte di authoring: conto economico 2030",
+      "pass_condition": "compare «euro 6.750.000,00» come margine di contribuzione dell'esercizio 2030.; compare «6.750.000,00» come margine di contribuzione dell'esercizio 2030.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable ricava il margine di contribuzione dal conto economico 2030 come differenza fra valore della produzione e costi variabili di produzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable ricava il margine di contribuzione dal conto economico 2030 come differenza fra valore della produzione e costi variabili di produzione.\nPASS se: il margine è ricondotto alla differenza fra le due voci del conto economico 2030.\nFAIL se: il margine è affermato senza indicare le voci da cui è ricavato.\nÈ indifferente: l'indicazione degli importi delle singole voci variabili.\nFonte di authoring: conto economico 2030; clausola 2.1 delle condizioni particolari",
+      "pass_condition": "il margine è ricondotto alla differenza fra le due voci del conto economico 2030.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non usa il margine dichiarato in polizza come margine di riferimento per il calcolo della perdita.",
+      "match_criteria": "Oggetto del criterio: il deliverable non usa il margine dichiarato in polizza come margine di riferimento per il calcolo della perdita.\nPASS se: il deliverable non usa il margine dichiarato in polizza come margine di riferimento per il calcolo della perdita.\nFAIL se: il margine di euro 5.400.000,00 è usato come base per il calcolo del margine giornaliero o della perdita.\nÈ indifferente: l'uso del margine dichiarato come parametro della regola proporzionale.\nFonte di authoring: clausole 2.1 e 4.1 delle condizioni particolari",
+      "pass_condition": "il deliverable non usa il margine dichiarato in polizza come margine di riferimento per il calcolo della perdita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 18.750,00 il margine giornaliero.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 18.750,00 il margine giornaliero.\nPASS se: compare «euro 18.750,00» come margine giornaliero.; compare «18.750,00» come margine giornaliero.\nFAIL se: è indicato un margine giornaliero diverso, oppure il margine giornaliero non è calcolato.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato; clausola 4.1 delle condizioni particolari",
+      "pass_condition": "compare «euro 18.750,00» come margine giornaliero.; compare «18.750,00» come margine giornaliero.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in trecentosessanta giorni la base convenzionale di computo del margine giornaliero.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in trecentosessanta giorni la base convenzionale di computo del margine giornaliero.\nPASS se: compare «trecentosessanta» come base di computo.; compare «360 giorni» come base di computo.\nFAIL se: è indicata una base diversa, oppure la base non è indicata.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 4.1 delle condizioni particolari",
+      "pass_condition": "compare «trecentosessanta» come base di computo.; compare «360 giorni» come base di computo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in settantadue i giorni di fermo totale e in centoquarantasette i giorni di capacità ridotta.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in settantadue i giorni di fermo totale e in centoquarantasette i giorni di capacità ridotta.\nPASS se: compaiono «72» e «147» come giorni dei due periodi.; compaiono «settantadue» e «centoquarantasette» come giorni dei due periodi.\nFAIL se: è indicato un numero diverso per uno dei due periodi, oppure uno dei due periodi non è quantificato.\nÈ indifferente: l'ordine in cui i due periodi sono esposti.\nFonte di authoring: relazione di stabilimento; date_verificate.md",
+      "pass_condition": "compaiono «72» e «147» come giorni dei due periodi.; compaiono «settantadue» e «centoquarantasette» come giorni dei due periodi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica il 24 marzo 2031 come inizio della ripresa parziale e il 18 agosto 2031 come ripresa a regime.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 24 marzo 2031 come inizio della ripresa parziale e il 18 agosto 2031 come ripresa a regime.\nPASS se: compaiono «24 marzo 2031» e «18 agosto 2031» come date delle due riprese.\nFAIL se: è indicata una data diversa per una delle due riprese, oppure una delle due date non compare.\nÈ indifferente: l'ordine in cui le due date sono esposte.\nFonte di authoring: cronologia della relazione di stabilimento; date_verificate.md",
+      "pass_condition": "compaiono «24 marzo 2031» e «18 agosto 2031» come date delle due riprese.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che nel periodo di capacità ridotta la perdita si determina applicando al margine giornaliero la percentuale di riduzione della capacità.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che nel periodo di capacità ridotta la perdita si determina applicando al margine giornaliero la percentuale di riduzione della capacità.\nPASS se: compare l'indicazione che nel periodo di capacità ridotta si applica al margine giornaliero la percentuale di riduzione della capacità.\nFAIL se: l'affermazione non compare, oppure è applicato l'intero margine giornaliero.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 4.2 delle condizioni particolari",
+      "pass_condition": "compare l'indicazione che nel periodo di capacità ridotta si applica al margine giornaliero la percentuale di riduzione della capacità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica nel quarantacinque per cento la percentuale di riduzione della capacità nel periodo di ripresa parziale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica nel quarantacinque per cento la percentuale di riduzione della capacità nel periodo di ripresa parziale.\nPASS se: compare «45 per cento» come percentuale di riduzione della capacità.; compare «quarantacinque per cento» come percentuale di riduzione della capacità.\nFAIL se: è indicata una percentuale diversa, oppure la percentuale di riduzione non è indicata.\nÈ indifferente: l'indicazione della capacità residua del cinquantacinque per cento.\nFonte di authoring: tabella della capacità della relazione di stabilimento",
+      "pass_condition": "compare «45 per cento» come percentuale di riduzione della capacità.; compare «quarantacinque per cento» come percentuale di riduzione della capacità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 1.350.000,00 la perdita del periodo di fermo totale e in euro 1.240.312,50 quella del periodo di capacità ridotta.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 1.350.000,00 la perdita del periodo di fermo totale e in euro 1.240.312,50 quella del periodo di capacità ridotta.\nPASS se: compaiono «euro 1.350.000,00» ed «euro 1.240.312,50» come perdite dei due periodi.; compaiono «1.350.000,00» e «1.240.312,50» come perdite dei due periodi.\nFAIL se: è indicato un importo diverso per uno dei due periodi, oppure uno dei due importi non compare.\nÈ indifferente: l'ordine in cui i due importi sono esposti.\nFonte di authoring: computo verificato",
+      "pass_condition": "compaiono «euro 1.350.000,00» ed «euro 1.240.312,50» come perdite dei due periodi.; compaiono «1.350.000,00» e «1.240.312,50» come perdite dei due periodi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 2.590.312,50 la perdita lorda.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 2.590.312,50 la perdita lorda.\nPASS se: compare «euro 2.590.312,50» come perdita lorda.; compare «2.590.312,50» come perdita lorda.\nFAIL se: è indicata una perdita lorda diversa, oppure la perdita lorda non è calcolata.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 2.590.312,50» come perdita lorda.; compare «2.590.312,50» come perdita lorda.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non determina la perdita lorda sommando i margini mensili risultanti dalla situazione gestionale 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non determina la perdita lorda sommando i margini mensili risultanti dalla situazione gestionale 2031.\nPASS se: il deliverable non determina la perdita lorda sommando i margini mensili risultanti dalla situazione gestionale 2031.\nFAIL se: la perdita lorda è ricavata dai margini mensili della situazione gestionale invece che dal margine giornaliero convenzionale.\nÈ indifferente: l'uso della situazione gestionale come riscontro dell'andamento effettivo.\nFonte di authoring: clausola 4.1 delle condizioni particolari; situazione gestionale 2031",
+      "pass_condition": "il deliverable non determina la perdita lorda sommando i margini mensili risultanti dalla situazione gestionale 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 187.500,00 l'importo della franchigia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 187.500,00 l'importo della franchigia.\nPASS se: compare «euro 187.500,00» come importo della franchigia.; compare «187.500,00» come importo della franchigia.\nFAIL se: è indicato un importo diverso, oppure la franchigia non è quantificata in euro.\nÈ indifferente: l'indicazione dei dieci giorni.\nFonte di authoring: computo verificato; clausola 6.1 delle condizioni particolari",
+      "pass_condition": "compare «euro 187.500,00» come importo della franchigia.; compare «187.500,00» come importo della franchigia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la franchigia si detrae moltiplicando i giorni di franchigia per il margine giornaliero.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la franchigia si detrae moltiplicando i giorni di franchigia per il margine giornaliero.\nPASS se: compare l'indicazione che la franchigia si ottiene moltiplicando i giorni di franchigia per il margine giornaliero.\nFAIL se: l'affermazione non compare, oppure la franchigia è trattata come importo fisso.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 6.1 delle condizioni particolari",
+      "pass_condition": "compare l'indicazione che la franchigia si ottiene moltiplicando i giorni di franchigia per il margine giornaliero.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 2.402.812,50 la perdita al netto della franchigia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 2.402.812,50 la perdita al netto della franchigia.\nPASS se: compare «euro 2.402.812,50» come perdita al netto della franchigia.; compare «2.402.812,50» come perdita al netto della franchigia.\nFAIL se: è indicato un importo diverso, oppure il passaggio non compare.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 2.402.812,50» come perdita al netto della franchigia.; compare «2.402.812,50» come perdita al netto della franchigia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non detrae i giorni di franchigia dai giorni di fermo prima di calcolare la perdita del periodo di capacità ridotta.",
+      "match_criteria": "Oggetto del criterio: il deliverable non detrae i giorni di franchigia dai giorni di fermo prima di calcolare la perdita del periodo di capacità ridotta.\nPASS se: il deliverable non detrae i giorni di franchigia dai giorni di fermo prima di calcolare la perdita del periodo di capacità ridotta.\nFAIL se: la franchigia è applicata sottraendo dieci giorni dal periodo di fermo totale.\nÈ indifferente: la menzione dei giorni di franchigia nella descrizione della cronologia.\nFonte di authoring: clausola 6.1 delle condizioni particolari",
+      "pass_condition": "il deliverable non detrae i giorni di franchigia dai giorni di fermo prima di calcolare la perdita del periodo di capacità ridotta.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable qualifica la rettifica per l'andamento dell'attività come operante in diminuzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la rettifica per l'andamento dell'attività come operante in diminuzione.\nPASS se: compare, riferita alla rettifica, una fra: «in diminuzione», «riduce la perdita», «segno negativo».\nFAIL se: la rettifica è qualificata come operante in aumento, oppure è presentata come non applicabile, oppure la qualificazione non compare.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausole 5.1 e 5.2 delle condizioni particolari",
+      "pass_condition": "compare, riferita alla rettifica, una fra: «in diminuzione», «riduce la perdita», «segno negativo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable fonda il segno della rettifica sui dati di portafoglio ordini della relazione di stabilimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda il segno della rettifica sui dati di portafoglio ordini della relazione di stabilimento.\nPASS se: il segno della rettifica è ricondotto ai dati di portafoglio ordini o alla stima della relazione di stabilimento.\nFAIL se: il segno è affermato senza indicare i dati su cui si fonda.\nÈ indifferente: l'indicazione della variazione percentuale del quarto trimestre.\nFonte di authoring: paragrafi 4 e 5 della relazione di stabilimento",
+      "pass_condition": "il segno della rettifica è ricondotto ai dati di portafoglio ordini o alla stima della relazione di stabilimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica nel sei per cento la misura della rettifica in diminuzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica nel sei per cento la misura della rettifica in diminuzione.\nPASS se: compare «6 per cento» come misura della rettifica.; compare «sei per cento» come misura della rettifica.\nFAIL se: è indicata una misura diversa, oppure la misura non è indicata.\nÈ indifferente: il segno con cui la misura è scritta.\nFonte di authoring: paragrafo 5 della relazione di stabilimento",
+      "pass_condition": "compare «6 per cento» come misura della rettifica.; compare «sei per cento» come misura della rettifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 2.258.643,75 la perdita rettificata per l'andamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 2.258.643,75 la perdita rettificata per l'andamento.\nPASS se: compare «euro 2.258.643,75» come perdita rettificata.; compare «2.258.643,75» come perdita rettificata.\nFAIL se: è indicato un importo diverso, oppure il passaggio non compare.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 2.258.643,75» come perdita rettificata.; compare «2.258.643,75» come perdita rettificata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non indica euro 2.498.925,00 come perdita rettificata.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica euro 2.498.925,00 come perdita rettificata.\nPASS se: il deliverable non indica euro 2.498.925,00 come perdita rettificata.\nFAIL se: l'importo di euro 2.498.925,00 è indicato come perdita rettificata.\nÈ indifferente: la menzione di quell'importo come risultato della perizia di parte.\nFonte di authoring: computo verificato; paragrafo 5 della perizia di parte",
+      "pass_condition": "il deliverable non indica euro 2.498.925,00 come perdita rettificata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable rileva che la perizia di parte applica una rettifica in aumento del quattro per cento.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la perizia di parte applica una rettifica in aumento del quattro per cento.\nPASS se: compare l'indicazione che la perizia di parte applica una rettifica in aumento del quattro per cento.\nFAIL se: il rilievo non compare, oppure la rettifica della perizia è presentata come in diminuzione.\nÈ indifferente: il richiamo al numero del paragrafo.\nFonte di authoring: paragrafo 5 della perizia di parte",
+      "pass_condition": "compare l'indicazione che la perizia di parte applica una rettifica in aumento del quattro per cento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable rileva che la motivazione della perizia contrasta con i dati di portafoglio ordini dell'assicurato.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la motivazione della perizia contrasta con i dati di portafoglio ordini dell'assicurato.\nPASS se: compare l'indicazione che la motivazione della perizia contrasta con i dati di portafoglio ordini della relazione di stabilimento.\nFAIL se: il rilievo non compare, oppure la motivazione è presentata come sostenuta dai documenti.\nÈ indifferente: l'indicazione della fonte di settore invocata dalla perizia.\nFonte di authoring: paragrafo 5 della perizia di parte; paragrafo 4 della relazione di stabilimento",
+      "pass_condition": "compare l'indicazione che la motivazione della perizia contrasta con i dati di portafoglio ordini della relazione di stabilimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 5.400.000,00 il margine dichiarato in polizza e in euro 6.750.000,00 quello effettivo dell'esercizio anteriore.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 5.400.000,00 il margine dichiarato in polizza e in euro 6.750.000,00 quello effettivo dell'esercizio anteriore.\nPASS se: compaiono «euro 5.400.000,00» ed «euro 6.750.000,00» come margine dichiarato e margine effettivo.\nFAIL se: è indicato un importo diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: scheda di polizza; conto economico 2030",
+      "pass_condition": "compaiono «euro 5.400.000,00» ed «euro 6.750.000,00» come margine dichiarato e margine effettivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica nel venti per cento il grado di sottoassicurazione e nell'ottanta per cento la quota indennizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica nel venti per cento il grado di sottoassicurazione e nell'ottanta per cento la quota indennizzabile.\nPASS se: compaiono «20 per cento» e «80 per cento» come grado di sottoassicurazione e quota indennizzabile.; compaiono «venti per cento» e «ottanta per cento» come grado di sottoassicurazione e quota indennizzabile.\nFAIL se: è indicata una percentuale diversa per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: computo verificato",
+      "pass_condition": "compaiono «20 per cento» e «80 per cento» come grado di sottoassicurazione e quota indennizzabile.; compaiono «venti per cento» e «ottanta per cento» come grado di sottoassicurazione e quota indennizzabile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable qualifica la fattispecie come assicurazione parziale con riduzione proporzionale dell'indennizzo.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la fattispecie come assicurazione parziale con riduzione proporzionale dell'indennizzo.\nPASS se: compare, riferita alla fattispecie, una fra: «assicurazione parziale», «regola proporzionale», «riduzione proporzionale dell'indennizzo».\nFAIL se: la fattispecie è qualificata diversamente, oppure la qualificazione non compare.\nÈ indifferente: il richiamo al numero della clausola o dell'articolo.\nFonte di authoring: clausola 8.3 delle condizioni particolari; articolo 8.1 delle condizioni generali",
+      "pass_condition": "compare, riferita alla fattispecie, una fra: «assicurazione parziale», «regola proporzionale», «riduzione proporzionale dell'indennizzo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che l'osservazione del paragrafo 8 della perizia di parte non regge.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'osservazione del paragrafo 8 della perizia di parte non regge.\nPASS se: compare, riferita a quell'osservazione, una fra: «non regge», «non è fondata», «non è sostenibile».\nFAIL se: l'osservazione è presentata come fondata, oppure non è valutata.\nÈ indifferente: il tono con cui la valutazione è espressa.\nFonte di authoring: paragrafo 8 della perizia di parte",
+      "pass_condition": "compare, riferita a quell'osservazione, una fra: «non regge», «non è fondata», «non è sostenibile».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable distingue la somma assicurata, che opera come limite massimo di indennizzo, dal margine dichiarato, che opera come parametro della proporzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable distingue la somma assicurata, che opera come limite massimo di indennizzo, dal margine dichiarato, che opera come parametro della proporzione.\nPASS se: compare la distinzione fra la funzione della somma assicurata e quella del margine dichiarato.\nFAIL se: la distinzione non compare, oppure i due parametri sono trattati come equivalenti.\nÈ indifferente: il richiamo ai numeri delle clausole.\nFonte di authoring: clausole 8.1 e 8.2 delle condizioni particolari",
+      "pass_condition": "compare la distinzione fra la funzione della somma assicurata e quella del margine dichiarato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 1.806.915,00 l'indennizzo sulla perdita di margine.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 1.806.915,00 l'indennizzo sulla perdita di margine.\nPASS se: compare «euro 1.806.915,00» come indennizzo sulla perdita di margine.; compare «1.806.915,00» come indennizzo sulla perdita di margine.\nFAIL se: è indicato un importo diverso, oppure il passaggio non compare.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 1.806.915,00» come indennizzo sulla perdita di margine.; compare «1.806.915,00» come indennizzo sulla perdita di margine.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 340.000,00 i maggiori costi richiesti e in euro 200.000,00 il sublimite previsto dalla scheda di polizza.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 340.000,00 i maggiori costi richiesti e in euro 200.000,00 il sublimite previsto dalla scheda di polizza.\nPASS se: compaiono «euro 340.000,00» ed «euro 200.000,00» come importo richiesto e sublimite.\nFAIL se: è indicato un importo diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: paragrafo 6 della perizia di parte; scheda di polizza",
+      "pass_condition": "compaiono «euro 340.000,00» ed «euro 200.000,00» come importo richiesto e sublimite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 160.000,00 i maggiori costi indennizzabili.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 160.000,00 i maggiori costi indennizzabili.\nPASS se: compare «euro 160.000,00» come maggiori costi indennizzabili.; compare «160.000,00» come maggiori costi indennizzabili.\nFAIL se: è indicato un importo diverso, oppure il passaggio non compare.\nÈ indifferente: l'ordine dei due passaggi, sublimite e proporzione.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 160.000,00» come maggiori costi indennizzabili.; compare «160.000,00» come maggiori costi indennizzabili.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che il sublimite per i maggiori costi è a sua volta soggetto alla riduzione proporzionale.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il sublimite per i maggiori costi è a sua volta soggetto alla riduzione proporzionale.\nPASS se: compare l'indicazione che la riduzione proporzionale si applica anche ai maggiori costi entro il sublimite.\nFAIL se: l'affermazione non compare, oppure i maggiori costi sono sottratti alla riduzione proporzionale.\nÈ indifferente: l'ordine in cui i due passaggi sono esposti.\nFonte di authoring: clausola 8.3 delle condizioni particolari; scheda di polizza",
+      "pass_condition": "compare l'indicazione che la riduzione proporzionale si applica anche ai maggiori costi entro il sublimite.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che i maggiori costi sono indennizzabili nella misura in cui hanno evitato una perdita di margine di importo non inferiore.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che i maggiori costi sono indennizzabili nella misura in cui hanno evitato una perdita di margine di importo non inferiore.\nPASS se: compare l'indicazione della condizione di indennizzabilità dei maggiori costi.\nFAIL se: l'affermazione non compare, oppure i maggiori costi sono presentati come indennizzabili senza condizione.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 7.2 delle condizioni particolari",
+      "pass_condition": "compare l'indicazione della condizione di indennizzabilità dei maggiori costi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non contiene il raffronto fra maggiori costi sostenuti e perdita evitata.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non contiene il raffronto fra maggiori costi sostenuti e perdita evitata.\nPASS se: compare, riferita a quel raffronto, una fra: «non risulta dagli atti», «documentazione in corso di raccolta», «non verificabile sui documenti disponibili».\nFAIL se: il raffronto è dato per svolto, oppure la lacuna non è dichiarata.\nÈ indifferente: l'indicazione dei documenti necessari.\nFonte di authoring: paragrafo 6 della relazione di stabilimento",
+      "pass_condition": "compare, riferita a quel raffronto, una fra: «non risulta dagli atti», «documentazione in corso di raccolta», «non verificabile sui documenti disponibili».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 1.966.915,00 l'indennizzo complessivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 1.966.915,00 l'indennizzo complessivo.\nPASS se: compare «euro 1.966.915,00» come indennizzo complessivo.; compare «1.966.915,00» come indennizzo complessivo.\nFAIL se: è indicato un importo diverso, oppure l'indennizzo complessivo non è calcolato.\nÈ indifferente: l'arrotondamento dei decimali.\nFonte di authoring: computo verificato",
+      "pass_condition": "compare «euro 1.966.915,00» come indennizzo complessivo.; compare «1.966.915,00» come indennizzo complessivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che l'indennizzo complessivo è contenuto entro la somma assicurata di euro 6.000.000,00.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'indennizzo complessivo è contenuto entro la somma assicurata di euro 6.000.000,00.\nPASS se: compare l'indicazione che l'indennizzo è contenuto entro la somma assicurata.\nFAIL se: l'affermazione non compare, oppure l'indennizzo è presentato come eccedente la somma assicurata.\nÈ indifferente: l'indicazione del margine residuo rispetto alla somma assicurata.\nFonte di authoring: somma assicurata nella scheda di polizza",
+      "pass_condition": "compare l'indicazione che l'indennizzo è contenuto entro la somma assicurata.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica in euro 2.838.925,00 la quantificazione della perizia di parte e in euro 872.010,00 lo scostamento rispetto all'indennizzo verificato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 2.838.925,00 la quantificazione della perizia di parte e in euro 872.010,00 lo scostamento rispetto all'indennizzo verificato.\nPASS se: compaiono «euro 2.838.925,00» ed «euro 872.010,00» come quantificazione della perizia e scostamento.\nFAIL se: è indicato un importo diverso per uno dei due valori, oppure uno dei due valori non compare.\nÈ indifferente: l'ordine in cui i due valori sono esposti.\nFonte di authoring: paragrafo 7 della perizia di parte; computo verificato",
+      "pass_condition": "compaiono «euro 2.838.925,00» ed «euro 872.010,00» come quantificazione della perizia e scostamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-22"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable riconduce lo scostamento a tre cause: il segno della rettifica, la mancata applicazione della riduzione proporzionale e il superamento del sublimite.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce lo scostamento a tre cause: il segno della rettifica, la mancata applicazione della riduzione proporzionale e il superamento del sublimite.\nPASS se: compaiono le tre cause dello scostamento.\nFAIL se: sono indicate meno di tre cause, oppure lo scostamento è affermato senza indicarne le cause.\nÈ indifferente: l'ordine in cui le tre cause sono esposte.\nFonte di authoring: computo verificato; perizia di parte",
+      "pass_condition": "compaiono le tre cause dello scostamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-22"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable qualifica la perizia come perizia di parte non vincolante per l'assicuratore.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la perizia come perizia di parte non vincolante per l'assicuratore.\nPASS se: compare, riferita alla perizia, una fra: «perizia di parte», «non vincolante per l'assicuratore», «predisposta su incarico dell'assicurato».\nFAIL se: la perizia è presentata come vincolante, oppure la qualificazione non compare.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 10.3 delle condizioni particolari; intestazione della perizia",
+      "pass_condition": "compare, riferita alla perizia, una fra: «perizia di parte», «non vincolante per l'assicuratore», «predisposta su incarico dell'assicurato».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-23"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non afferma che il rifiuto di vincolatività contenuto nel punto 2 della lettera di riserva è infondato.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il rifiuto di vincolatività contenuto nel punto 2 della lettera di riserva è infondato.\nPASS se: il deliverable non afferma che il rifiuto di vincolatività contenuto nel punto 2 della lettera di riserva è infondato.\nFAIL se: compare l'affermazione che l'assicuratore non può rifiutare la vincolatività della perizia di parte.\nÈ indifferente: l'indicazione che la posizione dell'assicuratore su quel punto è conforme alle condizioni.\nFonte di authoring: punto 2 della lettera di riserva; clausola 10.3 delle condizioni particolari",
+      "pass_condition": "il deliverable non afferma che il rifiuto di vincolatività contenuto nel punto 2 della lettera di riserva è infondato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-23"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che le condizioni particolari prevedono un acconto fino al cinquanta per cento dell'importo non contestato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le condizioni particolari prevedono un acconto fino al cinquanta per cento dell'importo non contestato.\nPASS se: compare l'indicazione dell'acconto fino al cinquanta per cento dell'importo non contestato.\nFAIL se: l'affermazione non compare, oppure l'acconto è presentato come non previsto.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 11.2 delle condizioni particolari",
+      "pass_condition": "compare l'indicazione dell'acconto fino al cinquanta per cento dell'importo non contestato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-24"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable indica come azione la richiesta dell'acconto sull'importo non contestato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la richiesta dell'acconto sull'importo non contestato.\nPASS se: compare l'indicazione di chiedere l'acconto sull'importo non contestato.\nFAIL se: l'azione non compare.\nÈ indifferente: l'importo proposto per l'acconto.\nFonte di authoring: clausola 11.2 delle condizioni particolari; punto 6 della lettera di riserva",
+      "pass_condition": "compare l'indicazione di chiedere l'acconto sull'importo non contestato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-24"
+    },
+    {
+      "id": "B.57",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non afferma che l'acconto presuppone la determinazione definitiva del danno.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'acconto presuppone la determinazione definitiva del danno.\nPASS se: il deliverable non afferma che l'acconto presuppone la determinazione definitiva del danno.\nFAIL se: compare l'affermazione che l'acconto è dovuto solo dopo la determinazione definitiva dell'ammontare del danno.\nÈ indifferente: l'indicazione dei sessanta giorni dalla denuncia.\nFonte di authoring: clausola 11.2 delle condizioni particolari",
+      "pass_condition": "il deliverable non afferma che l'acconto presuppone la determinazione definitiva del danno.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-24"
+    },
+    {
+      "id": "B.58",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable afferma che la quantificazione non è definitiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la quantificazione non è definitiva.\nPASS se: compare, riferita alla quantificazione, una fra: «non definitiva», «provvisoria», «da chiudere all'esito dei dati mancanti».\nFAIL se: la quantificazione è presentata come definitiva, oppure lo stato della quantificazione non è affermato.\nÈ indifferente: l'indicazione della data entro cui i dati potrebbero essere disponibili.\nFonte di authoring: paragrafo 6 della relazione di stabilimento; situazione gestionale 2031",
+      "pass_condition": "compare, riferita alla quantificazione, una fra: «non definitiva», «provvisoria», «da chiudere all'esito dei dati mancanti».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-25"
+    },
+    {
+      "id": "B.59",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable elenca i dati mancanti per la chiusura della quantificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable elenca i dati mancanti per la chiusura della quantificazione.\nPASS se: compaiono almeno due elementi fra dati gestionali da settembre a dicembre 2031, rilevazione dei costi variabili non sostenuti e documentazione dei maggiori costi.\nFAIL se: i dati mancanti non sono elencati, oppure ne è indicato uno solo.\nÈ indifferente: l'ordine in cui gli elementi sono elencati.\nFonte di authoring: paragrafo 6 della relazione di stabilimento",
+      "pass_condition": "compaiono almeno due elementi fra dati gestionali da settembre a dicembre 2031, rilevazione dei costi variabili non sostenuti e documentazione dei maggiori costi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-25"
+    },
+    {
+      "id": "B.60",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non afferma che i dati mancanti impediscono ogni quantificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che i dati mancanti impediscono ogni quantificazione.\nPASS se: il deliverable non afferma che i dati mancanti impediscono ogni quantificazione.\nFAIL se: compare l'affermazione che in assenza dei dati mancanti nessuna quantificazione è possibile.\nÈ indifferente: l'indicazione che la quantificazione è provvisoria.\nFonte di authoring: paragrafo 6 della relazione di stabilimento",
+      "pass_condition": "il deliverable non afferma che i dati mancanti impediscono ogni quantificazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-25"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non segnala una decadenza per tardiva denuncia, ne mette in discussione la tempestivita della denuncia.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala una decadenza per tardiva denuncia, ne mette in discussione la tempestivita della denuncia.\nPASS se: il deliverable non segnala una decadenza per tardiva denuncia, ne mette in discussione la tempestivita della denuncia.\nFAIL se: la denuncia è presentata come tardiva o come fonte di decadenza.\nÈ indifferente: la menzione della data della denuncia nella cronologia.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non segnala una decadenza per tardiva denuncia, ne mette in discussione la tempestivita della denuncia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non attribuisce all'ora del sinistro o al fermo programmato di fine settimana effetti sull'operatività della garanzia o sulla decorrenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable non attribuisce all'ora del sinistro o al fermo programmato di fine settimana effetti sull'operatività della garanzia o sulla decorrenza.\nPASS se: il deliverable non attribuisce all'ora del sinistro o al fermo programmato di fine settimana effetti sull'operatività della garanzia o sulla decorrenza.\nFAIL se: all'ora del sinistro o al fermo programmato di fine settimana sono attribuiti effetti sull'operatività o sulla decorrenza.\nÈ indifferente: la menzione dell'ora nella descrizione dell'evento.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non attribuisce all'ora del sinistro o al fermo programmato di fine settimana effetti sull'operatività della garanzia o sulla decorrenza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non segnala come ostacolo la procedura di nomina dei periti prevista dalle condizioni particolari.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come ostacolo la procedura di nomina dei periti prevista dalle condizioni particolari.\nPASS se: il deliverable non segnala come ostacolo la procedura di nomina dei periti prevista dalle condizioni particolari.\nFAIL se: la procedura di nomina dei periti compare fra i profili di rischio o fra gli ostacoli.\nÈ indifferente: la menzione della procedura nella descrizione dell'accertamento del danno.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non segnala come ostacolo la procedura di nomina dei periti prevista dalle condizioni particolari.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non presenta come carenza di copertura la circostanza che le somme assicurate distinte delle due sezioni siano autonome.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come carenza di copertura la circostanza che le somme assicurate distinte delle due sezioni siano autonome.\nPASS se: il deliverable non presenta come carenza di copertura la circostanza che le somme assicurate distinte delle due sezioni siano autonome.\nFAIL se: l'autonomia delle somme assicurate delle due sezioni compare fra i profili di sottoassicurazione o di carenza di copertura.\nÈ indifferente: la menzione delle somme assicurate della sezione A nella descrizione della polizza.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non presenta come carenza di copertura la circostanza che le somme assicurate distinte delle due sezioni siano autonome.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non presenta come inadempimento dell'assicurato l'affidamento in lavorazione esterna delle commesse.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come inadempimento dell'assicurato l'affidamento in lavorazione esterna delle commesse.\nPASS se: il deliverable non presenta come inadempimento dell'assicurato l'affidamento in lavorazione esterna delle commesse.\nFAIL se: l'affidamento in lavorazione esterna compare fra gli inadempimenti o fra le violazioni degli obblighi dell'assicurato.\nÈ indifferente: la menzione dell'affidamento come fonte dei maggiori costi.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "il deliverable non presenta come inadempimento dell'assicurato l'affidamento in lavorazione esterna delle commesse.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non applica alla quantificazione dei danni indiretti la franchigia della sezione A.",
+      "match_criteria": "Oggetto del criterio: il deliverable non applica alla quantificazione dei danni indiretti la franchigia della sezione A.\nPASS se: il deliverable non applica alla quantificazione dei danni indiretti la franchigia della sezione A.\nFAIL se: una franchigia in euro della sezione A è detratta dalla quantificazione dei danni indiretti.\nÈ indifferente: la menzione delle franchigie della sezione A nella descrizione della polizza.\nFonte di authoring: challenge map, N-06",
+      "pass_condition": "il deliverable non applica alla quantificazione dei danni indiretti la franchigia della sezione A.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non esclude dal computo il periodo del fermo programmato di luglio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non esclude dal computo il periodo del fermo programmato di luglio 2031.\nPASS se: il deliverable non esclude dal computo il periodo del fermo programmato di luglio 2031.\nFAIL se: i giorni del fermo programmato di luglio 2031 sono esclusi dal computo dei giorni di capacità ridotta.\nÈ indifferente: la menzione del fermo programmato fra gli elementi dell'andamento.\nFonte di authoring: challenge map, N-07",
+      "pass_condition": "il deliverable non esclude dal computo il periodo del fermo programmato di luglio 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-07"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "il deliverable non segnala, a fronte della quietanza del premio in atti, profili di operatività della garanzia legati al pagamento del premio.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala, a fronte della quietanza del premio in atti, profili di operatività della garanzia legati al pagamento del premio.\nPASS se: il deliverable non segnala, a fronte della quietanza del premio in atti, profili di operatività della garanzia legati al pagamento del premio.\nFAIL se: il pagamento del premio compare fra i profili che incidono sull'operatività della garanzia.\nÈ indifferente: la menzione della quietanza fra i dati della polizza.\nFonte di authoring: challenge map, N-08",
+      "pass_condition": "il deliverable non segnala, a fronte della quietanza del premio in atti, profili di operatività della garanzia legati al pagamento del premio.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-08"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provata la perdita del periodo di capacità ridotta mentre tratta come non provato il raffronto sui maggiori costi.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provata la perdita del periodo di capacità ridotta mentre tratta come non provato il raffronto sui maggiori costi.\nPASS se: simmetria del controllo: il deliverable non tratta come provata la perdita del periodo di capacità ridotta mentre tratta come non provato il raffronto sui maggiori costi.\nFAIL se: la perdita del periodo di capacità ridotta è data per provata e nello stesso deliverable il raffronto sui maggiori costi è dichiarato non verificabile, senza distinguere i due piani di prova.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: relazione di stabilimento; clausola 7.2 delle condizioni particolari",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provata la perdita del periodo di capacità ridotta mentre tratta come non provato il raffronto sui maggiori costi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che l'assicuratore corrisponderà l'indennizzo determinato.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che l'assicuratore corrisponderà l'indennizzo determinato.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che l'assicuratore corrisponderà l'indennizzo determinato.\nFAIL se: compare l'affermazione che l'assicuratore pagherà o riconoscerà l'indennizzo determinato.\nÈ indifferente: l'indicazione dei passaggi necessari per la determinazione dell'ammontare.\nFonte di authoring: clausola 10.2 delle condizioni particolari; lettera di riserva",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che l'assicuratore corrisponderà l'indennizzo determinato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "coverage_opinion.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la facoltà di recesso dopo il sinistro prevista dalle condizioni generali.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio la facoltà di recesso dopo il sinistro prevista dalle condizioni generali.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio la facoltà di recesso dopo il sinistro prevista dalle condizioni generali.\nFAIL se: la facoltà di recesso dopo il sinistro compare fra i profili di rischio o fra i rilievi sulla polizza.\nÈ indifferente: la menzione della facoltà di recesso fra le previsioni contrattuali applicabili.\nFonte di authoring: articolo 9.1 delle condizioni generali",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la facoltà di recesso dopo il sinistro prevista dalle condizioni generali.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

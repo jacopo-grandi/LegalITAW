@@ -1,0 +1,133 @@
+{
+  "task_id": "WF2-052",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - artt. 633 e 634 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "presupposti del procedimento di ingiunzione e prova scritta del credito",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 641 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "contenuto del decreto: termine di quaranta giorni dalla notificazione per il pagamento e per l'opposizione, con avvertimento",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 642 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "esecuzione provvisoria del decreto in fase monitoria",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 645 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "forma e ufficio dell'opposizione; il testo non prevede più la riduzione a metà dei termini di comparizione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 29 dicembre 2011, n. 218 - art. 1",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2011-12-29;218",
+      "regola_sostenuta": "soppressione della riduzione a metà dei termini di comparizione nel giudizio di opposizione a decreto ingiuntivo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 648 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "concessione della provvisoria esecuzione del decreto nel giudizio di opposizione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 649 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "sospensione dell'esecuzione provvisoria concessa",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 163-bis c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "termini liberi minimi a comparire: centoventi giorni per notificazione in Italia e centocinquanta per notificazione all'estero",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 165 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "costituzione dell'attore entro dieci giorni dalla notificazione, con deposito di atto, procura, documenti e nota di iscrizione a ruolo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 166 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "costituzione del convenuto almeno settanta giorni prima dell'udienza",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 171-ter c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "memorie integrative a pena di decadenza almeno quaranta, venti e dieci giorni prima dell'udienza, con il contenuto proprio di ciascuna",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 155 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "computo dei termini a giorni, proroga di diritto al primo giorno seguente non festivo e proroga per la scadenza nel giorno di sabato",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "R.D. 28 ottobre 1940, n. 1443 - art. 147 c.p.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1940-10-28;1443",
+      "regola_sostenuta": "tempo delle notificazioni: la notificazione telematica eseguita oltre il limite serale si considera perfezionata il giorno successivo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 7 ottobre 1969, n. 742 - art. 1",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1969-10-07;742",
+      "regola_sostenuta": "sospensione dei termini processuali dal 1 al 31 agosto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 4 marzo 2010, n. 28 - art. 5",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2010-03-04;28",
+      "regola_sostenuta": "materie per le quali il tentativo di mediazione è condizione di procedibilità, fra cui la somministrazione; disciplina nel giudizio di opposizione a decreto ingiuntivo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - artt. 1559 e 1560 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "contratto di somministrazione e determinazione dell'entità della fornitura",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - artt. 1382 e 1384 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "clausola penale e riducibilità della penale manifestamente eccessiva",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1195 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "imputazione del pagamento",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

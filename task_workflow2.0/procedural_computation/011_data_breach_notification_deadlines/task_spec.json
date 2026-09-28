@@ -1,0 +1,35 @@
+{
+  "schema_version": "2.0.0-draft",
+  "task_id": "WF2-011",
+  "title": "Data breach. Termini di notifica al Garante e di comunicazione agli interessati",
+  "use_case_family": "Procedural timeline",
+  "macro_area": [
+    "Data Protection"
+  ],
+  "source": {
+    "platform": "notion",
+    "page_url": "https://app.notion.com/p/3c0f042e9f588116988dcb0e5fd882a0",
+    "database_url": "https://app.notion.com/p/958f0d1646454cd59feef83f87e2063a?v=5fb25588bfac4a22ab31d5375dfbcb9f",
+    "source_date": "2026-08-18",
+    "imported_at": "2026-08-24"
+  },
+  "public_inputs": {
+    "prompt": "public/01_task.md",
+    "reference_pack": "public/02_reference_pack.md",
+    "documents_directory": "public/documents",
+    "original_attachment_count": 9,
+    "legal_sources": "public/03_legal_sources.md"
+  },
+  "private_evaluation": {
+    "atomized_criteria": "private/criteria_atomized.md",
+    "legacy_evaluation_criteria": "private/evaluation_criteria.md",
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md"
+  },
+  "run_output_directory": "runs",
+  "revision_status": "pilot_ready",
+  "gold_legal_signoff": "pending",
+  "notion_modified": false,
+  "pilot_status": "ready",
+  "local_revision_date": "2026-08-24"
+}

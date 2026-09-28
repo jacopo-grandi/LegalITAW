@@ -1,0 +1,128 @@
+{
+  "task_id": "WF2-040",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Contenzioso commerciale. Matrice probatoria sulla pretesa risarcitoria per inadempimento di un contratto di fornitura industriale",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2034-06-22",
+  "workflow_family": "dossier_analysis",
+  "subtask": "evidence_matrix",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "whole_matter",
+  "legal_area": [
+    "Contenzioso commerciale - responsabilita' contrattuale del fornitore",
+    "B. Dossier analysis",
+    "Contenzioso",
+    "Contrattualistica"
+  ],
+  "document_type": "dossier_analysis_matter",
+  "difficulty": "high",
+  "estimated_completion_minutes": 120,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "long",
+    "estimated_minutes": 120,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "dossier_analysis",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: evidence_matrix.md.\n\n# WF2-040 — Struttura attesa del deliverable\n\n> Non è un modulo da compilare alla lettera: è la struttura contro cui sono scritti i criteri di forma. Un deliverable che raggiunge lo stesso risultato con intestazioni diverse non è penalizzato, purché le parti siano presenti e distinte.\n\n**Formato:** un solo file di testo, `evidence_matrix.md`, non superiore a 2.800 parole. Nessuna bozza di lettera di risposta, di memoria o di atto.\n\n## 1. Sintesi per la direzione\n\n## 2. Le tre cifre\n\nL'importo richiesto, l'importo che il fascicolo documenta e l'esposizione stimata, con il passaggio dall'uno all'altro.\n\n## 3. Matrice probatoria\n\nUna tabella. Una riga per ciascun fatto dedotto dalla controparte. Colonne: **fatto** affermato; **prova** presente nel fascicolo, con il documento e la sua provenienza (nostro documento, documento del cliente, documento di un terzo, nessuna); **contestazione** che possiamo opporre; **lacuna** che resta; **azione** da compiere.\n\n## 4. Scomposizione della richiesta, voce per voce\n\nPer ciascuna delle voci della diffida: importo richiesto; documento che la sostiene; ragione per cui è dovuta, ridotta o non dovuta; importo residuo.\n\n## 5. Dove siamo esposti e dove siamo forti\n\n## 6. Che cosa non va eccepito\n\nLe eccezioni che il fascicolo non sostiene, con la ragione.\n\n## 7. Che cosa manca dal fascicolo\n\nPer ciascun elemento: perché serve e a chi chiederlo.\n\n## 8. Azioni entro la scadenza del termine\n\nUna tabella. Colonne: azione; a chi spetta; entro quando.\n\n## 9. La risposta al consiglio su quanto rischiamo davvero\n\n---\n\nOgni riga della matrice e ogni voce della scomposizione riporta il documento da cui deriva.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "cross_document_reasoning",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_contratto_di_fornitura_e_messa_in_servizio.pdf",
+    "public/documents/02_verbale_di_avviamento_e_collaudo.pdf",
+    "public/documents/03_rapporto_intervento_14_novembre_2033.pdf",
+    "public/documents/04_pec_contestazione_16_novembre_2033.pdf",
+    "public/documents/05_rapporto_intervento_12_gennaio_2034.pdf",
+    "public/documents/06_pec_contestazione_6_febbraio_2034.pdf",
+    "public/documents/07_rapporto_intervento_19_aprile_2034.pdf",
+    "public/documents/08_email_direttore_commerciale.pdf",
+    "public/documents/09_diffida_e_messa_in_mora.pdf",
+    "public/documents/10_relazione_tecnica_di_parte.pdf",
+    "public/documents/11_prospetto_maggiori_costi.xlsx",
+    "public/documents/12_nota_di_addebito_cliente_finale.pdf",
+    "public/documents/13_fattura_tecnomeccanica_bagnolo.pdf"
+  ],
+  "expected_deliverable": "evidence_matrix.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "cross_document_reasoning",
+    "legal_correctness",
+    "false_positive_control",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

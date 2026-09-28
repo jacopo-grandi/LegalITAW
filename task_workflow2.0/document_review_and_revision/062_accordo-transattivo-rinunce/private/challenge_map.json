@@ -1,0 +1,158 @@
+{
+  "task_id": "WF2-062",
+  "lato_assistito": "Frassino Engineering S.r.l., creditrice e attrice",
+  "data_di_riferimento": "2028-06-20",
+  "stato_fascicolo": "contenzioso pendente, accordo non firmato",
+  "fonti_ammesse": [
+    "Codice civile, testo consolidato"
+  ],
+  "calcoli": [
+    "quadrature di importi e sequenze documentali indicate nel gold"
+  ],
+  "dati_mancanti": [
+    "integrazione necessaria per riservatezza assoluta: inserire eccezioni nominate e preavviso ove consentito",
+    "integrazione necessaria per rimedio insufficiente all'inadempimento: prevedere risoluzione, garanzia e prosecuzione del giudizio"
+  ],
+  "errori_bersaglio": [
+    "confondere responsabilita' o termini distinti",
+    "accettare una dichiarazione di parte senza confronto documentale",
+    "trasformare un elemento neutro in issue",
+    "presumere l'esito"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_bozza_accordo_transattivo.docx",
+      "funzione": "draft"
+    },
+    {
+      "file": "02_ordinanza_calendario_giudizio.pdf",
+      "funzione": "Udienza di precisazione delle conclusioni fissata al 19 settembre 2028; nessuna rinuncia agli atti e' stata depositata."
+    },
+    {
+      "file": "03_term_sheet_negoziale.pdf",
+      "funzione": "Pagamento EUR 420.000 entro cinque giorni lavorativi dalla firma; garanzia bancaria a prima richiesta; rinunce efficaci soltanto dopo l'accredito."
+    },
+    {
+      "file": "04_email_assicuratore_convenuta.eml",
+      "funzione": "L'assicuratore finanzia EUR 300.000 ma non assume obblighi verso Frassino e subordina l'erogazione a quietanza generale immediata."
+    }
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "rinuncia troppo ampia",
+      "gravita": "alta",
+      "affermazione_richiesta": "la formula include fatti ignoti e futuri senza delimitazione",
+      "azione_richiesta": "limitare la rinuncia alle domande e ai crediti dell'Allegato A",
+      "conseguenza": "la transazione non deve assorbire rapporti estranei",
+      "evidenza": "doc. 01 art. 3",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "efficacia anticipata delle rinunce",
+      "gravita": "alta",
+      "affermazione_richiesta": "la rinuncia opera prima del pagamento",
+      "azione_richiesta": "subordinarla all'accredito integrale",
+      "conseguenza": "Frassino conserva leva fino all'adempimento",
+      "evidenza": "doc. 01 art. 3 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "condizione legata all'assicuratore",
+      "gravita": "alta",
+      "affermazione_richiesta": "il debitore trasferisce sulla creditrice il rischio di funding",
+      "azione_richiesta": "rendere il pagamento incondizionato",
+      "conseguenza": "l'obbligo resta di Edilvalma",
+      "evidenza": "doc. 01 art. 2 e doc. 04",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "termine di pagamento difforme",
+      "gravita": "alta",
+      "affermazione_richiesta": "trenta giorni sostituiscono i cinque lavorativi negoziati",
+      "azione_richiesta": "ripristinare cinque giorni lavorativi",
+      "conseguenza": "la bozza deve aderire al term sheet",
+      "evidenza": "doc. 01 e doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "garanzia mancante",
+      "gravita": "media",
+      "affermazione_richiesta": "la bozza non contiene la garanzia a prima richiesta",
+      "azione_richiesta": "inserire consegna contestuale e importo",
+      "conseguenza": "il rischio di mancato pagamento resta scoperto",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "chiusura del giudizio prematura",
+      "gravita": "media",
+      "affermazione_richiesta": "la rinuncia agli atti precede l'incasso",
+      "azione_richiesta": "depositare istanza congiunta dopo l'accredito",
+      "conseguenza": "il procedimento resta presidio fino al closing",
+      "evidenza": "doc. 01 art. 4 e doc. 02",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "spese legali non regolate",
+      "gravita": "media",
+      "affermazione_richiesta": "il term sheet prevede EUR 18.000 ma la bozza tace",
+      "azione_richiesta": "distinguere rimborso spese e capitale",
+      "conseguenza": "la quietanza non deve cancellare il rimborso",
+      "evidenza": "doc. 03",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "riservatezza assoluta",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano eccezioni per obblighi e consulenti",
+      "azione_richiesta": "inserire eccezioni nominate e preavviso ove consentito",
+      "conseguenza": "la clausola diventa eseguibile nella pratica",
+      "evidenza": "doc. 01 art. 5",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "rimedio insufficiente all'inadempimento",
+      "gravita": "media",
+      "affermazione_richiesta": "l'interesse legale lascia ferme rinunce non pagate",
+      "azione_richiesta": "prevedere risoluzione, garanzia e prosecuzione del giudizio",
+      "conseguenza": "i rimedi seguono la struttura del closing",
+      "evidenza": "doc. 01 art. 6",
+      "non_deve_affermare": "che il punto sia provato oltre quanto consentono gli allegati"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "assenza di ammissione",
+      "oggetto": "doc. 01 art. 7",
+      "chiave_nel_criterio": "ammissione",
+      "perche_non_e_issue": "la clausola e' coerente con la funzione transattiva",
+      "criterio_assenza": "B.23"
+    },
+    {
+      "id": "N-02",
+      "etichetta": "legge italiana",
+      "oggetto": "doc. 01 art. 7",
+      "chiave_nel_criterio": "legge italiana",
+      "perche_non_e_issue": "la scelta coincide con il giudizio pendente",
+      "criterio_assenza": "B.24"
+    },
+    {
+      "id": "N-03",
+      "etichetta": "contributo dell'assicuratore",
+      "oggetto": "doc. 04",
+      "chiave_nel_criterio": "EUR 300.000",
+      "perche_non_e_issue": "il funding interno non riduce l'obbligo del debitore",
+      "criterio_assenza": "B.25"
+    }
+  ]
+}

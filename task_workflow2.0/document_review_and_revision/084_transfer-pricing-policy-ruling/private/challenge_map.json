@@ -1,0 +1,123 @@
+{
+  "task_id": "WF2-084",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "transazioni incomplete",
+      "gravita": "alta",
+      "affermazione_richiesta": "la policy copre la distribuzione ma omette servizi IT e garanzia infragruppo",
+      "evidenza": "mappatura intercompany"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "delineazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "contratti e condotta mostrano che Keramo Italia gestisce resi e rischio credito",
+      "evidenza": "contratti e matrice funzioni"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "tested party",
+      "gravita": "alta",
+      "affermazione_richiesta": "la scelta della societa' italiana come tested party richiede confronto con le funzioni effettive",
+      "evidenza": "policy e matrice funzioni"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "indicatore ROS",
+      "gravita": "alta",
+      "affermazione_richiesta": "il ROS va applicato a ricavi e costi della sola distribuzione delimitata",
+      "evidenza": "policy economica"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "intervallo",
+      "gravita": "media",
+      "affermazione_richiesta": "la policy indica un target 2-4 per cento senza quartili o anno della ricerca",
+      "evidenza": "policy economica"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "risultato 2029",
+      "gravita": "media",
+      "affermazione_richiesta": "il ROS della distribuzione al 30 settembre e' 1,20 per cento",
+      "evidenza": "conto economico segmentato"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "comparabili obsoleti",
+      "gravita": "media",
+      "affermazione_richiesta": "la ricerca usa dati 2024-2026 e non documenta un refresh",
+      "evidenza": "studio comparabili"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "criteri di selezione",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano stringa di ricerca, esclusioni e controllo di indipendenza",
+      "evidenza": "studio comparabili"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "aggiustamenti",
+      "gravita": "media",
+      "affermazione_richiesta": "l'aggiustamento del capitale circolante e' citato ma non calcolato per singolo comparabile",
+      "evidenza": "studio comparabili"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "accordi infragruppo",
+      "gravita": "media",
+      "affermazione_richiesta": "il contratto servizi alloca costi marketing che la policy attribuisce alla capogruppo",
+      "evidenza": "contratto servizi"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "documentazione",
+      "gravita": "media",
+      "affermazione_richiesta": "masterfile, local file e policy hanno perimetri e date diversi",
+      "evidenza": "indice documentazione"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "ruling package",
+      "gravita": "media",
+      "affermazione_richiesta": "il pacchetto non contiene anni coperti, transazioni esatte e assunzioni critiche",
+      "evidenza": "bozza istanza"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "marchio del gruppo",
+      "oggetto": "marchio del gruppo",
+      "chiave_nel_criterio": "marchio del gruppo",
+      "perche_non_e_issue": "l'uso del marchio non prova da solo un servizio remunerabile",
+      "criterio_assenza": "Il deliverable non presenta marchio del gruppo come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "utile consolidato",
+      "oggetto": "utile consolidato",
+      "chiave_nel_criterio": "utile consolidato",
+      "perche_non_e_issue": "l'utile consolidato non sostituisce il risultato della transazione delimitata",
+      "criterio_assenza": "Il deliverable non presenta utile consolidato come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "fattura in inglese",
+      "oggetto": "fattura in inglese",
+      "chiave_nel_criterio": "fattura in inglese",
+      "perche_non_e_issue": "la lingua inglese della fattura non e' un difetto di transfer pricing",
+      "criterio_assenza": "Il deliverable non presenta fattura in inglese come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "aliquota estera",
+      "oggetto": "aliquota estera",
+      "chiave_nel_criterio": "aliquota estera",
+      "perche_non_e_issue": "la differenza di aliquota non determina da sola il metodo",
+      "criterio_assenza": "Il deliverable non presenta aliquota estera come rilievo autonomo."
+    }
+  ]
+}

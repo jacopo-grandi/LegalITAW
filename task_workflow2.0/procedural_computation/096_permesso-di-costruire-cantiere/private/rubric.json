@@ -1,0 +1,973 @@
+{
+  "task_id": "WF2-096",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 48,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "La consegna contiene il file con il nome richiesto.",
+      "match_criteria": "Oggetto del criterio: La consegna contiene il file con il nome richiesto.\nPASS se: è presente construction_deadline_audit.md\nFAIL se: il file manca oppure il nome diverge.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "è presente construction_deadline_audit.md",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable assume come data di riferimento il 2 dicembre 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable assume come data di riferimento il 2 dicembre 2026.\nPASS se: compare «2 dicembre 2026» come data alla quale l'audit è riferito\nFAIL se: è assunta una data diversa, oppure la data di riferimento non compare.\nÈ indifferente: il formato della data.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare «2 dicembre 2026» come data alla quale l'audit è riferito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Ogni termine indica l'evento da cui decorre.",
+      "match_criteria": "Oggetto del criterio: Ogni termine indica l'evento da cui decorre.\nPASS se: ciascun termine riporta l'evento di decorrenza\nFAIL se: uno o più termini non indicano l'evento di decorrenza.\nÈ indifferente: la forma dell'indicazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta l'evento di decorrenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Ogni termine riporta il calcolo seguito.",
+      "match_criteria": "Oggetto del criterio: Ogni termine riporta il calcolo seguito.\nPASS se: ciascun termine riporta il passaggio aritmetico o la regola di computo applicata\nFAIL se: uno o più termini riportano il solo risultato.\nÈ indifferente: il livello di dettaglio del calcolo.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta il passaggio aritmetico o la regola di computo applicata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Ogni termine indica se alla data di riferimento è rispettato, scaduto o non ancora maturato.",
+      "match_criteria": "Oggetto del criterio: Ogni termine indica se alla data di riferimento è rispettato, scaduto o non ancora maturato.\nPASS se: ciascun termine riporta uno dei tre stati\nFAIL se: uno o più termini non riportano alcuno stato.\nÈ indifferente: le etichette usate per i tre stati.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascun termine riporta uno dei tre stati",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Ogni voce indica il documento del fascicolo da cui i dati provengono.",
+      "match_criteria": "Oggetto del criterio: Ogni voce indica il documento del fascicolo da cui i dati provengono.\nPASS se: ciascuna voce riporta il nome di almeno un allegato\nFAIL se: una o più voci non riportano alcun allegato.\nÈ indifferente: il numero degli allegati citati per voce.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce riporta il nome di almeno un allegato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non cita norme assenti dal reference pack.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita norme assenti dal reference pack.\nPASS se: Il deliverable non cita norme assenti dal reference pack.\nFAIL se: compare un riferimento a un atto o a un articolo che non figura in public/02_reference_pack.md.\nÈ indifferente: la scelta di non citare alcuna fonte in una singola voce.\nFonte di authoring: public/02_reference_pack.md e public/03_legal_sources.md",
+      "pass_condition": "Il deliverable non cita norme assenti dal reference pack.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che il termine di inizio dei lavori è stato rispettato.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il termine di inizio dei lavori è stato rispettato.\nPASS se: compare l'affermazione che il termine di inizio dei lavori è rispettato\nFAIL se: il termine di inizio è presentato come pendente o come scaduto.\nÈ indifferente: il richiamo alla data della comunicazione di inizio.\nFonte di authoring: 03_comunicazione_inizio_lavori.md",
+      "pass_condition": "compare l'affermazione che il termine di inizio dei lavori è rispettato",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable riconduce la decorrenza del termine di ultimazione all'inizio dei lavori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce la decorrenza del termine di ultimazione all'inizio dei lavori.\nPASS se: compare l'affermazione che il termine di ultimazione decorre dall'inizio dei lavori\nFAIL se: la decorrenza è ricondotta al rilascio del titolo o ad altro evento.\nÈ indifferente: il richiamo alla prescrizione del titolo che riproduce la regola.\nFonte di authoring: 01_permesso_di_costruire.md, punto 3.1; art. 15, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che il termine di ultimazione decorre dall'inizio dei lavori",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la sospensione dei lavori non proroga automaticamente il termine di ultimazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la sospensione dei lavori non proroga automaticamente il termine di ultimazione.\nPASS se: compare l'affermazione che il termine non si allunga automaticamente per effetto della sospensione\nFAIL se: è affermato che il termine si è allungato della durata della sospensione senza necessità di istanza.\nÈ indifferente: il richiamo alla durata dell'interruzione.\nFonte di authoring: art. 15, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che il termine non si allunga automaticamente per effetto della sospensione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che nel caso di iniziative dell'amministrazione rivelatesi infondate la proroga è comunque accordata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che nel caso di iniziative dell'amministrazione rivelatesi infondate la proroga è comunque accordata.\nPASS se: compare l'affermazione che la proroga è comunque accordata in quel caso\nFAIL se: la proroga è presentata come discrezionale anche in presenza di quel presupposto, oppure il punto non è trattato.\nÈ indifferente: il richiamo alla proroga discrezionale prevista per altri casi.\nFonte di authoring: art. 15, comma 2-bis, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che la proroga è comunque accordata in quel caso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable riconduce il presupposto della proroga all'accertamento contenuto nella determinazione di revoca.",
+      "match_criteria": "Oggetto del criterio: Il deliverable riconduce il presupposto della proroga all'accertamento contenuto nella determinazione di revoca.\nPASS se: il presupposto è ricondotto alla determinazione che accerta l'insussistenza della difformità\nFAIL se: il presupposto è ricondotto alla sola esistenza dell'ordinanza di sospensione.\nÈ indifferente: il richiamo alle distanze accertate nel sopralluogo congiunto.\nFonte di authoring: 05_provvedimento_revoca.md, punti 1 e 2",
+      "pass_condition": "il presupposto è ricondotto alla determinazione che accerta l'insussistenza della difformità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la proroga va richiesta anteriormente alla scadenza del termine di ultimazione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la proroga va richiesta anteriormente alla scadenza del termine di ultimazione.\nPASS se: compare l'affermazione che l'istanza va presentata prima della scadenza del termine\nFAIL se: è affermato che la proroga può essere richiesta anche dopo la scadenza, oppure il punto non è trattato.\nÈ indifferente: l'indicazione del momento in cui presentarla.\nFonte di authoring: art. 15, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'istanza va presentata prima della scadenza del termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che alla data di riferimento nessuna istanza di proroga risulta presentata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che alla data di riferimento nessuna istanza di proroga risulta presentata.\nPASS se: compare l'affermazione che nessuna istanza di proroga è stata presentata\nFAIL se: è affermato che la proroga è stata richiesta o ottenuta.\nÈ indifferente: il richiamo alla nota della direzione tecnica.\nFonte di authoring: 06_cronoprogramma_e_stato_avanzamento.md, punto 5",
+      "pass_condition": "compare l'affermazione che nessuna istanza di proroga è stata presentata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica la presentazione dell'istanza di proroga fra le azioni da compiere.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica la presentazione dell'istanza di proroga fra le azioni da compiere.\nPASS se: fra le azioni compare la presentazione dell'istanza di proroga\nFAIL se: l'azione non è indicata.\nÈ indifferente: il momento proposto per la presentazione.\nFonte di authoring: art. 15, commi 2 e 2-bis, del testo unico dell'edilizia",
+      "pass_condition": "fra le azioni compare la presentazione dell'istanza di proroga",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che l'interruzione è durata dal 15 giugno al 30 luglio 2026.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'interruzione è durata dal 15 giugno al 30 luglio 2026.\nPASS se: compare l'indicazione dell'intervallo fra le due date come durata dell'interruzione\nFAIL se: è indicato un intervallo diverso, oppure la durata non compare.\nÈ indifferente: il richiamo alla data di notificazione dei due provvedimenti.\nFonte di authoring: 04_ordinanza_sospensione_lavori.md; 05_provvedimento_revoca.md",
+      "pass_condition": "compare l'indicazione dell'intervallo fra le due date come durata dell'interruzione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che l'ultimazione programmata resta anteriore al termine di ultimazione del permesso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'ultimazione programmata resta anteriore al termine di ultimazione del permesso.\nPASS se: compare l'affermazione che la nuova data di programma precede il termine di legge\nFAIL se: è affermato che lo slittamento espone il titolo al rischio di decadenza, oppure il confronto non compare.\nÈ indifferente: l'indicazione del margine residuo.\nFonte di authoring: 06_cronoprogramma_e_stato_avanzamento.md, punti 1 e 4",
+      "pass_condition": "compare l'affermazione che la nuova data di programma precede il termine di legge",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable qualifica la mancata comunicazione della riprogrammazione come non imposta dal titolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable qualifica la mancata comunicazione della riprogrammazione come non imposta dal titolo.\nPASS se: compare, riferita alla comunicazione della riprogrammazione, una fra: «non è imposta dal titolo»; «non è un adempimento prescritto»; «non costituisce violazione di prescrizione»\nFAIL se: la mancata comunicazione è indicata come violazione di una prescrizione del titolo.\nÈ indifferente: la proposta di comunicarla comunque.\nFonte di authoring: 01_permesso_di_costruire.md, prescrizioni; 06_cronoprogramma_e_stato_avanzamento.md, punto 5",
+      "pass_condition": "compare, riferita alla comunicazione della riprogrammazione, una fra: «non è imposta dal titolo»; «non è un adempimento prescritto»; «non costituisce violazione di prescrizione»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica l'opportunità di portare l'interruzione a conoscenza dell'amministrazione ai fini dell'istanza di proroga.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica l'opportunità di portare l'interruzione a conoscenza dell'amministrazione ai fini dell'istanza di proroga.\nPASS se: fra le azioni compare la comunicazione dell'interruzione o della riprogrammazione a sostegno dell'istanza di proroga\nFAIL se: l'azione non è indicata.\nÈ indifferente: la forma proposta per la comunicazione.\nFonte di authoring: 06_cronoprogramma_e_stato_avanzamento.md, punto 5",
+      "pass_condition": "fra le azioni compare la comunicazione dell'interruzione o della riprogrammazione a sostegno dell'istanza di proroga",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la variante incrementa la superficie di solaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la variante incrementa la superficie di solaio.\nPASS se: compare l'affermazione che la variante comporta un incremento della superficie di solaio\nFAIL se: l'incremento non è rilevato, oppure è affermato che la variante non incide su alcun parametro.\nÈ indifferente: il richiamo alle grandezze che restano invariate.\nFonte di authoring: 07_relazione_direzione_lavori_variante.md, punto 3",
+      "pass_condition": "compare l'affermazione che la variante comporta un incremento della superficie di solaio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che volume fuori terra, superficie coperta, altezza e numero dei piani restano invariati.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che volume fuori terra, superficie coperta, altezza e numero dei piani restano invariati.\nPASS se: compare l'affermazione che quelle grandezze restano invariate\nFAIL se: è affermato che la variante incide anche su volume o sagoma.\nÈ indifferente: l'ordine in cui le grandezze sono elencate.\nFonte di authoring: 07_relazione_direzione_lavori_variante.md, punto 3",
+      "pass_condition": "compare l'affermazione che quelle grandezze restano invariate",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che l'aumento consistente della superficie di solaio è una delle condizioni in cui può ricorrere la variazione essenziale.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'aumento consistente della superficie di solaio è una delle condizioni in cui può ricorrere la variazione essenziale.\nPASS se: compare l'affermazione che l'aumento della superficie di solaio è fra le condizioni di essenzialità\nFAIL se: l'incremento è trattato come irrilevante ai fini dell'essenzialità.\nÈ indifferente: il richiamo al carattere tassativo dell'elenco.\nFonte di authoring: art. 32 del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'aumento della superficie di solaio è fra le condizioni di essenzialità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la determinazione delle variazioni essenziali è rimessa alla legge regionale e indica che il fascicolo non la contiene.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la determinazione delle variazioni essenziali è rimessa alla legge regionale e indica che il fascicolo non la contiene.\nPASS se: compare l'affermazione che la qualificazione dipende dalla legge regionale e l'indicazione che essa manca\nFAIL se: la variante è qualificata come essenziale o come non essenziale, oppure è dichiarata l'impossibilità di concludere senza indicare che cosa manca.\nÈ indifferente: l'esposizione della percentuale di incremento.\nFonte di authoring: art. 32 del testo unico dell'edilizia; 07_relazione_direzione_lavori_variante.md, punto 5.1",
+      "pass_condition": "compare l'affermazione che la qualificazione dipende dalla legge regionale e l'indicazione che essa manca",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable espone entrambi i percorsi, quello praticabile con segnalazione certificata se la variante non è essenziale e quello che richiede un titolo se lo è.",
+      "match_criteria": "Oggetto del criterio: Il deliverable espone entrambi i percorsi, quello praticabile con segnalazione certificata se la variante non è essenziale e quello che richiede un titolo se lo è.\nPASS se: compaiono entrambi i percorsi, ciascuno condizionato alla qualificazione\nFAIL se: è indicato un solo percorso come praticabile.\nÈ indifferente: l'ordine in cui i due percorsi sono esposti.\nFonte di authoring: art. 22, commi 2 e 2-bis, del testo unico dell'edilizia",
+      "pass_condition": "compaiono entrambi i percorsi, ciascuno condizionato alla qualificazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la segnalazione certificata per le varianti non essenziali presuppone l'acquisizione degli atti di assenso prescritti dalla normativa sui vincoli paesaggistici.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la segnalazione certificata per le varianti non essenziali presuppone l'acquisizione degli atti di assenso prescritti dalla normativa sui vincoli paesaggistici.\nPASS se: compare l'affermazione che l'assenso paesaggistico va acquisito prima dell'attuazione della variante\nFAIL se: la condizione non è indicata.\nÈ indifferente: il richiamo alla comunicazione a fine lavori con attestazione del professionista.\nFonte di authoring: art. 22, comma 2-bis, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'assenso paesaggistico va acquisito prima dell'attuazione della variante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable individua nella modifica dei materiali del fronte est e nell'arretramento della facciata sud gli elementi che richiedono la verifica paesaggistica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable individua nella modifica dei materiali del fronte est e nell'arretramento della facciata sud gli elementi che richiedono la verifica paesaggistica.\nPASS se: compaiono entrambi gli elementi come oggetto della verifica\nFAIL se: nessuno dei due elementi è individuato, oppure la verifica è riferita ad altro.\nÈ indifferente: l'indicazione di uno solo dei due elementi, purché sia la modifica dei materiali.\nFonte di authoring: 02_autorizzazione_paesaggistica.md, prescrizioni 1 e 2; 07_relazione_direzione_lavori_variante.md, punti 2.3 e 2.4",
+      "pass_condition": "compaiono entrambi gli elementi come oggetto della verifica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che l'assenso paesaggistico va acquisito prima dell'esecuzione, perché l'autorizzazione non può essere rilasciata in sanatoria dopo la realizzazione anche parziale degli interventi fuori dalle ipotesi tassative.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che l'assenso paesaggistico va acquisito prima dell'esecuzione, perché l'autorizzazione non può essere rilasciata in sanatoria dopo la realizzazione anche parziale degli interventi fuori dalle ipotesi tassative.\nPASS se: compare l'affermazione del carattere preventivo dell'assenso e del divieto di rilascio in sanatoria\nFAIL se: l'assenso è collocato dopo l'esecuzione, oppure il divieto non è menzionato.\nÈ indifferente: il richiamo alle ipotesi tassative di accertamento di compatibilità.\nFonte di authoring: art. 146, comma 4, del codice dei beni culturali e del paesaggio",
+      "pass_condition": "compare l'affermazione del carattere preventivo dell'assenso e del divieto di rilascio in sanatoria",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la variante realizzabile con segnalazione certificata va presentata prima della dichiarazione di ultimazione dei lavori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la variante realizzabile con segnalazione certificata va presentata prima della dichiarazione di ultimazione dei lavori.\nPASS se: compare l'affermazione che la presentazione precede la dichiarazione di ultimazione dei lavori\nFAIL se: la presentazione è collocata dopo l'ultimazione, oppure il vincolo temporale non è indicato.\nÈ indifferente: la collocazione della presentazione in una fase determinata del cronoprogramma.\nFonte di authoring: art. 22, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che la presentazione precede la dichiarazione di ultimazione dei lavori",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che, alla scadenza del termine, la parte non eseguita richiede un nuovo permesso salvo che rientri fra le opere realizzabili con segnalazione certificata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che, alla scadenza del termine, la parte non eseguita richiede un nuovo permesso salvo che rientri fra le opere realizzabili con segnalazione certificata.\nPASS se: compare l'affermazione che il nuovo titolo riguarda la parte non eseguita, con la riserva delle opere realizzabili con segnalazione\nFAIL se: è affermato che la scadenza travolge l'intero titolo, oppure la riserva non è indicata.\nÈ indifferente: il richiamo alla decadenza di diritto per la parte non eseguita.\nFonte di authoring: art. 15, comma 3, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che il nuovo titolo riguarda la parte non eseguita, con la riserva delle opere realizzabili con segnalazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che in caso di nuovo permesso si procede ove necessario al ricalcolo del contributo di costruzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che in caso di nuovo permesso si procede ove necessario al ricalcolo del contributo di costruzione.\nPASS se: compare l'affermazione che il contributo di costruzione può essere ricalcolato\nFAIL se: è affermato che il contributo già versato copre in ogni caso l'intervento, oppure il punto non è trattato.\nÈ indifferente: l'indicazione dell'importo già versato.\nFonte di authoring: art. 15, comma 3, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che il contributo di costruzione può essere ricalcolato",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che la segnalazione certificata di agibilità va presentata entro quindici giorni dall'ultimazione dei lavori di finitura.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che la segnalazione certificata di agibilità va presentata entro quindici giorni dall'ultimazione dei lavori di finitura.\nPASS se: compare l'indicazione del termine di quindici giorni dall'ultimazione dei lavori di finitura\nFAIL se: è indicato un termine diverso, oppure il termine non compare.\nÈ indifferente: il richiamo agli allegati richiesti.\nFonte di authoring: art. 24, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare l'indicazione del termine di quindici giorni dall'ultimazione dei lavori di finitura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che è ammessa l'agibilità parziale per singoli edifici o porzioni funzionalmente autonome e per singole unità immobiliari.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che è ammessa l'agibilità parziale per singoli edifici o porzioni funzionalmente autonome e per singole unità immobiliari.\nPASS se: compare l'affermazione che l'agibilità parziale è ammessa\nFAIL se: l'agibilità parziale è esclusa, oppure il punto non è trattato.\nÈ indifferente: l'indicazione delle condizioni previste.\nFonte di authoring: art. 24, comma 4, del testo unico dell'edilizia",
+      "pass_condition": "compare l'affermazione che l'agibilità parziale è ammessa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non indica la scadenza dell'autorizzazione paesaggistica fra i termini a rischio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica la scadenza dell'autorizzazione paesaggistica fra i termini a rischio.\nPASS se: Il deliverable non indica la scadenza dell'autorizzazione paesaggistica fra i termini a rischio.\nFAIL se: è affermato che l'autorizzazione paesaggistica scade prima della fine dei lavori, o che va rinnovata prima dell'ultimazione.\nÈ indifferente: la menzione dell'autorizzazione fra i titoli verificati e in corso di efficacia.\nFonte di authoring: 02_autorizzazione_paesaggistica.md, avvertenze",
+      "pass_condition": "Il deliverable non indica la scadenza dell'autorizzazione paesaggistica fra i termini a rischio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non indica l'impugnazione dell'ordinanza di sospensione fra le azioni.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica l'impugnazione dell'ordinanza di sospensione fra le azioni.\nPASS se: Il deliverable non indica l'impugnazione dell'ordinanza di sospensione fra le azioni.\nFAIL se: è indicata l'impugnazione dell'ordinanza o il calcolo del termine per il ricorso al giudice amministrativo.\nÈ indifferente: la menzione dell'ordinanza fra gli atti che hanno esaurito i propri effetti.\nFonte di authoring: 05_provvedimento_revoca.md",
+      "pass_condition": "Il deliverable non indica l'impugnazione dell'ordinanza di sospensione fra le azioni.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non invoca la proroga straordinaria di quarantotto mesi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non invoca la proroga straordinaria di quarantotto mesi.\nPASS se: Il deliverable non invoca la proroga straordinaria di quarantotto mesi.\nFAIL se: la proroga straordinaria di quarantotto mesi è indicata come applicabile al permesso.\nÈ indifferente: la menzione della proroga straordinaria per escluderne l'applicabilità in ragione della data di rilascio del titolo.\nFonte di authoring: 01_permesso_di_costruire.md, data di rilascio",
+      "pass_condition": "Il deliverable non invoca la proroga straordinaria di quarantotto mesi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non indica il versamento del contributo di costruzione fra gli adempimenti da compiere.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non indica il versamento del contributo di costruzione fra gli adempimenti da compiere.\nPASS se: Il deliverable non indica il versamento del contributo di costruzione fra gli adempimenti da compiere.\nFAIL se: il versamento del contributo di costruzione è indicato fra gli adempimenti mancanti.\nÈ indifferente: il richiamo al possibile ricalcolo in caso di nuovo permesso.\nFonte di authoring: 01_permesso_di_costruire.md, quietanza richiamata in premessa",
+      "pass_condition": "Il deliverable non indica il versamento del contributo di costruzione fra gli adempimenti da compiere.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non attribuisce a Pratomagno la responsabilità dell'interruzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non attribuisce a Pratomagno la responsabilità dell'interruzione.\nPASS se: Il deliverable non attribuisce a Pratomagno la responsabilità dell'interruzione.\nFAIL se: l'interruzione è descritta come imputabile alla titolare del permesso o alla direzione dei lavori.\nÈ indifferente: l'osservazione che la segnalazione che ha originato l'ordinanza proveniva da un terzo.\nFonte di authoring: 04_ordinanza_sospensione_lavori.md; 05_provvedimento_revoca.md",
+      "pass_condition": "Il deliverable non attribuisce a Pratomagno la responsabilità dell'interruzione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non presenta come acquisiti la proroga né l'assenso paesaggistico sulla variante.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non presenta come acquisiti la proroga né l'assenso paesaggistico sulla variante.\nPASS se: Il deliverable non presenta come acquisiti la proroga né l'assenso paesaggistico sulla variante.\nFAIL se: è affermato che la proroga sarà concessa, o che l'assenso paesaggistico sulla variante sarà rilasciato.\nÈ indifferente: l'indicazione dei presupposti su cui l'istanza si fonda.\nFonte di authoring: private/challenge_map.json, dati mancanti",
+      "pass_condition": "Il deliverable non presenta come acquisiti la proroga né l'assenso paesaggistico sulla variante.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica il 12 febbraio 2027 come termine massimo di inizio dei lavori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 12 febbraio 2027 come termine massimo di inizio dei lavori.\nPASS se: compare la data «12 febbraio 2027» riferita al termine di inizio dei lavori\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'osservazione che il termine è stato rispettato.\nFonte di authoring: art. 15, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare la data «12 febbraio 2027» riferita al termine di inizio dei lavori",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica l'11 maggio 2029 come termine di ultimazione dei lavori.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica l'11 maggio 2029 come termine di ultimazione dei lavori.\nPASS se: compare la data «11 maggio 2029» riferita al termine di ultimazione\nFAIL se: è indicata una data diversa, oppure il termine non compare.\nÈ indifferente: l'indicazione del margine residuo.\nFonte di authoring: art. 15, comma 2, del testo unico dell'edilizia",
+      "pass_condition": "compare la data «11 maggio 2029» riferita al termine di ultimazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non computa il termine di ultimazione dal rilascio del titolo.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa il termine di ultimazione dal rilascio del titolo.\nPASS se: Il deliverable non computa il termine di ultimazione dal rilascio del titolo.\nFAIL se: compare la data «12 febbraio 2029» come termine di ultimazione, oppure i tre anni sono computati dal rilascio del titolo.\nÈ indifferente: la menzione della data di rilascio in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non computa il termine di ultimazione dal rilascio del titolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica in quarantasei giorni la durata dell'interruzione.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in quarantasei giorni la durata dell'interruzione.\nPASS se: compare il numero «quarantasei giorni» riferito alla durata dell'interruzione\nFAIL se: è indicato un numero diverso, oppure la durata non è quantificata.\nÈ indifferente: l'indicazione dell'intervallo di date corrispondente.\nFonte di authoring: 04_ordinanza_sospensione_lavori.md; 05_provvedimento_revoca.md",
+      "pass_condition": "compare il numero «quarantasei giorni» riferito alla durata dell'interruzione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non usa i giorni lavorativi perduti come misura dello slittamento del cronoprogramma.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non usa i giorni lavorativi perduti come misura dello slittamento del cronoprogramma.\nPASS se: Il deliverable non usa i giorni lavorativi perduti come misura dello slittamento del cronoprogramma.\nFAIL se: lo slittamento del cronoprogramma è quantificato in giorni lavorativi anziché in giorni di calendario.\nÈ indifferente: la menzione dei giorni lavorativi perduti in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non usa i giorni lavorativi perduti come misura dello slittamento del cronoprogramma.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica il 25 maggio 2027 come ultimazione programmata dopo lo slittamento.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica il 25 maggio 2027 come ultimazione programmata dopo lo slittamento.\nPASS se: compare la data «25 maggio 2027» riferita all'ultimazione programmata\nFAIL se: è indicata una data diversa, oppure la data non compare.\nÈ indifferente: il richiamo alla data del cronoprogramma originario.\nFonte di authoring: 06_cronoprogramma_e_stato_avanzamento.md, punto 4",
+      "pass_condition": "compare la data «25 maggio 2027» riferita all'ultimazione programmata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable afferma che il quinquennio di efficacia dell'autorizzazione paesaggistica decorre dal giorno in cui acquista efficacia il titolo edilizio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable afferma che il quinquennio di efficacia dell'autorizzazione paesaggistica decorre dal giorno in cui acquista efficacia il titolo edilizio.\nPASS se: compare l'affermazione che il quinquennio decorre dall'efficacia del titolo edilizio\nFAIL se: il quinquennio è computato dalla data di rilascio dell'autorizzazione.\nÈ indifferente: l'indicazione della data di scadenza risultante.\nFonte di authoring: 02_autorizzazione_paesaggistica.md, avvertenze",
+      "pass_condition": "compare l'affermazione che il quinquennio decorre dall'efficacia del titolo edilizio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable non computa il quinquennio di efficacia dalla data di rilascio dell'autorizzazione paesaggistica.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non computa il quinquennio di efficacia dalla data di rilascio dell'autorizzazione paesaggistica.\nPASS se: Il deliverable non computa il quinquennio di efficacia dalla data di rilascio dell'autorizzazione paesaggistica.\nFAIL se: compare la data «2 marzo 2028» come scadenza dell'autorizzazione paesaggistica, oppure il quinquennio è computato dal 2 marzo 2023.\nÈ indifferente: la menzione della data di rilascio dell'autorizzazione in altra funzione.\nFonte di authoring: derivazione da escludere",
+      "pass_condition": "Il deliverable non computa il quinquennio di efficacia dalla data di rilascio dell'autorizzazione paesaggistica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica in 240 metri quadrati l'incremento della superficie di solaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica in 240 metri quadrati l'incremento della superficie di solaio.\nPASS se: compare la misura «240» riferita all'incremento della superficie di solaio\nFAIL se: è indicata una misura diversa, oppure l'incremento non compare.\nÈ indifferente: l'unità di misura usata.\nFonte di authoring: 07_relazione_direzione_lavori_variante.md, punto 3",
+      "pass_condition": "compare la misura «240» riferita all'incremento della superficie di solaio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "construction_deadline_audit.md"
+      ],
+      "title": "Il deliverable indica nel 14,63 per cento l'incremento percentuale della superficie di solaio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable indica nel 14,63 per cento l'incremento percentuale della superficie di solaio.\nPASS se: compare la percentuale «14,63» riferita all'incremento della superficie di solaio\nFAIL se: è indicata una percentuale diversa, oppure la percentuale non compare.\nÈ indifferente: il numero di decimali usato.\nFonte di authoring: 07_relazione_direzione_lavori_variante.md, punto 3",
+      "pass_condition": "compare la percentuale «14,63» riferita all'incremento della superficie di solaio",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

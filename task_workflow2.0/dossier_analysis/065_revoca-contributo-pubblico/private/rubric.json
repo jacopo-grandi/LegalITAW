@@ -1,0 +1,953 @@
+{
+  "task_id": "WF2-065",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 47,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "esistono tutti i file di consegna richiesti dalla consegna.",
+      "match_criteria": "Oggetto del criterio: esistono tutti i file di consegna richiesti dalla consegna.\nPASS se: ogni file atteso esiste con il nome indicato\nFAIL se: manca almeno un file atteso; non esistono esiti intermedi.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ogni file atteso esiste con il nome indicato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "ogni allegato pubblico elencato nell'incarico e' richiamato almeno una volta nel deliverable.",
+      "match_criteria": "Oggetto del criterio: ogni allegato pubblico elencato nell'incarico e' richiamato almeno una volta nel deliverable.\nPASS se: tutti gli allegati sono richiamati\nFAIL se: almeno un allegato non e' richiamato; non esistono esiti intermedi.\nFonte di authoring: 01_task.md",
+      "pass_condition": "tutti gli allegati sono richiamati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non cita fonti esterne all'elenco chiuso.",
+      "match_criteria": "Oggetto del criterio: il deliverable non cita fonti esterne all'elenco chiuso.\nPASS se: ogni fonte citata compare in 03_legal_sources.md\nFAIL se: FAIL se compare almeno una fonte non inclusa nell'elenco chiuso; PASS negli altri casi.\nFonte di authoring: 03_legal_sources.md",
+      "pass_condition": "ogni fonte citata compare in 03_legal_sources.md",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "fatti, inferenze e dati mancanti hanno etichette distinguibili.",
+      "match_criteria": "Oggetto del criterio: fatti, inferenze e dati mancanti hanno etichette distinguibili.\nPASS se: le tre categorie sono distinguibili\nFAIL se: almeno due categorie sono fuse; non esistono esiti intermedi.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "le tre categorie sono distinguibili",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni.\nPASS se: la proposizione compare in una frase autonoma: il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni\nFAIL se: FAIL se la proposizione «il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 05",
+      "pass_condition": "la proposizione compare in una frase autonoma: il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il preavviso invoca revoca d'interesse pubblico ma descrive decadenza per condizioni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che l'autorizzazione sposta due assunzioni al 30 settembre.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'autorizzazione sposta due assunzioni al 30 settembre.\nPASS se: la proposizione compare in una frase autonoma: l'autorizzazione sposta due assunzioni al 30 settembre; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: l'autorizzazione sposta due assunzioni al 30 settembre\nFAIL se: FAIL se la proposizione «l'autorizzazione sposta due assunzioni al 30 settembre» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 01, doc. 03 e doc. 06",
+      "pass_condition": "la proposizione compare in una frase autonoma: l'autorizzazione sposta due assunzioni al 30 settembre; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: l'autorizzazione sposta due assunzioni al 30 settembre",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che EUR 220.000 non provengono da risorse libere.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che EUR 220.000 non provengono da risorse libere.\nPASS se: nel deliverable compare «EUR 220.000 non provengono da risorse libere»\nFAIL se: FAIL se manca «EUR 220.000 non provengono da risorse libere», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "nel deliverable compare «EUR 220.000 non provengono da risorse libere»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi.\nPASS se: la proposizione compare in una frase autonoma: il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi\nFAIL se: FAIL se la proposizione «il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "la proposizione compare in una frase autonoma: il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il finanziamento agevolato non prova da solo doppio finanziamento dei medesimi costi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che EUR 2.630.000 di costi non sono contestati.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che EUR 2.630.000 di costi non sono contestati.\nPASS se: nel deliverable compare «EUR 2.630.000 di costi non sono contestati»\nFAIL se: FAIL se manca «EUR 2.630.000 di costi non sono contestati», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 03 e doc. 04",
+      "pass_condition": "nel deliverable compare «EUR 2.630.000 di costi non sono contestati»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che il 40% di EUR 2.630.000 e' EUR 1.052.000.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il 40% di EUR 2.630.000 e' EUR 1.052.000.\nPASS se: nel deliverable compare «il 40% di EUR 2.630.000 e' EUR 1.052.000»\nFAIL se: FAIL se manca «il 40% di EUR 2.630.000 e' EUR 1.052.000», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 01 e doc. 04",
+      "pass_condition": "nel deliverable compare «il 40% di EUR 2.630.000 e' EUR 1.052.000»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che il termine assegnato scade il 22 gennaio 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine assegnato scade il 22 gennaio 2029.\nPASS se: nel deliverable compare «il termine assegnato scade il 22 gennaio 2029»\nFAIL se: FAIL se manca «il termine assegnato scade il 22 gennaio 2029», se un valore o una data differiscono, oppure se il rapporto logico e' invertito. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; maiuscole, apostrofi tipografici e punteggiatura finale.\nFonte di authoring: doc. 05",
+      "pass_condition": "nel deliverable compare «il termine assegnato scade il 22 gennaio 2029»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che la beneficiaria ha pianificato assunzioni sullo slittamento scritto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la beneficiaria ha pianificato assunzioni sullo slittamento scritto.\nPASS se: la proposizione compare in una frase autonoma: la beneficiaria ha pianificato assunzioni sullo slittamento scritto; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: la beneficiaria ha pianificato assunzioni sullo slittamento scritto\nFAIL se: FAIL se la proposizione «la beneficiaria ha pianificato assunzioni sullo slittamento scritto» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 06",
+      "pass_condition": "la proposizione compare in una frase autonoma: la beneficiaria ha pianificato assunzioni sullo slittamento scritto; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: la beneficiaria ha pianificato assunzioni sullo slittamento scritto",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che il preavviso e' firmato dal responsabile controllo e non indica delega al recupero.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il preavviso e' firmato dal responsabile controllo e non indica delega al recupero.\nPASS se: la proposizione compare in una frase autonoma: il preavviso e' firmato dal responsabile controllo e non indica delega al recupero; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il preavviso e' firmato dal responsabile controllo e non indica delega al recupero\nFAIL se: FAIL se la proposizione «il preavviso e' firmato dal responsabile controllo e non indica delega al recupero» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 05",
+      "pass_condition": "la proposizione compare in una frase autonoma: il preavviso e' firmato dal responsabile controllo e non indica delega al recupero; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: il preavviso e' firmato dal responsabile controllo e non indica delega al recupero",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che mancano tasso, decorrenza e base.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che mancano tasso, decorrenza e base.\nPASS se: la proposizione compare in una frase autonoma: mancano tasso, decorrenza e base; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: mancano tasso, decorrenza e base\nFAIL se: FAIL se la proposizione «mancano tasso, decorrenza e base» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 05",
+      "pass_condition": "la proposizione compare in una frase autonoma: mancano tasso, decorrenza e base; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: mancano tasso, decorrenza e base",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere.\nPASS se: la proposizione compare in una frase autonoma: la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere\nFAIL se: FAIL se la proposizione «la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 02",
+      "pass_condition": "la proposizione compare in una frase autonoma: la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: la dichiarazione era vera secondo la classificazione interna ma non e' supportata da parere",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable afferma che oggi esiste soltanto preavviso.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che oggi esiste soltanto preavviso.\nPASS se: la proposizione compare in una frase autonoma: oggi esiste soltanto preavviso; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: oggi esiste soltanto preavviso\nFAIL se: FAIL se la proposizione «oggi esiste soltanto preavviso» manca, e' negata o cambia soggetto, valore o rapporto logico; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma in prosa o tabella e ordine delle parole.\nFonte di authoring: doc. 05",
+      "pass_condition": "la proposizione compare in una frase autonoma: oggi esiste soltanto preavviso; la proposizione compare in una riga di tabella con tutti i soggetti, valori e rapporti logici: oggi esiste soltanto preavviso",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce qualificazione incoerente del potere a doc. 05.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce qualificazione incoerente del potere a doc. 05.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05\nFAIL se: FAIL se doc. 05 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 05",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce milestone modificata a doc. 01, doc. 03 e doc. 06.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce milestone modificata a doc. 01, doc. 03 e doc. 06.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 01, doc. 03 e doc. 06; un richiamo immediatamente adiacente collega il punto a doc. 01, doc. 03 e doc. 06\nFAIL se: FAIL se doc. 01, doc. 03 e doc. 06 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 01, doc. 03 e doc. 06",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 01, doc. 03 e doc. 06; un richiamo immediatamente adiacente collega il punto a doc. 01, doc. 03 e doc. 06",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce apporto proprio parzialmente agevolato a doc. 02 e doc. 03.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce apporto proprio parzialmente agevolato a doc. 02 e doc. 03.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03\nFAIL se: FAIL se doc. 02 e doc. 03 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce cumulo non dimostrato a doc. 02 e doc. 03.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce cumulo non dimostrato a doc. 02 e doc. 03.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03\nFAIL se: FAIL se doc. 02 e doc. 03 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02 e doc. 03; un richiamo immediatamente adiacente collega il punto a doc. 02 e doc. 03",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce recupero integrale non proporzionato a doc. 03 e doc. 04.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce recupero integrale non proporzionato a doc. 03 e doc. 04.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 03 e doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 03 e doc. 04\nFAIL se: FAIL se doc. 03 e doc. 04 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 03 e doc. 04",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 03 e doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 03 e doc. 04",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce tetto del 40% a doc. 01 e doc. 04.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce tetto del 40% a doc. 01 e doc. 04.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 01 e doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 01 e doc. 04\nFAIL se: FAIL se doc. 01 e doc. 04 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 01 e doc. 04",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 01 e doc. 04; un richiamo immediatamente adiacente collega il punto a doc. 01 e doc. 04",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce partecipazione procedimentale a doc. 05.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce partecipazione procedimentale a doc. 05.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05\nFAIL se: FAIL se doc. 05 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 05",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce affidamento sull'autorizzazione a doc. 06.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce affidamento sull'autorizzazione a doc. 06.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 06; un richiamo immediatamente adiacente collega il punto a doc. 06\nFAIL se: FAIL se doc. 06 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 06",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 06; un richiamo immediatamente adiacente collega il punto a doc. 06",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce competenza del firmatario a doc. 05.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce competenza del firmatario a doc. 05.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05\nFAIL se: FAIL se doc. 05 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 05",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce interessi non calcolabili a doc. 05.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce interessi non calcolabili a doc. 05.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05\nFAIL se: FAIL se doc. 05 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 05",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce dichiarazione da contestualizzare a doc. 02.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce dichiarazione da contestualizzare a doc. 02.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 02; un richiamo immediatamente adiacente collega il punto a doc. 02\nFAIL se: FAIL se doc. 02 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 02",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 02; un richiamo immediatamente adiacente collega il punto a doc. 02",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable riconduce tutela dopo il provvedimento a doc. 05.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce tutela dopo il provvedimento a doc. 05.\nPASS se: la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05\nFAIL se: FAIL se doc. 05 non e' collegata al punto, se e' collegata a un punto diverso o se e' sostituita da una fonte non ammessa; PASS solo in uno dei due casi elencati.\nÈ indifferente: forma del richiamo: doc., documento, clausola, riga o nota.\nFonte di authoring: doc. 05",
+      "pass_condition": "la stessa frase, riga di tabella o nota collega il punto a doc. 05; un richiamo immediatamente adiacente collega il punto a doc. 05",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede chiedere individuazione della base e dei presupposti.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede chiedere individuazione della base e dei presupposti.\nPASS se: il deliverable chiede l'azione «chiedere individuazione della base e dei presupposti» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «chiedere individuazione della base e dei presupposti» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 05",
+      "pass_condition": "il deliverable chiede l'azione «chiedere individuazione della base e dei presupposti» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede opporre il provvedimento autorizzativo al dato del 30 giugno.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede opporre il provvedimento autorizzativo al dato del 30 giugno.\nPASS se: il deliverable chiede l'azione «opporre il provvedimento autorizzativo al dato del 30 giugno» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «opporre il provvedimento autorizzativo al dato del 30 giugno» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 01, doc. 03 e doc. 06",
+      "pass_condition": "il deliverable chiede l'azione «opporre il provvedimento autorizzativo al dato del 30 giugno» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione.\nPASS se: il deliverable chiede l'azione «verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "il deliverable chiede l'azione «verificare se il bando esclude ogni finanza agevolata e rettificare la dichiarazione» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede acquisire contratto e tracciatura per costo.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede acquisire contratto e tracciatura per costo.\nPASS se: il deliverable chiede l'azione «acquisire contratto e tracciatura per costo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «acquisire contratto e tracciatura per costo» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 02 e doc. 03",
+      "pass_condition": "il deliverable chiede l'azione «acquisire contratto e tracciatura per costo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede costruire scenario di riduzione proporzionale e motivazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede costruire scenario di riduzione proporzionale e motivazione.\nPASS se: il deliverable chiede l'azione «costruire scenario di riduzione proporzionale e motivazione» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «costruire scenario di riduzione proporzionale e motivazione» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 03 e doc. 04",
+      "pass_condition": "il deliverable chiede l'azione «costruire scenario di riduzione proporzionale e motivazione» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede confrontare il contributo erogato di EUR 1.050.000.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede confrontare il contributo erogato di EUR 1.050.000.\nPASS se: il deliverable chiede l'azione «confrontare il contributo erogato di EUR 1.050.000» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «confrontare il contributo erogato di EUR 1.050.000» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 01 e doc. 04",
+      "pass_condition": "il deliverable chiede l'azione «confrontare il contributo erogato di EUR 1.050.000» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede depositare osservazioni e richiesta di accesso entro la data.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede depositare osservazioni e richiesta di accesso entro la data.\nPASS se: il deliverable chiede l'azione «depositare osservazioni e richiesta di accesso entro la data» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «depositare osservazioni e richiesta di accesso entro la data» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 05",
+      "pass_condition": "il deliverable chiede l'azione «depositare osservazioni e richiesta di accesso entro la data» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede documentare costi e decisioni conseguenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede documentare costi e decisioni conseguenti.\nPASS se: il deliverable chiede l'azione «documentare costi e decisioni conseguenti» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «documentare costi e decisioni conseguenti» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 06",
+      "pass_condition": "il deliverable chiede l'azione «documentare costi e decisioni conseguenti» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede acquisire atto organizzativo.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede acquisire atto organizzativo.\nPASS se: il deliverable chiede l'azione «acquisire atto organizzativo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «acquisire atto organizzativo» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 05",
+      "pass_condition": "il deliverable chiede l'azione «acquisire atto organizzativo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede chiedere prospetto di calcolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede chiedere prospetto di calcolo.\nPASS se: il deliverable chiede l'azione «chiedere prospetto di calcolo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «chiedere prospetto di calcolo» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 05",
+      "pass_condition": "il deliverable chiede l'azione «chiedere prospetto di calcolo» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede ricostruire istruttoria e conoscenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede ricostruire istruttoria e conoscenza.\nPASS se: il deliverable chiede l'azione «ricostruire istruttoria e conoscenza» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «ricostruire istruttoria e conoscenza» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 02",
+      "pass_condition": "il deliverable chiede l'azione «ricostruire istruttoria e conoscenza» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable richiede preservare motivi e prova senza descrivere come gia' adottato il recupero.",
+      "match_criteria": "Oggetto del criterio: il deliverable richiede preservare motivi e prova senza descrivere come gia' adottato il recupero.\nPASS se: il deliverable chiede l'azione «preservare motivi e prova senza descrivere come gia' adottato il recupero» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).\nFAIL se: l'azione manca; oppure è solo eventuale, facoltativa o rinviata a una valutazione successiva («valutare se», «eventualmente», «si potrebbe»); oppure è indicata in modo così generico che «preservare motivi e prova senza descrivere come gia' adottato il recupero» non è riconoscibile; oppure è sostituita da un'azione incompatibile.\nÈ indifferente: chi deve compiere l'azione e con quale priorità; la forma (richiesta, raccomandazione vincolante o modifica già apportata).\nFonte di authoring: doc. 05",
+      "pass_condition": "il deliverable chiede l'azione «preservare motivi e prova senza descrivere come gia' adottato il recupero» come passo da compiere, e non come semplice possibilità, oppure la esegue direttamente (per esempio nel testo rivisto, nella tabella o nella cronologia).",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable indica come conseguenza di qualificazione incoerente del potere che difesa e conseguenze economiche dipendono dalla qualificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come conseguenza di qualificazione incoerente del potere che difesa e conseguenze economiche dipendono dalla qualificazione.\nPASS se: la conseguenza e' espressa nel testo: difesa e conseguenze economiche dipendono dalla qualificazione; la conseguenza compare in una cella dedicata della matrice: difesa e conseguenze economiche dipendono dalla qualificazione\nFAIL se: FAIL se manca «difesa e conseguenze economiche dipendono dalla qualificazione» o compare una conseguenza incompatibile; PASS solo in uno dei due casi elencati.\nÈ indifferente: collocazione in prosa o tabella.\nFonte di authoring: doc. 05",
+      "pass_condition": "la conseguenza e' espressa nel testo: difesa e conseguenze economiche dipendono dalla qualificazione; la conseguenza compare in una cella dedicata della matrice: difesa e conseguenze economiche dipendono dalla qualificazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento cambio di amministratore (visura richiamata nel doc. 03).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento cambio di amministratore (visura richiamata nel doc. 03).\nPASS se: sovra-segnalazione - cambio di amministratore non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - cambio di amministratore e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: visura richiamata nel doc. 03",
+      "pass_condition": "sovra-segnalazione - cambio di amministratore non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento rinomina del progetto (doc. 04).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento rinomina del progetto (doc. 04).\nPASS se: sovra-segnalazione - rinomina del progetto non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - rinomina del progetto e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 04",
+      "pass_condition": "sovra-segnalazione - rinomina del progetto non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento scarto di EUR 2.000 (doc. 04).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento scarto di EUR 2.000 (doc. 04).\nPASS se: sovra-segnalazione - scarto di EUR 2.000 non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - scarto di EUR 2.000 e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 04",
+      "pass_condition": "sovra-segnalazione - scarto di EUR 2.000 non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non segnala come rischio, criticita' o inadempimento due assunzioni differite (doc. 06).",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come rischio, criticita' o inadempimento due assunzioni differite (doc. 06).\nPASS se: sovra-segnalazione - due assunzioni differite non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se sovra-segnalazione - due assunzioni differite e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 06",
+      "pass_condition": "sovra-segnalazione - due assunzioni differite non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable applica lo stesso test ai due addebiti del preavviso (milestone occupazionale e fonte dell'apporto proprio): base documentale, qualificazione e conseguenza economica.",
+      "match_criteria": "Oggetto del criterio: il deliverable applica lo stesso test ai due addebiti del preavviso (milestone occupazionale e fonte dell'apporto proprio): base documentale, qualificazione e conseguenza economica.\nPASS se: per ciascuna delle voci indicate nell'oggetto del criterio il deliverable riporta tutti gli elementi richiesti, applicando a ogni voce lo stesso test\nFAIL se: almeno una delle voci non e' esaminata, oppure per almeno una voce manca uno degli elementi richiesti, oppure le voci sono esaminate con criteri diversi senza che la differenza sia motivata\nÈ indifferente: l'ordine delle voci, la forma (tabella o testo) e la scelta lessicale, purche' ogni elemento sia riconoscibile per ciascuna voce\nFonte di authoring: doc. 03 e doc. 05",
+      "pass_condition": "per ciascuna delle voci indicate nell'oggetto del criterio il deliverable riporta tutti gli elementi richiesti, applicando a ogni voce lo stesso test",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "revocation_issue_matrix.md"
+      ],
+      "title": "il deliverable non afferma che il procedimento si concludera' senza recupero del contributo.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il procedimento si concludera' senza recupero del contributo.\nPASS se: presunzione dell'esito non e' presentato come rischio, criticita', inadempimento o conclusione negativa\nFAIL se: FAIL se presunzione dell'esito e' presentato anche una sola volta come rischio, criticita', inadempimento o conclusione negativa; PASS altrimenti.\nÈ indifferente: la mera menzione fattuale fuori da elenchi o conclusioni negative.\nFonte di authoring: doc. 05",
+      "pass_condition": "presunzione dell'esito non e' presentato come rischio, criticita', inadempimento o conclusione negativa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-benchmark-audited-draft"
+  }
+}

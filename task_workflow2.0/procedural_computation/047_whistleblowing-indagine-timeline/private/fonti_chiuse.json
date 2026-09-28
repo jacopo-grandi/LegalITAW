@@ -1,0 +1,20 @@
+{
+  "task_id": "WF2-047",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 10 marzo 2023, n. 24 - artt. 4, 5, 12, 14, 16 e 17",
+      "url": "https://www.normattiva.it/eli/stato/DECRETO_LEGISLATIVO/2023/03/10/24/CONSOLIDATED",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    },
+    {
+      "riferimento": "Regolamento (UE) 2016/679 - artt. 5, 6 e 32",
+      "url": "https://eur-lex.europa.eu/eli/reg/2016/679/oj?locale=it",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale",
+      "regola_sostenuta": "Perimetro degli articoli indicati nel reference pack; conferma finale riservata al legal sign-off."
+    }
+  ]
+}

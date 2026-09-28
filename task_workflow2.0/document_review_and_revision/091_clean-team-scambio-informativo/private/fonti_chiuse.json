@@ -1,0 +1,41 @@
+{
+  "task_id": "WF2-091",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "art. 101",
+      "corpus": "Trattato sul funzionamento dell'Unione europea (versione consolidata 2016)",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:12016E101",
+      "regola_sostenuta": "vieta accordi e pratiche concordate fra imprese che abbiano per oggetto o per effetto di restringere la concorrenza nel mercato interno; il par. 2 dichiara nulli di pieno diritto gli accordi vietati",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "L. 287/1990, artt. 2, 16, 17, 18, 19",
+      "corpus": "Legge 10 ottobre 1990, n. 287",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1990-10-10;287",
+      "regola_sostenuta": "l'art. 2 vieta le intese che restringono la concorrenza «in maniera consistente» e le dichiara nulle ad ogni effetto; l'art. 16, comma 1, impone la comunicazione preventiva delle concentrazioni al superamento cumulativo di due soglie di fatturato nazionale e il comma 1-bis consente all'Autorità di richiedere la notifica di operazioni sotto soglia; l'art. 17 attribuisce all'Autorità il potere di ordinare la sospensione della realizzazione; l'art. 18, comma 3, presuppone che l'operazione possa essere già stata realizzata; l'art. 19, comma 2, sanziona l'omessa comunicazione preventiva",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "punti 371, 385, 389, 390, 391, 393, 394, 406, 407, 408",
+      "corpus": "Comunicazione della Commissione - Linee direttrici sull'applicabilità dell'articolo 101 TFUE agli accordi di cooperazione orizzontale (2023/C 259/01)",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:52023XC0721(01)",
+      "regola_sostenuta": "il punto 371 tiene fermo l'art. 101 per ogni condotta restrittiva non direttamente connessa e necessaria all'attuazione dell'acquisizione del controllo, con valutazione da svolgersi lungo tutto il processo; i punti 389-391 trattano la maggiore sensibilità dei dati individualizzati rispetto a quelli aggregati; i punti 393-394 collegano il carattere storico del dato al ciclo di prezzo o di contratto del settore, senza fissare una soglia numerica; i punti 406-408 descrivono il clean team come misura destinata a ridurre il rischio, fondata sul principio della necessità di sapere e sull'aggregazione",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "artt. 1 e 7",
+      "corpus": "Regolamento (CE) n. 139/2004 del Consiglio",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32004R0139",
+      "regola_sostenuta": "l'art. 1 definisce la dimensione comunitaria di una concentrazione in funzione di soglie di fatturato; l'art. 7 vieta la realizzazione di una concentrazione di dimensione comunitaria prima della notifica e prima della dichiarazione di compatibilità",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "provvedimento n. 31873 del 10 marzo 2026",
+      "corpus": "Autorità garante della concorrenza e del mercato - soglie di fatturato per l'obbligo di comunicazione delle concentrazioni",
+      "url": "https://www.agcm.it/competenze/tutela-della-concorrenza/operazioni-di-concentrazione/soglie-di-fatturato",
+      "regola_sostenuta": "fissa in 595 milioni di euro la soglia riferita all'insieme delle imprese interessate e in 36 milioni di euro quella riferita individualmente ad almeno due di esse, per effetto dell'aggiornamento annuale previsto dall'art. 16, comma 1",
+      "verificata_il": "2026-09-02"
+    }
+  ]
+}

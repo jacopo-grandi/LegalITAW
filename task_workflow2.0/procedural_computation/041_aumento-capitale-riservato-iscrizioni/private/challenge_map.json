@@ -1,0 +1,180 @@
+{
+  "task_id": "WF2-041",
+  "lato_assistito": "Roccabruna Tecnologie S.p.A., società emittente",
+  "data_di_riferimento": "2026-08-27",
+  "stato_del_fascicolo": "delibera iscritta; sottoscrizione ricevuta, ma attestazione di esecuzione non ancora depositata",
+  "fonti_ammesse": [
+    "cc"
+  ],
+  "dati_mancanti": [],
+  "calcoli": [
+    "euro 400.000",
+    "euro 1.000.000"
+  ],
+  "errori_bersaglio": [
+    "nuova assemblea per attestare l'esecuzione",
+    "efficacia prima dell'iscrizione della delibera",
+    "opzione aperta a tutti i soci",
+    "aumento nominale di euro 1.000.000",
+    "capitale già aggiornato in visura"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "capitale precedente interamente liberato",
+      "gravita": "alta",
+      "affermazione_richiesta": "il capitale precedente risulta interamente liberato prima della delibera",
+      "evidenza": "la situazione contabile al 30 giugno riporta capitale euro 1.200.000 e versamenti ancora dovuti pari a zero",
+      "azione": "citare il controllo come prerequisito già soddisfatto",
+      "cautela": "non confondere il controllo con un nuovo versamento"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "data della delibera",
+      "gravita": "alta",
+      "affermazione_richiesta": "la delibera è stata adottata il 3 agosto 2026",
+      "evidenza": "il verbale notarile reca la data 3 agosto 2026",
+      "azione": "collocare la delibera come primo evento della timeline",
+      "cautela": "non anticipare la sottoscrizione alla delibera"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "iscrizione della delibera",
+      "gravita": "alta",
+      "affermazione_richiesta": "la delibera è stata iscritta il 7 agosto 2026",
+      "evidenza": "la visura distingue deposito 5 agosto e iscrizione 7 agosto",
+      "azione": "riportare entrambe le date con funzione diversa",
+      "cautela": "non usare la data di deposito come data di iscrizione"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "riserva a un investitore",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'offerta è riservata a Selciato Investimenti II S.r.l.",
+      "evidenza": "il verbale individua il sottoscrittore e motiva l'esclusione del diritto di opzione",
+      "azione": "collegare la sottoscrizione al soggetto nominato",
+      "cautela": "non aprire l'offerta ad altri soggetti"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "importo dell'aumento",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'aumento deliberato è pari a euro 400.000 oltre euro 600.000 di soprapprezzo",
+      "evidenza": "il verbale separa nominale e soprapprezzo",
+      "azione": "tenere distinti nominale, soprapprezzo e totale versato",
+      "cautela": "non sommare il soprapprezzo al capitale nominale"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "sottoscrizione integrale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sottoscrizione integrale è avvenuta il 21 agosto 2026",
+      "evidenza": "la scheda è firmata digitalmente il 21 agosto",
+      "azione": "far decorrere da questa data il termine per l'attestazione",
+      "cautela": "non far decorrere il termine dal bonifico"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "versamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'accredito di euro 1.000.000 è avvenuto il 24 agosto 2026",
+      "evidenza": "la contabile bancaria riporta valuta e disponibilità 24 agosto",
+      "azione": "allegare la contabile al fascicolo del deposito",
+      "cautela": "non descrivere come pendente un accredito già disponibile"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "termine attestazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di trenta giorni decorre dalla sottoscrizione del 21 agosto 2026",
+      "evidenza": "la norma collega il deposito all'avvenuta sottoscrizione; il fascicolo indica sottoscrizione e accredito in giorni diversi",
+      "azione": "calendarizzare il deposito entro il 20 settembre 2026",
+      "cautela": "non calcolare dal 24 agosto"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "attestazione non depositata",
+      "gravita": "alta",
+      "affermazione_richiesta": "alla data di riferimento l'attestazione di esecuzione non risulta depositata",
+      "evidenza": "la visura è aggiornata al 27 agosto e l'email del notaio chiede ancora i documenti",
+      "azione": "assegnare agli amministratori la firma dell'attestazione",
+      "cautela": "non dichiarare già aggiornato il capitale iscritto"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "aggiornamento statutario",
+      "gravita": "alta",
+      "affermazione_richiesta": "il testo statutario coordinato segue il deposito dell'attestazione",
+      "evidenza": "l'email notarile lo include nel pacchetto residuo",
+      "azione": "preparare il testo coordinato senza retrodatare l'efficacia",
+      "cautela": "non trattare il testo coordinato come prova dell'esecuzione"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "data di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "la fotografia del fascicolo va fermata al 27 agosto 2026",
+      "evidenza": "prompt, visura ed email riportano lo stesso cut-off",
+      "azione": "marcare come successivi solo gli adempimenti non compiuti",
+      "cautela": "non usare eventi ipotetici come fatti"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "responsabilità operativa",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli amministratori curano l'attestazione e il notaio il deposito telematico concordato",
+      "evidenza": "l'email assegna firma agli amministratori e invio al notaio",
+      "azione": "separare responsabile sostanziale ed esecutore del deposito",
+      "cautela": "non attribuire al notaio la dichiarazione degli amministratori"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "nuova assemblea per attestare l'esecuzione",
+      "chiave_nel_criterio": "nuova assemblea per attestare l'esecuzione"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "efficacia prima dell'iscrizione della delibera",
+      "chiave_nel_criterio": "efficacia prima dell'iscrizione della delibera"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "opzione aperta a tutti i soci",
+      "chiave_nel_criterio": "opzione aperta a tutti i soci"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "aumento nominale di euro 1.000.000",
+      "chiave_nel_criterio": "aumento nominale di euro 1.000.000"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "capitale già aggiornato in visura",
+      "chiave_nel_criterio": "capitale già aggiornato in visura"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_statuto_e_capitale_pre_aumento.pdf",
+      "funzione": "Estratto statuto e situazione del capitale"
+    },
+    {
+      "file": "02_verbale_assemblea_straordinaria.pdf",
+      "funzione": "Verbale notarile dell'assemblea straordinaria"
+    },
+    {
+      "file": "03_visura_storica_riassuntiva.pdf",
+      "funzione": "Visura: iscrizione della delibera"
+    },
+    {
+      "file": "04_scheda_sottoscrizione_e_bonifico.pdf",
+      "funzione": "Sottoscrizione dell'investitore e accredito"
+    },
+    {
+      "file": "05_email_notaio_adempimenti_residui.eml",
+      "funzione": "Email del notaio sugli adempimenti residui"
+    }
+  ]
+}

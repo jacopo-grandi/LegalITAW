@@ -1,0 +1,121 @@
+{
+  "task_id": "WF2-095",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "WF2-095 - Incarico",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2026-08-06",
+  "workflow_family": "procedural_computation",
+  "subtask": "deadline_chain",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "intimazione notificata; udienza di convalida fissata per il 20 agosto 2026 e non ancora tenuta; nessuna comparsa di costituzione depositata dalla conduttrice",
+  "legal_area": [
+    "Real Estate & Construction",
+    "C. Procedural computation",
+    "Contenzioso",
+    "Contrattualistica"
+  ],
+  "document_type": "intimazione notificata; udienza di convalida fissata per il 20 agosto 2026 e non ancora tenuta; nessuna comparsa di costituzione depositata dalla conduttrice",
+  "difficulty": "low",
+  "estimated_completion_minutes": 60,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "short",
+    "estimated_minutes": 60,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: lease_enforcement_timeline.md.\n\n# WF2-095 - Struttura della risposta\n\nConsegna `lease_enforcement_timeline.md`.\n\nLimite: 1900 parole.\n\nSezioni, in questo ordine:\n\n1. Stato alla data di riferimento\n2. Cronologia verificata\n3. Termini calcolati\n4. Importi\n5. Qualificazione dell'inadempimento\n6. Difetti da portare in udienza\n7. Passaggi condizionati alla condotta della conduttrice\n8. Elementi verificati e privi di rilievo\n9. Date e importi non determinabili\n10. Decisioni del committente\n\nIl file `lease_enforcement_timeline.md` contiene le sezioni elencate sopra.\nOgni riga della cronologia indica evento, data, documento del fascicolo e stato.\nOgni termine e ogni importo riportano il calcolo seguito.\nNessun riferimento normativo fuori dall'elenco chiuso del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_contratto_locazione.md",
+    "public/documents/02_diffida_di_pagamento.md",
+    "public/documents/03_intimazione_sfratto.md",
+    "public/documents/04_relazione_di_notificazione.md",
+    "public/documents/05_estratto_partitario.csv",
+    "public/documents/06_email_conduttrice.md"
+  ],
+  "expected_deliverable": "lease_enforcement_timeline.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

@@ -1,0 +1,1053 @@
+{
+  "task_id": "WF2-055",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 52,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable è prodotto come file `investigation_matrix.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `investigation_matrix.md`.\nPASS se: il file consegnato ha nome `investigation_matrix.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `investigation_matrix.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non supera il limite di 2400 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2400 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2400.\nFAIL se: il corpo del deliverable supera 2400 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2400.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "la matrice riporta per ciascuna voce l'elemento rilevato, il documento di provenienza, la qualificazione e l'azione conseguente.",
+      "match_criteria": "Oggetto del criterio: la matrice riporta per ciascuna voce l'elemento rilevato, il documento di provenienza, la qualificazione e l'azione conseguente.\nPASS se: ciascuna riga della matrice porta i quattro elementi.\nFAIL se: almeno una riga omette uno dei quattro elementi.\nÈ indifferente: l'ordine delle colonne.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna riga della matrice porta i quattro elementi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable distingue i fatti provati dagli atti, le risultanze non verificate documentalmente e i dati mancanti.",
+      "match_criteria": "Oggetto del criterio: il deliverable distingue i fatti provati dagli atti, le risultanze non verificate documentalmente e i dati mancanti.\nPASS se: compaiono, riferite a contenuti diversi, le tre distinzioni fra fatto documentato, risultanza non verificata e dato mancante.\nFAIL se: il deliverable presenta un solo piano indistinto di affermazioni.\nÈ indifferente: le etichette usate per la distinzione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compaiono, riferite a contenuti diversi, le tre distinzioni fra fatto documentato, risultanza non verificata e dato mancante.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole della procedura interna, che non sono fonti normative.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable qualifica il corrispettivo del contratto come corrispettivo a risultato ai sensi della procedura interna.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il corrispettivo del contratto come corrispettivo a risultato ai sensi della procedura interna.\nPASS se: compare, riferito al corrispettivo, una fra: «corrispettivo a risultato», «success fee», «corrispettivo condizionato all'aggiudicazione».\nFAIL se: il corrispettivo è qualificato come compenso per attività svolte, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla percentuale applicata.\nFonte di authoring: clausole 4.1 e 4.2 del contratto; clausola 5.2 della procedura",
+      "pass_condition": "compare, riferito al corrispettivo, una fra: «corrispettivo a risultato», «success fee», «corrispettivo condizionato all'aggiudicazione».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non contiene l'autorizzazione scritta del direttore generale prevista per il corrispettivo a risultato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non contiene l'autorizzazione scritta del direttore generale prevista per il corrispettivo a risultato.\nPASS se: compare l'indicazione che l'autorizzazione scritta non risulta dagli atti.\nFAIL se: l'autorizzazione è data per rilasciata o per negata, oppure la lacuna non è dichiarata.\nÈ indifferente: il richiamo al parere di Compliance come presupposto dell'autorizzazione.\nFonte di authoring: clausola 5.2 della procedura; composizione del fascicolo",
+      "pass_condition": "compare l'indicazione che l'autorizzazione scritta non risulta dagli atti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che la procedura interna vieta il corrispettivo a risultato.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la procedura interna vieta il corrispettivo a risultato.\nPASS se: il deliverable non afferma che la procedura interna vieta il corrispettivo a risultato.\nFAIL se: compare l'affermazione che il corrispettivo a risultato è vietato dalla procedura interna.\nÈ indifferente: il rilievo che la procedura lo subordina a un'autorizzazione.\nFonte di authoring: clausola 5.2 della procedura",
+      "pass_condition": "il deliverable non afferma che la procedura interna vieta il corrispettivo a risultato.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica in euro 209.000,00 il corrispettivo complessivo riconosciuto all'intermediario.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 209.000,00 il corrispettivo complessivo riconosciuto all'intermediario.\nPASS se: compare «euro 209.000,00» come corrispettivo complessivo.; compare «209.000,00» come corrispettivo complessivo.\nFAIL se: è indicato un importo diverso, oppure il corrispettivo complessivo non è calcolato.\nÈ indifferente: l'indicazione degli importi al lordo dell'imposta.\nFonte di authoring: somma delle fatture n. 18/2030 e n. 4/2031",
+      "pass_condition": "compare «euro 209.000,00» come corrispettivo complessivo.; compare «209.000,00» come corrispettivo complessivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica nel 5,00 per cento l'incidenza del corrispettivo sul valore della commessa.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica nel 5,00 per cento l'incidenza del corrispettivo sul valore della commessa.\nPASS se: compare «5,00 per cento» come incidenza del corrispettivo.; compare «5 per cento» come incidenza del corrispettivo.\nFAIL se: è indicata un'incidenza diversa, oppure l'incidenza non è calcolata.\nÈ indifferente: l'indicazione dell'incidenza sul solo importo dei lavori.\nFonte di authoring: corrispettivo complessivo; determina di aggiudicazione",
+      "pass_condition": "compare «5,00 per cento» come incidenza del corrispettivo.; compare «5 per cento» come incidenza del corrispettivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che l'incidenza supera la soglia di segnalazione del 3 per cento fissata dalla procedura interna.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'incidenza supera la soglia di segnalazione del 3 per cento fissata dalla procedura interna.\nPASS se: compare l'indicazione che la soglia di segnalazione del 3 per cento è superata.\nFAIL se: il superamento non è affermato, oppure è riferito a una soglia diversa.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 6.3 della procedura",
+      "pass_condition": "compare l'indicazione che la soglia di segnalazione del 3 per cento è superata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable qualifica come trasmissione di una segnalazione scritta all'Organismo di Vigilanza l'obbligo che deriva dal superamento della soglia.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come trasmissione di una segnalazione scritta all'Organismo di Vigilanza l'obbligo che deriva dal superamento della soglia.\nPASS se: compare l'indicazione che l'obbligo consiste nel trasmettere una segnalazione scritta all'Organismo di Vigilanza.\nFAIL se: al superamento è attribuita una conseguenza diversa, oppure l'obbligo non è indicato.\nÈ indifferente: l'indicazione del termine entro cui la segnalazione va trasmessa.\nFonte di authoring: clausola 6.3 della procedura",
+      "pass_condition": "compare l'indicazione che l'obbligo consiste nel trasmettere una segnalazione scritta all'Organismo di Vigilanza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che la segnalazione all'Organismo di Vigilanza non risulta dagli atti.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la segnalazione all'Organismo di Vigilanza non risulta dagli atti.\nPASS se: compare l'indicazione che la segnalazione non risulta dal fascicolo.\nFAIL se: la segnalazione è data per trasmessa, oppure la lacuna non è dichiarata.\nÈ indifferente: l'indicazione del soggetto onerato della trasmissione.\nFonte di authoring: clausola 6.3 della procedura; composizione del fascicolo",
+      "pass_condition": "compare l'indicazione che la segnalazione non risulta dal fascicolo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che il superamento della soglia di segnalazione integra di per sé una violazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il superamento della soglia di segnalazione integra di per sé una violazione.\nPASS se: il deliverable non afferma che il superamento della soglia di segnalazione integra di per sé una violazione.\nFAIL se: compare l'affermazione che il superamento della soglia del 3 per cento costituisce violazione della procedura o irregolarità.\nÈ indifferente: l'indicazione che l'omessa segnalazione costituisce violazione.\nFonte di authoring: clausola 6.4 della procedura",
+      "pass_condition": "il deliverable non afferma che il superamento della soglia di segnalazione integra di per sé una violazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica il 30 ottobre 2030 come data del primo pagamento disposto in favore dell'intermediario.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 30 ottobre 2030 come data del primo pagamento disposto in favore dell'intermediario.\nPASS se: compare «30 ottobre 2030» come data del primo pagamento.; compare «30/10/2030» come data del primo pagamento.\nFAIL se: è indicata una data diversa, oppure la data del primo pagamento non è indicata.\nÈ indifferente: l'indicazione della data valuta.\nFonte di authoring: estratto dei pagamenti; date_verificate.md",
+      "pass_condition": "compare «30 ottobre 2030» come data del primo pagamento.; compare «30/10/2030» come data del primo pagamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che il primo pagamento è stato disposto nel corso della procedura di gara, prima dell'aggiudicazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il primo pagamento è stato disposto nel corso della procedura di gara, prima dell'aggiudicazione.\nPASS se: compare l'indicazione che il pagamento precede l'aggiudicazione e cade durante la procedura.\nFAIL se: il pagamento è collocato dopo l'aggiudicazione, oppure la sua collocazione rispetto alla procedura non è rilevata.\nÈ indifferente: l'indicazione del numero di giorni intercorsi.\nFonte di authoring: estratto dei pagamenti; determina di aggiudicazione",
+      "pass_condition": "compare l'indicazione che il pagamento precede l'aggiudicazione e cade durante la procedura.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable ricava la collocazione del pagamento dal confronto fra l'estratto dei pagamenti e la determina di aggiudicazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable ricava la collocazione del pagamento dal confronto fra l'estratto dei pagamenti e la determina di aggiudicazione.\nPASS se: il rilievo è ricondotto a entrambi i documenti, l'estratto dei pagamenti e la determina.\nFAIL se: il rilievo è fondato su un solo documento, oppure la provenienza non è indicata.\nÈ indifferente: l'ordine in cui i due documenti sono citati.\nFonte di authoring: estratto dei pagamenti; determina di aggiudicazione",
+      "pass_condition": "il rilievo è ricondotto a entrambi i documenti, l'estratto dei pagamenti e la determina.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica il 4 settembre 2030 come data del contratto di consulenza e il 16 settembre 2030 come data di pubblicazione del bando.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 4 settembre 2030 come data del contratto di consulenza e il 16 settembre 2030 come data di pubblicazione del bando.\nPASS se: compaiono «4 settembre 2030» e «16 settembre 2030» come date rispettivamente del contratto e del bando.\nFAIL se: è indicata una data diversa per uno dei due fatti, oppure una delle due date non compare.\nÈ indifferente: l'ordine in cui le due date sono esposte.\nFonte di authoring: contratto; punto 2 della determina; date_verificate.md",
+      "pass_condition": "compaiono «4 settembre 2030» e «16 settembre 2030» come date rispettivamente del contratto e del bando.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che il conferimento dell'incarico precede la pubblicazione del bando.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il conferimento dell'incarico precede la pubblicazione del bando.\nPASS se: compare l'indicazione che l'incarico è anteriore alla pubblicazione del bando.\nFAIL se: il rilievo non compare, oppure l'incarico è collocato dopo il bando.\nÈ indifferente: l'indicazione del numero di giorni di anticipo.\nFonte di authoring: contratto; punto 2 della determina",
+      "pass_condition": "compare l'indicazione che l'incarico è anteriore alla pubblicazione del bando.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che l'anteriorità dell'incarico rispetto al bando costituisce di per sé una irregolarità della procedura di gara.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'anteriorità dell'incarico rispetto al bando costituisce di per sé una irregolarità della procedura di gara.\nPASS se: il deliverable non afferma che l'anteriorità dell'incarico rispetto al bando costituisce di per sé una irregolarità della procedura di gara.\nFAIL se: compare l'affermazione che l'anteriorità dell'incarico rende irregolare o annullabile la procedura di gara.\nÈ indifferente: l'indicazione che l'anteriorità è un elemento da approfondire.\nFonte di authoring: contratto; determina di aggiudicazione",
+      "pass_condition": "il deliverable non afferma che l'anteriorità dell'incarico rispetto al bando costituisce di per sé una irregolarità della procedura di gara.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable qualifica la descrizione delle attivita del contratto come non conforme al requisito di analiticità della procedura interna.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la descrizione delle attivita del contratto come non conforme al requisito di analiticità della procedura interna.\nPASS se: compare, riferita agli articoli 1 e 2 del contratto, una fra: «descrizione generica», «non analitica», «priva dell'indicazione dei prodotti attesi».\nFAIL se: la descrizione è presentata come conforme, oppure la qualificazione non compare.\nÈ indifferente: la proposta di riformulazione della clausola.\nFonte di authoring: articoli 1 e 2 del contratto; clausola 4.1, lettera a), della procedura",
+      "pass_condition": "compare, riferita agli articoli 1 e 2 del contratto, una fra: «descrizione generica», «non analitica», «priva dell'indicazione dei prodotti attesi».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che la genericità della descrizione dimostra che l'attività non è stata svolta.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la genericità della descrizione dimostra che l'attività non è stata svolta.\nPASS se: il deliverable non afferma che la genericità della descrizione dimostra che l'attività non è stata svolta.\nFAIL se: compare l'affermazione che la genericità della descrizione prova l'inesistenza della prestazione.\nÈ indifferente: l'indicazione che l'esistenza della prestazione resta da accertare.\nFonte di authoring: articoli 1 e 2 del contratto",
+      "pass_condition": "il deliverable non afferma che la genericità della descrizione dimostra che l'attività non è stata svolta.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che il contratto non contiene l'obbligo di rendicontazione periodica richiesto dalla procedura interna.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il contratto non contiene l'obbligo di rendicontazione periodica richiesto dalla procedura interna.\nPASS se: compare l'indicazione che l'obbligo di rendicontazione non figura nel contratto.\nFAIL se: il rilievo non compare, oppure l'obbligo è dato per presente.\nÈ indifferente: il richiamo al numero della clausola della procedura.\nFonte di authoring: contratto; clausola 4.1, lettera b), della procedura",
+      "pass_condition": "compare l'indicazione che l'obbligo di rendicontazione non figura nel contratto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica che per entrambi i pagamenti all'intermediario la colonna della rendicontazione allegata riporta l'assenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica che per entrambi i pagamenti all'intermediario la colonna della rendicontazione allegata riporta l'assenza.\nPASS se: compare l'indicazione che per i due pagamenti all'intermediario la rendicontazione allegata risulta assente.\nFAIL se: è indicato che almeno uno dei due pagamenti reca rendicontazione, oppure il dato non è rilevato.\nÈ indifferente: l'indicazione del soggetto autorizzante.\nFonte di authoring: estratto dei pagamenti",
+      "pass_condition": "compare l'indicazione che per i due pagamenti all'intermediario la rendicontazione allegata risulta assente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che il contratto non contiene il diritto di audit sui documenti relativi all'incarico.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il contratto non contiene il diritto di audit sui documenti relativi all'incarico.\nPASS se: compare l'indicazione che il diritto di audit non figura nel contratto.\nFAIL se: il rilievo non compare, oppure il diritto è dato per presente.\nÈ indifferente: il richiamo al numero della clausola della procedura.\nFonte di authoring: contratto; clausola 4.1, lettera d), della procedura",
+      "pass_condition": "compare l'indicazione che il diritto di audit non figura nel contratto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che il contratto non contiene il divieto di subappalto dell'incarico senza consenso scritto.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che il contratto non contiene il divieto di subappalto dell'incarico senza consenso scritto.\nPASS se: compare l'indicazione che il divieto di subappalto non figura nel contratto.\nFAIL se: il rilievo non compare, oppure il divieto è dato per presente.\nÈ indifferente: il richiamo al numero della clausola della procedura.\nFonte di authoring: contratto; clausola 4.1, lettera f), della procedura",
+      "pass_condition": "compare l'indicazione che il divieto di subappalto non figura nel contratto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non contiene la scheda di due diligence né il parere di Compliance.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non contiene la scheda di due diligence né il parere di Compliance.\nPASS se: compare l'indicazione che scheda di due diligence e parere di Compliance non risultano dagli atti.\nFAIL se: uno dei due documenti è dato per esistente, oppure la lacuna non è dichiarata.\nÈ indifferente: l'indicazione del termine entro cui il parere andava reso.\nFonte di authoring: clausole 3.1 e 3.4 della procedura; composizione del fascicolo",
+      "pass_condition": "compare l'indicazione che scheda di due diligence e parere di Compliance non risultano dagli atti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable qualifica il parere di Compliance come condizione per il conferimento dell'incarico secondo la procedura interna.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il parere di Compliance come condizione per il conferimento dell'incarico secondo la procedura interna.\nPASS se: compare l'indicazione che il parere è condizione per il conferimento dell'incarico.\nFAIL se: il parere è presentato come facoltativo, oppure la sua funzione non è indicata.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 3.4 della procedura",
+      "pass_condition": "compare l'indicazione che il parere è condizione per il conferimento dell'incarico.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica il 14 aprile 2031 come data del rapporto di screening reputazionale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 14 aprile 2031 come data del rapporto di screening reputazionale.\nPASS se: compare «14 aprile 2031» come data del rapporto di screening.; compare «14/04/2031» come data del rapporto di screening.\nFAIL se: è indicata una data diversa, oppure la data del rapporto non è rilevata.\nÈ indifferente: l'indicazione del riferimento incarico.\nFonte di authoring: rapporto di screening; date_verificate.md",
+      "pass_condition": "compare «14 aprile 2031» come data del rapporto di screening.; compare «14/04/2031» come data del rapporto di screening.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che lo screening è successivo sia al conferimento dell'incarico sia a entrambi i pagamenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che lo screening è successivo sia al conferimento dell'incarico sia a entrambi i pagamenti.\nPASS se: compare l'indicazione che il rapporto è posteriore al contratto e ai due pagamenti.\nFAIL se: il rilievo non compare, oppure lo screening è collocato prima del conferimento.\nÈ indifferente: l'indicazione del numero di mesi trascorsi.\nFonte di authoring: date del contratto, dei pagamenti e del rapporto; clausola 3.1 della procedura",
+      "pass_condition": "compare l'indicazione che il rapporto è posteriore al contratto e ai due pagamenti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable riporta il collegamento fra l'amministratore dell'intermediario e la componente della commissione giudicatrice ing. Melania Trescorato.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il collegamento fra l'amministratore dell'intermediario e la componente della commissione giudicatrice ing. Melania Trescorato.\nPASS se: compare l'indicazione del collegamento, con il nome della componente della commissione.\nFAIL se: il collegamento non è riportato, oppure è riferito a un soggetto diverso.\nÈ indifferente: l'indicazione del periodo del rapporto di collaborazione.\nFonte di authoring: paragrafo 4.2 del rapporto di screening; punto 4 della determina",
+      "pass_condition": "compare l'indicazione del collegamento, con il nome della componente della commissione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable qualifica quel collegamento come risultanza di fonti aperte non verificata documentalmente.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica quel collegamento come risultanza di fonti aperte non verificata documentalmente.\nPASS se: compare, riferita al collegamento, una fra: «non verificato documentalmente», «risultanza di fonti aperte», «da verificare con documentazione contrattuale».\nFAIL se: il collegamento è presentato come provato, oppure la qualificazione non compare.\nÈ indifferente: il richiamo al paragrafo del rapporto.\nFonte di authoring: paragrafi 4.2 e 5 del rapporto di screening",
+      "pass_condition": "compare, riferita al collegamento, una fra: «non verificato documentalmente», «risultanza di fonti aperte», «da verificare con documentazione contrattuale».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica come azione la verifica documentale del collegamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la verifica documentale del collegamento.\nPASS se: compare l'indicazione di acquisire la documentazione contrattuale del rapporto di collaborazione.\nFAIL se: l'azione non compare.\nÈ indifferente: il soggetto presso cui la documentazione va richiesta.\nFonte di authoring: paragrafo 4.2 del rapporto di screening",
+      "pass_condition": "compare l'indicazione di acquisire la documentazione contrattuale del rapporto di collaborazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che dal collegamento deriva la responsabilità della Società.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che dal collegamento deriva la responsabilità della Società.\nPASS se: il deliverable non afferma che dal collegamento deriva la responsabilità della Società.\nFAIL se: compare l'affermazione che il collegamento fonda o dimostra la responsabilità della Società.\nÈ indifferente: l'indicazione che il collegamento rende necessario un approfondimento.\nFonte di authoring: paragrafi 4.2 e 5 del rapporto di screening",
+      "pass_condition": "il deliverable non afferma che dal collegamento deriva la responsabilità della Società.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable riporta che l'intermediario è stato costituito il 21 giugno 2030, non ha dipendenti e non ha depositato bilanci.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta che l'intermediario è stato costituito il 21 giugno 2030, non ha dipendenti e non ha depositato bilanci.\nPASS se: compaiono i tre dati sulla costituzione, sull'assenza di dipendenti e sull'assenza di bilanci depositati.\nFAIL se: manca almeno uno dei tre dati, oppure i dati sono riportati in modo difforme dal rapporto.\nÈ indifferente: l'indicazione dell'oggetto sociale.\nFonte di authoring: paragrafo 1 del rapporto di screening",
+      "pass_condition": "compaiono i tre dati sulla costituzione, sull'assenza di dipendenti e sull'assenza di bilanci depositati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non contiene alcun documento che provi l'attività svolta dall'intermediario.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non contiene alcun documento che provi l'attività svolta dall'intermediario.\nPASS se: compare, riferita all'attività dell'intermediario, una fra: «nessun documento negli atti la prova», «non risulta alcun prodotto dell'attivita», «non documentata dal fascicolo».\nFAIL se: l'attività è data per provata o per inesistente, oppure la lacuna non è dichiarata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'elenco dei documenti che il fascicolo dovrebbe contenere.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "compare, riferita all'attività dell'intermediario, una fra: «nessun documento negli atti la prova», «non risulta alcun prodotto dell'attivita», «non documentata dal fascicolo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che l'intermediario non ha svolto alcuna attività.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'intermediario non ha svolto alcuna attività.\nPASS se: il deliverable non afferma che l'intermediario non ha svolto alcuna attività.\nFAIL se: compare l'affermazione che l'intermediario non ha svolto attività o che la prestazione è inesistente.\nÈ indifferente: l'indicazione che l'esistenza della prestazione resta da accertare.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "il deliverable non afferma che l'intermediario non ha svolto alcuna attività.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable rileva che entrambe le fatture descrivono la prestazione richiamando il contratto e sono prive di allegati.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che entrambe le fatture descrivono la prestazione richiamando il contratto e sono prive di allegati.\nPASS se: compare l'indicazione che le due fatture rinviano al contratto e non recano allegati.\nFAIL se: il rilievo non compare, oppure le fatture sono presentate come corredate di documentazione.\nÈ indifferente: l'indicazione dei numeri di fattura.\nFonte di authoring: fatture n. 18/2030 e n. 4/2031",
+      "pass_condition": "compare l'indicazione che le due fatture rinviano al contratto e non recano allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable riporta i limiti dichiarati dal rapporto di screening quanto alle fonti utilizzate e alle verifiche non svolte.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta i limiti dichiarati dal rapporto di screening quanto alle fonti utilizzate e alle verifiche non svolte.\nPASS se: compare l'indicazione che il rapporto si basa su fonti pubbliche e banche dati e che non sono stati svolti accessi documentali.\nFAIL se: i limiti non sono riportati, oppure il rapporto è presentato come accertamento.\nÈ indifferente: il richiamo al paragrafo del rapporto.\nFonte di authoring: paragrafo 5 del rapporto di screening",
+      "pass_condition": "compare l'indicazione che il rapporto si basa su fonti pubbliche e banche dati e che non sono stati svolti accessi documentali.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica come misura conservativa la conservazione della documentazione e della corrispondenza relative all'incarico.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come misura conservativa la conservazione della documentazione e della corrispondenza relative all'incarico.\nPASS se: compare l'indicazione di conservare documentazione e corrispondenza relative all'incarico.\nFAIL se: la misura non compare.\nÈ indifferente: l'indicazione della durata della conservazione.\nFonte di authoring: clausola 8.1 della procedura",
+      "pass_condition": "compare l'indicazione di conservare documentazione e corrispondenza relative all'incarico.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica come misura conservativa la sospensione di ulteriori pagamenti all'intermediario fino alla conclusione delle verifiche.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come misura conservativa la sospensione di ulteriori pagamenti all'intermediario fino alla conclusione delle verifiche.\nPASS se: compare l'indicazione di sospendere ulteriori pagamenti all'intermediario.\nFAIL se: la misura non compare.\nÈ indifferente: la forma con cui la sospensione va comunicata.\nFonte di authoring: contratto ancora in vigore; estratto dei pagamenti",
+      "pass_condition": "compare l'indicazione di sospendere ulteriori pagamenti all'intermediario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non afferma che la sospensione dei pagamenti presuppone l'accertamento di una violazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la sospensione dei pagamenti presuppone l'accertamento di una violazione.\nPASS se: il deliverable non afferma che la sospensione dei pagamenti presuppone l'accertamento di una violazione.\nFAIL se: compare l'affermazione che la sospensione dei pagamenti richiede il previo accertamento di una violazione.\nÈ indifferente: l'indicazione che la sospensione è una misura cautelativa reversibile.\nFonte di authoring: clausola 8.1 della procedura",
+      "pass_condition": "il deliverable non afferma che la sospensione dei pagamenti presuppone l'accertamento di una violazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable indica che le segnalazioni relative a violazioni della procedura seguono il canale interno con le tutele previste per il segnalante.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica che le segnalazioni relative a violazioni della procedura seguono il canale interno con le tutele previste per il segnalante.\nPASS se: compare l'indicazione del canale interno di segnalazione con le relative tutele.\nFAIL se: l'indicazione non compare, oppure è affermato che le tutele sono sospese.\nÈ indifferente: il richiamo al numero della clausola.\nFonte di authoring: clausola 9 della procedura",
+      "pass_condition": "compare l'indicazione del canale interno di segnalazione con le relative tutele.",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non riporta il riscontro su omonimo del paragrafo 4.1 come precedente dell'amministratore dell'intermediario.",
+      "match_criteria": "Oggetto del criterio: il deliverable non riporta il riscontro su omonimo del paragrafo 4.1 come precedente dell'amministratore dell'intermediario.\nPASS se: il deliverable non riporta il riscontro su omonimo del paragrafo 4.1 come precedente dell'amministratore dell'intermediario.\nFAIL se: il riscontro del paragrafo 4.1 è attribuito all'amministratore dell'intermediario o compare fra i red flag che lo riguardano.\nÈ indifferente: la menzione del riscontro con l'indicazione delle divergenze anagrafiche.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non riporta il riscontro su omonimo del paragrafo 4.1 come precedente dell'amministratore dell'intermediario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable afferma che il riscontro del paragrafo 4.1 non riguarda il soggetto in perimetro.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il riscontro del paragrafo 4.1 non riguarda il soggetto in perimetro.\nPASS se: compare, riferita a quel riscontro, una fra: «non riguarda il soggetto in perimetro», «cade su omonimo», «anagrafica divergente».\nFAIL se: il riscontro è attribuito al soggetto in perimetro, oppure l'esito della verifica anagrafica non è affermato. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione di quale dei tre dati anagrafici divergono.\nFonte di authoring: paragrafo 4.1 del rapporto di screening",
+      "pass_condition": "compare, riferita a quel riscontro, una fra: «non riguarda il soggetto in perimetro», «cade su omonimo», «anagrafica divergente».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non presenta come profilo di rischio autonomo la sede coincidente con lo studio del commercialista.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come profilo di rischio autonomo la sede coincidente con lo studio del commercialista.\nPASS se: il deliverable non presenta come profilo di rischio autonomo la sede coincidente con lo studio del commercialista.\nFAIL se: la coincidenza fra sede legale e studio del commercialista compare fra i red flag o fra i profili di rischio autonomi.\nÈ indifferente: la menzione della sede fra i dati anagrafici dell'intermediario.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non presenta come profilo di rischio autonomo la sede coincidente con lo studio del commercialista.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non presenta come violazione della procedura interna il superamento delle soglie di attenzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come violazione della procedura interna il superamento delle soglie di attenzione.\nPASS se: il deliverable non presenta come violazione della procedura interna il superamento delle soglie di attenzione.\nFAIL se: il superamento delle soglie di attenzione è presentato come violazione o come irregolarità.\nÈ indifferente: l'indicazione che il superamento obbliga a una motivazione scritta nella scheda.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non presenta come violazione della procedura interna il superamento delle soglie di attenzione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non presenta come irregolare la disposizione dei pagamenti su un conto intestato all'intermediario.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come irregolare la disposizione dei pagamenti su un conto intestato all'intermediario.\nPASS se: il deliverable non presenta come irregolare la disposizione dei pagamenti su un conto intestato all'intermediario.\nFAIL se: i pagamenti su conto intestato all'intermediario compaiono fra i profili di anomalia relativi al canale di pagamento.\nÈ indifferente: la menzione dell'identificativo del conto nella matrice.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non presenta come irregolare la disposizione dei pagamenti su un conto intestato all'intermediario.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "il deliverable non include fra i pagamenti sospetti i pagamenti ad altri fornitori presenti nell'estratto, cioè quello allo studio legale del 6 febbraio 2031 e quello alla società di certificazione del 19 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non include fra i pagamenti sospetti i pagamenti ad altri fornitori presenti nell'estratto, cioè quello allo studio legale del 6 febbraio 2031 e quello alla società di certificazione del 19 marzo 2031.\nPASS se: il deliverable non include fra i pagamenti sospetti i pagamenti ad altri fornitori presenti nell'estratto, cioè quello allo studio legale del 6 febbraio 2031 e quello alla società di certificazione del 19 marzo 2031.\nFAIL se: uno dei pagamenti ad altri fornitori compare fra i pagamenti sospetti o fra i red flag.\nÈ indifferente: la menzione di quei pagamenti come termine di confronto sulla rendicontazione.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "il deliverable non include fra i pagamenti sospetti i pagamenti ad altri fornitori presenti nell'estratto, cioè quello allo studio legale del 6 febbraio 2031 e quello alla società di certificazione del 19 marzo 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provato il collegamento fra l'intermediario e la componente della commissione mentre tratta come non provata l'attività svolta dall'intermediario.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provato il collegamento fra l'intermediario e la componente della commissione mentre tratta come non provata l'attività svolta dall'intermediario.\nPASS se: simmetria del controllo: il deliverable non tratta come provato il collegamento fra l'intermediario e la componente della commissione mentre tratta come non provata l'attività svolta dall'intermediario.\nFAIL se: il collegamento è dato per provato e nello stesso deliverable l'attività dell'intermediario è dichiarata non documentata.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: rapporto di screening; composizione del fascicolo",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provato il collegamento fra l'intermediario e la componente della commissione mentre tratta come non provata l'attività svolta dall'intermediario.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che nella vicenda si è consumato un reato.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che nella vicenda si è consumato un reato.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che nella vicenda si è consumato un reato.\nFAIL se: compare l'affermazione che un reato è stato commesso o che una fattispecie penale è integrata.\nÈ indifferente: l'indicazione delle fattispecie da valutare in sede di approfondimento.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che nella vicenda si è consumato un reato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "investigation_matrix.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la cancellazione di Delta Assist S.r.l. del 4 marzo 2030.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio la cancellazione di Delta Assist S.r.l. del 4 marzo 2030.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio la cancellazione di Delta Assist S.r.l. del 4 marzo 2030.\nFAIL se: la cancellazione di Delta Assist S.r.l. compare fra i red flag autonomi.\nÈ indifferente: la menzione della società cancellata come elemento del collegamento da verificare.\nFonte di authoring: paragrafo 3 del rapporto di screening",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la cancellazione di Delta Assist S.r.l. del 4 marzo 2030.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

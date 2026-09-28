@@ -1,0 +1,352 @@
+{
+  "task_id": "WF2-100",
+  "lato_assistito": "Metalpiave S.p.A., responsabile dell'evento e gestore del sito",
+  "committente": "direttore dello stabilimento di Metalpiave S.p.A.",
+  "data_di_riferimento": "2026-10-27",
+  "stato_fascicolo": "comunicazione dell'evento e notizia del superamento trasmesse; misure di prevenzione e di messa in sicurezza d'emergenza in essere; piano di caratterizzazione non presentato e termine decorso; nessuna ordinanza né diffida notificata",
+  "meccanismi_di_difficolta": [
+    "due dies a quo ravvicinati: il termine di ventiquattro ore decorre dall'evento e quello di trenta giorni dalla notizia del superamento, e le due date distano due giorni",
+    "fatti distribuiti: la data della notizia del superamento sta soltanto nella seconda comunicazione, e la data dell'evento soltanto nel rapporto di intervento",
+    "termine di legge che non era in gioco: il termine di quarantotto ore per l'autocertificazione opera in un'ipotesi che il caso esclude, e la sua scadenza è visibile e priva di conseguenze",
+    "definizione convenzionale contro regola di legge: la regola decisionale sull'incertezza è dichiarata dal laboratorio nel rapporto di prova ed è applicata in senso sfavorevole per un parametro e favorevole per l'altro",
+    "soglia distinta da soglia: le concentrazioni soglia di contaminazione e quelle di rischio hanno natura diversa, e dalla distinzione dipende la qualificazione del sito",
+    "presenza contro adeguatezza: un punto di monitoraggio delle acque sotterranee esiste, ha letture regolari e non serve, perché è a monte del flusso",
+    "dichiarazione di parte smentita da un accertamento successivo: il rapporto di intervento colloca il piezometro a valle e la nota del geologo lo colloca a monte",
+    "assenza di un termine complessivo: la domanda del committente chiede una data che il procedimento non consente di dare, e la risposta corretta è il calcolo condizionato con l'ipotesi dichiarata",
+    "evidenze incomplete: la nota del geologo chiude l'elenco della documentazione non reperita, e da quell'elenco dipende ciò che non è concludibile"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "termine di ventiquattro ore",
+      "gravita": "alta",
+      "affermazione_richiesta": "le misure di prevenzione vanno messe in opera entro ventiquattro ore dall'evento e la comunicazione va data con le modalità prescritte: entrambi gli adempimenti risultano compiuti, le misure il 21 settembre 2026 e la comunicazione il 22 settembre 2026",
+      "evidenza": "01_rapporto_di_intervento_e_messa_in_sicurezza.md, punto 2; 02_comunicazione_dell_evento.md",
+      "errore_bersaglio": "presentare il termine di ventiquattro ore come non rispettato, oppure computarlo da un evento diverso dalla rottura della tubazione"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "destinatari della comunicazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la comunicazione dell'evento va indirizzata al comune, alla provincia, alla regione e al prefetto, che nelle ventiquattro ore successive informa il Ministro dell'ambiente: l'elenco è più ampio di quello della notizia di superamento, che è diretta al comune e alle province",
+      "evidenza": "02_comunicazione_dell_evento.md; 03_notizia_di_superamento.md; art. 304, comma 2, e art. 242, comma 3, del codice dell'ambiente",
+      "errore_bersaglio": "omettere il prefetto fra i destinatari, oppure trattare i due elenchi come coincidenti"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "effetto abilitante della comunicazione",
+      "gravita": "media",
+      "affermazione_richiesta": "la comunicazione, non appena pervenuta al comune, abilita immediatamente l'operatore alla realizzazione degli interventi: non occorre attendere alcun provvedimento di assenso per proseguire le misure adottate",
+      "evidenza": "art. 304, comma 2, del codice dell'ambiente; 02_comunicazione_dell_evento.md",
+      "errore_bersaglio": "subordinare la prosecuzione degli interventi a un'autorizzazione, oppure non trattare il punto"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "autocertificazione preclusa",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'autocertificazione di ripristino entro quarantotto ore dalla comunicazione opera soltanto se l'indagine preliminare accerta che le concentrazioni soglia di contaminazione non sono state superate: nel caso il superamento è accertato per il nichel, la via è preclusa e la sua mancata attivazione non è un inadempimento",
+      "evidenza": "art. 242, comma 2, del codice dell'ambiente; 03_notizia_di_superamento.md; 04_rapporto_di_prova_suolo.md",
+      "errore_bersaglio": "indicare l'autocertificazione fra gli adempimenti mancati, o attribuire conseguenze al mancato rispetto di quel termine"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "dies a quo del piano di caratterizzazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "i trenta giorni per la presentazione del piano di caratterizzazione decorrono dalla notizia del superamento, data il 23 settembre 2026, e non dall'evento del 21 settembre: il termine scade il 23 ottobre 2026",
+      "evidenza": "03_notizia_di_superamento.md; art. 242, comma 3, del codice dell'ambiente",
+      "errore_bersaglio": "computare i trenta giorni dall'evento, ottenendo il 21 ottobre 2026, come indicato nella mail del direttore dello stabilimento"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "stato del termine e destinatari del piano",
+      "gravita": "alta",
+      "affermazione_richiesta": "alla data di riferimento il termine è decorso da quattro giorni e il piano non risulta presentato; il piano va presentato al comune, alle province e alla regione",
+      "evidenza": "07_nota_del_consulente_ambientale.md, punto 3.1; 05_verbale_di_sopralluogo_arpa.md, punto 3.2; art. 242, comma 3, del codice dell'ambiente",
+      "errore_bersaglio": "presentare il termine come ancora pendente, oppure indicare come destinatario del piano la sola agenzia regionale"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "qualificazione del sito",
+      "gravita": "alta",
+      "affermazione_richiesta": "il superamento delle concentrazioni soglia di contaminazione rende il sito potenzialmente contaminato, in attesa della caratterizzazione e dell'analisi di rischio; la qualificazione di sito contaminato dipende dal superamento delle concentrazioni soglia di rischio, che sono determinate caso per caso con l'analisi di rischio sito specifica e che alla data di riferimento non esistono",
+      "evidenza": "art. 240, comma 1, lettere b), c), d) ed e), del codice dell'ambiente; 04_rapporto_di_prova_suolo.md",
+      "errore_bersaglio": "qualificare il sito come contaminato sulla base del superamento delle soglie di contaminazione, o trattare le due soglie come gradi diversi di gravità della stessa misura"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "decorrenze della catena successiva",
+      "gravita": "alta",
+      "affermazione_richiesta": "la regione, convocata la conferenza di servizi, autorizza il piano entro i trenta giorni successivi alla presentazione; le risultanze della caratterizzazione vanno trasmesse entro sei mesi dall'approvazione del piano; la conferenza approva il documento di analisi di rischio entro sessanta giorni dalla ricezione, con invio ai componenti almeno venti giorni prima e preavviso di almeno venti giorni al responsabile per l'istruttoria in contraddittorio",
+      "evidenza": "art. 242, commi 3 e 4, del codice dell'ambiente",
+      "errore_bersaglio": "far decorrere i sei mesi dalla presentazione del piano anziché dalla sua approvazione, oppure omettere i due termini di venti giorni"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "biforcazione dell'esito",
+      "gravita": "alta",
+      "affermazione_richiesta": "se l'analisi di rischio dimostra che la contaminazione non supera le concentrazioni soglia di rischio, la conferenza di servizi dichiara concluso positivamente il procedimento con l'approvazione del documento, e può prescrivere un programma di monitoraggio, il cui piano è presentato entro sessanta giorni dall'approvazione e approvato dalla regione entro trenta giorni dal ricevimento; se le concentrazioni soglia di rischio sono superate, il progetto operativo va presentato nei successivi sei mesi dall'approvazione del documento e la regione lo approva entro sessanta giorni dal ricevimento, stabilendo le garanzie finanziarie",
+      "evidenza": "art. 242, commi 5, 6 e 7, del codice dell'ambiente",
+      "errore_bersaglio": "esporre un solo esito come necessario, oppure presentare il progetto operativo come adempimento comunque dovuto"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "assenza di un termine di conclusione",
+      "gravita": "alta",
+      "affermazione_richiesta": "non esiste un termine complessivo di conclusione del procedimento: i termini sono fissati per singolo adempimento e decorrono da eventi non ancora verificatisi, quindi alla data di riferimento nessuna data di conclusione è determinabile e va indicato da che cosa dipende",
+      "evidenza": "art. 242 del codice dell'ambiente; 06_email_del_direttore_di_stabilimento.md",
+      "errore_bersaglio": "indicare una data di conclusione del procedimento, oppure dichiararla non determinabile senza indicare gli eventi da cui dipende"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "incertezza analitica sul nichel",
+      "gravita": "alta",
+      "affermazione_richiesta": "il superamento del nichel persiste anche detratta l'incertezza estesa, secondo la regola decisionale che il laboratorio dichiara: il valore scende a 658 milligrammi per chilogrammo e resta superiore alla soglia applicabile",
+      "evidenza": "04_rapporto_di_prova_suolo.md, punti 6 e 7",
+      "errore_bersaglio": "affermare che il superamento è controvertibile sul dato analitico, oppure applicare al nichel una regola decisionale diversa da quella dichiarata dal laboratorio"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "cedevolezza delle soglie rispetto ai valori di fondo",
+      "gravita": "alta",
+      "affermazione_richiesta": "se il sito ricade in un'area interessata da fenomeni antropici o naturali che hanno determinato il superamento, le soglie si assumono pari al valore di fondo esistente per i parametri superati: il confronto con il valore tabellare non è quindi definitivo",
+      "evidenza": "art. 240, comma 1, lettera b), del codice dell'ambiente",
+      "errore_bersaglio": "presentare il confronto con il valore tabellare come definitivo, oppure affermare che il superamento viene meno per il solo fatto che nell'area il nichel sia naturalmente elevato"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "procedura sui valori di fondo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il piano di indagine sui valori di fondo va presentato all'agenzia regionale, che definisce i valori di fondo, e va condiviso e realizzato in contraddittorio entro sessanta giorni dalla data di presentazione: nel fascicolo non risulta alcun piano di indagine né alcuna determinazione, e l'iniziativa è disponibile",
+      "evidenza": "art. 242, comma 13-ter, del codice dell'ambiente; 07_nota_del_consulente_ambientale.md, punto 4.1; 05_verbale_di_sopralluogo_arpa.md, punto 3.3",
+      "errore_bersaglio": "attribuire la determinazione dei valori di fondo al laboratorio o al consulente, oppure omettere il termine del contraddittorio"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "punto di monitoraggio a monte",
+      "gravita": "alta",
+      "affermazione_richiesta": "il piezometro Pz-1 si trova a monte idrogeologico dell'area interessata rispetto alla direzione di flusso rilevata, contrariamente a quanto affermato nel rapporto di intervento: le sue letture non escludono il coinvolgimento delle acque sotterranee, e il piano di caratterizzazione deve prevedere punti a valle",
+      "evidenza": "07_nota_del_consulente_ambientale.md, punto 5.5; 01_rapporto_di_intervento_e_messa_in_sicurezza.md, punto 2; 02_comunicazione_dell_evento.md, punto 2",
+      "errore_bersaglio": "accogliere l'affermazione del rapporto di intervento, oppure trarre dalle letture del piezometro la conclusione che le acque sotterranee non sono coinvolte"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "estensione delle indagini",
+      "gravita": "media",
+      "affermazione_richiesta": "le ulteriori lesioni della pavimentazione lungo il percorso della tubazione, rilevate nel verbale di sopralluogo per trentaquattro metri lineari fuori dall'area dell'evento, sono un elemento di cui il piano di caratterizzazione deve tenere conto nella definizione del perimetro di indagine",
+      "evidenza": "05_verbale_di_sopralluogo_arpa.md, punto 2.6; 07_nota_del_consulente_ambientale.md, punti 4.5 e 5.3",
+      "errore_bersaglio": "trattare le ulteriori lesioni come irrilevanti perché fuori dall'area dell'evento, oppure qualificarle come contaminazione accertata"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "conseguenza dell'inadempimento e iniziativa",
+      "gravita": "alta",
+      "affermazione_richiesta": "le amministrazioni che accertano il superamento ne danno comunicazione a regione, provincia e comune, e la provincia, svolte le indagini per identificare il responsabile con oneri a suo carico e sentito il comune, lo diffida con ordinanza motivata a provvedere; l'ordinanza è comunque notificata anche al proprietario del sito; alla data di riferimento nessuna ordinanza risulta notificata e il piano va presentato senza ulteriore attesa",
+      "evidenza": "art. 244, commi 1, 2 e 3, del codice dell'ambiente; 07_nota_del_consulente_ambientale.md, punto 3.2",
+      "errore_bersaglio": "attribuire l'ordinanza-diffida al comune o alla regione, oppure affermare che il ritardo comporta la perdita della possibilità di presentare il piano"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "termine di quarantotto ore per l'autocertificazione",
+      "chiave_nel_criterio": "autocertificazione di ripristino",
+      "ragione": "l'autocertificazione opera soltanto nell'ipotesi in cui l'indagine preliminare accerti che le soglie di contaminazione non sono superate: accertato il superamento per il nichel, quel termine non era in gioco e la sua scadenza non produce alcuna conseguenza",
+      "errore_bersaglio": "indicare fra gli adempimenti scaduti il termine di quarantotto ore per l'autocertificazione di ripristino"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "piombo",
+      "chiave_nel_criterio": "superamento per il piombo",
+      "ragione": "il valore del piombo è inferiore alla soglia applicabile e resta inferiore anche sommando l'incertezza estesa: il piombo non è un parametro in superamento, non apre alcun adempimento e non muta il perimetro del procedimento, quale che sia la sua origine storica",
+      "errore_bersaglio": "indicare il piombo fra i parametri in superamento o aprire per esso una posizione autonoma nel procedimento"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "qualificazione del sito come contaminato",
+      "chiave_nel_criterio": "sito contaminato",
+      "ragione": "il superamento delle soglie di contaminazione rende il sito potenzialmente contaminato; la qualificazione di sito contaminato richiede il superamento delle soglie di rischio, che alla data di riferimento non sono state determinate",
+      "errore_bersaglio": "qualificare il sito come contaminato alla data di riferimento"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "data di conclusione del procedimento",
+      "chiave_nel_criterio": "data di conclusione del procedimento",
+      "ragione": "i termini del procedimento sono fissati per singolo adempimento e decorrono da approvazioni non ancora intervenute: nessuna data di conclusione complessiva è ricavabile alla data di riferimento",
+      "errore_bersaglio": "indicare una data determinata di conclusione del procedimento, come richiesto nella mail del direttore dello stabilimento"
+    }
+  ],
+  "dati_mancanti": [
+    "la determinazione dei valori di fondo dell'area e il piano di indagine da presentare all'agenzia regionale, che nessun documento contiene",
+    "ogni dato analitico storico sui terreni dello stabilimento anteriore all'evento",
+    "ogni dato analitico sulle acque sotterranee: il registro del piezometro riporta le sole letture di livello, senza prelievi né determinazioni",
+    "i punti di monitoraggio a valle idrogeologico dell'area interessata, che nello stabilimento non esistono",
+    "la documentazione sulla dismissione della linea di zincatura del 1994, oltre alla planimetria storica",
+    "l'estensione delle indagini alle aree corrispondenti alle ulteriori lesioni della pavimentazione",
+    "il requisito di contenuto del piano di caratterizzazione, che il codice individua per rinvio a un allegato non compreso nel reference pack"
+  ],
+  "fonti_ammesse": [
+    "D.Lgs. 152/2006, artt. 240, 242, 244, 245, 248, 250, 253",
+    "D.Lgs. 152/2006, art. 304"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "27 ottobre 2026",
+      "calcolo": "martedì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "evento potenzialmente contaminante",
+      "valore": "21 settembre 2026",
+      "calcolo": "lunedì, ore 6.55; rottura della tubazione di adduzione del bagno di nichelatura",
+      "fonte": "01_rapporto_di_intervento_e_messa_in_sicurezza.md"
+    },
+    {
+      "milestone": "termine di ventiquattro ore per le misure di prevenzione e la comunicazione",
+      "valore": "22 settembre 2026",
+      "calcolo": "ventiquattro ore dall'evento; martedì",
+      "fonte": "art. 242, comma 1, e art. 304, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "termine per l'informativa del prefetto al Ministro",
+      "valore": "23 settembre 2026",
+      "calcolo": "ventiquattro ore successive alla ricezione della comunicazione da parte del prefetto",
+      "fonte": "art. 304, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "screening di campo dell'indagine preliminare",
+      "valore": "22 settembre 2026",
+      "calcolo": "martedì; misura non accreditata, che ha rilevato il superamento per il nichel",
+      "fonte": "01_rapporto_di_intervento_e_messa_in_sicurezza.md, punto 4"
+    },
+    {
+      "milestone": "notizia del superamento delle concentrazioni soglia di contaminazione",
+      "valore": "23 settembre 2026",
+      "calcolo": "mercoledì; immediata, come prescritto",
+      "fonte": "03_notizia_di_superamento.md"
+    },
+    {
+      "milestone": "termine di quarantotto ore per l'autocertificazione di ripristino",
+      "valore": "24 settembre 2026",
+      "calcolo": "quarantotto ore dalla comunicazione; la via è praticabile soltanto se le soglie di contaminazione non risultano superate, quindi nel caso è preclusa",
+      "fonte": "art. 242, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "emissione del rapporto di prova",
+      "valore": "1 ottobre 2026",
+      "calcolo": "giovedì; conferma analitica del superamento rilevato in campo, otto giorni dopo la notizia",
+      "fonte": "04_rapporto_di_prova_suolo.md"
+    },
+    {
+      "milestone": "sopralluogo dell'agenzia regionale",
+      "valore": "8 ottobre 2026",
+      "calcolo": "giovedì; nessun provvedimento risulta adottato alla data del sopralluogo",
+      "fonte": "05_verbale_di_sopralluogo_arpa.md"
+    },
+    {
+      "milestone": "termine per la presentazione del piano di caratterizzazione",
+      "valore": "23 ottobre 2026",
+      "calcolo": "trenta giorni dalla notizia del superamento; alla data di riferimento il termine è decorso da 4 giorni e il piano non risulta presentato",
+      "fonte": "art. 242, comma 3, del codice dell'ambiente"
+    },
+    {
+      "milestone": "derivazione errata: trenta giorni dall'evento",
+      "valore": "21 ottobre 2026",
+      "calcolo": "il termine decorre dalla notizia del superamento e non dall'evento",
+      "fonte": "derivazione da escludere"
+    },
+    {
+      "milestone": "autorizzazione del piano di caratterizzazione",
+      "valore": "26 novembre 2026",
+      "calcolo": "trenta giorni successivi alla presentazione; calcolo condizionato all'ipotesi di presentazione alla data di riferimento",
+      "fonte": "art. 242, comma 3, del codice dell'ambiente"
+    },
+    {
+      "milestone": "trasmissione dei risultati dell'analisi di rischio",
+      "valore": "26 maggio 2027",
+      "calcolo": "sei mesi dall'approvazione del piano di caratterizzazione; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 4, del codice dell'ambiente"
+    },
+    {
+      "milestone": "approvazione del documento di analisi di rischio",
+      "valore": "25 luglio 2027",
+      "calcolo": "sessanta giorni dalla ricezione del documento; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 4, del codice dell'ambiente"
+    },
+    {
+      "milestone": "presentazione del piano di monitoraggio, in caso di esito negativo",
+      "valore": "23 settembre 2027",
+      "calcolo": "sessanta giorni dall'approvazione del documento di analisi di rischio; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 5, del codice dell'ambiente"
+    },
+    {
+      "milestone": "approvazione del piano di monitoraggio",
+      "valore": "23 ottobre 2027",
+      "calcolo": "trenta giorni dal ricevimento, sospendibili una sola volta; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 6, del codice dell'ambiente"
+    },
+    {
+      "milestone": "presentazione del progetto operativo, in caso di esito positivo",
+      "valore": "25 gennaio 2028",
+      "calcolo": "sei mesi successivi all'approvazione del documento di analisi di rischio; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 7, del codice dell'ambiente"
+    },
+    {
+      "milestone": "approvazione del progetto operativo",
+      "valore": "25 marzo 2028",
+      "calcolo": "sessanta giorni dal ricevimento, sospendibili una sola volta; calcolo condizionato alla medesima ipotesi",
+      "fonte": "art. 242, comma 7, del codice dell'ambiente"
+    },
+    {
+      "milestone": "termine del contraddittorio sui valori di fondo",
+      "valore": "sessanta giorni",
+      "calcolo": "dalla data di presentazione del piano di indagine all'agenzia regionale; nel fascicolo non risulta alcun piano di indagine sui valori di fondo",
+      "fonte": "art. 242, comma 13-ter, del codice dell'ambiente"
+    },
+    {
+      "milestone": "preavviso al soggetto responsabile per l'istruttoria in contraddittorio",
+      "valore": "almeno venti giorni",
+      "calcolo": "il medesimo termine si applica all'invio del documento di analisi di rischio ai componenti della conferenza di servizi",
+      "fonte": "art. 242, comma 4, del codice dell'ambiente"
+    },
+    {
+      "milestone": "nichel nel campione S3 A e soglia applicabile",
+      "valore": "720 mg/kg contro 500 mg/kg",
+      "calcolo": "superamento di 220 mg/kg rispetto al limite di riferimento indicato nel rapporto di prova",
+      "fonte": "04_rapporto_di_prova_suolo.md, punto 4"
+    },
+    {
+      "milestone": "nichel oltre soglia anche al netto dell'incertezza estesa",
+      "valore": "658 mg/kg",
+      "calcolo": "720 meno 62 uguale 658: il superamento persiste applicando la regola decisionale dichiarata dal laboratorio",
+      "fonte": "04_rapporto_di_prova_suolo.md, punti 6 e 7"
+    },
+    {
+      "milestone": "piombo nel campione S3 A e soglia applicabile",
+      "valore": "820 mg/kg contro 1.000 mg/kg",
+      "calcolo": "820 è inferiore a 1.000, e non lo supera nemmeno sommando l'incertezza estesa di 74 mg/kg, che porterebbe a 894 mg/kg",
+      "fonte": "04_rapporto_di_prova_suolo.md, punti 4 e 7"
+    },
+    {
+      "milestone": "sanzione per l'omessa comunicazione",
+      "valore": "non inferiore a mille euro né superiore a tremila euro per ogni giorno di ritardo",
+      "calcolo": "la comunicazione risulta effettuata nel termine, quindi la sanzione non è in gioco",
+      "fonte": "art. 304, comma 2, del codice dell'ambiente"
+    },
+    {
+      "milestone": "ulteriori lesioni della pavimentazione",
+      "valore": "trentaquattro metri lineari",
+      "calcolo": "rilevate lungo il percorso della tubazione fuori dall'area dell'evento, e misurate dal consulente in accesso",
+      "fonte": "05_verbale_di_sopralluogo_arpa.md, punto 2.6"
+    }
+  ],
+  "funzione_allegati": {
+    "01_rapporto_di_intervento_e_messa_in_sicurezza.md": "fissa la data e l'ora dell'evento, documenta le misure adottate e riporta lo screening di campo; contiene l'affermazione sulla posizione del piezometro che la nota del geologo smentisce",
+    "02_comunicazione_dell_evento.md": "documenta l'adempimento del termine di ventiquattro ore, i quattro destinatari e il contenuto prescritto della comunicazione",
+    "03_notizia_di_superamento.md": "fissa il dies a quo del termine per il piano di caratterizzazione, che nessun altro documento dà, e ha destinatari diversi dalla comunicazione dell'evento",
+    "04_rapporto_di_prova_suolo.md": "porta i valori analitici, le incertezze estese e la regola decisionale dichiarata dal laboratorio, che è una convenzione del laboratorio e non una regola di legge",
+    "05_verbale_di_sopralluogo_arpa.md": "documenta che alla data del sopralluogo nessun provvedimento è stato adottato, e rileva le lesioni della pavimentazione fuori dall'area dell'evento",
+    "06_email_del_direttore_di_stabilimento.md": "porta le affermazioni di parte da verificare, di cui alcune da correggere e alcune da confermare, e la domanda del consiglio sulla data di conclusione",
+    "07_nota_del_consulente_ambientale.md": "chiude l'elenco della documentazione non reperita, attesta che il piano non è stato presentato e smentisce l'affermazione sulla posizione del piezometro"
+  }
+}

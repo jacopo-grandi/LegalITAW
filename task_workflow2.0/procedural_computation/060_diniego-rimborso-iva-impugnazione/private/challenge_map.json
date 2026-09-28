@@ -1,0 +1,172 @@
+{
+  "task_id": "WF2-060",
+  "lato_assistito": "Vetreria Sambrenta S.p.A., contribuente istante",
+  "data_di_riferimento": "2031-06-30",
+  "stato_fascicolo": "istanza di rimborso presentata il 20 novembre 2029 e rimasta senza riscontro; richiesta istruttoria del 12 febbraio 2031; trasmissione parziale riferita dall'ufficio; diniego espresso consegnato il 6 maggio 2031; nessun ricorso proposto.",
+  "meccanismi_di_difficolta": [
+    "data del documento contro data di efficacia: il provvedimento porta il 29 aprile 2031 e la ricevuta di consegna il 6 maggio 2031, e la decorrenza sta nella seconda",
+    "nomi simili fra atti: una richiesta istruttoria che assomiglia a un provvedimento e non è fra gli atti autonomamente impugnabili",
+    "termini dipendenti da più eventi: il rifiuto tacito formatosi nel 2030 e il diniego espresso del 2031 aprono regimi diversi, uno senza decadenza e uno perentorio",
+    "metodo di calcolo controintuitivo: la scadenza nominale cade di sabato e la proroga processuale opera, mentre nessun documento del fascicolo enuncia la regola",
+    "evidenze incomplete: la motivazione si fonda su una trasmissione che il fascicolo non contiene"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "individuazione dell'atto impugnabile",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'atto da impugnare è il provvedimento di diniego del rimborso, che rientra fra gli atti autonomamente impugnabili in quanto rifiuto espresso della restituzione",
+      "evidenza": "dispositivo del provvedimento di diniego; oggetto dell'atto",
+      "non_deve_affermare": "che l'atto impugnabile sia la richiesta di documentazione del 12 febbraio 2031 o la dichiarazione annuale"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "decorrenza del termine dalla consegna e non dalla data dell'atto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di impugnazione decorre dal 6 maggio 2031, data della ricevuta di avvenuta consegna, e non dal 29 aprile 2031, data apposta sul provvedimento",
+      "evidenza": "intestazione del provvedimento, che riporta il 29 aprile, e ricevuta di avvenuta consegna del 6 maggio 2031",
+      "non_deve_affermare": "che il termine decorra dal 29 aprile 2031 o dalla data di protocollo"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "durata del termine di impugnazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine per proporre ricorso è di sessanta giorni dalla notificazione dell'atto",
+      "evidenza": "disciplina del processo tributario richiamata nelle avvertenze del provvedimento",
+      "non_deve_affermare": "che il termine sia di trenta giorni, di novanta giorni o di un anno"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "scadenza effettiva del termine e proroga",
+      "gravita": "alta",
+      "affermazione_richiesta": "il sessantesimo giorno cade sabato 5 luglio 2031 e il termine è prorogato al primo giorno successivo non festivo, lunedi 7 luglio 2031",
+      "evidenza": "computo dal 6 maggio 2031; calendario 2031",
+      "non_deve_affermare": "che la scadenza sia il 5 luglio 2031"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "tempo residuo alla data di riferimento",
+      "gravita": "alta",
+      "affermazione_richiesta": "al 30 giugno 2031 il termine è aperto e residuano sette giorni fino al 7 luglio 2031",
+      "evidenza": "data di riferimento e scadenza calcolata",
+      "non_deve_affermare": "che il termine sia scaduto o che residuino più di sette giorni"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "la richiesta di documentazione non è autonomamente impugnabile",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta del 12 febbraio 2031 è un atto istruttorio, non è compresa fra gli atti autonomamente impugnabili e non ha fatto decorrere alcun termine di impugnazione",
+      "evidenza": "contenuto e clausola di chiusura della richiesta del 12 febbraio 2031",
+      "non_deve_affermare": "che la richiesta sia impugnabile o che dal suo ricevimento decorra un termine"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "silenzio-rifiuto formatosi e successivo atto espresso",
+      "gravita": "alta",
+      "affermazione_richiesta": "dall'istanza del 20 novembre 2029 si era formato il silenzio-rifiuto per decorso dei novanta giorni, e l'inerzia dell'ufficio era impugnabile senza termine di decadenza; l'intervento del provvedimento espresso apre ora un termine perentorio",
+      "evidenza": "data dell'istanza; assenza di riscontro fino al 12 febbraio 2031; provvedimento del 6 maggio 2031",
+      "non_deve_affermare": "che il diritto sia decaduto per non aver impugnato il silenzio, o che il termine di sessanta giorni non si applichi in presenza di un atto espresso"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "organo giurisdizionale competente",
+      "gravita": "alta",
+      "affermazione_richiesta": "il ricorso va proposto davanti alla corte di giustizia tributaria di primo grado",
+      "evidenza": "avvertenze del provvedimento, che rinviano all'organo competente senza nominarlo",
+      "non_deve_affermare": "che il ricorso vada proposto davanti alla commissione tributaria provinciale, denominazione non più vigente"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "assenza di riscossione e di importi da versare",
+      "gravita": "media",
+      "affermazione_richiesta": "il provvedimento non contiene iscrizione a ruolo ne intimazione di pagamento e non vi sono somme da versare per effetto dell'atto",
+      "evidenza": "dispositivo del provvedimento di diniego",
+      "non_deve_affermare": "che l'atto imponga un pagamento o che occorra versare una quota del preteso"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "contributo unificato come condizione dell'iscrizione a ruolo",
+      "gravita": "media",
+      "affermazione_richiesta": "il ricorso è soggetto al contributo unificato, determinato in funzione del valore della controversia, il cui versamento va documentato al momento della costituzione",
+      "evidenza": "valore della controversia pari all'importo negato",
+      "non_deve_affermare": "che il contributo non sia dovuto o che il suo importo sia determinabile senza verificare gli scaglioni vigenti"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "valore della controversia",
+      "gravita": "media",
+      "affermazione_richiesta": "il valore della controversia è pari a euro 318.400,00, importo del rimborso negato, senza aggiunta di sanzioni o interessi",
+      "evidenza": "dispositivo del provvedimento; prospetto della destinazione del credito",
+      "non_deve_affermare": "che il valore comprenda interessi o che sia pari alla differenza a credito di euro 313.280,00"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "documentazione non trasmessa e ricostruzione del contraddittorio",
+      "gravita": "alta",
+      "affermazione_richiesta": "la motivazione del diniego si fonda sulla mancata trasmissione delle dichiarazioni doganali e dell'attestazione contributiva; il fascicolo prova la trasmissione parziale del 10 marzo 2031 ma non il suo contenuto",
+      "evidenza": "punti 3 e 4 della motivazione del provvedimento; assenza del messaggio del 10 marzo 2031 nel fascicolo",
+      "non_deve_affermare": "che la documentazione mancante sia stata trasmessa o che la ricostruzione dell'ufficio sia provata dagli atti"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "operazioni non imponibili contestate",
+      "gravita": "media",
+      "affermazione_richiesta": "la contestazione riguarda le esportazioni dichiarate per euro 1.020.000,00 e non le cessioni intracomunitarie per euro 3.148.000,00, la cui documentazione risulta trasmessa",
+      "evidenza": "punti 3 e 4 della motivazione, letti con il prospetto della dichiarazione",
+      "non_deve_affermare": "che la contestazione riguardi l'intero ammontare delle operazioni non imponibili"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "sospensione dei termini nel periodo feriale",
+      "chiave_nel_criterio": "sospensione feriale",
+      "perche_non_e_issue": "il periodo che va dal 6 maggio al 7 luglio 2031 non interseca la sospensione dei termini processuali del mese di agosto: applicarla per allungare la scadenza è errore"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "reclamo e mediazione come fase obbligatoria",
+      "chiave_nel_criterio": "reclamo e mediazione",
+      "perche_non_e_issue": "l'istituto è stato abrogato per i ricorsi notificati a decorrere dalla riforma del 2024: presentarlo come fase obbligatoria da percorrere prima del ricorso, o computarne il termine, è errore"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "istanza di sospensione dell'atto impugnato",
+      "chiave_nel_criterio": "sospensione dell'atto impugnato",
+      "perche_non_e_issue": "il diniego di rimborso non contiene iscrizione a ruolo ne intimazione di pagamento e non produce effetti esecutivi da sospendere: proporre l'istanza cautelare come passaggio necessario è sovra-segnalazione"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "termine di trenta giorni della richiesta di documentazione",
+      "chiave_nel_criterio": "termine di trenta giorni",
+      "perche_non_e_issue": "il termine indicato dalla richiesta del 12 febbraio 2031 è un termine istruttorio assegnato dall'ufficio, non un termine di impugnazione: trattarlo come perentorio o come decadenziale è errore"
+    }
+  ],
+  "dati_mancanti": [
+    "messaggio del 10 marzo 2031 e relative ricevute, non presenti nel fascicolo",
+    "documentazione trasmessa con quel messaggio",
+    "dichiarazioni doganali di esportazione relative a euro 1.020.000,00",
+    "attestazione della regolarità dei versamenti contributivi",
+    "importo del contributo unificato secondo gli scaglioni vigenti alla data del deposito",
+    "eventuali atti dell'ufficio successivi al 6 maggio 2031"
+  ],
+  "errori_bersaglio": [
+    "far decorrere il termine dal 29 aprile 2031, data apposta sul provvedimento",
+    "indicare il 5 luglio 2031 come scadenza, senza applicare la proroga per il sabato",
+    "applicare la sospensione feriale a un periodo che non la interseca",
+    "inserire il reclamo e mediazione come fase obbligatoria o computarne il termine",
+    "indicare l'istanza di sospensione dell'atto come passaggio necessario",
+    "affermare che il diritto è decaduto per non aver impugnato il rifiuto tacito",
+    "indicare la commissione tributaria provinciale come organo competente",
+    "trattare la richiesta di documentazione come atto impugnabile o il suo termine di trenta giorni come perentorio",
+    "indicare un importo determinato di contributo unificato senza verificare gli scaglioni",
+    "assumere come valore della controversia euro 313.280,00",
+    "estendere la contestazione dell'ufficio alle cessioni intracomunitarie"
+  ],
+  "funzione_degli_allegati": {
+    "01_dichiarazione_iva_2028_prospetti.pdf": "Prova l'esistenza e l'ammontare del credito e la scelta del rimborso, e fissa il presupposto su cui l'ufficio ha poi chiesto documentazione.",
+    "02_istanza_rimborso_e_protocollo.pdf": "Fissa la data da cui decorre il termine di novanta giorni per il silenzio-rifiuto. È l'atto rispetto al quale l'ufficio è rimasto inerte per oltre un anno.",
+    "03_richiesta_documentazione_12_febbraio_2031.pdf": "Controlled non-issue principale: un atto istruttorio che assomiglia a un provvedimento ma non è fra quelli autonomamente impugnabili e non fa decorrere alcun termine di impugnazione.",
+    "04_provvedimento_diniego_6_maggio_2031.pdf": "È l'atto impugnabile e la fonte della decorrenza. La data del provvedimento e quella della consegna non coincidono: la decorrenza va presa dalla seconda."
+  }
+}

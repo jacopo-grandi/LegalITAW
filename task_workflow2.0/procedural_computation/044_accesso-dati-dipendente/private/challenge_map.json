@@ -1,0 +1,216 @@
+{
+  "task_id": "WF2-044",
+  "lato_assistito": "Fucina Servizi S.p.A., titolare destinatario della richiesta",
+  "data_di_riferimento": "2026-08-20",
+  "stato_del_fascicolo": "richiesta identificata; termine iniziale in corso, comunicazione di proroga non ancora inviata",
+  "fonti_ammesse": [
+    "gdpr",
+    "privacy"
+  ],
+  "dati_mancanti": [],
+  "calcoli": [],
+  "errori_bersaglio": [
+    "termine decorrente dal 24 luglio",
+    "rinvio automatico al lunedì",
+    "diniego totale per dati di terzi",
+    "esenzione generale da legal hold",
+    "consegna delle caselle complete",
+    "attesa fino a ottobre per l'export HR",
+    "invio alla casella aziendale disattivata"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "ricezione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta è stata ricevuta il 22 luglio 2026",
+      "evidenza": "registro protocollo numero DP-118",
+      "azione": "calcolare il termine dal giorno della ricezione",
+      "cautela": "non far decorrere dalla conferma di identità"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "identità",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine",
+      "evidenza": "documento e richiesta coincidevano; il chiarimento è arrivato in due giorni",
+      "azione": "registrare la verifica senza spostare il dies a quo",
+      "cautela": "non aggiungere due giorni alla scadenza"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "termine iniziale",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine iniziale cade il 22 agosto 2026",
+      "evidenza": "un mese dal 22 luglio; il 22 agosto è sabato ma il regolamento non introduce nel fascicolo una proroga al lavorativo",
+      "azione": "assumere il 22 agosto come data operativa prudenziale",
+      "cautela": "non spostare automaticamente al lunedì"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "proroga",
+      "gravita": "alta",
+      "affermazione_richiesta": "una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste",
+      "evidenza": "nota DPO: 18 caselle, chat e materiale disciplinare",
+      "azione": "motivare e comunicare la proroga entro il termine iniziale",
+      "cautela": "non usare una proroga standard"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "comunicazione proroga",
+      "gravita": "alta",
+      "affermazione_richiesta": "la comunicazione di proroga non è ancora stata inviata al 20 agosto",
+      "evidenza": "registro comunicazioni privo di uscita",
+      "azione": "inviarla entro il 22 agosto con motivi specifici",
+      "cautela": "non retrodatare la comunicazione"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "dati HR",
+      "gravita": "alta",
+      "affermazione_richiesta": "anagrafica, valutazioni e log presenze sono nel perimetro",
+      "evidenza": "export HR contiene dati riferiti a Luca Ferranti",
+      "azione": "consegnare una copia intelligibile e le informazioni di contesto",
+      "cautela": "non limitarsi a un riepilogo"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "email",
+      "gravita": "alta",
+      "affermazione_richiesta": "le email vanno selezionate per dati personali del richiedente, non per documento intero",
+      "evidenza": "thread misti contengono valutazioni su Ferranti e dati privati di colleghi",
+      "azione": "estrarre i passaggi pertinenti e oscurare il resto",
+      "cautela": "non consegnare caselle complete"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "dati di terzi",
+      "gravita": "alta",
+      "affermazione_richiesta": "i dati dei colleghi richiedono bilanciamento e oscuramenti granulari",
+      "evidenza": "thread riporta salute e recapiti personali di due colleghi",
+      "azione": "pseudonimizzare dove l'identità non serve",
+      "cautela": "non negare l'accesso per la sola presenza di terzi"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "indagine",
+      "gravita": "alta",
+      "affermazione_richiesta": "il legal hold non crea da solo un'esenzione generale",
+      "evidenza": "nota legale segnala rischio concreto per attività difensive ancora in corso",
+      "azione": "valutare contenuto per contenuto e documentare la limitazione",
+      "cautela": "non oscurare ogni documento marcato legal hold"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "risposta parziale",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'export HR può essere consegnato entro il termine iniziale",
+      "evidenza": "il dataset è già estratto e verificato",
+      "azione": "inviare una prima tranche con indice delle fonti residue",
+      "cautela": "non attendere ottobre per tutto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "informazioni accessorie",
+      "gravita": "alta",
+      "affermazione_richiesta": "la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti",
+      "evidenza": "la bozza DPO contiene solo l'allegato dati",
+      "azione": "aggiungere la scheda informativa richiesta",
+      "cautela": "non confondere copia dei dati e accesso ai documenti"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "canale",
+      "gravita": "alta",
+      "affermazione_richiesta": "la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta",
+      "evidenza": "domanda inviata da PEC personale e nessuna preferenza diversa",
+      "azione": "usare PEC con allegati protetti",
+      "cautela": "non inviare alla casella aziendale disattivata"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "registro decisioni",
+      "gravita": "alta",
+      "affermazione_richiesta": "oscuramenti e limitazioni devono essere tracciati con ragione e documento",
+      "evidenza": "nota DPO propone un log ma non lo compila",
+      "azione": "creare un registro riga per riga",
+      "cautela": "non usare formule generiche"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "owner",
+      "gravita": "alta",
+      "affermazione_richiesta": "HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione",
+      "evidenza": "nota DPO assegna fonti e approvazioni",
+      "azione": "rendere esplicita la matrice owner-termine",
+      "cautela": "non attribuire al solo IT la decisione giuridica"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "termine decorrente dal 24 luglio",
+      "chiave_nel_criterio": "termine decorrente dal 24 luglio"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "rinvio automatico al lunedì",
+      "chiave_nel_criterio": "rinvio automatico al lunedì"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "diniego totale per dati di terzi",
+      "chiave_nel_criterio": "diniego totale per dati di terzi"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "esenzione generale da legal hold",
+      "chiave_nel_criterio": "esenzione generale da legal hold"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "consegna delle caselle complete",
+      "chiave_nel_criterio": "consegna delle caselle complete"
+    },
+    {
+      "id": "N-06",
+      "oggetto": "attesa fino a ottobre per l'export HR",
+      "chiave_nel_criterio": "attesa fino a ottobre per l'export HR"
+    },
+    {
+      "id": "N-07",
+      "oggetto": "invio alla casella aziendale disattivata",
+      "chiave_nel_criterio": "invio alla casella aziendale disattivata"
+    }
+  ],
+  "funzione_allegati": [
+    {
+      "file": "01_richiesta_accesso.pdf",
+      "funzione": "Richiesta del dipendente"
+    },
+    {
+      "file": "02_registro_protocollo.xlsx",
+      "funzione": "Registro del protocollo"
+    },
+    {
+      "file": "03_conferma_identita.pdf",
+      "funzione": "Conferma dell'identità"
+    },
+    {
+      "file": "04_export_hr.xlsx",
+      "funzione": "Export del sistema HR"
+    },
+    {
+      "file": "05_thread_email_team.eml",
+      "funzione": "Thread email con dati di colleghi"
+    },
+    {
+      "file": "06_legal_hold_indagine.pdf",
+      "funzione": "Legal hold dell'indagine interna"
+    },
+    {
+      "file": "07_nota_dpo.pdf",
+      "funzione": "Nota del DPO"
+    }
+  ]
+}

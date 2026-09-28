@@ -1,0 +1,181 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-094",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "real_estate_red_flag_matrix.md"
+  ],
+  "criteria_total": 56,
+  "proposals_count": 7,
+  "proposals": [
+    {
+      "criterion_id": "A.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "6 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «6 ottobre 2026» come data alla quale l'analisi è riferita",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-A3",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?:6°?\\s+ottobre(?:\\s+2026)?|0?6\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?6\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.3",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "6.240"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare la misura «6.240» riferita alla superficie fondiaria o all'area di pertinenza",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-B3",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?<![\\d.,])6[.\\s]?240(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.15",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "quarantacinque giorni"
+      ],
+      "value_types": [
+        "durata"
+      ],
+      "rationale": "compare il termine «quarantacinque giorni» riferito al procedimento di accertamento di conformità applicabile",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-B15",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?:45|quarantacinque)\\s+giorn[oaei])"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.1",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "1.958"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare la misura «1.958» riferita alla superficie utile rilevata",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-C1",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?958(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.2",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "56"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare la misura «56» riferita allo scostamento non assentito di superficie utile",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-C2",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?<![\\d.,])56(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.7",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "31 ottobre 2026"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «31 ottobre 2026» riferita al termine della verifica",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-C7",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?:31°?\\s+ottobre(?:\\s+2026)?|0?31\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*2026|0?31\\s*[/.\\-]\\s*0?10\\s*[/.\\-]\\s*26))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "C.8",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "20 gennaio 2027"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare la data «20 gennaio 2027» riferita all'atto definitivo",
+      "combine": "single",
+      "check": {
+        "id": "WF2-094-C8",
+        "type": "required_regex",
+        "artifact": "real_estate_red_flag_matrix.md",
+        "patterns": [
+          "(?:(?:20°?\\s+gennaio(?:\\s+2027)?|0?20\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2027|0?20\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*27))"
+        ]
+      }
+    }
+  ]
+}

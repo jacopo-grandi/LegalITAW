@@ -1,0 +1,713 @@
+{
+  "task_id": "WF2-072",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 35,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "la consegna usa i file employment_deadline_audit.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file employment_deadline_audit.md.\nPASS se: i nomi dei file coincidono con employment_deadline_audit.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con employment_deadline_audit.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "la parte testuale non supera 1.700 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 1.700 parole.\nPASS se: il conteggio non supera 1.700; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 1.700; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per conoscenza del fatto.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per conoscenza del fatto.\nPASS se: compare «2 maggio 2029»; compare «2029-05-02»\nFAIL se: non compare ne «2 maggio 2029» ne «2029-05-02» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto; rapporto audit",
+      "pass_condition": "compare «2 maggio 2029»; compare «2029-05-02»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: rapporto audit chiuso il 2 maggio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: rapporto audit chiuso il 2 maggio.\nPASS se: cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto; rapporto audit",
+      "pass_condition": "cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'immediatezza si valuta da questa data e non dal fatto del 29 aprile.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'immediatezza si valuta da questa data e non dal fatto del 29 aprile.\nPASS se: espone l'effetto: l'immediatezza va verificata dal completamento dell'audit, non dal solo fatto del 27 aprile; indica come conseguenza: l'immediatezza va verificata dal completamento dell'audit, non dal solo fatto del 27 aprile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a conoscenza del fatto; rapporto audit",
+      "pass_condition": "espone l'effetto: l'immediatezza va verificata dal completamento dell'audit, non dal solo fatto del 27 aprile; indica come conseguenza: l'immediatezza va verificata dal completamento dell'audit, non dal solo fatto del 27 aprile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata.\nPASS se: afferma: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata; conclude: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità; lettera di contestazione",
+      "pass_condition": "afferma: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata; conclude: la lettera del 3 maggio indica operazione, ora, cliente e regola contestata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: contestazione consegnata il 3 maggio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: contestazione consegnata il 3 maggio.\nPASS se: cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità; lettera di contestazione",
+      "pass_condition": "cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'addebito è individuato nei suoi elementi materiali.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'addebito è individuato nei suoi elementi materiali.\nPASS se: espone l'effetto: l'addebito è individuato nei suoi elementi materiali; indica come conseguenza: l'addebito è individuato nei suoi elementi materiali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a specificità; lettera di contestazione",
+      "pass_condition": "espone l'effetto: l'addebito è individuato nei suoi elementi materiali; indica come conseguenza: l'addebito è individuato nei suoi elementi materiali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il codice disciplinare risulta affisso dal 4 gennaio 2028.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il codice disciplinare risulta affisso dal 4 gennaio 2028.\nPASS se: afferma: il codice disciplinare risulta affisso dal 4 gennaio 2028; conclude: il codice disciplinare risulta affisso dal 4 gennaio 2028\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice; art. 7 legge 300/1970; verbale",
+      "pass_condition": "afferma: il codice disciplinare risulta affisso dal 4 gennaio 2028; conclude: il codice disciplinare risulta affisso dal 4 gennaio 2028",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale di affissione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale di affissione.\nPASS se: cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice; art. 7 legge 300/1970; verbale",
+      "pass_condition": "cita 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice; indica come riscontro 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: il fascicolo prova la conoscibilità delle regole aziendali.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il fascicolo prova la conoscibilità delle regole aziendali.\nPASS se: espone l'effetto: il fascicolo prova la conoscibilità delle regole aziendali; indica come conseguenza: il fascicolo prova la conoscibilità delle regole aziendali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_atti_procedimento_varisco.pdf, contenuto pertinente a pubblicità del codice; art. 7 legge 300/1970; verbale",
+      "pass_condition": "espone l'effetto: il fascicolo prova la conoscibilità delle regole aziendali; indica come conseguenza: il fascicolo prova la conoscibilità delle regole aziendali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per termine difensivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per termine difensivo.\nPASS se: compare «11 maggio 2029»; compare «2029-05-11»\nFAIL se: non compare ne «11 maggio 2029» ne «2029-05-11» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo; art. 7 legge 300/1970",
+      "pass_condition": "compare «11 maggio 2029»; compare «2029-05-11»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: contestazione del 3 maggio e licenziamento del 13 maggio.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: contestazione del 3 maggio e licenziamento del 13 maggio.\nPASS se: cita 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo; indica come riscontro 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo; art. 7 legge 300/1970",
+      "pass_condition": "cita 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo; indica come riscontro 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: la decisione non è prematura per il solo decorso temporale.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la decisione non è prematura per il solo decorso temporale.\nPASS se: espone l'effetto: la decisione non e prematura per il solo intervallo temporale; indica come conseguenza: la decisione non e prematura per il solo intervallo temporale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a termine difensivo; art. 7 legge 300/1970",
+      "pass_condition": "espone l'effetto: la decisione non e prematura per il solo intervallo temporale; indica come conseguenza: la decisione non e prematura per il solo intervallo temporale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per difese scritte.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per difese scritte.\nPASS se: compare «7 maggio 2029»; compare «2029-05-07»\nFAIL se: non compare ne «7 maggio 2029» ne «2029-05-07» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte; PEC del 7 maggio",
+      "pass_condition": "compare «7 maggio 2029»; compare «2029-05-07»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: PEC della lavoratrice.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: PEC della lavoratrice.\nPASS se: cita 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte; indica come riscontro 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte; PEC del 7 maggio",
+      "pass_condition": "cita 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte; indica come riscontro 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: devono essere valutate nella motivazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: devono essere valutate nella motivazione.\nPASS se: espone l'effetto: devono essere valutate nella motivazione; indica come conseguenza: devono essere valutate nella motivazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_procedimento_varisco.xlsx, contenuto pertinente a difese scritte; PEC del 7 maggio",
+      "pass_condition": "espone l'effetto: devono essere valutate nella motivazione; indica come conseguenza: devono essere valutate nella motivazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per audizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per audizione.\nPASS se: compare «10 maggio 2029»; compare «2029-05-10»\nFAIL se: non compare ne «10 maggio 2029» ne «2029-05-10» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione; verbale di audizione",
+      "pass_condition": "compare «10 maggio 2029»; compare «2029-05-10»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale di audizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale di audizione.\nPASS se: cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione; verbale di audizione",
+      "pass_condition": "cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: il passaggio difensivo richiesto risulta eseguito.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il passaggio difensivo richiesto risulta eseguito.\nPASS se: espone l'effetto: il passaggio difensivo richiesto risulta eseguito; indica come conseguenza: il passaggio difensivo richiesto risulta eseguito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a audizione; verbale di audizione",
+      "pass_condition": "espone l'effetto: il passaggio difensivo richiesto risulta eseguito; indica come conseguenza: il passaggio difensivo richiesto risulta eseguito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable enuncia il risultato: la lettera di licenziamento usa gli stessi fatti della contestazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: la lettera di licenziamento usa gli stessi fatti della contestazione.\nPASS se: afferma: la lettera di licenziamento usa gli stessi fatti della contestazione; conclude: la lettera di licenziamento usa gli stessi fatti della contestazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione; lettere del 3 e 13 maggio",
+      "pass_condition": "afferma: la lettera di licenziamento usa gli stessi fatti della contestazione; conclude: la lettera di licenziamento usa gli stessi fatti della contestazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: raffronto fra lettere.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: raffronto fra lettere.\nPASS se: cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione; lettere del 3 e 13 maggio",
+      "pass_condition": "cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: non emerge una mutazione dell'addebito.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: non emerge una mutazione dell'addebito.\nPASS se: espone l'effetto: non emerge una mutazione dell'addebito; indica come conseguenza: non emerge una mutazione dell'addebito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a decisione; lettere del 3 e 13 maggio",
+      "pass_condition": "espone l'effetto: non emerge una mutazione dell'addebito; indica come conseguenza: non emerge una mutazione dell'addebito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per ricezione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per ricezione.\nPASS se: compare «11 maggio 2029»; compare «2029-05-11»\nFAIL se: non compare ne «11 maggio 2029» ne «2029-05-11» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione; ricevuta; art. 6 legge 604/1966",
+      "pass_condition": "compare «11 maggio 2029»; compare «2029-05-11»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ricevuta di consegna.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ricevuta di consegna.\nPASS se: cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione; ricevuta; art. 6 legge 604/1966",
+      "pass_condition": "cita 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione; indica come riscontro 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: da questa data decorre il termine di impugnazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: da questa data decorre il termine di impugnazione.\nPASS se: espone l'effetto: da questa data decorre il termine di impugnazione; indica come conseguenza: da questa data decorre il termine di impugnazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_scambi_audizione_e_recesso.eml, contenuto pertinente a ricezione; ricevuta; art. 6 legge 604/1966",
+      "pass_condition": "espone l'effetto: da questa data decorre il termine di impugnazione; indica come conseguenza: da questa data decorre il termine di impugnazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per prima decadenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per prima decadenza.\nPASS se: compare «10 luglio 2029»; compare «2029-07-10»\nFAIL se: non compare ne «10 luglio 2029» ne «2029-07-10» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza; art. 6 legge 604/1966",
+      "pass_condition": "compare «10 luglio 2029»; compare «2029-07-10»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ricezione del 13 maggio 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ricezione del 13 maggio 2029.\nPASS se: cita 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza; indica come riscontro 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza; art. 6 legge 604/1966",
+      "pass_condition": "cita 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza; indica come riscontro 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'impugnazione stragiudiziale deve pervenire entro quella data.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'impugnazione stragiudiziale deve pervenire entro quella data.\nPASS se: espone l'effetto: l'impugnazione stragiudiziale deve pervenire entro il 10 luglio 2029; indica come conseguenza: l'impugnazione stragiudiziale deve pervenire entro il 10 luglio 2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a prima decadenza; art. 6 legge 604/1966",
+      "pass_condition": "espone l'effetto: l'impugnazione stragiudiziale deve pervenire entro il 10 luglio 2029; indica come conseguenza: l'impugnazione stragiudiziale deve pervenire entro il 10 luglio 2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il successivo termine di centottanta giorni non è ancora databile.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il successivo termine di centottanta giorni non è ancora databile.\nPASS se: afferma: il successivo termine di centottanta giorni non è ancora databile; conclude: il successivo termine di centottanta giorni non è ancora databile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza; art. 6 legge 604/1966",
+      "pass_condition": "afferma: il successivo termine di centottanta giorni non è ancora databile; conclude: il successivo termine di centottanta giorni non è ancora databile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "il deliverable collega il dato al documento: assenza di impugnazione nel fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: assenza di impugnazione nel fascicolo.\nPASS se: cita 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza; indica come riscontro 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza; art. 6 legge 604/1966",
+      "pass_condition": "cita 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza; indica come riscontro 04_nota_studio_termini_impugnazione.pdf, contenuto pertinente a seconda decadenza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «copia intranet»: La presenza di una copia in intranet non cancella la prova dell'affissione fisica.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «copia intranet»: La presenza di una copia in intranet non cancella la prova dell'affissione fisica.\nPASS se: non qualifica come criticita copia intranet; esclude espressamente il falso positivo copia intranet\nFAIL se: compare la conclusione vietata «copia intranet costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita copia intranet; esclude espressamente il falso positivo copia intranet",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «registrazione audio»: L'assenza di audio non smentisce da sola il verbale di audizione firmato.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «registrazione audio»: L'assenza di audio non smentisce da sola il verbale di audizione firmato.\nPASS se: non qualifica come criticita registrazione audio; esclude espressamente il falso positivo registrazione audio\nFAIL se: compare la conclusione vietata «registrazione audio costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita registrazione audio; esclude espressamente il falso positivo registrazione audio",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "employment_deadline_audit.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «seconda consegna»: L'assenza di una seconda modalità non invalida la ricevuta di consegna disponibile.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «seconda consegna»: L'assenza di una seconda modalità non invalida la ricevuta di consegna disponibile.\nPASS se: non qualifica come criticita seconda consegna; esclude espressamente il falso positivo seconda consegna\nFAIL se: compare la conclusione vietata «seconda consegna costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita seconda consegna; esclude espressamente il falso positivo seconda consegna",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

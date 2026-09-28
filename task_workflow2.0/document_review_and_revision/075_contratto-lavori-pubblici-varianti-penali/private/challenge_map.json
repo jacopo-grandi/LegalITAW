@@ -1,0 +1,174 @@
+{
+  "task_id": "WF2-075",
+  "lato_assistito": "il Comune di Valmora, stazione appaltante nei confronti di Edil Quarneto S.p.A.",
+  "data_di_riferimento": "2029-06-04",
+  "stato_fascicolo": "bozza pre-firma",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Varianti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 12 consente varianti del RUP senza indicare presupposto né limite",
+      "evidenza": "01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a varianti",
+      "conseguenza": "la modifica può uscire dai casi ammessi",
+      "azione": "legare ogni variante a presupposto, motivazione e soglia",
+      "dato_mancante": "manca il quadro economico aggiornato",
+      "errore_bersaglio": "lasciare un potere illimitato",
+      "fonte": "art. 120 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Quinto d'obbligo",
+      "gravita": "alta",
+      "affermazione_richiesta": "il richiamo al quinto d'obbligo non indica la previsione nei documenti iniziali",
+      "evidenza": "01_schema_contratto_appalto_lavori_v3.pdf, contenuto pertinente a quinto d'obbligo",
+      "conseguenza": "l'esigibilità della prestazione aggiuntiva resta esposta",
+      "azione": "coordinare contratto e lex specialis",
+      "dato_mancante": "manca l'allegato opzioni",
+      "errore_bersaglio": "presumere il quinto sempre disponibile",
+      "fonte": "art. 120 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Revisione prezzi",
+      "gravita": "alta",
+      "affermazione_richiesta": "la soglia contrattuale del 10 per cento contrasta con la clausola legale applicabile",
+      "evidenza": "02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a revisione prezzi",
+      "conseguenza": "la formula deve essere sostituita con rinvio e indice pertinenti",
+      "azione": "inserire indice, base e modalità di calcolo",
+      "dato_mancante": "manca l'indice di settore",
+      "errore_bersaglio": "mantenere soglia e aliquota della bozza",
+      "fonte": "art. 60 D.Lgs. 36/2023; Allegato II.2-bis"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Riserve",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 18 rinvia le riserve alla sola comunicazione PEC",
+      "evidenza": "02_disciplinare_estratto_coordinamento_contrattuale.xlsx, contenuto pertinente a riserve",
+      "conseguenza": "il testo non presidia iscrizione negli atti contabili",
+      "azione": "richiamare modalità e termini dell'Allegato II.14",
+      "dato_mancante": "manca il giornale lavori",
+      "errore_bersaglio": "considerare la PEC sempre sostitutiva",
+      "fonte": "art. 115 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Sospensione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 20 attribuisce all'esecutore un diritto unilaterale di sospendere",
+      "evidenza": "03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a sospensione",
+      "conseguenza": "la previsione può interrompere l'esecuzione fuori dal procedimento",
+      "azione": "subordinare sospensione a ordine e verbalizzazione",
+      "dato_mancante": "manca il piano delle interferenze",
+      "errore_bersaglio": "confermare l'autotutela sospensiva",
+      "fonte": "D.Lgs. 36/2023; Allegato II.14"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Penali",
+      "gravita": "alta",
+      "affermazione_richiesta": "la penale giornaliera è fissata senza tetto complessivo",
+      "evidenza": "03_email_dl_osservazioni_schema_contratto.eml, contenuto pertinente a penali",
+      "conseguenza": "manca il limite previsto dalla disciplina di gara",
+      "azione": "inserire aliquota, base, contestazione e tetto",
+      "dato_mancante": "manca il cronoprogramma approvato",
+      "errore_bersaglio": "applicare penali senza contraddittorio",
+      "fonte": "art. 126 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Collaudo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 25 rende definitivo il collaudo alla firma del certificato",
+      "evidenza": "04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a collaudo",
+      "conseguenza": "il testo anticipa gli effetti definitivi",
+      "azione": "distinguere emissione provvisoria e consolidamento",
+      "dato_mancante": "manca la nomina del collaudatore",
+      "errore_bersaglio": "qualificare subito definitivo il certificato",
+      "fonte": "art. 116 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Vizi",
+      "gravita": "alta",
+      "affermazione_richiesta": "la rinuncia preventiva alle contestazioni per vizi riconoscibili è incompatibile con il periodo di provvisorietà",
+      "evidenza": "04_prospetto_garanzie_collaudo_supporto_rup.pdf, contenuto pertinente a vizi",
+      "conseguenza": "la stazione appaltante perderebbe una tutela prevista",
+      "azione": "eliminare la rinuncia",
+      "dato_mancante": "manca il piano prove",
+      "errore_bersaglio": "mantenere la rinuncia",
+      "fonte": "art. 116 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Risoluzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la clausola 27 confonde recesso e risoluzione",
+      "evidenza": "05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a risoluzione",
+      "conseguenza": "presupposti e conseguenze economiche risultano indistinti",
+      "azione": "separare le due fattispecie",
+      "dato_mancante": "manca il calcolo dei materiali utili",
+      "errore_bersaglio": "usare una sola clausola per ogni scioglimento",
+      "fonte": "art. 122 D.Lgs. 36/2023"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Garanzia",
+      "gravita": "alta",
+      "affermazione_richiesta": "lo svincolo integrale della cauzione è previsto prima del collaudo provvisorio",
+      "evidenza": "05_osservazioni_edil_quarneto_schema_contratto.pdf, contenuto pertinente a garanzia",
+      "conseguenza": "lo svincolo anticipato lascia scoperta l'esecuzione",
+      "azione": "allineare svincolo e certificati",
+      "dato_mancante": "manca la polizza decennale richiesta per soglia",
+      "errore_bersaglio": "svincolare alla sola ultimazione",
+      "fonte": "art. 117 D.Lgs. 36/2023"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "giorni naturali",
+      "chiave_nel_criterio": "giorni naturali",
+      "regola": "La durata espressa in giorni naturali non è di per sé una variante contrattuale."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "bozza polizza",
+      "chiave_nel_criterio": "bozza polizza",
+      "regola": "Una bozza di garanzia non dimostra l'avvenuta costituzione della garanzia definitiva."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "pec informativa",
+      "chiave_nel_criterio": "pec informativa",
+      "regola": "Una PEC informativa non sostituisce automaticamente gli adempimenti della contabilità lavori."
+    }
+  ],
+  "calcoli": [
+    "2029-06-04"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_schema_contratto_appalto_lavori_v3.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_disciplinare_estratto_coordinamento_contrattuale.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_dl_osservazioni_schema_contratto.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_prospetto_garanzie_collaudo_supporto_rup.pdf",
+      "funzione": "fornisce dati tecnici o quantitativi necessari alla conclusione"
+    },
+    {
+      "file": "documents/05_osservazioni_edil_quarneto_schema_contratto.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

@@ -1,0 +1,18 @@
+{
+  "task_id": "WF2-080",
+  "freeze_normativo": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Legge 27 luglio 1978, n. 392, artt. 11, 27, 28, 32, 34, 36, 41 e 79",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1978-07-27;392",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile, obbligazioni, garanzie e locazione, incluso art. 1232 c.c.",
+      "url": "https://www.normattiva.it/eli/id/1942/04/04/042U0262/CONSOLIDATED/20260614",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

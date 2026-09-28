@@ -1,0 +1,140 @@
+From: Marta Bellandi <marta.bellandi@saliceto.example>
+To: Giulio Marenghi <giulio.marenghi@saliceto.example>
+Cc: Anna Lodovici <anna.lodovici@saliceto.example>,
+ Riccardo Panebianco <riccardo.panebianco@saliceto.example>,
+ Elena Sartori <dpo@saliceto.example>
+Date: Tue, 16 Feb 2027 11:58:00 +0100
+Subject: I: IR-27-0216 - richiesta della Polizia postale e nota di Riccardo
+Message-ID: <d3ba1066d0a4@saliceto.example>
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+Giulio,
+
+ti giro in coda i tre messaggi arrivati stamattina, cos=C3=AC hai tutto in un=
+a catena sola: la richiesta della Polizia postale delle 11:26, la nota di Ric=
+cardo delle 10:34 e l'inoltro del messaggio degli attaccanti che il centralin=
+o ha ricevuto sulla casella info alle 07:35.
+
+Sulla richiesta della Polizia postale ho chiesto al turno di non riformattare=
+ alcun volume, di tenere sigillate le immagini gi=C3=A0 acquisite e di estrar=
+re e copiare oggi i log a rotazione, prima che la finestra di conservazione l=
+i sovrascriva: mi serve conferma scritta entro le 14, con l'elenco di ci=C3=
+=B2 che =C3=A8 stato effettivamente messo al riparo. Ho chiesto inoltre che l=
+'analisi prosegua su copie e non sugli originali e che il ripristino, quando =
+partir=C3=A0, sia predisposto su ambienti separati; anche qui attendo riscont=
+ro dai sistemisti.
+
+Sul resto ho bisogno di un tuo riscontro, anche solo per le vie brevi prima d=
+ella cabina di regia. Riccardo ha una posizione che va discussa e non voglio =
+che la decisione resti implicita: mi serve sapere da te come ci muoviamo con =
+gli adempimenti verso l'esterno e con quali tempi, perch=C3=A9 io ho un calen=
+dario tecnico e non ho titolo su quello.
+
+Ci vediamo alle 12:30. I forensi propongono un punto di verifica alle 18:00: =
+lo porto in cabina di regia perch=C3=A9 venga confermato.
+
+Marta
+
+--
+Ing. Marta Bellandi
+Direzione sicurezza delle informazioni
+Saliceto Salute Digitale S.p.A.
++39 051 4400118 - nis@saliceto.example
+
+Il giorno 16/02/2027 alle 11:26, Elio Ranucci <e.ranucci@poliziadistato.examp=
+le> ha scritto:
+
+> Gentile ingegnere,
+>
+> faccio seguito al contatto telefonico di questa mattina. In relazione ai fa=
+tti da voi
+> segnalati e in attesa della formalizzazione della denuncia, si chiede di vo=
+ler
+> conservare integri, senza alterazioni e fino a diversa comunicazione:
+>
+> - l'immagine forense dei sistemi interessati e i supporti su cui =C3=A8 sta=
+ta acquisita;
+> - i file di log dei sistemi perimetrali, dei servizi di autenticazione e de=
+gli
+>   applicativi coinvolti, compresi quelli soggetti a rotazione automatica;
+> - gli indicatori tecnici raccolti e la documentazione delle relative acquis=
+izioni;
+> - i messaggi originali ricevuti, con le intestazioni complete, e i file con=
+tenenti la
+>   richiesta rinvenuti sui sistemi.
+>
+> Si raccomanda di evitare interventi che comportino sovrascrittura o alteraz=
+ione dei
+> dati durante le attivit=C3=A0 di ripristino, che potranno comunque prosegui=
+re su copie o
+> su ambienti distinti. Ove per esigenze di continuit=C3=A0 assistenziale fos=
+se necessario
+> intervenire sui sistemi originali, si prega di darne preventiva comunicazio=
+ne a questo
+> ufficio, documentando l'operazione.
+>
+> Per la formalizzazione della denuncia siamo a disposizione gi=C3=A0 da doma=
+ni mattina; =C3=A8
+> utile portare la relazione tecnica preliminare e l'elenco dei sistemi inter=
+essati.
+>
+> Cordiali saluti
+>
+> Sost. Comm. Elio Ranucci
+> Polizia di Stato - Compartimento Polizia Postale e per la Sicurezza Ciberne=
+tica
+> per l'Emilia-Romagna - Bologna
+> tel. 051 6401xxx
+
+Il giorno 16/02/2027 alle 10:34, Riccardo Panebianco <riccardo.panebianco@sal=
+iceto.example> ha scritto:
+
+> Marta, Anna,
+>
+> ho letto il rapporto delle 08:20 e ho parlato con il broker. Prima di far u=
+scire
+> qualsiasi comunicazione all'esterno io aspetterei la scadenza del 18: se en=
+tro quel
+> momento i dati ci vengono restituiti e la faccenda rientra, evitiamo di apr=
+ire un
+> fronte che poi non si chiude pi=C3=B9, con i pazienti, con Cerasia e con ch=
+i ci guarda da
+> fuori. In quarantott'ore capiamo se hanno davvero il materiale che dicono d=
+i avere.
+>
+> Non sto dicendo di pagare, dico solo di non muoverci prima di aver capito. =
+Se poi
+> alle 12 di gioved=C3=AC la situazione =C3=A8 quella che =C3=A8, partiamo co=
+n tutto insieme e almeno
+> raccontiamo una storia completa invece di fare tre comunicazioni diverse.
+>
+> Riccardo Panebianco
+> Direzione amministrazione, finanza e controllo
+
+-----Messaggio originale-----
+Da: mittente sconosciuto
+A: info@saliceto.example
+Data: 16/02/2027 07:35
+Oggetto: LEGGERE SUBITO - i vostri archivi
+
+Inoltrato da F. Denti, SOC, il 16/02/2027 alle 08:44
+
+> I vostri file sono cifrati e una copia dei vostri archivi =C3=A8 gi=C3=A0 f=
+uori dalla vostra
+> rete. Abbiamo prelevato dati dei pazienti: anagrafiche, referti, recapiti.
+>
+> Avete tempo fino al 18 febbraio alle ore 12:00 per contattarci all'indirizz=
+o indicato
+> nel file leggimi presente in ogni cartella e per definire il pagamento. Tra=
+scorso quel
+> termine pubblicheremo una prima parte del materiale sul nostro sito e infor=
+meremo la
+> stampa e i vostri clienti.
+>
+> Non rivolgetevi alla polizia e non fate intervenire societ=C3=A0 di recuper=
+o: ce ne
+> accorgiamo e i tempi si accorciano. Se pagate riceverete la chiave e la pro=
+va della
+> cancellazione delle copie.

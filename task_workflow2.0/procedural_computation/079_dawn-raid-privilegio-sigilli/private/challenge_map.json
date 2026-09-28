@@ -1,0 +1,171 @@
+{
+  "task_id": "WF2-079",
+  "lato_assistito": "Tersilia Additivi S.p.A., impresa destinataria di un'ispezione della Commissione europea",
+  "data_di_riferimento": "2030-01-15",
+  "stato_fascicolo": "in corso",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "Decisione",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029",
+      "evidenza": "01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione",
+      "conseguenza": "le ricerche vanno confrontate con oggetto e finalità",
+      "azione": "registrare termini e team",
+      "dato_mancante": "manca una traduzione certificata",
+      "errore_bersaglio": "opporsi a ogni ricerca digitale",
+      "fonte": "art. 20 Reg. 1/2003; decisione"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "Identificazione",
+      "gravita": "media",
+      "affermazione_richiesta": "i tesserini e la decisione sono stati copiati alle 08:18",
+      "evidenza": "01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione",
+      "conseguenza": "il controllo iniziale risulta completato",
+      "azione": "conservare copie nel matter file",
+      "dato_mancante": "manca il numero di telefono del case team",
+      "errore_bersaglio": "ritardare l'accesso fino all'arrivo dei legali",
+      "fonte": "log; art. 20 Reg. 1/2003"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "Preservazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'IT ha sospeso cancellazioni automatiche alle 08:26",
+      "evidenza": "01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione",
+      "conseguenza": "la misura riduce il rischio di alterazione",
+      "azione": "mantenere sistemi disponibili e non distruggere dati",
+      "dato_mancante": "manca conferma sui telefoni",
+      "errore_bersaglio": "disconnettere e cancellare chat",
+      "fonte": "ticket; decisione"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "Copia forense",
+      "gravita": "alta",
+      "affermazione_richiesta": "gli ispettori hanno avviato l'immagine della mailbox vendite alle 09:04",
+      "evidenza": "02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense",
+      "conseguenza": "la copia rientra nei poteri di acquisizione se pertinente",
+      "azione": "annotare query, custodi e hash",
+      "dato_mancante": "manca l'elenco finale dei file",
+      "errore_bersaglio": "rifiutare la copia per formato elettronico",
+      "fonte": "art. 20 Reg. 1/2003"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "Documento esterno",
+      "gravita": "alta",
+      "affermazione_richiesta": "il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente",
+      "evidenza": "02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno",
+      "conseguenza": "la rivendicazione deve essere documentata senza rivelare il merito",
+      "azione": "chiedere accantonamento sigillato in caso di dissenso",
+      "dato_mancante": "manca l'allegato richiamato",
+      "errore_bersaglio": "consegnare il memo senza obiezione",
+      "fonte": "Akzo; privilege log"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "Legale interno",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'email del legale interno sul listino non beneficia automaticamente del privilegio UE",
+      "evidenza": "03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno",
+      "conseguenza": "lo status del mittente non basta nel procedimento unionale",
+      "azione": "valutare contenuto e non sovra-rivendicare",
+      "dato_mancante": "manca parere esterno collegato",
+      "errore_bersaglio": "equiparare in-house ed esterno",
+      "fonte": "C-550/07 P Akzo"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "Obiezione",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'obiezione sul documento 14 è stata verbalizzata alle 10:37",
+      "evidenza": "03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione",
+      "conseguenza": "la traccia contemporanea preserva la posizione",
+      "azione": "ottenere copia della formulazione",
+      "dato_mancante": "manca decisione sullo status",
+      "errore_bersaglio": "rinviare l'obiezione al giorno seguente",
+      "fonte": "verbale"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "Intervista",
+      "gravita": "alta",
+      "affermazione_richiesta": "il direttore vendite è stato sentito alle 11:20 su fatti connessi all'oggetto",
+      "evidenza": "03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista",
+      "conseguenza": "le risposte vanno rese veritiere e delimitate alla conoscenza personale",
+      "azione": "annotare domande e correzioni",
+      "dato_mancante": "manca approvazione della nota",
+      "errore_bersaglio": "istruire a non rispondere mai",
+      "fonte": "art. 20 Reg. 1/2003"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "Sigillo",
+      "gravita": "alta",
+      "affermazione_richiesta": "la sala archivio è stata sigillata alle 19:05",
+      "evidenza": "04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo",
+      "conseguenza": "nessuno deve accedere o alterare il sigillo",
+      "azione": "presidiare, fotografare e informare il personale",
+      "dato_mancante": "manca ronda notturna nominata",
+      "errore_bersaglio": "aprire la sala con un testimone",
+      "fonte": "artt. 20 e 23 Reg. 1/2003"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "Follow-up",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta di informazioni allegata fissa risposta al 29 gennaio 2030",
+      "evidenza": "04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up",
+      "conseguenza": "serve un flusso di raccolta separato dal raid",
+      "azione": "assegnare custodi e revisione entro il 25 gennaio",
+      "dato_mancante": "manca owner per i dati vendite",
+      "errore_bersaglio": "trattare il termine come facoltativo",
+      "fonte": "richiesta della Commissione"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "attesa legale",
+      "chiave_nel_criterio": "attesa legale",
+      "regola": "L'arrivo del legale esterno non è una condizione generale per consentire l'accesso ispettivo."
+    },
+    {
+      "id": "N-02",
+      "oggetto": "formato elettronico",
+      "chiave_nel_criterio": "formato elettronico",
+      "regola": "Il formato elettronico non sottrae i documenti pertinenti ai poteri di copia."
+    },
+    {
+      "id": "N-03",
+      "oggetto": "testimone sigillo",
+      "chiave_nel_criterio": "testimone sigillo",
+      "regola": "La presenza di un testimone interno non autorizza l'apertura di un locale sigillato."
+    }
+  ],
+  "calcoli": [
+    "2030-01-15",
+    "2030-01-29"
+  ],
+  "funzione_allegati": [
+    {
+      "file": "documents/01_decisione_ispettiva_e_verbale_accesso.pdf",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/02_log_operazioni_e_privilege_log.xlsx",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/03_email_studio_ranieri_punto_giornata.eml",
+      "funzione": "prova fatti e date"
+    },
+    {
+      "file": "documents/04_nota_interna_sigilli_e_seguito.pdf",
+      "funzione": "espone la posizione di una parte e crea una lacuna da verificare"
+    }
+  ],
+  "assi_obbligatori": []
+}

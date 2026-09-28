@@ -1,0 +1,415 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-056",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "coverage_opinion.md"
+  ],
+  "criteria_total": 76,
+  "proposals_count": 16,
+  "proposals": [
+    {
+      "criterion_id": "B.9",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "11 gennaio 2031",
+        "11/01/2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «11 gennaio 2031» come giorno di decorrenza del periodo di indennizzo.; compare «11/01/2031» come giorno di decorrenza del periodo di indennizzo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B9",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?:11°?\\s+gennaio(?:\\s+2031)?|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2031|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*31)|(?:11°?\\s+gennaio(?:\\s+2031)?|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2031|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.10",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "11 gennaio 2032",
+        "11/01/2032"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compare «11 gennaio 2032» come scadenza del periodo di indennizzo.; compare «11/01/2032» come scadenza del periodo di indennizzo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B10",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?:11°?\\s+gennaio(?:\\s+2032)?|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2032|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*32)|(?:11°?\\s+gennaio(?:\\s+2032)?|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*2032|0?11\\s*[/.\\-]\\s*0?1\\s*[/.\\-]\\s*32))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.15",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 6.750.000,00",
+        "6.750.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 6.750.000,00» come margine di contribuzione dell'esercizio 2030.; compare «6.750.000,00» come margine di contribuzione dell'esercizio 2030.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B15",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])6[.\\s]?750[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])6[.\\s]?750[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.18",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 18.750,00",
+        "18.750,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 18.750,00» come margine giornaliero.; compare «18.750,00» come margine giornaliero.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B18",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])18[.\\s]?750(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])18[.\\s]?750(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.21",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "24 marzo 2031",
+        "18 agosto 2031"
+      ],
+      "value_types": [
+        "data"
+      ],
+      "rationale": "compaiono «24 marzo 2031» e «18 agosto 2031» come date delle due riprese.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B21",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?:24°?\\s+marzo(?:\\s+2031)?|0?24\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*2031|0?24\\s*[/.\\-]\\s*0?3\\s*[/.\\-]\\s*31)|(?:18°?\\s+agosto(?:\\s+2031)?|0?18\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*2031|0?18\\s*[/.\\-]\\s*0?8\\s*[/.\\-]\\s*31))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.24",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 1.350.000,00",
+        "euro 1.240.312,50",
+        "1.350.000,00",
+        "1.240.312,50"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 1.350.000,00» ed «euro 1.240.312,50» come perdite dei due periodi.; compaiono «1.350.000,00» e «1.240.312,50» come perdite dei due periodi.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B24",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?350[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?240[.\\s]?312(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?350[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?240[.\\s]?312(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.25",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 2.590.312,50",
+        "2.590.312,50"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 2.590.312,50» come perdita lorda.; compare «2.590.312,50» come perdita lorda.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B25",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?590[.\\s]?312(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?590[.\\s]?312(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.27",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 187.500,00",
+        "187.500,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 187.500,00» come importo della franchigia.; compare «187.500,00» come importo della franchigia.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B27",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])187[.\\s]?500(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])187[.\\s]?500(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.29",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 2.402.812,50",
+        "2.402.812,50"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 2.402.812,50» come perdita al netto della franchigia.; compare «2.402.812,50» come perdita al netto della franchigia.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B29",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?402[.\\s]?812(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?402[.\\s]?812(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.34",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 2.258.643,75",
+        "2.258.643,75"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 2.258.643,75» come perdita rettificata.; compare «2.258.643,75» come perdita rettificata.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B34",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?258[.\\s]?643(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])2[.\\s]?258[.\\s]?643(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.38",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 5.400.000,00",
+        "euro 6.750.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 5.400.000,00» ed «euro 6.750.000,00» come margine dichiarato e margine effettivo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B38",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])5[.\\s]?400[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])6[.\\s]?750[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.43",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 1.806.915,00",
+        "1.806.915,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 1.806.915,00» come indennizzo sulla perdita di margine.; compare «1.806.915,00» come indennizzo sulla perdita di margine.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B43",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?806[.\\s]?915(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?806[.\\s]?915(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.44",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 340.000,00",
+        "euro 200.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 340.000,00» ed «euro 200.000,00» come importo richiesto e sublimite.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B44",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])340[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])200[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.45",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 160.000,00",
+        "160.000,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 160.000,00» come maggiori costi indennizzabili.; compare «160.000,00» come maggiori costi indennizzabili.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B45",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])160[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])160[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.49",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 1.966.915,00",
+        "1.966.915,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «euro 1.966.915,00» come indennizzo complessivo.; compare «1.966.915,00» come indennizzo complessivo.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B49",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])1[.\\s]?966[.\\s]?915(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])1[.\\s]?966[.\\s]?915(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    },
+    {
+      "criterion_id": "B.51",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "euro 2.838.925,00",
+        "euro 872.010,00"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compaiono «euro 2.838.925,00» ed «euro 872.010,00» come quantificazione della perizia e scostamento.",
+      "combine": "single",
+      "check": {
+        "id": "WF2-056-B51",
+        "type": "required_regex",
+        "artifact": "coverage_opinion.md",
+        "patterns": [
+          "(?:(?<![\\d.,])2[.\\s]?838[.\\s]?925(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])872[.\\s]?010(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

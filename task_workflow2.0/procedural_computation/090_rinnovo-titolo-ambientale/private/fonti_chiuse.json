@@ -1,0 +1,27 @@
+{
+  "task_id": "WF2-090",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "D.Lgs. 152/2006, art. 269",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:decreto.legislativo:2006-04-03;152~art269",
+      "funzione": "autorizzazione alle emissioni, durata, rinnovo e continuita'",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "L. 241/1990, artt. 2, 7 e 10-bis",
+      "url": "https://www.normattiva.it/eli/stato/LEGGE/1990/08/07/241/CONSOLIDATED",
+      "funzione": "procedimento, partecipazione e preavviso di rigetto",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "D.Lgs. 104/2010, artt. 29 e 41",
+      "url": "https://www.normattiva.it/eli/stato/DECRETO_LEGISLATIVO/2010/07/02/104/CONSOLIDATED",
+      "funzione": "azione di annullamento e notificazione",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "task_id": "WF2-093",
+  "lato_assistito": "Nevalta Medical S.p.A., titolare del brevetto europeo EP 4 118 902 B1",
+  "committente": "direttrice legale di Nevalta Medical S.p.A.",
+  "data_di_riferimento": "2026-11-10",
+  "stato_fascicolo": "brevetto concesso e convalidato in Italia; termine di opposizione scaduto e opposizione depositata da un terzo; nessuna azione promossa e nessun provvedimento cautelare richiesto",
+  "meccanismi_di_difficolta": [
+    "termini dipendenti dallo stesso evento con aritmetiche diverse: nove mesi e tre mesi decorrono entrambi dalla pubblicazione della menzione della concessione",
+    "data del documento contro data di efficacia: il deposito dell'atto di opposizione è tempestivo, la data di valuta del pagamento della tassa non lo è",
+    "fatti distribuiti: la restrizione di portata emerge solo dal confronto fra il testo concesso e la traduzione depositata",
+    "presenza contro adeguatezza: la traduzione esiste, è integrale ed è tempestiva, e il difetto sta nel contenuto di una rivendicazione",
+    "metodo di calcolo controintuitivo: il mese di riferimento dell'annualità è quello del deposito della domanda europea, non quello della concessione",
+    "evidenze incomplete: il rapporto tecnico dichiara di non avere eseguito il confronto elemento per elemento, che è la prova su cui l'azione si regge"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "evento da cui decorrono i termini post-concessione",
+      "gravita": "alta",
+      "affermazione_richiesta": "tutti i termini post-concessione decorrono dalla pubblicazione della menzione della concessione nel Bollettino europeo dei brevetti, avvenuta il 28 gennaio 2026, e non dalla data di deposito né dalla pubblicazione della domanda",
+      "evidenza": "01_estratto_bollettino_concessione.md, intestazione del fascicolo 2026/05 e nota d'archivio; 10_nota_consulente_brevetti.md, cronologia",
+      "errore_bersaglio": "far decorrere i termini dalla data di deposito della domanda del 14 giugno 2019 o dalla pubblicazione della domanda del 16 dicembre 2020, entrambe presenti nel record del Bollettino"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "termine di opposizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine per proporre opposizione è di nove mesi dalla pubblicazione della menzione ed è scaduto il 28 ottobre 2026",
+      "evidenza": "01_estratto_bollettino_concessione.md; art. 99(1) e Regola 131(4) della Convenzione",
+      "errore_bersaglio": "indicare una scadenza diversa, oppure applicare al termine a mesi il computo per giorni"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "tempestività del deposito dell'atto",
+      "gravita": "media",
+      "affermazione_richiesta": "l'atto di opposizione è stato depositato il 27 ottobre 2026, un giorno prima della scadenza del termine",
+      "evidenza": "05_atto_opposizione.md, sezione XII e timbro di ricezione",
+      "errore_bersaglio": "trattare il deposito come tardivo, oppure fermarsi alla tempestività dell'atto senza esaminare il pagamento della tassa"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "pagamento della tassa di opposizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la tassa di opposizione risulta addebitata con data di valuta 29 ottobre 2026, successiva alla scadenza del termine: l'opposizione si considera non proposta, esito distinto dal rigetto per inammissibilità, e la circostanza va fatta valere presso l'Ufficio",
+      "evidenza": "06_estratto_conto_deposito_epo.md, partita relativa a EP 4 118 902 e note stampate sull'estratto; 05_atto_opposizione.md, sezione X; 10_nota_consulente_brevetti.md, punto 3",
+      "errore_bersaglio": "trattare l'opposizione come validamente pendente perché l'atto è stato ricevuto nel termine, oppure qualificare l'esito come inammissibilità anziché come opposizione non proposta"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "effetto dell'opposizione sulla tutela in Italia",
+      "gravita": "alta",
+      "affermazione_richiesta": "nessuna disposizione della Convenzione prevede che la pendenza dell'opposizione sospenda l'efficacia del brevetto o i giudizi nazionali: il brevetto ha effetto e la tutela in Italia può essere azionata; l'Ufficio può accelerare il procedimento se informato della pendenza di un'azione",
+      "evidenza": "artt. 68, 99(2) e 105 della Convenzione; Guidelines E-VIII, 5",
+      "errore_bersaglio": "affermare che la tutela va sospesa fino alla definizione dell'opposizione, o che il brevetto è inefficace in pendenza di essa"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "convalida italiana eseguita nel termine",
+      "gravita": "alta",
+      "affermazione_richiesta": "la traduzione in lingua italiana dell'intero testo del brevetto concesso è stata depositata il 24 aprile 2026, entro il termine di tre mesi scaduto il 28 aprile 2026: il brevetto ha effetto in Italia",
+      "evidenza": "03_deposito_traduzione_italiana.md, ricevuta e dichiarazione di conformità",
+      "errore_bersaglio": "affermare che la convalida richiedeva la traduzione delle sole rivendicazioni, o che il termine decorreva da un evento diverso dalla pubblicazione della menzione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "restrizione di portata nella traduzione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la rivendicazione 7 del testo concesso indica tre stimatori alternativi e la rivendicazione 7 della traduzione depositata indica il solo filtro di Kalman: la traduzione conferisce una protezione meno estesa e, per la portata della protezione in Italia, è la traduzione a fare fede",
+      "evidenza": "02_testo_di_concessione_rivendicazioni.md, rivendicazione 7; 03_deposito_traduzione_italiana.md, rivendicazione 7; 10_nota_consulente_brevetti.md, punto 2",
+      "errore_bersaglio": "trattare la difformità come errore materiale irrilevante perché la dichiarazione di conformità è stata sottoscritta, oppure affermare che fa fede in ogni caso il testo nella lingua del procedimento"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "eccezione del giudizio di nullità",
+      "gravita": "media",
+      "affermazione_richiesta": "la regola per cui fa fede la traduzione meno estesa non si applica nel giudizio di nullità: la restrizione opera contro il titolare in contraffazione e non riduce l'oggetto dell'eventuale accertamento di nullità",
+      "evidenza": "art. 57, comma 3, del Codice della proprietà industriale; art. 70(3) della Convenzione",
+      "errore_bersaglio": "estendere l'effetto della traduzione restrittiva anche al giudizio di nullità, presentandola come indebolimento generale della posizione del titolare"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "traduzione rettificata e sua opponibilità",
+      "gravita": "alta",
+      "affermazione_richiesta": "la traduzione rettificata può essere depositata in qualsiasi momento ma esplica effetti solo dopo essere stata resa accessibile al pubblico presso l'Ufficio italiano brevetti e marchi ovvero notificata al presunto contraffattore: il solo deposito non basta",
+      "evidenza": "art. 57, comma 4, del Codice della proprietà industriale",
+      "errore_bersaglio": "presentare il deposito della traduzione rettificata come sufficiente, o attribuirle effetto retroattivo"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "preuso in buona fede",
+      "gravita": "media",
+      "affermazione_richiesta": "chi in buona fede abbia iniziato l'attuazione dell'invenzione, o abbia fatto effettivi preparativi, quando l'attuazione non costituiva contraffazione secondo la traduzione inizialmente depositata, può proseguire a titolo gratuito anche dopo che la traduzione rettificata ha effetto",
+      "evidenza": "art. 57, comma 5, del Codice della proprietà industriale; 07_rapporto_test_buy.md, punto 5.3",
+      "errore_bersaglio": "ignorare la salvezza del preuso, oppure affermare che il concorrente ne beneficia senza che il fascicolo consenta di stabilire da quando distribuisce il prodotto"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "prova tecnica della contraffazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rapporto tecnico dichiara di non avere eseguito il confronto elemento per elemento fra le rivendicazioni e il dispositivo: serve un confronto che esamini ciascun elemento della rivendicazione 1, e il rapporto non lo sostituisce",
+      "evidenza": "07_rapporto_test_buy.md, punti 3 e 5.1",
+      "errore_bersaglio": "presentare i rilievi del rapporto come prova della contraffazione, o ricavare la corrispondenza dalle sole diciture del manuale e della scheda tecnica"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "valore della diffida",
+      "gravita": "media",
+      "affermazione_richiesta": "la diffida del 6 ottobre 2026 non è presupposto della tutela cautelare e il termine di quindici giorni che assegna è convenzionale: la sua scadenza senza riscontro è un fatto utile, non un requisito di legge soddisfatto",
+      "evidenza": "08_diffida_contraffazione.md e annotazione dello studio sul fascicolo",
+      "errore_bersaglio": "presentare la diffida come condizione di procedibilità della tutela cautelare, o attribuire al termine di quindici giorni natura di termine di legge"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "ordine dei passaggi",
+      "gravita": "alta",
+      "affermazione_richiesta": "prima va reso opponibile il testo su cui si fonda l'azione, mediante deposito della traduzione rettificata e sua messa a disposizione del pubblico o notificazione al presunto contraffattore, e va costruito il confronto elemento per elemento; solo dopo va scelto lo strumento fra descrizione, sequestro e inibitoria",
+      "evidenza": "10_nota_consulente_brevetti.md; art. 57, comma 4, e artt. 129 e 131 del Codice della proprietà industriale",
+      "errore_bersaglio": "collocare la richiesta cautelare prima della rettifica opponibile e della prova tecnica, presentando come ordine indifferente una sequenza che non lo è"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "termine per l'inizio del giudizio di merito",
+      "gravita": "media",
+      "affermazione_richiesta": "se il giudice non fissa il termine, il giudizio di merito va iniziato entro venti giorni lavorativi o trentuno giorni di calendario ove questi rappresentino un periodo più lungo, dalla pronuncia in udienza o dalla comunicazione; alla data di riferimento nessun provvedimento è stato richiesto e il termine non è determinabile",
+      "evidenza": "art. 132, comma 2, del Codice della proprietà industriale; 10_nota_consulente_brevetti.md, che non riporta alcun procedimento pendente",
+      "errore_bersaglio": "fissare una data per l'inizio del giudizio di merito, oppure indicare soltanto uno dei due termini alternativi"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "rilevanza della gara",
+      "gravita": "media",
+      "affermazione_richiesta": "il termine di presentazione delle offerte del 15 dicembre 2026 e la corrispondenza fra il requisito tecnico del disciplinare e la funzione del dispositivo concorrente sono elementi di fatto utili sull'urgenza; il fascicolo non prova che il concorrente parteciperà alla gara",
+      "evidenza": "09_avviso_gara_ospedaliera.md, requisito 3 e termine di presentazione, e annotazione dello studio sul fascicolo",
+      "errore_bersaglio": "affermare che il concorrente partecipa alla gara, oppure trattare la scadenza della gara come termine giuridico che condiziona l'iniziativa"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "annualità italiana pagata il 26 giugno 2026",
+      "chiave_nel_criterio": "pagamento dell'annualità del 26 giugno 2026",
+      "ragione": "il diritto annuale scade l'ultimo giorno del mese corrispondente a quello di deposito della domanda europea, cioè giugno: il versamento del 26 giugno 2026 è anteriore alla scadenza del 30 giugno 2026 e non comporta né mora né decadenza",
+      "errore_bersaglio": "segnalare un ritardo o una decadenza sull'annualità, computando la scadenza dal mese della concessione anziché dal mese di deposito della domanda"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "designazione tedesca non convalidata",
+      "chiave_nel_criterio": "mancata convalida della designazione tedesca",
+      "ragione": "la nota del mandatario riferisce che la convalida nazionale della designazione tedesca non è stata curata perché non richiesta dalla direzione: la circostanza non incide sulla tutela azionata in Italia, che dipende dalla convalida italiana",
+      "errore_bersaglio": "segnalare la mancata convalida tedesca come rischio per l'azione da promuovere in Italia"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "domanda divisionale pendente",
+      "chiave_nel_criterio": "domanda divisionale n. 25171188.4",
+      "ragione": "la divisionale depositata il 12 marzo 2025 è in fase di esame e non sostituisce il brevetto concesso: la sua pendenza non è un difetto del titolo azionato",
+      "errore_bersaglio": "segnalare la pendenza della divisionale come elemento che indebolisce il brevetto concesso o che consiglia di attendere"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "consulenza tecnica preventiva non richiesta",
+      "chiave_nel_criterio": "mancata richiesta della consulenza tecnica preventiva",
+      "ragione": "la consulenza tecnica preventiva è uno strumento a disposizione della parte e non un adempimento preliminare: la sua mancata richiesta non è un'omissione",
+      "errore_bersaglio": "indicare la mancata richiesta della consulenza tecnica preventiva fra le omissioni da sanare prima di agire"
+    }
+  ],
+  "dati_mancanti": [
+    "la data in cui il dispositivo concorrente è stato immesso per la prima volta sul mercato italiano, necessaria per valutare la salvezza del preuso",
+    "i dati di vendita del dispositivo concorrente in Italia",
+    "il confronto elemento per elemento fra la rivendicazione 1 e il dispositivo esaminato, che il rapporto tecnico dichiara di non avere eseguito",
+    "la contabile del bonifico di reintegro del conto di deposito del mandatario dell'opponente, assente dal fascicolo pubblico",
+    "il testo disassemblato del firmware del dispositivo concorrente",
+    "l'eventuale partecipazione del concorrente alla gara, che il bando non consente di accertare"
+  ],
+  "fonti_ammesse": [
+    "artt. 65, 68, 70, 97(3), 99, 105, 141; Regole 76, 77, 131, 134",
+    "D-IV, 1.2.1; E-VIII, 5",
+    "tabella IV, voci 1, 2 e 4; tabella V, voci 1 e 2; tabella VI.A, voci 2 e 3",
+    "D.Lgs. 30/2005, artt. 56, 57, 75, 128, 129, 130, 131, 132, 192, 227, 230",
+    "paragrafi 3 e 4"
+  ],
+  "calcoli": [
+    {
+      "milestone": "data di riferimento",
+      "valore": "10 novembre 2026",
+      "calcolo": "martedì",
+      "fonte": "public/01_task.md"
+    },
+    {
+      "milestone": "deposito della domanda di brevetto europeo n. 19180446.7",
+      "valore": "14 giugno 2019",
+      "calcolo": "il mese di deposito determina la scadenza dell'annualità italiana",
+      "fonte": "01_estratto_bollettino_concessione.md"
+    },
+    {
+      "milestone": "pubblicazione della domanda",
+      "valore": "16 dicembre 2020",
+      "calcolo": "anteriore di 1869 giorni alla pubblicazione della menzione della concessione",
+      "fonte": "10_nota_consulente_brevetti.md"
+    },
+    {
+      "milestone": "deposito della domanda divisionale n. 25171188.4",
+      "valore": "12 marzo 2025",
+      "calcolo": "anteriore alla pubblicazione della menzione; la divisionale è in fase di esame",
+      "fonte": "10_nota_consulente_brevetti.md"
+    },
+    {
+      "milestone": "pubblicazione della menzione della concessione",
+      "valore": "28 gennaio 2026",
+      "calcolo": "mercoledì; il Bollettino europeo esce il mercoledì e la data della menzione è la data del fascicolo 2026/05",
+      "fonte": "01_estratto_bollettino_concessione.md"
+    },
+    {
+      "milestone": "scadenza del termine di opposizione",
+      "valore": "28 ottobre 2026",
+      "calcolo": "28 gennaio 2026 + 9 mesi; il termine a mesi scade nel giorno dello stesso numero del mese finale; mercoledì, non festività nazionale italiana",
+      "fonte": "art. 99(1) della Convenzione; Regola 131(4)"
+    },
+    {
+      "milestone": "scadenza del termine per la traduzione italiana",
+      "valore": "28 aprile 2026",
+      "calcolo": "28 gennaio 2026 + 3 mesi; martedì",
+      "fonte": "art. 56, comma 4, del Codice della proprietà industriale"
+    },
+    {
+      "milestone": "deposito della traduzione italiana integrale",
+      "valore": "24 aprile 2026",
+      "calcolo": "precede la scadenza di 4 giorni",
+      "fonte": "03_deposito_traduzione_italiana.md"
+    },
+    {
+      "milestone": "mese di riferimento dell'annualità italiana",
+      "valore": "giugno",
+      "calcolo": "mese in cui è caduta la data di deposito della domanda europea, il 14 giugno 2019",
+      "fonte": "art. 227, comma 1, del Codice della proprietà industriale"
+    },
+    {
+      "milestone": "scadenza dell'annualità dovuta nel 2026",
+      "valore": "30 giugno 2026",
+      "calcolo": "ultimo giorno del mese di riferimento",
+      "fonte": "04_ricevuta_annualita.md"
+    },
+    {
+      "milestone": "versamento dell'annualità 2026",
+      "valore": "26 giugno 2026",
+      "calcolo": "precede la scadenza di 4 giorni; nessun diritto di mora e nessuna decadenza",
+      "fonte": "04_ricevuta_annualita.md"
+    },
+    {
+      "milestone": "acquisto in anonimo del dispositivo concorrente",
+      "valore": "22 settembre 2026",
+      "calcolo": "anteriore di 49 giorni alla data di riferimento",
+      "fonte": "07_rapporto_test_buy.md"
+    },
+    {
+      "milestone": "trasmissione della diffida",
+      "valore": "6 ottobre 2026",
+      "calcolo": "anteriore di 35 giorni alla data di riferimento; il termine convenzionale di quindici giorni assegnato nella diffida è scaduto il 21 ottobre 2026",
+      "fonte": "08_diffida_contraffazione.md"
+    },
+    {
+      "milestone": "pubblicazione del bando di gara",
+      "valore": "16 ottobre 2026",
+      "calcolo": "anteriore di 25 giorni alla data di riferimento",
+      "fonte": "09_avviso_gara_ospedaliera.md"
+    },
+    {
+      "milestone": "deposito dell'atto di opposizione",
+      "valore": "27 ottobre 2026",
+      "calcolo": "precede la scadenza del termine di opposizione di 1 giorno",
+      "fonte": "05_atto_opposizione.md"
+    },
+    {
+      "milestone": "valuta dell'addebito della tassa di opposizione",
+      "valore": "29 ottobre 2026",
+      "calcolo": "successiva alla scadenza del termine di opposizione di 1 giorno; la data di registrazione dell'addebito è invece il 27 ottobre 2026",
+      "fonte": "06_estratto_conto_deposito_epo.md"
+    },
+    {
+      "milestone": "termine di presentazione delle offerte nella gara",
+      "valore": "15 dicembre 2026",
+      "calcolo": "successivo di 35 giorni alla data di riferimento",
+      "fonte": "09_avviso_gara_ospedaliera.md"
+    },
+    {
+      "milestone": "termine per l'inizio del giudizio di merito",
+      "valore": "non determinabile",
+      "calcolo": "il termine è il più lungo fra venti giorni lavorativi e trentuno giorni di calendario dalla pronuncia in udienza o dalla comunicazione; alla data di riferimento nessun provvedimento è stato richiesto né emesso. Calcolo illustrativo su data ipotetica di comunicazione del 27 novembre 2026: venti giorni lavorativi scadrebbero il 29 dicembre 2026, trentuno giorni di calendario il 28 dicembre 2026, si applicherebbe il 29 dicembre 2026",
+      "fonte": "art. 132, comma 2, del Codice della proprietà industriale"
+    }
+  ],
+  "funzione_allegati": {
+    "01_estratto_bollettino_concessione.md": "fissa l'evento da cui decorrono tutti i termini post-concessione e riporta la data di deposito della domanda, che è il dato da cui dipende la scadenza dell'annualità italiana",
+    "02_testo_di_concessione_rivendicazioni.md": "è il testo nella lingua del procedimento: solo il confronto con la traduzione rende visibile la restrizione di portata",
+    "03_deposito_traduzione_italiana.md": "prova che la traduzione è integrale e tempestiva e, insieme, che la rivendicazione 7 tradotta non coincide con quella concessa",
+    "04_ricevuta_annualita.md": "prova la data del pagamento dell'annualità e consente di verificare la tempestività rispetto al mese di deposito della domanda",
+    "05_atto_opposizione.md": "prova la data di deposito dell'atto e la modalità di pagamento della tassa per addebito su conto di deposito",
+    "06_estratto_conto_deposito_epo.md": "prova la data di valuta del pagamento della tassa, distinta dalla data di registrazione, e la ragione dello scarto fra le due",
+    "07_rapporto_test_buy.md": "documenta il prodotto concorrente e, con l'elenco delle attività non svolte, rende visibile la lacuna probatoria sul confronto elemento per elemento",
+    "08_diffida_contraffazione.md": "documenta l'iniziativa già assunta e il termine assegnato in via convenzionale, che non è un termine di legge",
+    "09_avviso_gara_ospedaliera.md": "è l'elemento di fatto su cui si misura l'urgenza e contiene il requisito tecnico che collega la gara al dispositivo concorrente",
+    "10_nota_consulente_brevetti.md": "raccoglie la cronologia e i riscontri e dichiara espressamente il materiale non acquisito, senza formulare qualificazioni"
+  }
+}

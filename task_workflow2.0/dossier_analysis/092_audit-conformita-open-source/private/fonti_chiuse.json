@@ -1,0 +1,62 @@
+{
+  "task_id": "WF2-092",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "L. 633/1941, artt. 1, 2 n. 8, 12-bis, 64-bis, 64-ter, 64-quater",
+      "corpus": "Legge 22 aprile 1941, n. 633",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:1941-04-22;633",
+      "regola_sostenuta": "i programmi per elaboratore sono protetti come opere letterarie; l'art. 12-bis attribuisce al datore di lavoro i diritti di utilizzazione economica del programma creato dal lavoratore dipendente nell'esecuzione delle mansioni o su istruzioni, salvo patto contrario; l'art. 64-bis riserva al titolare riproduzione, modificazione e distribuzione; l'art. 64-ter ammette l'uso conforme alla destinazione da parte del legittimo acquirente salvo patto contrario; l'art. 64-quater ammette la decompilazione per l'interoperabilità e dichiara nulle le clausole in deroga",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "artt. 4, 5, 6, 8",
+      "corpus": "Direttiva 2009/24/CE del Parlamento europeo e del Consiglio",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32009L0024",
+      "regola_sostenuta": "l'art. 4 riserva al titolare riproduzione, modificazione e distribuzione; l'art. 5, par. 1, ammette gli atti necessari all'uso conforme alla destinazione «salvo disposizioni contrattuali specifiche»; l'art. 6 disciplina la decompilazione per l'interoperabilità; l'art. 8, secondo comma, dichiara nulla ogni disposizione contrattuale non conforme all'art. 6 o all'art. 5, parr. 2 e 3, ma non all'art. 5, par. 1",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "sezioni 0, 1, 5, 6, 13",
+      "corpus": "GNU General Public License, Version 3 (29 June 2007)",
+      "url": "https://www.gnu.org/licenses/gpl-3.0.txt",
+      "regola_sostenuta": "la sezione 0 definisce «convey» come ogni propagazione che consenta ad altri di fare o ricevere copie e precisa che la mera interazione dell'utente attraverso una rete, senza trasferimento di copia, non è conveying; la sezione 1 definisce il «Corresponding Source» come tutto il codice necessario a generare, installare ed eseguire il codice oggetto e a modificare l'opera, compresi gli script che controllano tali attività; la sezione 5, lettera a), impone di apporre avvisi in evidenza che segnalino la modifica e la data, e la lettera c) impone di licenziare l'intera opera sotto la stessa licenza; la sezione 6 elenca le modalità alternative di messa a disposizione del sorgente, fra cui l'accesso da un luogo designato senza ulteriore addebito, da mantenere disponibile per il tempo necessario; la sezione 13 disciplina la combinazione con opere sotto AGPLv3",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "sezione 13",
+      "corpus": "GNU Affero General Public License, Version 3 (19 November 2007)",
+      "url": "https://www.gnu.org/licenses/agpl-3.0.txt",
+      "regola_sostenuta": "se il licenziatario modifica il programma, la versione modificata deve offrire in evidenza a tutti gli utenti che interagiscono con essa a distanza attraverso una rete la possibilità di ricevere il Corresponding Source della propria versione, mediante accesso a un server di rete senza addebito; l'obbligo è formulato in termini di modifica del programma",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "sezioni 3 e 4",
+      "corpus": "Apache License, Version 2.0 (January 2004)",
+      "url": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+      "regola_sostenuta": "la sezione 3 concede una licenza brevettuale limitata alle rivendicazioni necessariamente violate dal contributo, con cessazione in caso di azione brevettuale contro l'opera; la sezione 4, lettera b), impone di apporre sui file modificati avvisi in evidenza che dichiarino la modifica; la lettera c) impone di conservare nella forma sorgente delle opere derivate gli avvisi di copyright, brevetto, marchio e attribuzione; la lettera d) impone di riprodurre il contenuto degli avvisi di attribuzione del file NOTICE in almeno una delle tre collocazioni indicate; la licenza non contiene disposizioni relative all'uso in rete",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "voce #apache2",
+      "corpus": "Free Software Foundation - Various Licenses and Comments about Them, voce Apache License Version 2.0",
+      "url": "https://www.gnu.org/licenses/license-list.en.html#apache2",
+      "regola_sostenuta": "la Apache License 2.0 è dichiarata compatibile con la versione 3 della GNU GPL e non compatibile con la versione 2 della GPL, per la presenza di requisiti assenti in quella versione, fra cui le clausole di cessazione brevettuale e di indennizzo",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "voci #UnreleasedMods, #InternalDistribution, #AGPLv3InteractingRemotely, #UnreleasedModsAGPL",
+      "corpus": "Free Software Foundation - Frequently Asked Questions about the GNU Licenses",
+      "url": "https://www.gnu.org/licenses/gpl-faq.en.html",
+      "regola_sostenuta": "la GPL consente di realizzare una versione modificata e di usarla senza mai distribuirla, e in tal caso non impone il rilascio del sorgente; le copie interne a un'organizzazione non costituiscono distribuzione, mentre la consegna a collaboratori esterni per uso fuori sede lo è; l'AGPL considera integrati i presupposti della sezione 13 quando il programma è espressamente progettato per ricevere richieste degli utenti e inviare risposte attraverso una rete",
+      "verificata_il": "2026-09-02"
+    },
+    {
+      "riferimento": "artt. 1 e 5 e appendice",
+      "corpus": "Decisione di esecuzione (UE) 2017/863 della Commissione, allegato - European Union Public Licence v. 1.2",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:32017D0863",
+      "regola_sostenuta": "l'art. 1 definisce «distribuzione o comunicazione» come ogni atto finalizzato a mettere copie dell'opera a disposizione di altri o a fornire loro accesso alle sue funzionalità essenziali, online o offline; l'art. 5 impone la fornitura del codice sorgente o l'indicazione di un archivio liberamente accessibile per tutto il tempo della distribuzione o comunicazione, e contiene la clausola di compatibilità con le licenze elencate in appendice",
+      "verificata_il": "2026-09-02"
+    }
+  ]
+}

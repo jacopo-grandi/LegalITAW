@@ -1,0 +1,95 @@
+{
+  "task_id": "WF2-087",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "pubblicazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "la domanda RUGIADA LAB e' stata pubblicata il 5 maggio 2030",
+      "evidenza": "bollettino UIBM"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "termine opposizione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il termine di tre mesi scade il 5 agosto 2030",
+      "evidenza": "bollettino e art. 176"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "deposito e diritti",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'opposizione richiede atto, motivi, indicazione del diritto anteriore e pagamento",
+      "evidenza": "istruzioni UIBM"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "cooling-off",
+      "gravita": "alta",
+      "affermazione_richiesta": "il periodo di conciliazione decorre dalla comunicazione dell'opposizione e non dal deposito",
+      "evidenza": "art. 178"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "proroga congiunta",
+      "gravita": "media",
+      "affermazione_richiesta": "l'eventuale proroga del cooling-off richiede istanza comune",
+      "evidenza": "art. 178"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "prova d'uso",
+      "gravita": "media",
+      "affermazione_richiesta": "il marchio anteriore registrato nel 2022 espone l'opponente a una richiesta di prova d'uso",
+      "evidenza": "certificato e art. 178"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "ambito della prova",
+      "gravita": "media",
+      "affermazione_richiesta": "la prova va organizzata per prodotti invocati, territorio e periodo rilevante",
+      "evidenza": "fatture e cataloghi"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "ricorso",
+      "gravita": "media",
+      "affermazione_richiesta": "la decisione puo' essere impugnata nei termini e davanti all'organo indicato dal codice",
+      "evidenza": "art. 182"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "dominio web",
+      "oggetto": "dominio web",
+      "chiave_nel_criterio": "dominio web",
+      "perche_non_e_issue": "la registrazione del dominio rugiadalab.it non sposta il termine di opposizione",
+      "criterio_assenza": "Il deliverable non presenta dominio web come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "diffida",
+      "oggetto": "diffida",
+      "chiave_nel_criterio": "diffida",
+      "perche_non_e_issue": "l'invio di una diffida non sospende il termine per opporsi",
+      "criterio_assenza": "Il deliverable non presenta diffida come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "classe indicata",
+      "oggetto": "classe indicata",
+      "chiave_nel_criterio": "classe indicata",
+      "perche_non_e_issue": "il solo numero di classe non sostituisce il confronto dei prodotti",
+      "criterio_assenza": "Il deliverable non presenta classe indicata come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "logo a colori",
+      "oggetto": "logo a colori",
+      "chiave_nel_criterio": "logo a colori",
+      "perche_non_e_issue": "il colore del logo non elimina automaticamente la possibile somiglianza denominativa",
+      "criterio_assenza": "Il deliverable non presenta logo a colori come rilievo autonomo."
+    }
+  ]
+}

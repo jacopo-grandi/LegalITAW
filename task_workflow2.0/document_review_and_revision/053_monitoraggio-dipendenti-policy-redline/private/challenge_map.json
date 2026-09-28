@@ -1,0 +1,186 @@
+{
+  "task_id": "WF2-053",
+  "lato_assistito": "Nordelmo Servizi Digitali S.p.A., datore di lavoro e titolare del trattamento",
+  "data_di_riferimento": "2031-02-17",
+  "stato_fascicolo": "bozza di policy redatta il 13 gennaio 2031 e non adottata; valutazione preliminare d'impatto del 20 gennaio 2031; incontro con le rappresentanze sindacali del 5 febbraio 2031 chiuso senza accordo; informativa al personale in vigore dal 1 marzo 2029; piattaforma di posta in uso.",
+  "meccanismi_di_difficolta": [
+    "presenza contro adeguatezza: le clausole sulla conservazione e sulla base giuridica esistono, il difetto sta nel livello del termine e nella base invocata",
+    "dichiarazione di parte smentita dai documenti: la bozza afferma che 180 giorni sono il minimo tecnicamente possibile e la scheda tecnica indica un intervallo configurabile",
+    "gerarchia fra documenti: la valutazione preliminare esclude il monitoraggio sistematico e la bozza lo presuppone in due punti",
+    "ruolo formale contro ruolo sostanziale: il fornitore è qualificato titolare autonomo e opera su istruzione del cliente",
+    "fatti distribuiti: l'insufficienza del presupposto procedurale si ricava dal verbale, la praticabilità dei rimedi dalla scheda tecnica, l'insufficienza della trasparenza dall'informativa vigente"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "base giuridica del trattamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il consenso del lavoratore indicato all'articolo 3.1 non è la base giuridica idonea per questo trattamento nel rapporto di lavoro, e la clausola 3.2 lo rende ulteriormente non liberamente prestato: le finalità vanno ricondotte alle basi giuridiche appropriate al contesto",
+      "evidenza": "articoli 3.1 e 3.2 della bozza; struttura delle basi giuridiche dell'informativa vigente",
+      "non_deve_affermare": "che il consenso sia sufficiente perché raccolto per iscritto, o che il trattamento sia privo di base giuridica in radice"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "finalita di verifica della produttivita",
+      "gravita": "alta",
+      "affermazione_richiesta": "la finalità della lettera c) dell'articolo 2.2 costituisce controllo a distanza dell'attività lavorativa e non è coperta dal regime degli strumenti utilizzati per rendere la prestazione",
+      "evidenza": "articolo 2.2, lettera c), della bozza; punto 2 del verbale del 5 febbraio 2031",
+      "non_deve_affermare": "che la finalità sia ammessa in quanto i dati provengono da strumenti di lavoro"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "presupposto procedurale mancante per quella finalita",
+      "gravita": "alta",
+      "affermazione_richiesta": "il verbale del 5 febbraio 2031 documenta una illustrazione alle rappresentanze e la dichiarazione espressa di non sottoscrivere alcun accordo: il presupposto richiesto per il controllo a distanza non è integrato",
+      "evidenza": "punti 3 e 4 del verbale del 5 febbraio 2031",
+      "non_deve_affermare": "che l'informativa alle rappresentanze equivalga all'accordo, o che l'accordo sia stato raggiunto"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "termine di conservazione dei metadati",
+      "gravita": "alta",
+      "affermazione_richiesta": "il periodo di 180 giorni dell'articolo 7.2 eccede il termine orientativo indicato dall'autorità di controllo per la conservazione dei metadati, pari a 21 giorni, e la bozza non documenta condizioni particolari che ne rendano necessaria l'estensione",
+      "evidenza": "articolo 7.2 della bozza; documento di indirizzo dell'autorità di controllo",
+      "non_deve_affermare": "che i 180 giorni siano ammessi in quanto valore preimpostato della piattaforma"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "affermazione tecnica dell'articolo 7.3",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'affermazione secondo cui 180 giorni sono il minimo tecnicamente possibile è contraddetta dalla scheda tecnica, che indica il periodo come configurabile in un intervallo da 7 a 365 giorni e i 180 giorni come valore preimpostato di fabbrica",
+      "evidenza": "articolo 7.3 della bozza; paragrafi 3.1 e 3.2 della scheda tecnica",
+      "non_deve_affermare": "che l'affermazione della bozza sia esatta, o che la configurabilità non sia rilevante"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "termine di conservazione dei log di navigazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il periodo di dodici mesi dell'articolo 8.1 non è correlato ad alcuna finalità determinata e va ridotto e motivato",
+      "evidenza": "articolo 8.1 della bozza; assenza di una finalità specifica per i log di navigazione nell'articolo 2",
+      "non_deve_affermare": "che dodici mesi siano ammessi in assenza di una motivazione"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "qualificazione del fornitore della piattaforma",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fornitore agisce su istruzione della Società e va qualificato come responsabile del trattamento, non come titolare autonomo come afferma l'articolo 4.3",
+      "evidenza": "articolo 4.3 della bozza; paragrafi 1, 4 e 6 della scheda tecnica, che descrivono un servizio erogato per conto del cliente",
+      "non_deve_affermare": "che la qualificazione della bozza sia corretta perché è il fornitore a gestire i sistemi"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "procedura di accesso alle caselle individuali",
+      "gravita": "alta",
+      "affermazione_richiesta": "la richiesta del responsabile di funzione dell'articolo 6.1 non è una procedura sufficiente: l'accesso va subordinato a livelli di autorizzazione, registrazione dell'accesso e informazione all'interessato",
+      "evidenza": "articolo 6.1 della bozza; paragrafi 4.3 e 4.4 della scheda tecnica, che offrono giornale di accesso non modificabile e autorizzazione a due persone",
+      "non_deve_affermare": "che la richiesta del responsabile di funzione basti, o che l'accesso al contenuto sia in ogni caso vietato"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "informativa specifica sui metadati e sui controlli",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'informativa vigente non contempla i metadati né i controlli e il rinvio generico dell'articolo 10.1 non soddisfa l'obbligo di informazione sulle modalità d'uso degli strumenti e sulle modalità di effettuazione dei controlli",
+      "evidenza": "paragrafi 3, 4 e 7 dell'informativa vigente; articolo 10.1 della bozza",
+      "non_deve_affermare": "che l'informativa generale sia sufficiente, o che l'informazione possa essere resa dopo l'avvio del trattamento"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "utilizzabilita dei dati raccolti",
+      "gravita": "alta",
+      "affermazione_richiesta": "in assenza dell'informazione adeguata sulle modalità d'uso e sui controlli, i dati raccolti non sono utilizzabili a tutti i fini connessi al rapporto di lavoro",
+      "evidenza": "articolo 10.1 della bozza; informativa vigente; disciplina lavoristica dei controlli",
+      "non_deve_affermare": "che l'utilizzabilità dipenda soltanto dalla base giuridica, o che l'inutilizzabilità riguardi anche i dati raccolti per la sola sicurezza informatica"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "valutazione preliminare d'impatto contraddetta dalla bozza",
+      "gravita": "alta",
+      "affermazione_richiesta": "la valutazione preliminare esclude il monitoraggio sistematico, ma la finalità della lettera c) dell'articolo 2.2 e la conservazione per 180 giorni la contraddicono: la conclusione va riesaminata",
+      "evidenza": "riga del monitoraggio sistematico della valutazione preliminare; articolo 2.2, lettera c), e articolo 7.2 della bozza",
+      "non_deve_affermare": "che la valutazione preliminare sia definitiva, o che la valutazione d'impatto sia certamente necessaria"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "sorte della casella alla cessazione del rapporto",
+      "gravita": "alta",
+      "affermazione_richiesta": "la bozza disciplina la conservazione del contenuto della casella per la durata del rapporto ma non la sua sorte alla cessazione, né la disattivazione, il reindirizzo e la cancellazione",
+      "evidenza": "articolo 9.1 della bozza; assenza di previsioni sulla cessazione",
+      "non_deve_affermare": "che la lacuna sia coperta dal periodo di conservazione decennale indicato nell'informativa"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "disattivazione della raccolta come alternativa disponibile",
+      "gravita": "media",
+      "affermazione_richiesta": "la scheda tecnica consente di disattivare la raccolta del campo oggetto e in blocco quella dei record: la scelta di raccogliere va documentata e motivata",
+      "evidenza": "paragrafi 2.2 e 2.3 della scheda tecnica",
+      "non_deve_affermare": "che la raccolta sia una conseguenza necessaria dell'uso della piattaforma"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "rilievo delle osservazioni sindacali sulla procedura di accesso",
+      "gravita": "media",
+      "affermazione_richiesta": "la richiesta di chiarimenti del coordinatore sull'accesso su semplice richiesta del responsabile di funzione va riscontrata nella versione rivista",
+      "evidenza": "punto 3 del verbale del 5 febbraio 2031",
+      "non_deve_affermare": "che le osservazioni siano prive di conseguenze in assenza di accordo"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "sub-responsabile in Paese con decisione di adeguatezza",
+      "chiave_nel_criterio": "paese con decisione di adeguatezza",
+      "perche_non_e_issue": "il sub-responsabile per l'assistenza di secondo livello ha sede in un Paese destinatario di decisione di adeguatezza: il trasferimento non richiede garanzie ulteriori. Segnalarlo come rischio di trasferimento è sovra-segnalazione"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "statistiche aggregate e anonime sui volumi di traffico",
+      "chiave_nel_criterio": "statistiche aggregate",
+      "perche_non_e_issue": "le statistiche dell'articolo 5 sono aggregate e non consentono di risalire ai singoli utilizzatori, e la scheda tecnica lo conferma: non costituiscono controllo individuale. Segnalarle come monitoraggio è sovra-segnalazione"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "designazione del responsabile della protezione dei dati",
+      "chiave_nel_criterio": "designazione del responsabile della protezione dei dati",
+      "perche_non_e_issue": "la designazione e la pubblicazione dei dati di contatto risultano dalla bozza e dall'informativa vigente: l'adempimento è assolto. Segnalarlo come mancanza è errore"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "conservazione del contenuto della casella per la durata del rapporto",
+      "chiave_nel_criterio": "conservazione per la durata del rapporto",
+      "perche_non_e_issue": "la conservazione del contenuto della casella durante il rapporto, per la continuità dell'attività, non è di per sé eccedente: il difetto sta nell'assenza di disciplina della cessazione, non nella conservazione in corso di rapporto"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "rinvio al contratto collettivo per il profilo disciplinare",
+      "chiave_nel_criterio": "rinvio al contratto collettivo",
+      "perche_non_e_issue": "l'articolo 12.1 rinvia alla disciplina applicabile e al contratto collettivo per la valutazione disciplinare, senza introdurre sanzioni proprie: è una formulazione corrente e non un profilo di rischio"
+    }
+  ],
+  "dati_mancanti": [
+    "atto che disciplina il trattamento da parte del fornitore, se esistente",
+    "configurazione attualmente attiva sulla piattaforma quanto a raccolta e conservazione",
+    "elenco aggiornato dei sub-responsabili pubblicato nell'area riservata del portale",
+    "eventuale versione rivista della bozza trasmessa alle rappresentanze",
+    "data del secondo incontro con le rappresentanze, non fissata",
+    "registro dei trattamenti nella parte relativa agli strumenti informatici"
+  ],
+  "errori_bersaglio": [
+    "trattare il consenso del lavoratore come base giuridica utilizzabile",
+    "ritenere che l'esenzione per gli strumenti di lavoro copra la verifica della produttività",
+    "ritenere che l'illustrazione alle rappresentanze integri l'accordo",
+    "accettare i 180 giorni perché valore preimpostato della piattaforma",
+    "riprendere come esatta l'affermazione tecnica dell'articolo 7.3",
+    "mantenere la qualificazione del fornitore come titolare autonomo",
+    "affermare che l'accesso al contenuto delle caselle è in ogni caso vietato",
+    "affermare che la valutazione d'impatto è necessaria, invece di rimettere l'esito al riesame",
+    "segnalare come rischio il sub-responsabile in paese con decisione di adeguatezza, le statistiche aggregate, la designazione del responsabile della protezione dei dati, la conservazione in corso di rapporto o il rinvio al contratto collettivo",
+    "presumere che l'autorità di controllo intervenga"
+  ],
+  "funzione_degli_allegati": {
+    "01_bozza_policy_strumenti_informatici.docx": "Documento da revisionare. Porta tutti gli issue di drafting: base giuridica, finalità di verifica della produttività, qualificazione del fornitore, termini di conservazione, procedura di accesso, e l'affermazione tecnica smentita dalla scheda del fornitore.",
+    "02_informativa_dipendenti_vigente.pdf": "Prova che l'informativa in essere non copre i metadati né i controlli: è il termine di confronto per l'obbligo di trasparenza e per l'utilizzabilità dei dati.",
+    "03_scheda_tecnica_piattaforma.pdf": "Documento del fornitore. Smentisce l'affermazione dell'articolo 7.3 della bozza e colloca il sub-responsabile in un Paese coperto da decisione di adeguatezza, che è un controlled non-issue.",
+    "04_verbale_incontro_rappresentanze_sindacali.pdf": "Prova che si è svolta una informativa e che nessun accordo è stato sottoscritto: è il fatto su cui si misura l'insufficienza del presupposto per la finalità di verifica della produttività.",
+    "05_valutazione_preliminare_impatto.pdf": "Documento interno che conclude per l'assenza di un monitoraggio sistematico: la conclusione è contraddetta dalla finalità dichiarata nella bozza, ed è il meccanismo della gerarchia fra documenti."
+  }
+}

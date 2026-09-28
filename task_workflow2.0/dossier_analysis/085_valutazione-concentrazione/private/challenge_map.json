@@ -1,0 +1,151 @@
+{
+  "task_id": "WF2-085",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "controllo durevole",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'acquisizione del settantacinque per cento conferisce controllo durevole",
+      "evidenza": "SPA e patti parasociali"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "mercato prodotto stretto",
+      "gravita": "alta",
+      "affermazione_richiesta": "la catena del freddo farmaceutica e' una definizione plausibile distinta dalla logistica refrigerata alimentare",
+      "evidenza": "dati clienti e specifiche"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "mercato geografico",
+      "gravita": "alta",
+      "affermazione_richiesta": "tempi di consegna e rete dei depositi sostengono un mercato Nord Italia da testare",
+      "evidenza": "mappa depositi e gare"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "quote",
+      "gravita": "alta",
+      "affermazione_richiesta": "nel mercato stretto le parti hanno quote del ventidue e sedici per cento, combinate trentotto",
+      "evidenza": "dataset vendite"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "HHI pre",
+      "gravita": "media",
+      "affermazione_richiesta": "l'HHI pre-operazione e' 1.850",
+      "evidenza": "dataset vendite"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "delta HHI",
+      "gravita": "media",
+      "affermazione_richiesta": "l'incremento HHI e' 704 punti sulla base delle quote ventidue e sedici",
+      "evidenza": "calcolo 2ab"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "vicinanza competitiva",
+      "gravita": "media",
+      "affermazione_richiesta": "le parti arrivano prima e seconda in sette delle dodici gare disponibili",
+      "evidenza": "tabella gare"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "capacita' refrigerata",
+      "gravita": "media",
+      "affermazione_richiesta": "tre concorrenti dichiarano saturazione superiore al novanta per cento",
+      "evidenza": "survey capacita'"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "clienti multi-sourcing",
+      "gravita": "media",
+      "affermazione_richiesta": "quattro grandi clienti possono ripartire volumi ma due richiedono copertura integrata",
+      "evidenza": "contratti clienti"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "entrata",
+      "gravita": "media",
+      "affermazione_richiesta": "il piano di entrata di Geloponte non contiene permesso del deposito ne' contratti di flotta",
+      "evidenza": "business plan concorrente"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "effetti verticali",
+      "gravita": "media",
+      "affermazione_richiesta": "Falesia controlla il software di tracciamento usato da due rivali e vanno analizzati accesso e incentivi",
+      "evidenza": "contratti software"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "dati sensibili",
+      "gravita": "media",
+      "affermazione_richiesta": "l'integrazione dei database gare puo' aumentare trasparenza competitiva",
+      "evidenza": "data room IT"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "efficienze",
+      "gravita": "media",
+      "affermazione_richiesta": "le economie di rotta sono quantificate ma non e' provata la trasferibilita' ai clienti",
+      "evidenza": "modello sinergie"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "rimedio strutturale",
+      "gravita": "media",
+      "affermazione_richiesta": "la cessione del deposito di Lodi e' solo una proposta e manca un acquirente o perimetro operativo",
+      "evidenza": "nota rimedi"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "rimedio comportamentale",
+      "gravita": "media",
+      "affermazione_richiesta": "l'accesso al software richiede metriche, durata e monitoraggio",
+      "evidenza": "nota rimedi"
+    },
+    {
+      "id": "I-16",
+      "etichetta": "nessuna previsione",
+      "gravita": "media",
+      "affermazione_richiesta": "il dossier consente di graduare i rischi, non di anticipare la decisione dell'autorita'",
+      "evidenza": "limiti informativi"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "quota nazionale aggregata",
+      "oggetto": "quota nazionale aggregata",
+      "chiave_nel_criterio": "quota nazionale aggregata",
+      "perche_non_e_issue": "la quota nazionale su tutta la logistica non sostituisce le quote del mercato plausibile",
+      "criterio_assenza": "Il deliverable non presenta quota nazionale aggregata come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "premio qualita'",
+      "oggetto": "premio qualita'",
+      "chiave_nel_criterio": "premio qualita'",
+      "perche_non_e_issue": "il premio di settore non prova potere di mercato",
+      "criterio_assenza": "Il deliverable non presenta premio qualita' come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "sede legale",
+      "oggetto": "sede legale",
+      "chiave_nel_criterio": "sede legale",
+      "perche_non_e_issue": "la sede legale a Bologna non definisce il mercato geografico",
+      "criterio_assenza": "Il deliverable non presenta sede legale come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "prezzo azioni",
+      "oggetto": "prezzo azioni",
+      "chiave_nel_criterio": "prezzo azioni",
+      "perche_non_e_issue": "il prezzo di acquisizione non misura l'effetto concorrenziale",
+      "criterio_assenza": "Il deliverable non presenta prezzo azioni come rilievo autonomo."
+    }
+  ]
+}

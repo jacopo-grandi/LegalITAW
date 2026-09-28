@@ -1,0 +1,973 @@
+{
+  "task_id": "WF2-033",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 48,
+  "criteria": [
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "ogni riga della tabella della sezione 1 riporta il documento del fascicolo da cui il fatto risulta.",
+      "match_criteria": "Oggetto del criterio: ogni riga della tabella della sezione 1 riporta il documento del fascicolo da cui il fatto risulta.\nPASS se: in ciascuna riga la colonna del documento e' compilata\nFAIL se: una o piu' righe non indicano il documento.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "in ciascuna riga la colonna del documento e' compilata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable non contiene riferimenti normativi diversi da quelli elencati in `03_legal_sources.md`.\nPASS se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFAIL se: compare un riferimento estraneo all'elenco chiuso.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "ogni riga della tabella della sezione 3 riporta lo stato del termine alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: ogni riga della tabella della sezione 3 riporta lo stato del termine alla data di riferimento.\nPASS se: in ciascuna riga la colonna dello stato e' compilata\nFAIL se: una o piu' righe non indicano lo stato.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "in ciascuna riga la colonna dello stato e' compilata",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable qualifica il momento delle ore 06:20 del 14 marzo 2031 come Scoperta dell'Evento.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il momento delle ore 06:20 del 14 marzo 2031 come Scoperta dell'Evento.\nPASS se: compare, riferito a quel momento, una fra: «Scoperta», «scoperta dell'evento», «momento in cui l'evento e' stato scoperto», «apertura dell'incidente»\nFAIL se: la Scoperta e' collocata in un momento diverso, oppure non e' individuata.\nFonte di authoring: relazione di analisi forense; condizioni di assicurazione, definizione di Scoperta",
+      "pass_condition": "compare, riferito a quel momento, una fra: «Scoperta», «scoperta dell'evento», «momento in cui l'evento e' stato scoperto», «apertura dell'incidente»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non fa decorrere il termine di denuncia dell'Evento dal primo accesso non autorizzato del 12 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non fa decorrere il termine di denuncia dell'Evento dal primo accesso non autorizzato del 12 marzo 2031.\nPASS se: non compare l'affermazione che il termine di denuncia decorra dal 12 marzo 2031\nFAIL se: il termine e' fatto decorrere dal primo accesso non autorizzato.\nFonte di authoring: messaggio del direttore operativo; condizioni di assicurazione, art. 7",
+      "pass_condition": "non compare l'affermazione che il termine di denuncia decorra dal 12 marzo 2031",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che la denuncia dell'Evento e' stata trasmessa entro il termine.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la denuncia dell'Evento e' stata trasmessa entro il termine.\nPASS se: compare una fra: «tempestiva», «nel termine», «entro le settantadue ore», «entro il termine» riferito alla denuncia dell'Evento\nFAIL se: la denuncia e' qualificata come tardiva, oppure la sua tempestivita' non e' trattata.\nFonte di authoring: denuncia di sinistro con ricevuta di consegna",
+      "pass_condition": "compare una fra: «tempestiva», «nel termine», «entro le settantadue ore», «entro il termine» riferito alla denuncia dell'Evento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable risponde alla tesi del broker affermando che non e' fondata.",
+      "match_criteria": "Oggetto del criterio: il deliverable risponde alla tesi del broker affermando che non e' fondata.\nPASS se: compare l'affermazione che la tesi del broker sulla tardivita' e' errata, non fondata oppure smentita dai documenti\nFAIL se: la tesi del broker non e' trattata, oppure e' condivisa.\nFonte di authoring: messaggio del direttore operativo",
+      "pass_condition": "compare l'affermazione che la tesi del broker sulla tardivita' e' errata, non fondata oppure smentita dai documenti",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che la notifica all'autorita' di controllo e' stata effettuata entro settantadue ore dalla conoscenza della violazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la notifica all'autorita' di controllo e' stata effettuata entro settantadue ore dalla conoscenza della violazione.\nPASS se: compare l'affermazione che la notifica e' stata effettuata nel termine di settantadue ore\nFAIL se: la notifica e' presentata come omessa o tardiva, oppure il punto non e' trattato.\nFonte di authoring: notifica di violazione con ricevuta di protocollo; art. 33 Reg. UE 2016/679",
+      "pass_condition": "compare l'affermazione che la notifica e' stata effettuata nel termine di settantadue ore",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che il periodo di attesa decorre dall'inizio dell'Interruzione di Attivita'.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il periodo di attesa decorre dall'inizio dell'Interruzione di Attivita'.\nPASS se: compare l'affermazione che le dodici ore si computano dall'inizio dell'interruzione, oppure dalle ore 05:40 del 14 marzo 2031\nFAIL se: il periodo di attesa e' fatto decorrere dalla Scoperta o da altro momento.\nFonte di authoring: condizioni di assicurazione, definizione di Periodo di Attesa",
+      "pass_condition": "compare l'affermazione che le dodici ore si computano dall'inizio dell'interruzione, oppure dalle ore 05:40 del 14 marzo 2031",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non presenta come indennizzabile l'intera durata dell'interruzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come indennizzabile l'intera durata dell'interruzione.\nPASS se: non compare l'affermazione che il periodo indennizzabile coincide con l'intera durata dell'interruzione\nFAIL se: l'intera durata dell'interruzione e' presentata come indennizzabile.\nFonte di authoring: messaggio del direttore operativo; scheda di polizza",
+      "pass_condition": "non compare l'affermazione che il periodo indennizzabile coincide con l'intera durata dell'interruzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che il termine di denuncia della Richiesta di Risarcimento decorre dalla ricezione della richiesta.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine di denuncia della Richiesta di Risarcimento decorre dalla ricezione della richiesta.\nPASS se: compare l'affermazione che i trenta giorni decorrono dalla ricezione, oppure dalla consegna risultante dalla ricevuta\nFAIL se: il termine e' fatto decorrere dalla data della lettera.\nFonte di authoring: condizioni di assicurazione, art. 8",
+      "pass_condition": "compare l'affermazione che i trenta giorni decorrono dalla ricezione, oppure dalla consegna risultante dalla ricevuta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che alla data di riferimento il termine di denuncia della Richiesta e' ancora aperto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che alla data di riferimento il termine di denuncia della Richiesta e' ancora aperto.\nPASS se: compare una fra: «pendente», «non ancora scaduto», «aperto», «restano … giorni» riferito a quel termine\nFAIL se: il termine e' presentato come scaduto, oppure il suo stato non e' indicato.\nFonte di authoring: data di riferimento del fascicolo",
+      "pass_condition": "compare una fra: «pendente», «non ancora scaduto», «aperto», «restano … giorni» riferito a quel termine",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non applica al termine di denuncia della Richiesta la sospensione dei termini nel periodo feriale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non applica al termine di denuncia della Richiesta la sospensione dei termini nel periodo feriale.\nPASS se: non compare l'affermazione che il termine sia sospeso nel mese di agosto\nFAIL se: al termine di denuncia e' applicata la sospensione feriale.\nFonte di authoring: messaggio del direttore operativo; condizioni di assicurazione, art. 8",
+      "pass_condition": "non compare l'affermazione che il termine sia sospeso nel mese di agosto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che lo studio legale incaricato non compare fra i Fornitori Autorizzati.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che lo studio legale incaricato non compare fra i Fornitori Autorizzati.\nPASS se: compare l'affermazione che lo studio incaricato non e' fra i Fornitori Autorizzati elencati in polizza\nFAIL se: il punto non e' trattato.\nFonte di authoring: lettera di incarico; scheda di polizza, Allegato 2",
+      "pass_condition": "compare l'affermazione che lo studio incaricato non e' fra i Fornitori Autorizzati elencati in polizza",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che la condizione posta dalla polizza per l'indennizzabilita' delle spese legali non e' soddisfatta.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la condizione posta dalla polizza per l'indennizzabilita' delle spese legali non e' soddisfatta.\nPASS se: compare l'affermazione che le spese non sono indennizzabili allo stato, oppure che la condizione della polizza non e' rispettata\nFAIL se: le spese legali sono presentate come indennizzabili senza riserve.\nFonte di authoring: condizioni di assicurazione, artt. 9 e 10",
+      "pass_condition": "compare l'affermazione che le spese non sono indennizzabili allo stato, oppure che la condizione della polizza non e' rispettata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica fra le attivita' da compiere la richiesta del consenso scritto dell'Assicuratore alla nomina gia' effettuata.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra le attivita' da compiere la richiesta del consenso scritto dell'Assicuratore alla nomina gia' effettuata.\nPASS se: compare l'indicazione di chiedere all'Assicuratore il consenso scritto sulla nomina dello studio\nFAIL se: l'indicazione non compare.\nFonte di authoring: condizioni di assicurazione, art. 9",
+      "pass_condition": "compare l'indicazione di chiedere all'Assicuratore il consenso scritto sulla nomina dello studio",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che le spese di resistenza sono a carico dell'Assicuratore entro il limite del quarto della somma assicurata.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le spese di resistenza sono a carico dell'Assicuratore entro il limite del quarto della somma assicurata.\nPASS se: compare una fra: «un quarto», «il quarto», «25 per cento» riferito al limite delle spese di resistenza\nFAIL se: il limite non e' indicato.\nÈ indifferente: il richiamo all'art. 1932 del codice civile e la discussione sulla derogabilita' della clausola: ne' richiesti ne' penalizzati.\nFonte di authoring: art. 1917, comma 3, del codice civile; condizioni di assicurazione, art. 10",
+      "pass_condition": "compare una fra: «un quarto», «il quarto», «25 per cento» riferito al limite delle spese di resistenza",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable qualifica come esclusa dalla copertura la voce della richiesta del terzo relativa alle sanzioni amministrative pecuniarie.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come esclusa dalla copertura la voce della richiesta del terzo relativa alle sanzioni amministrative pecuniarie.\nPASS se: compare, riferita a quella voce, una fra: «esclusa», «non coperta», «non indennizzabile», «fuori copertura»\nFAIL se: la voce e' trattata come coperta, oppure non e' trattata.\nFonte di authoring: condizioni di assicurazione, art. 6, lettera c)",
+      "pass_condition": "compare, riferita a quella voce, una fra: «esclusa», «non coperta», «non indennizzabile», «fuori copertura»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che la documentazione richiesta dall'Assicuratore va consegnata entro quindici giorni dalla richiesta.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la documentazione richiesta dall'Assicuratore va consegnata entro quindici giorni dalla richiesta.\nPASS se: compare «quindici giorni» oppure «15 giorni» riferito alla consegna della documentazione\nFAIL se: e' indicato un termine diverso, oppure l'obbligo non e' trattato.\nFonte di authoring: condizioni di assicurazione, art. 11",
+      "pass_condition": "compare «quindici giorni» oppure «15 giorni» riferito alla consegna della documentazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non indica la consegna della documentazione all'Assicuratore come attivita' differibile a dopo il periodo feriale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica la consegna della documentazione all'Assicuratore come attivita' differibile a dopo il periodo feriale.\nPASS se: non compare l'indicazione di trasmettere la documentazione dopo Ferragosto o alla ripresa delle attivita'\nFAIL se: la consegna e' collocata dopo la scadenza del termine.\nFonte di authoring: messaggio del direttore operativo; condizioni di assicurazione, art. 11",
+      "pass_condition": "non compare l'indicazione di trasmettere la documentazione dopo Ferragosto o alla ripresa delle attivita'",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che l'ammontare dell'indennizzo per interruzione di attivita' non e' determinabile dal fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'ammontare dell'indennizzo per interruzione di attivita' non e' determinabile dal fascicolo.\nPASS se: compare una fra: «non e' determinabile», «non e' quantificabile allo stato», «non e' possibile stabilire l'importo» riferito all'indennizzo per interruzione\nFAIL se: e' indicato un importo di indennizzo per interruzione di attivita'.\nFonte di authoring: condizioni di assicurazione, art. 3, lettera c)",
+      "pass_condition": "compare una fra: «non e' determinabile», «non e' quantificabile allo stato», «non e' possibile stabilire l'importo» riferito all'indennizzo per interruzione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica il margine di contribuzione fra i dati mancanti necessari alla quantificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il margine di contribuzione fra i dati mancanti necessari alla quantificazione.\nPASS se: compare il riferimento al margine di contribuzione fra i dati da acquisire\nFAIL se: il riferimento non compare.\nFonte di authoring: condizioni di assicurazione, art. 3, lettera c)",
+      "pass_condition": "compare il riferimento al margine di contribuzione fra i dati da acquisire",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica fra i documenti da acquisire la relazione di analisi forense nella versione definitiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica fra i documenti da acquisire la relazione di analisi forense nella versione definitiva.\nPASS se: compare la richiesta della relazione forense definitiva\nFAIL se: la richiesta non compare.\nFonte di authoring: relazione di analisi forense, versione preliminare",
+      "pass_condition": "compare la richiesta della relazione forense definitiva",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable afferma che non e' possibile stabilire se e in che misura l'indennizzo sara' corrisposto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che non e' possibile stabilire se e in che misura l'indennizzo sara' corrisposto.\nPASS se: compare una fra: «non e' possibile stabilire», «non e' possibile affermare», «resta da verificare», «l'esito dipende dagli accertamenti in corso» riferito all'indennizzo\nFAIL se: il deliverable afferma che l'indennizzo sara' corrisposto oppure che sara' negato.\nFonte di authoring: richiesta di documentazione dell'Assicuratore",
+      "pass_condition": "compare una fra: «non e' possibile stabilire», «non e' possibile affermare», «resta da verificare», «l'esito dipende dagli accertamenti in corso» riferito all'indennizzo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable distingue la durata complessiva dell'interruzione dalla durata indennizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable distingue la durata complessiva dell'interruzione dalla durata indennizzabile.\nPASS se: compaiono due durate distinte, una riferita all'interruzione e una al periodo indennizzabile\nFAIL se: e' indicata una sola durata.\nFonte di authoring: relazione di analisi forense; scheda di polizza",
+      "pass_condition": "compaiono due durate distinte, una riferita all'interruzione e una al periodo indennizzabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica l'importo della richiesta del terzo riferibile alla copertura al netto della voce esclusa.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'importo della richiesta del terzo riferibile alla copertura al netto della voce esclusa.\nPASS se: compare un importo riferibile alla copertura distinto dal totale della richiesta\nFAIL se: e' indicato soltanto il totale della richiesta.\nFonte di authoring: richiesta di risarcimento del terzo",
+      "pass_condition": "compare un importo riferibile alla copertura distinto dal totale della richiesta",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come rilievo la tardivita' della denuncia dell'Evento.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come rilievo la tardivita' della denuncia dell'Evento.\nPASS se: la tardivita' della denuncia dell'Evento non compare fra i rilievi\nFAIL se: la denuncia dell'Evento e' segnalata come tardiva.\nFonte di authoring: denuncia di sinistro con ricevuta di consegna",
+      "pass_condition": "la tardivita' della denuncia dell'Evento non compare fra i rilievi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala la Data di Retroattivita' come ostacolo alla copertura.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala la Data di Retroattivita' come ostacolo alla copertura.\nPASS se: la retroattivita' non compare fra i profili che limitano la copertura\nFAIL se: la Data di Retroattivita' e' presentata come ostacolo.\nFonte di authoring: scheda di polizza",
+      "pass_condition": "la retroattivita' non compare fra i profili che limitano la copertura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come incapiente il sublimite per l'estorsione informatica.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come incapiente il sublimite per l'estorsione informatica.\nPASS se: il sublimite non compare fra i limiti che lasciano scoperta una parte dei costi sostenuti\nFAIL se: il sublimite e' presentato come insufficiente rispetto ai costi di negoziazione.\nFonte di authoring: scheda di polizza",
+      "pass_condition": "il sublimite non compare fra i limiti che lasciano scoperta una parte dei costi sostenuti",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come non indennizzabili le spese di analisi forense.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come non indennizzabili le spese di analisi forense.\nPASS se: le spese di analisi forense non compaiono fra quelle non indennizzabili\nFAIL se: le spese di analisi forense sono presentate come non indennizzabili.\nFonte di authoring: scheda di polizza, Allegato 2",
+      "pass_condition": "le spese di analisi forense non compaiono fra quelle non indennizzabili",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta la scadenza della polizza come profilo che incide sulla copertura del sinistro.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta la scadenza della polizza come profilo che incide sulla copertura del sinistro.\nPASS se: la scadenza della polizza non compare fra i profili che incidono sulla copertura\nFAIL se: la scadenza della polizza e' presentata come profilo rilevante.\nFonte di authoring: scheda di polizza",
+      "pass_condition": "la scadenza della polizza non compare fra i profili che incidono sulla copertura",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non segnala come omessa la notifica all'autorita' di controllo.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non segnala come omessa la notifica all'autorita' di controllo.\nPASS se: l'omissione della notifica non compare fra i rilievi\nFAIL se: la notifica all'autorita' e' presentata come omessa.\nFonte di authoring: notifica di violazione con ricevuta di protocollo",
+      "pass_condition": "l'omissione della notifica non compare fra i rilievi",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non afferma che il termine di denuncia della Richiesta di Risarcimento e' gia' scaduto.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non afferma che il termine di denuncia della Richiesta di Risarcimento e' gia' scaduto.\nPASS se: non compare l'affermazione che quel termine sia scaduto prima della data di riferimento\nFAIL se: il termine e' presentato come scaduto.\nFonte di authoring: condizioni di assicurazione, art. 8",
+      "pass_condition": "non compare l'affermazione che quel termine sia scaduto prima della data di riferimento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che l'Assicuratore corrispondera' l'indennizzo.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che l'Assicuratore corrispondera' l'indennizzo.\nPASS se: non compare l'affermazione che l'indennizzo sara' corrisposto\nFAIL se: il pagamento dell'indennizzo e' presentato come esito atteso.\nFonte di authoring: richiesta di documentazione dell'Assicuratore",
+      "pass_condition": "non compare l'affermazione che l'indennizzo sara' corrisposto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica le ore 06:20 del 14 marzo 2031 come momento della Scoperta.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica le ore 06:20 del 14 marzo 2031 come momento della Scoperta.\nPASS se: compare «06:20» riferito al 14 marzo 2031\nFAIL se: e' indicato un momento diverso.\nFonte di authoring: relazione di analisi forense",
+      "pass_condition": "compare «06:20» riferito al 14 marzo 2031",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica le ore 06:20 del 17 marzo 2031 come scadenza del termine di denuncia dell'Evento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica le ore 06:20 del 17 marzo 2031 come scadenza del termine di denuncia dell'Evento.\nPASS se: compare «17 marzo 2031» riferito alla scadenza del termine di denuncia dell'Evento\nFAIL se: e' indicata una data diversa, oppure la scadenza non e' indicata.\nFonte di authoring: condizioni di assicurazione, art. 7",
+      "pass_condition": "compare «17 marzo 2031» riferito alla scadenza del termine di denuncia dell'Evento",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non indica il 15 marzo 2031 come scadenza del termine di denuncia dell'Evento.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 15 marzo 2031 come scadenza del termine di denuncia dell'Evento.\nPASS se: non compare il 15 marzo 2031 come scadenza del termine di denuncia\nFAIL se: la scadenza del termine di denuncia e' indicata nel 15 marzo 2031, cioe' settantadue ore dal primo accesso non autorizzato.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare il 15 marzo 2031 come scadenza del termine di denuncia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica le ore 17:40 del 14 marzo 2031 come inizio del periodo indennizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica le ore 17:40 del 14 marzo 2031 come inizio del periodo indennizzabile.\nPASS se: compare «17:40» riferito all'inizio del periodo indennizzabile\nFAIL se: e' indicato un momento diverso, oppure l'inizio non e' indicato.\nFonte di authoring: scheda di polizza; relazione di analisi forense",
+      "pass_condition": "compare «17:40» riferito all'inizio del periodo indennizzabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non indica le ore 18:20 del 14 marzo 2031 come inizio del periodo indennizzabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica le ore 18:20 del 14 marzo 2031 come inizio del periodo indennizzabile.\nPASS se: non compare «18:20» come inizio del periodo indennizzabile\nFAIL se: l'inizio del periodo indennizzabile e' calcolato applicando il periodo di attesa alla Scoperta anziche' all'inizio dell'interruzione.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare «18:20» come inizio del periodo indennizzabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica in 61 ore e 30 minuti la durata complessiva dell'interruzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 61 ore e 30 minuti la durata complessiva dell'interruzione.\nPASS se: compare «61 ore e 30 minuti» oppure «61,5 ore» come durata complessiva\nFAIL se: e' indicata una durata diversa, oppure la durata complessiva non e' indicata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: relazione di analisi forense",
+      "pass_condition": "compare «61 ore e 30 minuti» oppure «61,5 ore» come durata complessiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica in 49 ore e 30 minuti la durata indennizzabile dell'interruzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in 49 ore e 30 minuti la durata indennizzabile dell'interruzione.\nPASS se: compare «49 ore e 30 minuti» oppure «49,5 ore» come durata indennizzabile\nFAIL se: e' indicata una durata diversa, oppure la durata indennizzabile non e' indicata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico.\nFonte di authoring: scheda di polizza; relazione di analisi forense",
+      "pass_condition": "compare «49 ore e 30 minuti» oppure «49,5 ore» come durata indennizzabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica il 22 agosto 2031 come termine per la denuncia della Richiesta di Risarcimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 22 agosto 2031 come termine per la denuncia della Richiesta di Risarcimento.\nPASS se: compare «22 agosto 2031» oppure «22/08/2031» come termine di denuncia della Richiesta\nFAIL se: e' indicata una data diversa.\nFonte di authoring: condizioni di assicurazione, art. 8",
+      "pass_condition": "compare «22 agosto 2031» oppure «22/08/2031» come termine di denuncia della Richiesta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non indica il 20 agosto 2031 come termine per la denuncia della Richiesta.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 20 agosto 2031 come termine per la denuncia della Richiesta.\nPASS se: non compare il 20 agosto 2031 come termine di denuncia della Richiesta\nFAIL se: il termine e' calcolato dalla data della lettera del terzo anziche' dalla data di ricezione.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare il 20 agosto 2031 come termine di denuncia della Richiesta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable non indica il 22 settembre 2031 come termine per la denuncia della Richiesta.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 22 settembre 2031 come termine per la denuncia della Richiesta.\nPASS se: non compare il 22 settembre 2031 come termine di denuncia della Richiesta\nFAIL se: il termine e' calcolato applicando la sospensione feriale.\nFonte di authoring: derivazione errata ricostruita in fase di build",
+      "pass_condition": "non compare il 22 settembre 2031 come termine di denuncia della Richiesta",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica il 14 agosto 2031 come termine per la consegna della documentazione all'Assicuratore.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 14 agosto 2031 come termine per la consegna della documentazione all'Assicuratore.\nPASS se: compare «14 agosto 2031» oppure «14/08/2031» come termine di consegna\nFAIL se: e' indicata una data diversa, oppure il termine non e' indicato.\nFonte di authoring: richiesta di documentazione dell'Assicuratore; condizioni di assicurazione, art. 11",
+      "pass_condition": "compare «14 agosto 2031» oppure «14/08/2031» come termine di consegna",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "C.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica euro 500.000,00 come limite delle spese di resistenza.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 500.000,00 come limite delle spese di resistenza.\nPASS se: compare «500.000» come limite delle spese di resistenza\nFAIL se: e' indicato un importo diverso, oppure il limite non e' quantificato.\nFonte di authoring: scheda di polizza; art. 1917, comma 3, del codice civile",
+      "pass_condition": "compare «500.000» come limite delle spese di resistenza",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "C.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica euro 1.130.000,00 come importo della richiesta del terzo riferibile alla copertura.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica euro 1.130.000,00 come importo della richiesta del terzo riferibile alla copertura.\nPASS se: compare «1.130.000» come importo riferibile alla copertura\nFAIL se: e' indicato un importo diverso, oppure l'importo non e' indicato.\nFonte di authoring: richiesta di risarcimento del terzo; condizioni di assicurazione, art. 6",
+      "pass_condition": "compare «1.130.000» come importo riferibile alla copertura",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "timeline_copertura_denuncia.md"
+      ],
+      "title": "il deliverable indica quattordici giorni come giorni residui del termine di denuncia della Richiesta alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quattordici giorni come giorni residui del termine di denuncia della Richiesta alla data di riferimento.\nPASS se: compare «14 giorni» oppure «quattordici giorni» come giorni residui\nFAIL se: e' indicato un numero diverso, oppure i giorni residui non sono indicati.\nFonte di authoring: data di riferimento del fascicolo",
+      "pass_condition": "compare «14 giorni» oppure «quattordici giorni» come giorni residui",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

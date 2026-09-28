@@ -1,0 +1,200 @@
+{
+  "task_id": "WF2-055",
+  "lato_assistito": "Impianti Rosalbina S.p.A., società che conduce l'indagine interna",
+  "data_di_riferimento": "2031-05-26",
+  "stato_fascicolo": "commessa aggiudicata il 23 gennaio 2031; incarico all'intermediario conferito il 4 settembre 2030 e ancora in vigore; entrambe le fatture pagate; screening reputazionale acquisito il 14 aprile 2031; nessuna scheda di due diligence, nessun parere di Compliance e nessuna segnalazione all'Organismo di Vigilanza risultano dagli atti.",
+  "meccanismi_di_difficolta": [
+    "fatti distribuiti: la collocazione del primo pagamento nel corso della gara si ricava solo incrociando l'estratto dei pagamenti con la determina di aggiudicazione, e l'incidenza del corrispettivo sommando due fatture e rapportandole al valore della commessa",
+    "omonimia: lo screening restituisce un riscontro su un soggetto con data di nascita, luogo di nascita e codice fiscale divergenti",
+    "presenza contro adeguatezza: il contratto esiste e contiene alcune delle clausole richieste, il difetto sta in quelle che mancano e nel livello della descrizione",
+    "soglia esatta e conseguenza della soglia: la soglia di segnalazione impone una segnalazione e non integra una violazione, e le soglie di attenzione sono dichiarate non preclusive dal documento stesso",
+    "evidenze incomplete: il collegamento fra intermediario e componente della commissione è una risultanza di fonti aperte che il fornitore stesso dichiara non verificata"
+  ],
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "corrispettivo interamente a risultato senza autorizzazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il corrispettivo del contratto è determinato in percentuale sull'importo di aggiudicazione e dovuto per intero all'aggiudicazione; la procedura interna lo ammette solo su autorizzazione scritta del direttore generale su parere di Compliance, che il fascicolo non contiene",
+      "evidenza": "clausole 4.1 e 4.2 del contratto; clausola 5.2 della procedura; assenza dell'autorizzazione nel fascicolo",
+      "non_deve_affermare": "che il corrispettivo a risultato sia vietato in assoluto, o che l'autorizzazione sia stata rilasciata"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "incidenza del corrispettivo e obbligo di segnalazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il corrispettivo complessivo di euro 209.000,00 incide per il 5,00 per cento sul valore della commessa di euro 4.180.000,00 e supera la soglia di segnalazione del 3 per cento: l'obbligo che ne deriva è la trasmissione di una segnalazione scritta all'Organismo di Vigilanza, che il fascicolo non contiene",
+      "evidenza": "somma delle due fatture; determina di aggiudicazione; clausola 6.3 della procedura",
+      "non_deve_affermare": "che il superamento della soglia di segnalazione integri di per sé una violazione o impedisca il conferimento dell'incarico"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "primo pagamento anteriore all'aggiudicazione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il pagamento di euro 73.200,00 è stato disposto il 30 ottobre 2030, mentre l'aggiudicazione è del 23 gennaio 2031 e il termine per le offerte è scaduto il 4 novembre 2030: il pagamento cade nel corso della procedura di gara",
+      "evidenza": "riga del 30 ottobre 2030 dell'estratto dei pagamenti; determina di aggiudicazione; punto 2 della determina",
+      "non_deve_affermare": "che il pagamento sia successivo all'aggiudicazione, o che sia stato disposto prima della pubblicazione del bando"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "conferimento dell'incarico anteriore al bando",
+      "gravita": "alta",
+      "affermazione_richiesta": "il contratto è del 4 settembre 2030 e il bando è stato pubblicato il 16 settembre 2030: l'incarico precede di dodici giorni la pubblicazione",
+      "evidenza": "data di sottoscrizione del contratto; punto 2 della determina di aggiudicazione",
+      "non_deve_affermare": "che il contratto sia successivo al bando, o che l'anteriorità integri di per sé una irregolarità della gara"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "descrizione delle attivita non analitica",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'oggetto e le attivita del contratto sono descritti in termini generici e non contengono l'indicazione dei prodotti attesi richiesta dalla procedura interna",
+      "evidenza": "articoli 1 e 2 del contratto; clausola 4.1, lettera a), della procedura",
+      "non_deve_affermare": "che la descrizione soddisfi il requisito, o che la genericità dimostri l'inesistenza dell'attività"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "assenza dell'obbligo di rendicontazione nel contratto",
+      "gravita": "alta",
+      "affermazione_richiesta": "il contratto non contiene l'obbligo di rendicontazione periodica richiesto dalla procedura interna e i pagamenti risultano disposti senza rendicontazione allegata",
+      "evidenza": "confronto fra il contratto e la clausola 4.1, lettera b), della procedura; colonna della rendicontazione nell'estratto dei pagamenti",
+      "non_deve_affermare": "che la rendicontazione esista ma non sia stata reperita"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "assenza del diritto di audit e del divieto di subappalto",
+      "gravita": "media",
+      "affermazione_richiesta": "il contratto non contiene il diritto di audit sui documenti relativi all'incarico né il divieto di subappalto senza consenso scritto, entrambi richiesti dalla procedura interna",
+      "evidenza": "confronto fra il contratto e la clausola 4.1, lettere d) e f), della procedura",
+      "non_deve_affermare": "che le clausole siano presenti in forma diversa"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "scheda di due diligence e parere di Compliance",
+      "gravita": "alta",
+      "affermazione_richiesta": "il fascicolo non contiene la scheda di due diligence né il parere di Compliance, che la procedura interna pone come condizione per il conferimento dell'incarico",
+      "evidenza": "clausole 3.1 e 3.4 della procedura; composizione del fascicolo",
+      "non_deve_affermare": "che il parere sia stato rilasciato, o che sia stato negato"
+    },
+    {
+      "id": "I-09",
+      "etichetta": "screening reputazionale successivo al conferimento e al pagamento",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rapporto di screening è datato 14 aprile 2031, quindi successivo sia al conferimento dell'incarico sia a entrambi i pagamenti, mentre la procedura interna lo colloca prima del conferimento",
+      "evidenza": "data del rapporto di screening; date del contratto e dei pagamenti; clausola 3.1 della procedura",
+      "non_deve_affermare": "che lo screening sia stato acquisito prima del conferimento"
+    },
+    {
+      "id": "I-10",
+      "etichetta": "collegamento fra l'intermediario e un componente della commissione",
+      "gravita": "alta",
+      "affermazione_richiesta": "il rapporto di screening riporta un contratto di collaborazione professionale fra un componente della commissione giudicatrice e una società di cui l'amministratore dell'intermediario era socio e amministratore, per un periodo anteriore alla gara; il collegamento è una risultanza di fonti aperte e non è verificato documentalmente",
+      "evidenza": "paragrafo 4.2 del rapporto di screening; punto 4 della determina di aggiudicazione",
+      "non_deve_affermare": "che il collegamento sia provato, o che sia irrilevante, o che da esso derivi la responsabilità della Società"
+    },
+    {
+      "id": "I-11",
+      "etichetta": "struttura dell'intermediario e assenza di prodotti dell'attivita",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'intermediario è stato costituito il 21 giugno 2030, non ha dipendenti, non ha unità locali e non ha depositato bilanci; il fascicolo non contiene alcun documento che provi l'attività svolta",
+      "evidenza": "paragrafo 1 del rapporto di screening; assenza di rendicontazioni e di prodotti nell'intero fascicolo",
+      "non_deve_affermare": "che l'attività non sia stata svolta, o che la struttura dimostri l'inesistenza della prestazione"
+    },
+    {
+      "id": "I-12",
+      "etichetta": "fatturazione priva di collegamento a prestazioni determinate",
+      "gravita": "media",
+      "affermazione_richiesta": "entrambe le fatture descrivono la prestazione richiamando il contratto e non attività determinate, e sono prive di allegati",
+      "evidenza": "righe di descrizione delle fatture n. 18/2030 e n. 4/2031",
+      "non_deve_affermare": "che le fatture documentino le attività svolte"
+    },
+    {
+      "id": "I-13",
+      "etichetta": "attendibilita del rapporto di screening e limiti dichiarati",
+      "gravita": "media",
+      "affermazione_richiesta": "il rapporto dichiara di basarsi su fonti pubbliche e banche dati commerciali, di non avere svolto verifiche presso il soggetto né accessi documentali, e chiede la verifica documentale del collegamento",
+      "evidenza": "paragrafo 5 del rapporto di screening",
+      "non_deve_affermare": "che le risultanze del rapporto abbiano valore di accertamento"
+    },
+    {
+      "id": "I-14",
+      "etichetta": "misure conservative sulla documentazione e sui pagamenti",
+      "gravita": "alta",
+      "affermazione_richiesta": "la conduzione dell'indagine richiede la conservazione della documentazione e della corrispondenza relative all'incarico e la sospensione di ulteriori pagamenti all'intermediario fino alla conclusione delle verifiche",
+      "evidenza": "clausola 8.1 della procedura; contratto ancora in vigore per ventiquattro mesi dalla sottoscrizione",
+      "non_deve_affermare": "che la sospensione dei pagamenti presupponga l'accertamento di una violazione"
+    },
+    {
+      "id": "I-15",
+      "etichetta": "tutela del segnalante e canale interno",
+      "gravita": "bassa",
+      "affermazione_richiesta": "le segnalazioni relative a violazioni della procedura seguono il canale interno, con le tutele previste per il segnalante",
+      "evidenza": "clausola 9 della procedura interna",
+      "non_deve_affermare": "che l'indagine interna sospenda le tutele del segnalante"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "oggetto": "riscontro su omonimo nello screening",
+      "chiave_nel_criterio": "riscontro su omonimo",
+      "perche_non_e_issue": "il riscontro del paragrafo 4.1 cade su un soggetto con data di nascita, luogo di nascita e codice fiscale divergenti da quelli dell'amministratore dell'intermediario: non riguarda il soggetto in perimetro. Trattarlo come precedente dell'amministratore è errore da omonimia"
+    },
+    {
+      "id": "N-02",
+      "oggetto": "sede coincidente con lo studio del commercialista",
+      "chiave_nel_criterio": "sede coincidente con lo studio",
+      "perche_non_e_issue": "la domiciliazione della sede legale presso lo studio del professionista incaricato delle scritture è un assetto ordinario e non costituisce di per sé anomalia. Presentarla come profilo di rischio autonomo è sovra-segnalazione"
+    },
+    {
+      "id": "N-03",
+      "oggetto": "superamento delle soglie di attenzione",
+      "chiave_nel_criterio": "soglie di attenzione",
+      "perche_non_e_issue": "il corrispettivo superiore a euro 100.000,00 e l'assenza di dipendenti superano soglie di attenzione, che la procedura interna qualifica come non preclusive e non costitutive di irregolarità: l'obbligo che ne deriva è una motivazione scritta nella scheda. Presentarne il superamento come violazione è errore"
+    },
+    {
+      "id": "N-04",
+      "oggetto": "pagamenti verso conto italiano intestato all'intermediario",
+      "chiave_nel_criterio": "conto intestato all'intermediario",
+      "perche_non_e_issue": "i pagamenti sono stati disposti su un conto italiano intestato all'intermediario, come la procedura richiede: non presentano il profilo di anomalia del pagamento a soggetto diverso o su piazza terza. Segnalarli come irregolari è sovra-segnalazione"
+    },
+    {
+      "id": "N-05",
+      "oggetto": "pagamenti ad altri fornitori nell'estratto",
+      "chiave_nel_criterio": "pagamenti ad altri fornitori",
+      "perche_non_e_issue": "il pagamento allo studio legale del 6 febbraio 2031 e quello alla società di certificazione del 19 marzo 2031 recano rendicontazione allegata e non riguardano l'intermediario in perimetro. Includerli fra i pagamenti sospetti è sovra-segnalazione"
+    }
+  ],
+  "dati_mancanti": [
+    "autorizzazione scritta del direttore generale al corrispettivo a risultato",
+    "scheda di due diligence e parere di Compliance",
+    "segnalazione scritta all'Organismo di Vigilanza",
+    "rendicontazioni delle attività dell'intermediario",
+    "prodotti dell'attività: relazioni, analisi, corrispondenza, contatti",
+    "documentazione contrattuale del rapporto di collaborazione del paragrafo 4.2",
+    "iter autorizzativo del pagamento del 30 ottobre 2030",
+    "verbale della commissione giudicatrice del 15 gennaio 2031 e prospetto dei punteggi"
+  ],
+  "errori_bersaglio": [
+    "attribuire all'amministratore dell'intermediario il riscontro che cade su omonimo",
+    "presentare il superamento della soglia di segnalazione come violazione, invece dell'omessa segnalazione",
+    "presentare il superamento delle soglie di attenzione come violazione",
+    "dare per provato il collegamento fra intermediario e componente della commissione",
+    "far derivare dal collegamento la responsabilità della Società",
+    "affermare che l'intermediario non ha svolto alcuna attività",
+    "affermare che la genericità della descrizione prova l'inesistenza della prestazione",
+    "affermare che l'anteriorità dell'incarico rende irregolare la gara",
+    "segnalare come anomalia la sede presso lo studio del commercialista o il conto di pagamento intestato all'intermediario",
+    "includere fra i pagamenti sospetti quelli ad altri fornitori con rendicontazione",
+    "affermare che un reato è stato commesso",
+    "subordinare la sospensione dei pagamenti all'accertamento di una violazione"
+  ],
+  "funzione_degli_allegati": {
+    "01_procedura_anticorruzione_interna.pdf": "Fissa la soglia interna del 3 per cento e gli adempimenti di due diligence e di segnalazione. È la sede del controlled non-issue sulla soglia: il superamento impone una segnalazione, non integra una violazione.",
+    "02_contratto_consulenza_intermediario.pdf": "Documento centrale del red flag: corrispettivo interamente a risultato, descrizione generica delle attività, assenza di obblighi di rendicontazione e di audit, data anteriore alla pubblicazione del bando.",
+    "03_determina_aggiudicazione.pdf": "Fissa data e valore dell'aggiudicazione e nomina i componenti della commissione giudicatrice, uno dei quali riemerge nello screening: è l'anello che rende verificabile il collegamento.",
+    "04_fattura_18_2030_tecnoassist.pdf": "Prima fattura, riferita all'anticipo. La descrizione generica e l'assenza di rendicontazione sono l'oggetto del rilievo; la data precede l'aggiudicazione.",
+    "05_fattura_04_2031_tecnoassist.pdf": "Seconda fattura, a saldo. Consente di calcolare il corrispettivo complessivo e la sua incidenza sul valore della commessa; la data segue l'aggiudicazione di quattro giorni.",
+    "06_estratto_pagamenti_intermediario.csv": "Chiude la catena documentale: prova le date effettive dei pagamenti e permette di collocare il primo pagamento prima dell'aggiudicazione.",
+    "07_screening_reputazionale_intermediario.pdf": "Porta il riscontro su omonimo, che è il controlled non-issue centrale, e il collegamento fra il consulente e un componente della commissione, che è un red flag reale da verificare."
+  }
+}

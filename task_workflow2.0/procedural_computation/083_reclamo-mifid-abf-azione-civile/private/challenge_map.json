@@ -1,0 +1,95 @@
+{
+  "task_id": "WF2-083",
+  "issues": [
+    {
+      "id": "I-01",
+      "etichetta": "reclamo presentato",
+      "gravita": "alta",
+      "affermazione_richiesta": "il reclamo del 2 febbraio 2030 contesta gia' profilatura, informativa e perdita",
+      "evidenza": "PEC e ricevute"
+    },
+    {
+      "id": "I-02",
+      "etichetta": "risposta intermediario",
+      "gravita": "alta",
+      "affermazione_richiesta": "la risposta del 20 marzo 2030 rende praticabile il passaggio al rimedio stragiudiziale competente",
+      "evidenza": "risposta della banca"
+    },
+    {
+      "id": "I-03",
+      "etichetta": "ACF competente",
+      "gravita": "alta",
+      "affermazione_richiesta": "le doglianze riguardano servizi di investimento e vanno considerate nel canale ACF",
+      "evidenza": "reclamo e Regolamento ACF"
+    },
+    {
+      "id": "I-04",
+      "etichetta": "ABF non pertinente",
+      "gravita": "alta",
+      "affermazione_richiesta": "l'ABF non e' il canale per la contestazione MiFID descritta",
+      "evidenza": "oggetto del reclamo e disposizioni ABF"
+    },
+    {
+      "id": "I-05",
+      "etichetta": "identita' delle doglianze",
+      "gravita": "media",
+      "affermazione_richiesta": "il ricorso ACF non deve introdurre una doglianza nuova non portata nel reclamo",
+      "evidenza": "reclamo e pagina ACF"
+    },
+    {
+      "id": "I-06",
+      "etichetta": "azione civile",
+      "gravita": "media",
+      "affermazione_richiesta": "la via civile resta distinta e richiede verifica di prescrizione, prova e strategia",
+      "evidenza": "contratto e TUF"
+    },
+    {
+      "id": "I-07",
+      "etichetta": "nessuna sospensione presunta",
+      "gravita": "media",
+      "affermazione_richiesta": "il deposito in un canale stragiudiziale non va presentato come sospensione automatica di ogni termine civile",
+      "evidenza": "assenza di base nel fascicolo"
+    },
+    {
+      "id": "I-08",
+      "etichetta": "documenti mancanti",
+      "gravita": "media",
+      "affermazione_richiesta": "mancano ordini completi, registrazioni e rendiconti necessari a stabilire il quantum",
+      "evidenza": "indice documentale"
+    }
+  ],
+  "controlled_non_issues": [
+    {
+      "id": "N-01",
+      "etichetta": "bonifico",
+      "oggetto": "bonifico",
+      "chiave_nel_criterio": "bonifico",
+      "perche_non_e_issue": "il bonifico sul conto titoli non e' un reclamo",
+      "criterio_assenza": "Il deliverable non presenta bonifico come rilievo autonomo."
+    },
+    {
+      "id": "N-02",
+      "etichetta": "segnalazione Banca d'Italia",
+      "oggetto": "segnalazione Banca d'Italia",
+      "chiave_nel_criterio": "segnalazione Banca d'Italia",
+      "perche_non_e_issue": "una segnalazione di vigilanza non sostituisce un rimedio individuale",
+      "criterio_assenza": "Il deliverable non presenta segnalazione Banca d'Italia come rilievo autonomo."
+    },
+    {
+      "id": "N-03",
+      "etichetta": "firma questionario",
+      "oggetto": "firma questionario",
+      "chiave_nel_criterio": "firma questionario",
+      "perche_non_e_issue": "la firma non chiude da sola il tema dell'effettivita' della profilatura",
+      "criterio_assenza": "Il deliverable non presenta firma questionario come rilievo autonomo."
+    },
+    {
+      "id": "N-04",
+      "etichetta": "mediazione gia' svolta",
+      "oggetto": "mediazione gia' svolta",
+      "chiave_nel_criterio": "mediazione gia' svolta",
+      "perche_non_e_issue": "nel fascicolo non risulta alcun procedimento di mediazione concluso",
+      "criterio_assenza": "Il deliverable non presenta mediazione gia' svolta come rilievo autonomo."
+    }
+  ]
+}

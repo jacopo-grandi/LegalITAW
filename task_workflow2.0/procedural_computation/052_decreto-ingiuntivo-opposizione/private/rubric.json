@@ -1,0 +1,1473 @@
+{
+  "task_id": "WF2-052",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 73,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable è prodotto come file `procedural_map.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `procedural_map.md`.\nPASS se: il file consegnato ha nome `procedural_map.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `procedural_map.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non supera il limite di 2600 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2600 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2600.\nFAIL se: il corpo del deliverable supera 2600 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2600.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "la sezione delle scadenze riporta per ciascuna voce data, adempimento, soggetto onerato e conseguenza dell'inosservanza.",
+      "match_criteria": "Oggetto del criterio: la sezione delle scadenze riporta per ciascuna voce data, adempimento, soggetto onerato e conseguenza dell'inosservanza.\nPASS se: ciascuna voce della sezione delle scadenze porta i quattro elementi.\nFAIL se: almeno una voce omette uno dei quattro elementi.\nÈ indifferente: l'ordine delle colonne.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuna voce della sezione delle scadenze porta i quattro elementi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "ogni data indicata porta il riferimento al documento del fascicolo o al calcolo da cui è ricavata.",
+      "match_criteria": "Oggetto del criterio: ogni data indicata porta il riferimento al documento del fascicolo o al calcolo da cui è ricavata.\nPASS se: accanto a ciascuna data compare il rinvio a un allegato o l'indicazione del calcolo.\nFAIL se: almeno una data non porta alcun rinvio.\nÈ indifferente: la forma del rinvio; la data di riferimento indicata nella consegna, che non richiede fonte.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascuna data compare il rinvio a un allegato o l'indicazione del calcolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "per ciascuna scadenza calcolata il deliverable espone il giorno di decorrenza, la durata e il risultato come passaggi distinti.",
+      "match_criteria": "Oggetto del criterio: per ciascuna scadenza calcolata il deliverable espone il giorno di decorrenza, la durata e il risultato come passaggi distinti.\nPASS se: per ciascuna scadenza calcolata compaiono i tre passaggi.\nFAIL se: almeno una scadenza calcolata è indicata senza esporre i passaggi.\nÈ indifferente: la forma tabellare o discorsiva del computo.\nFonte di authoring: public/01_task.md, richiesta sul percorso",
+      "pass_condition": "per ciascuna scadenza calcolata compaiono i tre passaggi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.8",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole del contratto e ai numeri di documento del fascicolo.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in quaranta giorni la durata del termine per proporre opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in quaranta giorni la durata del termine per proporre opposizione.\nPASS se: compare «quaranta giorni» come durata del termine di opposizione.; compare «40 giorni» come durata del termine di opposizione.\nFAIL se: è indicata una durata diversa, oppure la durata non è indicata.\nÈ indifferente: il richiamo all'articolo che fissa il termine.\nFonte di authoring: avvertimento del decreto ingiuntivo",
+      "pass_condition": "compare «quaranta giorni» come durata del termine di opposizione.; compare «40 giorni» come durata del termine di opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica il 20 maggio 2031 come giorno da cui decorre il termine di opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 20 maggio 2031 come giorno da cui decorre il termine di opposizione.\nPASS se: compare «20 maggio 2031» come giorno di decorrenza.; compare «20/05/2031» come giorno di decorrenza.\nFAIL se: è indicato un giorno di decorrenza diverso, oppure la decorrenza non è indicata.\nÈ indifferente: l'indicazione dell'ora della consegna.\nFonte di authoring: relata di notificazione; date_verificate.md",
+      "pass_condition": "compare «20 maggio 2031» come giorno di decorrenza.; compare «20/05/2031» come giorno di decorrenza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable riconduce la decorrenza alla notificazione del decreto risultante dalla ricevuta di avvenuta consegna.",
+      "match_criteria": "Oggetto del criterio: il deliverable riconduce la decorrenza alla notificazione del decreto risultante dalla ricevuta di avvenuta consegna.\nPASS se: la decorrenza è ricondotta a una fra: «notificazione del decreto», «ricevuta di avvenuta consegna», «relata di notificazione».\nFAIL se: la decorrenza è ricondotta all'emissione del decreto, al deposito del ricorso, oppure l'atto di decorrenza non è indicato.\nÈ indifferente: la menzione del gestore del servizio.\nFonte di authoring: relata di notificazione",
+      "pass_condition": "la decorrenza è ricondotta a una fra: «notificazione del decreto», «ricevuta di avvenuta consegna», «relata di notificazione».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non indica il 12 maggio 2031 come giorno da cui decorre il termine di opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 12 maggio 2031 come giorno da cui decorre il termine di opposizione.\nPASS se: il deliverable non indica il 12 maggio 2031 come giorno da cui decorre il termine di opposizione.\nFAIL se: il 12 maggio 2031 è indicato come giorno di decorrenza del termine.\nÈ indifferente: la menzione del 12 maggio 2031 come data di emissione del decreto.\nFonte di authoring: decreto ingiuntivo",
+      "pass_condition": "il deliverable non indica il 12 maggio 2031 come giorno da cui decorre il termine di opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica il 30 giugno 2031 come scadenza del termine per proporre opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 30 giugno 2031 come scadenza del termine per proporre opposizione.\nPASS se: compare «30 giugno 2031» come scadenza del termine di opposizione.; compare «30/06/2031» come scadenza del termine di opposizione.\nFAIL se: è indicata una scadenza diversa, oppure la scadenza non è indicata.\nÈ indifferente: l'indicazione dell'ora entro cui notificare.\nFonte di authoring: computo verificato; date_verificate.md",
+      "pass_condition": "compare «30 giugno 2031» come scadenza del termine di opposizione.; compare «30/06/2031» come scadenza del termine di opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che il quarantesimo giorno cade in giorno festivo e che il termine è prorogato al primo giorno successivo non festivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il quarantesimo giorno cade in giorno festivo e che il termine è prorogato al primo giorno successivo non festivo.\nPASS se: compare l'indicazione che la scadenza nominale cade di domenica e che opera la proroga al giorno non festivo successivo.\nFAIL se: la proroga non è affermata, oppure è affermata senza indicare il fatto che la determina.\nÈ indifferente: la citazione della norma sulla proroga.\nFonte di authoring: calendario 2031; disciplina sulla proroga dei termini",
+      "pass_condition": "compare l'indicazione che la scadenza nominale cade di domenica e che opera la proroga al giorno non festivo successivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non indica il 29 giugno 2031 come scadenza del termine per proporre opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica il 29 giugno 2031 come scadenza del termine per proporre opposizione.\nPASS se: il deliverable non indica il 29 giugno 2031 come scadenza del termine per proporre opposizione.\nFAIL se: il 29 giugno 2031 è indicato come data entro cui l'opposizione va notificata.\nÈ indifferente: la menzione del 29 giugno 2031 come quarantesimo giorno nominale.\nFonte di authoring: computo verificato",
+      "pass_condition": "il deliverable non indica il 29 giugno 2031 come scadenza del termine per proporre opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in dodici il numero dei giorni che residuano alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in dodici il numero dei giorni che residuano alla data di riferimento.\nPASS se: compare «dodici giorni» come tempo residuo.; compare «12 giorni» come tempo residuo.\nFAIL se: è indicato un numero diverso, oppure il tempo residuo non è indicato.\nÈ indifferente: l'indicazione dei giorni lavorativi residui.\nFonte di authoring: data di riferimento e scadenza calcolata",
+      "pass_condition": "compare «dodici giorni» come tempo residuo.; compare «12 giorni» come tempo residuo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che la riduzione a metà dei termini di comparizione nell'opposizione a decreto ingiuntivo non è più prevista.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la riduzione a metà dei termini di comparizione nell'opposizione a decreto ingiuntivo non è più prevista.\nPASS se: compare l'indicazione che la riduzione a metà dei termini di comparizione è stata soppressa e non si applica.\nFAIL se: l'affermazione non compare, oppure la riduzione è presentata come applicabile.\nÈ indifferente: l'indicazione dell'anno in cui la riduzione è stata soppressa.\nFonte di authoring: disciplina dell'opposizione a decreto ingiuntivo",
+      "pass_condition": "compare l'indicazione che la riduzione a metà dei termini di comparizione è stata soppressa e non si applica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable rileva che la nota interna della bozza applica la riduzione a metà dei termini.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la nota interna della bozza applica la riduzione a metà dei termini.\nPASS se: compare l'indicazione che la nota interna della bozza si fonda sulla riduzione a metà dei termini.\nFAIL se: il rilievo non compare, oppure la nota interna è presentata come esatta.\nÈ indifferente: il giudizio sull'opportunità di inserire note interne nell'atto.\nFonte di authoring: nota interna della bozza di citazione",
+      "pass_condition": "compare l'indicazione che la nota interna della bozza si fonda sulla riduzione a metà dei termini.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non applica la riduzione a metà ad alcuno dei termini della procedura.",
+      "match_criteria": "Oggetto del criterio: il deliverable non applica la riduzione a metà ad alcuno dei termini della procedura.\nPASS se: il deliverable non applica la riduzione a metà ad alcuno dei termini della procedura.\nFAIL se: un termine della procedura è calcolato nella misura ridotta della metà.\nÈ indifferente: la menzione della riduzione come regola non più vigente.\nFonte di authoring: disciplina dell'opposizione a decreto ingiuntivo",
+      "pass_condition": "il deliverable non applica la riduzione a metà ad alcuno dei termini della procedura.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in centoventi giorni liberi il termine minimo che deve intercorrere fra notificazione e udienza per notificazione in Italia.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in centoventi giorni liberi il termine minimo che deve intercorrere fra notificazione e udienza per notificazione in Italia.\nPASS se: compare «centoventi giorni» come termine minimo a comparire.; compare «120 giorni» come termine minimo a comparire.\nFAIL se: è indicato un termine minimo diverso, oppure il termine minimo non è indicato.\nÈ indifferente: l'indicazione del termine per la notificazione all'estero.\nFonte di authoring: disciplina dei termini a comparire",
+      "pass_condition": "compare «centoventi giorni» come termine minimo a comparire.; compare «120 giorni» come termine minimo a comparire.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che il termine minimo a comparire si computa in giorni liberi.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il termine minimo a comparire si computa in giorni liberi.\nPASS se: compare l'indicazione che i giorni si computano come giorni liberi, esclusi il giorno della notificazione e quello dell'udienza.\nFAIL se: il computo in giorni liberi non è affermato, oppure il termine è presentato come computabile includendo gli estremi.\nÈ indifferente: la citazione della norma sul computo.\nFonte di authoring: disciplina dei termini a comparire",
+      "pass_condition": "compare l'indicazione che i giorni si computano come giorni liberi, esclusi il giorno della notificazione e quello dell'udienza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in centosedici il numero dei giorni liberi fra la notificazione programmata dalla bozza e l'udienza da essa indicata.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in centosedici il numero dei giorni liberi fra la notificazione programmata dalla bozza e l'udienza da essa indicata.\nPASS se: compare «centosedici giorni» come intervallo fra notificazione programmata e udienza.; compare «116 giorni» come intervallo fra notificazione programmata e udienza.\nFAIL se: è indicato un numero diverso, oppure l'intervallo non è calcolato.\nÈ indifferente: l'indicazione dei giorni non liberi.\nFonte di authoring: date della bozza; date_verificate.md",
+      "pass_condition": "compare «centosedici giorni» come intervallo fra notificazione programmata e udienza.; compare «116 giorni» come intervallo fra notificazione programmata e udienza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable qualifica il calendario della bozza come inferiore al termine minimo a comparire.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il calendario della bozza come inferiore al termine minimo a comparire.\nPASS se: compare, riferito al calendario della bozza, una fra: «inferiore al termine minimo», «non rispetta il termine minimo a comparire», «insufficiente rispetto ai centoventi giorni liberi».\nFAIL se: il calendario è presentato come rispettoso del minimo, oppure la qualificazione non compare.\nÈ indifferente: il numero di giorni di scostamento indicato.\nFonte di authoring: date della bozza; termine minimo a comparire",
+      "pass_condition": "compare, riferito al calendario della bozza, una fra: «inferiore al termine minimo», «non rispetta il termine minimo a comparire», «insufficiente rispetto ai centoventi giorni liberi».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come azione lo spostamento dell'udienza a una data che rispetti il termine minimo, prima della notificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione lo spostamento dell'udienza a una data che rispetti il termine minimo, prima della notificazione.\nPASS se: compare l'indicazione di spostare l'udienza a una data compatibile con il termine minimo, prima di notificare l'atto.\nFAIL se: l'azione non compare, oppure la correzione è collocata dopo la notificazione.\nÈ indifferente: la data proposta per l'udienza.\nFonte di authoring: date della bozza; termine minimo a comparire",
+      "pass_condition": "compare l'indicazione di spostare l'udienza a una data compatibile con il termine minimo, prima di notificare l'atto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma che l'insufficienza del termine a comparire è sanabile con una istanza al giudice dopo la notificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'insufficienza del termine a comparire è sanabile con una istanza al giudice dopo la notificazione.\nPASS se: il deliverable non afferma che l'insufficienza del termine a comparire è sanabile con una istanza al giudice dopo la notificazione.\nFAIL se: compare l'affermazione che l'insufficienza si sana con una istanza successiva alla notificazione.\nÈ indifferente: l'indicazione dei rimedi che il giudice può adottare in caso di vizio.\nFonte di authoring: disciplina dei termini a comparire",
+      "pass_condition": "il deliverable non afferma che l'insufficienza del termine a comparire è sanabile con una istanza al giudice dopo la notificazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in dieci giorni dalla notificazione il termine per la costituzione dell'opponente.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in dieci giorni dalla notificazione il termine per la costituzione dell'opponente.\nPASS se: compare «dieci giorni» come termine per la costituzione dell'opponente.; compare «10 giorni» come termine per la costituzione dell'opponente.\nFAIL se: è indicato un termine diverso, oppure il termine non è indicato.\nÈ indifferente: il richiamo all'articolo che lo fissa.\nFonte di authoring: disciplina della costituzione dell'attore",
+      "pass_condition": "compare «dieci giorni» come termine per la costituzione dell'opponente.; compare «10 giorni» come termine per la costituzione dell'opponente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable qualifica l'opponente come parte che assume la veste di attore nel giudizio di opposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'opponente come parte che assume la veste di attore nel giudizio di opposizione.\nPASS se: compare, riferita all'opponente, una fra: «assume la veste di attore», «è attore in senso formale», «sta in giudizio come attore».\nFAIL se: l'opponente è qualificato come convenuto, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo alla posizione sostanziale delle parti.\nFonte di authoring: disciplina dell'opposizione a decreto ingiuntivo",
+      "pass_condition": "compare, riferita all'opponente, una fra: «assume la veste di attore», «è attore in senso formale», «sta in giudizio come attore».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica quali atti l'opponente deposita al momento della costituzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali atti l'opponente deposita al momento della costituzione.\nPASS se: compare l'indicazione di almeno tre elementi fra originale dell'atto notificato, procura, documenti e nota di iscrizione a ruolo.\nFAIL se: l'indicazione non compare, oppure sono indicati meno di tre elementi.\nÈ indifferente: l'ordine in cui gli atti sono elencati.\nFonte di authoring: disciplina della costituzione dell'attore",
+      "pass_condition": "compare l'indicazione di almeno tre elementi fra originale dell'atto notificato, procura, documenti e nota di iscrizione a ruolo.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non indica in cinque giorni il termine per la costituzione dell'opponente.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica in cinque giorni il termine per la costituzione dell'opponente.\nPASS se: il deliverable non indica in cinque giorni il termine per la costituzione dell'opponente.\nFAIL se: il termine per la costituzione dell'opponente è indicato in cinque giorni.\nÈ indifferente: la menzione della riduzione a metà come regola non più vigente.\nFonte di authoring: disciplina della costituzione dell'attore",
+      "pass_condition": "il deliverable non indica in cinque giorni il termine per la costituzione dell'opponente.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in settanta giorni prima dell'udienza il termine per la costituzione dell'opposto.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in settanta giorni prima dell'udienza il termine per la costituzione dell'opposto.\nPASS se: compare «settanta giorni» come termine per la costituzione dell'opposto.; compare «70 giorni» come termine per la costituzione dell'opposto.\nFAIL se: è indicato un termine diverso, oppure il termine non è indicato.\nÈ indifferente: il richiamo all'articolo che lo fissa.\nFonte di authoring: disciplina della costituzione del convenuto",
+      "pass_condition": "compare «settanta giorni» come termine per la costituzione dell'opposto.; compare «70 giorni» come termine per la costituzione dell'opposto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non indica in venti giorni prima dell'udienza il termine per la costituzione dell'opposto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non indica in venti giorni prima dell'udienza il termine per la costituzione dell'opposto.\nPASS se: il deliverable non indica in venti giorni prima dell'udienza il termine per la costituzione dell'opposto.\nFAIL se: il termine per la costituzione dell'opposto è indicato in venti giorni prima dell'udienza.\nÈ indifferente: la menzione del termine previgente con la qualificazione di regola non più vigente.\nFonte di authoring: disciplina della costituzione del convenuto",
+      "pass_condition": "il deliverable non indica in venti giorni prima dell'udienza il termine per la costituzione dell'opposto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in quaranta, venti e dieci giorni prima dell'udienza i termini delle tre memorie integrative.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in quaranta, venti e dieci giorni prima dell'udienza i termini delle tre memorie integrative.\nPASS se: compaiono «quaranta», «venti» e «dieci» giorni come termini delle tre memorie.; compaiono «40», «20» e «10» giorni come termini delle tre memorie.\nFAIL se: è indicato un termine diverso per una delle memorie, oppure il numero delle memorie è diverso da tre.\nÈ indifferente: l'ordine in cui le tre memorie sono elencate.\nFonte di authoring: disciplina delle memorie integrative",
+      "pass_condition": "compaiono «quaranta», «venti» e «dieci» giorni come termini delle tre memorie.; compaiono «40», «20» e «10» giorni come termini delle tre memorie.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica per ciascuna delle tre memorie integrative il contenuto proprio.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica per ciascuna delle tre memorie integrative il contenuto proprio.\nPASS se: per ciascuna delle tre memorie compare l'indicazione del contenuto ammesso.\nFAIL se: il contenuto non è differenziato fra le tre memorie, oppure è indicato per meno di tre memorie.\nÈ indifferente: il grado di dettaglio del contenuto indicato.\nFonte di authoring: disciplina delle memorie integrative",
+      "pass_condition": "per ciascuna delle tre memorie compare l'indicazione del contenuto ammesso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che il decreto non è dichiarato provvisoriamente esecutivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il decreto non è dichiarato provvisoriamente esecutivo.\nPASS se: compare l'indicazione che il decreto non è provvisoriamente esecutivo.\nFAIL se: il decreto è presentato come esecutivo, oppure lo stato del titolo non è affermato.\nÈ indifferente: il richiamo al dispositivo del decreto.\nFonte di authoring: dispositivo del decreto ingiuntivo",
+      "pass_condition": "compare l'indicazione che il decreto non è provvisoriamente esecutivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che alla data di riferimento non esiste alcun titolo esecutivo azionabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che alla data di riferimento non esiste alcun titolo esecutivo azionabile.\nPASS se: compare l'indicazione che alla data di riferimento non esiste titolo esecutivo.\nFAIL se: l'affermazione non compare, oppure è indicata l'esistenza di un titolo azionabile.\nÈ indifferente: l'indicazione che il titolo potrebbe formarsi in seguito.\nFonte di authoring: dispositivo del decreto; determinazione dell'amministratore unico",
+      "pass_condition": "compare l'indicazione che alla data di riferimento non esiste titolo esecutivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma che l'opposta può procedere a pignoramento alla data di riferimento.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'opposta può procedere a pignoramento alla data di riferimento.\nPASS se: il deliverable non afferma che l'opposta può procedere a pignoramento alla data di riferimento.\nFAIL se: compare l'affermazione che l'opposta può iniziare l'esecuzione forzata alla data di riferimento.\nÈ indifferente: l'indicazione delle condizioni al verificarsi delle quali l'esecuzione diverrebbe possibile.\nFonte di authoring: dispositivo del decreto ingiuntivo",
+      "pass_condition": "il deliverable non afferma che l'opposta può procedere a pignoramento alla data di riferimento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable rileva che la domanda di sospensione contenuta nella bozza presuppone la concessione o l'inizio dell'esecuzione provvisoria.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la domanda di sospensione contenuta nella bozza presuppone la concessione o l'inizio dell'esecuzione provvisoria.\nPASS se: compare l'indicazione che la domanda di sospensione presuppone l'esecuzione provvisoria concessa o iniziata.\nFAIL se: il rilievo non compare, oppure la domanda è presentata come autonomamente proponibile allo stato.\nÈ indifferente: il richiamo all'articolo che disciplina la sospensione.\nFonte di authoring: conclusione sub b) della bozza; dispositivo del decreto",
+      "pass_condition": "compare l'indicazione che la domanda di sospensione presuppone l'esecuzione provvisoria concessa o iniziata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come azione la riformulazione della domanda di sospensione in via subordinata all'eventuale concessione dell'esecuzione provvisoria.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la riformulazione della domanda di sospensione in via subordinata all'eventuale concessione dell'esecuzione provvisoria.\nPASS se: compare l'indicazione di formulare la domanda di sospensione in via subordinata.\nFAIL se: l'azione non compare, oppure è indicata la semplice soppressione della domanda.\nÈ indifferente: la formulazione proposta.\nFonte di authoring: conclusione sub b) della bozza",
+      "pass_condition": "compare l'indicazione di formulare la domanda di sospensione in via subordinata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che l'opposto può chiedere nel giudizio di opposizione la provvisoria esecuzione del decreto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che l'opposto può chiedere nel giudizio di opposizione la provvisoria esecuzione del decreto.\nPASS se: compare l'indicazione che l'opposto può chiedere la provvisoria esecuzione nel giudizio di opposizione.\nFAIL se: l'affermazione non compare, oppure la richiesta è presentata come non proponibile.\nÈ indifferente: il richiamo all'articolo che la disciplina.\nFonte di authoring: disciplina della provvisoria esecuzione nel giudizio di opposizione",
+      "pass_condition": "compare l'indicazione che l'opposto può chiedere la provvisoria esecuzione nel giudizio di opposizione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma che la provvisoria esecuzione sarà concessa per l'intero importo ingiunto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la provvisoria esecuzione sarà concessa per l'intero importo ingiunto.\nPASS se: il deliverable non afferma che la provvisoria esecuzione sarà concessa per l'intero importo ingiunto.\nFAIL se: compare l'affermazione che la provvisoria esecuzione sarà concessa, o che lo sarà per l'intero importo.\nÈ indifferente: l'indicazione degli importi per i quali la concessione è più probabile.\nFonte di authoring: composizione documentale del credito",
+      "pass_condition": "il deliverable non afferma che la provvisoria esecuzione sarà concessa per l'intero importo ingiunto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come azione la predisposizione dell'opposizione all'istanza di provvisoria esecuzione, con la prova documentale delle voci contestate.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione la predisposizione dell'opposizione all'istanza di provvisoria esecuzione, con la prova documentale delle voci contestate.\nPASS se: compare l'indicazione di predisporre l'opposizione all'istanza con la relativa prova documentale.\nFAIL se: l'azione non compare.\nÈ indifferente: l'elenco dei documenti proposti.\nFonte di authoring: composizione documentale del credito",
+      "pass_condition": "compare l'indicazione di predisporre l'opposizione all'istanza con la relativa prova documentale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable rileva che la bozza chiede la revoca integrale del decreto sviluppando motivi per un importo inferiore.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la bozza chiede la revoca integrale del decreto sviluppando motivi per un importo inferiore.\nPASS se: compare l'indicazione che conclusioni e motivi della bozza non sono allineati quanto all'importo.\nFAIL se: il rilievo non compare, oppure conclusioni e motivi sono presentati come allineati.\nÈ indifferente: la formulazione proposta per le conclusioni.\nFonte di authoring: punto 6 e conclusione sub a) della bozza",
+      "pass_condition": "compare l'indicazione che conclusioni e motivi della bozza non sono allineati quanto all'importo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in euro 126.000,00 l'importo per il quale la bozza sviluppa motivi.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 126.000,00 l'importo per il quale la bozza sviluppa motivi.\nPASS se: compare «euro 126.000,00» come importo contestato dalla bozza.; compare «126.000,00» come importo contestato dalla bozza.\nFAIL se: è indicato un importo diverso, oppure l'importo contestato dalla bozza non è isolato.\nÈ indifferente: la scomposizione dell'importo fra note di credito e penale.\nFonte di authoring: punto 6 della bozza; date_verificate.md",
+      "pass_condition": "compare «euro 126.000,00» come importo contestato dalla bozza.; compare «126.000,00» come importo contestato dalla bozza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come azione l'allineamento delle conclusioni ai motivi, in via principale e in via gradata.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come azione l'allineamento delle conclusioni ai motivi, in via principale e in via gradata.\nPASS se: compare l'indicazione di articolare le conclusioni in via principale e in via gradata in coerenza con i motivi.\nFAIL se: l'azione non compare.\nÈ indifferente: la formulazione proposta.\nFonte di authoring: conclusione sub a) della bozza",
+      "pass_condition": "compare l'indicazione di articolare le conclusioni in via principale e in via gradata in coerenza con i motivi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in euro 60.000,00 l'ammontare complessivo degli acconti versati e non imputati a riduzione del credito.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 60.000,00 l'ammontare complessivo degli acconti versati e non imputati a riduzione del credito.\nPASS se: compare «euro 60.000,00» come ammontare degli acconti non imputati.; compare «60.000,00» come ammontare degli acconti non imputati.\nFAIL se: è indicato un ammontare diverso, oppure gli acconti non sono isolati.\nÈ indifferente: l'indicazione delle due date di versamento.\nFonte di authoring: righe degli incassi dell'estratto delle partite; date_verificate.md",
+      "pass_condition": "compare «euro 60.000,00» come ammontare degli acconti non imputati.; compare «60.000,00» come ammontare degli acconti non imputati.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable rileva che la bozza non contesta gli acconti non imputati.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la bozza non contesta gli acconti non imputati.\nPASS se: compare l'indicazione che gli acconti non imputati non figurano fra i motivi della bozza.\nFAIL se: il rilievo non compare, oppure gli acconti sono presentati come contestati dalla bozza.\nÈ indifferente: il richiamo alla determinazione dell'amministratore unico.\nFonte di authoring: punto 6 della bozza; estratto delle partite",
+      "pass_condition": "compare l'indicazione che gli acconti non imputati non figurano fra i motivi della bozza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable ricava la mancata imputazione degli acconti dalla colonna dell'estratto che la registra.",
+      "match_criteria": "Oggetto del criterio: il deliverable ricava la mancata imputazione degli acconti dalla colonna dell'estratto che la registra.\nPASS se: il rilievo è ricondotto alla colonna dell'estratto relativa all'imputazione a riduzione del credito.\nFAIL se: il rilievo è affermato senza indicare il dato dell'estratto da cui è ricavato.\nÈ indifferente: l'indicazione dei numeri di riga.\nFonte di authoring: estratto delle partite",
+      "pass_condition": "il rilievo è ricondotto alla colonna dell'estratto relativa all'imputazione a riduzione del credito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-15"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in euro 210.700,00 l'importo complessivamente contestabile sulla base dei documenti.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 210.700,00 l'importo complessivamente contestabile sulla base dei documenti.\nPASS se: compare «euro 210.700,00» come importo complessivamente contestabile.; compare «210.700,00» come importo complessivamente contestabile.\nFAIL se: è indicato un importo diverso, oppure il contestabile non è calcolato.\nÈ indifferente: l'ordine in cui le componenti sono elencate.\nFonte di authoring: estratto delle partite; date_verificate.md",
+      "pass_condition": "compare «euro 210.700,00» come importo complessivamente contestabile.; compare «210.700,00» come importo complessivamente contestabile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in euro 84.700,00 lo scostamento fra l'importo contestabile e quello contestato dalla bozza.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 84.700,00 lo scostamento fra l'importo contestabile e quello contestato dalla bozza.\nPASS se: compare «euro 84.700,00» come scostamento.; compare «84.700,00» come scostamento.\nFAIL se: è indicato uno scostamento diverso, oppure lo scostamento non è quantificato.\nÈ indifferente: la scomposizione dello scostamento fra acconti e interessi.\nFonte di authoring: estratto delle partite; punto 6 della bozza",
+      "pass_condition": "compare «euro 84.700,00» come scostamento.; compare «84.700,00» come scostamento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable espone la composizione dell'importo contestabile distinguendo capitale, penale e interessi.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone la composizione dell'importo contestabile distinguendo capitale, penale e interessi.\nPASS se: compare la distinzione fra la componente in linea capitale, la penale e gli interessi all'interno dell'importo contestabile.\nFAIL se: la composizione non è esposta, oppure le tre componenti non sono distinte.\nÈ indifferente: l'ordine in cui le componenti sono esposte.\nFonte di authoring: estratto delle partite",
+      "pass_condition": "compare la distinzione fra la componente in linea capitale, la penale e gli interessi all'interno dell'importo contestabile.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-16"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable qualifica la PEC dell'opposta del 3 aprile 2031 come conferma della ricezione delle note di credito accompagnata da riserva sul loro fondamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la PEC dell'opposta del 3 aprile 2031 come conferma della ricezione delle note di credito accompagnata da riserva sul loro fondamento.\nPASS se: compare, riferita a quella comunicazione, una fra: «conferma la ricezione con riserva di verifica», «riserva il fondamento», «non accetta le note di credito».\nFAIL se: la comunicazione è qualificata come accettazione delle note di credito, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione dell'ora della consegna.\nFonte di authoring: corpo della PEC del 3 aprile 2031",
+      "pass_condition": "compare, riferita a quella comunicazione, una fra: «conferma la ricezione con riserva di verifica», «riserva il fondamento», «non accetta le note di credito».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma che la PEC del 3 aprile 2031 prova l'accettazione delle note di credito.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la PEC del 3 aprile 2031 prova l'accettazione delle note di credito.\nPASS se: il deliverable non afferma che la PEC del 3 aprile 2031 prova l'accettazione delle note di credito.\nFAIL se: compare l'affermazione che quella comunicazione prova l'accettazione delle note di credito o il riconoscimento del credito dell'opponente.\nÈ indifferente: l'indicazione che la comunicazione prova la conoscenza delle note.\nFonte di authoring: corpo della PEC del 3 aprile 2031",
+      "pass_condition": "il deliverable non afferma che la PEC del 3 aprile 2031 prova l'accettazione delle note di credito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-17"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come necessaria la produzione della documentazione di reso richiesta dall'opposta.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come necessaria la produzione della documentazione di reso richiesta dall'opposta.\nPASS se: compare l'indicazione di produrre la documentazione di reso, con documento di trasporto e indicazione di partita e lotto.\nFAIL se: l'indicazione non compare, oppure la documentazione è data per acquisita.\nÈ indifferente: il richiamo alle clausole del contratto.\nFonte di authoring: corpo della PEC del 3 aprile 2031; clausola 10.1 del contratto",
+      "pass_condition": "compare l'indicazione di produrre la documentazione di reso, con documento di trasporto e indicazione di partita e lotto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.46",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica come necessaria la prova delle contestazioni scritte di qualità nel termine contrattuale.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come necessaria la prova delle contestazioni scritte di qualità nel termine contrattuale.\nPASS se: compare l'indicazione di provare le contestazioni scritte di qualità nel termine previsto dal contratto.\nFAIL se: l'indicazione non compare, oppure la tempestività è data per provata.\nÈ indifferente: l'indicazione della durata del termine contrattuale.\nFonte di authoring: clausola 9.1 del contratto; PEC del 3 aprile 2031",
+      "pass_condition": "compare l'indicazione di provare le contestazioni scritte di qualità nel termine previsto dal contratto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.47",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma che le note di credito provano da sé il minor debito.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che le note di credito provano da sé il minor debito.\nPASS se: il deliverable non afferma che le note di credito provano da sé il minor debito.\nFAIL se: compare l'affermazione che l'emissione delle note di credito è di per sé prova del minor debito.\nÈ indifferente: l'indicazione che le note di credito sono il punto di partenza della prova.\nFonte di authoring: PEC del 3 aprile 2031",
+      "pass_condition": "il deliverable non afferma che le note di credito provano da sé il minor debito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-18"
+    },
+    {
+      "id": "B.48",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable qualifica il deposito di euro 276.000,00 come atto di disponibilità che non costituisce riconoscimento del debito residuo.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il deposito di euro 276.000,00 come atto di disponibilità che non costituisce riconoscimento del debito residuo.\nPASS se: compare, riferito a quel deposito, una fra: «non costituisce riconoscimento», «senza riconoscimento del debito», «atto di disponibilita».\nFAIL se: il deposito è qualificato come riconoscimento del debito o come confessione, oppure la qualificazione non compare.\nÈ indifferente: l'indicazione della sede in cui il deposito va fatto constare.\nFonte di authoring: punti 1 e 2 della determinazione dell'amministratore unico",
+      "pass_condition": "compare, riferito a quel deposito, una fra: «non costituisce riconoscimento», «senza riconoscimento del debito», «atto di disponibilita».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.49",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable indica in euro 276.000,00 l'importo del deposito autorizzato.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 276.000,00 l'importo del deposito autorizzato.\nPASS se: compare «euro 276.000,00» come importo del deposito autorizzato.; compare «276.000,00» come importo del deposito autorizzato.\nFAIL se: è indicato un importo diverso, oppure l'importo del deposito non è indicato.\nÈ indifferente: l'indicazione del calcolo che porta a quell'importo.\nFonte di authoring: punto 1 della determinazione; date_verificate.md",
+      "pass_condition": "compare «euro 276.000,00» come importo del deposito autorizzato.; compare «276.000,00» come importo del deposito autorizzato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-19"
+    },
+    {
+      "id": "B.50",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable qualifica il rapporto dedotto in giudizio come contratto di somministrazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il rapporto dedotto in giudizio come contratto di somministrazione.\nPASS se: compare, riferito al rapporto, una fra: «contratto di somministrazione», «somministrazione periodica», «rapporto di somministrazione».\nFAIL se: il rapporto è qualificato diversamente, oppure la qualificazione non compare.\nÈ indifferente: il richiamo all'articolo del codice che lo definisce.\nFonte di authoring: oggetto del contratto del 9 gennaio 2029",
+      "pass_condition": "compare, riferito al rapporto, una fra: «contratto di somministrazione», «somministrazione periodica», «rapporto di somministrazione».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.51",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable afferma che per questa materia il tentativo di mediazione è condizione di procedibilità.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che per questa materia il tentativo di mediazione è condizione di procedibilità.\nPASS se: compare l'indicazione che il tentativo di mediazione è condizione di procedibilità per la materia dedotta in giudizio.\nFAIL se: l'affermazione non compare, oppure la mediazione è presentata come facoltativa.\nÈ indifferente: il richiamo all'articolo che la prevede.\nFonte di authoring: oggetto del contratto; disciplina della mediazione",
+      "pass_condition": "compare l'indicazione che il tentativo di mediazione è condizione di procedibilità per la materia dedotta in giudizio.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.52",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable rileva che la bozza non fa alcuna menzione della condizione di procedibilità.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la bozza non fa alcuna menzione della condizione di procedibilità.\nPASS se: compare l'indicazione che la bozza non menziona la condizione di procedibilità.\nFAIL se: il rilievo non compare, oppure la bozza è presentata come conforme sul punto.\nÈ indifferente: la formulazione proposta per l'atto.\nFonte di authoring: bozza di citazione",
+      "pass_condition": "compare l'indicazione che la bozza non menziona la condizione di procedibilità.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.53",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma su quale parte gravi l'onere di presentare la domanda di mediazione, presentandolo come punto pacifico.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma su quale parte gravi l'onere di presentare la domanda di mediazione, presentandolo come punto pacifico.\nPASS se: il deliverable non afferma su quale parte gravi l'onere di presentare la domanda di mediazione, presentandolo come punto pacifico.\nFAIL se: compare l'affermazione che l'onere di presentare la domanda di mediazione grava con certezza su una delle due parti, senza dichiarare la questione controversa.\nÈ indifferente: l'indicazione della soluzione ritenuta preferibile, purché dichiarata come controversa.\nFonte di authoring: disciplina della mediazione nell'opposizione a decreto ingiuntivo",
+      "pass_condition": "il deliverable non afferma su quale parte gravi l'onere di presentare la domanda di mediazione, presentandolo come punto pacifico.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-20"
+    },
+    {
+      "id": "B.54",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable espone quattro scenari distinti: revoca integrale, accoglimento parziale, rigetto e concessione della provvisoria esecuzione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone quattro scenari distinti: revoca integrale, accoglimento parziale, rigetto e concessione della provvisoria esecuzione.\nPASS se: i quattro scenari compaiono come voci separate.\nFAIL se: gli scenari sono meno di quattro, oppure sono trattati in forma indistinta.\nÈ indifferente: l'ordine in cui gli scenari sono esposti.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i quattro scenari compaiono come voci separate.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.55",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "per ciascuno scenario il deliverable indica il titolo che ne deriva, l'importo eseguibile e la prossima istanza utile.",
+      "match_criteria": "Oggetto del criterio: per ciascuno scenario il deliverable indica il titolo che ne deriva, l'importo eseguibile e la prossima istanza utile.\nPASS se: ciascuno scenario porta i tre elementi.\nFAIL se: almeno uno scenario omette uno dei tre elementi.\nÈ indifferente: l'ordine in cui i tre elementi sono esposti.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "ciascuno scenario porta i tre elementi.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "B.56",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma quale dei quattro scenari si verificherà.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma quale dei quattro scenari si verificherà.\nPASS se: il deliverable non afferma quale dei quattro scenari si verificherà.\nFAIL se: compare l'affermazione che uno degli scenari si verificherà o è il più probabile in termini di esito.\nÈ indifferente: l'indicazione di quali elementi renderebbero uno scenario più probabile.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "il deliverable non afferma quale dei quattro scenari si verificherà.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-21"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non presenta il calendario della bozza come rispettoso del termine minimo per effetto della riduzione a metà.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta il calendario della bozza come rispettoso del termine minimo per effetto della riduzione a metà.\nPASS se: il deliverable non presenta il calendario della bozza come rispettoso del termine minimo per effetto della riduzione a metà.\nFAIL se: il calendario della bozza è presentato come rispettoso del minimo applicando la riduzione a metà dei termini.\nÈ indifferente: la menzione della nota interna come punto da correggere.\nFonte di authoring: nota interna della bozza",
+      "pass_condition": "il deliverable non presenta il calendario della bozza come rispettoso del termine minimo per effetto della riduzione a metà.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non presenta la scadenza del termine di opposizione come risultato di un computo in giorni lavorativi.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta la scadenza del termine di opposizione come risultato di un computo in giorni lavorativi.\nPASS se: il deliverable non presenta la scadenza del termine di opposizione come risultato di un computo in giorni lavorativi.\nFAIL se: la scadenza è ricavata contando quaranta giorni lavorativi.\nÈ indifferente: l'indicazione del giorno della settimana in cui la scadenza cade.\nFonte di authoring: computo verificato",
+      "pass_condition": "il deliverable non presenta la scadenza del termine di opposizione come risultato di un computo in giorni lavorativi.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non attribuisce all'ora della consegna della notificazione l'effetto di spostare la decorrenza al giorno successivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable non attribuisce all'ora della consegna della notificazione l'effetto di spostare la decorrenza al giorno successivo.\nPASS se: il deliverable non attribuisce all'ora della consegna della notificazione l'effetto di spostare la decorrenza al giorno successivo.\nFAIL se: all'ora della consegna è attribuito l'effetto di spostare il perfezionamento al giorno successivo.\nÈ indifferente: la menzione dell'ora nella descrizione della notificazione.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non attribuisce all'ora della consegna della notificazione l'effetto di spostare la decorrenza al giorno successivo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non applica la sospensione feriale sul termine di opposizione al periodo che va dal 20 maggio al 30 giugno 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non applica la sospensione feriale sul termine di opposizione al periodo che va dal 20 maggio al 30 giugno 2031.\nPASS se: il deliverable non applica la sospensione feriale sul termine di opposizione al periodo che va dal 20 maggio al 30 giugno 2031.\nFAIL se: la sospensione feriale è applicata per spostare la scadenza del termine di opposizione oltre il 30 giugno 2031.\nÈ indifferente: la menzione della sospensione feriale con l'indicazione che il periodo non la interseca.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non applica la sospensione feriale sul termine di opposizione al periodo che va dal 20 maggio al 30 giugno 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non afferma la nullita della clausola penale del contratto, ne mette in discussione la validita della clausola penale.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma la nullita della clausola penale del contratto, ne mette in discussione la validita della clausola penale.\nPASS se: il deliverable non afferma la nullita della clausola penale del contratto, ne mette in discussione la validita della clausola penale.\nFAIL se: compare l'affermazione che la clausola penale è nulla o invalida.\nÈ indifferente: la contestazione del presupposto della penale o della sua misura.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non afferma la nullita della clausola penale del contratto, ne mette in discussione la validita della clausola penale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non segnala come errore il foro indicato nella bozza.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come errore il foro indicato nella bozza.\nPASS se: il deliverable non segnala come errore il foro indicato nella bozza.\nFAIL se: il foro indicato nella bozza compare fra i profili da correggere.\nÈ indifferente: la menzione del foro nella descrizione dell'atto.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "il deliverable non segnala come errore il foro indicato nella bozza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non segnala come profilo di rischio la distrazione delle spese in favore del difensore disposta dal decreto.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come profilo di rischio la distrazione delle spese in favore del difensore disposta dal decreto.\nPASS se: il deliverable non segnala come profilo di rischio la distrazione delle spese in favore del difensore disposta dal decreto.\nFAIL se: la distrazione delle spese compare fra i profili di rischio o fra le irregolarità.\nÈ indifferente: la menzione della liquidazione delle spese nella descrizione del decreto.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "il deliverable non segnala come profilo di rischio la distrazione delle spese in favore del difensore disposta dal decreto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "il deliverable non segnala come profilo di rischio il rinvio o rinnovo tacito del contratto previsto dalla clausola 2.2.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come profilo di rischio il rinvio o rinnovo tacito del contratto previsto dalla clausola 2.2.\nPASS se: il deliverable non segnala come profilo di rischio il rinvio o rinnovo tacito del contratto previsto dalla clausola 2.2.\nFAIL se: il rinnovo tacito del contratto compare fra i profili di rischio o fra i punti controversi.\nÈ indifferente: la menzione del rinnovo tacito nella descrizione del rapporto.\nFonte di authoring: challenge map, N-06",
+      "pass_condition": "il deliverable non segnala come profilo di rischio il rinvio o rinnovo tacito del contratto previsto dalla clausola 2.2.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "C.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provati i resi dell'opponente mentre tratta come da provare le contestazioni di qualita.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provati i resi dell'opponente mentre tratta come da provare le contestazioni di qualita.\nPASS se: simmetria del controllo: il deliverable non tratta come provati i resi dell'opponente mentre tratta come da provare le contestazioni di qualita.\nFAIL se: i resi sono dati per provati e nello stesso deliverable le contestazioni di qualità sono dichiarate da provare.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: PEC del 3 aprile 2031; clausole 9.1 e 10.1 del contratto",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provati i resi dell'opponente mentre tratta come da provare le contestazioni di qualita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che il decreto sarà revocato.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che il decreto sarà revocato.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che il decreto sarà revocato.\nFAIL se: compare l'affermazione che il decreto sarà revocato, integralmente o in parte.\nÈ indifferente: l'indicazione degli importi per i quali la revoca è sostenuta dai documenti.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che il decreto sarà revocato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "procedural_map.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il deposito del ricorso per decreto ingiuntivo del 28 aprile 2031.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio il deposito del ricorso per decreto ingiuntivo del 28 aprile 2031.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio il deposito del ricorso per decreto ingiuntivo del 28 aprile 2031.\nFAIL se: il deposito del ricorso compare fra i profili di rischio o fra le irregolarità della fase monitoria.\nÈ indifferente: la menzione del deposito nella cronologia.\nFonte di authoring: decreto ingiuntivo",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio il deposito del ricorso per decreto ingiuntivo del 28 aprile 2031.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

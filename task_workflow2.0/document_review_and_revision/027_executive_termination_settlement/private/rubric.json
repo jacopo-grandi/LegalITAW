@@ -1,0 +1,818 @@
+{
+  "schema_version": "0.2.0-draft",
+  "task_id": "WF2-027",
+  "title": "Lavoro. Revisione dell'accordo transattivo proposto al dirigente licenziato",
+  "status": "pilot_ready",
+  "source_file": "private/criteria_atomized.md",
+  "result_labels": [
+    "pass",
+    "fail",
+    "not_applicable",
+    "error"
+  ],
+  "default_criterion_weight": 1,
+  "default_evaluator": "llm_judge",
+  "criteria_count": 50,
+  "criteria": [
+    {
+      "id": "A.3",
+      "section": "formato_e_struttura",
+      "criterion_type": "struttura",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "span"
+      },
+      "verification": "ogni voce della sezione Rilievi in ordine di priorita' riporta un riferimento a un articolo della bozza o a un documento del fascicolo.",
+      "pass_condition": "in ciascuna voce compare un riferimento a un articolo della bozza o al nome di un documento allegato",
+      "fail_condition": "almeno una voce non riporta alcun riferimento.",
+      "indifferent": null,
+      "source": "01_task.md, riga sull'ancoraggio",
+      "severity": "media",
+      "raw_text": "A.3 ogni voce della sezione Rilievi in ordine di priorita' riporta un riferimento a un articolo della bozza o a un documento del fascicolo.\nissue: A · tipo: struttura · gravità: media · judge: no · fonte: 01_task.md, riga sull'ancoraggio\nVerifica: ogni voce della sezione Rilievi in ordine di priorita' riporta un riferimento a un articolo della bozza o a un documento del fascicolo.\nPass se: in ciascuna voce compare un riferimento a un articolo della bozza o al nome di un documento allegato\nFail se: almeno una voce non riporta alcun riferimento."
+    },
+    {
+      "id": "A.4",
+      "section": "formato_e_struttura",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "scansione"
+      },
+      "verification": "il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.",
+      "pass_condition": "tutti i riferimenti presenti compaiono nell'elenco chiuso",
+      "fail_condition": "compare un riferimento normativo o giurisprudenziale estraneo all'elenco chiuso.",
+      "indifferent": null,
+      "source": "02_reference_pack.md",
+      "severity": "alta",
+      "raw_text": "A.4 il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.\nissue: A · tipo: assenza · gravità: alta · judge: no · fonte: 02_reference_pack.md\nVerifica: il deliverable non contiene riferimenti normativi o giurisprudenziali diversi da quelli elencati in `03_legal_sources.md`.\nPass se: tutti i riferimenti presenti compaiono nell'elenco chiuso\nFail se: compare un riferimento normativo o giurisprudenziale estraneo all'elenco chiuso."
+    },
+    {
+      "id": "B.1",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la sottoscrizione dell'accordo presso la sede della Societa' non rende la rinuncia definitiva.",
+      "pass_condition": "compare, riferita alla sede di sottoscrizione, una fra: «resta impugnabile», «non e' inoppugnabile», «non e' definitiva», «non acquista stabilita'», «non produce l'effetto di definitivita'»",
+      "fail_condition": "il deliverable tratta la sede di sottoscrizione come indifferente, oppure non se ne occupa.",
+      "indifferent": "la citazione dell'art. 2113 c.c.",
+      "source": "bozza, premessa (e); art. 2113, co. 4, c.c.",
+      "severity": "alta",
+      "raw_text": "B.1 il deliverable afferma che la sottoscrizione dell'accordo presso la sede della Societa' non rende la rinuncia definitiva.\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza, premessa (e); art. 2113, co. 4, c.c.\nVerifica: il deliverable afferma che la sottoscrizione dell'accordo presso la sede della Societa' non rende la rinuncia definitiva.\nPass se: compare, riferita alla sede di sottoscrizione, una fra: «resta impugnabile», «non e' inoppugnabile», «non e' definitiva», «non acquista stabilita'», «non produce l'effetto di definitivita'»\nFail se: il deliverable tratta la sede di sottoscrizione come indifferente, oppure non se ne occupa.\nIndifferente: la citazione dell'art. 2113 c.c."
+    },
+    {
+      "id": "B.2",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica come rimedio la sottoscrizione dell'accordo in una sede di conciliazione.",
+      "pass_condition": "compare una fra: «sede sindacale», «conciliazione sindacale», «Ispettorato territoriale del lavoro», «commissione di conciliazione», «sede protetta», «art. 411 c.p.c.»",
+      "fail_condition": "non e' indicata alcuna sede alternativa a quella aziendale.",
+      "indifferent": null,
+      "source": "art. 2113, co. 4, c.c.; art. 411, co. 3, c.p.c.",
+      "severity": "alta",
+      "raw_text": "B.2 il deliverable indica come rimedio la sottoscrizione dell'accordo in una sede di conciliazione.\nissue: I-01 · tipo: presenza · gravità: alta · judge: sì · fonte: art. 2113, co. 4, c.c.; art. 411, co. 3, c.p.c.\nVerifica: il deliverable indica come rimedio la sottoscrizione dell'accordo in una sede di conciliazione.\nPass se: compare una fra: «sede sindacale», «conciliazione sindacale», «Ispettorato territoriale del lavoro», «commissione di conciliazione», «sede protetta», «art. 411 c.p.c.»\nFail se: non e' indicata alcuna sede alternativa a quella aziendale."
+    },
+    {
+      "id": "B.3",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce il rilievo sulla sede al documento che la indica.",
+      "pass_condition": "il rilievo e' agganciato alla premessa (e) della bozza oppure alla mail della Direzione del Personale del 2 marzo 2027",
+      "fail_condition": "il rilievo non e' agganciato ad alcun documento del fascicolo.",
+      "indifferent": null,
+      "source": "bozza, premessa (e); mail del 2 marzo 2027",
+      "severity": "media",
+      "raw_text": "B.3 il deliverable riconduce il rilievo sulla sede al documento che la indica.\nissue: I-01 · tipo: attribuzione · gravità: media · judge: sì · fonte: bozza, premessa (e); mail del 2 marzo 2027\nVerifica: il deliverable riconduce il rilievo sulla sede al documento che la indica.\nPass se: il rilievo e' agganciato alla premessa (e) della bozza oppure alla mail della Direzione del Personale del 2 marzo 2027\nFail se: il rilievo non e' agganciato ad alcun documento del fascicolo."
+    },
+    {
+      "id": "B.4",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la rinuncia puo' essere impugnata con un atto scritto anche stragiudiziale.",
+      "pass_condition": "compare una fra: «atto scritto anche stragiudiziale», «anche stragiudiziale», «con lettera», «senza necessita' di un atto giudiziale»",
+      "fail_condition": "il deliverable indica come necessaria un'azione giudiziale, oppure non indica la forma dell'impugnazione.",
+      "indifferent": null,
+      "source": "art. 2113, co. 3, c.c.",
+      "severity": "media",
+      "raw_text": "B.4 il deliverable afferma che la rinuncia puo' essere impugnata con un atto scritto anche stragiudiziale.\nissue: I-02 · tipo: presenza · gravità: media · judge: sì · fonte: art. 2113, co. 3, c.c.\nVerifica: il deliverable afferma che la rinuncia puo' essere impugnata con un atto scritto anche stragiudiziale.\nPass se: compare una fra: «atto scritto anche stragiudiziale», «anche stragiudiziale», «con lettera», «senza necessita' di un atto giudiziale»\nFail se: il deliverable indica come necessaria un'azione giudiziale, oppure non indica la forma dell'impugnazione."
+    },
+    {
+      "id": "B.5",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable qualifica la rinuncia dell'art. 7 come non valida nella parte relativa a diritti derivanti da disposizioni inderogabili.",
+      "pass_condition": "compare, riferita all'art. 7, una fra: «non valida», «invalida», «priva di validita'», «inefficace»",
+      "fail_condition": "la rinuncia dell'art. 7 e' presentata come pienamente valida, oppure la qualificazione non compare.",
+      "indifferent": null,
+      "source": "bozza, art. 7; art. 2113, co. 1, c.c.",
+      "severity": "alta",
+      "raw_text": "B.5 il deliverable qualifica la rinuncia dell'art. 7 come non valida nella parte relativa a diritti derivanti da disposizioni inderogabili.\nissue: I-03 · tipo: qualificazione · gravità: alta · judge: sì · fonte: bozza, art. 7; art. 2113, co. 1, c.c.\nVerifica: il deliverable qualifica la rinuncia dell'art. 7 come non valida nella parte relativa a diritti derivanti da disposizioni inderogabili.\nPass se: compare, riferita all'art. 7, una fra: «non valida», «invalida», «priva di validita'», «inefficace»\nFail se: la rinuncia dell'art. 7 e' presentata come pienamente valida, oppure la qualificazione non compare."
+    },
+    {
+      "id": "B.6",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable rileva che la rinuncia dell'art. 7 si estende a pretese future.",
+      "pass_condition": "compare, riferita all'art. 7, una fra: «pretese future», «diritti futuri», «presente e futura», «non ancora sorti», «non ancora maturati»",
+      "fail_condition": "l'estensione alle pretese future non e' rilevata.",
+      "indifferent": null,
+      "source": "bozza, art. 7",
+      "severity": "media",
+      "raw_text": "B.6 il deliverable rileva che la rinuncia dell'art. 7 si estende a pretese future.\nissue: I-03 · tipo: presenza · gravità: media · judge: sì · fonte: bozza, art. 7\nVerifica: il deliverable rileva che la rinuncia dell'art. 7 si estende a pretese future.\nPass se: compare, riferita all'art. 7, una fra: «pretese future», «diritti futuri», «presente e futura», «non ancora sorti», «non ancora maturati»\nFail se: l'estensione alle pretese future non e' rilevata."
+    },
+    {
+      "id": "B.7",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable segnala l'art. 9 come clausola che ostacola l'esercizio dell'impugnazione.",
+      "pass_condition": "l'art. 9 e' indicato come clausola che scoraggia, ostacola, penalizza o rende impraticabile l'impugnazione o l'azione",
+      "fail_condition": "l'art. 9 non e' segnalato, oppure e' presentato come clausola di rito.",
+      "indifferent": null,
+      "source": "bozza, art. 9 letto con l'art. 7",
+      "severity": "alta",
+      "raw_text": "B.7 il deliverable segnala l'art. 9 come clausola che ostacola l'esercizio dell'impugnazione.\nissue: I-04 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza, art. 9 letto con l'art. 7\nVerifica: il deliverable segnala l'art. 9 come clausola che ostacola l'esercizio dell'impugnazione.\nPass se: l'art. 9 e' indicato come clausola che scoraggia, ostacola, penalizza o rende impraticabile l'impugnazione o l'azione\nFail se: l'art. 9 non e' segnalato, oppure e' presentato come clausola di rito."
+    },
+    {
+      "id": "B.8",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable chiede di circoscrivere l'art. 9 alle sole pretese oggetto della transazione.",
+      "pass_condition": "compare una richiesta di limitare, circoscrivere, restringere o espungere l'obbligo di restituzione",
+      "fail_condition": "non e' formulata alcuna richiesta di modifica dell'art. 9.",
+      "indifferent": null,
+      "source": "bozza, art. 9",
+      "severity": "media",
+      "raw_text": "B.8 il deliverable chiede di circoscrivere l'art. 9 alle sole pretese oggetto della transazione.\nissue: I-04 · tipo: presenza · gravità: media · judge: sì · fonte: bozza, art. 9\nVerifica: il deliverable chiede di circoscrivere l'art. 9 alle sole pretese oggetto della transazione.\nPass se: compare una richiesta di limitare, circoscrivere, restringere o espungere l'obbligo di restituzione\nFail se: non e' formulata alcuna richiesta di modifica dell'art. 9."
+    },
+    {
+      "id": "B.9",
+      "section": "requisiti_minimi",
+      "criterion_type": "qualificazione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable collega il recesso ai fatti oggetto della contestazione del 5 febbraio 2027.",
+      "pass_condition": "compare l'affermazione che il recesso ha base, origine o matrice disciplinare, oppure che riguarda i fatti contestati il 5 febbraio 2027",
+      "fail_condition": "il recesso e' trattato come esclusivamente organizzativo, oppure il collegamento non compare.",
+      "indifferent": null,
+      "source": "contestazione del 5 febbraio 2027; lettera del 2 marzo 2027",
+      "severity": "alta",
+      "raw_text": "B.9 il deliverable collega il recesso ai fatti oggetto della contestazione del 5 febbraio 2027.\nissue: I-05 · tipo: qualificazione · gravità: alta · judge: sì · fonte: contestazione del 5 febbraio 2027; lettera del 2 marzo 2027\nVerifica: il deliverable collega il recesso ai fatti oggetto della contestazione del 5 febbraio 2027.\nPass se: compare l'affermazione che il recesso ha base, origine o matrice disciplinare, oppure che riguarda i fatti contestati il 5 febbraio 2027\nFail se: il recesso e' trattato come esclusivamente organizzativo, oppure il collegamento non compare."
+    },
+    {
+      "id": "B.10",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il procedimento disciplinare non risulta concluso e che il dirigente non risulta sentito.",
+      "pass_condition": "compare l'affermazione che il dirigente non e' stato sentito nonostante la richiesta, oppure che il procedimento disciplinare non e' stato definito",
+      "fail_condition": "il deliverable da' per concluso il procedimento disciplinare, oppure non se ne occupa.",
+      "indifferent": null,
+      "source": "giustificazioni del 12 febbraio 2027; art. 7, co. 2, L. 300/1970",
+      "severity": "alta",
+      "raw_text": "B.10 il deliverable afferma che il procedimento disciplinare non risulta concluso e che il dirigente non risulta sentito.\nissue: I-05 · tipo: presenza · gravità: alta · judge: sì · fonte: giustificazioni del 12 febbraio 2027; art. 7, co. 2, L. 300/1970\nVerifica: il deliverable afferma che il procedimento disciplinare non risulta concluso e che il dirigente non risulta sentito.\nPass se: compare l'affermazione che il dirigente non e' stato sentito nonostante la richiesta, oppure che il procedimento disciplinare non e' stato definito\nFail se: il deliverable da' per concluso il procedimento disciplinare, oppure non se ne occupa."
+    },
+    {
+      "id": "B.11",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable rileva che la motivazione organizzativa della lettera non trova riscontro negli altri documenti del fascicolo.",
+      "pass_condition": "compare una fra: «non trova riscontro», «non e' documentata», «non e' supportata», «confligge con», «e' smentita da», «e' in contrasto con»",
+      "fail_condition": "la motivazione della lettera e' assunta come veritiera senza rilievi.",
+      "indifferent": null,
+      "source": "lettera del 2 marzo 2027 contro contestazione del 5 febbraio 2027",
+      "severity": "alta",
+      "raw_text": "B.11 il deliverable rileva che la motivazione organizzativa della lettera non trova riscontro negli altri documenti del fascicolo.\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: lettera del 2 marzo 2027 contro contestazione del 5 febbraio 2027\nVerifica: il deliverable rileva che la motivazione organizzativa della lettera non trova riscontro negli altri documenti del fascicolo.\nPass se: compare una fra: «non trova riscontro», «non e' documentata», «non e' supportata», «confligge con», «e' smentita da», «e' in contrasto con»\nFail se: la motivazione della lettera e' assunta come veritiera senza rilievi."
+    },
+    {
+      "id": "B.12",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable collega la difformita' della motivazione alla giustificatezza del recesso.",
+      "pass_condition": "compare il termine «giustificatezza» oppure «recesso ingiustificato» riferito al recesso del 2 marzo 2027",
+      "fail_condition": "il collegamento con la giustificatezza non compare.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 19",
+      "severity": "alta",
+      "raw_text": "B.12 il deliverable collega la difformita' della motivazione alla giustificatezza del recesso.\nissue: I-06 · tipo: presenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 19\nVerifica: il deliverable collega la difformita' della motivazione alla giustificatezza del recesso.\nPass se: compare il termine «giustificatezza» oppure «recesso ingiustificato» riferito al recesso del 2 marzo 2027\nFail se: il collegamento con la giustificatezza non compare."
+    },
+    {
+      "id": "B.13",
+      "section": "requisiti_minimi",
+      "criterion_type": "attribuzione",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable riconduce il preavviso di dodici mesi alla lettera di nomina del 12 giugno 2019.",
+      "pass_condition": "il preavviso di dodici mesi e' agganciato alla lettera di nomina, alla lettera del 12 giugno 2019 oppure al patto individuale",
+      "fail_condition": "il preavviso e' ricondotto al contratto collettivo, oppure la fonte non e' indicata.",
+      "indifferent": null,
+      "source": "lettera di nomina del 12 giugno 2019, paragrafo Preavviso",
+      "severity": "alta",
+      "raw_text": "B.13 il deliverable riconduce il preavviso di dodici mesi alla lettera di nomina del 12 giugno 2019.\nissue: I-07 · tipo: attribuzione · gravità: alta · judge: sì · fonte: lettera di nomina del 12 giugno 2019, paragrafo Preavviso\nVerifica: il deliverable riconduce il preavviso di dodici mesi alla lettera di nomina del 12 giugno 2019.\nPass se: il preavviso di dodici mesi e' agganciato alla lettera di nomina, alla lettera del 12 giugno 2019 oppure al patto individuale\nFail se: il preavviso e' ricondotto al contratto collettivo, oppure la fonte non e' indicata."
+    },
+    {
+      "id": "B.14",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il premio variabile 2026 e' dovuto anche in assenza dell'accordo.",
+      "pass_condition": "compare, riferita al premio variabile 2026, una fra: «gia' maturato», «gia' dovuto», «spetta comunque», «e' dovuto indipendentemente dall'accordo», «e' un credito gia' acquisito»",
+      "fail_condition": "il premio e' presentato come concessione della Societa', oppure la sua spettanza non e' affermata.",
+      "indifferent": null,
+      "source": "regolamento del premio, artt. 4, 5 e 6; prospetto delle competenze",
+      "severity": "alta",
+      "raw_text": "B.14 il deliverable afferma che il premio variabile 2026 e' dovuto anche in assenza dell'accordo.\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: regolamento del premio, artt. 4, 5 e 6; prospetto delle competenze\nVerifica: il deliverable afferma che il premio variabile 2026 e' dovuto anche in assenza dell'accordo.\nPass se: compare, riferita al premio variabile 2026, una fra: «gia' maturato», «gia' dovuto», «spetta comunque», «e' dovuto indipendentemente dall'accordo», «e' un credito gia' acquisito»\nFail se: il premio e' presentato come concessione della Societa', oppure la sua spettanza non e' affermata."
+    },
+    {
+      "id": "B.15",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'art. 3 della bozza assorbe il premio variabile 2026 nell'importo offerto.",
+      "pass_condition": "compare l'affermazione che l'importo di cui all'art. 3 comprende, assorbe o ricomprende il premio variabile",
+      "fail_condition": "l'assorbimento non e' rilevato.",
+      "indifferent": null,
+      "source": "bozza, art. 3",
+      "severity": "alta",
+      "raw_text": "B.15 il deliverable afferma che l'art. 3 della bozza assorbe il premio variabile 2026 nell'importo offerto.\nissue: I-08 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza, art. 3\nVerifica: il deliverable afferma che l'art. 3 della bozza assorbe il premio variabile 2026 nell'importo offerto.\nPass se: compare l'affermazione che l'importo di cui all'art. 3 comprende, assorbe o ricomprende il premio variabile\nFail se: l'assorbimento non e' rilevato."
+    },
+    {
+      "id": "B.16",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'indennita' per ferie e permessi residui e' gia' maturata e viene assorbita nell'importo offerto.",
+      "pass_condition": "compare, riferita a ferie e permessi, una fra: «gia' maturata», «gia' maturati», «gia' dovuta», «assorbita nell'importo», «ricompresa nell'importo»",
+      "fail_condition": "ferie e permessi non sono trattati, oppure sono presentati come gia' liquidati.",
+      "indifferent": null,
+      "source": "cedolino di febbraio 2027; bozza, art. 3",
+      "severity": "media",
+      "raw_text": "B.16 il deliverable afferma che l'indennita' per ferie e permessi residui e' gia' maturata e viene assorbita nell'importo offerto.\nissue: I-09 · tipo: presenza · gravità: media · judge: sì · fonte: cedolino di febbraio 2027; bozza, art. 3\nVerifica: il deliverable afferma che l'indennita' per ferie e permessi residui e' gia' maturata e viene assorbita nell'importo offerto.\nPass se: compare, riferita a ferie e permessi, una fra: «gia' maturata», «gia' maturati», «gia' dovuta», «assorbita nell'importo», «ricompresa nell'importo»\nFail se: ferie e permessi non sono trattati, oppure sono presentati come gia' liquidati."
+    },
+    {
+      "id": "B.17",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che l'importo di euro 210.000,00 non costituisce interamente una somma aggiuntiva rispetto a quanto gia' maturato o comunque dovuto.",
+      "pass_condition": "compare l'affermazione che l'importo comprende voci gia' maturate o comunque dovute, oppure che la parte effettivamente nuova e' inferiore all'importo offerto",
+      "fail_condition": "l'importo e' presentato come interamente aggiuntivo.",
+      "indifferent": null,
+      "source": "bozza, artt. 3 e 4",
+      "severity": "alta",
+      "raw_text": "B.17 il deliverable afferma che l'importo di euro 210.000,00 non costituisce interamente una somma aggiuntiva rispetto a quanto gia' maturato o comunque dovuto.\nissue: I-10 · tipo: presenza · gravità: alta · judge: sì · fonte: bozza, artt. 3 e 4\nVerifica: il deliverable afferma che l'importo di euro 210.000,00 non costituisce interamente una somma aggiuntiva rispetto a quanto gia' maturato o comunque dovuto.\nPass se: compare l'affermazione che l'importo comprende voci gia' maturate o comunque dovute, oppure che la parte effettivamente nuova e' inferiore all'importo offerto\nFail se: l'importo e' presentato come interamente aggiuntivo."
+    },
+    {
+      "id": "B.18",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non presenta euro 210.000,00 come incentivo interamente nuovo.",
+      "pass_condition": "l'importo di euro 210.000,00 non e' qualificato come somma interamente aggiuntiva o come incentivo netto",
+      "fail_condition": "euro 210.000,00 e' presentato come incentivo interamente nuovo.",
+      "indifferent": null,
+      "source": "bozza, art. 3",
+      "severity": "alta",
+      "raw_text": "B.18 il deliverable non presenta euro 210.000,00 come incentivo interamente nuovo.\nissue: I-10 · tipo: assenza · gravità: alta · judge: sì · fonte: bozza, art. 3\nVerifica: il deliverable non presenta euro 210.000,00 come incentivo interamente nuovo.\nPass se: l'importo di euro 210.000,00 non e' qualificato come somma interamente aggiuntiva o come incentivo netto\nFail se: euro 210.000,00 e' presentato come incentivo interamente nuovo."
+    },
+    {
+      "id": "B.19",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il termine per il ricorso al collegio arbitrale decorre dal ricevimento della comunicazione scritta del licenziamento.",
+      "pass_condition": "la decorrenza e' agganciata al ricevimento della lettera del 2 marzo 2027 oppure alla comunicazione scritta del licenziamento",
+      "fail_condition": "la decorrenza e' agganciata a un fatto diverso, oppure non e' indicata.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 22, comma 4",
+      "severity": "alta",
+      "raw_text": "B.19 il deliverable afferma che il termine per il ricorso al collegio arbitrale decorre dal ricevimento della comunicazione scritta del licenziamento.\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 22, comma 4\nVerifica: il deliverable afferma che il termine per il ricorso al collegio arbitrale decorre dal ricevimento della comunicazione scritta del licenziamento.\nPass se: la decorrenza e' agganciata al ricevimento della lettera del 2 marzo 2027 oppure alla comunicazione scritta del licenziamento\nFail se: la decorrenza e' agganciata a un fatto diverso, oppure non e' indicata."
+    },
+    {
+      "id": "B.20",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che alla data dell'11 marzo 2027 il termine per il ricorso al collegio arbitrale e' ancora pendente.",
+      "pass_condition": "compare una fra: «e' ancora pendente», «non e' ancora scaduto», «e' in corso», «restano … giorni»",
+      "fail_condition": "il termine e' presentato come scaduto, oppure il suo stato alla data di riferimento non e' indicato.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 22, comma 4",
+      "severity": "alta",
+      "raw_text": "B.20 il deliverable afferma che alla data dell'11 marzo 2027 il termine per il ricorso al collegio arbitrale e' ancora pendente.\nissue: I-11 · tipo: presenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 22, comma 4\nVerifica: il deliverable afferma che alla data dell'11 marzo 2027 il termine per il ricorso al collegio arbitrale e' ancora pendente.\nPass se: compare una fra: «e' ancora pendente», «non e' ancora scaduto», «e' in corso», «restano … giorni»\nFail se: il termine e' presentato come scaduto, oppure il suo stato alla data di riferimento non e' indicato."
+    },
+    {
+      "id": "B.21",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti mancanti l'atto con cui il procedimento disciplinare e' stato definito.",
+      "pass_condition": "compare la richiesta dell'esito, della chiusura, dell'archiviazione o del provvedimento conclusivo del procedimento disciplinare",
+      "fail_condition": "la lacuna non e' segnalata.",
+      "indifferent": null,
+      "source": "contestazione del 5 febbraio 2027",
+      "severity": "media",
+      "raw_text": "B.21 il deliverable indica fra i documenti mancanti l'atto con cui il procedimento disciplinare e' stato definito.\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: contestazione del 5 febbraio 2027\nVerifica: il deliverable indica fra i documenti mancanti l'atto con cui il procedimento disciplinare e' stato definito.\nPass se: compare la richiesta dell'esito, della chiusura, dell'archiviazione o del provvedimento conclusivo del procedimento disciplinare\nFail se: la lacuna non e' segnalata."
+    },
+    {
+      "id": "B.22",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica fra i documenti mancanti la procedura aziendale PA-04.",
+      "pass_condition": "compare la richiesta del testo della procedura PA-04 oppure della procedura acquisti richiamata",
+      "fail_condition": "la lacuna non e' segnalata.",
+      "indifferent": null,
+      "source": "giustificazioni del 12 febbraio 2027",
+      "severity": "media",
+      "raw_text": "B.22 il deliverable indica fra i documenti mancanti la procedura aziendale PA-04.\nissue: I-12 · tipo: presenza · gravità: media · judge: sì · fonte: giustificazioni del 12 febbraio 2027\nVerifica: il deliverable indica fra i documenti mancanti la procedura aziendale PA-04.\nPass se: compare la richiesta del testo della procedura PA-04 oppure della procedura acquisti richiamata\nFail se: la lacuna non e' segnalata."
+    },
+    {
+      "id": "B.23",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che la scadenza del 19 marzo 2027 riguarda la validita' della proposta economica.",
+      "pass_condition": "compare l'affermazione che il 19 marzo 2027 e' il termine di validita' della proposta, dell'offerta o della sua efficacia",
+      "fail_condition": "il 19 marzo 2027 e' presentato come termine di decadenza di un diritto del dirigente.",
+      "indifferent": null,
+      "source": "mail del 2 marzo 2027",
+      "severity": "media",
+      "raw_text": "B.23 il deliverable afferma che la scadenza del 19 marzo 2027 riguarda la validita' della proposta economica.\nissue: I-13 · tipo: presenza · gravità: media · judge: sì · fonte: mail del 2 marzo 2027\nVerifica: il deliverable afferma che la scadenza del 19 marzo 2027 riguarda la validita' della proposta economica.\nPass se: compare l'affermazione che il 19 marzo 2027 e' il termine di validita' della proposta, dell'offerta o della sua efficacia\nFail se: il 19 marzo 2027 e' presentato come termine di decadenza di un diritto del dirigente."
+    },
+    {
+      "id": "B.24",
+      "section": "requisiti_minimi",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable indica un atto scritto da compiere entro il 1 aprile 2027.",
+      "pass_condition": "compare, riferito al 1 aprile 2027 o al 01/04/2027, uno fra: «ricorso al collegio arbitrale», «raccomandata a.r. alla Federmanager», «impugnazione scritta del licenziamento»",
+      "fail_condition": "nessun atto e' collegato a quella data.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 22, comma 4",
+      "severity": "alta",
+      "raw_text": "B.24 il deliverable indica un atto scritto da compiere entro il 1 aprile 2027.\nissue: I-13 · tipo: presenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 22, comma 4\nVerifica: il deliverable indica un atto scritto da compiere entro il 1 aprile 2027.\nPass se: compare, riferito al 1 aprile 2027 o al 01/04/2027, uno fra: «ricorso al collegio arbitrale», «raccomandata a.r. alla Federmanager», «impugnazione scritta del licenziamento»\nFail se: nessun atto e' collegato a quella data."
+    },
+    {
+      "id": "B.25",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma la nullita' dell'intero accordo.",
+      "pass_condition": "l'accordo non e' qualificato come nullo o invalido nella sua interezza",
+      "fail_condition": "l'accordo e' presentato come integralmente nullo o integralmente invalido.",
+      "indifferent": null,
+      "source": "art. 2113, co. 1, c.c.",
+      "severity": "media",
+      "raw_text": "B.25 il deliverable non afferma la nullita' dell'intero accordo.\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: art. 2113, co. 1, c.c.\nVerifica: il deliverable non afferma la nullita' dell'intero accordo.\nPass se: l'accordo non e' qualificato come nullo o invalido nella sua interezza\nFail se: l'accordo e' presentato come integralmente nullo o integralmente invalido."
+    },
+    {
+      "id": "B.26",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il licenziamento e' nullo o inefficace per l'inosservanza delle garanzie procedimentali.",
+      "pass_condition": "il recesso del 2 marzo 2027 non e' qualificato come nullo, inefficace o privo di effetti",
+      "fail_condition": "il recesso e' presentato come nullo o inefficace.",
+      "indifferent": null,
+      "source": "art. 10 L. 604/1966",
+      "severity": "alta",
+      "raw_text": "B.26 il deliverable non afferma che il licenziamento e' nullo o inefficace per l'inosservanza delle garanzie procedimentali.\nissue: I-05 · tipo: assenza · gravità: alta · judge: sì · fonte: art. 10 L. 604/1966\nVerifica: il deliverable non afferma che il licenziamento e' nullo o inefficace per l'inosservanza delle garanzie procedimentali.\nPass se: il recesso del 2 marzo 2027 non e' qualificato come nullo, inefficace o privo di effetti\nFail se: il recesso e' presentato come nullo o inefficace."
+    },
+    {
+      "id": "B.27",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il premio variabile 2026 e' perduto per effetto della cessazione del rapporto.",
+      "pass_condition": "non compare l'affermazione che il premio decade, si perde o non spetta a causa della cessazione",
+      "fail_condition": "il premio e' presentato come perduto per effetto della cessazione.",
+      "indifferent": null,
+      "source": "regolamento del premio, artt. 5 e 6",
+      "severity": "media",
+      "raw_text": "B.27 il deliverable non afferma che il premio variabile 2026 e' perduto per effetto della cessazione del rapporto.\nissue: I-08 · tipo: assenza · gravità: media · judge: sì · fonte: regolamento del premio, artt. 5 e 6\nVerifica: il deliverable non afferma che il premio variabile 2026 e' perduto per effetto della cessazione del rapporto.\nPass se: non compare l'affermazione che il premio decade, si perde o non spetta a causa della cessazione\nFail se: il premio e' presentato come perduto per effetto della cessazione."
+    },
+    {
+      "id": "B.28",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non afferma che il procedimento disciplinare e' stato archiviato.",
+      "pass_condition": "non compare l'affermazione che il procedimento e' stato archiviato o chiuso senza seguito",
+      "fail_condition": "il procedimento e' dato per archiviato.",
+      "indifferent": null,
+      "source": "assenza di atti di chiusura nel fascicolo",
+      "severity": "media",
+      "raw_text": "B.28 il deliverable non afferma che il procedimento disciplinare e' stato archiviato.\nissue: I-12 · tipo: assenza · gravità: media · judge: sì · fonte: assenza di atti di chiusura nel fascicolo\nVerifica: il deliverable non afferma che il procedimento disciplinare e' stato archiviato.\nPass se: non compare l'affermazione che il procedimento e' stato archiviato o chiuso senza seguito\nFail se: il procedimento e' dato per archiviato."
+    },
+    {
+      "id": "B.29",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "simmetria del controllo: il deliverable non afferma che alla data dell'11 marzo 2027 il termine per contestare il recesso e' gia' scaduto.",
+      "pass_condition": "non compare l'affermazione che il dirigente e' decaduto o che non ha piu' termini a disposizione",
+      "fail_condition": "il deliverable afferma che il termine e' gia' scaduto.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 22, comma 4",
+      "severity": "alta",
+      "raw_text": "B.29 simmetria del controllo: il deliverable non afferma che alla data dell'11 marzo 2027 il termine per contestare il recesso e' gia' scaduto.\nissue: I-11 · tipo: assenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 22, comma 4\nVerifica: simmetria del controllo: il deliverable non afferma che alla data dell'11 marzo 2027 il termine per contestare il recesso e' gia' scaduto.\nPass se: non compare l'affermazione che il dirigente e' decaduto o che non ha piu' termini a disposizione\nFail se: il deliverable afferma che il termine e' gia' scaduto."
+    },
+    {
+      "id": "B.30",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non afferma che il termine di sessanta giorni previsto per l'impugnazione del licenziamento si applica alla domanda di ingiustificatezza del dirigente.",
+      "pass_condition": "non compare l'affermazione che il dirigente decade dalla domanda di ingiustificatezza se non impugna entro sessanta giorni",
+      "fail_condition": "il termine di sessanta giorni e' presentato come termine di decadenza della domanda di ingiustificatezza.",
+      "indifferent": null,
+      "source": "Cass. 148/2020 e 395/2020; art. 10 L. 604/1966",
+      "severity": "alta",
+      "raw_text": "B.30 sovra-segnalazione: il deliverable non afferma che il termine di sessanta giorni previsto per l'impugnazione del licenziamento si applica alla domanda di ingiustificatezza del dirigente.\nissue: I-11 · tipo: assenza · gravità: alta · judge: sì · fonte: Cass. 148/2020 e 395/2020; art. 10 L. 604/1966\nVerifica: sovra-segnalazione: il deliverable non afferma che il termine di sessanta giorni previsto per l'impugnazione del licenziamento si applica alla domanda di ingiustificatezza del dirigente.\nPass se: non compare l'affermazione che il dirigente decade dalla domanda di ingiustificatezza se non impugna entro sessanta giorni\nFail se: il termine di sessanta giorni e' presentato come termine di decadenza della domanda di ingiustificatezza."
+    },
+    {
+      "id": "B.31",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come rilievo la motivazione contestuale della lettera del 2 marzo 2027.",
+      "pass_condition": "non compare la contestazione della genericita' della motivazione ne' dell'assenza di giustificato motivo legale",
+      "fail_condition": "la motivazione contestuale e' segnalata come vizio della lettera.",
+      "indifferent": null,
+      "source": "art. 10 L. 604/1966; CCNL dirigenti, art. 22, comma 2",
+      "severity": "media",
+      "raw_text": "B.31 sovra-segnalazione: il deliverable non segnala come rilievo la motivazione contestuale della lettera del 2 marzo 2027.\nissue: I-06 · tipo: assenza · gravità: media · judge: sì · fonte: art. 10 L. 604/1966; CCNL dirigenti, art. 22, comma 2\nVerifica: sovra-segnalazione: il deliverable non segnala come rilievo la motivazione contestuale della lettera del 2 marzo 2027.\nPass se: non compare la contestazione della genericita' della motivazione ne' dell'assenza di giustificato motivo legale\nFail se: la motivazione contestuale e' segnalata come vizio della lettera."
+    },
+    {
+      "id": "B.32",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come rilievo la clausola di riservatezza e non denigrazione dell'art. 10.",
+      "pass_condition": "l'art. 10 della bozza non compare fra i rilievi",
+      "fail_condition": "la clausola di riservatezza e non denigrazione e' presentata come esposizione per il dirigente.",
+      "indifferent": null,
+      "source": "bozza, art. 10",
+      "severity": "media",
+      "raw_text": "B.32 sovra-segnalazione: il deliverable non segnala come rilievo la clausola di riservatezza e non denigrazione dell'art. 10.\nissue: I-03 · tipo: assenza · gravità: media · judge: sì · fonte: bozza, art. 10\nVerifica: sovra-segnalazione: il deliverable non segnala come rilievo la clausola di riservatezza e non denigrazione dell'art. 10.\nPass se: l'art. 10 della bozza non compare fra i rilievi\nFail se: la clausola di riservatezza e non denigrazione e' presentata come esposizione per il dirigente."
+    },
+    {
+      "id": "B.33",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come rilievo il pagamento entro trenta giorni dalla data di cessazione previsto dall'art. 5.",
+      "pass_condition": "il termine di pagamento dell'art. 5 non compare fra i rilievi",
+      "fail_condition": "il termine di pagamento e' presentato come esposizione per il dirigente.",
+      "indifferent": null,
+      "source": "bozza, art. 5",
+      "severity": "bassa",
+      "raw_text": "B.33 sovra-segnalazione: il deliverable non segnala come rilievo il pagamento entro trenta giorni dalla data di cessazione previsto dall'art. 5.\nissue: I-10 · tipo: assenza · gravità: bassa · judge: sì · fonte: bozza, art. 5\nVerifica: sovra-segnalazione: il deliverable non segnala come rilievo il pagamento entro trenta giorni dalla data di cessazione previsto dall'art. 5.\nPass se: il termine di pagamento dell'art. 5 non compare fra i rilievi\nFail se: il termine di pagamento e' presentato come esposizione per il dirigente."
+    },
+    {
+      "id": "B.34",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non qualifica la scadenza del 19 marzo 2027 come pressione illecita o come vizio del consenso.",
+      "pass_condition": "non compare la qualificazione della scadenza come violenza, minaccia, pressione illecita o vizio del consenso",
+      "fail_condition": "la scadenza della proposta e' qualificata come pressione illecita o come vizio del consenso.",
+      "indifferent": null,
+      "source": "mail del 2 marzo 2027",
+      "severity": "media",
+      "raw_text": "B.34 sovra-segnalazione: il deliverable non qualifica la scadenza del 19 marzo 2027 come pressione illecita o come vizio del consenso.\nissue: I-13 · tipo: assenza · gravità: media · judge: sì · fonte: mail del 2 marzo 2027\nVerifica: sovra-segnalazione: il deliverable non qualifica la scadenza del 19 marzo 2027 come pressione illecita o come vizio del consenso.\nPass se: non compare la qualificazione della scadenza come violenza, minaccia, pressione illecita o vizio del consenso\nFail se: la scadenza della proposta e' qualificata come pressione illecita o come vizio del consenso."
+    },
+    {
+      "id": "B.35",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non segnala come esposizione il programma di ricollocazione professionale e l'uso dell'autovettura previsti dall'art. 6.",
+      "pass_condition": "le previsioni dell'art. 6 non compaiono fra i rilievi",
+      "fail_condition": "le previsioni dell'art. 6 sono presentate come sfavorevoli al dirigente.",
+      "indifferent": null,
+      "source": "bozza, art. 6",
+      "severity": "media",
+      "raw_text": "B.35 sovra-segnalazione: il deliverable non segnala come esposizione il programma di ricollocazione professionale e l'uso dell'autovettura previsti dall'art. 6.\nissue: I-10 · tipo: assenza · gravità: media · judge: sì · fonte: bozza, art. 6\nVerifica: sovra-segnalazione: il deliverable non segnala come esposizione il programma di ricollocazione professionale e l'uso dell'autovettura previsti dall'art. 6.\nPass se: le previsioni dell'art. 6 non compaiono fra i rilievi\nFail se: le previsioni dell'art. 6 sono presentate come sfavorevoli al dirigente."
+    },
+    {
+      "id": "B.36",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "sovra-segnalazione: il deliverable non afferma che il dirigente rinuncia al trattamento di fine rapporto.",
+      "pass_condition": "non compare l'affermazione che il trattamento di fine rapporto e' compreso nell'importo transattivo o oggetto di rinuncia",
+      "fail_condition": "il trattamento di fine rapporto e' presentato come assorbito o rinunciato.",
+      "indifferent": null,
+      "source": "bozza, art. 4",
+      "severity": "alta",
+      "raw_text": "B.36 sovra-segnalazione: il deliverable non afferma che il dirigente rinuncia al trattamento di fine rapporto.\nissue: I-10 · tipo: assenza · gravità: alta · judge: sì · fonte: bozza, art. 4\nVerifica: sovra-segnalazione: il deliverable non afferma che il dirigente rinuncia al trattamento di fine rapporto.\nPass se: non compare l'affermazione che il trattamento di fine rapporto e' compreso nell'importo transattivo o oggetto di rinuncia\nFail se: il trattamento di fine rapporto e' presentato come assorbito o rinunciato."
+    },
+    {
+      "id": "B.37",
+      "section": "requisiti_minimi",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "divieto di presunzione dell'esito: il deliverable non afferma che il collegio arbitrale riconoscera' l'indennita' supplementare.",
+      "pass_condition": "non compare l'affermazione che l'indennita' supplementare sara' riconosciuta o che il recesso sara' dichiarato ingiustificato",
+      "fail_condition": "il deliverable presuppone l'accoglimento della domanda di ingiustificatezza.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 19",
+      "severity": "alta",
+      "raw_text": "B.37 divieto di presunzione dell'esito: il deliverable non afferma che il collegio arbitrale riconoscera' l'indennita' supplementare.\nissue: I-06 · tipo: assenza · gravità: alta · judge: sì · fonte: CCNL dirigenti, art. 19\nVerifica: divieto di presunzione dell'esito: il deliverable non afferma che il collegio arbitrale riconoscera' l'indennita' supplementare.\nPass se: non compare l'affermazione che l'indennita' supplementare sara' riconosciuta o che il recesso sara' dichiarato ingiustificato\nFail se: il deliverable presuppone l'accoglimento della domanda di ingiustificatezza."
+    },
+    {
+      "id": "C.1",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 2 marzo 2027 come fatto da cui decorre il termine per il ricorso al collegio arbitrale.",
+      "pass_condition": "compare «2 marzo 2027» oppure «02/03/2027» come decorrenza",
+      "fail_condition": "e' indicata una data diversa come decorrenza.",
+      "indifferent": null,
+      "source": "lettera del 2 marzo 2027",
+      "severity": "alta",
+      "raw_text": "C.1 il deliverable indica il 2 marzo 2027 come fatto da cui decorre il termine per il ricorso al collegio arbitrale.\nissue: I-11 · tipo: valore · gravità: alta · judge: no · fonte: lettera del 2 marzo 2027\nVerifica: il deliverable indica il 2 marzo 2027 come fatto da cui decorre il termine per il ricorso al collegio arbitrale.\nPass se: compare «2 marzo 2027» oppure «02/03/2027» come decorrenza\nFail se: e' indicata una data diversa come decorrenza."
+    },
+    {
+      "id": "C.2",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica il 1 aprile 2027 come scadenza del termine per il ricorso al collegio arbitrale.",
+      "pass_condition": "compare «1 aprile 2027», «1° aprile 2027» oppure «01/04/2027» come scadenza",
+      "fail_condition": "e' indicata una data diversa come scadenza.",
+      "indifferent": null,
+      "source": "CCNL dirigenti, art. 22, comma 4",
+      "severity": "alta",
+      "raw_text": "C.2 il deliverable indica il 1 aprile 2027 come scadenza del termine per il ricorso al collegio arbitrale.\nissue: I-11 · tipo: valore · gravità: alta · judge: no · fonte: CCNL dirigenti, art. 22, comma 4\nVerifica: il deliverable indica il 1 aprile 2027 come scadenza del termine per il ricorso al collegio arbitrale.\nPass se: compare «1 aprile 2027», «1° aprile 2027» oppure «01/04/2027» come scadenza\nFail se: e' indicata una data diversa come scadenza."
+    },
+    {
+      "id": "C.3",
+      "section": "qualita_incrementale",
+      "criterion_type": "presenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable afferma che il giorno del ricevimento della lettera non si computa nel termine.",
+      "pass_condition": "compare una fra: «il giorno iniziale non si computa», «esclusa la data di ricevimento», «a decorrere dal giorno successivo», «dal 3 marzo 2027»",
+      "fail_condition": "il passaggio non compare, oppure il termine e' contato includendo il 2 marzo 2027.",
+      "indifferent": null,
+      "source": "computo dei termini a giorni",
+      "severity": "media",
+      "raw_text": "C.3 il deliverable afferma che il giorno del ricevimento della lettera non si computa nel termine.\nissue: I-11 · tipo: presenza · gravità: media · judge: sì · fonte: computo dei termini a giorni\nVerifica: il deliverable afferma che il giorno del ricevimento della lettera non si computa nel termine.\nPass se: compare una fra: «il giorno iniziale non si computa», «esclusa la data di ricevimento», «a decorrere dal giorno successivo», «dal 3 marzo 2027»\nFail se: il passaggio non compare, oppure il termine e' contato includendo il 2 marzo 2027."
+    },
+    {
+      "id": "C.4",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in sei mesi il termine per impugnare la rinuncia.",
+      "pass_condition": "compare «sei mesi» oppure «6 mesi» riferito all'impugnazione della rinuncia o della transazione",
+      "fail_condition": "e' indicato un termine diverso, oppure il termine non e' indicato.",
+      "indifferent": null,
+      "source": "art. 2113, co. 2, c.c.",
+      "severity": "media",
+      "raw_text": "C.4 il deliverable indica in sei mesi il termine per impugnare la rinuncia.\nissue: I-02 · tipo: valore · gravità: media · judge: no · fonte: art. 2113, co. 2, c.c.\nVerifica: il deliverable indica in sei mesi il termine per impugnare la rinuncia.\nPass se: compare «sei mesi» oppure «6 mesi» riferito all'impugnazione della rinuncia o della transazione\nFail se: e' indicato un termine diverso, oppure il termine non e' indicato."
+    },
+    {
+      "id": "C.5",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in otto mesi la parte di preavviso non coperta dall'accordo.",
+      "pass_condition": "compare «otto mesi» oppure «8 mesi» riferito al preavviso non coperto, residuo o mancante",
+      "fail_condition": "e' indicato un numero di mesi diverso.",
+      "indifferent": null,
+      "source": "lettera di nomina del 12 giugno 2019; art. 2 della bozza",
+      "severity": "alta",
+      "raw_text": "C.5 il deliverable indica in otto mesi la parte di preavviso non coperta dall'accordo.\nissue: I-07 · tipo: valore · gravità: alta · judge: no · fonte: lettera di nomina del 12 giugno 2019; art. 2 della bozza\nVerifica: il deliverable indica in otto mesi la parte di preavviso non coperta dall'accordo.\nPass se: compare «otto mesi» oppure «8 mesi» riferito al preavviso non coperto, residuo o mancante\nFail se: e' indicato un numero di mesi diverso."
+    },
+    {
+      "id": "C.6",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 121.333,33 il valore degli otto mesi di preavviso non coperti.",
+      "pass_condition": "compare «121.333,33»",
+      "fail_condition": "e' indicato un importo diverso, oppure l'importo non e' indicato.",
+      "indifferent": null,
+      "source": "retribuzione mensile di euro 14.000,00 e rateo di tredicesima",
+      "severity": "alta",
+      "raw_text": "C.6 il deliverable indica in euro 121.333,33 il valore degli otto mesi di preavviso non coperti.\nissue: I-07 · tipo: valore · gravità: alta · judge: no · fonte: retribuzione mensile di euro 14.000,00 e rateo di tredicesima\nVerifica: il deliverable indica in euro 121.333,33 il valore degli otto mesi di preavviso non coperti.\nPass se: compare «121.333,33»\nFail se: e' indicato un importo diverso, oppure l'importo non e' indicato."
+    },
+    {
+      "id": "C.7",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 38.675,00 l'importo del premio variabile 2026.",
+      "pass_condition": "compare «38.675,00» oppure «38.675»",
+      "fail_condition": "e' indicato un importo diverso.",
+      "indifferent": null,
+      "source": "prospetto delle competenze; regolamento del premio, art. 2",
+      "severity": "alta",
+      "raw_text": "C.7 il deliverable indica in euro 38.675,00 l'importo del premio variabile 2026.\nissue: I-08 · tipo: valore · gravità: alta · judge: no · fonte: prospetto delle competenze; regolamento del premio, art. 2\nVerifica: il deliverable indica in euro 38.675,00 l'importo del premio variabile 2026.\nPass se: compare «38.675,00» oppure «38.675»\nFail se: e' indicato un importo diverso."
+    },
+    {
+      "id": "C.8",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 19.384,56 l'indennita' sostitutiva di ferie e permessi residui.",
+      "pass_condition": "compare «19.384,56»",
+      "fail_condition": "e' indicato un importo diverso.",
+      "indifferent": null,
+      "source": "prospetto delle competenze",
+      "severity": "media",
+      "raw_text": "C.8 il deliverable indica in euro 19.384,56 l'indennita' sostitutiva di ferie e permessi residui.\nissue: I-09 · tipo: valore · gravità: media · judge: no · fonte: prospetto delle competenze\nVerifica: il deliverable indica in euro 19.384,56 l'indennita' sostitutiva di ferie e permessi residui.\nPass se: compare «19.384,56»\nFail se: e' indicato un importo diverso."
+    },
+    {
+      "id": "C.9",
+      "section": "qualita_incrementale",
+      "criterion_type": "valore",
+      "evaluator": {
+        "mode": "pending_review",
+        "verification_class": "esatta"
+      },
+      "verification": "il deliverable indica in euro 30.607,11 la parte dell'importo offerto che eccede quanto gia' maturato o comunque dovuto.",
+      "pass_condition": "compare «30.607,11»",
+      "fail_condition": "e' indicato un importo diverso, oppure la parte eccedente non e' quantificata.",
+      "indifferent": null,
+      "source": "210.000,00 meno 38.675,00 meno 19.384,56 meno 121.333,33",
+      "severity": "alta",
+      "raw_text": "C.9 il deliverable indica in euro 30.607,11 la parte dell'importo offerto che eccede quanto gia' maturato o comunque dovuto.\nissue: I-10 · tipo: valore · gravità: alta · judge: no · fonte: 210.000,00 meno 38.675,00 meno 19.384,56 meno 121.333,33\nVerifica: il deliverable indica in euro 30.607,11 la parte dell'importo offerto che eccede quanto gia' maturato o comunque dovuto.\nPass se: compare «30.607,11»\nFail se: e' indicato un importo diverso, oppure la parte eccedente non e' quantificata."
+    },
+    {
+      "id": "C.10",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non calcola la parte di preavviso non coperta a partire dal 31 marzo 2027.",
+      "pass_condition": "non compare un preavviso residuo di undici mesi ne' un computo che parte dal 31 marzo 2027",
+      "fail_condition": "il preavviso residuo e' calcolato dalla data di cessazione indicata nella lettera.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.10 il deliverable non calcola la parte di preavviso non coperta a partire dal 31 marzo 2027.\nissue: I-07 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non calcola la parte di preavviso non coperta a partire dal 31 marzo 2027.\nPass se: non compare un preavviso residuo di undici mesi ne' un computo che parte dal 31 marzo 2027\nFail se: il preavviso residuo e' calcolato dalla data di cessazione indicata nella lettera."
+    },
+    {
+      "id": "C.11",
+      "section": "qualita_incrementale",
+      "criterion_type": "assenza",
+      "evaluator": {
+        "mode": "llm_judge",
+        "verification_class": "judge"
+      },
+      "verification": "il deliverable non indica il 1 maggio 2027 come scadenza del termine per contestare il recesso.",
+      "pass_condition": "non compare «1 maggio 2027» ne' «01/05/2027» come scadenza",
+      "fail_condition": "e' indicata come scadenza la data risultante da sessanta giorni dal 2 marzo 2027.",
+      "indifferent": null,
+      "source": "derivazione errata ricostruita in fase di build",
+      "severity": "alta",
+      "raw_text": "C.11 il deliverable non indica il 1 maggio 2027 come scadenza del termine per contestare il recesso.\nissue: I-11 · tipo: assenza · gravità: alta · judge: sì · fonte: derivazione errata ricostruita in fase di build\nVerifica: il deliverable non indica il 1 maggio 2027 come scadenza del termine per contestare il recesso.\nPass se: non compare «1 maggio 2027» ne' «01/05/2027» come scadenza\nFail se: e' indicata come scadenza la data risultante da sessanta giorni dal 2 marzo 2027."
+    }
+  ]
+}

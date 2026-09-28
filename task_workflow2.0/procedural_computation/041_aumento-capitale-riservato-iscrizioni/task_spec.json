@@ -1,0 +1,147 @@
+{
+  "task_id": "WF2-041",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "Aumento di capitale riservato: sottoscrizione, versamento e iscrizioni",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2026-08-27",
+  "workflow_family": "procedural_computation",
+  "subtask": "procedural_timeline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "delibera iscritta; sottoscrizione ricevuta, ma attestazione di esecuzione non ancora depositata",
+  "legal_area": [
+    "Corporate / M&A",
+    "Contrattualistica"
+  ],
+  "document_type": "delibera iscritta; sottoscrizione ricevuta, ma attestazione di esecuzione non ancora depositata",
+  "difficulty": "low",
+  "estimated_completion_minutes": 60,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "short",
+    "estimated_minutes": 60,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "procedural_computation",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: timeline_operazione.md.\n\n# WF2-041 - Struttura del deliverable\n\nProdurre `timeline_operazione.md`. Limite complessivo: 2200 parole.\n\n## Sezioni obbligatorie, nell'ordine\n\n### 1. Stato al 27 agosto 2026\nTrattare stato al 27 agosto 2026 con rinvii puntuali agli allegati.\n\n### 2. Sequenza degli adempimenti\nTrattare sequenza degli adempimenti con rinvii puntuali agli allegati.\n\n### 3. Termini e responsabili\nTrattare termini e responsabili con rinvii puntuali agli allegati.\n\n### 4. Dipendenze documentali\nTrattare dipendenze documentali con rinvii puntuali agli allegati.\n\n### 5. Rischi di sequenza\nTrattare rischi di sequenza con rinvii puntuali agli allegati.\n\n### 6. Prossime azioni\nTrattare prossime azioni con rinvii puntuali agli allegati.\n\nOgni conclusione deve distinguere fatto documentato, inferenza, lacuna e azione. Le fonti normative sono soltanto quelle del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "deadline_computation",
+      "legal_correctness"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/03_legal_sources.md",
+    "public/documents/01_statuto_e_capitale_pre_aumento.pdf",
+    "public/documents/02_verbale_assemblea_straordinaria.pdf",
+    "public/documents/03_visura_storica_riassuntiva.pdf",
+    "public/documents/04_scheda_sottoscrizione_e_bonifico.pdf",
+    "public/documents/05_email_notaio_adempimenti_residui.eml"
+  ],
+  "expected_deliverable": "timeline_operazione.md",
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "deadline_computation",
+    "legal_correctness",
+    "uncertainty_discipline",
+    "scope_discipline"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "markdown",
+  "document_preset": "standard_business_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "documents_rewrite": {
+    "date": "2026-09-21",
+    "status": "verified_and_integrated",
+    "artifact_count": 5,
+    "renames": [
+      {
+        "from": "01_statuto_e_capitale_pre_aumento.md",
+        "to": "01_statuto_e_capitale_pre_aumento.pdf"
+      },
+      {
+        "from": "02_verbale_assemblea_straordinaria.md",
+        "to": "02_verbale_assemblea_straordinaria.pdf"
+      },
+      {
+        "from": "03_visura_storica_riassuntiva.md",
+        "to": "03_visura_storica_riassuntiva.pdf"
+      },
+      {
+        "from": "04_scheda_sottoscrizione_e_bonifico.md",
+        "to": "04_scheda_sottoscrizione_e_bonifico.pdf"
+      },
+      {
+        "from": "05_email_notaio_adempimenti_residui.md",
+        "to": "05_email_notaio_adempimenti_residui.eml"
+      }
+    ],
+    "backup": "wf2_rewrite_wip/integration_backup_20260921/procedural_computation/041_aumento-capitale-riservato-iscrizioni",
+    "provenance": "source/authoring/documents_rewrite_20260921/"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

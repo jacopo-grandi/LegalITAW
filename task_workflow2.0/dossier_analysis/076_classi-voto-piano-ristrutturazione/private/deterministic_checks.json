@@ -1,0 +1,38 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-076",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [
+    "class_and_vote_matrix.md"
+  ],
+  "criteria_total": 69,
+  "proposals_count": 1,
+  "proposals": [
+    {
+      "criterion_id": "B.52",
+      "verification_class": "esatta",
+      "status": "proposed",
+      "mode": "necessary",
+      "blocker": "il motore non ha un gate autoritativo solo in direzione FAIL",
+      "source": "pass_condition_literal",
+      "tokens": [
+        "900.000 euro",
+        "euro 900.000"
+      ],
+      "value_types": [
+        "importo"
+      ],
+      "rationale": "compare «900.000 euro»; compare «euro 900.000»",
+      "combine": "single",
+      "check": {
+        "id": "WF2-076-B52",
+        "type": "required_regex",
+        "artifact": "class_and_vote_matrix.md",
+        "patterns": [
+          "(?:(?<![\\d.,])900[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d])|(?<![\\d.,])900[.\\s]?000(?:[,.]\\d{1,2})?(?![\\d]))"
+        ]
+      }
+    }
+  ]
+}

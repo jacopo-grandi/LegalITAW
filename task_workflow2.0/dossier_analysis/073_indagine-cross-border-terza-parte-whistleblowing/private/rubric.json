@@ -1,0 +1,1033 @@
+{
+  "task_id": "WF2-073",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 51,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "la consegna usa i file cross_border_investigation_memo.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file cross_border_investigation_memo.md.\nPASS se: i nomi dei file coincidono con cross_border_investigation_memo.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con cross_border_investigation_memo.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "la parte testuale non supera 2.300 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 2.300 parole.\nPASS se: il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 2.300; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale.\nPASS se: afferma: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale; conclude: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; D.Lgs. 24/2023; registro canale",
+      "pass_condition": "afferma: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale; conclude: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: registro del canale interno.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: registro del canale interno.\nPASS se: cita 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; indica come riscontro 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; D.Lgs. 24/2023; registro canale",
+      "pass_condition": "cita 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; indica come riscontro 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'accesso va limitato al team autorizzato.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'accesso va limitato al team autorizzato.\nPASS se: espone l'effetto: l'accesso va limitato al team autorizzato; indica come conseguenza: l'accesso va limitato al team autorizzato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; D.Lgs. 24/2023; registro canale",
+      "pass_condition": "espone l'effetto: l'accesso va limitato al team autorizzato; indica come conseguenza: l'accesso va limitato al team autorizzato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: separare identità e contenuto investigativo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: separare identità e contenuto investigativo.\nPASS se: afferma: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale; conclude: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; D.Lgs. 24/2023; registro canale",
+      "pass_condition": "afferma: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale; conclude: l'identità della segnalante è contenuta solo nell'allegato cifrato del canale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il consenso alla divulgazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il consenso alla divulgazione.\nPASS se: espone l'effetto: l'accesso va limitato al team autorizzato; indica come conseguenza: l'accesso va limitato al team autorizzato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a segnalante; D.Lgs. 24/2023; registro canale",
+      "pass_condition": "espone l'effetto: l'accesso va limitato al team autorizzato; indica come conseguenza: l'accesso va limitato al team autorizzato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per ritorsione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per ritorsione.\nPASS se: compare «tre giorni»; compare «3 giorni»\nFAIL se: non compare ne «tre giorni» ne «3 giorni» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; report HR; D.Lgs. 24/2023",
+      "pass_condition": "compare «tre giorni»; compare «3 giorni»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: report HR e timestamp del canale.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: report HR e timestamp del canale.\nPASS se: cita 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; indica come riscontro 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; report HR; D.Lgs. 24/2023",
+      "pass_condition": "cita 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; indica come riscontro 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: la prossimità temporale impone una verifica autonoma.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la prossimità temporale impone una verifica autonoma.\nPASS se: espone l'effetto: la prossimità temporale impone una verifica autonoma; indica come conseguenza: la prossimità temporale impone una verifica autonoma\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; report HR; D.Lgs. 24/2023",
+      "pass_condition": "espone l'effetto: la prossimità temporale impone una verifica autonoma; indica come conseguenza: la prossimità temporale impone una verifica autonoma",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per ritorsione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per ritorsione.\nPASS se: afferma: il blocco del bonus della segnalante è successivo di tre giorni alla segnalazione; conclude: il blocco del bonus della segnalante è successivo di tre giorni alla segnalazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; report HR; D.Lgs. 24/2023",
+      "pass_condition": "afferma: il blocco del bonus della segnalante è successivo di tre giorni alla segnalazione; conclude: il blocco del bonus della segnalante è successivo di tre giorni alla segnalazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la motivazione anteriore del responsabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la motivazione anteriore del responsabile.\nPASS se: espone l'effetto: la prossimità temporale impone una verifica autonoma; indica come conseguenza: la prossimità temporale impone una verifica autonoma\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_registro_canale_wb_2029_44.pdf, contenuto pertinente a ritorsione; report HR; D.Lgs. 24/2023",
+      "pass_condition": "espone l'effetto: la prossimità temporale impone una verifica autonoma; indica come conseguenza: la prossimità temporale impone una verifica autonoma",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato.\nPASS se: afferma: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato; conclude: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; mastro; questionario due diligence",
+      "pass_condition": "afferma: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato; conclude: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: mastro fornitori e bonifici.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: mastro fornitori e bonifici.\nPASS se: cita 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; indica come riscontro 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; mastro; questionario due diligence",
+      "pass_condition": "cita 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; indica come riscontro 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari.\nPASS se: espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari; indica come conseguenza: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; mastro; questionario due diligence",
+      "pass_condition": "espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari; indica come conseguenza: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: acquisire contratti, conti e deliverable.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: acquisire contratti, conti e deliverable.\nPASS se: afferma: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato; conclude: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; mastro; questionario due diligence",
+      "pass_condition": "afferma: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato; conclude: tre fatture di consulenza coincidono con pagamenti verso un subagente non dichiarato",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca la titolarità effettiva del subagente.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca la titolarità effettiva del subagente.\nPASS se: espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari; indica come conseguenza: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a flusso sospetto; mastro; questionario due diligence",
+      "pass_condition": "espone l'effetto: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari; indica come conseguenza: il conflitto fra questionario e contabilità richiede tracciamento dei beneficiari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: le interviste dirette dallo studio esterno sono separate dai colloqui HR.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: le interviste dirette dallo studio esterno sono separate dai colloqui HR.\nPASS se: afferma: le interviste dirette dallo studio esterno sono separate dai colloqui HR; conclude: le interviste dirette dallo studio esterno sono separate dai colloqui HR\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; lettera d'incarico; protocollo",
+      "pass_condition": "afferma: le interviste dirette dallo studio esterno sono separate dai colloqui HR; conclude: le interviste dirette dallo studio esterno sono separate dai colloqui HR",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: lettera d'incarico e protocollo interviste.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: lettera d'incarico e protocollo interviste.\nPASS se: cita 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; indica come riscontro 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; lettera d'incarico; protocollo",
+      "pass_condition": "cita 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; indica come riscontro 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva.\nPASS se: espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva; indica come conseguenza: la segregazione sostiene la rivendicazione di riservatezza difensiva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; lettera d'incarico; protocollo",
+      "pass_condition": "espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva; indica come conseguenza: la segregazione sostiene la rivendicazione di riservatezza difensiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: marcare e custodire separatamente i work product.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: marcare e custodire separatamente i work product.\nPASS se: afferma: le interviste dirette dallo studio esterno sono separate dai colloqui HR; conclude: le interviste dirette dallo studio esterno sono separate dai colloqui HR\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; lettera d'incarico; protocollo",
+      "pass_condition": "afferma: le interviste dirette dallo studio esterno sono separate dai colloqui HR; conclude: le interviste dirette dallo studio esterno sono separate dai colloqui HR",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca una valutazione per ciascun documento.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca una valutazione per ciascun documento.\nPASS se: espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva; indica come conseguenza: la segregazione sostiene la rivendicazione di riservatezza difensiva\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_registro_istruttorio_kestrel.xlsx, contenuto pertinente a privilegio esterno; lettera d'incarico; protocollo",
+      "pass_condition": "espone l'effetto: la segregazione sostiene la rivendicazione di riservatezza difensiva; indica come conseguenza: la segregazione sostiene la rivendicazione di riservatezza difensiva",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'email del legale interno contiene anche istruzioni commerciali.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'email del legale interno contiene anche istruzioni commerciali.\nPASS se: afferma: l'email del legale interno contiene anche istruzioni commerciali; conclude: l'email del legale interno contiene anche istruzioni commerciali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; email; disciplina applicabile al contesto",
+      "pass_condition": "afferma: l'email del legale interno contiene anche istruzioni commerciali; conclude: l'email del legale interno contiene anche istruzioni commerciali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: email del 22 ottobre 2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: email del 22 ottobre 2029.\nPASS se: cita 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; indica come riscontro 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; email; disciplina applicabile al contesto",
+      "pass_condition": "cita 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; indica come riscontro 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata.\nPASS se: espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata; indica come conseguenza: il solo mittente non consente una rivendicazione indiscriminata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; email; disciplina applicabile al contesto",
+      "pass_condition": "espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata; indica come conseguenza: il solo mittente non consente una rivendicazione indiscriminata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: separare consulenza legale e contenuto operativo.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: separare consulenza legale e contenuto operativo.\nPASS se: afferma: l'email del legale interno contiene anche istruzioni commerciali; conclude: l'email del legale interno contiene anche istruzioni commerciali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; email; disciplina applicabile al contesto",
+      "pass_condition": "afferma: l'email del legale interno contiene anche istruzioni commerciali; conclude: l'email del legale interno contiene anche istruzioni commerciali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable tratta la lacuna come dato mancante: manca il thread precedente.",
+      "match_criteria": "Oggetto del criterio: il deliverable tratta la lacuna come dato mancante: manca il thread precedente.\nPASS se: espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata; indica come conseguenza: il solo mittente non consente una rivendicazione indiscriminata\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legale interno; email; disciplina applicabile al contesto",
+      "pass_condition": "espone l'effetto: il solo mittente non consente una rivendicazione indiscriminata; indica come conseguenza: il solo mittente non consente una rivendicazione indiscriminata",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali.\nPASS se: afferma: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali; conclude: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; legal hold; art. 5 GDPR",
+      "pass_condition": "afferma: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali; conclude: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: avviso di conservazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: avviso di conservazione.\nPASS se: cita 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; indica come riscontro 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; legal hold; art. 5 GDPR",
+      "pass_condition": "cita 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; indica come riscontro 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione.\nPASS se: espone l'effetto: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione; indica come conseguenza: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; legal hold; art. 5 GDPR",
+      "pass_condition": "espone l'effetto: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione; indica come conseguenza: la conservazione è incompleta per i messaggi mobili indicati nella segnalazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: estendere il hold a telefoni, chat e backup.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: estendere il hold a telefoni, chat e backup.\nPASS se: afferma: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali; conclude: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_fermo_conservativo_mailbox.eml, contenuto pertinente a legal hold; legal hold; art. 5 GDPR",
+      "pass_condition": "afferma: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali; conclude: il legal hold del 24 ottobre copre mailbox ma non telefoni aziendali",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'esportazione del portatile non registra hash né operatore.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'esportazione del portatile non registra hash né operatore.\nPASS se: afferma: l'esportazione del portatile non registra hash né operatore; conclude: l'esportazione del portatile non registra hash né operatore\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; verbale forense",
+      "pass_condition": "afferma: l'esportazione del portatile non registra hash né operatore; conclude: l'esportazione del portatile non registra hash né operatore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale forense del 29 ottobre.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale forense del 29 ottobre.\nPASS se: cita 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; indica come riscontro 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; verbale forense",
+      "pass_condition": "cita 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; indica come riscontro 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: l'autenticità della copia resta contestabile.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: l'autenticità della copia resta contestabile.\nPASS se: espone l'effetto: l'autenticità della copia resta contestabile; indica come conseguenza: l'autenticità della copia resta contestabile\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; verbale forense",
+      "pass_condition": "espone l'effetto: l'autenticità della copia resta contestabile; indica come conseguenza: l'autenticità della copia resta contestabile",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: ripetere l'acquisizione con hash e registro.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: ripetere l'acquisizione con hash e registro.\nPASS se: afferma: l'esportazione del portatile non registra hash né operatore; conclude: l'esportazione del portatile non registra hash né operatore\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a catena di custodia; verbale forense",
+      "pass_condition": "afferma: l'esportazione del portatile non registra hash né operatore; conclude: l'esportazione del portatile non registra hash né operatore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il dataset include dati sanitari estranei all'ipotesi investigativa.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il dataset include dati sanitari estranei all'ipotesi investigativa.\nPASS se: afferma: il dataset include dati sanitari estranei all'ipotesi investigativa; conclude: il dataset include dati sanitari estranei all'ipotesi investigativa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; artt. 5, 6 e 9 GDPR",
+      "pass_condition": "afferma: il dataset include dati sanitari estranei all'ipotesi investigativa; conclude: il dataset include dati sanitari estranei all'ipotesi investigativa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: indice dei file esportati.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: indice dei file esportati.\nPASS se: cita 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; indica come riscontro 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; artt. 5, 6 e 9 GDPR",
+      "pass_condition": "cita 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; indica come riscontro 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: la raccolta richiede minimizzazione e una base distinta per le categorie particolari.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la raccolta richiede minimizzazione e una base distinta per le categorie particolari.\nPASS se: espone l'effetto: la raccolta richiede minimizzazione e una base distinta per le categorie particolari; indica come conseguenza: la raccolta richiede minimizzazione e una base distinta per le categorie particolari\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; artt. 5, 6 e 9 GDPR",
+      "pass_condition": "espone l'effetto: la raccolta richiede minimizzazione e una base distinta per le categorie particolari; indica come conseguenza: la raccolta richiede minimizzazione e una base distinta per le categorie particolari",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: escludere o isolare i file sanitari.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: escludere o isolare i file sanitari.\nPASS se: afferma: il dataset include dati sanitari estranei all'ipotesi investigativa; conclude: il dataset include dati sanitari estranei all'ipotesi investigativa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_verbale_acquisizione_forense.pdf, contenuto pertinente a base giuridica; artt. 5, 6 e 9 GDPR",
+      "pass_condition": "afferma: il dataset include dati sanitari estranei all'ipotesi investigativa; conclude: il dataset include dati sanitari estranei all'ipotesi investigativa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC.\nPASS se: afferma: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC; conclude: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; artt. 44-49 GDPR; log",
+      "pass_condition": "afferma: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC; conclude: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: log di esportazione e data package SCC.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: log di esportazione e data package SCC.\nPASS se: cita 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; indica come riscontro 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; artt. 44-49 GDPR; log",
+      "pass_condition": "cita 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; indica come riscontro 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: il trasferimento va sospeso e ricostruito.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il trasferimento va sospeso e ricostruito.\nPASS se: espone l'effetto: il trasferimento va sospeso e ricostruito; indica come conseguenza: il trasferimento va sospeso e ricostruito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; artt. 44-49 GDPR; log",
+      "pass_condition": "espone l'effetto: il trasferimento va sospeso e ricostruito; indica come conseguenza: il trasferimento va sospeso e ricostruito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: chiudere SCC, valutazione del trasferimento e misure supplementari.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: chiudere SCC, valutazione del trasferimento e misure supplementari.\nPASS se: afferma: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC; conclude: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a trasferimento usa; artt. 44-49 GDPR; log",
+      "pass_condition": "afferma: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC; conclude: il caricamento verso la capogruppo statunitense è iniziato prima della firma delle SCC",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.42",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto.\nPASS se: afferma: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto; conclude: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; artt. 44-49 GDPR; ACL",
+      "pass_condition": "afferma: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto; conclude: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.43",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ACL della data room.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ACL della data room.\nPASS se: cita 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; indica come riscontro 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; artt. 44-49 GDPR; ACL",
+      "pass_condition": "cita 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; indica come riscontro 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.44",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable espone l'effetto: serve una base del capo V riferita anche a quell'accesso.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: serve una base del capo V riferita anche a quell'accesso.\nPASS se: espone l'effetto: serve una base del capo V riferita anche a quell'accesso; indica come conseguenza: serve una base del capo V riferita anche a quell'accesso\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; artt. 44-49 GDPR; ACL",
+      "pass_condition": "espone l'effetto: serve una base del capo V riferita anche a quell'accesso; indica come conseguenza: serve una base del capo V riferita anche a quell'accesso",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.45",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "il deliverable indica l'azione: revocare l'accesso finché la catena non è documentata.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica l'azione: revocare l'accesso finché la catena non è documentata.\nPASS se: afferma: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto; conclude: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 05_nota_ufficio_privacy_trasferimenti.pdf, contenuto pertinente a onward transfer singapore; artt. 44-49 GDPR; ACL",
+      "pass_condition": "afferma: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto; conclude: l'accesso del consulente di Singapore è un trasferimento ulteriore distinto",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «pseudonimo contabile»: Il codice usato nel mastro non coincide con l'identità protetta della segnalante.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «pseudonimo contabile»: Il codice usato nel mastro non coincide con l'identità protetta della segnalante.\nPASS se: non qualifica come criticita pseudonimo contabile; esclude espressamente il falso positivo pseudonimo contabile\nFAIL se: compare la conclusione vietata «pseudonimo contabile costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita pseudonimo contabile; esclude espressamente il falso positivo pseudonimo contabile",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «link scaduto»: La scadenza del link di caricamento non prova la cancellazione dei file già acquisiti.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «link scaduto»: La scadenza del link di caricamento non prova la cancellazione dei file già acquisiti.\nPASS se: non qualifica come criticita link scaduto; esclude espressamente il falso positivo link scaduto\nFAIL se: compare la conclusione vietata «link scaduto costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita link scaduto; esclude espressamente il falso positivo link scaduto",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "cross_border_investigation_memo.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «importi arrotondati»: L'arrotondamento degli importi nel report non dimostra da solo una manipolazione contabile.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «importi arrotondati»: L'arrotondamento degli importi nel report non dimostra da solo una manipolazione contabile.\nPASS se: non qualifica come criticita importi arrotondati; esclude espressamente il falso positivo importi arrotondati\nFAIL se: compare la conclusione vietata «importi arrotondati costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita importi arrotondati; esclude espressamente il falso positivo importi arrotondati",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

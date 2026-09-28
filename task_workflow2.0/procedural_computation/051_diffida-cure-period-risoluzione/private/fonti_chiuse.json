@@ -1,0 +1,56 @@
+{
+  "task_id": "WF2-051",
+  "freeze": "2026-09-02",
+  "nota": "Elenco chiuso. È la base contro cui si verifica meccanicamente l'assenza di citazioni inventate nel deliverable.",
+  "fonti": [
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1454 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "intimazione ad adempiere entro un termine non inferiore a quindici giorni e risoluzione di diritto per inutile decorso",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1455 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "la risoluzione presuppone un inadempimento di non scarsa importanza",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1456 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "clausola risolutiva espressa: la risoluzione si produce quando la parte interessata dichiara di volersene avvalere",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1458 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "effetti retroattivi della risoluzione e restituzioni",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 1460 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "rifiuto di adempiere della parte adempiente e limite della buona fede",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Codice civile (R.D. 16 marzo 1942, n. 262) - art. 2963 c.c.",
+      "url": "https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:regio.decreto:1942-03-16;262",
+      "regola_sostenuta": "computo dei termini: il giorno iniziale non si computa; la scadenza in giorno festivo si proroga al giorno seguente non festivo",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Camera Arbitrale di Milano - clausola compromissoria tipo",
+      "url": "https://www.camera-arbitrale.it/it/arbitrato/clausole-arbitrali.php",
+      "regola_sostenuta": "wording istituzionale della clausola arbitrale riprodotta nella clausola 15.2 del contratto sintetico",
+      "verificata_il": "2026-09-02",
+      "tipo": "modello istituzionale, ancoraggio di wording"
+    }
+  ]
+}

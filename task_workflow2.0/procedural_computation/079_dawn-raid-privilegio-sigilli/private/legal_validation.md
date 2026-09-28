@@ -1,0 +1,20 @@
+# WF2-079 - Legal validation
+
+Stato: `draft_for_legal_validation`  
+Pilot ready: `false`
+
+## Perimetro da firmare
+
+Il validatore legale deve confermare, alla data di freeze 2026-09-02, il fondamento e la formulazione di: I-01 (Decisione); I-02 (Identificazione); I-03 (Preservazione); I-04 (Copia forense); I-05 (Documento esterno); I-06 (Legale interno); I-07 (Obiezione); I-08 (Intervista); I-09 (Sigillo); I-10 (Follow-up).
+
+## Controlli professionali richiesti
+
+- verificare che ciascuna conclusione discenda dalla fonte primaria chiusa e dal documento nominato nella challenge map;
+- confermare date, dies a quo, slittamenti, percentuali, importi e denominatori presenti nel gold;
+- confermare che le lacune siano qualificate come tali e non come fatti negativi provati;
+- verificare i tre falsi positivi controllati e la posizione del lato assistito;
+- per i redline, confermare che ogni modifica preservi la struttura dell'operazione e non introduca termini economici non istruiti.
+
+## Esito
+
+Firma professionale: **non ancora acquisita**. Il caso resta intenzionalmente non pilotabile sino a sign-off nominativo.

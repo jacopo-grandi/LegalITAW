@@ -1,0 +1,125 @@
+{
+  "task_id": "WF2-098",
+  "version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "title": "WF2-098 - Incarico",
+  "language": "it",
+  "jurisdiction": [
+    "IT"
+  ],
+  "as_of_date": "2026-11-18",
+  "workflow_family": "document_review_and_revision",
+  "subtask": "review_and_redline",
+  "output_mode": "prompt_only_free_artifacts",
+  "granularity": "bozza dell'Allegato 7 circolata dai legali del cedente e non negoziata; closing previsto per il 15 dicembre 2026 e non ancora avvenuto; interventi di bonifica approvati e non avviati; nessuna pretesa avanzata",
+  "legal_area": [
+    "Environmental, Energy & ESG",
+    "A. Document review and revision",
+    "Contrattualistica",
+    "Corporate / M&A"
+  ],
+  "document_type": "bozza dell'Allegato 7 circolata dai legali del cedente e non negoziata; closing previsto per il 15 dicembre 2026 e non ancora avvenuto; interventi di bonifica approvati e non avviati; nessuna pretesa avanzata",
+  "difficulty": "medium",
+  "estimated_completion_minutes": 90,
+  "methodology_version": "0.3.0-draft",
+  "benchmark_split": "public_development",
+  "expert_effort": {
+    "band": "medium",
+    "estimated_minutes": 90,
+    "reference_role": "senior_legal_professional"
+  },
+  "capabilities_tested": [
+    "document_retrieval",
+    "evidence_grounding",
+    "document_review_and_revision",
+    "artifact_generation"
+  ],
+  "supported_execution_modes": [
+    "generic_agent",
+    "text_bundle",
+    "agentic_workspace"
+  ],
+  "tool_allowlist": [
+    "list_files",
+    "search_documents",
+    "open_document",
+    "inspect_metadata",
+    "record_decision",
+    "write_artifact",
+    "submit"
+  ],
+  "agentic_instructions": [
+    "Apri e controlla tutti gli input pubblici prima della consegna.",
+    "Fonda fatti, date, importi e conclusioni esclusivamente sul fascicolo pubblico.",
+    "Indica documento e locator per ogni conclusione materiale.",
+    "Produci e sottoponi esattamente i file richiesti."
+  ],
+  "agentic_output_format": "File da produrre: environmental_schedule_redline.docx, note.md. Per i DOCX di redline usa [[DEL:testo soppresso]], [[INS:testo inserito]] e [[NOTE:motivazione]].\n\n# WF2-098 - Struttura della risposta\n\nConsegna `environmental_schedule_redline.docx + note.md`.\n\nLimite: 2600 parole.\n\nSezioni, in questo ordine:\n\n1. Quadratura economica\n2. Interventi sul testo, in ordine di priorità\n3. Interventi da eseguire fuori dal testo\n4. Posizione minima per ciascun intervento\n5. Elementi che non richiedono intervento\n6. Risposta alle osservazioni dell'amministratore delegato\n7. Lacune documentali e decisioni richieste\n\nIl file `environmental_schedule_redline.docx` contiene la bozza dell'Allegato 7 con le modifiche tracciate.\nIl file `note.md` contiene le sezioni elencate sopra.\nOgni intervento della nota indica la clausola su cui incide, almeno un allegato del fascicolo e la posizione minima proposta.\nNessun riferimento normativo fuori dall'elenco chiuso del reference pack.",
+  "evidence_policy": {
+    "required": true,
+    "citation_granularity": "document_and_locator"
+  },
+  "scaffolding": {
+    "level": "workflow_guidance",
+    "exposed_aids": [
+      "closed_source_pack"
+    ],
+    "primary_measurement": [
+      "document_fidelity",
+      "legal_correctness",
+      "redline_quality"
+    ],
+    "not_purely_measured": []
+  },
+  "provenance": null,
+  "synthetic_case": true,
+  "contains_personal_data": false,
+  "public_inputs": [
+    "public/01_task.md",
+    "public/02_reference_pack.md",
+    "public/documents/01_bozza_schedule_ambientale.docx",
+    "public/documents/02_bozza_contratto_cessione_ramo.md",
+    "public/documents/03_relazione_due_diligence_ambientale.md",
+    "public/documents/04_stima_oneri_ambientali.md",
+    "public/documents/05_provvedimento_regionale_approvazione_progetto.md",
+    "public/documents/06_disclosure_letter.md",
+    "public/documents/07_email_responsabile_ma.md"
+  ],
+  "expected_deliverables": [
+    "environmental_schedule_redline.docx",
+    "note.md"
+  ],
+  "private_evaluation": {
+    "rubric": "private/rubric.json",
+    "review_notes": "private/review_notes.md",
+    "criteria_atomized": "private/criteria_atomized.md",
+    "evaluation_criteria": "private/evaluation_criteria.md",
+    "runtime_routing": "private/runtime_routing.json"
+  },
+  "evaluation_dimensions": [
+    "document_fidelity",
+    "legal_correctness",
+    "redline_quality",
+    "scope_discipline",
+    "artifact_conformity"
+  ],
+  "normative_sources": [],
+  "artifact_checks": [],
+  "pilot_status": "ready",
+  "pilot_ready": true,
+  "gold_legal_signoff": "delegated_maintainer_release",
+  "document_coverage_policy": "require_all_sources_opened",
+  "native_artifact_mode": "docx_redline",
+  "document_preset": "contract_negotiation_brief",
+  "migration": {
+    "source": "task_workflow2.0.1",
+    "source_status": "draft_for_legal_validation",
+    "migrated_on": "2026-09-04",
+    "schema": "WorkflowTaskSpec"
+  },
+  "response_template_policy": {
+    "status": "authoring_only_not_model_visible",
+    "effective_date": "2026-09-21",
+    "legacy_path": "public/response_template.md"
+  }
+}

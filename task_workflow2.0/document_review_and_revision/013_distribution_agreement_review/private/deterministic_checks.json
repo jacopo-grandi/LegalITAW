@@ -1,0 +1,11 @@
+{
+  "schema_version": "workflow2_deterministic_checks_v1",
+  "task_id": "WF2-013",
+  "generated_at": "2026-09-23T06:53:46+00:00",
+  "generator": "scripts/build_deterministic_checks.py",
+  "deliverables": [],
+  "criteria_total": 0,
+  "proposals_count": 0,
+  "skipped_reason": "deliverable non determinabile",
+  "proposals": []
+}

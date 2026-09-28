@@ -1,0 +1,713 @@
+{
+  "task_id": "WF2-079",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 35,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "la consegna usa i file dawn_raid_timeline.md.",
+      "match_criteria": "Oggetto del criterio: la consegna usa i file dawn_raid_timeline.md.\nPASS se: i nomi dei file coincidono con dawn_raid_timeline.md; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: manca un file o il nome diverge\nFonte di authoring: public/01_task.md",
+      "pass_condition": "i nomi dei file coincidono con dawn_raid_timeline.md; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "la parte testuale non supera 1.700 parole.",
+      "match_criteria": "Oggetto del criterio: la parte testuale non supera 1.700 parole.\nPASS se: il conteggio non supera 1.700; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: il conteggio supera il limite\nFonte di authoring: task_spec.json",
+      "pass_condition": "il conteggio non supera 1.700; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "minor",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "ogni conclusione di merito indica almeno un documento o una fonte del reference pack.",
+      "match_criteria": "Oggetto del criterio: ogni conclusione di merito indica almeno un documento o una fonte del reference pack.\nPASS se: ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo\nFAIL se: una conclusione è priva di traccia\nFonte di authoring: 02_reference_pack.md; documenti",
+      "pass_condition": "ogni conclusione reca una traccia documentale o normativa; il controllo deterministico sul requisito restituisce esito positivo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029.\nPASS se: afferma: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029; conclude: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione; art. 20 Reg. 1/2003; decisione",
+      "pass_condition": "afferma: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029; conclude: gli ispettori hanno consegnato una decisione che indica prodotti e periodo 2026-2029",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: decisione ispettiva ore 08:12.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: decisione ispettiva ore 08:12.\nPASS se: cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione; art. 20 Reg. 1/2003; decisione",
+      "pass_condition": "cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: le ricerche vanno confrontate con oggetto e finalità.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le ricerche vanno confrontate con oggetto e finalità.\nPASS se: espone l'effetto: le ricerche vanno confrontate con oggetto e finalità; indica come conseguenza: le ricerche vanno confrontate con oggetto e finalità\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a decisione; art. 20 Reg. 1/2003; decisione",
+      "pass_condition": "espone l'effetto: le ricerche vanno confrontate con oggetto e finalità; indica come conseguenza: le ricerche vanno confrontate con oggetto e finalità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per identificazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per identificazione.\nPASS se: compare «08:18»; compare «ore 8:18»\nFAIL se: non compare ne «08:18» ne «ore 8:18» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione; log; art. 20 Reg. 1/2003",
+      "pass_condition": "compare «08:18»; compare «ore 8:18»",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: log reception.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: log reception.\nPASS se: cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione; log; art. 20 Reg. 1/2003",
+      "pass_condition": "cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: il controllo iniziale risulta completato.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: il controllo iniziale risulta completato.\nPASS se: espone l'effetto: il controllo iniziale risulta completato; indica come conseguenza: il controllo iniziale risulta completato\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a identificazione; log; art. 20 Reg. 1/2003",
+      "pass_condition": "espone l'effetto: il controllo iniziale risulta completato; indica come conseguenza: il controllo iniziale risulta completato",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per preservazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per preservazione.\nPASS se: compare «08:26»; compare «ore 8:26»\nFAIL se: non compare ne «08:26» ne «ore 8:26» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione; ticket; decisione",
+      "pass_condition": "compare «08:26»; compare «ore 8:26»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: ticket IT.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: ticket IT.\nPASS se: cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione; ticket; decisione",
+      "pass_condition": "cita 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione; indica come riscontro 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la misura riduce il rischio di alterazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la misura riduce il rischio di alterazione.\nPASS se: espone l'effetto: la misura riduce il rischio di alterazione; indica come conseguenza: la misura riduce il rischio di alterazione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 01_decisione_ispettiva_e_verbale_accesso.pdf, contenuto pertinente a preservazione; ticket; decisione",
+      "pass_condition": "espone l'effetto: la misura riduce il rischio di alterazione; indica come conseguenza: la misura riduce il rischio di alterazione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per copia forense.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per copia forense.\nPASS se: compare «09:04»; compare «ore 9:04»\nFAIL se: non compare ne «09:04» ne «ore 9:04» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense; art. 20 Reg. 1/2003",
+      "pass_condition": "compare «09:04»; compare «ore 9:04»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale operazioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale operazioni.\nPASS se: cita 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense; indica come riscontro 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense; art. 20 Reg. 1/2003",
+      "pass_condition": "cita 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense; indica come riscontro 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la copia rientra nei poteri di acquisizione se pertinente.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la copia rientra nei poteri di acquisizione se pertinente.\nPASS se: espone l'effetto: la copia rientra nei poteri di acquisizione se pertinente; indica come conseguenza: la copia rientra nei poteri di acquisizione se pertinente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a copia forense; art. 20 Reg. 1/2003",
+      "pass_condition": "espone l'effetto: la copia rientra nei poteri di acquisizione se pertinente; indica come conseguenza: la copia rientra nei poteri di acquisizione se pertinente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente.\nPASS se: afferma: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente; conclude: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno; Akzo; privilege log",
+      "pass_condition": "afferma: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente; conclude: il memorandum dello studio esterno è preparato per la difesa ed è marcato separatamente",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: privilege log riga 4.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: privilege log riga 4.\nPASS se: cita 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno; indica come riscontro 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno; Akzo; privilege log",
+      "pass_condition": "cita 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno; indica come riscontro 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la rivendicazione deve essere documentata senza rivelare il merito.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la rivendicazione deve essere documentata senza rivelare il merito.\nPASS se: espone l'effetto: la rivendicazione deve essere documentata senza rivelare il merito; indica come conseguenza: la rivendicazione deve essere documentata senza rivelare il merito\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 02_log_operazioni_e_privilege_log.xlsx, contenuto pertinente a documento esterno; Akzo; privilege log",
+      "pass_condition": "espone l'effetto: la rivendicazione deve essere documentata senza rivelare il merito; indica come conseguenza: la rivendicazione deve essere documentata senza rivelare il merito",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable enuncia il risultato: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE.",
+      "match_criteria": "Oggetto del criterio: il deliverable enuncia il risultato: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE.\nPASS se: afferma: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE; conclude: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno; C-550/07 P Akzo",
+      "pass_condition": "afferma: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE; conclude: l'email del legale interno sul listino non beneficia automaticamente del privilegio UE",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: email riga 7 del log.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: email riga 7 del log.\nPASS se: cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno; C-550/07 P Akzo",
+      "pass_condition": "cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: lo status del mittente non basta nel procedimento unionale.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: lo status del mittente non basta nel procedimento unionale.\nPASS se: espone l'effetto: lo status del mittente non basta nel procedimento unionale; indica come conseguenza: lo status del mittente non basta nel procedimento unionale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a legale interno; C-550/07 P Akzo",
+      "pass_condition": "espone l'effetto: lo status del mittente non basta nel procedimento unionale; indica come conseguenza: lo status del mittente non basta nel procedimento unionale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per obiezione.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per obiezione.\nPASS se: compare «10:37»; compare «ore 10:37»\nFAIL se: non compare ne «10:37» ne «ore 10:37» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione; verbale",
+      "pass_condition": "compare «10:37»; compare «ore 10:37»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale ispettivo.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale ispettivo.\nPASS se: cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione; verbale",
+      "pass_condition": "cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: la traccia contemporanea preserva la posizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: la traccia contemporanea preserva la posizione.\nPASS se: espone l'effetto: la traccia contemporanea preserva la posizione; indica come conseguenza: la traccia contemporanea preserva la posizione\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a obiezione; verbale",
+      "pass_condition": "espone l'effetto: la traccia contemporanea preserva la posizione; indica come conseguenza: la traccia contemporanea preserva la posizione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per intervista.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per intervista.\nPASS se: compare «11:20»; compare «ore 11:20»\nFAIL se: non compare ne «11:20» ne «ore 11:20» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista; art. 20 Reg. 1/2003",
+      "pass_condition": "compare «11:20»; compare «ore 11:20»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: nota intervista.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: nota intervista.\nPASS se: cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista; art. 20 Reg. 1/2003",
+      "pass_condition": "cita 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista; indica come riscontro 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: le risposte vanno rese veritiere e delimitate alla conoscenza personale.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: le risposte vanno rese veritiere e delimitate alla conoscenza personale.\nPASS se: espone l'effetto: le risposte vanno rese veritiere e delimitate alla conoscenza personale; indica come conseguenza: le risposte vanno rese veritiere e delimitate alla conoscenza personale\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 03_email_studio_ranieri_punto_giornata.eml, contenuto pertinente a intervista; art. 20 Reg. 1/2003",
+      "pass_condition": "espone l'effetto: le risposte vanno rese veritiere e delimitate alla conoscenza personale; indica come conseguenza: le risposte vanno rese veritiere e delimitate alla conoscenza personale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per sigillo.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per sigillo.\nPASS se: compare «19:05»; compare «ore 19:05»\nFAIL se: non compare ne «19:05» ne «ore 19:05» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo; artt. 20 e 23 Reg. 1/2003",
+      "pass_condition": "compare «19:05»; compare «ore 19:05»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: verbale di apposizione.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: verbale di apposizione.\nPASS se: cita 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo; indica come riscontro 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo; artt. 20 e 23 Reg. 1/2003",
+      "pass_condition": "cita 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo; indica come riscontro 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable espone l'effetto: nessuno deve accedere o alterare il sigillo.",
+      "match_criteria": "Oggetto del criterio: il deliverable espone l'effetto: nessuno deve accedere o alterare il sigillo.\nPASS se: espone l'effetto: nessuno deve accedere o alterare il sigillo; indica come conseguenza: nessuno deve accedere o alterare il sigillo\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a sigillo; artt. 20 e 23 Reg. 1/2003",
+      "pass_condition": "espone l'effetto: nessuno deve accedere o alterare il sigillo; indica come conseguenza: nessuno deve accedere o alterare il sigillo",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable riporta il valore documentato per follow-up.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta il valore documentato per follow-up.\nPASS se: compare «29 gennaio 2030»; compare «2030-01-29»\nFAIL se: non compare ne «29 gennaio 2030» ne «2030-01-29» oppure compare un valore incompatibile\nÈ indifferente: formato della data o del numero diverso dalle due varianti chiuse\nFonte di authoring: 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up; richiesta della Commissione",
+      "pass_condition": "compare «29 gennaio 2030»; compare «2030-01-29»",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "il deliverable collega il dato al documento: allegato al verbale.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega il dato al documento: allegato al verbale.\nPASS se: cita 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up; indica come riscontro 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up\nFAIL se: omette l'elemento verificato oppure afferma il contrario\nÈ indifferente: ordine espositivo e lessico diversi che conservano lo stesso elemento osservabile\nFonte di authoring: 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up; richiesta della Commissione",
+      "pass_condition": "cita 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up; indica come riscontro 04_nota_interna_sigilli_e_seguito.pdf, contenuto pertinente a follow-up",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "chiusura simmetria sul falso positivo «attesa legale»: L'arrivo del legale esterno non è una condizione generale per consentire l'accesso ispettivo.",
+      "match_criteria": "Oggetto del criterio: chiusura simmetria sul falso positivo «attesa legale»: L'arrivo del legale esterno non è una condizione generale per consentire l'accesso ispettivo.\nPASS se: non qualifica come criticita attesa legale; esclude espressamente il falso positivo attesa legale\nFAIL se: compare la conclusione vietata «attesa legale costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita attesa legale; esclude espressamente il falso positivo attesa legale",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "chiusura sovra-segnalazione sul falso positivo «formato elettronico»: Il formato elettronico non sottrae i documenti pertinenti ai poteri di copia.",
+      "match_criteria": "Oggetto del criterio: chiusura sovra-segnalazione sul falso positivo «formato elettronico»: Il formato elettronico non sottrae i documenti pertinenti ai poteri di copia.\nPASS se: non qualifica come criticita formato elettronico; esclude espressamente il falso positivo formato elettronico\nFAIL se: compare la conclusione vietata «formato elettronico costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita formato elettronico; esclude espressamente il falso positivo formato elettronico",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "dawn_raid_timeline.md"
+      ],
+      "title": "chiusura presunzione sul falso positivo «testimone sigillo»: La presenza di un testimone interno non autorizza l'apertura di un locale sigillato.",
+      "match_criteria": "Oggetto del criterio: chiusura presunzione sul falso positivo «testimone sigillo»: La presenza di un testimone interno non autorizza l'apertura di un locale sigillato.\nPASS se: non qualifica come criticita testimone sigillo; esclude espressamente il falso positivo testimone sigillo\nFAIL se: compare la conclusione vietata «testimone sigillo costituisce una criticita autonoma»\nÈ indifferente: il falso positivo non e discusso perche irrilevante alla risposta\nFonte di authoring: challenge_map.json; documenti pubblici",
+      "pass_condition": "non qualifica come criticita testimone sigillo; esclude espressamente il falso positivo testimone sigillo",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.2.0-draft-audited"
+  }
+}

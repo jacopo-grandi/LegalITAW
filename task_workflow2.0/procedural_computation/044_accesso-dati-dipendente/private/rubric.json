@@ -1,0 +1,913 @@
+{
+  "task_id": "WF2-044",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 45,
+  "criteria": [
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non cita fonti estranee al reference pack chiuso.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non cita fonti estranee al reference pack chiuso.\nPASS se: ogni fonte normativa appartiene al reference pack\nFAIL se: Fallisce se una regola decisiva è fondata su una fonte normativa assente dal reference pack.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: public/02_reference_pack.md",
+      "pass_condition": "ogni fonte normativa appartiene al reference pack",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "A"
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: la richiesta è stata ricevuta il 22 luglio 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la richiesta è stata ricevuta il 22 luglio 2026.\nPASS se: compare \"22 luglio 2026\" nel contesto di ricezione\nFAIL se: Nel contesto di ricezione il valore è assente, diverso da \"22 luglio 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: registro protocollo numero DP-118",
+      "pass_condition": "compare \"22 luglio 2026\" nel contesto di ricezione",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «la richiesta è stata ricevuta il 22 luglio 2026» (I-01) è attribuita al documento 02_registro_protocollo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la richiesta è stata ricevuta il 22 luglio 2026» (I-01) è attribuita al documento 02_registro_protocollo.xlsx.\nPASS se: il deliverable enuncia la conclusione «la richiesta è stata ricevuta il 22 luglio 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_registro_protocollo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_registro_protocollo.xlsx = «Registro del protocollo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_registro_protocollo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «la richiesta è stata ricevuta il 22 luglio 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_registro_protocollo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: calcolare il termine dal giorno della ricezione.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: calcolare il termine dal giorno della ricezione.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine.\nPASS se: compare \"l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine\" nel contesto di identità\nFAIL se: Nel contesto di identità il valore è assente, diverso da \"l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: documento e richiesta coincidevano; il chiarimento è arrivato in due giorni",
+      "pass_condition": "compare \"l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine\" nel contesto di identità",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine» (I-02) è attribuita al documento 03_conferma_identita.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine» (I-02) è attribuita al documento 03_conferma_identita.pdf.\nPASS se: il deliverable enuncia la conclusione «l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_conferma_identita.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 03_conferma_identita.pdf = «Conferma dell'identità»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/03_conferma_identita.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'identità è stata confermata il 24 luglio senza sospendere automaticamente il termine» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 03_conferma_identita.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: registrare la verifica senza spostare il dies a quo.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: registrare la verifica senza spostare il dies a quo.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: il termine iniziale cade il 22 agosto 2026.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il termine iniziale cade il 22 agosto 2026.\nPASS se: compare \"22 agosto 2026\" nel contesto di termine iniziale\nFAIL se: Nel contesto di termine iniziale il valore è assente, diverso da \"22 agosto 2026\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: un mese dal 22 luglio; il 22 agosto è sabato ma il regolamento non introduce nel fascicolo una proroga al lavorativo",
+      "pass_condition": "compare \"22 agosto 2026\" nel contesto di termine iniziale",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «il termine iniziale cade il 22 agosto 2026» (I-03) è attribuita ai documenti 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il termine iniziale cade il 22 agosto 2026» (I-03) è attribuita ai documenti 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.\nPASS se: il deliverable enuncia la conclusione «il termine iniziale cade il 22 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_richiesta_accesso.pdf = «Richiesta del dipendente»; 02_registro_protocollo.xlsx = «Registro del protocollo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_richiesta_accesso.pdf + 02_registro_protocollo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «il termine iniziale cade il 22 agosto 2026» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: assumere il 22 agosto come data operativa prudenziale.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: assumere il 22 agosto come data operativa prudenziale.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste.\nPASS se: compare \"una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste\" nel contesto di proroga\nFAIL se: Nel contesto di proroga il valore è assente, diverso da \"una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste\" o affiancato da un'alternativa incompatibile non qualificata.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota DPO: 18 caselle, chat e materiale disciplinare",
+      "pass_condition": "compare \"una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste\" nel contesto di proroga",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste» (I-04) è attribuita al documento 07_nota_dpo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste» (I-04) è attribuita al documento 07_nota_dpo.pdf.\nPASS se: il deliverable enuncia la conclusione «una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_nota_dpo.pdf = «Nota del DPO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_nota_dpo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «una proroga fino al 22 ottobre richiede necessità per complessità o numero di richieste» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: motivare e comunicare la proroga entro il termine iniziale.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: motivare e comunicare la proroga entro il termine iniziale.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: la comunicazione di proroga non è ancora stata inviata al 20 agosto.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la comunicazione di proroga non è ancora stata inviata al 20 agosto.\nPASS se: Il testo afferma: la comunicazione di proroga non è ancora stata inviata al 20 agosto.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: registro comunicazioni privo di uscita",
+      "pass_condition": "Il testo afferma: la comunicazione di proroga non è ancora stata inviata al 20 agosto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «la comunicazione di proroga non è ancora stata inviata al 20 agosto» (I-05) è attribuita al documento 02_registro_protocollo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la comunicazione di proroga non è ancora stata inviata al 20 agosto» (I-05) è attribuita al documento 02_registro_protocollo.xlsx.\nPASS se: il deliverable enuncia la conclusione «la comunicazione di proroga non è ancora stata inviata al 20 agosto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_registro_protocollo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 02_registro_protocollo.xlsx = «Registro del protocollo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/02_registro_protocollo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «la comunicazione di proroga non è ancora stata inviata al 20 agosto» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 02_registro_protocollo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: inviarla entro il 22 agosto con motivi specifici.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: inviarla entro il 22 agosto con motivi specifici.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: anagrafica, valutazioni e log presenze sono nel perimetro.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: anagrafica, valutazioni e log presenze sono nel perimetro.\nPASS se: Il testo afferma: anagrafica, valutazioni e log presenze sono nel perimetro.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: export HR contiene dati riferiti a Luca Ferranti",
+      "pass_condition": "Il testo afferma: anagrafica, valutazioni e log presenze sono nel perimetro.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «anagrafica, valutazioni e log presenze sono nel perimetro» (I-06) è attribuita al documento 04_export_hr.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «anagrafica, valutazioni e log presenze sono nel perimetro» (I-06) è attribuita al documento 04_export_hr.xlsx.\nPASS se: il deliverable enuncia la conclusione «anagrafica, valutazioni e log presenze sono nel perimetro» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_export_hr.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_export_hr.xlsx = «Export del sistema HR»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_export_hr.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «anagrafica, valutazioni e log presenze sono nel perimetro» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 04_export_hr.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "È proposta l'azione: consegnare una copia intelligibile e le informazioni di contesto.",
+      "match_criteria": "Oggetto del criterio: È proposta l'azione: consegnare una copia intelligibile e le informazioni di contesto.\nPASS se: L'azione compare come passo operativo distinto.\nFAIL se: L'azione manca oppure è sostituita da un'azione incompatibile.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: challenge map - azione",
+      "pass_condition": "L'azione compare come passo operativo distinto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: le email vanno selezionate per dati personali del richiedente, non per documento intero.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: le email vanno selezionate per dati personali del richiedente, non per documento intero.\nPASS se: Il testo afferma: le email vanno selezionate per dati personali del richiedente, non per documento intero.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: thread misti contengono valutazioni su Ferranti e dati privati di colleghi",
+      "pass_condition": "Il testo afferma: le email vanno selezionate per dati personali del richiedente, non per documento intero.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «le email vanno selezionate per dati personali del richiedente, non per documento intero» (I-07) è attribuita al documento 05_thread_email_team.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «le email vanno selezionate per dati personali del richiedente, non per documento intero» (I-07) è attribuita al documento 05_thread_email_team.eml.\nPASS se: il deliverable enuncia la conclusione «le email vanno selezionate per dati personali del richiedente, non per documento intero» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_thread_email_team.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_thread_email_team.eml = «Thread email con dati di colleghi»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_thread_email_team.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «le email vanno selezionate per dati personali del richiedente, non per documento intero» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_thread_email_team.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: i dati dei colleghi richiedono bilanciamento e oscuramenti granulari.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: i dati dei colleghi richiedono bilanciamento e oscuramenti granulari.\nPASS se: Il testo afferma: i dati dei colleghi richiedono bilanciamento e oscuramenti granulari.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: thread riporta salute e recapiti personali di due colleghi",
+      "pass_condition": "Il testo afferma: i dati dei colleghi richiedono bilanciamento e oscuramenti granulari.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «i dati dei colleghi richiedono bilanciamento e oscuramenti granulari» (I-08) è attribuita al documento 05_thread_email_team.eml.",
+      "match_criteria": "Oggetto del criterio: La conclusione «i dati dei colleghi richiedono bilanciamento e oscuramenti granulari» (I-08) è attribuita al documento 05_thread_email_team.eml.\nPASS se: il deliverable enuncia la conclusione «i dati dei colleghi richiedono bilanciamento e oscuramenti granulari» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_thread_email_team.eml.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 05_thread_email_team.eml = «Thread email con dati di colleghi»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/05_thread_email_team.eml",
+      "pass_condition": "il deliverable enuncia la conclusione «i dati dei colleghi richiedono bilanciamento e oscuramenti granulari» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 05_thread_email_team.eml.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: il legal hold non crea da solo un'esenzione generale.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: il legal hold non crea da solo un'esenzione generale.\nPASS se: Il testo afferma: il legal hold non crea da solo un'esenzione generale.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota legale segnala rischio concreto per attività difensive ancora in corso",
+      "pass_condition": "Il testo afferma: il legal hold non crea da solo un'esenzione generale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «il legal hold non crea da solo un'esenzione generale» (I-09) è attribuita al documento 06_legal_hold_indagine.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «il legal hold non crea da solo un'esenzione generale» (I-09) è attribuita al documento 06_legal_hold_indagine.pdf.\nPASS se: il deliverable enuncia la conclusione «il legal hold non crea da solo un'esenzione generale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_legal_hold_indagine.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 06_legal_hold_indagine.pdf = «Legal hold dell'indagine interna»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/06_legal_hold_indagine.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «il legal hold non crea da solo un'esenzione generale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 06_legal_hold_indagine.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: l'export HR può essere consegnato entro il termine iniziale.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: l'export HR può essere consegnato entro il termine iniziale.\nPASS se: Il testo afferma: l'export HR può essere consegnato entro il termine iniziale.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: il dataset è già estratto e verificato",
+      "pass_condition": "Il testo afferma: l'export HR può essere consegnato entro il termine iniziale.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «l'export HR può essere consegnato entro il termine iniziale» (I-10) è attribuita ai documenti 04_export_hr.xlsx e 07_nota_dpo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «l'export HR può essere consegnato entro il termine iniziale» (I-10) è attribuita ai documenti 04_export_hr.xlsx e 07_nota_dpo.pdf.\nPASS se: il deliverable enuncia la conclusione «l'export HR può essere consegnato entro il termine iniziale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 04_export_hr.xlsx e 07_nota_dpo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 04_export_hr.xlsx = «Export del sistema HR»; 07_nota_dpo.pdf = «Nota del DPO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/04_export_hr.xlsx + 07_nota_dpo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «l'export HR può essere consegnato entro il termine iniziale» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 04_export_hr.xlsx e 07_nota_dpo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti.\nPASS se: Il testo afferma: la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: la bozza DPO contiene solo l'allegato dati",
+      "pass_condition": "Il testo afferma: la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti» (I-11) è attribuita al documento 01_richiesta_accesso.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti» (I-11) è attribuita al documento 01_richiesta_accesso.pdf.\nPASS se: il deliverable enuncia la conclusione «la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_richiesta_accesso.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_richiesta_accesso.pdf = «Richiesta del dipendente»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_richiesta_accesso.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «la risposta deve indicare finalità, categorie, destinatari, conservazione, origine e diritti» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 01_richiesta_accesso.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta.\nPASS se: Il testo afferma: la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: domanda inviata da PEC personale e nessuna preferenza diversa",
+      "pass_condition": "Il testo afferma: la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta» (I-12) è attribuita ai documenti 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.",
+      "match_criteria": "Oggetto del criterio: La conclusione «la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta» (I-12) è attribuita ai documenti 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.\nPASS se: il deliverable enuncia la conclusione «la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.\nFAIL se: la conclusione non compare; oppure compare senza indicare uno o più dei documenti indicati; oppure è attribuita a documenti diversi al posto di quelli indicati.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 01_richiesta_accesso.pdf = «Richiesta del dipendente»; 02_registro_protocollo.xlsx = «Registro del protocollo»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/01_richiesta_accesso.pdf + 02_registro_protocollo.xlsx",
+      "pass_condition": "il deliverable enuncia la conclusione «la risposta va inviata nel canale elettronico usato dal richiedente salvo diversa richiesta» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonti tutti i documenti: 01_richiesta_accesso.pdf e 02_registro_protocollo.xlsx.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: oscuramenti e limitazioni devono essere tracciati con ragione e documento.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: oscuramenti e limitazioni devono essere tracciati con ragione e documento.\nPASS se: Il testo afferma: oscuramenti e limitazioni devono essere tracciati con ragione e documento.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota DPO propone un log ma non lo compila",
+      "pass_condition": "Il testo afferma: oscuramenti e limitazioni devono essere tracciati con ragione e documento.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «oscuramenti e limitazioni devono essere tracciati con ragione e documento» (I-13) è attribuita al documento 07_nota_dpo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «oscuramenti e limitazioni devono essere tracciati con ragione e documento» (I-13) è attribuita al documento 07_nota_dpo.pdf.\nPASS se: il deliverable enuncia la conclusione «oscuramenti e limitazioni devono essere tracciati con ragione e documento» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_nota_dpo.pdf = «Nota del DPO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_nota_dpo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «oscuramenti e limitazioni devono essere tracciati con ragione e documento» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Verifica una sola conclusione: HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione.",
+      "match_criteria": "Oggetto del criterio: Verifica una sola conclusione: HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione.\nPASS se: Il testo afferma: HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione.\nFAIL se: La proposizione è omessa, contraddetta, resa condizionale senza base oppure formulata in modo da non consentire la decisione.\nÈ indifferente: È indifferente l'ordine espositivo e la scelta lessicale, se la proposizione valutata resta invariata.\nFonte di authoring: nota DPO assegna fonti e approvazioni",
+      "pass_condition": "Il testo afferma: HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "La conclusione «HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione» (I-14) è attribuita al documento 07_nota_dpo.pdf.",
+      "match_criteria": "Oggetto del criterio: La conclusione «HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione» (I-14) è attribuita al documento 07_nota_dpo.pdf.\nPASS se: il deliverable enuncia la conclusione «HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.\nFAIL se: la conclusione non compare; oppure compare senza indicare il documento; oppure è attribuita a un documento diverso al posto di quello indicato.\nÈ indifferente: la formulazione della conclusione, purché il contenuto resti lo stesso; il modo di citare il documento: nome del file, numero dell'allegato o titolo con cui è elencato nella consegna (qui: 07_nota_dpo.pdf = «Nota del DPO»); l'ordine espositivo; la citazione di documenti ulteriori oltre a quelli indicati.\nFonte di authoring: public/documents/07_nota_dpo.pdf",
+      "pass_condition": "il deliverable enuncia la conclusione «HR, IT, Legal e DPO hanno compiti distinti nella raccolta e decisione» e, nello stesso passaggio o nella fonte collegata a quel passaggio, indica come fonte il documento 07_nota_dpo.pdf.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: termine decorrente dal 24 luglio.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: termine decorrente dal 24 luglio.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: termine decorrente dal 24 luglio.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: rinvio automatico al lunedì.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: rinvio automatico al lunedì.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: rinvio automatico al lunedì.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: diniego totale per dati di terzi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: diniego totale per dati di terzi.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: diniego totale per dati di terzi.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: esenzione generale da legal hold.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: esenzione generale da legal hold.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: esenzione generale da legal hold.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "B.39",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: consegna delle caselle complete.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: consegna delle caselle complete.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: consegna delle caselle complete.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "B.40",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: attesa fino a ottobre per l'export HR.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: attesa fino a ottobre per l'export HR.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: attesa fino a ottobre per l'export HR.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-06"
+    },
+    {
+      "id": "B.41",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable non sostiene la tesi esclusa: invio alla casella aziendale disattivata.",
+      "match_criteria": "Oggetto del criterio: Il deliverable non sostiene la tesi esclusa: invio alla casella aziendale disattivata.\nPASS se: La tesi esclusa non è affermata come conclusione del caso.\nFAIL se: Il deliverable afferma come conclusione del caso: invio alla casella aziendale disattivata.\nÈ indifferente: È indifferente che la tesi sia menzionata per confutarla o descriverla come errore.\nFonte di authoring: private/challenge_map.json",
+      "pass_condition": "La tesi esclusa non è affermata come conclusione del caso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-07"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.",
+      "match_criteria": "Oggetto del criterio: Il deliverable applica simmetria tra elementi favorevoli e sfavorevoli.\nPASS se: sono trattati fatti di entrambi i segni\nFAIL se: una delle due direzioni è sistematicamente omessa.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "sono trattati fatti di entrambi i segni",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable evita la sovra-segnalazione dei rischi.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la sovra-segnalazione dei rischi.\nPASS se: gli elementi neutri sono mantenuti distinti dai rischi\nFAIL se: Fallisce se almeno un elemento neutro o favorevole è qualificato come rischio concreto senza un fatto o una regola che lo sostenga.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "gli elementi neutri sono mantenuti distinti dai rischi",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "deadline_audit.md"
+      ],
+      "title": "Il deliverable evita la presunzione dell'esito su dati mancanti.",
+      "match_criteria": "Oggetto del criterio: Il deliverable evita la presunzione dell'esito su dati mancanti.\nPASS se: le lacune restano esplicite\nFAIL se: Fallisce se almeno una lacuna dichiarata nel fascicolo è colmata con un fatto dato per certo.\nÈ indifferente: È indifferente il numero di esempi, purché il principio di chiusura sia applicato alle conclusioni materiali.\nFonte di authoring: contratto comune",
+      "pass_condition": "le lacune restano esplicite",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "CHIUSURA"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": "0.1.0-draft"
+  }
+}

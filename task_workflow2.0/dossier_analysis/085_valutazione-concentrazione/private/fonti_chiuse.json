@@ -1,0 +1,34 @@
+{
+  "task_id": "WF2-085",
+  "freeze": "2026-09-02",
+  "fonti": [
+    {
+      "riferimento": "Regolamento (CE) n. 139/2004, artt. 2-3",
+      "url": "https://eur-lex.europa.eu/eli/reg/2004/139/oj",
+      "funzione": "nozione di concentrazione e valutazione sostanziale",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Orientamenti sulle concentrazioni orizzontali 2004/C 31/03",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:52004XC0205(02)",
+      "funzione": "quote, concentrazione, effetti unilaterali e coordinati",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Comunicazione sulla definizione del mercato 2024/C 1645",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:52024XC01645",
+      "funzione": "mercato del prodotto e geografico",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    },
+    {
+      "riferimento": "Comunicazione sui rimedi 2008/C 267/01",
+      "url": "https://eur-lex.europa.eu/legal-content/IT/TXT/?uri=CELEX:52008XC1022(01)",
+      "funzione": "efficacia e attuabilita' dei rimedi",
+      "verificata_il": "2026-09-02",
+      "tipo": "fonte primaria ufficiale"
+    }
+  ]
+}

@@ -1,0 +1,1053 @@
+{
+  "task_id": "WF2-053",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 52,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "sono prodotti entrambi i file richiesti, `policy_redline.docx` e `note.md`.",
+      "match_criteria": "Oggetto del criterio: sono prodotti entrambi i file richiesti, `policy_redline.docx` e `note.md`.\nPASS se: i due file consegnati hanno nome `policy_redline.docx` e `note.md`.\nFAIL se: manca uno dei due file, oppure un file ha nome o estensione diversi.\nÈ indifferente: la presenza di file aggiuntivi.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "i due file consegnati hanno nome `policy_redline.docx` e `note.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.2",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il file `policy_redline.docx` contiene revisioni tracciate.",
+      "match_criteria": "Oggetto del criterio: il file `policy_redline.docx` contiene revisioni tracciate.\nPASS se: il documento contiene almeno una cancellazione e almeno una inserzione tracciate.\nFAIL se: il documento non contiene revisioni tracciate, oppure le modifiche sono rese con marcatori nel testo.\nÈ indifferente: il numero delle revisioni.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il documento contiene almeno una cancellazione e almeno una inserzione tracciate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il file `note.md` non supera il limite di 1600 parole.",
+      "match_criteria": "Oggetto del criterio: il file `note.md` non supera il limite di 1600 parole.\nPASS se: il conteggio delle parole del corpo di `note.md` non supera 1600.\nFAIL se: il corpo di `note.md` supera 1600 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo di `note.md` non supera 1600.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "ogni rilievo della nota porta il riferimento all'articolo della bozza su cui incide.",
+      "match_criteria": "Oggetto del criterio: ogni rilievo della nota porta il riferimento all'articolo della bozza su cui incide.\nPASS se: accanto a ciascun rilievo compare il numero dell'articolo della bozza.\nFAIL se: almeno un rilievo non porta il riferimento all'articolo.\nÈ indifferente: la forma del riferimento.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascun rilievo compare il numero dell'articolo della bozza.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.6",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota distingue i rilievi che incidono da quelli che non incidono.",
+      "match_criteria": "Oggetto del criterio: la nota distingue i rilievi che incidono da quelli che non incidono.\nPASS se: compare una separazione fra i rilievi che richiedono modifica e gli elementi che non la richiedono.\nFAIL se: la nota presenta un elenco indistinto di osservazioni.\nÈ indifferente: le etichette usate per la separazione.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "compare una separazione fra i rilievi che richiedono modifica e gli elementi che non la richiedono.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo agli articoli della bozza e ai paragrafi della scheda tecnica.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "la nota non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota qualifica il consenso del lavoratore dell'articolo 3.1 come base giuridica non utilizzabile per questo trattamento.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica il consenso del lavoratore dell'articolo 3.1 come base giuridica non utilizzabile per questo trattamento.\nPASS se: compare, riferita all'articolo 3.1, una fra: «base giuridica non utilizzabile», «il consenso non è la base giuridica applicabile», «il consenso non è liberamente prestato».\nFAIL se: il consenso è presentato come base giuridica utilizzabile, oppure la qualificazione non compare.\nÈ indifferente: il richiamo all'articolo che elenca le basi giuridiche.\nFonte di authoring: articoli 3.1 e 3.2 della bozza",
+      "pass_condition": "compare, riferita all'articolo 3.1, una fra: «base giuridica non utilizzabile», «il consenso non è la base giuridica applicabile», «il consenso non è liberamente prestato».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che la clausola 3.2, che subordina l'assegnazione degli strumenti al consenso, incide sulla libera prestazione del consenso stesso.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la clausola 3.2, che subordina l'assegnazione degli strumenti al consenso, incide sulla libera prestazione del consenso stesso.\nPASS se: compare l'indicazione che il condizionamento dell'assegnazione degli strumenti incide sulla libera prestazione del consenso.\nFAIL se: il rilievo non compare, oppure la clausola 3.2 è presentata come neutra.\nÈ indifferente: la proposta di riformulazione della clausola.\nFonte di authoring: articolo 3.2 della bozza",
+      "pass_condition": "compare l'indicazione che il condizionamento dell'assegnazione degli strumenti incide sulla libera prestazione del consenso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica per ciascuna finalità dell'articolo 2.2 la base giuridica da sostituire al consenso.",
+      "match_criteria": "Oggetto del criterio: la nota indica per ciascuna finalità dell'articolo 2.2 la base giuridica da sostituire al consenso.\nPASS se: compare, per le finalità dell'articolo 2.2, l'indicazione di una base giuridica diversa dal consenso.\nFAIL se: la sostituzione non è indicata, oppure è indicata in modo indifferenziato per tutte le finalità.\nÈ indifferente: l'ordine in cui le finalità sono trattate.\nFonte di authoring: articoli 2.2 e 3.1 della bozza",
+      "pass_condition": "compare, per le finalità dell'articolo 2.2, l'indicazione di una base giuridica diversa dal consenso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non afferma che il trattamento dei dati generati dagli strumenti informatici è privo di base giuridica.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che il trattamento dei dati generati dagli strumenti informatici è privo di base giuridica.\nPASS se: la nota non afferma che il trattamento dei dati generati dagli strumenti informatici è privo di base giuridica.\nFAIL se: compare l'affermazione che il trattamento non ha alcuna base giuridica utilizzabile.\nÈ indifferente: l'indicazione che la base giuridica va individuata per ciascuna finalità.\nFonte di authoring: articolo 3.1 della bozza",
+      "pass_condition": "la nota non afferma che il trattamento dei dati generati dagli strumenti informatici è privo di base giuridica.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota qualifica la finalità della lettera c) dell'articolo 2.2 come controllo a distanza dell'attività lavorativa.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica la finalità della lettera c) dell'articolo 2.2 come controllo a distanza dell'attività lavorativa.\nPASS se: compare, riferita a quella finalità, una fra: «controllo a distanza dell'attivita lavorativa», «controllo dell'attivita dei lavoratori», «finalita di controllo a distanza».\nFAIL se: la finalità è presentata come trattamento connesso all'uso dello strumento di lavoro, oppure la qualificazione non compare. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo al comma della norma lavoristica.\nFonte di authoring: articolo 2.2, lettera c), della bozza",
+      "pass_condition": "compare, riferita a quella finalità, una fra: «controllo a distanza dell'attivita lavorativa», «controllo dell'attivita dei lavoratori», «finalita di controllo a distanza».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota afferma che il regime degli strumenti utilizzati per rendere la prestazione non copre quella finalità.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che il regime degli strumenti utilizzati per rendere la prestazione non copre quella finalità.\nPASS se: compare l'indicazione che l'esenzione prevista per gli strumenti di lavoro non si estende alla finalità della lettera c).\nFAIL se: l'esenzione è presentata come applicabile, oppure la questione non è trattata.\nÈ indifferente: il richiamo al comma della norma lavoristica.\nFonte di authoring: articolo 2.2, lettera c), della bozza",
+      "pass_condition": "compare l'indicazione che l'esenzione prevista per gli strumenti di lavoro non si estende alla finalità della lettera c).",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline sopprime o riformula la finalità della lettera c) dell'articolo 2.2.",
+      "match_criteria": "Oggetto del criterio: il redline sopprime o riformula la finalità della lettera c) dell'articolo 2.2.\nPASS se: nel documento con revisioni tracciate la lettera c) risulta cancellata o sostituita.\nFAIL se: la lettera c) resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: articolo 2.2, lettera c), della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la lettera c) risulta cancellata o sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che nel verbale del 5 febbraio 2031 le rappresentanze dichiarano di non sottoscrivere alcun accordo.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che nel verbale del 5 febbraio 2031 le rappresentanze dichiarano di non sottoscrivere alcun accordo.\nPASS se: compare l'indicazione che le rappresentanze hanno dichiarato di non sottoscrivere alcun accordo.\nFAIL se: il rilievo non compare, oppure il verbale è presentato come contenente un accordo.\nÈ indifferente: l'indicazione dei nominativi dei presenti.\nFonte di authoring: punti 3 e 4 del verbale del 5 febbraio 2031",
+      "pass_condition": "compare l'indicazione che le rappresentanze hanno dichiarato di non sottoscrivere alcun accordo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota qualifica come non integrato il presupposto procedurale richiesto per il controllo a distanza.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica come non integrato il presupposto procedurale richiesto per il controllo a distanza.\nPASS se: compare, riferita al presupposto, una fra: «non integrato», «non sussistente», «manca il presupposto richiesto».\nFAIL se: il presupposto è presentato come integrato, oppure la qualificazione non compare.\nÈ indifferente: l'indicazione della via alternativa all'accordo.\nFonte di authoring: verbale del 5 febbraio 2031",
+      "pass_condition": "compare, riferita al presupposto, una fra: «non integrato», «non sussistente», «manca il presupposto richiesto».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non afferma che l'illustrazione alle rappresentanze sindacali integra l'accordo richiesto.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che l'illustrazione alle rappresentanze sindacali integra l'accordo richiesto.\nPASS se: la nota non afferma che l'illustrazione alle rappresentanze sindacali integra l'accordo richiesto.\nFAIL se: compare l'affermazione che l'informativa o l'illustrazione alle rappresentanze equivale all'accordo.\nÈ indifferente: l'indicazione che l'incontro è stato una illustrazione.\nFonte di authoring: punti 1 e 4 del verbale del 5 febbraio 2031",
+      "pass_condition": "la nota non afferma che l'illustrazione alle rappresentanze sindacali integra l'accordo richiesto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica in 21 giorni il termine orientativo per la conservazione dei metadati indicato dall'autorità di controllo.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 21 giorni il termine orientativo per la conservazione dei metadati indicato dall'autorità di controllo.\nPASS se: compare «21 giorni» come termine orientativo indicato dall'autorità di controllo.; compare «ventuno giorni» come termine orientativo indicato dall'autorità di controllo.\nFAIL se: è indicato un termine diverso, oppure il termine orientativo non è indicato.\nÈ indifferente: il richiamo al numero del documento dell'autorità.\nFonte di authoring: documento di indirizzo dell'autorità di controllo",
+      "pass_condition": "compare «21 giorni» come termine orientativo indicato dall'autorità di controllo.; compare «ventuno giorni» come termine orientativo indicato dall'autorità di controllo.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica in 180 giorni il periodo di conservazione previsto dall'articolo 7.2 della bozza.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 180 giorni il periodo di conservazione previsto dall'articolo 7.2 della bozza.\nPASS se: compare «180 giorni» come periodo previsto dalla bozza.; compare «centottanta giorni» come periodo previsto dalla bozza.\nFAIL se: è indicato un periodo diverso, oppure il periodo della bozza non è rilevato.\nÈ indifferente: il richiamo al numero dell'articolo.\nFonte di authoring: articolo 7.2 della bozza",
+      "pass_condition": "compare «180 giorni» come periodo previsto dalla bozza.; compare «centottanta giorni» come periodo previsto dalla bozza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota afferma che la bozza non documenta condizioni particolari che rendano necessaria l'estensione del periodo.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che la bozza non documenta condizioni particolari che rendano necessaria l'estensione del periodo.\nPASS se: compare l'indicazione che la bozza non documenta condizioni che giustifichino l'estensione.\nFAIL se: il rilievo non compare, oppure la bozza è presentata come motivata sul punto.\nÈ indifferente: l'indicazione delle condizioni che potrebbero giustificare l'estensione.\nFonte di authoring: articolo 7 della bozza",
+      "pass_condition": "compare l'indicazione che la bozza non documenta condizioni che giustifichino l'estensione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline riduce il periodo di conservazione dei metadati dell'articolo 7.2.",
+      "match_criteria": "Oggetto del criterio: il redline riduce il periodo di conservazione dei metadati dell'articolo 7.2.\nPASS se: nel documento con revisioni tracciate il periodo di 180 giorni risulta sostituito da un periodo più breve.\nFAIL se: il periodo di 180 giorni resta invariato nel documento con revisioni tracciate.\nÈ indifferente: il valore esatto proposto in sostituzione, purché inferiore.\nFonte di authoring: articolo 7.2 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate il periodo di 180 giorni risulta sostituito da un periodo più breve.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che l'affermazione dell'articolo 7.3 è contraddetta dalla scheda tecnica.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che l'affermazione dell'articolo 7.3 è contraddetta dalla scheda tecnica.\nPASS se: compare l'indicazione che l'affermazione dell'articolo 7.3 è contraddetta dalla scheda tecnica del fornitore.\nFAIL se: il rilievo non compare, oppure l'affermazione della bozza è presentata come esatta.\nÈ indifferente: il richiamo al numero del paragrafo della scheda.\nFonte di authoring: articolo 7.3 della bozza; paragrafi 3.1 e 3.2 della scheda tecnica",
+      "pass_condition": "compare l'indicazione che l'affermazione dell'articolo 7.3 è contraddetta dalla scheda tecnica del fornitore.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica l'intervallo da 7 a 365 giorni come intervallo di configurabilità del periodo di conservazione secondo la scheda tecnica.",
+      "match_criteria": "Oggetto del criterio: la nota indica l'intervallo da 7 a 365 giorni come intervallo di configurabilità del periodo di conservazione secondo la scheda tecnica.\nPASS se: compare «da 7 a 365 giorni» come intervallo configurabile.; compaiono «7» e «365» come estremi dell'intervallo configurabile.\nFAIL se: è indicato un intervallo diverso, oppure la configurabilità non è quantificata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; l'indicazione del valore preimpostato di fabbrica.\nFonte di authoring: paragrafo 3.1 della scheda tecnica",
+      "pass_condition": "compare «da 7 a 365 giorni» come intervallo configurabile.; compaiono «7» e «365» come estremi dell'intervallo configurabile.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline sopprime o riformula l'articolo 7.3.",
+      "match_criteria": "Oggetto del criterio: il redline sopprime o riformula l'articolo 7.3.\nPASS se: nel documento con revisioni tracciate l'articolo 7.3 risulta cancellato o sostituito.\nFAIL se: l'articolo 7.3 resta invariato nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: articolo 7.3 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate l'articolo 7.3 risulta cancellato o sostituito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica in 12 mesi il periodo di conservazione dei log di navigazione previsto dall'articolo 8.1.",
+      "match_criteria": "Oggetto del criterio: la nota indica in 12 mesi il periodo di conservazione dei log di navigazione previsto dall'articolo 8.1.\nPASS se: compare «12 mesi» come periodo previsto dalla bozza per i log di navigazione.; compare «dodici mesi» come periodo previsto dalla bozza per i log di navigazione.\nFAIL se: è indicato un periodo diverso, oppure il periodo non è rilevato.\nÈ indifferente: il richiamo al numero dell'articolo.\nFonte di authoring: articolo 8.1 della bozza",
+      "pass_condition": "compare «12 mesi» come periodo previsto dalla bozza per i log di navigazione.; compare «dodici mesi» come periodo previsto dalla bozza per i log di navigazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che il periodo dei log di navigazione non è correlato ad alcuna finalità determinata nell'articolo 2.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che il periodo dei log di navigazione non è correlato ad alcuna finalità determinata nell'articolo 2.\nPASS se: compare l'indicazione che il periodo non è collegato a una finalità determinata.\nFAIL se: il rilievo non compare, oppure il periodo è presentato come motivato.\nÈ indifferente: il valore proposto in sostituzione.\nFonte di authoring: articoli 2 e 8.1 della bozza",
+      "pass_condition": "compare l'indicazione che il periodo non è collegato a una finalità determinata.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota qualifica il fornitore della piattaforma come responsabile del trattamento.",
+      "match_criteria": "Oggetto del criterio: la nota qualifica il fornitore della piattaforma come responsabile del trattamento.\nPASS se: compare, riferita al fornitore, una fra: «responsabile del trattamento», «tratta su istruzione del titolare», «non è titolare autonomo».\nFAIL se: il fornitore resta qualificato come titolare autonomo, oppure la qualificazione non compare.\nÈ indifferente: il richiamo all'articolo che disciplina il rapporto con il responsabile.\nFonte di authoring: articolo 4.3 della bozza; paragrafi 1, 4 e 6 della scheda tecnica",
+      "pass_condition": "compare, riferita al fornitore, una fra: «responsabile del trattamento», «tratta su istruzione del titolare», «non è titolare autonomo».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline sostituisce la qualificazione dell'articolo 4.3.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce la qualificazione dell'articolo 4.3.\nPASS se: nel documento con revisioni tracciate la qualificazione di titolare autonomo risulta sostituita.\nFAIL se: la qualificazione dell'articolo 4.3 resta invariata nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: articolo 4.3 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate la qualificazione di titolare autonomo risulta sostituita.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica come azione la stipulazione o la verifica dell'atto che disciplina il trattamento da parte del fornitore.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione la stipulazione o la verifica dell'atto che disciplina il trattamento da parte del fornitore.\nPASS se: compare l'indicazione di stipulare o verificare l'atto che disciplina il trattamento da parte del fornitore.\nFAIL se: l'azione non compare.\nÈ indifferente: la denominazione usata per l'atto.\nFonte di authoring: articolo 4.3 della bozza",
+      "pass_condition": "compare l'indicazione di stipulare o verificare l'atto che disciplina il trattamento da parte del fornitore.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che la richiesta del responsabile di funzione prevista dall'articolo 6.1 non basta come presupposto dell'accesso.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la richiesta del responsabile di funzione prevista dall'articolo 6.1 non basta come presupposto dell'accesso.\nPASS se: compare l'indicazione che la sola richiesta del responsabile di funzione non basta come presupposto dell'accesso.\nFAIL se: il rilievo non compare, oppure la previsione è presentata come bastevole.\nÈ indifferente: il numero dei livelli di autorizzazione proposti.\nFonte di authoring: articolo 6.1 della bozza",
+      "pass_condition": "compare l'indicazione che la sola richiesta del responsabile di funzione non basta come presupposto dell'accesso.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline introduce nell'articolo 6 la registrazione dell'accesso e l'autorizzazione a più di una persona.",
+      "match_criteria": "Oggetto del criterio: il redline introduce nell'articolo 6 la registrazione dell'accesso e l'autorizzazione a più di una persona.\nPASS se: nel documento con revisioni tracciate l'articolo 6 risulta integrato con la registrazione dell'accesso e con un'autorizzazione a più di una persona.\nFAIL se: l'articolo 6 resta invariato, oppure è integrato con uno solo dei due elementi.\nÈ indifferente: l'ordine in cui i due elementi sono introdotti.\nFonte di authoring: articolo 6.1 della bozza; paragrafi 4.3 e 4.4 della scheda tecnica",
+      "pass_condition": "nel documento con revisioni tracciate l'articolo 6 risulta integrato con la registrazione dell'accesso e con un'autorizzazione a più di una persona.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota fonda la praticabilità di quelle misure sui paragrafi 4.3 e 4.4 della scheda tecnica.",
+      "match_criteria": "Oggetto del criterio: la nota fonda la praticabilità di quelle misure sui paragrafi 4.3 e 4.4 della scheda tecnica.\nPASS se: il rilievo è ricondotto ai paragrafi della scheda che prevedono il giornale di accesso non modificabile e l'autorizzazione a due persone.\nFAIL se: le misure sono proposte senza indicare che la piattaforma le rende disponibili.\nÈ indifferente: l'ordine in cui i due paragrafi sono citati.\nFonte di authoring: paragrafi 4.3 e 4.4 della scheda tecnica",
+      "pass_condition": "il rilievo è ricondotto ai paragrafi della scheda che prevedono il giornale di accesso non modificabile e l'autorizzazione a due persone.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non afferma che l'accesso al contenuto delle caselle individuali è in ogni caso vietato.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che l'accesso al contenuto delle caselle individuali è in ogni caso vietato.\nPASS se: la nota non afferma che l'accesso al contenuto delle caselle individuali è in ogni caso vietato.\nFAIL se: compare l'affermazione che l'accesso al contenuto delle caselle non è consentito in alcun caso.\nÈ indifferente: l'indicazione che l'accesso richiede presupposti e garanzie.\nFonte di authoring: articolo 6 della bozza",
+      "pass_condition": "la nota non afferma che l'accesso al contenuto delle caselle individuali è in ogni caso vietato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.27",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che l'informativa vigente non contempla i metadati né i controlli.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che l'informativa vigente non contempla i metadati né i controlli.\nPASS se: compare l'indicazione che l'informativa vigente non copre i metadati e i controlli.\nFAIL se: il rilievo non compare, oppure l'informativa è presentata come bastevole.\nÈ indifferente: il richiamo ai paragrafi dell'informativa.\nFonte di authoring: paragrafi 3, 4 e 7 dell'informativa vigente",
+      "pass_condition": "compare l'indicazione che l'informativa vigente non copre i metadati e i controlli.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.28",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline sostituisce il rinvio generico dell'articolo 10.1 con l'obbligo di rendere un'informativa specifica sui metadati e sui controlli.",
+      "match_criteria": "Oggetto del criterio: il redline sostituisce il rinvio generico dell'articolo 10.1 con l'obbligo di rendere un'informativa specifica sui metadati e sui controlli.\nPASS se: nel documento con revisioni tracciate l'articolo 10.1 risulta integrato o sostituito con la previsione di un'informativa specifica.\nFAIL se: l'articolo 10.1 resta invariato nel documento con revisioni tracciate.\nÈ indifferente: la formulazione sostitutiva proposta.\nFonte di authoring: articolo 10.1 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate l'articolo 10.1 risulta integrato o sostituito con la previsione di un'informativa specifica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.29",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica come azione l'aggiornamento dell'informativa al personale prima dell'entrata in vigore della policy.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione l'aggiornamento dell'informativa al personale prima dell'entrata in vigore della policy.\nPASS se: compare l'indicazione di aggiornare l'informativa prima dell'entrata in vigore.\nFAIL se: l'azione non compare, oppure l'aggiornamento è collocato dopo l'avvio del trattamento.\nÈ indifferente: la forma di comunicazione proposta.\nFonte di authoring: articoli 10.1 e 13.1 della bozza",
+      "pass_condition": "compare l'indicazione di aggiornare l'informativa prima dell'entrata in vigore.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.30",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota afferma che in assenza dell'informazione sulle modalità d'uso degli strumenti e sulle modalità di effettuazione dei controlli i dati raccolti non sono utilizzabili a tutti i fini connessi al rapporto di lavoro.",
+      "match_criteria": "Oggetto del criterio: la nota afferma che in assenza dell'informazione sulle modalità d'uso degli strumenti e sulle modalità di effettuazione dei controlli i dati raccolti non sono utilizzabili a tutti i fini connessi al rapporto di lavoro.\nPASS se: compare l'indicazione che l'utilizzabilità dei dati a tutti i fini connessi al rapporto presuppone quell'informazione.\nFAIL se: l'utilizzabilità è presentata come dipendente dalla sola base giuridica, oppure la questione non è trattata.\nÈ indifferente: il richiamo al comma della norma lavoristica.\nFonte di authoring: articolo 10.1 della bozza; disciplina lavoristica dei controlli",
+      "pass_condition": "compare l'indicazione che l'utilizzabilità dei dati a tutti i fini connessi al rapporto presuppone quell'informazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.31",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che la conclusione della valutazione preliminare è contraddetta dalla finalità della lettera c) dell'articolo 2.2 e dal periodo di conservazione.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la conclusione della valutazione preliminare è contraddetta dalla finalità della lettera c) dell'articolo 2.2 e dal periodo di conservazione.\nPASS se: compare l'indicazione che la valutazione preliminare è contraddetta dal contenuto della bozza.\nFAIL se: il rilievo non compare, oppure la valutazione preliminare è presentata come coerente con la bozza.\nÈ indifferente: il richiamo al riferimento del documento.\nFonte di authoring: riga del monitoraggio sistematico della valutazione preliminare; articoli 2.2 e 7.2 della bozza",
+      "pass_condition": "compare l'indicazione che la valutazione preliminare è contraddetta dal contenuto della bozza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.32",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica come azione il riesame della valutazione preliminare.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione il riesame della valutazione preliminare.\nPASS se: compare l'indicazione di riesaminare la valutazione preliminare.\nFAIL se: l'azione non compare.\nÈ indifferente: l'esito che il riesame potrebbe avere.\nFonte di authoring: paragrafo 4 della valutazione preliminare",
+      "pass_condition": "compare l'indicazione di riesaminare la valutazione preliminare.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.33",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non afferma che una valutazione d'impatto sulla protezione dei dati è necessaria.",
+      "match_criteria": "Oggetto del criterio: la nota non afferma che una valutazione d'impatto sulla protezione dei dati è necessaria.\nPASS se: la nota non afferma che una valutazione d'impatto sulla protezione dei dati è necessaria.\nFAIL se: compare l'affermazione che la valutazione d'impatto è necessaria o dovuta.\nÈ indifferente: l'indicazione che l'esito del riesame potrebbe richiederla.\nFonte di authoring: valutazione preliminare; articoli 2.2 e 7.2 della bozza",
+      "pass_condition": "la nota non afferma che una valutazione d'impatto sulla protezione dei dati è necessaria.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.34",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che la bozza non disciplina la sorte della casella alla cessazione del rapporto.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la bozza non disciplina la sorte della casella alla cessazione del rapporto.\nPASS se: compare l'indicazione che la cessazione del rapporto non è disciplinata quanto alla casella di posta elettronica.\nFAIL se: il rilievo non compare, oppure la bozza è presentata come completa sul punto.\nÈ indifferente: l'elenco delle misure proposte per la cessazione.\nFonte di authoring: articolo 9.1 della bozza",
+      "pass_condition": "compare l'indicazione che la cessazione del rapporto non è disciplinata quanto alla casella di posta elettronica.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.35",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "il redline introduce nella bozza la disciplina della disattivazione e della cancellazione della casella alla cessazione del rapporto.",
+      "match_criteria": "Oggetto del criterio: il redline introduce nella bozza la disciplina della disattivazione e della cancellazione della casella alla cessazione del rapporto.\nPASS se: nel documento con revisioni tracciate compare una previsione sulla disattivazione o sulla cancellazione della casella alla cessazione.\nFAIL se: il documento con revisioni tracciate non contiene alcuna previsione sulla cessazione.\nÈ indifferente: la durata proposta per l'eventuale periodo transitorio.\nFonte di authoring: articolo 9 della bozza",
+      "pass_condition": "nel documento con revisioni tracciate compare una previsione sulla disattivazione o sulla cancellazione della casella alla cessazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "B.36",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota rileva che la scheda tecnica consente di disattivare la raccolta del campo oggetto e in blocco quella dei record.",
+      "match_criteria": "Oggetto del criterio: la nota rileva che la scheda tecnica consente di disattivare la raccolta del campo oggetto e in blocco quella dei record.\nPASS se: compare l'indicazione che la raccolta è disattivabile secondo la scheda tecnica.\nFAIL se: il rilievo non compare, oppure la raccolta è presentata come necessaria.\nÈ indifferente: il richiamo ai numeri dei paragrafi.\nFonte di authoring: paragrafi 2.2 e 2.3 della scheda tecnica",
+      "pass_condition": "compare l'indicazione che la raccolta è disattivabile secondo la scheda tecnica.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.37",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica come azione la documentazione della scelta di raccogliere i metadati.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione la documentazione della scelta di raccogliere i metadati.\nPASS se: compare l'indicazione di documentare e motivare la scelta di raccogliere i metadati.\nFAIL se: l'azione non compare.\nÈ indifferente: la sede in cui la scelta va documentata.\nFonte di authoring: paragrafi 2.2 e 2.3 della scheda tecnica",
+      "pass_condition": "compare l'indicazione di documentare e motivare la scelta di raccogliere i metadati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-13"
+    },
+    {
+      "id": "B.38",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota indica come azione il riscontro alle osservazioni sindacali sulla procedura di accesso nella versione rivista della bozza.",
+      "match_criteria": "Oggetto del criterio: la nota indica come azione il riscontro alle osservazioni sindacali sulla procedura di accesso nella versione rivista della bozza.\nPASS se: compare l'indicazione di riscontrare le osservazioni sindacali sulla procedura di accesso.\nFAIL se: l'azione non compare.\nÈ indifferente: la forma del riscontro.\nFonte di authoring: punto 3 del verbale del 5 febbraio 2031",
+      "pass_condition": "compare l'indicazione di riscontrare le osservazioni sindacali sulla procedura di accesso.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-14"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non segnala come rischio di trasferimento il ricorso al sub-responsabile con sede in un paese con decisione di adeguatezza.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come rischio di trasferimento il ricorso al sub-responsabile con sede in un paese con decisione di adeguatezza.\nPASS se: la nota non segnala come rischio di trasferimento il ricorso al sub-responsabile con sede in un paese con decisione di adeguatezza.\nFAIL se: il sub-responsabile per l'assistenza di secondo livello compare fra i profili di rischio relativi ai trasferimenti.\nÈ indifferente: la menzione del sub-responsabile nell'elenco dei destinatari.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "la nota non segnala come rischio di trasferimento il ricorso al sub-responsabile con sede in un paese con decisione di adeguatezza.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non segnala come controllo individuale le statistiche aggregate dell'articolo 5.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come controllo individuale le statistiche aggregate dell'articolo 5.\nPASS se: la nota non segnala come controllo individuale le statistiche aggregate dell'articolo 5.\nFAIL se: le statistiche aggregate dell'articolo 5 compaiono fra i rilievi da modificare o fra le forme di controllo individuale.\nÈ indifferente: la menzione delle statistiche fra i trattamenti descritti.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "la nota non segnala come controllo individuale le statistiche aggregate dell'articolo 5.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non segnala come mancante la designazione del responsabile della protezione dei dati.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come mancante la designazione del responsabile della protezione dei dati.\nPASS se: la nota non segnala come mancante la designazione del responsabile della protezione dei dati.\nFAIL se: la designazione del responsabile della protezione dei dati compare fra gli adempimenti mancanti.\nÈ indifferente: la menzione della designazione fra gli adempimenti assolti.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "la nota non segnala come mancante la designazione del responsabile della protezione dei dati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non segnala come eccedente la conservazione del contenuto della casella per la durata del rapporto.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come eccedente la conservazione del contenuto della casella per la durata del rapporto.\nPASS se: la nota non segnala come eccedente la conservazione del contenuto della casella per la durata del rapporto.\nFAIL se: la conservazione per la durata del rapporto compare fra i rilievi che richiedono riduzione del periodo.\nÈ indifferente: la menzione dell'articolo 9.1 nella trattazione della cessazione del rapporto.\nFonte di authoring: challenge map, N-04",
+      "pass_condition": "la nota non segnala come eccedente la conservazione del contenuto della casella per la durata del rapporto.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-04"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "la nota non segnala come profilo di rischio il rinvio al contratto collettivo dell'articolo 12.1.",
+      "match_criteria": "Oggetto del criterio: la nota non segnala come profilo di rischio il rinvio al contratto collettivo dell'articolo 12.1.\nPASS se: la nota non segnala come profilo di rischio il rinvio al contratto collettivo dell'articolo 12.1.\nFAIL se: il rinvio al contratto collettivo dell'articolo 12.1 compare fra i rilievi da modificare.\nÈ indifferente: la menzione dell'articolo 12.1 nella descrizione della bozza.\nFonte di authoring: challenge map, N-05",
+      "pass_condition": "la nota non segnala come profilo di rischio il rinvio al contratto collettivo dell'articolo 12.1.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-05"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "simmetria del controllo: la nota non tratta come provata l'inutilizzabilità dei dati già raccolti mentre tratta come da riesaminare la valutazione preliminare.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: la nota non tratta come provata l'inutilizzabilità dei dati già raccolti mentre tratta come da riesaminare la valutazione preliminare.\nPASS se: simmetria del controllo: la nota non tratta come provata l'inutilizzabilità dei dati già raccolti mentre tratta come da riesaminare la valutazione preliminare.\nFAIL se: l'inutilizzabilità dei dati già raccolti è affermata come accertata e nello stesso documento la valutazione preliminare è rimessa a un riesame.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: articolo 10.1 della bozza; valutazione preliminare",
+      "pass_condition": "simmetria del controllo: la nota non tratta come provata l'inutilizzabilità dei dati già raccolti mentre tratta come da riesaminare la valutazione preliminare.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "divieto di presunzione dell'esito: la nota non afferma che l'autorità di controllo adotterà un provvedimento nei confronti della Società.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: la nota non afferma che l'autorità di controllo adotterà un provvedimento nei confronti della Società.\nPASS se: divieto di presunzione dell'esito: la nota non afferma che l'autorità di controllo adotterà un provvedimento nei confronti della Società.\nFAIL se: compare l'affermazione che l'autorità di controllo intervenirà o sanzionerà la Società.\nÈ indifferente: l'indicazione dei profili che potrebbero formare oggetto di verifica.\nFonte di authoring: composizione del fascicolo",
+      "pass_condition": "divieto di presunzione dell'esito: la nota non afferma che l'autorità di controllo adotterà un provvedimento nei confronti della Società.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "policy_redline.docx"
+      ],
+      "title": "sovra-segnalazione: la nota non presenta come profilo di rischio la certificazione del sistema di gestione della sicurezza dichiarata dal fornitore.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: la nota non presenta come profilo di rischio la certificazione del sistema di gestione della sicurezza dichiarata dal fornitore.\nPASS se: sovra-segnalazione: la nota non presenta come profilo di rischio la certificazione del sistema di gestione della sicurezza dichiarata dal fornitore.\nFAIL se: la certificazione dichiarata al paragrafo 7 della scheda tecnica compare fra i profili di rischio.\nÈ indifferente: la menzione della certificazione fra le informazioni sul fornitore.\nFonte di authoring: paragrafo 7 della scheda tecnica",
+      "pass_condition": "sovra-segnalazione: la nota non presenta come profilo di rischio la certificazione del sistema di gestione della sicurezza dichiarata dal fornitore.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}

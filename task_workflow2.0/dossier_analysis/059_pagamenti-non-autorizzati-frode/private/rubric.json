@@ -1,0 +1,773 @@
+{
+  "task_id": "WF2-059",
+  "rubric_version": "2.0.0-agentic.1",
+  "status": "pilot_ready",
+  "scoring_method": "all_pass_and_criterion_rate",
+  "criteria_count": 38,
+  "criteria": [
+    {
+      "id": "A.1",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable è prodotto come file `evidence_and_liability_memo.md`.",
+      "match_criteria": "Oggetto del criterio: il deliverable è prodotto come file `evidence_and_liability_memo.md`.\nPASS se: il file consegnato ha nome `evidence_and_liability_memo.md`.\nFAIL se: il file ha un altro nome o un'altra estensione.\nÈ indifferente: la presenza di intestazioni aggiuntive.\nFonte di authoring: task_spec.json, campo deliverable",
+      "pass_condition": "il file consegnato ha nome `evidence_and_liability_memo.md`.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.3",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non supera il limite di 2000 parole.",
+      "match_criteria": "Oggetto del criterio: il deliverable non supera il limite di 2000 parole.\nPASS se: il conteggio delle parole del corpo del deliverable non supera 2000.\nFAIL se: il corpo del deliverable supera 2000 parole.\nÈ indifferente: la lunghezza delle singole sezioni.\nFonte di authoring: task_spec.json, campo limite_parole",
+      "pass_condition": "il conteggio delle parole del corpo del deliverable non supera 2000.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.4",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "la matrice delle evidenze riporta una riga per ciascuna delle sei operazioni disconosciute.",
+      "match_criteria": "Oggetto del criterio: la matrice delle evidenze riporta una riga per ciascuna delle sei operazioni disconosciute.\nPASS se: nella sezione della matrice compaiono sei righe, una per ciascuna operazione.\nFAIL se: le righe sono meno di sei, oppure le operazioni sono trattate in forma discorsiva senza matrice.\nÈ indifferente: l'ordine delle colonne.\nFonte di authoring: public/01_task.md",
+      "pass_condition": "nella sezione della matrice compaiono sei righe, una per ciascuna operazione.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.5",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "ogni riga della matrice delle evidenze porta il riferimento al documento da cui il dato è ricavato.",
+      "match_criteria": "Oggetto del criterio: ogni riga della matrice delle evidenze porta il riferimento al documento da cui il dato è ricavato.\nPASS se: accanto a ciascuna riga compare il rinvio a uno degli allegati.\nFAIL se: almeno una riga della matrice non porta alcun rinvio a un allegato.\nÈ indifferente: la forma del rinvio, numero di documento o titolo.\nFonte di authoring: public/01_task.md, richiesta sulla fonte",
+      "pass_condition": "accanto a ciascuna riga compare il rinvio a uno degli allegati.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "struttura",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "A.7",
+      "scoring_type": "required",
+      "category": "artifact",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "match_criteria": "Oggetto del criterio: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nPASS se: il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.\nFAIL se: compare un riferimento normativo che non figura in `03_legal_sources.md`.\nÈ indifferente: il richiamo alle clausole del contratto di conto, che non sono fonti normative.\nFonte di authoring: public/03_legal_sources.md",
+      "pass_condition": "il deliverable non richiama fonti normative estranee all'elenco chiuso del reference pack.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": ""
+    },
+    {
+      "id": "B.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable qualifica il cliente come utente che non è consumatore e che non ha i requisiti dimensionali della microimpresa.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica il cliente come utente che non è consumatore e che non ha i requisiti dimensionali della microimpresa.\nPASS se: compare, riferita al cliente, una fra: «non è microimpresa», «non rientra nella nozione di microimpresa», «supera i requisiti dimensionali della microimpresa».\nFAIL se: il cliente è qualificato come microimpresa o come consumatore, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla fonte che definisce i requisiti dimensionali.\nFonte di authoring: sezione II delle condizioni di conto",
+      "pass_condition": "compare, riferita al cliente, una fra: «non è microimpresa», «non rientra nella nozione di microimpresa», «supera i requisiti dimensionali della microimpresa».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable fonda la qualificazione del cliente sui dati dimensionali della scheda anagrafica.",
+      "match_criteria": "Oggetto del criterio: il deliverable fonda la qualificazione del cliente sui dati dimensionali della scheda anagrafica.\nPASS se: la qualificazione è ricondotta a una fra: «34 dipendenti», «fatturato di euro 9.840.000,00», «sezione II delle condizioni di conto».\nFAIL se: la qualificazione è affermata senza indicare i dati da cui è ricavata.\nÈ indifferente: l'indicazione del totale dell'attivo.\nFonte di authoring: sezione II delle condizioni di conto",
+      "pass_condition": "la qualificazione è ricondotta a una fra: «34 dipendenti», «fatturato di euro 9.840.000,00», «sezione II delle condizioni di conto».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che la deroga della clausola 18.2 è ammessa per questo rapporto.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la deroga della clausola 18.2 è ammessa per questo rapporto.\nPASS se: compare, riferita alla clausola 18.2, una fra: «la deroga è ammessa», «la deroga è efficace», «le parti potevano derogare».\nFAIL se: la deroga è presentata come inefficace o nulla, oppure l'ammissibilità non è affermata.\nÈ indifferente: il richiamo alla norma che consente la deroga.\nFonte di authoring: clausole 18.1 e 18.2",
+      "pass_condition": "compare, riferita alla clausola 18.2, una fra: «la deroga è ammessa», «la deroga è efficace», «le parti potevano derogare».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-01"
+    },
+    {
+      "id": "B.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che la deroga non si estende all'obbligo di rimborso del prestatore di servizi di pagamento.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la deroga non si estende all'obbligo di rimborso del prestatore di servizi di pagamento.\nPASS se: compare l'indicazione che l'obbligo di rimborso resta fuori dal perimetro della deroga.\nFAIL se: l'obbligo di rimborso è presentato come derogato, oppure la questione del perimetro non è trattata.\nÈ indifferente: il richiamo all'articolo che disciplina il rimborso.\nFonte di authoring: clausole 18.2 e 18.4",
+      "pass_condition": "compare l'indicazione che l'obbligo di rimborso resta fuori dal perimetro della deroga.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che la deroga non si estende al termine massimo per la comunicazione dell'operazione non autorizzata.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la deroga non si estende al termine massimo per la comunicazione dell'operazione non autorizzata.\nPASS se: compare l'indicazione che il termine di comunicazione resta fuori dal perimetro della deroga.\nFAIL se: il termine di comunicazione è presentato come derogato, oppure la questione non è trattata.\nÈ indifferente: l'indicazione della durata del termine.\nFonte di authoring: clausole 18.2 e 18.4",
+      "pass_condition": "compare l'indicazione che il termine di comunicazione resta fuori dal perimetro della deroga.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che la deroga ha spostato sul cliente l'onere di provare la mancata autorizzazione.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la deroga ha spostato sul cliente l'onere di provare la mancata autorizzazione.\nPASS se: compare l'indicazione che l'onere della prova della mancata autorizzazione grava sul cliente.\nFAIL se: l'onere è collocato sulla Banca nonostante la deroga, oppure la questione non è trattata.\nÈ indifferente: il giudizio sulla convenienza della clausola per il cliente.\nFonte di authoring: clausole 18.2 e 18.3",
+      "pass_condition": "compare l'indicazione che l'onere della prova della mancata autorizzazione grava sul cliente.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-02"
+    },
+    {
+      "id": "B.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable qualifica come eccedente il contenuto della deroga l'affermazione della Banca secondo cui nessun obbligo di rimborso le grava.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica come eccedente il contenuto della deroga l'affermazione della Banca secondo cui nessun obbligo di rimborso le grava.\nPASS se: compare, riferita al punto 1 della lettera del 20 marzo 2031, una fra: «eccede il contenuto della deroga», «non è sostenuta dalla clausola 18.2», «va oltre ciò che le parti hanno derogato».\nFAIL se: l'affermazione della Banca è presentata come fondata, oppure non è valutata.\nÈ indifferente: il tono con cui la valutazione è espressa.\nFonte di authoring: punto 1 della lettera del 20 marzo 2031",
+      "pass_condition": "compare, riferita al punto 1 della lettera del 20 marzo 2031, una fra: «eccede il contenuto della deroga», «non è sostenuta dalla clausola 18.2», «va oltre ciò che le parti hanno derogato».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-03"
+    },
+    {
+      "id": "B.8",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica come operazioni eccedenti la soglia di doppia firma quella di euro 39.000,00 e quella di euro 29.000,00.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica come operazioni eccedenti la soglia di doppia firma quella di euro 39.000,00 e quella di euro 29.000,00.\nPASS se: compaiono «euro 39.000,00» ed «euro 29.000,00» come le operazioni oltre soglia.; compaiono «39.000,00» e «29.000,00» come le operazioni oltre soglia.\nFAIL se: sono indicate operazioni diverse, oppure le operazioni oltre soglia non sono identificate.\nÈ indifferente: l'ordine in cui le due operazioni sono elencate.\nFonte di authoring: clausola 5.3; estratto conto",
+      "pass_condition": "compaiono «euro 39.000,00» ed «euro 29.000,00» come le operazioni oltre soglia.; compaiono «39.000,00» e «29.000,00» come le operazioni oltre soglia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.9",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che le due operazioni oltre soglia risultano disposte con una sola firma.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che le due operazioni oltre soglia risultano disposte con una sola firma.\nPASS se: compare l'indicazione che per quelle due operazioni la colonna del numero di firme riporta una firma sola.\nFAIL se: le due operazioni sono presentate come disposte con due firme, oppure il numero di firme non è rilevato.\nÈ indifferente: il richiamo alla clausola 5.4.\nFonte di authoring: colonna numero_firme dell'estratto conto",
+      "pass_condition": "compare l'indicazione che per quelle due operazioni la colonna del numero di firme riporta una firma sola.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.10",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable qualifica l'esecuzione delle due operazioni oltre soglia come difforme dal mandato.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica l'esecuzione delle due operazioni oltre soglia come difforme dal mandato.\nPASS se: compare, riferita a quelle due operazioni, una fra: «difformita dal mandato», «violazione della clausola 5.3», «eseguita in difformita dai poteri di firma».\nFAIL se: l'esecuzione è presentata come conforme al mandato, oppure la qualificazione non compare.\nÈ indifferente: il richiamo alla clausola 5.4.\nFonte di authoring: clausole 5.3 e 5.4",
+      "pass_condition": "compare, riferita a quelle due operazioni, una fra: «difformita dal mandato», «violazione della clausola 5.3», «eseguita in difformita dai poteri di firma».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-04"
+    },
+    {
+      "id": "B.11",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica in quattro il numero delle operazioni disconosciute di importo inferiore alla soglia di doppia firma.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in quattro il numero delle operazioni disconosciute di importo inferiore alla soglia di doppia firma.\nPASS se: compare l'indicazione di «quattro» operazioni sotto soglia.; compare l'indicazione di «4» operazioni sotto soglia.\nFAIL se: è indicato un numero diverso, oppure la distinzione fra operazioni sopra e sotto soglia non è fatta.\nÈ indifferente: l'ordine in cui le quattro operazioni sono elencate.\nFonte di authoring: clausola 5.2; estratto conto",
+      "pass_condition": "compare l'indicazione di «quattro» operazioni sotto soglia.; compare l'indicazione di «4» operazioni sotto soglia.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.12",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non afferma che l'esecuzione a firma singola delle operazioni di euro 24.500,00, 18.000,00, 22.000,00 e 16.000,00 viola il mandato.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che l'esecuzione a firma singola delle operazioni di euro 24.500,00, 18.000,00, 22.000,00 e 16.000,00 viola il mandato.\nPASS se: il deliverable non afferma che l'esecuzione a firma singola delle operazioni di euro 24.500,00, 18.000,00, 22.000,00 e 16.000,00 viola il mandato.\nFAIL se: l'esecuzione a firma singola di una di quelle quattro operazioni è presentata come violazione del mandato o della soglia di doppia firma.\nÈ indifferente: il rilievo che quelle operazioni presentano un vizio diverso.\nFonte di authoring: clausola 5.2",
+      "pass_condition": "il deliverable non afferma che l'esecuzione a firma singola delle operazioni di euro 24.500,00, 18.000,00, 22.000,00 e 16.000,00 viola il mandato.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-05"
+    },
+    {
+      "id": "B.13",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica in quattro il numero delle operazioni disconosciute eseguite senza autenticazione forte.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in quattro il numero delle operazioni disconosciute eseguite senza autenticazione forte.\nPASS se: compare l'indicazione di «quattro» operazioni senza autenticazione forte.; compare l'indicazione di «4» operazioni senza autenticazione forte.\nFAIL se: è indicato un numero diverso, oppure la questione dell'autenticazione forte non è trattata.\nÈ indifferente: l'ordine in cui le operazioni sono elencate.\nFonte di authoring: colonna autenticazione_forte dell'estratto conto",
+      "pass_condition": "compare l'indicazione di «quattro» operazioni senza autenticazione forte.; compare l'indicazione di «4» operazioni senza autenticazione forte.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.14",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable collega le quattro operazioni senza autenticazione forte all'utenza vertegno.a e al dispositivo non censito.",
+      "match_criteria": "Oggetto del criterio: il deliverable collega le quattro operazioni senza autenticazione forte all'utenza vertegno.a e al dispositivo non censito.\nPASS se: il collegamento è fatto a una fra: «utenza vertegno.a», «DEV-019», «dispositivo non censito».\nFAIL se: le quattro operazioni sono attribuite a un'altra utenza o a un dispositivo censito, oppure il collegamento non è fatto.\nÈ indifferente: l'indicazione dell'ora delle disposizioni.\nFonte di authoring: colonne utenza_disponente e dispositivo dell'estratto conto",
+      "pass_condition": "il collegamento è fatto a una fra: «utenza vertegno.a», «DEV-019», «dispositivo non censito».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "attribuzione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-06"
+    },
+    {
+      "id": "B.15",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che la registrazione dell'uso dello strumento di pagamento non dimostra da sé che l'operazione sia stata autorizzata.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che la registrazione dell'uso dello strumento di pagamento non dimostra da sé che l'operazione sia stata autorizzata.\nPASS se: compare, riferita al punto 2 della lettera del 20 marzo 2031, una fra: «la registrazione non prova l'autorizzazione», «la regolarita formale non dimostra l'autorizzazione», «la contabilizzazione non equivale ad autorizzazione».\nFAIL se: la tesi del punto 2 della lettera è presentata come fondata, oppure la questione non è trattata.\nÈ indifferente: il richiamo alla giurisprudenza in materia.\nFonte di authoring: punto 2 della lettera del 20 marzo 2031",
+      "pass_condition": "compare, riferita al punto 2 della lettera del 20 marzo 2031, una fra: «la registrazione non prova l'autorizzazione», «la regolarita formale non dimostra l'autorizzazione», «la contabilizzazione non equivale ad autorizzazione».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-07"
+    },
+    {
+      "id": "B.16",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable rileva che l'avviso via SMS previsto dal contratto non è stato ricevuto per le operazioni disconosciute.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che l'avviso via SMS previsto dal contratto non è stato ricevuto per le operazioni disconosciute.\nPASS se: compare l'indicazione che l'avviso previsto dalla clausola 8.1 non è stato ricevuto.\nFAIL se: il rilievo non compare, oppure l'avviso è dato per ricevuto.\nÈ indifferente: l'indicazione della soglia di importo che attiva l'avviso.\nFonte di authoring: clausola 8.1, lettera a); PEC del 12 marzo 2031",
+      "pass_condition": "compare l'indicazione che l'avviso previsto dalla clausola 8.1 non è stato ricevuto.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.17",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica il 4 febbraio 2031 come data della comunicazione scritta di variazione del numero di telefono censito.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica il 4 febbraio 2031 come data della comunicazione scritta di variazione del numero di telefono censito.\nPASS se: compare «4 febbraio 2031» come data della comunicazione di variazione.; compare «04/02/2031» come data della comunicazione di variazione.\nFAIL se: è indicata una data diversa, oppure la comunicazione di variazione non è collocata nel tempo.\nÈ indifferente: l'indicazione del mezzo con cui la comunicazione è stata inviata.\nFonte di authoring: PEC del 12 marzo 2031",
+      "pass_condition": "compare «4 febbraio 2031» come data della comunicazione di variazione.; compare «04/02/2031» come data della comunicazione di variazione.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.18",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non afferma che il cliente ha omesso di comunicare la variazione del numero di telefono censito.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che il cliente ha omesso di comunicare la variazione del numero di telefono censito.\nPASS se: il deliverable non afferma che il cliente ha omesso di comunicare la variazione del numero di telefono censito.\nFAIL se: compare l'affermazione che il cliente non aveva comunicato la variazione del numero.\nÈ indifferente: il rilievo che la ricevuta di ritorno della raccomandata non è nel fascicolo.\nFonte di authoring: clausola 7.3; PEC del 12 marzo 2031",
+      "pass_condition": "il deliverable non afferma che il cliente ha omesso di comunicare la variazione del numero di telefono censito.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-08"
+    },
+    {
+      "id": "B.19",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable riporta come fatto provato dagli atti la comunicazione a terzi di identificativo, codice segreto e codice temporaneo del 27 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta come fatto provato dagli atti la comunicazione a terzi di identificativo, codice segreto e codice temporaneo del 27 febbraio 2031.\nPASS se: compare l'indicazione della comunicazione delle credenziali a terzi del 27 febbraio 2031.\nFAIL se: il fatto non è riportato, oppure è presentato come non provato.\nÈ indifferente: la descrizione tecnica delle modalità con cui l'inganno è avvenuto.\nFonte di authoring: PEC del 12 marzo 2031",
+      "pass_condition": "compare l'indicazione della comunicazione delle credenziali a terzi del 27 febbraio 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.20",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable riporta come fatto provato dagli atti che la Banca non è stata informata dell'episodio del 27 febbraio 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable riporta come fatto provato dagli atti che la Banca non è stata informata dell'episodio del 27 febbraio 2031.\nPASS se: compare l'indicazione che l'episodio non è stato comunicato alla Banca.\nFAIL se: il fatto non è riportato, oppure la Banca è presentata come informata.\nÈ indifferente: l'indicazione del soggetto interno che era stato informato.\nFonte di authoring: PEC del 12 marzo 2031; clausola 7.2",
+      "pass_condition": "compare l'indicazione che l'episodio non è stato comunicato alla Banca.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.21",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable qualifica la misura dell'incidenza della condotta del cliente sul danno come non determinabile con i dati del fascicolo.",
+      "match_criteria": "Oggetto del criterio: il deliverable qualifica la misura dell'incidenza della condotta del cliente sul danno come non determinabile con i dati del fascicolo.\nPASS se: compare, riferita alla misura dell'incidenza, una fra: «non determinabile con i dati disponibili», «richiede la documentazione tecnica non trasmessa», «non quantificabile sugli atti».\nFAIL se: la misura è quantificata, oppure la condotta è presentata come irrilevante, oppure la questione non è trattata. Una formulazione più vaga o parziale, o che cambia anche uno solo fra soggetti, valori, date e rapporto logico, conta come mancante.\nÈ indifferente: la scelta delle parole, purché resti la stessa proposizione, con gli stessi soggetti, valori, date e rapporto logico; il richiamo alla norma sul concorso del creditore.\nFonte di authoring: PEC del 12 marzo 2031; punto 5 della lettera del 20 marzo 2031",
+      "pass_condition": "compare, riferita alla misura dell'incidenza, una fra: «non determinabile con i dati disponibili», «richiede la documentazione tecnica non trasmessa», «non quantificabile sugli atti».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "judge",
+      "criterion_type": "qualificazione",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.22",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non afferma che la condotta del cliente esclude ogni pretesa nei confronti della Banca.",
+      "match_criteria": "Oggetto del criterio: il deliverable non afferma che la condotta del cliente esclude ogni pretesa nei confronti della Banca.\nPASS se: il deliverable non afferma che la condotta del cliente esclude ogni pretesa nei confronti della Banca.\nFAIL se: compare l'affermazione che la condotta del 27 febbraio 2031 esclude, preclude o estingue ogni pretesa del cliente.\nÈ indifferente: l'indicazione che la condotta riduce la pretesa in misura da determinare.\nFonte di authoring: punto 3 della lettera del 20 marzo 2031",
+      "pass_condition": "il deliverable non afferma che la condotta del cliente esclude ogni pretesa nei confronti della Banca.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-09"
+    },
+    {
+      "id": "B.23",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable rileva che la Banca non ha trasmesso la documentazione tecnica sull'autenticazione delle singole operazioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable rileva che la Banca non ha trasmesso la documentazione tecnica sull'autenticazione delle singole operazioni.\nPASS se: compare l'indicazione che la documentazione tecnica non è stata trasmessa.\nFAIL se: il rilievo non compare, oppure la documentazione è data per acquisita.\nÈ indifferente: la valutazione della motivazione addotta dalla Banca.\nFonte di authoring: punto 5 della lettera del 20 marzo 2031",
+      "pass_condition": "compare l'indicazione che la documentazione tecnica non è stata trasmessa.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-10"
+    },
+    {
+      "id": "B.24",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che il fascicolo non prova chi abbia materialmente impartito le disposizioni contestate.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il fascicolo non prova chi abbia materialmente impartito le disposizioni contestate.\nPASS se: compare, riferita all'autore materiale delle disposizioni, una fra: «non risulta dagli atti», «non provato dal fascicolo», «non determinabile con i documenti disponibili».\nFAIL se: l'autore materiale è indicato come accertato, oppure la lacuna non è dichiarata.\nÈ indifferente: le ipotesi sull'autore, se dichiarate come ipotesi.\nFonte di authoring: assenza di log di sessione nel fascicolo",
+      "pass_condition": "compare, riferita all'autore materiale delle disposizioni, una fra: «non risulta dagli atti», «non provato dal fascicolo», «non determinabile con i documenti disponibili».",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.25",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica quali elementi occorrono per accertare l'autore materiale delle disposizioni.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica quali elementi occorrono per accertare l'autore materiale delle disposizioni.\nPASS se: compare l'indicazione di almeno un elemento fra log di sessione, indirizzi di collegamento, identificativo del dispositivo e tracciato dei codici temporanei.\nFAIL se: la lacuna è dichiarata senza indicare che cosa serve per colmarla.\nÈ indifferente: il numero di elementi elencati.\nFonte di authoring: public/01_task.md, richiesta sui dati mancanti",
+      "pass_condition": "compare l'indicazione di almeno un elemento fra log di sessione, indirizzi di collegamento, identificativo del dispositivo e tracciato dei codici temporanei.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "I-11"
+    },
+    {
+      "id": "B.26",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable indica in euro 148.500,00 il totale delle operazioni disconosciute.",
+      "match_criteria": "Oggetto del criterio: il deliverable indica in euro 148.500,00 il totale delle operazioni disconosciute.\nPASS se: compare «euro 148.500,00» come totale delle operazioni disconosciute.; compare «148.500,00» come totale delle operazioni disconosciute.\nFAIL se: è indicato un totale diverso, oppure il totale non compare.\nÈ indifferente: l'indicazione del saldo progressivo.\nFonte di authoring: PEC del 12 marzo 2031; estratto conto",
+      "pass_condition": "compare «euro 148.500,00» come totale delle operazioni disconosciute.; compare «148.500,00» come totale delle operazioni disconosciute.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "esatta",
+      "criterion_type": "valore",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": false,
+      "source_issue_id": "I-12"
+    },
+    {
+      "id": "C.1",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non presenta come profilo di rischio la tempestivita della comunicazione del disconoscimento del 12 marzo 2031.",
+      "match_criteria": "Oggetto del criterio: il deliverable non presenta come profilo di rischio la tempestivita della comunicazione del disconoscimento del 12 marzo 2031.\nPASS se: il deliverable non presenta come profilo di rischio la tempestivita della comunicazione del disconoscimento del 12 marzo 2031.\nFAIL se: il ritardo o la tardività del disconoscimento compare fra i profili di rischio o fra gli argomenti opponibili al cliente.\nÈ indifferente: l'indicazione della data in cui il cliente ha avuto conoscenza delle operazioni.\nFonte di authoring: challenge map, N-01",
+      "pass_condition": "il deliverable non presenta come profilo di rischio la tempestivita della comunicazione del disconoscimento del 12 marzo 2031.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.2",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable afferma che il rilievo della Banca sulla tempestività della comunicazione non è fondato.",
+      "match_criteria": "Oggetto del criterio: il deliverable afferma che il rilievo della Banca sulla tempestività della comunicazione non è fondato.\nPASS se: compare, riferita al punto 4 della lettera del 20 marzo 2031, una fra: «il rilievo non è fondato», «la comunicazione è nei termini», «il termine è rispettato».\nFAIL se: il rilievo della Banca è presentato come fondato, oppure non è valutato.\nÈ indifferente: l'indicazione del numero di giorni intercorsi.\nFonte di authoring: punto 4 della lettera del 20 marzo 2031",
+      "pass_condition": "compare, riferita al punto 4 della lettera del 20 marzo 2031, una fra: «il rilievo non è fondato», «la comunicazione è nei termini», «il termine è rispettato».",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "span",
+      "criterion_type": "presenza",
+      "criterion_logic": "required_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-01"
+    },
+    {
+      "id": "C.3",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non include il bonifico stipendi di euro 96.420,00 del 3 marzo 2031 fra le operazioni contestate.",
+      "match_criteria": "Oggetto del criterio: il deliverable non include il bonifico stipendi di euro 96.420,00 del 3 marzo 2031 fra le operazioni contestate.\nPASS se: il deliverable non include il bonifico stipendi di euro 96.420,00 del 3 marzo 2031 fra le operazioni contestate.\nFAIL se: il bonifico stipendi compare fra le operazioni disconosciute o fra quelle disposte in difformità dal mandato.\nÈ indifferente: la menzione del bonifico stipendi come termine di confronto sull'autenticazione.\nFonte di authoring: challenge map, N-02",
+      "pass_condition": "il deliverable non include il bonifico stipendi di euro 96.420,00 del 3 marzo 2031 fra le operazioni contestate.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-02"
+    },
+    {
+      "id": "C.4",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "il deliverable non segnala come irregolarità il termine di risposta al reclamo osservato dalla Banca.",
+      "match_criteria": "Oggetto del criterio: il deliverable non segnala come irregolarità il termine di risposta al reclamo osservato dalla Banca.\nPASS se: il deliverable non segnala come irregolarità il termine di risposta al reclamo osservato dalla Banca.\nFAIL se: il tempo impiegato dalla Banca per rispondere al reclamo compare fra le irregolarità o fra i profili di rischio.\nÈ indifferente: la menzione della data della risposta nella cronologia.\nFonte di authoring: challenge map, N-03",
+      "pass_condition": "il deliverable non segnala come irregolarità il termine di risposta al reclamo osservato dalla Banca.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "N-03"
+    },
+    {
+      "id": "C.5",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "simmetria del controllo: il deliverable non tratta come provata l'assenza di autorizzazione mentre tratta come non provato l'autore materiale delle disposizioni.",
+      "match_criteria": "Oggetto del criterio: simmetria del controllo: il deliverable non tratta come provata l'assenza di autorizzazione mentre tratta come non provato l'autore materiale delle disposizioni.\nPASS se: simmetria del controllo: il deliverable non tratta come provata l'assenza di autorizzazione mentre tratta come non provato l'autore materiale delle disposizioni.\nFAIL se: l'assenza di autorizzazione è data per provata e nello stesso deliverable l'autore materiale è dichiarato non accertabile.\nÈ indifferente: l'ordine in cui i due punti sono trattati.\nFonte di authoring: estratto conto; PEC del 12 marzo 2031",
+      "pass_condition": "simmetria del controllo: il deliverable non tratta come provata l'assenza di autorizzazione mentre tratta come non provato l'autore materiale delle disposizioni.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-01"
+    },
+    {
+      "id": "C.6",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "divieto di presunzione dell'esito: il deliverable non afferma che la Banca sarà tenuta a rimborsare l'importo delle operazioni contestate.",
+      "match_criteria": "Oggetto del criterio: divieto di presunzione dell'esito: il deliverable non afferma che la Banca sarà tenuta a rimborsare l'importo delle operazioni contestate.\nPASS se: divieto di presunzione dell'esito: il deliverable non afferma che la Banca sarà tenuta a rimborsare l'importo delle operazioni contestate.\nFAIL se: compare l'affermazione che il rimborso è dovuto o che la Banca dovrà rimborsare l'importo.\nÈ indifferente: l'indicazione delle condizioni al verificarsi delle quali il rimborso sarebbe dovuto.\nFonte di authoring: clausole 18.2 e 18.4",
+      "pass_condition": "divieto di presunzione dell'esito: il deliverable non afferma che la Banca sarà tenuta a rimborsare l'importo delle operazioni contestate.",
+      "severity": "material",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-02"
+    },
+    {
+      "id": "C.7",
+      "scoring_type": "required",
+      "category": "legal",
+      "deliverables": [
+        "evidence_and_liability_memo.md"
+      ],
+      "title": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la destinazione estera dei conti dei due beneficiari.",
+      "match_criteria": "Oggetto del criterio: sovra-segnalazione: il deliverable non presenta come profilo di rischio la destinazione estera dei conti dei due beneficiari.\nPASS se: sovra-segnalazione: il deliverable non presenta come profilo di rischio la destinazione estera dei conti dei due beneficiari.\nFAIL se: la destinazione estera dei conti compare fra i profili di rischio autonomi o fra le irregolarità imputabili alla Banca.\nÈ indifferente: la menzione della destinazione estera nella descrizione delle operazioni.\nFonte di authoring: estratto conto",
+      "pass_condition": "sovra-segnalazione: il deliverable non presenta come profilo di rischio la destinazione estera dei conti dei due beneficiari.",
+      "severity": "significant",
+      "evaluation_mode": "judge",
+      "deterministic_checks": [],
+      "verification_class": "scansione",
+      "criterion_type": "assenza",
+      "criterion_logic": "prohibited_presence",
+      "evaluation_scope": "all_deliverables",
+      "source_judge": true,
+      "source_issue_id": "X-03"
+    }
+  ],
+  "migration": {
+    "source_key": "criteri",
+    "source_rubric_version": null
+  }
+}
