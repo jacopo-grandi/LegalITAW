@@ -19,7 +19,7 @@ def configure_logging() -> None:
 def add_judge_arguments(
     parser: argparse.ArgumentParser,
     *,
-    default_model: str,
+    default_model: str | None,
 ) -> None:
     """Add the shared adaptive-judge options to a parser."""
     parser.add_argument(

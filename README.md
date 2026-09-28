@@ -55,23 +55,21 @@ legalitaw run --model gpt-5.6-luna
 legalitaw run --model gpt-5.6-luna --tasks WF2-001 WF2-002 --max-agent-cost-usd 5
 ```
 
-Per valutare una run interna, una cartella esterna o uno ZIP con la terna di giudici:
+Per valutare una run interna, una cartella esterna o uno ZIP:
 
 ```bash
-legalitaw score results/agentic/<run> \
-  --judge-strategy paired_consensus \
-  --judge-a-provider typesafe  --judge-a-model jev-1.13.0 \
-  --judge-b-provider openai    --judge-b-model gpt-5.6-luna \
-  --judge-c-provider anthropic --judge-c-model claude-opus-5-5 \
-  --judge-batch-size 10 --judge-audit-sample-rate 0.05 \
-  --judge-context compact
+legalitaw score results/agentic/<run>
 ```
 
-La terna funziona così:
+Senza opzioni lo scoring usa la terna di giudici validata: servono `TYPESAFE_API_KEY`,
+`OPENAI_API_KEY` e `ANTHROPIC_API_KEY`. La terna funziona così:
 
 - Jev (A) e Luna (B) giudicano tutti i criteri.
 - Opus (C) arbitra i disaccordi, i PASS la cui citazione non si ritrova nella risposta e un
   campione di audit del 5%.
+- Il giudice vede il contesto compatto: i file testuali della busta pubblica, non i documenti.
+
+Ogni elemento si può cambiare con le opzioni `--judge-*` e `--judge-context` (vedi `docs/CLI.md`).
 
 Opzioni utili:
 

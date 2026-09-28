@@ -21,12 +21,8 @@ from .common import add_judge_arguments, configure_logging, judge_overrides
 
 
 def _add_scoring_arguments(parser: argparse.ArgumentParser) -> None:
-    add_judge_arguments(parser, default_model="gpt-5.6-luna")
-    parser.set_defaults(
-        judge_strategy="batched_single",
-        judge_a_provider="openai",
-        judge_batch_size=10,
-    )
+    # Senza flag si usa la terna di default (legalitaw.config).
+    add_judge_arguments(parser, default_model=None)
     parser.add_argument(
         "--reviewer",
         default=None,
@@ -48,8 +44,8 @@ def _add_scoring_arguments(parser: argparse.ArgumentParser) -> None:
         choices=("full", "compact"),
         default=None,
         help=(
-            "Contesto dato al judge: full = fascicolo pubblico completo (default), "
-            "compact = solo i file testuali della busta pubblica (incarico, reference pack, fonti)."
+            "Contesto dato al judge: compact = solo i file testuali della busta pubblica "
+            "(incarico, reference pack, fonti; default), full = fascicolo pubblico completo."
         ),
     )
 

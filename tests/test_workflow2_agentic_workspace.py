@@ -5,10 +5,12 @@ from __future__ import annotations
 from contextlib import redirect_stderr
 import io
 import json
+import os
 from pathlib import Path
 import tempfile
 from types import SimpleNamespace
 import unittest
+from unittest.mock import patch
 
 from legalitaw.benchmark.agentic_service import (
     generate_agentic_submission,
@@ -632,7 +634,8 @@ class Workflow2AgenticWorkspaceTest(unittest.TestCase):
             workspace.close()
 
     def test_judge_receives_public_evidence_but_no_private_envelope(self) -> None:
-        normalized = judge_task(self.task)
+        with patch.dict(os.environ, {"LEGALITA_JUDGE_CONTEXT": "full"}):
+            normalized = judge_task(self.task)
         self.assertEqual(len(normalized.criteria), 57)
         self.assertIn("Vetralia Componenti", normalized.query)
         self.assertLess(len(normalized.query), 150_000)

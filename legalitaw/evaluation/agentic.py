@@ -331,13 +331,13 @@ JUDGE_CONTEXT_MODES = ("full", "compact")
 
 
 def judge_context_mode() -> str:
-    """Judge context policy: ``full`` (public bundle, default) or ``compact``.
+    """Judge context policy: ``compact`` (default) or ``full`` (public bundle).
 
     ``compact`` sends only the public markdown inputs (assignment, reference
-    pack, template), never the documents: it keeps judge requests small enough
-    for providers with a hard request limit and costs about half as much.
+    pack, legal sources), never the documents: it keeps judge requests small
+    enough for providers with a hard request limit and costs about half as much.
     """
-    mode = os.environ.get(JUDGE_CONTEXT_ENV, "full").strip().casefold() or "full"
+    mode = os.environ.get(JUDGE_CONTEXT_ENV, "compact").strip().casefold() or "compact"
     if mode not in JUDGE_CONTEXT_MODES:
         raise ValueError(
             f"{JUDGE_CONTEXT_ENV}={mode!r} non valido: usare {', '.join(JUDGE_CONTEXT_MODES)}"

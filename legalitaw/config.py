@@ -31,7 +31,7 @@ JUDGE_MAX_TOKENS: int = int(os.environ.get("JUDGE_MAX_TOKENS", "3000"))
 JUDGE_RETRIES: int = 3
 TARGETED_AUDIT_BATCH_SIZE: int = int(os.environ.get("JUDGE_BATCH_SIZE", "10"))
 TARGETED_AUDIT_SAMPLE_RATE: float = float(
-    os.environ.get("JUDGE_AUDIT_SAMPLE_RATE", "0.10")
+    os.environ.get("JUDGE_AUDIT_SAMPLE_RATE", "0.05")
 )
 
 JUDGE_MODEL: str = "claude-sonnet-4-6"      # valutazione delle risposte
@@ -136,13 +136,16 @@ SUPPORTED_JUDGE_STRATEGIES: tuple[str, ...] = (
     "paired_consensus",
 )
 SUPPORTED_JUDGE_PROVIDERS: tuple[str, ...] = tuple(JUDGE_PROVIDER_CONFIG_BY_ID)
-DEFAULT_JUDGE_STRATEGY: JudgeStrategy = "adaptive_majority"
-DEFAULT_JUDGE_A_PROVIDER: JudgeProvider = "anthropic"
-DEFAULT_JUDGE_A_MODEL: str = JUDGE_MODEL
+# Terna validata (audit del 26 settembre 2026): Jev e Luna giudicano tutti i
+# criteri, Opus arbitra disaccordi, PASS con citazione non ritrovata e un
+# campione di audit del 5%. Vedi docs/AUDIT_TERNA_2026-09-26.md.
+DEFAULT_JUDGE_STRATEGY: JudgeStrategy = "paired_consensus"
+DEFAULT_JUDGE_A_PROVIDER: JudgeProvider = "typesafe"
+DEFAULT_JUDGE_A_MODEL: str = "jev-1.13.0"
 DEFAULT_JUDGE_B_PROVIDER: JudgeProvider = "openai"
-DEFAULT_JUDGE_B_MODEL: str = "gpt-5.5"
+DEFAULT_JUDGE_B_MODEL: str = "gpt-5.6-luna"
 DEFAULT_JUDGE_C_PROVIDER: JudgeProvider = "anthropic"
-DEFAULT_JUDGE_C_MODEL: str = "claude-opus-4-8"
+DEFAULT_JUDGE_C_MODEL: str = "claude-opus-5-5"
 
 
 @dataclass(frozen=True)

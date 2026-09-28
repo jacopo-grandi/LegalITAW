@@ -106,17 +106,19 @@ legalitaw score SOURCE
 - un file ZIP;
 - una directory prodotta dalla nuova CLI e accompagnata dal manifest v2.
 
-La configurazione diagnostica predefinita usa un solo judge:
+Senza opzioni lo scoring usa la terna di giudici validata:
 
 ```text
-strategy: batched_single
-provider: openai
-model: gpt-5.6-luna
+strategy: paired_consensus
+judge A: typesafe / jev-1.13.0
+judge B: openai / gpt-5.6-luna
+judge C: anthropic / claude-opus-5-5 (arbitro)
 batch size: 10
-reviewer: nessuno
+audit sample rate: 0.05
+judge context: compact
 ```
 
-Sonnet o un altro reviewer entra in gioco soltanto attraverso un'opzione esplicita. La scelta del judge, la strategia, i costi stimati e l'assenza di reviewer devono comparire nel manifest dello scoring.
+Ogni elemento si può sovrascrivere con le opzioni `--judge-*` e `--judge-context`, oppure con le variabili `JUDGE_STRATEGY`, `JUDGE_A_PROVIDER`, `JUDGE_A_MODEL` e analoghe. La configurazione dei giudici e i costi stimati compaiono nel manifest dello scoring.
 
 ## 5. Resolver universale dei risultati
 
@@ -210,7 +212,7 @@ Dettagli: preflight.json
 ```
 
 ```text
-Configurazione judge: gpt-5.6-luna, batched_single, nessun reviewer.
+Configurazione judge: paired_consensus, jev-1.13.0 + gpt-5.6-luna, arbitro claude-opus-5-5.
 Costo stimato: $X.XX. Checkpoint riutilizzabili: 61/93.
 ```
 

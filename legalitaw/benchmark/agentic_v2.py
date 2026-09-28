@@ -463,8 +463,8 @@ def _judge_payload(config: JudgeRuntimeConfig) -> dict[str, Any]:
             if config.strategy in {"targeted_audit", "paired_consensus"}
             else 0.0
         ),
-        # Presente solo fuori dal default, cosi' i checkpoint gia' scritti con
-        # il contesto completo restano validi.
+        # Presente solo con il contesto compatto (il default): i checkpoint
+        # scritti con il contesto completo, senza questa chiave, restano validi.
         **(
             {"judge_context": judge_context_mode()}
             if judge_context_mode() != "full"

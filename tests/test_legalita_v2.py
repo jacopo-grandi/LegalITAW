@@ -1,10 +1,12 @@
 import json
+import os
 import tempfile
 import unittest
 import zipfile
 from dataclasses import replace
 from pathlib import Path
 from types import SimpleNamespace
+from unittest.mock import patch
 
 from legalitaw.benchmark.agentic_service import persist_failed_run, persist_run
 from legalitaw.benchmark.agentic_v2 import (
@@ -482,13 +484,28 @@ class LegalitaV2CLITest(unittest.TestCase):
         )
         self.assertEqual(score_calls, [Path("/tmp/fixture-run")])
 
-    def test_default_cli_judge_has_no_reviewer(self) -> None:
+    def test_default_cli_judge_is_the_validated_terna(self) -> None:
         args = build_parser().parse_args(["score", "run", "--preflight-only"])
-        config = _runtime_config(args)
-        self.assertEqual(config.strategy, "batched_single")
-        self.assertEqual(config.judge_a.provider, "openai")
-        self.assertEqual(config.judge_a.model, "gpt-5.6-luna")
+        with patch.dict(os.environ, {}, clear=True):
+            config = _runtime_config(args)
+        self.assertEqual(config.strategy, "paired_consensus")
+        self.assertEqual(
+            (config.judge_a.provider, config.judge_a.model), ("typesafe", "jev-1.13.0")
+        )
+        self.assertEqual(
+            (config.judge_b.provider, config.judge_b.model), ("openai", "gpt-5.6-luna")
+        )
+        self.assertEqual(
+            (config.judge_c.provider, config.judge_c.model), ("anthropic", "claude-opus-5-5")
+        )
         self.assertEqual(config.batch_size, 10)
+        self.assertEqual(config.audit_sample_rate, 0.05)
+
+    def test_default_judge_context_is_compact(self) -> None:
+        from legalitaw.evaluation.agentic import judge_context_mode
+
+        with patch.dict(os.environ, {}, clear=True):
+            self.assertEqual(judge_context_mode(), "compact")
 
 
 if __name__ == "__main__":

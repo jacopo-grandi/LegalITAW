@@ -345,7 +345,7 @@ Una run interrotta conserva comunque `failure.json`, trace, metriche, manifest e
 
 ### 8.5 System benchmark e submission esterne
 
-La v2 confronta **sistemi completi** (modello + harness + tool). Una run esterna completa può essere valutata con `legalitaw score run.zip --model external-system`: il comando verifica le 100 submission, applica gli stessi criteri e produce uno score complessivo a peso uguale per task. Il default `targeted_audit` usa GPT-5.6 Luna come judge principale raggruppato e Claude Sonnet 4.6 come reviewer mirato su FAIL, anomalie di evidenza e campione stratificato. I report devono dichiarare se il confronto è a parità di harness (model benchmark) o fra combinazioni diverse (system benchmark). Esiste inoltre un bundle pubblico dei 100 task per test esterni, che contiene la sola busta pubblica.
+La v2 confronta **sistemi completi** (modello + harness + tool). Una run esterna completa può essere valutata con `legalitaw score run.zip --model external-system`: il comando verifica le 100 submission, applica gli stessi criteri e produce uno score complessivo a peso uguale per task. Lo scoring usa di default la terna di giudici descritta in §9.4. I report devono dichiarare se il confronto è a parità di harness (model benchmark) o fra combinazioni diverse (system benchmark). Esiste inoltre un bundle pubblico dei 100 task per test esterni, che contiene la sola busta pubblica.
 
 ---
 
@@ -388,9 +388,15 @@ Il judge riceve, per **un singolo criterio**: l'incarico pubblico (gli stessi fi
 
 **Contratto di evidenza `response_span_v1`.** Il judge deve indicare estratti esatti della risposta; il runtime li localizza nell'artefatto con offset e righe e verifica che stiano nello scope dichiarato. Omissioni e controlli di assenza sono registrati con lo scope effettivo senza creare falsi estratti; un estratto fuori dalla sezione dichiarata non è prova valida. Gli stati `invalid` (estratto non localizzabile o fuori scope) e `unavailable` (contratto non restituito) identificano un problema di evidenza **del judge**, tracciato a parte, e alimentano la diagnosi di `JUDGE_ERROR`.
 
-### 9.4 Panel adattivo 2-of-3
+### 9.4 Terna di giudici (`paired_consensus`)
 
-Configurazione predefinita `adaptive_majority`: Judge A e Judge B valutano indipendentemente lo stesso criterio; se concordano il verdetto è definitivo; se divergono o uno fallisce tecnicamente interviene Judge C; senza due voti validi concordi il criterio è **`unresolved`, non FAIL**. I judge predefiniti appartengono a due vendor diversi (A: `claude-sonnet-4-6`, B: `gpt-5.5`, C: `claude-opus-4-8`), scelta deliberata a tutela della credibilità: nessun judge è un modello proprietario di chi pubblica il benchmark, e non si fa finetuning del judge. La configurazione dei judge (modelli, prompt, hash) è versionata nel manifest di ogni run.
+La configurazione predefinita è `paired_consensus`, validata con l'audit del 26 settembre 2026 (`docs/AUDIT_TERNA_2026-09-26.md`):
+
+- Judge A (`jev-1.13.0`, TypeSafe) e Judge B (`gpt-5.6-luna`, OpenAI) valutano tutti i criteri, a lotti di dieci.
+- Judge C (`claude-opus-5-5`, Anthropic) arbitra, sempre a lotti di dieci, in tre casi: disaccordo fra A e B; PASS concorde la cui citazione non si ritrova nella risposta; campione di audit del 5% sugli accordi.
+- Il judge riceve il contesto compatto: i soli file testuali della busta pubblica (incarico, reference pack, fonti ammesse), non i documenti del fascicolo.
+
+I tre giudici appartengono a tre fornitori diversi: nessuno è un modello di chi pubblica il benchmark, e non si fa finetuning del judge. Sul campione dell'audit circa il 94% dei verdetti finali risulta corretto (intervallo plausibile 91-97%), con errori in entrambe le direzioni. La configurazione dei judge è registrata nel manifest dello scoring ed entra nel fingerprint dei checkpoint: cambiarla forza la rivalutazione.
 
 Un limite noto: l'accordo fra judge misura **affidabilità, non validità**. Su punti di nicchia del diritto italiano gli errori dei modelli non sono indipendenti, e la maggioranza può trasformare un errore correlato in consenso apparente. Per questo la calibrazione contro verdetti umani (§11) e il test avversariale con distractor e varianti accettate sono parte del metodo, non accessori.
 

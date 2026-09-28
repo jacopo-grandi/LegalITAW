@@ -6,8 +6,9 @@ from legalitaw.config import build_judge_runtime_config, validate_judge_runtime_
 
 
 class JudgeConfigTest(unittest.TestCase):
-    def test_defaults_are_adaptive_sonnet_gpt_opus(self) -> None:
+    def test_defaults_are_the_validated_terna(self) -> None:
         env = {
+            "TYPESAFE_API_KEY": "dummy",
             "ANTHROPIC_API_KEY": "dummy",
             "OPENAI_API_KEY": "dummy",
         }
@@ -15,17 +16,19 @@ class JudgeConfigTest(unittest.TestCase):
             config = build_judge_runtime_config()
             validate_judge_runtime_config(config)
 
-        self.assertEqual(config.strategy, "adaptive_majority")
-        self.assertEqual(config.judge_a.provider, "anthropic")
-        self.assertEqual(config.judge_a.model, "claude-sonnet-4-6")
+        self.assertEqual(config.strategy, "paired_consensus")
+        self.assertEqual(config.judge_a.provider, "typesafe")
+        self.assertEqual(config.judge_a.model, "jev-1.13.0")
         self.assertEqual(config.judge_b.provider, "openai")
-        self.assertEqual(config.judge_b.model, "gpt-5.5")
+        self.assertEqual(config.judge_b.model, "gpt-5.6-luna")
         self.assertEqual(config.judge_c.provider, "anthropic")
-        self.assertEqual(config.judge_c.model, "claude-opus-4-8")
+        self.assertEqual(config.judge_c.model, "claude-opus-5-5")
+        self.assertEqual(config.batch_size, 10)
+        self.assertEqual(config.audit_sample_rate, 0.05)
 
     def test_single_strategy_override_does_not_require_openai_key(self) -> None:
         env = {
-            "ANTHROPIC_API_KEY": "dummy",
+            "TYPESAFE_API_KEY": "dummy",
             "JUDGE_STRATEGY": "single",
         }
         with patch.dict(os.environ, env, clear=True):
@@ -33,7 +36,7 @@ class JudgeConfigTest(unittest.TestCase):
             validate_judge_runtime_config(config)
 
         self.assertEqual(config.strategy, "single")
-        self.assertEqual(config.judge_a.provider, "anthropic")
+        self.assertEqual(config.judge_a.provider, "typesafe")
 
     def test_identical_a_b_warns(self) -> None:
         env = {
