@@ -1,10 +1,10 @@
 import unittest
 
 from legalitaw.evaluation.scoring import score_task
-from legalitaw.schemas import BenchmarkTask, ConsensusResult, JudgeVote
+from legalitaw.schemas import ConsensusResult, Criterion, JudgeVote, WorkflowJudgeTask
 
 
-def make_task(task_id: str, *, include_bonus: bool = False) -> BenchmarkTask:
+def make_task(task_id: str, *, include_bonus: bool = False) -> WorkflowJudgeTask:
     criteria = [
         {
             "id": "C-001",
@@ -22,14 +22,10 @@ def make_task(task_id: str, *, include_bonus: bool = False) -> BenchmarkTask:
                 "scoring_type": "bonus",
             }
         )
-    return BenchmarkTask.model_validate(
-        {
-            "task_id": task_id,
-            "query": "Q",
-            "macro_area": "diritto_civile",
-            "source_ecli": "ECLI:IT:CASS:1968:3544CIV",
-            "criteria": criteria,
-        }
+    return WorkflowJudgeTask(
+        task_id=task_id,
+        query="Q",
+        criteria=[Criterion.model_validate(item) for item in criteria],
     )
 
 

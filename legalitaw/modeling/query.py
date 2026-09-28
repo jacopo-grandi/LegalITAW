@@ -31,7 +31,6 @@ from .request_config import (
     openai_uses_responses,
     request_config_for_summary,
 )
-from .routing import provider_for_model
 from .runtime import (
     ModelResponseError,
     anthropic_response_text,
@@ -121,10 +120,6 @@ def require_result_text(result: ModelCallResult) -> None:
         raise ValueError("Risposta vuota dal modello.")
 
 
-def query_anthropic(model: str, query: str) -> str:
-    return query_anthropic_with_metrics(model, query).text
-
-
 def query_anthropic_with_metrics(model: str, query: str) -> ModelCallResult:
     client = anthropic.Anthropic()
     started_at = time.perf_counter()
@@ -160,10 +155,6 @@ def query_anthropic_with_metrics(model: str, query: str) -> ModelCallResult:
 
 def default_anthropic_message_kwargs(model: str, query: str) -> dict[str, object]:
     return anthropic_message_kwargs(model, query, MODEL_MAX_TOKENS)
-
-
-def query_openai(model: str, query: str) -> str:
-    return query_openai_with_metrics(model, query).text
 
 
 def query_openai_with_metrics(model: str, query: str) -> ModelCallResult:
@@ -330,15 +321,3 @@ def query_novita_with_metrics(model: str, query: str) -> ModelCallResult:
     )
 
 
-def model_request_kwargs_for_summary(model: str) -> dict[str, object]:
-    try:
-        provider = provider_for_model(model)
-    except ValueError:
-        return {"model": model}
-    if provider == "novita":
-        return default_novita_completion_kwargs(model, "")
-    if provider == "gemini":
-        return default_gemini_completion_kwargs(model, "")
-    if provider == "anthropic":
-        return default_anthropic_message_kwargs(model, "")
-    return default_openai_completion_kwargs(model, "")

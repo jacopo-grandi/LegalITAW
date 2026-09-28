@@ -11,14 +11,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-from legalitaw.evaluation.agentic import evaluate_submission, evaluation_payload
+from legalitaw.evaluation.agentic import evaluation_payload
 from legalitaw.evaluation.judge import Judge, create_judge_from_config
-from legalitaw.agentic.bundle import build_public_bundle
 from legalitaw.agentic.generic_agent import generate_generic_agent_submission
 from legalitaw.agentic.models import LoadedWorkflowTask, WorkflowSubmission
 from legalitaw.agentic.submissions import (
-    SubmissionError,
-    parse_live_submission,
     save_submission,
 )
 from legalitaw.agentic.workspace import (
@@ -32,9 +29,7 @@ from legalitaw.config import (
     JudgeRuntimeConfig,
     validate_judge_runtime_config,
 )
-from legalitaw.modeling.gateway import ModelGateway, default_gateway
-from legalitaw.modeling.runtime import ModelResponseError
-from legalitaw.progress import progress_heartbeat
+from legalitaw.modeling.gateway import ModelGateway
 
 
 log = logging.getLogger(__name__)
@@ -70,44 +65,6 @@ class BundleRunFailure(RuntimeError):
         self.raw_response = raw_response
         self.execution_mode = "text_bundle"
         self.created_at = datetime.now(timezone.utc).isoformat()
-
-
-def _aggregate_bundle_metrics(
-    items: list[dict[str, Any]],
-    model: str,
-) -> dict[str, Any]:
-    if len(items) == 1:
-        return dict(items[0])
-
-    def total(name: str) -> int | None:
-        values = [
-            item.get(name)
-            for item in items
-            if isinstance(item.get(name), (int, float))
-        ]
-        return int(sum(values)) if values else None
-
-    costs = [
-        item.get("estimated_cost_usd")
-        for item in items
-        if isinstance(item.get("estimated_cost_usd"), (int, float))
-    ]
-    return {
-        "provider": next(
-            (item.get("provider") for item in items if item.get("provider")),
-            None,
-        ),
-        "model": model,
-        "call_count": len(items),
-        "latency_ms": total("latency_ms"),
-        "input_tokens": total("input_tokens"),
-        "output_tokens": total("output_tokens"),
-        "total_tokens": total("total_tokens"),
-        "cached_input_tokens": total("cached_input_tokens"),
-        "reasoning_tokens": total("reasoning_tokens"),
-        "estimated_cost_usd": sum(costs) if costs else None,
-        "per_call": items,
-    }
 
 
 def _decision_log_payload(entries: list[Any]) -> dict[str, Any]:
@@ -209,108 +166,6 @@ def create_judge(config: JudgeRuntimeConfig) -> Any:
     if config.strategy == "single" and config.judge_a.provider == "anthropic":
         return Judge(model=config.judge_a.model)
     return create_judge_from_config(config)
-
-
-def generate_submission(
-    task: LoadedWorkflowTask,
-    *,
-    model: str,
-    gateway: ModelGateway | None = None,
-    max_protocol_attempts: int = 2,
-) -> WorkflowSubmission:
-    if max_protocol_attempts < 1:
-        raise ValueError("max_protocol_attempts deve essere positivo")
-    bundle = build_public_bundle(task)
-    log.info(
-        "[%s] Task avviato — modello=%s, modalità=text_bundle_one_shot",
-        task.short_id,
-        model,
-    )
-    log.info(
-        "[%s] Bundle pubblico pronto — input=%d, caratteri=%d",
-        task.short_id,
-        len(task.spec.public_inputs),
-        len(bundle),
-    )
-    active_gateway = gateway or default_gateway()
-    call_metrics: list[dict[str, Any]] = []
-    raw_response: str | None = None
-    last_error: Exception | None = None
-    for attempt in range(1, max_protocol_attempts + 1):
-        prompt = bundle
-        if attempt > 1:
-            prompt += (
-                "\n\n<protocol_retry>La risposta precedente non rispettava il "
-                "protocollo JSON. Rigenera integralmente i deliverable e restituisci "
-                "soltanto l'oggetto JSON richiesto.</protocol_retry>"
-            )
-        log.info(
-            "[%s] Chiamata al modello avviata — tentativo=%d/%d",
-            task.short_id,
-            attempt,
-            max_protocol_attempts,
-        )
-        with progress_heartbeat(
-            log,
-            f"[{task.short_id}] Modello ancora in elaborazione",
-        ):
-            try:
-                # The protocol-attempt flag is the user-visible call budget.
-                # Hidden provider retries would silently multiply its cost.
-                result = active_gateway.complete(model, prompt, max_retries=1)
-            except ModelResponseError as exc:
-                call_metrics.append(dict(exc.metrics or {}))
-                raise BundleRunFailure(
-                    str(exc),
-                    task=task,
-                    model=model,
-                    raw_response=exc.raw_response,
-                    model_call_metrics=_aggregate_bundle_metrics(call_metrics, model),
-                ) from exc
-        if result is None:
-            last_error = RuntimeError(f"nessuna risposta valida dal modello {model}")
-            continue
-        raw_response = result.text
-        call_metrics.append(dict(result.metrics or {}))
-        metrics = _aggregate_bundle_metrics(call_metrics, model)
-        log.info(
-            "[%s] Risposta modello ricevuta — latenza_ms=%s, token=%s",
-            task.short_id,
-            (result.metrics or {}).get("latency_ms", "n.d."),
-            (result.metrics or {}).get("total_tokens", "n.d."),
-        )
-        try:
-            submission = parse_live_submission(
-                task,
-                model=model,
-                raw_response=result.text,
-                metrics=metrics,
-            )
-        except (SubmissionError, ValueError, OSError) as exc:
-            last_error = exc
-            log.warning(
-                "[%s] Protocollo output non valido — tentativo=%d/%d — %s",
-                task.short_id,
-                attempt,
-                max_protocol_attempts,
-                exc,
-            )
-            continue
-        log.info(
-            "[%s] Submission validata — artifact=%s",
-            task.short_id,
-            ", ".join(artifact.path for artifact in submission.artifacts),
-        )
-        return submission
-
-    metrics = _aggregate_bundle_metrics(call_metrics, model) if call_metrics else {}
-    raise BundleRunFailure(
-        str(last_error or "protocollo output non valido"),
-        task=task,
-        model=model,
-        raw_response=raw_response,
-        model_call_metrics=metrics,
-    ) from last_error
 
 
 def generate_agentic_submission(
@@ -559,18 +414,3 @@ def persist_failed_run(
     return directory
 
 
-def evaluate_and_persist(
-    task: LoadedWorkflowTask,
-    submission: WorkflowSubmission,
-    *,
-    judge: Any,
-    results_root: Path = AGENTIC_RESULTS_DIR,
-) -> tuple[Any, Path]:
-    score = evaluate_submission(task, submission, judge=judge)
-    directory = persist_run(
-        task,
-        submission,
-        score=score,
-        results_root=results_root,
-    )
-    return score, directory

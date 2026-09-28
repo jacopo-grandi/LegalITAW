@@ -7,7 +7,6 @@ LLM-as-judge adapters.
 from __future__ import annotations
 
 from copy import deepcopy
-from typing import Any
 
 
 OPENAI_REASONING_PREFIXES = ("gpt-5", "o1", "o3", "o4")

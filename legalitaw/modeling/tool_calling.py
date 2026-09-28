@@ -22,9 +22,6 @@ from legalitaw import config as benchmark_config
 from legalitaw.config import (
     AGENT_MAX_OUTPUT_TOKENS,
     AGENT_REASONING_EFFORT,
-    MODEL_MAX_TOKENS,
-    OPENAI_GENERATION_MAX_OUTPUT_TOKENS,
-    OPENAI_GENERATION_REASONING_EFFORT,
 )
 
 from .query import GEMINI_BASE_URL, NOVITA_BASE_URL
@@ -32,9 +29,7 @@ from .request_config import (
     ANTHROPIC_REASONING_PREFIXES,
     GEMINI_REASONING_PREFIXES,
     NOVITA_REASONING_PREFIXES,
-    OPENAI_MAX_SUPPORTED_REASONING_EFFORT,
     OPENAI_REASONING_PREFIXES,
-    PROVIDER_MAX_REASONING_EFFORT,
     openai_uses_responses,
 )
 from .routing import provider_for_model

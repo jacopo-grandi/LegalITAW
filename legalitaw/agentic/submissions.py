@@ -6,7 +6,6 @@ import base64
 import hashlib
 import json
 import re
-import tempfile
 import zipfile
 from pathlib import Path
 from xml.etree import ElementTree
@@ -14,7 +13,6 @@ from xml.etree import ElementTree
 from legalitaw.artifacts import write_json_atomic
 
 from .models import LoadedWorkflowTask, WorkflowArtifact, WorkflowSubmission
-from .native_artifacts import DOCX_MEDIA_TYPE, render_docx
 
 
 class SubmissionError(ValueError):
@@ -63,60 +61,6 @@ def validate_submission(
     # scored only when the public assignment asks for them; ingestion must not
     # reject an otherwise readable answer against a hidden runtime profile.
     return submission
-
-
-def parse_live_submission(
-    task: LoadedWorkflowTask,
-    *,
-    model: str,
-    raw_response: str,
-    metrics: dict | None = None,
-) -> WorkflowSubmission:
-    payload = _json_object(raw_response)
-    try:
-        artifacts: list[WorkflowArtifact] = []
-        for item in payload["artifacts"]:
-            artifact = WorkflowArtifact.model_validate(item)
-            if Path(artifact.path).suffix.casefold() == ".docx":
-                has_redline_markers = (
-                    "[[DEL:" in artifact.content or "[[INS:" in artifact.content
-                )
-                with tempfile.TemporaryDirectory(prefix="legalita-one-shot-") as tmp:
-                    path = Path(tmp) / Path(artifact.path).name
-                    render_docx(
-                        artifact.content,
-                        path,
-                        redline=has_redline_markers,
-                        preset=str(
-                            getattr(task.spec, "document_preset", None)
-                            or (
-                                "contract_negotiation_brief"
-                                if has_redline_markers
-                                else "standard_business_brief"
-                            )
-                        ),
-                        author=task.spec.task_id,
-                    )
-                    raw = path.read_bytes()
-                artifact = WorkflowArtifact(
-                    path=artifact.path,
-                    content=artifact.content,
-                    media_type=DOCX_MEDIA_TYPE,
-                    binary_base64=base64.b64encode(raw).decode("ascii"),
-                )
-            artifacts.append(artifact)
-    except (KeyError, TypeError, ValueError) as exc:
-        raise SubmissionError(f"protocollo artifacts non valido: {exc}") from exc
-    submission = WorkflowSubmission(
-        task_id=task.spec.task_id,
-        model=model,
-        source="live",
-        execution_mode="text_bundle",
-        artifacts=artifacts,
-        raw_response=raw_response,
-        model_call_metrics=metrics or {},
-    )
-    return validate_submission(task, submission)
 
 
 def _docx_comments(archive: zipfile.ZipFile, namespace: str) -> dict[str, tuple[str, str]]:

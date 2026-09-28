@@ -1,63 +1,20 @@
 """
-Modelli dati del benchmark.
+Modelli dati condivisi da giudici, scoring e risultati WF2.
 Tutti i moduli importano da qui — non duplicare strutture dati altrove.
 """
 
+from dataclasses import dataclass
 from typing import Literal
 
-from pydantic import BaseModel, Field, field_validator, model_validator
-
-from .taxonomy import normalize_macro_area
+from pydantic import BaseModel, Field, model_validator
 
 
 # ---------------------------------------------------------------------------
-# Corpus
-# ---------------------------------------------------------------------------
-
-class Provvedimento(BaseModel):
-    """
-    Singola sentenza o ordinanza della Corte di Cassazione,
-    caricata e validata dallo zip del corpus.
-    """
-    ecli_id:    str         # es. "ECLI_IT_CASS_2025_8915CIV"
-    macro_area: str         # slug canonico, es. "diritto_civile"
-    division:   str         # es. "Sez. 1"
-    legal_area: str         # "CIV" o "PEN"
-    doc_type:   str         # "SENT" o "ORD"
-    date:       str         # es. "20250226" — stringa grezza da metadata
-    facts:      str         # riassunto del caso
-    principles: list[str]   # massime giuridiche estratte
-    decision:   str         # dispositivo sintetico
-
-    @field_validator("decision", mode="before")
-    @classmethod
-    def empty_if_none(cls, v: str | None) -> str:
-        """Converte None in stringa vuota invece di lanciare errore."""
-        return v or ""
-
-    @field_validator("principles", mode="before")
-    @classmethod
-    def principles_not_empty(cls, v: list) -> list:
-        """Garantisce che la lista non sia None."""
-        return v or []
-
-    @field_validator("macro_area", mode="before")
-    @classmethod
-    def macro_area_is_canonical(cls, v: str) -> str:
-        """Accetta alias legacy ma salva sempre lo slug canonico."""
-        return normalize_macro_area(v, strict=True)
-
-
-# ---------------------------------------------------------------------------
-# Benchmark tasks
+# Criteri e task da giudicare
 # ---------------------------------------------------------------------------
 
 class Criterion(BaseModel):
-    """
-    Singolo criterio di valutazione nel task.json.
-    Corrisponde a un principle della sentenza sorgente,
-    riformulato in formato PASS/FAIL per il judge.
-    """
+    """Singolo criterio della rubrica, nella forma PASS/FAIL passata al judge."""
     id:             str   # es. "C-001"
     title:          str   # titolo breve del criterio
     match_criteria: str   # "PASS se... FAIL se..." — standard per il judge
@@ -71,24 +28,13 @@ class Criterion(BaseModel):
     scope_locator: str | None = None
 
 
-class BenchmarkTask(BaseModel):
-    """
-    Task completo nel formato Harvey LAB adattato per il benchmark italiano.
-    Serializzato come task.json nella cartella tasks/<macro_area>/<task_id>/.
-    """
-    task_id:     str            # es. "famiglia/prescrizione-nullita/001"
-    task_type:   str | None = None
-    query:       str            # query sintetica generata dal LLM
-    macro_area:  str            # slug canonico; task_id puo restare legacy
-    criteria:    list[Criterion]
-    source_ecli: str
-
-
-    @field_validator("macro_area", mode="before")
-    @classmethod
-    def macro_area_is_canonical(cls, v: str) -> str:
-        """Normalizza in memoria i task storici senza mutare task_id."""
-        return normalize_macro_area(v, strict=True)
+@dataclass(frozen=True)
+class WorkflowJudgeTask:
+    """Task WF2 normalizzato per il judge: incarico, contesto e criteri."""
+    task_id: str
+    query: str
+    criteria: list[Criterion]
+    task_type: str = "agentic_workflow"
 
 
 # ---------------------------------------------------------------------------
@@ -123,8 +69,6 @@ ConsensusMethod = Literal[
     "unresolved",
 ]
 ScoringStatus = Literal["complete", "incomplete"]
-CitationVerdict = Literal["pass", "fail", "nc", "unresolved", "not_applicable"]
-CitationScoringStatus = Literal["complete", "not_cited", "incomplete", "not_applicable"]
 
 
 class JudgeVote(BaseModel):
@@ -223,10 +167,7 @@ class CriterionResult(BaseModel):
 
 
 class TaskScore(BaseModel):
-    """
-    Output completo della valutazione per un singolo task.
-    Corrisponde a scores.json di Harvey LAB.
-    """
+    """Output completo della valutazione di un task (struttura derivata da Harvey LAB)."""
     task_id:          str
     model:            str               # es. "gpt-4o", "claude-sonnet-4-6"
     model_output:     str               # risposta integrale del modello sotto esame
@@ -240,43 +181,6 @@ class TaskScore(BaseModel):
     model_call_estimated_cost_usd: float | None = Field(default=None, ge=0)
     model_call_cost_source: str | None = None
     model_call_usage: dict[str, object] = Field(default_factory=dict)
-    citation_results: list[dict] = Field(default_factory=list)
-    citation_counts:  dict[str, int] = Field(default_factory=dict)
-    citation_hard_fail: bool = False
-    citation_registry_built_at: str | None = None
-    citation_registry_index_name: str | None = None
-    citation_score: float | None = None
-    citation_coverage_score: float | None = None
-    citation_relevance_score: float | None = None
-    citation_fabrication_rate: float | None = None
-    citation_score_bounds: dict[str, float | None] = Field(default_factory=dict)
-    citation_coverage_bounds: dict[str, float | None] = Field(default_factory=dict)
-    citation_relevance_bounds: dict[str, float | None] = Field(default_factory=dict)
-    citation_verdict: CitationVerdict = "unresolved"
-    citation_scoring_status: CitationScoringStatus = "incomplete"
-    citation_gold_count: int = 0
-    citation_required_count: int = 0
-    citation_required_matched_count: int = 0
-    citation_required_missing_count: int = 0
-    citation_required_unresolved_count: int = 0
-    citation_acceptable_count: int = 0
-    citation_acceptable_matched_count: int = 0
-    citations_extracted_count: int = 0
-    citations_matched_gold_count: int = 0
-    citations_relevant_count: int = 0
-    citations_outside_gold_count: int = 0
-    citations_fabricated_count: int = 0
-    citations_unresolved_count: int = 0
-    citation_evaluation_error: str | None = None
-    citation_extraction_status: str | None = None
-    citation_extraction_error_count: int = 0
-    citation_extraction_diagnostics: dict[str, object] = Field(default_factory=dict)
-    citation_extraction_attempt_diagnostics: list[dict[str, object]] = Field(default_factory=list)
-    citation_failure_reasons: list[str] = Field(default_factory=list)
-    citation_unresolved_reasons: list[str] = Field(default_factory=list)
-    citation_coverage: dict[str, object] = Field(default_factory=dict)
-    citation_relevance: dict[str, object] = Field(default_factory=dict)
-    citation_existence: dict[str, object] = Field(default_factory=dict)
     evaluation_error: str | None = None
     score:            float | None      # 1.0 se all-pass, 0.0 altrimenti, None se incompleto
     all_pass:         bool | None

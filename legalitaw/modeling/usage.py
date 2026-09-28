@@ -172,39 +172,6 @@ def with_model_call_metrics(score: Any, metrics: dict[str, Any] | None) -> Any:
     return score
 
 
-def score_model_dump(score: Any, *, include_model_call_fields: bool = True) -> dict[str, Any]:
-    if hasattr(score, "model_dump"):
-        data = score.model_dump()
-    else:
-        data = dict(score)
-    if not include_model_call_fields:
-        for field in MODEL_CALL_SCORE_FIELDS:
-            data.pop(field, None)
-    return data
-
-
-def aggregate_model_call_metrics(scores: list[Any]) -> dict[str, Any]:
-    latencies = _numeric_values(scores, "model_call_latency_ms")
-    costs = _numeric_values(scores, "model_call_estimated_cost_usd")
-    return {
-        "model_call_count": sum(
-            1 for score in scores if getattr(score, "model_call_latency_ms", None) is not None
-        ),
-        "model_call_total_latency_ms": int(sum(latencies)) if latencies else 0,
-        "model_call_mean_latency_ms": (sum(latencies) / len(latencies)) if latencies else None,
-        "model_call_input_tokens": int(sum(_numeric_values(scores, "model_call_input_tokens"))),
-        "model_call_output_tokens": int(sum(_numeric_values(scores, "model_call_output_tokens"))),
-        "model_call_total_tokens": int(sum(_numeric_values(scores, "model_call_total_tokens"))),
-        "model_call_cached_input_tokens": int(
-            sum(_numeric_values(scores, "model_call_cached_input_tokens"))
-        ),
-        "model_call_reasoning_tokens": int(
-            sum(_numeric_values(scores, "model_call_reasoning_tokens"))
-        ),
-        "model_call_estimated_cost_usd": sum(costs) if costs else None,
-    }
-
-
 def estimate_cost_usd(
     *,
     provider: str,
@@ -289,14 +256,3 @@ def _int_or_none(value: Any) -> int | None:
         return None
 
 
-def _numeric_values(items: list[Any], attr: str) -> list[float]:
-    values = []
-    for item in items:
-        value = getattr(item, attr, None)
-        if value is None:
-            continue
-        try:
-            values.append(float(value))
-        except (TypeError, ValueError):
-            continue
-    return values

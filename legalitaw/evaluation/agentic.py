@@ -3,7 +3,6 @@
 from __future__ import annotations
 
 import base64
-from dataclasses import dataclass
 import logging
 import os
 import re
@@ -13,26 +12,26 @@ from legalitaw.agentic.bundle import build_public_bundle
 from legalitaw.agentic.native_artifacts import docx_features
 from legalitaw.agentic.models import (
     LoadedWorkflowTask,
+    WorkflowArtifact,
     WorkflowCriterion,
     WorkflowSubmission,
 )
 from legalitaw.agentic.submissions import submission_text, validate_submission
 from legalitaw.modeling.usage import with_model_call_metrics
 from legalitaw.progress import progress_heartbeat
-from legalitaw.schemas import Criterion, CriterionResult, ResponseEvidence, TaskScore
+from legalitaw.schemas import (
+    Criterion,
+    CriterionResult,
+    ResponseEvidence,
+    TaskScore,
+    WorkflowJudgeTask,
+)
 
 from .scoring import score_task
 
 
 log = logging.getLogger(__name__)
 
-
-@dataclass(frozen=True)
-class WorkflowJudgeTask:
-    task_id: str
-    query: str
-    criteria: list[Criterion]
-    task_type: str = "agentic_workflow"
 
 
 _EVIDENCE_CHARACTER_EQUIVALENTS = str.maketrans(
@@ -1114,7 +1113,7 @@ def evaluate_submission(
         f"[{task.short_id}] Evaluation ancora in corso",
     ):
         score = score_task(
-            judge_task(task),  # type: ignore[arg-type]
+            judge_task(task),
             submission_text(submission),
             submission.model,
             judge=judge,

@@ -1,9 +1,5 @@
 """Scoring di un task WF2: verdetti per criterio e aggregati all-pass.
 
-Il flusso agentico WF2 non usa il citation grounding su indice esterno: i
-campi ``citation_*`` di ``TaskScore`` restano valorizzati come "disabilitato"
-per mantenere lo stesso formato dei risultati.
-
 Struttura adattata da Harvey LAB (MIT).
 """
 
@@ -14,24 +10,10 @@ from datetime import datetime, timezone
 from typing import Any
 
 from legalitaw.evaluation.judge import Judge
-from legalitaw.schemas import BenchmarkTask, ConsensusResult, CriterionResult, JudgeVote, TaskScore
+from legalitaw.schemas import ConsensusResult, CriterionResult, JudgeVote, TaskScore, WorkflowJudgeTask
 
 log = logging.getLogger(__name__)
 
-# Stati pubblici del vecchio citation grounding: servono solo a produrre
-# ``citation_counts`` a zero, identico ai risultati storici.
-PUBLIC_CITATION_STATUSES = (
-    "resolved_pinecone_exact",
-    "resolved_pinecone_incomplete",
-    "resolved_pinecone_metadata_mismatch",
-    "ambiguous_pinecone",
-    "not_found_in_index",
-    "suspected_fabricated",
-    "confirmed_fabricated",
-    "outside_index_scope",
-    "resolver_error",
-    "citation_extraction_error",
-)
 
 
 def criterion_result_from_judge_output(
@@ -259,7 +241,7 @@ def _log_criterion_consensus(
 
 
 def score_task(
-        task: BenchmarkTask,
+        task: WorkflowJudgeTask,
         model_output: str,
         model: str,
         judge: Judge | None = None,
@@ -267,9 +249,6 @@ def score_task(
     """Valuta la risposta di un modello su un singolo task, criterio per criterio."""
     if judge is None:
         judge = Judge()
-
-    citation_counts = {status: 0 for status in PUBLIC_CITATION_STATUSES}
-    citation_context = None
 
     criteria_results: list[CriterionResult] = []
     n_passed = 0
@@ -289,7 +268,7 @@ def score_task(
             task_description=task.query,
             agent_output=model_output,
             criteria=task.criteria,
-            citation_context=citation_context,
+            citation_context=None,
         )
 
     for criterion_position, criterion in enumerate(task.criteria, start=1):
@@ -301,7 +280,7 @@ def score_task(
                 agent_output=model_output,
                 criterion_title=criterion.title,
                 match_criteria=criterion.match_criteria,
-                citation_context=citation_context,
+                citation_context=None,
             )
         )
         criterion_result = criterion_result_from_judge_output(
@@ -385,11 +364,6 @@ def score_task(
         task_id=task.task_id,
         model=model,
         model_output=model_output,
-        citation_results=[],
-        citation_counts=citation_counts,
-        citation_verdict="not_applicable",
-        citation_scoring_status="not_applicable",
-        citation_extraction_status="disabled",
         evaluation_error=None,
         score=score,
         all_pass=all_pass,

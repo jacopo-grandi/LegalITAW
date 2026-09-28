@@ -10,29 +10,6 @@ from .workspace import (
 )
 
 
-def _fallback_by_stem(task: LoadedWorkflowTask) -> dict[str, str]:
-    return {
-        fallback.rsplit("/", 1)[-1].rsplit(".", 1)[0]: fallback
-        for fallback in task.spec.fallback_paths
-    }
-
-
-def public_text_paths(task: LoadedWorkflowTask) -> list[str]:
-    """Return canonical textual counterparts for every declared public input."""
-    fallbacks = _fallback_by_stem(task)
-    selected: list[str] = []
-    for relative in public_envelope_paths(task):
-        if relative.lower().endswith(".docx"):
-            stem = relative.rsplit("/", 1)[-1].rsplit(".", 1)[0]
-            fallback = fallbacks.get(stem)
-            if fallback is None:
-                raise ValueError(f"fallback Markdown mancante per {relative}")
-            relative = fallback
-        if relative not in selected:
-            selected.append(relative)
-    return selected
-
-
 def build_public_bundle(task: LoadedWorkflowTask) -> str:
     validate_runtime_capabilities(task, execution_mode="text_bundle")
     files: list[str] = []

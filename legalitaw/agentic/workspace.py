@@ -1090,11 +1090,6 @@ class MatterWorkspace:
             for item in self.decision_log
         )
 
-    def submitted_artifact(self) -> WorkflowArtifact:
-        artifacts = self.submitted_artifacts()
-        if not artifacts:
-            raise WorkspaceError("nessun artifact sottoposto")
-        return artifacts[0]
 
     def submitted_artifacts(self) -> list[WorkflowArtifact]:
         artifacts: list[WorkflowArtifact] = []
@@ -1221,32 +1216,6 @@ questo prompt e devono essere individuati e letti attraverso i tool.
 Restituisci esclusivamente il prossimo oggetto JSON di tool call. Non aggiungere
 testo o markdown esterno al JSON.
 </legalita_agentic_workspace>"""
-
-
-def build_workspace_evaluation_bundle(task: LoadedWorkflowTask) -> str:
-    """Materialize the public evidence for judges after submission freeze."""
-    workspace = MatterWorkspace(task)
-    try:
-        files: list[str] = []
-        for relative in public_envelope_paths(task):
-            pages = workspace.document_pages(relative)
-            content = "\n\n".join(
-                f"[PAGINA {index}]\n{page}"
-                for index, page in enumerate(pages, start=1)
-            )
-            files.append(
-                f'<public_file path="{relative}">\n{content.strip()}\n</public_file>'
-            )
-        return "\n\n".join(
-            [
-                f'<legalita_workflow_task id="{task.spec.task_id}" '
-                f'family="{task.spec.workflow_family}" subtask="{task.spec.subtask}">',
-                *files,
-                "</legalita_workflow_task>",
-            ]
-        )
-    finally:
-        workspace.close()
 
 
 def _aggregate_metrics(items: list[dict[str, Any]], model: str) -> dict[str, Any]:

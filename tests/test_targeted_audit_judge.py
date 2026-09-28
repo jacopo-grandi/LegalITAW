@@ -2,7 +2,7 @@ import unittest
 
 from legalitaw.evaluation.judge import TargetedAuditJudge
 from legalitaw.evaluation.scoring import score_task
-from legalitaw.schemas import BenchmarkTask, Criterion, JudgeVote
+from legalitaw.schemas import Criterion, JudgeVote, WorkflowJudgeTask
 
 
 def criteria(count: int, *, category: str = "legal") -> list[Criterion]:
@@ -90,11 +90,9 @@ class TargetedAuditJudgeTest(unittest.TestCase):
             batch_size=10,
             audit_sample_rate=0,
         )
-        task = BenchmarkTask(
+        task = WorkflowJudgeTask(
             task_id="WF2-001",
             query="Q",
-            macro_area="diritto_civile",
-            source_ecli="",
             criteria=criteria(11),
         )
 
