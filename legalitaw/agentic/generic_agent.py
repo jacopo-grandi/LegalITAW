@@ -785,6 +785,14 @@ class GenericAgentWorkspace:
 
 # Un turno chiuso per limite di lunghezza non e' una scelta del modello di fermarsi.
 TRUNCATION_STOP_REASONS = frozenset({"length", "max_tokens", "incomplete"})
+# Turni consecutivi troncati al limite di output che l'harness lascia proseguire
+# prima di chiudere la run. Stessa regola per tutti i modelli.
+MAX_CONSECUTIVE_TRUNCATIONS = 3
+TRUNCATION_NOTICE = (
+    "[harness] Your previous response reached the output token limit before it "
+    "produced a tool call, so it was cut off and nothing was executed. Continue "
+    "the task from where the workspace stands."
+)
 READABLE_DOCUMENT_SUFFIXES = frozenset({".pdf", ".docx", ".xlsx", ".eml"})
 
 
@@ -917,6 +925,8 @@ def generate_generic_agent_submission(
     started = time.monotonic()
     active_gateway = gateway or default_native_tool_gateway()
     external_stop: tuple[str, str] = ("turn_limit", "")
+    truncations = 0
+    consecutive_truncations = 0
 
     def _completed(
         termination_reason: str,
@@ -940,6 +950,7 @@ def generate_generic_agent_submission(
             "external_stop": termination_reason.endswith("_with_artifacts"),
             "elapsed_seconds": round(time.monotonic() - started, 1),
             "artifact_count": len(artifacts),
+            "output_truncations": truncations,
         }
         return WorkflowSubmission(
             task_id=task.spec.task_id,
@@ -992,8 +1003,20 @@ def generate_generic_agent_submission(
                     f"${accumulated_cost:.6f} > ${max_cost_usd:.6f}",
                 )
                 break
+            truncated = str(turn.stop_reason or "").casefold() in TRUNCATION_STOP_REASONS
+            if truncated:
+                truncations += 1
+            if not turn.tool_calls and truncated and consecutive_truncations < MAX_CONSECUTIVE_TRUNCATIONS:
+                # Il turno si è fermato al limite di output (di solito tutto ragionamento):
+                # non è una scelta di chiudere, quindi si prosegue con un avviso neutro.
+                consecutive_truncations += 1
+                if not (messages[-1].get("content") or "").strip():
+                    messages.pop()  # turno assistant vuoto: le API non lo accettano
+                messages.append({"role": "user", "content": TRUNCATION_NOTICE})
+                continue
+            if turn.tool_calls:
+                consecutive_truncations = 0
             if not turn.tool_calls:
-                truncated = str(turn.stop_reason or "").casefold() in TRUNCATION_STOP_REASONS
                 artifacts = workspace.artifacts()
                 if not artifacts:
                     if truncated:
@@ -1002,8 +1025,9 @@ def generate_generic_agent_submission(
                             "risposta del modello troncata al limite di token di output "
                             f"(stop_reason={turn.stop_reason}, output_tokens="
                             f"{last.get('output_tokens')}, reasoning_tokens="
-                            f"{last.get('reasoning_tokens')}) prima di creare artifact in "
-                            "/output: aumentare MODEL_MAX_TOKENS"
+                            f"{last.get('reasoning_tokens')}) per {consecutive_truncations + 1} "
+                            "turni consecutivi, prima di creare artifact in /output: "
+                            "aumentare AGENT_MAX_OUTPUT_TOKENS"
                         )
                     raise WorkspaceError(
                         "il modello ha terminato senza creare artifact in /output"

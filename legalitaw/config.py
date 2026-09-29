@@ -349,7 +349,10 @@ OPENAI_GENERATION_REASONING_EFFORT: str = os.environ.get(
 # ragionamento e risposta si sommano. "high" e' accettato da OpenAI, Anthropic
 # e dai modelli OpenAI-compatible di Novita/Gemini. Sovrascrivibili da env.
 AGENT_REASONING_EFFORT: str = os.environ.get("AGENT_REASONING_EFFORT", "high").strip()
-AGENT_MAX_OUTPUT_TOKENS: int = int(os.environ.get("AGENT_MAX_OUTPUT_TOKENS", "32768"))
+# 65.536 dal 29 set 2026 (prima 32.768): a 32.768 DeepSeek V4 Flash esauriva il
+# budget nel solo ragionamento. Un limite che frena solo alcuni modelli non è
+# una condizione uguale per tutti.
+AGENT_MAX_OUTPUT_TOKENS: int = int(os.environ.get("AGENT_MAX_OUTPUT_TOKENS", "65536"))
 
 # Numero massimo di tentativi per query a un modello sotto esame.
 MODEL_RETRIES: int = 3

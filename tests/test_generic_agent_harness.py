@@ -300,9 +300,54 @@ class GenericAgentHarnessChecks(unittest.TestCase):
                     self.task,
                     model="fixture-native-agent",
                     gateway=TruncatingGateway(),
-                    max_turns=3,
+                    max_turns=10,
                     timeout_seconds=60,
                 )
+
+    def test_truncated_turn_is_continued_and_counted(self) -> None:
+        class RecoveringGateway:
+            def __init__(self):
+                self.calls = 0
+                self.seen: list[list[dict]] = []
+
+            def complete(self, model, *, system_prompt, messages, tools, timeout_seconds=None):
+                self.calls += 1
+                self.seen.append([dict(m) for m in messages])
+                if self.calls == 1:
+                    return NativeAgentTurn(
+                        tool_calls=[],
+                        metrics={"output_tokens": 65536, "reasoning_tokens": 65536},
+                        stop_reason="length",
+                    )
+                if self.calls == 2:
+                    return NativeAgentTurn(
+                        tool_calls=[
+                            NativeToolCall(
+                                id="w",
+                                name="write",
+                                arguments={"path": "/output/memo.md", "content": "# Memo"},
+                            )
+                        ],
+                        metrics={"output_tokens": 10},
+                        stop_reason="tool_use",
+                    )
+                return NativeAgentTurn(text="Fatto.", tool_calls=[], metrics={}, stop_reason="end_turn")
+
+        gateway = RecoveringGateway()
+        with patch.object(GenericAgentWorkspace, "require_safe_bash", return_value=None):
+            submission = generate_generic_agent_submission(
+                self.task,
+                model="fixture-native-agent",
+                gateway=gateway,
+                max_turns=10,
+                timeout_seconds=60,
+            )
+        self.assertEqual(submission.artifacts[0].path, "memo.md")
+        self.assertEqual(submission.workspace_manifest["output_truncations"], 1)
+        second_request = gateway.seen[1]
+        self.assertEqual(second_request[-1]["role"], "user")
+        self.assertIn("output token limit", second_request[-1]["content"])
+        self.assertNotIn("assistant", [m["role"] for m in second_request])
 
     def test_compact_judge_context_excludes_documents(self) -> None:
         import os

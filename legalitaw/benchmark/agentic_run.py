@@ -34,6 +34,7 @@ JUDGE_TOKEN_PRICES_USD_PER_MTOK: dict[str, tuple[float, float]] = {
     "claude-sonnet-5-5": (2.00, 10.00),
     # Novita, fonte di terze parti al 25 set 2026: da verificare sul listino Novita
     "deepseek/deepseek-v4-pro": (1.60, 3.20),
+    "deepseek/deepseek-v4-flash": (0.14, 0.28),
     "jev-latest": (0.042, 0.0),
     "jev-1.13.0": (0.042, 0.0),
 }

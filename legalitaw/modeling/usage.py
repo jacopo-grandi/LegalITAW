@@ -27,6 +27,10 @@ DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
     "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "cache_write_input": 3.75, "output": 15.00},
     # OpenAI: input e output come nella tabella dei giudici; cache stimata al 10% dell'input
     "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
+    # Novita, API /openai/models al 29 set 2026 (prezzi in 1/10.000 USD per milione);
+    # prezzo della cache non pubblicato: l'input in cache si conta a prezzo pieno
+    "deepseek/deepseek-v4-flash": {"input": 0.14, "output": 0.28},
+    "deepseek/deepseek-v4-pro": {"input": 1.60, "output": 3.20},
 }
 
 MODEL_CALL_SCORE_FIELDS = (
