@@ -747,8 +747,10 @@ class GenericAgentWorkspace:
             suffix = path.suffix.casefold()
             media_type = mimetypes.guess_type(path.name)[0] or "application/octet-stream"
             if suffix in {".md", ".txt", ".csv", ".json", ".html", ".xml"}:
-                content = path.read_text(encoding="utf-8")
-                binary = False
+                content = raw.decode("utf-8", errors="replace")
+                # application/json e application/xml non sono text/*: senza il
+                # binario il modello dell'artifact li rifiuta e il task fallirebbe
+                binary = not media_type.startswith("text/")
             elif suffix in {".docx", ".pdf"}:
                 content = _read_artifact(path)
                 binary = True
@@ -771,6 +773,13 @@ class GenericAgentWorkspace:
                         f"bytes={len(raw)}; sha256={hashlib.sha256(raw).hexdigest()}]"
                     )
                     binary = True
+            if not content.strip():
+                if not binary:
+                    continue  # file di testo vuoto: non è un deliverable
+                content = (
+                    f"[binary artifact senza testo estraibile: {relative}; "
+                    f"media_type={media_type}; bytes={len(raw)}]"
+                )
             artifacts.append(
                 WorkflowArtifact(
                     path=relative,

@@ -520,5 +520,22 @@ class GenericAgentHarnessChecks(unittest.TestCase):
             external.parent.rmdir()
 
 
+    def test_artifact_collector_accepts_json_xml_and_skips_empty_files(self) -> None:
+        workspace = GenericAgentWorkspace(self.task)
+        try:
+            (workspace.output / "nota_docx").mkdir()
+            (workspace.output / "nota_docx/[Content_Types].xml").write_text("<Types/>", encoding="utf-8")
+            (workspace.output / "dati.json").write_text('{"a": 1}', encoding="utf-8")
+            (workspace.output / "vuoto.md").write_text("", encoding="utf-8")
+            (workspace.output / "memo.md").write_text("# Memo", encoding="utf-8")
+            artifacts = {artifact.path: artifact for artifact in workspace.artifacts()}
+        finally:
+            workspace.close()
+        self.assertEqual(
+            set(artifacts), {"nota_docx/[Content_Types].xml", "dati.json", "memo.md"}
+        )
+        self.assertEqual(artifacts["dati.json"].content, '{"a": 1}')
+        self.assertIsNotNone(artifacts["dati.json"].binary_base64)
+
 if __name__ == "__main__":
     unittest.main()
