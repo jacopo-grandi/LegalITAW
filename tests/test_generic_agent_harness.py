@@ -537,5 +537,20 @@ class GenericAgentHarnessChecks(unittest.TestCase):
         self.assertEqual(artifacts["dati.json"].content, '{"a": 1}')
         self.assertIsNotNone(artifacts["dati.json"].binary_base64)
 
+    def test_unreadable_docx_is_kept_as_unreadable_artifact(self) -> None:
+        import zipfile
+
+        workspace = GenericAgentWorkspace(self.task)
+        try:
+            with zipfile.ZipFile(workspace.output / "nota.docx", "w") as archive:
+                archive.writestr("word/document.xml", "<w:document><w:body/></w:document>")
+            (workspace.output / "memo.md").write_text("# Memo", encoding="utf-8")
+            artifacts = {artifact.path: artifact for artifact in workspace.artifacts()}
+        finally:
+            workspace.close()
+        self.assertIn("memo.md", artifacts)
+        self.assertTrue(artifacts["nota.docx"].content.startswith("[artifact non leggibile"))
+        self.assertIsNotNone(artifacts["nota.docx"].binary_base64)
+
 if __name__ == "__main__":
     unittest.main()

@@ -751,17 +751,25 @@ class GenericAgentWorkspace:
                 # application/json e application/xml non sono text/*: senza il
                 # binario il modello dell'artifact li rifiuta e il task fallirebbe
                 binary = not media_type.startswith("text/")
-            elif suffix in {".docx", ".pdf"}:
-                content = _read_artifact(path)
+            elif suffix in {".docx", ".pdf", ".xlsx", ".pptx"}:
                 binary = True
-            elif suffix == ".xlsx":
-                from .workspace import _xlsx_pages
+                try:
+                    if suffix == ".xlsx":
+                        from .workspace import _xlsx_pages
 
-                content = "\n\n".join(_xlsx_pages(path))
-                binary = True
-            elif suffix == ".pptx":
-                content = _pptx_text(path)
-                binary = True
+                        content = "\n\n".join(_xlsx_pages(path))
+                    elif suffix == ".pptx":
+                        content = _pptx_text(path)
+                    else:
+                        content = _read_artifact(path)
+                except Exception as exc:
+                    # file consegnato ma non apribile: resta nella consegna (i
+                    # giudici vedono che è illeggibile) senza far fallire il task
+                    # e senza perdere gli altri deliverable
+                    content = (
+                        f"[artifact non leggibile: {relative}; media_type={media_type}; "
+                        f"bytes={len(raw)}; errore: {type(exc).__name__}: {str(exc)[:200]}]"
+                    )
             else:
                 try:
                     content = raw.decode("utf-8")
