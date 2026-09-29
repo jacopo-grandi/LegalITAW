@@ -306,6 +306,7 @@ def _with_cache_breakpoints(messages: list[dict[str, Any]]) -> list[dict[str, An
 # credito o di autenticazione (401, 402, 403) non si ritentano.
 TRANSIENT_RETRY_ATTEMPTS = 10
 TRANSIENT_RETRY_MAX_DELAY_SECONDS = 120.0
+PER_CALL_TIMEOUT_SECONDS = float(os.environ.get("AGENT_CALL_TIMEOUT_SECONDS", "900"))
 TRANSIENT_PROVIDER_ERRORS = (
     anthropic.RateLimitError,
     anthropic.APIConnectionError,
@@ -345,6 +346,13 @@ class DefaultNativeToolGateway:
         timeout_seconds: float | None = None,
     ) -> NativeAgentTurn:
         """Call the provider, waiting out rate limits and transient outages."""
+        # Una connessione che si blocca non deve consumare l'intero tempo del task:
+        # oltre PER_CALL_TIMEOUT_SECONDS di attesa la chiamata va in timeout e si riprova.
+        call_timeout = (
+            min(timeout_seconds, PER_CALL_TIMEOUT_SECONDS)
+            if timeout_seconds is not None
+            else PER_CALL_TIMEOUT_SECONDS
+        )
         for attempt in range(1, TRANSIENT_RETRY_ATTEMPTS + 1):
             try:
                 return self._complete_once(
@@ -352,7 +360,7 @@ class DefaultNativeToolGateway:
                     system_prompt=system_prompt,
                     messages=messages,
                     tools=tools,
-                    timeout_seconds=timeout_seconds,
+                    timeout_seconds=call_timeout,
                 )
             except TRANSIENT_PROVIDER_ERRORS as exc:
                 status = getattr(exc, "status_code", None)

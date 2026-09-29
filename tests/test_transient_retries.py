@@ -56,5 +56,18 @@ class TransientRetryTest(unittest.TestCase):
             self._run(errors)
 
 
+    def test_call_timeout_is_capped(self) -> None:
+        seen = {}
+
+        def once(self, model, **kwargs):
+            seen["timeout"] = kwargs["timeout_seconds"]
+            return NativeAgentTurn(text="ok")
+
+        with patch.object(DefaultNativeToolGateway, "_complete_once", once):
+            DefaultNativeToolGateway().complete(
+                "claude-sonnet-5-5", system_prompt="s", messages=[], tools=[], timeout_seconds=3500
+            )
+        self.assertEqual(seen["timeout"], tool_calling.PER_CALL_TIMEOUT_SECONDS)
+
 if __name__ == "__main__":
     unittest.main()
