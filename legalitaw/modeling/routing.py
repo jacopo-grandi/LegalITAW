@@ -15,6 +15,9 @@ NOVITA_MODEL_PREFIXES = (
     "mistralai/",
     "moonshotai/",
     "zai-org/",
+    "google/",
+    "openai/",
+    "minimax/",
 )
 GEMINI_MODEL_PREFIX = "gemini-"
 OPENAI_MODEL_PREFIXES = ("gpt", "o1", "o3", "o4")

@@ -31,6 +31,14 @@ DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
     # prezzo della cache non pubblicato: l'input in cache si conta a prezzo pieno
     "deepseek/deepseek-v4-flash": {"input": 0.14, "output": 0.28},
     "deepseek/deepseek-v4-pro": {"input": 1.60, "output": 3.20},
+    "deepseek/deepseek-v4.1-flash": {"input": 0.30, "output": 1.20},
+    "openai/gpt-oss-120b": {"input": 0.05, "output": 0.25},
+    "qwen/qwen3.6-35b-a3b": {"input": 0.248, "output": 1.485},
+    "qwen/qwen3.6-27b": {"input": 0.60, "output": 3.60},
+    "google/gemma-4-26b-a4b-it": {"input": 0.13, "output": 0.40},
+    "google/gemma-4-31b-it": {"input": 0.14, "output": 0.40},
+    "zai-org/glm-4.7-flash": {"input": 0.07, "output": 0.40},
+    "minimax/minimax-m2.7": {"input": 0.30, "output": 1.20},
 }
 
 MODEL_CALL_SCORE_FIELDS = (

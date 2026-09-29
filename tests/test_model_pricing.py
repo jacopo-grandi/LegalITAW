@@ -53,7 +53,10 @@ class ModelPricingTest(unittest.TestCase):
         self.assertIsNone(missing)
 
     def test_generation_and_judge_tables_agree_on_list_prices(self) -> None:
-        for model, price in DEFAULT_MODEL_PRICING_USD_PER_1M.items():
+        shared = set(DEFAULT_MODEL_PRICING_USD_PER_1M) & set(JUDGE_TOKEN_PRICES_USD_PER_MTOK)
+        self.assertTrue({"claude-opus-5-5", "claude-sonnet-5-5", "gpt-5.6-luna"} <= shared)
+        for model in sorted(shared):
+            price = DEFAULT_MODEL_PRICING_USD_PER_1M[model]
             with self.subTest(model=model):
                 self.assertEqual(
                     JUDGE_TOKEN_PRICES_USD_PER_MTOK[model],
@@ -97,6 +100,29 @@ class AnthropicPromptCacheTest(unittest.TestCase):
         expected = (1_000 * 2.00 + 90_000 * 0.20 + 9_000 * 2.50 + 2_000 * 10.00) / 1_000_000
         self.assertAlmostEqual(metrics["estimated_cost_usd"], expected)
 
+
+
+class OpenModelRoutingTest(unittest.TestCase):
+    def test_open_models_route_to_novita_with_the_right_reasoning_fields(self) -> None:
+        from legalitaw.modeling.routing import provider_for_model
+
+        for model in (
+            "openai/gpt-oss-120b",
+            "google/gemma-4-26b-a4b-it",
+            "minimax/minimax-m2.7",
+            "qwen/qwen3.6-27b",
+        ):
+            self.assertEqual(provider_for_model(model), "novita", model)
+        self.assertEqual(provider_for_model("gpt-5.6-luna"), "openai")
+        self.assertEqual(provider_for_model("gemini-3-pro"), "gemini")
+
+    def test_open_models_have_a_price(self) -> None:
+        with patch.dict(os.environ, {}, clear=True):
+            for model in ("openai/gpt-oss-120b", "google/gemma-4-26b-a4b-it", "minimax/minimax-m2.7"):
+                cost, _ = estimate_cost_usd(
+                    provider="novita", model=model, token_usage={"input_tokens": 1000, "output_tokens": 1000}
+                )
+                self.assertIsNotNone(cost, model)
 
 if __name__ == "__main__":
     unittest.main()

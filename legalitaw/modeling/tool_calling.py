@@ -29,6 +29,7 @@ from .query import GEMINI_BASE_URL, NOVITA_BASE_URL
 from .request_config import (
     ANTHROPIC_REASONING_PREFIXES,
     GEMINI_REASONING_PREFIXES,
+    NOVITA_EFFORT_ONLY_PREFIXES,
     NOVITA_REASONING_PREFIXES,
     OPENAI_REASONING_PREFIXES,
     openai_uses_responses,
@@ -603,6 +604,8 @@ class DefaultNativeToolGateway:
         if provider == "novita" and normalized.startswith(NOVITA_REASONING_PREFIXES):
             request["reasoning_effort"] = _agent_reasoning_effort()
             request["extra_body"] = {"thinking": {"type": "enabled"}}
+        if provider == "novita" and normalized.startswith(NOVITA_EFFORT_ONLY_PREFIXES):
+            request["reasoning_effort"] = _agent_reasoning_effort()
         if provider == "novita" and normalized.startswith("zai-org/"):
             request.update(
                 {

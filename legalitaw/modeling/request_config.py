@@ -16,6 +16,8 @@ PROVIDER_MAX_REASONING_EFFORT = "max"
 ANTHROPIC_REASONING_PREFIXES = ("claude-sonnet-4", "claude-opus-4")
 GEMINI_REASONING_PREFIXES = ("gemini-2.5", "gemini-3")
 NOVITA_REASONING_PREFIXES = ("deepseek/", "moonshotai/", "qwen/", "zai-org/")
+# Modelli aperti su Novita che accettano reasoning_effort ma non il campo thinking
+NOVITA_EFFORT_ONLY_PREFIXES = ("openai/gpt-oss",)
 
 
 def openai_uses_responses(model: str) -> bool:
