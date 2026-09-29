@@ -328,9 +328,33 @@ def _find_v2_manifest(root: Path) -> dict[str, Any] | None:
             continue
         if payload.get("schema_version") == RUN_MANIFEST_SCHEMA:
             manifests.append(payload)
-    if len(manifests) > 1:
-        raise ValueError("più manifest legalita_v2_run_manifest_v1 nella sorgente")
-    return manifests[0] if manifests else None
+    if len(manifests) <= 1:
+        return manifests[0] if manifests else None
+    # Più run dello stesso modello nella stessa cartella: blocchi paralleli e
+    # rilanci dei task falliti. Il denominatore è l'unione dei task richiesti;
+    # fra più tentativi dello stesso task decide _select_attempt.
+    models = {str(item.get("model")) for item in manifests}
+    if len(models) != 1:
+        raise ValueError(
+            "manifest v2 di modelli diversi nella stessa sorgente: " + ", ".join(sorted(models))
+        )
+    requested: list[str] = []
+    for item in sorted(manifests, key=lambda value: str(value.get("created_at") or "")):
+        raw = item.get("requested_task_ids")
+        if not isinstance(raw, list) or not raw:
+            raise ValueError("manifest v2 senza requested_task_ids validi")
+        for task_id in raw:
+            if str(task_id) not in requested:
+                requested.append(str(task_id))
+    merged = dict(manifests[0])
+    merged.update(
+        {
+            "model": next(iter(models)),
+            "requested_task_ids": requested,
+            "merged_from": sorted(str(item.get("run_id")) for item in manifests),
+        }
+    )
+    return merged
 
 
 def resolve_run_directory(
