@@ -14,6 +14,20 @@ PRICE_ENV_NAMES = (
     "MODEL_PRICING_USD_PER_MILLION",
 )
 
+# Listino dei modelli valutati, in USD per milione di token. Si applica quando
+# nessuna delle variabili PRICE_ENV_NAMES è impostata; una variabile impostata
+# lo sostituisce per intero. Senza prezzo il costo del task resta None e il
+# limite --max-agent-cost-usd non si può applicare.
+DEFAULT_PRICE_TABLE_SOURCE = "builtin:2026-09-29"
+DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
+    # Anthropic, listino platform.claude.com al 29 set 2026; lettura da cache = 10% dell'input
+    "claude-opus-5-5": {"input": 4.00, "cached_input": 0.40, "output": 20.00},
+    "claude-sonnet-5-5": {"input": 2.00, "cached_input": 0.20, "output": 10.00},
+    "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "output": 15.00},
+    # OpenAI: input e output come nella tabella dei giudici; cache stimata al 10% dell'input
+    "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
+}
+
 MODEL_CALL_SCORE_FIELDS = (
     "model_call_provider",
     "model_call_latency_ms",
@@ -232,7 +246,7 @@ def _load_price_table() -> tuple[dict[str, Any], str | None]:
             return {}, name
         if isinstance(parsed, dict):
             return parsed, name
-    return {}, None
+    return DEFAULT_MODEL_PRICING_USD_PER_1M, DEFAULT_PRICE_TABLE_SOURCE
 
 
 def _price_value(price: dict[str, Any], name: str) -> float | None:
