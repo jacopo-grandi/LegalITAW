@@ -274,6 +274,31 @@ def _anthropic_messages(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return result
 
 
+def _with_cache_breakpoints(messages: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Mark the conversation prefix for Anthropic prompt caching.
+
+    Each agent turn resends the whole conversation. A breakpoint on the last
+    message writes the prefix to the cache; one on the message that was last in
+    the previous turn (three positions back) reads what that turn wrote. The
+    content the model sees does not change, only how the input is billed.
+    """
+    result = [dict(message) for message in messages]
+    for position in (len(result) - 1, len(result) - 3):
+        if position < 0 or result[position]["role"] != "user":
+            continue
+        content = result[position]["content"]
+        blocks = (
+            [{"type": "text", "text": content}]
+            if isinstance(content, str)
+            else [dict(block) for block in content]
+        )
+        if not blocks or (blocks[-1].get("type") == "text" and not blocks[-1].get("text")):
+            continue
+        blocks[-1] = {**blocks[-1], "cache_control": {"type": "ephemeral"}}
+        result[position] = {**result[position], "content": blocks}
+    return result
+
+
 class DefaultNativeToolGateway:
     """Translate one normalized turn to the selected provider's native API."""
 
@@ -325,7 +350,7 @@ class DefaultNativeToolGateway:
             "model": model,
             "max_tokens": _agent_max_output_tokens(),
             "system": system_prompt,
-            "messages": _anthropic_messages(messages),
+            "messages": _with_cache_breakpoints(_anthropic_messages(messages)),
             "tools": _anthropic_tools(tools),
         }
         if model.strip().lower().startswith(

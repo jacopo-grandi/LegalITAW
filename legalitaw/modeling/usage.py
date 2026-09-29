@@ -20,10 +20,11 @@ PRICE_ENV_NAMES = (
 # limite --max-agent-cost-usd non si può applicare.
 DEFAULT_PRICE_TABLE_SOURCE = "builtin:2026-09-29"
 DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
-    # Anthropic, listino platform.claude.com al 29 set 2026; lettura da cache = 10% dell'input
-    "claude-opus-5-5": {"input": 4.00, "cached_input": 0.40, "output": 20.00},
-    "claude-sonnet-5-5": {"input": 2.00, "cached_input": 0.20, "output": 10.00},
-    "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "output": 15.00},
+    # Anthropic, listino platform.claude.com al 29 set 2026: lettura da cache = 10%
+    # dell'input, scrittura in cache (5 minuti) = 125%
+    "claude-opus-5-5": {"input": 4.00, "cached_input": 0.40, "cache_write_input": 5.00, "output": 20.00},
+    "claude-sonnet-5-5": {"input": 2.00, "cached_input": 0.20, "cache_write_input": 2.50, "output": 10.00},
+    "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "cache_write_input": 3.75, "output": 15.00},
     # OpenAI: input e output come nella tabella dei giudici; cache stimata al 10% dell'input
     "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
 }
@@ -120,6 +121,13 @@ def normalized_token_usage(usage: dict[str, Any]) -> dict[str, int | None]:
         total_tokens = input_tokens + output_tokens
 
     cached_input_tokens = _int_or_none(usage.get("cache_read_input_tokens"))
+    cache_write_input_tokens = _int_or_none(usage.get("cache_creation_input_tokens"))
+    if (cached_input_tokens is not None or cache_write_input_tokens is not None) and input_tokens is not None:
+        # Anthropic conta a parte letture e scritture in cache: input_tokens è solo
+        # la coda non in cache. Qui input_tokens diventa il totale letto dal modello.
+        input_tokens += (cached_input_tokens or 0) + (cache_write_input_tokens or 0)
+        if total_tokens is not None and output_tokens is not None:
+            total_tokens = input_tokens + output_tokens
     if cached_input_tokens is None:
         cached_input_tokens = _int_or_none(details_input.get("cached_tokens"))
     if cached_input_tokens is None:
@@ -134,6 +142,7 @@ def normalized_token_usage(usage: dict[str, Any]) -> dict[str, int | None]:
         "output_tokens": output_tokens,
         "total_tokens": total_tokens,
         "cached_input_tokens": cached_input_tokens,
+        "cache_write_input_tokens": cache_write_input_tokens,
         "reasoning_tokens": reasoning_tokens,
     }
 
@@ -199,16 +208,24 @@ def estimate_cost_usd(
     input_tokens = token_usage.get("input_tokens") or 0
     output_tokens = token_usage.get("output_tokens") or 0
     cached_input_tokens = min(token_usage.get("cached_input_tokens") or 0, input_tokens)
+    cache_write_tokens = min(
+        token_usage.get("cache_write_input_tokens") or 0,
+        max(0, input_tokens - cached_input_tokens),
+    )
     regular_input_tokens = input_tokens
 
     input_price = _price_value(price, "input")
     output_price = _price_value(price, "output")
     cached_input_price = _price_value(price, "cached_input")
+    cache_write_price = _price_value(price, "cache_write_input")
 
     cost = 0.0
     if cached_input_price is not None:
         regular_input_tokens = max(0, input_tokens - cached_input_tokens)
         cost += cached_input_tokens / 1_000_000 * cached_input_price
+    if cache_write_price is not None:
+        regular_input_tokens = max(0, regular_input_tokens - cache_write_tokens)
+        cost += cache_write_tokens / 1_000_000 * cache_write_price
     if input_price is not None:
         cost += regular_input_tokens / 1_000_000 * input_price
     if output_price is not None:

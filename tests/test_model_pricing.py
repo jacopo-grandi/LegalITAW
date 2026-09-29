@@ -61,5 +61,42 @@ class ModelPricingTest(unittest.TestCase):
                 )
 
 
+
+class AnthropicPromptCacheTest(unittest.TestCase):
+    def test_breakpoints_mark_current_and_previous_user_turns(self) -> None:
+        from legalitaw.modeling.tool_calling import _with_cache_breakpoints
+
+        messages = [
+            {"role": "user", "content": "incarico"},
+            {"role": "assistant", "content": [{"type": "tool_use", "id": "t1", "name": "read", "input": {}}]},
+            {"role": "user", "content": [{"type": "tool_result", "tool_use_id": "t1", "content": "testo"}]},
+        ]
+        marked = _with_cache_breakpoints(messages)
+        self.assertEqual(marked[0]["content"][-1]["cache_control"], {"type": "ephemeral"})
+        self.assertEqual(marked[0]["content"][-1]["text"], "incarico")
+        self.assertEqual(marked[2]["content"][-1]["cache_control"], {"type": "ephemeral"})
+        self.assertNotIn("cache_control", str(marked[1]))
+        self.assertEqual(messages[0]["content"], "incarico")  # input non modificato
+
+    def test_anthropic_cache_tokens_are_counted_and_billed(self) -> None:
+        from legalitaw.modeling.usage import build_model_call_metrics
+
+        usage = {
+            "input_tokens": 1_000,
+            "cache_read_input_tokens": 90_000,
+            "cache_creation_input_tokens": 9_000,
+            "output_tokens": 2_000,
+        }
+        with patch.dict(os.environ, {}, clear=True):
+            metrics = build_model_call_metrics(
+                provider="anthropic", model="claude-sonnet-5-5", latency_ms_value=1, usage=usage
+            )
+        self.assertEqual(metrics["input_tokens"], 100_000)
+        self.assertEqual(metrics["cached_input_tokens"], 90_000)
+        self.assertEqual(metrics["cache_write_input_tokens"], 9_000)
+        expected = (1_000 * 2.00 + 90_000 * 0.20 + 9_000 * 2.50 + 2_000 * 10.00) / 1_000_000
+        self.assertAlmostEqual(metrics["estimated_cost_usd"], expected)
+
+
 if __name__ == "__main__":
     unittest.main()

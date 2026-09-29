@@ -428,6 +428,7 @@ def _aggregate_metrics(items: list[dict[str, Any]], model: str) -> dict[str, Any
         "output_tokens": total("output_tokens"),
         "total_tokens": total("total_tokens"),
         "cached_input_tokens": total("cached_input_tokens"),
+        "cache_write_input_tokens": total("cache_write_input_tokens"),
         "reasoning_tokens": total("reasoning_tokens"),
         "estimated_cost_usd": sum(costs) if costs else None,
         "per_call": items,
