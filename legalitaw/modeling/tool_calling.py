@@ -11,6 +11,7 @@ import json
 import re
 import logging
 import os
+import random
 import time
 from dataclasses import dataclass, field
 from typing import Any, Protocol
@@ -299,10 +300,81 @@ def _with_cache_breakpoints(messages: list[dict[str, Any]]) -> list[dict[str, An
     return result
 
 
+# Rate limit (429), sovraccarico (529) ed errori 5xx o di rete: l'harness aspetta
+# e riprova invece di far fallire il task. Le librerie dei provider riprovano già
+# 2 volte in pochi secondi; qui l'attesa arriva a qualche minuto. Gli errori di
+# credito o di autenticazione (401, 402, 403) non si ritentano.
+TRANSIENT_RETRY_ATTEMPTS = 10
+TRANSIENT_RETRY_MAX_DELAY_SECONDS = 120.0
+TRANSIENT_PROVIDER_ERRORS = (
+    anthropic.RateLimitError,
+    anthropic.APIConnectionError,
+    anthropic.InternalServerError,
+    anthropic.APIStatusError,
+    openai.RateLimitError,
+    openai.APIConnectionError,
+    openai.InternalServerError,
+    openai.APIStatusError,
+)
+
+
+def _retry_delay_seconds(exc: BaseException, attempt: int) -> float:
+    response = getattr(exc, "response", None)
+    headers = getattr(response, "headers", None) or {}
+    try:
+        retry_after = float(headers.get("retry-after"))
+    except (TypeError, ValueError):
+        retry_after = None
+    backoff = min(TRANSIENT_RETRY_MAX_DELAY_SECONDS, 5.0 * 2 ** (attempt - 1))
+    jitter = random.uniform(0, backoff * 0.25)
+    if retry_after is not None:
+        return min(TRANSIENT_RETRY_MAX_DELAY_SECONDS, max(retry_after, 1.0)) + jitter
+    return backoff + jitter
+
+
 class DefaultNativeToolGateway:
     """Translate one normalized turn to the selected provider's native API."""
 
     def complete(
+        self,
+        model: str,
+        *,
+        system_prompt: str,
+        messages: list[dict[str, Any]],
+        tools: list[ToolDefinition],
+        timeout_seconds: float | None = None,
+    ) -> NativeAgentTurn:
+        """Call the provider, waiting out rate limits and transient outages."""
+        for attempt in range(1, TRANSIENT_RETRY_ATTEMPTS + 1):
+            try:
+                return self._complete_once(
+                    model,
+                    system_prompt=system_prompt,
+                    messages=messages,
+                    tools=tools,
+                    timeout_seconds=timeout_seconds,
+                )
+            except TRANSIENT_PROVIDER_ERRORS as exc:
+                status = getattr(exc, "status_code", None)
+                if isinstance(exc, (anthropic.APIStatusError, openai.APIStatusError)) and not (
+                    status == 429 or (status is not None and status >= 500)
+                ):
+                    raise
+                if attempt == TRANSIENT_RETRY_ATTEMPTS:
+                    raise
+                delay = _retry_delay_seconds(exc, attempt)
+                log.warning(
+                    "%s: errore transitorio del provider (%s, tentativo %d/%d), nuovo tentativo tra %.0f s",
+                    model,
+                    status or type(exc).__name__,
+                    attempt,
+                    TRANSIENT_RETRY_ATTEMPTS,
+                    delay,
+                )
+                time.sleep(delay)
+        raise AssertionError("unreachable")  # pragma: no cover
+
+    def _complete_once(
         self,
         model: str,
         *,
