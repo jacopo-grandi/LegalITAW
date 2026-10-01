@@ -18,7 +18,7 @@ PRICE_ENV_NAMES = (
 # nessuna delle variabili PRICE_ENV_NAMES è impostata; una variabile impostata
 # lo sostituisce per intero. Senza prezzo il costo del task resta None e il
 # limite --max-agent-cost-usd non si può applicare.
-DEFAULT_PRICE_TABLE_SOURCE = "builtin:2026-09-29"
+DEFAULT_PRICE_TABLE_SOURCE = "builtin:2026-10-01"
 DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
     # Anthropic, listino platform.claude.com al 29 set 2026: lettura da cache = 10%
     # dell'input, scrittura in cache (5 minuti) = 125%
@@ -27,6 +27,8 @@ DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
     "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "cache_write_input": 3.75, "output": 15.00},
     # OpenAI: input e output come nella tabella dei giudici; cache stimata al 10% dell'input
     "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
+    # OpenAI, openai.com/index/introducing-gpt-6-1-sol (29 set 2026): cache = 5% dell'input
+    "gpt-6.1-sol": {"input": 2.00, "cached_input": 0.10, "output": 10.00},
     # Novita, API /openai/models al 29 set 2026 (prezzi in 1/10.000 USD per milione);
     # prezzo della cache non pubblicato: l'input in cache si conta a prezzo pieno
     "deepseek/deepseek-v4-flash": {"input": 0.14, "output": 0.28},

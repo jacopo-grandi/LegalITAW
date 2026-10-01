@@ -9,7 +9,7 @@ from __future__ import annotations
 from copy import deepcopy
 
 
-OPENAI_REASONING_PREFIXES = ("gpt-5", "o1", "o3", "o4")
+OPENAI_REASONING_PREFIXES = ("gpt-5", "gpt-6", "o1", "o3", "o4")
 OPENAI_MAX_SUPPORTED_REASONING_EFFORT = "high"
 GEMINI_MAX_SUPPORTED_REASONING_EFFORT = "high"
 PROVIDER_MAX_REASONING_EFFORT = "max"

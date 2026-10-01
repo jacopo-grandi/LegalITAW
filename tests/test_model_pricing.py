@@ -124,5 +124,21 @@ class OpenModelRoutingTest(unittest.TestCase):
                 )
                 self.assertIsNotNone(cost, model)
 
+class Gpt6RoutingTest(unittest.TestCase):
+    def test_gpt6_uses_openai_responses_with_reasoning_and_has_a_price(self) -> None:
+        from legalitaw.modeling.request_config import openai_uses_responses
+        from legalitaw.modeling.routing import provider_for_model
+
+        self.assertEqual(provider_for_model("gpt-6.1-sol"), "openai")
+        self.assertTrue(openai_uses_responses("gpt-6.1-sol"))
+        with patch.dict(os.environ, {}, clear=True):
+            cost, _ = estimate_cost_usd(
+                provider="openai",
+                model="gpt-6.1-sol",
+                token_usage={"input_tokens": 1_000_000, "cached_input_tokens": 0, "output_tokens": 1_000_000},
+            )
+        self.assertAlmostEqual(cost, 12.0, places=4)
+
+
 if __name__ == "__main__":
     unittest.main()
