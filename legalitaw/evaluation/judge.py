@@ -1305,6 +1305,51 @@ def _jev_probability(answer: Any) -> float:
     return normalized
 
 
+JEV_REPLAY_ENV = "LEGALITA_JEV_REPLAY_DIRS"
+_JEV_REPLAY_CACHE: dict[str, dict[tuple[str, str, str, str], dict[str, Any]]] = {}
+
+
+def jev_replay_store() -> dict[tuple[str, str, str, str], dict[str, Any]]:
+    """Voti Jev già dati, per riusarli invece di richiamare l'API.
+
+    Chiave: (modello Jev, sha256 del testo giudicato, id e titolo del criterio).
+    Se la submission, il criterio o il modello cambiano, la chiave non combacia
+    e il criterio viene giudicato di nuovo: il riuso non può produrre voti su
+    un testo diverso da quello giudicato in origine.
+    """
+    raw = os.environ.get(JEV_REPLAY_ENV, "").strip()
+    if not raw:
+        return {}
+    if raw in _JEV_REPLAY_CACHE:
+        return _JEV_REPLAY_CACHE[raw]
+    from pathlib import Path
+
+    store: dict[tuple[str, str, str, str], dict[str, Any]] = {}
+    for directory in raw.split(os.pathsep):
+        for path in sorted(Path(directory).glob("scores/*.json")):
+            try:
+                payload = json.loads(path.read_text(encoding="utf-8"))
+            except (OSError, json.JSONDecodeError):
+                continue
+            output = payload.get("model_output")
+            if not isinstance(output, str):
+                continue
+            output_sha = hashlib.sha256(output.encode("utf-8")).hexdigest()
+            for result in payload.get("criteria_results") or []:
+                for vote in result.get("judge_votes") or []:
+                    if vote.get("provider") != "typesafe" or vote.get("status") != "ok":
+                        continue
+                    if vote.get("verdict") not in ("pass", "fail"):
+                        continue
+                    store[(str(vote.get("model")), output_sha, str(result.get("id")), str(result.get("title")))] = {
+                        "verdict": vote["verdict"],
+                        "probability": vote.get("probability"),
+                    }
+    log.info("Riuso voti Jev: %d voti caricati da %s", len(store), raw)
+    _JEV_REPLAY_CACHE[raw] = store
+    return store
+
+
 class TypeSafeJevJudge:
     """Typed binary judge backed by TypeSafe Jev/System One."""
 
@@ -1372,6 +1417,52 @@ class TypeSafeJevJudge:
     ) -> dict[str, JudgeVote]:
         if not criteria:
             return {}
+        store = jev_replay_store()
+        if store:
+            output_sha = hashlib.sha256(agent_output.encode("utf-8")).hexdigest()
+            votes: dict[str, JudgeVote] = {}
+            missing: list[Any] = []
+            for criterion in criteria:
+                prior = store.get((self.model, output_sha, str(criterion.id), str(criterion.title)))
+                if prior is None:
+                    missing.append(criterion)
+                    continue
+                probability = prior["probability"]
+                votes[criterion.id] = JudgeVote(
+                    judge_id=self.judge_id,
+                    provider=self.provider,
+                    model=self.model,
+                    verdict=prior["verdict"],
+                    reasoning=(
+                        f"Decisione tipizzata Jev riusata da uno score precedente sulla stessa "
+                        f"submission: P(PASS)={probability:.4f}."
+                        if probability is not None
+                        else "Decisione Jev riusata da uno score precedente sulla stessa submission."
+                    ),
+                    evidence_status="unavailable",
+                    status="ok",
+                    error=None,
+                    attempts=0,
+                    latency_ms=0,
+                    probability=probability,
+                    confidence=abs(probability - 0.5) * 2.0 if probability is not None else None,
+                )
+            self.replayed_votes = getattr(self, "replayed_votes", 0) + len(votes)
+            if votes:
+                if missing:
+                    votes.update(
+                        self._evaluate_batch_live(task_description, agent_output, missing, citation_context)
+                    )
+                return votes
+        return self._evaluate_batch_live(task_description, agent_output, criteria, citation_context)
+
+    def _evaluate_batch_live(
+        self,
+        task_description: str,
+        agent_output: str,
+        criteria: Sequence[Any],
+        citation_context: str | None = None,
+    ) -> dict[str, JudgeVote]:
         payload, question_to_criterion = build_jev_request_payload(
             model=self.model,
             task_description=task_description,

@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import os
 import json
 from pathlib import Path
 from typing import Any, Sequence
@@ -88,6 +89,17 @@ def build_parser() -> argparse.ArgumentParser:
     score.add_argument("--out", type=Path, default=None)
     score.add_argument("--preflight-only", action="store_true")
     score.add_argument("--fail-fast", action="store_true")
+    score.add_argument(
+        "--reuse-jev-votes",
+        type=Path,
+        nargs="+",
+        default=None,
+        metavar="SCORE_DIR",
+        help=(
+            "Riusa i voti Jev di uno o più score precedenti sulle stesse submission "
+            "(stesso testo, criterio e modello Jev); il resto viene giudicato di nuovo."
+        ),
+    )
     _add_scoring_arguments(score)
     return parser
 
@@ -174,6 +186,10 @@ def _run_command(
 
 
 def _score_command(args: argparse.Namespace, *, score_v2_source_fn: Any) -> dict[str, Any]:
+    if getattr(args, "reuse_jev_votes", None):
+        from legalitaw.evaluation.judge import JEV_REPLAY_ENV
+
+        os.environ[JEV_REPLAY_ENV] = os.pathsep.join(str(path.expanduser()) for path in args.reuse_jev_votes)
     tasks = select_tasks(["all"], root=args.root)
     summary = score_v2_source_fn(
         args.source,
