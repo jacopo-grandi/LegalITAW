@@ -1306,27 +1306,34 @@ def _jev_probability(answer: Any) -> float:
 
 
 JEV_REPLAY_ENV = "LEGALITA_JEV_REPLAY_DIRS"
-_JEV_REPLAY_CACHE: dict[str, dict[tuple[str, str, str, str], dict[str, Any]]] = {}
+VOTE_REPLAY_ENV = "LEGALITA_VOTE_REPLAY_DIRS"
+_VOTE_REPLAY_CACHE: dict[str, dict[tuple[str, str, str, str, str], dict[str, Any]]] = {}
+_JEV_REPLAY_CACHE = _VOTE_REPLAY_CACHE  # compatibilità
 
 
-def jev_replay_store() -> dict[tuple[str, str, str, str], dict[str, Any]]:
-    """Voti Jev già dati, per riusarli invece di richiamare l'API.
+def _replay_dirs() -> str:
+    parts = [os.environ.get(name, "").strip() for name in (VOTE_REPLAY_ENV, JEV_REPLAY_ENV)]
+    return os.pathsep.join(part for part in parts if part)
 
-    Chiave: (modello Jev, sha256 del testo giudicato, id e titolo del criterio).
-    Se la submission, il criterio o il modello cambiano, la chiave non combacia
-    e il criterio viene giudicato di nuovo: il riuso non può produrre voti su
-    un testo diverso da quello giudicato in origine.
+
+def vote_replay_store() -> dict[tuple[str, str, str, str, str], dict[str, Any]]:
+    """Voti già dati da un giudice in score precedenti, per riusarli invece di richiamare l'API.
+
+    Chiave: (provider, modello, sha256 del testo giudicato, id e titolo del criterio).
+    Se la submission, il criterio, il provider o il modello cambiano, la chiave non
+    combacia e il criterio viene giudicato di nuovo: il riuso non può produrre voti
+    su un testo diverso da quello giudicato in origine.
     """
-    raw = os.environ.get(JEV_REPLAY_ENV, "").strip()
+    raw = _replay_dirs()
     if not raw:
         return {}
-    if raw in _JEV_REPLAY_CACHE:
-        return _JEV_REPLAY_CACHE[raw]
+    if raw in _VOTE_REPLAY_CACHE:
+        return _VOTE_REPLAY_CACHE[raw]
     from pathlib import Path
 
-    store: dict[tuple[str, str, str, str], dict[str, Any]] = {}
+    store: dict[tuple[str, str, str, str, str], dict[str, Any]] = {}
     for directory in raw.split(os.pathsep):
-        for path in sorted(Path(directory).glob("scores/*.json")):
+        for path in sorted(Path(directory).expanduser().glob("scores/*.json")):
             try:
                 payload = json.loads(path.read_text(encoding="utf-8"))
             except (OSError, json.JSONDecodeError):
@@ -1337,17 +1344,102 @@ def jev_replay_store() -> dict[tuple[str, str, str, str], dict[str, Any]]:
             output_sha = hashlib.sha256(output.encode("utf-8")).hexdigest()
             for result in payload.get("criteria_results") or []:
                 for vote in result.get("judge_votes") or []:
-                    if vote.get("provider") != "typesafe" or vote.get("status") != "ok":
+                    if vote.get("status") != "ok" or vote.get("verdict") not in ("pass", "fail"):
                         continue
-                    if vote.get("verdict") not in ("pass", "fail"):
-                        continue
-                    store[(str(vote.get("model")), output_sha, str(result.get("id")), str(result.get("title")))] = {
+                    key = (
+                        str(vote.get("provider")),
+                        str(vote.get("model")),
+                        output_sha,
+                        str(result.get("id")),
+                        str(result.get("title")),
+                    )
+                    store[key] = {
                         "verdict": vote["verdict"],
                         "probability": vote.get("probability"),
+                        "reasoning": vote.get("reasoning"),
+                        "evidence": list(vote.get("evidence") or []),
+                        "evidence_status": vote.get("evidence_status") or "unavailable",
                     }
-    log.info("Riuso voti Jev: %d voti caricati da %s", len(store), raw)
-    _JEV_REPLAY_CACHE[raw] = store
+    log.info("Riuso voti dei giudici: %d voti caricati da %s", len(store), raw)
+    _VOTE_REPLAY_CACHE[raw] = store
     return store
+
+
+def jev_replay_store() -> dict[tuple[str, str, str, str], dict[str, Any]]:
+    """Compatibilità: solo i voti Jev, chiave (modello, sha, id, titolo)."""
+    return {key[1:]: value for key, value in vote_replay_store().items() if key[0] == "typesafe"}
+
+
+class ReplayingJudge:
+    """Avvolge un giudice e riusa i suoi voti già dati sulla stessa submission.
+
+    I criteri senza voto precedente valido vengono giudicati dal giudice reale.
+    """
+
+    def __init__(self, inner: Any) -> None:
+        self.inner = inner
+        self.judge_id = inner.judge_id
+        self.provider = inner.provider
+        self.model = inner.model
+        self.replayed_votes = 0
+
+    def __getattr__(self, name: str) -> Any:
+        return getattr(self.inner, name)
+
+    def evaluate(self, *args: Any, **kwargs: Any) -> JudgeVote:
+        return self.inner.evaluate(*args, **kwargs)
+
+    def evaluate_batch(
+        self,
+        task_description: str,
+        agent_output: str,
+        criteria: Sequence[Any],
+        citation_context: str | None = None,
+    ) -> dict[str, JudgeVote]:
+        if not criteria:
+            return {}
+        store = vote_replay_store()
+        output_sha = hashlib.sha256(agent_output.encode("utf-8")).hexdigest()
+        votes: dict[str, JudgeVote] = {}
+        missing: list[Any] = []
+        for criterion in criteria:
+            prior = store.get(
+                (str(self.provider), str(self.model), output_sha, str(criterion.id), str(criterion.title))
+            )
+            if prior is None:
+                missing.append(criterion)
+                continue
+            probability = prior["probability"]
+            evidence = prior["evidence"]
+            evidence_status = prior["evidence_status"]
+            if evidence_status == "found" and not evidence:
+                evidence_status = "unavailable"
+            votes[criterion.id] = JudgeVote(
+                judge_id=self.judge_id,
+                provider=self.provider,
+                model=self.model,
+                verdict=prior["verdict"],
+                reasoning=(prior["reasoning"] or "") + " [voto riusato da uno score precedente sulla stessa submission]",
+                evidence=evidence,
+                evidence_status=evidence_status,
+                status="ok",
+                error=None,
+                attempts=0,
+                latency_ms=0,
+                probability=probability,
+                confidence=abs(probability - 0.5) * 2.0 if probability is not None else None,
+            )
+        self.replayed_votes += len(votes)
+        if missing:
+            evaluate_batch = getattr(self.inner, "evaluate_batch", None)
+            if callable(evaluate_batch):
+                votes.update(evaluate_batch(task_description, agent_output, missing, citation_context))
+            else:
+                for criterion in missing:
+                    votes[criterion.id] = self.inner.evaluate(
+                        task_description, agent_output, criterion.title, criterion.match_criteria, citation_context
+                    )
+        return votes
 
 
 class TypeSafeJevJudge:
@@ -1417,43 +1509,6 @@ class TypeSafeJevJudge:
     ) -> dict[str, JudgeVote]:
         if not criteria:
             return {}
-        store = jev_replay_store()
-        if store:
-            output_sha = hashlib.sha256(agent_output.encode("utf-8")).hexdigest()
-            votes: dict[str, JudgeVote] = {}
-            missing: list[Any] = []
-            for criterion in criteria:
-                prior = store.get((self.model, output_sha, str(criterion.id), str(criterion.title)))
-                if prior is None:
-                    missing.append(criterion)
-                    continue
-                probability = prior["probability"]
-                votes[criterion.id] = JudgeVote(
-                    judge_id=self.judge_id,
-                    provider=self.provider,
-                    model=self.model,
-                    verdict=prior["verdict"],
-                    reasoning=(
-                        f"Decisione tipizzata Jev riusata da uno score precedente sulla stessa "
-                        f"submission: P(PASS)={probability:.4f}."
-                        if probability is not None
-                        else "Decisione Jev riusata da uno score precedente sulla stessa submission."
-                    ),
-                    evidence_status="unavailable",
-                    status="ok",
-                    error=None,
-                    attempts=0,
-                    latency_ms=0,
-                    probability=probability,
-                    confidence=abs(probability - 0.5) * 2.0 if probability is not None else None,
-                )
-            self.replayed_votes = getattr(self, "replayed_votes", 0) + len(votes)
-            if votes:
-                if missing:
-                    votes.update(
-                        self._evaluate_batch_live(task_description, agent_output, missing, citation_context)
-                    )
-                return votes
         return self._evaluate_batch_live(task_description, agent_output, criteria, citation_context)
 
     def _evaluate_batch_live(
@@ -1916,6 +1971,11 @@ class PairedConsensusJudge(TargetedAuditJudge):
         self.strategy = "paired_consensus"
         self.model = "paired_consensus"
         self.judge_c = judge_c
+        # full = arbitro su disaccordi, voti non validi e PASS senza citazione ritrovata;
+        # disagreements = arbitro solo su disaccordi e voti non validi
+        self.tie_breaker_scope = os.environ.get("LEGALITA_TIE_BREAKER_SCOPE", "full").strip() or "full"
+        if self.tie_breaker_scope not in ("full", "disagreements"):
+            raise ValueError("LEGALITA_TIE_BREAKER_SCOPE deve essere full o disagreements")
         self.judge_models = {
             "A": judge_a.model,
             "B": judge_b.model,
@@ -1990,7 +2050,8 @@ class PairedConsensusJudge(TargetedAuditJudge):
             elif vote_a.verdict != vote_b.verdict:
                 reasons[criterion_id] = "disagreement"
             elif (
-                vote_a.verdict == "pass"
+                self.tie_breaker_scope == "full"
+                and vote_a.verdict == "pass"
                 and getattr(criterion, "criterion_logic", None) in (None, "required_presence")
                 and not self._quotes_found(vote_b, agent_output)
             ):
@@ -2069,6 +2130,11 @@ class PairedConsensusJudge(TargetedAuditJudge):
             "strategy": self.strategy,
             "batch_size": self.batch_size,
             "audit_sample_rate": self.audit_sample_rate,
+            "tie_breaker_scope": self.tie_breaker_scope,
+            "replayed_votes": {
+                judge_id: getattr(judge, "replayed_votes", 0)
+                for judge_id, judge in (("A", self.judge_a), ("B", self.judge_b))
+            },
             "criteria": len(criteria),
             "escalated_criteria": len(escalated),
             "escalation_reasons": dict(sorted(reason_counts.items())),
@@ -2109,6 +2175,11 @@ class AdaptiveMajorityJudge:
         self.judge_a = judge_a
         self.judge_b = judge_b
         self.judge_c = judge_c
+        # full = arbitro su disaccordi, voti non validi e PASS senza citazione ritrovata;
+        # disagreements = arbitro solo su disaccordi e voti non validi
+        self.tie_breaker_scope = os.environ.get("LEGALITA_TIE_BREAKER_SCOPE", "full").strip() or "full"
+        if self.tie_breaker_scope not in ("full", "disagreements"):
+            raise ValueError("LEGALITA_TIE_BREAKER_SCOPE deve essere full o disagreements")
         self.judge_models = {
             "A": judge_a.model,
             "B": judge_b.model,
@@ -2313,34 +2384,41 @@ def create_judge_from_config(
 
     config = runtime_config or build_judge_runtime_config(**overrides)
     validate_judge_runtime_config(config, api_keys=api_keys)
+    build: Any = _build_provider_judge
+    if _replay_dirs():
+
+        def build(endpoint: Any, keys: Mapping[str, str] | None = None) -> Any:
+            judge = _build_provider_judge(endpoint, keys)
+            # l'arbitro C giudica sempre dal vivo
+            return judge if getattr(judge, "judge_id", None) == "C" else ReplayingJudge(judge)
     if config.strategy == "single":
-        return _build_provider_judge(config.judge_a, api_keys)
+        return build(config.judge_a, api_keys)
     if config.strategy == "batched_single":
         return TargetedAuditJudge(
-            judge_a=_build_provider_judge(config.judge_a, api_keys),
+            judge_a=build(config.judge_a, api_keys),
             judge_b=None,
             batch_size=config.batch_size,
             audit_sample_rate=0.0,
         )
     if config.strategy == "targeted_audit":
         return TargetedAuditJudge(
-            judge_a=_build_provider_judge(config.judge_a, api_keys),
-            judge_b=_build_provider_judge(config.judge_b, api_keys),
+            judge_a=build(config.judge_a, api_keys),
+            judge_b=build(config.judge_b, api_keys),
             batch_size=config.batch_size,
             audit_sample_rate=config.audit_sample_rate,
         )
     if config.strategy == "paired_consensus":
         return PairedConsensusJudge(
-            judge_a=_build_provider_judge(config.judge_a, api_keys),
-            judge_b=_build_provider_judge(config.judge_b, api_keys),
-            judge_c=_build_provider_judge(config.judge_c, api_keys),
+            judge_a=build(config.judge_a, api_keys),
+            judge_b=build(config.judge_b, api_keys),
+            judge_c=build(config.judge_c, api_keys),
             batch_size=config.batch_size,
             audit_sample_rate=config.audit_sample_rate,
         )
     return AdaptiveMajorityJudge(
-        judge_a=_build_provider_judge(config.judge_a, api_keys),
-        judge_b=_build_provider_judge(config.judge_b, api_keys),
-        judge_c=_build_provider_judge(config.judge_c, api_keys),
+        judge_a=build(config.judge_a, api_keys),
+        judge_b=build(config.judge_b, api_keys),
+        judge_c=build(config.judge_c, api_keys),
     )
 
 

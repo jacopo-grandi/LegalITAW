@@ -90,6 +90,23 @@ def build_parser() -> argparse.ArgumentParser:
     score.add_argument("--preflight-only", action="store_true")
     score.add_argument("--fail-fast", action="store_true")
     score.add_argument(
+        "--reuse-votes",
+        type=Path,
+        nargs="+",
+        default=None,
+        metavar="SCORE_DIR",
+        help=(
+            "Riusa i voti di Judge A e B già dati in score precedenti sulla stessa submission "
+            "(stesso testo, criterio, provider e modello); l'arbitro C giudica sempre dal vivo."
+        ),
+    )
+    score.add_argument(
+        "--tie-breaker-scope",
+        choices=("full", "disagreements"),
+        default=None,
+        help="paired_consensus: full (predefinito) o disagreements = arbitro solo su disaccordi e voti non validi.",
+    )
+    score.add_argument(
         "--reuse-jev-votes",
         type=Path,
         nargs="+",
@@ -186,6 +203,12 @@ def _run_command(
 
 
 def _score_command(args: argparse.Namespace, *, score_v2_source_fn: Any) -> dict[str, Any]:
+    if getattr(args, "reuse_votes", None):
+        from legalitaw.evaluation.judge import VOTE_REPLAY_ENV
+
+        os.environ[VOTE_REPLAY_ENV] = os.pathsep.join(str(path.expanduser()) for path in args.reuse_votes)
+    if getattr(args, "tie_breaker_scope", None):
+        os.environ["LEGALITA_TIE_BREAKER_SCOPE"] = args.tie_breaker_scope
     if getattr(args, "reuse_jev_votes", None):
         from legalitaw.evaluation.judge import JEV_REPLAY_ENV
 
