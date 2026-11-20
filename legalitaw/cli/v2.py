@@ -113,6 +113,12 @@ def build_parser() -> argparse.ArgumentParser:
     )
     score.add_argument("source", type=Path)
     score.add_argument("--model", default=None)
+    score.add_argument(
+        "--tasks",
+        nargs="+",
+        default=None,
+        help="Valuta solo questi incarichi (con --expected all il denominatore sono loro).",
+    )
     denominator = score.add_mutually_exclusive_group()
     denominator.add_argument("--expected", choices=("all",), default=None)
     denominator.add_argument("--completed-only", action="store_true")
@@ -184,6 +190,33 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Rifà solo gli incarichi rimasti senza esito in una run interrotta.",
     )
+
+    valuta = subparsers.add_parser(
+        "valuta",
+        help="Valuta una run: Jev e Luna in parallelo, poi la terna sui disaccordi.",
+        description=(
+            "Valutazione standard di una run fatta con `lancia`: Jev su tutti gli incarichi e "
+            "Luna divisa in parti partono insieme; quando hanno finito parte la terna, che riusa "
+            "i loro voti e chiama l'arbitro solo sui disaccordi. Rilanciando lo stesso comando "
+            "si riprende dai checkpoint."
+        ),
+    )
+    valuta.add_argument("modello", help="id esatto del modello valutato, es. gemini-4-neon")
+    valuta.add_argument("--ragionamento", default="low", help="Come in `lancia`, serve a trovare la cartella.")
+    valuta.add_argument("--nome", default=None, help="Nome della run, come in `lancia --nome`.")
+    valuta.add_argument("--risultati", type=Path, default=None, help="Cartella base dei risultati, come in `lancia`.")
+    valuta.add_argument("--parti-luna", type=int, default=2, help="In quante parti dividere Luna (default 2).")
+    valuta.add_argument(
+        "--arbitro",
+        default="claude-opus-5-5",
+        help="Arbitro della terna (default claude-opus-5-5; es. gpt-6.1-sol se Opus non è disponibile).",
+    )
+    valuta.add_argument(
+        "--nuova",
+        action="store_true",
+        help="Crea nuove cartelle datate invece di riprendere le ultime.",
+    )
+    valuta.add_argument("--progress-every", type=int, default=60, metavar="SECONDI")
     return parser
 
 
@@ -341,6 +374,9 @@ def _score_command(args: argparse.Namespace, *, score_v2_source_fn: Any) -> dict
 
         os.environ[JEV_REPLAY_ENV] = os.pathsep.join(str(path.expanduser()) for path in args.reuse_jev_votes)
     tasks = select_tasks(["all"], root=args.root)
+    only_task_ids = None
+    if getattr(args, "tasks", None):
+        only_task_ids = [task.spec.task_id for task in select_tasks(args.tasks, root=args.root)]
     summary = score_v2_source_fn(
         args.source,
         tasks=tasks,
@@ -354,6 +390,7 @@ def _score_command(args: argparse.Namespace, *, score_v2_source_fn: Any) -> dict
         max_estimated_judge_cost_usd=args.max_estimated_judge_cost_usd,
         allow_estimated_cost_overrun=args.allow_estimated_cost_overrun,
         fail_fast=args.fail_fast,
+        **({"only_task_ids": only_task_ids} if only_task_ids is not None else {}),
     )
     if args.preflight_only:
         print(json.dumps(summary, ensure_ascii=False, indent=2))
@@ -403,6 +440,13 @@ def main(argv: Sequence[str] | None = None) -> None:
             generate_v2_run_fn=generate_v2_run,
             score_v2_source_fn=score_v2_source,
         )
+    elif args.command == "valuta":
+        from .valuta import valuta
+
+        all_ids = [task.spec.task_id for task in select_tasks(["all"], root=args.root)]
+        code = valuta(args, all_ids)
+        if code:
+            raise SystemExit(code)
     elif args.command in {"score", "evaluate"}:
         _score_command(args, score_v2_source_fn=score_v2_source)
     else:  # pragma: no cover - argparse owns the choices

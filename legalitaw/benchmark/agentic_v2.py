@@ -629,11 +629,16 @@ def score_v2_source(
     max_estimated_judge_cost_usd: float = 75.0,
     allow_estimated_cost_overrun: bool = False,
     fail_fast: bool = False,
+    only_task_ids: Sequence[str] | None = None,
     create_judge_fn: Any = None,
     evaluate_submission_fn: Any = None,
     evaluation_payload_fn: Any = None,
 ) -> dict[str, Any]:
-    """Resolve, preflight, checkpoint and score any supported run source."""
+    """Resolve, preflight, checkpoint and score any supported run source.
+
+    `only_task_ids` limita lo scoring (e il denominatore) a un sottoinsieme di
+    incarichi, per dividere un giudice in più processi paralleli.
+    """
     if expected_all and completed_only:
         raise ValueError("--expected all e --completed-only sono incompatibili")
     task_by_id = {task.spec.task_id: task for task in tasks}
@@ -653,6 +658,13 @@ def score_v2_source(
         else:
             expected_ids = sorted(resolved.selected)
             denominator_source = "discovered_inferred"
+            partial = True
+        if only_task_ids is not None:
+            wanted = set(only_task_ids)
+            unknown = sorted(wanted - set(task_by_id))
+            if unknown:
+                raise ValueError(f"--tasks: incarichi sconosciuti {unknown}")
+            expected_ids = [task_id for task_id in expected_ids if task_id in wanted]
             partial = True
         if not expected_ids:
             raise ValueError("nessun task nel denominatore dello scoring")

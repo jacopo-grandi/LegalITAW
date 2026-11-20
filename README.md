@@ -107,7 +107,32 @@ legalitaw run --model gpt-5.6-luna --parallel 4 --results <cartella> --skip-done
 hanno già un esito in `--results` per lo stesso modello. Ctrl+C ferma tutti i blocchi, che segnano
 la propria run come interrotta.
 
-### Valutare
+### Valutare una run fatta con `lancia`
+
+```bash
+legalitaw valuta gemini-4-neon
+```
+
+Il comando fa la valutazione standard in due fasi:
+
+1. Jev su tutti gli incarichi e Luna divisa in 2 parti (WF2-001–050 e WF2-051–100) partono insieme.
+2. Quando hanno finito tutti, parte la terna: riusa i voti di Jev e Luna e chiama l'arbitro
+   (Opus 5.5) solo sui disaccordi.
+
+Se un giudice si ferma, la terna non parte. Rilanciando lo stesso comando si riprende dai checkpoint:
+il comando riusa le ultime cartelle di score del modello invece di crearne di nuove.
+
+I punteggi vanno in `<risultati>/v2-scores/<nome>-wf2-100-{jev,luna-p1,luna-p2,terna-disaccordi}/<data>`,
+i log in `<risultati>/logs/<data>_<nome>/score_*.log`. Il risultato finale è quello della terna.
+
+| Opzione | Effetto |
+|---|---|
+| `--nome`, `--ragionamento`, `--risultati` | Come in `lancia`: servono a trovare la cartella della run. |
+| `--parti-luna 3` | Divide Luna in più parti (default 2). |
+| `--arbitro gpt-6.1-sol` | Cambia l'arbitro della terna, per esempio se Opus non è disponibile; il risultato va in `...-terna-gpt-6.1-sol` e non è confrontabile con le terne di Opus. |
+| `--nuova` | Crea nuove cartelle datate invece di riprendere le ultime. |
+
+### Valutare su misura
 
 Per valutare una run interna, una cartella esterna o uno ZIP:
 
@@ -130,6 +155,7 @@ Opzioni utili:
 - `--preflight-only`: risolve la run, controlla i checkpoint e stima il costo senza chiamare i
   giudici.
 - `--expected all`: fissa il denominatore ai 100 task.
+- `--tasks WF2-001 ...`: valuta solo questi incarichi; serve a dividere un giudice in più processi.
 
 I checkpoint vengono riusati finché non cambiano la submission, la rubrica, la configurazione dei
 giudici o il contratto di valutazione. Un task con errori dei giudici viene rigiudicato. Una run

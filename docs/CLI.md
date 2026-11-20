@@ -80,6 +80,21 @@ legalitaw score /percorso/run-esterna.zip
 
 Non sono richiesti symlink, estrazioni manuali o directory intermedie. `evaluate` può essere mantenuto come alias di `score`, ma la documentazione deve indicare un solo nome canonico.
 
+### 2.3 Scorciatoia `valuta`
+
+```bash
+legalitaw valuta gemini-4-neon
+```
+
+Trova la run come `lancia` (`<risultati>/<nome>-wf2-100`) e lancia:
+
+1. in parallelo, `score --judge-strategy batched_single` con Jev (`typesafe`/`jev-1.13.0`) su tutti gli incarichi e con Luna (`openai`/`gpt-5.6-luna`) divisa in `--parti-luna` parti (default 2) tramite `score --tasks`;
+2. al termine di tutti, `score --judge-strategy paired_consensus` con arbitro `--arbitro` (default `claude-opus-5-5`), `--reuse-votes` sulle cartelle di Jev e delle parti di Luna e `--tie-breaker-scope disagreements`.
+
+Tutti gli score usano `--expected all --judge-batch-size 10 --judge-audit-sample-rate 0 --judge-context compact`. Le cartelle sono `v2-scores/<nome>-wf2-100-<giudice>/<data>`; senza `--nuova` viene riusata l'ultima cartella esistente, così un secondo lancio riprende dai checkpoint. Se un giudice della fase 1 esce con errore la terna non parte.
+
+`score --tasks` limita scoring e denominatore agli incarichi indicati (la run viene comunque risolta su tutto il corpus).
+
 ## 3. Semantica di `run`
 
 `legalitaw run` applica queste regole:
