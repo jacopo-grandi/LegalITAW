@@ -73,6 +73,37 @@ def build_parser() -> argparse.ArgumentParser:
     run.add_argument("--max-agent-cost-usd", type=float, default=None)
     run.add_argument("--max-task-attempts", type=int, default=1)
     run.add_argument("--score-out", type=Path, default=None)
+    run.add_argument(
+        "--parallel",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Divide gli incarichi in N blocchi contigui lanciati in parallelo: "
+            "un processo, una run e un log per blocco (es. 100 incarichi, N=4 -> 4 x 25)."
+        ),
+    )
+    run.add_argument(
+        "--log-dir",
+        type=Path,
+        default=None,
+        help="Con --parallel: cartella dei log b1.log, b2.log... (default <results>/logs/<data-ora>).",
+    )
+    run.add_argument(
+        "--skip-done",
+        action="store_true",
+        help=(
+            "Salta gli incarichi che hanno già un esito (consegnato o fallito) per questo "
+            "modello in --results: serve a riprendere una run interrotta."
+        ),
+    )
+    run.add_argument(
+        "--progress-every",
+        type=int,
+        default=60,
+        metavar="SECONDI",
+        help="Con --parallel: ogni quanto stampare l'avanzamento (default 60).",
+    )
     _add_scoring_arguments(run)
 
     score = subparsers.add_parser(
@@ -118,7 +149,81 @@ def build_parser() -> argparse.ArgumentParser:
         ),
     )
     _add_scoring_arguments(score)
+
+    lancia = subparsers.add_parser(
+        "lancia",
+        help="Lancia un modello su tutti i 100 incarichi, in 4 blocchi paralleli.",
+        description=(
+            "Scorciatoia per la run standard: ragionamento low, 4 blocchi paralleli, "
+            "risultati in <risultati>/<nome>-wf2-100 e log in <risultati>/logs/<data>_<nome>."
+        ),
+    )
+    lancia.add_argument("modello", help="id esatto del modello, es. gemini-4-neon")
+    lancia.add_argument(
+        "--ragionamento",
+        default="low",
+        help="Livello di ragionamento (AGENT_REASONING_EFFORT), default low.",
+    )
+    lancia.add_argument("--blocchi", type=int, default=4, help="Blocchi paralleli, default 4.")
+    lancia.add_argument(
+        "--nome",
+        default=None,
+        help="Nome breve della run (es. neon4-low); default <modello>-<ragionamento>.",
+    )
+    lancia.add_argument(
+        "--risultati",
+        type=Path,
+        default=None,
+        help=(
+            "Cartella base dei risultati agentici; default LEGALITAW_RESULTS_DIR, "
+            "poi ../legal-ITA-main/results/agentic se esiste, poi results/agentic del repo."
+        ),
+    )
+    lancia.add_argument(
+        "--riprendi",
+        action="store_true",
+        help="Rifà solo gli incarichi rimasti senza esito in una run interrotta.",
+    )
     return parser
+
+
+def _default_results_base() -> Path:
+    configured = os.environ.get("LEGALITAW_RESULTS_DIR")
+    if configured:
+        return Path(configured).expanduser()
+    sibling = WORKFLOW2_TASKS_DIR.parent.parent / "legal-ITA-main" / "results" / "agentic"
+    if sibling.is_dir():
+        return sibling
+    return AGENTIC_RESULTS_DIR
+
+
+def _slug(text: str) -> str:
+    return "".join(ch if ch.isalnum() or ch in ".-_" else "-" for ch in text).strip("-")
+
+
+def _lancia_run_argv(args: argparse.Namespace, *, today: str | None = None) -> list[str]:
+    """Traduce `lancia` nella `run --parallel` equivalente."""
+    import datetime as dt
+
+    base = (args.risultati or _default_results_base()).expanduser()
+    name = _slug(args.nome or f"{args.modello}-{args.ragionamento}")
+    day = today or dt.date.today().isoformat()
+    argv = [
+        "--root",
+        str(args.root),
+        "run",
+        "--model",
+        args.modello,
+        "--parallel",
+        str(args.blocchi),
+        "--results",
+        str(base / f"{name}-wf2-100"),
+        "--log-dir",
+        str(base / "logs" / f"{day}_{name}"),
+    ]
+    if args.riprendi:
+        argv.append("--skip-done")
+    return argv
 
 
 def _runtime_config(args: argparse.Namespace):
@@ -172,10 +277,32 @@ def _run_command(
     generate_v2_run_fn: Any,
     score_v2_source_fn: Any,
     validate_runtime_fn: Any = validate_generic_agent_runtime,
+    run_parallel_fn: Any = None,
 ) -> Path:
     tasks = _selected_run_tasks(args)
+    if getattr(args, "skip_done", False):
+        from .parallel import done_task_ids
+
+        done = done_task_ids(Path(args.results), model=args.model)
+        skipped = [task for task in tasks if task.spec.task_id in done]
+        tasks = [task for task in tasks if task.spec.task_id not in done]
+        print(f"--skip-done: {len(skipped)} incarichi già fatti, {len(tasks)} da fare.")
+        if not tasks:
+            return Path(args.results)
     for task in tasks:
         validate_runtime_fn(task, profile=args.profile)
+    parallel = getattr(args, "parallel", None)
+    if parallel is not None:
+        if parallel < 1:
+            raise ValueError("--parallel deve essere almeno 1")
+        if args.score:
+            raise ValueError("--score non si usa con --parallel: valuta i blocchi a run finita")
+        if run_parallel_fn is None:
+            from .parallel import run_parallel as run_parallel_fn
+        code = run_parallel_fn(args, tasks)
+        if code:
+            raise SystemExit(code)
+        return Path(args.results)
     run_root = generate_v2_run_fn(
         tasks,
         model=args.model,
@@ -261,6 +388,18 @@ def main(argv: Sequence[str] | None = None) -> None:
     if args.command == "run":
         _run_command(
             args,
+            generate_v2_run_fn=generate_v2_run,
+            score_v2_source_fn=score_v2_source,
+        )
+    elif args.command == "lancia":
+        os.environ["AGENT_REASONING_EFFORT"] = args.ragionamento
+        run_args = build_parser().parse_args(_lancia_run_argv(args))
+        print(
+            f"{args.modello} · ragionamento {args.ragionamento} · {args.blocchi} blocchi\n"
+            f"risultati: {run_args.results}\nlog: {run_args.log_dir}"
+        )
+        _run_command(
+            run_args,
             generate_v2_run_fn=generate_v2_run,
             score_v2_source_fn=score_v2_source,
         )

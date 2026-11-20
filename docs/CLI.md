@@ -40,6 +40,31 @@ legalitaw run --model gpt-5.6-luna --limit 10 --score
 
 `--score` non introduce un secondo percorso di valutazione: congela le submission prodotte e invoca internamente lo stesso servizio usato dal sottocomando `score`.
 
+Per far girare gli incarichi in parallelo:
+
+```bash
+legalitaw run --model gpt-5.6-luna --parallel 4 --results <cartella> --log-dir <cartella-log>
+```
+
+`--parallel N` divide i task selezionati in N blocchi contigui (100 task, N=4: WF2-001, WF2-026, WF2-051, WF2-076) e lancia per ogni blocco un processo `run --tasks ...` con le stesse opzioni (`--profile`, `--max-agent-steps`, `--timeout-seconds`, `--max-agent-cost-usd`, `--max-task-attempts`). Ogni blocco scrive la propria run in `<results>/v2-runs/` e il proprio log `bN.log` in `--log-dir` (default `<results>/logs/<data-ora>`). Il processo principale stampa l'avanzamento ogni `--progress-every` secondi (default 60) e alla fine il riepilogo; esce con codice diverso da zero se un blocco fallisce. `--score` non si combina con `--parallel`.
+
+`--skip-done` salta i task che hanno già un esito (consegnato o fallito) per lo stesso modello in `--results`, escluso il task su cui una run si è fermata per un errore non ripetibile: serve a riprendere una run interrotta, con o senza `--parallel`.
+
+### 2.1.1 Scorciatoia `lancia`
+
+```bash
+legalitaw lancia gemini-4-neon
+```
+
+equivale a
+
+```bash
+AGENT_REASONING_EFFORT=low legalitaw run --model gemini-4-neon --parallel 4 \
+  --results <risultati>/gemini-4-neon-low-wf2-100 --log-dir <risultati>/logs/<AAAA-MM-GG>_gemini-4-neon-low
+```
+
+dove `<risultati>` è `LEGALITAW_RESULTS_DIR`, oppure `../legal-ITA-main/results/agentic` se esiste, oppure `results/agentic`. Opzioni: `--ragionamento`, `--blocchi`, `--nome`, `--risultati`, `--riprendi` (= `--skip-done`).
+
 ### 2.2 Valutare risultati esistenti
 
 ```bash

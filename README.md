@@ -57,13 +57,57 @@ partire dalla root del repository.
 
 ## Uso
 
-Per generare una run su tutti i task, con il profilo `bare` (modello, filesystem isolato e sei tool
-generici):
+### Lanciare un modello sui 100 incarichi
+
+Il modo più semplice è `lancia`, seguito dall'id esatto del modello:
+
+```bash
+legalitaw lancia gemini-4-neon
+```
+
+Il comando fa la run standard del benchmark:
+
+- ragionamento `low`;
+- i 100 incarichi divisi in 4 blocchi da 25, che girano in parallelo (un processo, una run e un log
+  per blocco);
+- risultati in `<risultati>/<modello>-low-wf2-100` e log in `<risultati>/logs/<data>_<modello>-low`.
+
+La cartella `<risultati>` è `LEGALITAW_RESULTS_DIR` se impostata, altrimenti
+`../legal-ITA-main/results/agentic` se esiste accanto al repo, altrimenti `results/agentic`.
+
+Durante la run il terminale mostra ogni minuto l'avanzamento di ogni blocco e il costo; alla fine
+stampa il riepilogo e le cartelle delle quattro run.
+
+| Opzione | Effetto |
+|---|---|
+| `--ragionamento high` | Cambia il livello di ragionamento (default `low`). |
+| `--blocchi 2` | Cambia il numero di blocchi paralleli (default 4); utile con provider dai limiti stretti. |
+| `--nome neon4-low` | Sceglie il nome della cartella (default `<modello>-<ragionamento>`). |
+| `--riprendi` | Riprende una run interrotta: rifà solo gli incarichi rimasti senza esito. |
+| `--risultati <cartella>` | Cambia la cartella base dei risultati. |
+
+Vale per ogni modello dei provider supportati (OpenAI, Anthropic, Google, Novita). Per un modello
+nuovo conviene prima controllare che l'id sia esatto, che il prezzo sia in
+`legalitaw/modeling/usage.py` (altrimenti il costo resta vuoto) e che il prefisso sia tra quelli con
+ragionamento in `legalitaw/modeling/request_config.py`.
+
+### Run su misura
+
+`lancia` è una scorciatoia per `run`, che resta disponibile per i casi particolari. Con il profilo
+`bare` (modello, filesystem isolato e sei tool generici):
 
 ```bash
 legalitaw run --model gpt-5.6-luna
 legalitaw run --model gpt-5.6-luna --tasks WF2-001 WF2-002 --max-agent-cost-usd 5
+legalitaw run --model gpt-5.6-luna --parallel 4 --results <cartella> --log-dir <cartella-log>
+legalitaw run --model gpt-5.6-luna --parallel 4 --results <cartella> --skip-done
 ```
+
+`--parallel N` divide gli incarichi selezionati in N blocchi contigui; `--skip-done` salta quelli che
+hanno già un esito in `--results` per lo stesso modello. Ctrl+C ferma tutti i blocchi, che segnano
+la propria run come interrotta.
+
+### Valutare
 
 Per valutare una run interna, una cartella esterna o uno ZIP:
 
