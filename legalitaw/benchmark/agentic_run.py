@@ -26,6 +26,8 @@ ESTIMATED_CHARS_PER_TOKEN = 3.5
 ESTIMATED_OUTPUT_TOKENS_PER_CRITERION = 400
 JUDGE_TOKEN_PRICES_USD_PER_MTOK: dict[str, tuple[float, float]] = {
     "gpt-5.6-luna": (0.20, 1.20),
+    # OpenAI, openai.com/index/introducing-gpt-6-1-sol (29 set 2026)
+    "gpt-6.1-sol": (2.00, 10.00),
     "claude-sonnet-4-6": (3.00, 15.00),
     # Listino Anthropic al 25 set 2026 (platform.claude.com/docs/en/about-claude/pricing)
     "claude-opus-5-5": (4.00, 20.00),

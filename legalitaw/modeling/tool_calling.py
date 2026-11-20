@@ -59,6 +59,9 @@ class NativeToolCall:
     id: str
     name: str
     arguments: dict[str, Any]
+    # Campi del provider da restituire tali e quali nel turno successivo
+    # (es. thought_signature di Gemini in extra_content)
+    extra_content: dict[str, Any] | None = None
 
 
 @dataclass(frozen=True)
@@ -79,6 +82,18 @@ class NativeToolGateway(Protocol):
         tools: list[ToolDefinition],
         timeout_seconds: float | None = None,
     ) -> NativeAgentTurn: ...
+
+
+def _extra_content(call: object) -> dict[str, Any] | None:
+    """extra_content della tool call (Gemini vi mette la thought_signature obbligatoria)."""
+    value = getattr(call, "extra_content", None)
+    if value is None:
+        value = (getattr(call, "model_extra", None) or {}).get("extra_content")
+    if value is None:
+        return None
+    if hasattr(value, "model_dump"):
+        value = value.model_dump()
+    return dict(value) if isinstance(value, dict) else None
 
 
 def _agent_max_output_tokens() -> int:
@@ -207,6 +222,7 @@ def _openai_messages(
                             ),
                         },
                     }
+                    | ({"extra_content": call["extra_content"]} if call.get("extra_content") else {})
                     for call in calls
                 ]
             result.append(item)
@@ -435,7 +451,7 @@ class DefaultNativeToolGateway:
             "tools": _anthropic_tools(tools),
         }
         if model.strip().lower().startswith(
-            (*ANTHROPIC_REASONING_PREFIXES, "claude-opus-5", "claude-sonnet-5")
+            (*ANTHROPIC_REASONING_PREFIXES, "claude-opus-5", "claude-sonnet-5", "claude-haiku-5")
         ):
             request["thinking"] = {"type": "adaptive", "display": "omitted"}
             request["output_config"] = {"effort": _agent_reasoning_effort()}
@@ -640,6 +656,7 @@ class DefaultNativeToolGateway:
                     call.function.arguments,
                     tool_name=str(call.function.name),
                 ),
+                extra_content=_extra_content(call),
             )
             for call in (getattr(message, "tool_calls", None) or [])
         ]

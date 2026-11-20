@@ -906,6 +906,11 @@ def _transcript_assistant(turn: Any) -> dict[str, Any]:
         "content": turn.text,
         "tool_calls": [
             {"id": call.id, "name": call.name, "arguments": call.arguments}
+            | (
+                {"extra_content": call.extra_content}
+                if getattr(call, "extra_content", None)
+                else {}
+            )
             for call in turn.tool_calls
         ],
     }

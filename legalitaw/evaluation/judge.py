@@ -626,7 +626,7 @@ def _safe_error_message(error: BaseException | str) -> str:
 def _model_disallows_temperature(provider: JudgeProvider, model: str) -> bool:
     normalized = model.strip().lower()
     if provider == "openai":
-        return normalized.startswith(("gpt-5", "o1", "o3", "o4"))
+        return normalized.startswith(("gpt-5", "gpt-6", "o1", "o3", "o4"))
     if provider == "anthropic":
         return normalized.startswith(("claude-opus-4", "claude-opus-5", "claude-sonnet-5"))
     return False

@@ -14,7 +14,7 @@ OPENAI_MAX_SUPPORTED_REASONING_EFFORT = "high"
 GEMINI_MAX_SUPPORTED_REASONING_EFFORT = "high"
 PROVIDER_MAX_REASONING_EFFORT = "max"
 ANTHROPIC_REASONING_PREFIXES = ("claude-sonnet-4", "claude-opus-4")
-GEMINI_REASONING_PREFIXES = ("gemini-2.5", "gemini-3")
+GEMINI_REASONING_PREFIXES = ("gemini-2.5", "gemini-3", "gemini-4")
 NOVITA_REASONING_PREFIXES = ("deepseek/", "moonshotai/", "qwen/", "zai-org/")
 # Modelli aperti su Novita che accettano reasoning_effort ma non il campo thinking
 NOVITA_EFFORT_ONLY_PREFIXES = ("openai/gpt-oss",)

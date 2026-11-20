@@ -24,13 +24,47 @@ DEFAULT_MODEL_PRICING_USD_PER_1M: dict[str, dict[str, float]] = {
     # dell'input, scrittura in cache (5 minuti) = 125%
     "claude-opus-5-5": {"input": 4.00, "cached_input": 0.40, "cache_write_input": 5.00, "output": 20.00},
     "claude-sonnet-5-5": {"input": 2.00, "cached_input": 0.20, "cache_write_input": 2.50, "output": 10.00},
+    # stesso listino di claude-sonnet-5 in benchmark/agentic_run.py
+    "claude-sonnet-5": {"input": 2.00, "cached_input": 0.20, "cache_write_input": 2.50, "output": 10.00},
+    # Anthropic, listino platform.claude.com (ott 2026): prezzo per lunghezza del prompt;
+    # oltre 100K token di input (cache incluse) l'intera richiesta paga la fascia alta
+    "claude-haiku-5-5": {
+        "input": 0.10, "cached_input": 0.01, "cache_write_input": 0.125, "output": 0.50,
+        "long_context_threshold": 100_000,
+        "long_context": {"input": 0.50, "cached_input": 0.05, "cache_write_input": 0.625, "output": 2.50},
+    },
     "claude-sonnet-4-6": {"input": 3.00, "cached_input": 0.30, "cache_write_input": 3.75, "output": 15.00},
+    # Google, prezzo di listino dopo il periodo promozionale ($2/$10 durante il lancio); cache al 5% dell'input
+    "gemini-4-argon": {"input": 4.00, "cached_input": 0.20, "output": 20.00},
+    # Google, blog.google "Introducing Gemini 4 Neon" (18 nov 2026): $3 input, $0,15 cache, $15 output; nessuna fascia lunga
+    "gemini-4-neon": {"input": 3.00, "cached_input": 0.15, "output": 15.00},
     # OpenAI: input e output come nella tabella dei giudici; cache stimata al 10% dell'input
     "gpt-5.6-luna": {"input": 0.20, "cached_input": 0.02, "output": 1.20},
     # OpenAI, openai.com/index/introducing-gpt-6-1-sol (29 set 2026): cache = 5% dell'input
     "gpt-6.1-sol": {"input": 2.00, "cached_input": 0.10, "output": 10.00},
+    # OpenAI, listino gpt-6.2-sol (nov 2026): oltre 272K token di input l'intera richiesta paga la fascia alta
+    "gpt-6.2-sol": {
+        "input": 2.00, "cached_input": 0.10, "output": 10.00,
+        "long_context_threshold": 272_000,
+        "long_context": {"input": 4.00, "cached_input": 0.20, "output": 15.00},
+    },
+    # OpenAI, listino gpt-6.1-terra (nov 2026): oltre 272K token di input l'intera richiesta paga la fascia alta
+    "gpt-6.1-terra": {
+        "input": 1.00, "cached_input": 0.05, "output": 5.00,
+        "long_context_threshold": 272_000,
+        "long_context": {"input": 2.00, "cached_input": 0.10, "output": 7.50},
+    },
     # OpenAI, listino gpt-6-astra (contesto <= 272K token): cache = 10% dell'input
     "gpt-6-astra": {"input": 10.00, "cached_input": 1.00, "output": 50.00},
+    # OpenAI, listino gpt-6.2-astra (nov 2026, computingforgeeks.com): oltre 272K token di input
+    # l'intera richiesta paga la fascia alta; cache della fascia alta stimata al doppio come per gpt-6.2-sol
+    "gpt-6.2-astra": {
+        "input": 8.00, "cached_input": 0.40, "output": 40.00,
+        "long_context_threshold": 272_000,
+        "long_context": {"input": 16.00, "cached_input": 0.80, "output": 60.00},
+    },
+    # OpenAI, listino gpt-6-luna (ott 2026): cache = 10% dell'input
+    "gpt-6-luna": {"input": 0.10, "cached_input": 0.01, "output": 0.50},
     # Novita, API /openai/models al 29 set 2026 (prezzi in 1/10.000 USD per milione);
     # prezzo della cache non pubblicato: l'input in cache si conta a prezzo pieno
     "deepseek/deepseek-v4-flash": {"input": 0.14, "output": 0.28},
@@ -222,6 +256,9 @@ def estimate_cost_usd(
         return None, None
 
     input_tokens = token_usage.get("input_tokens") or 0
+    threshold = price.get("long_context_threshold")
+    if threshold and isinstance(price.get("long_context"), dict) and input_tokens > int(threshold):
+        price = price["long_context"]
     output_tokens = token_usage.get("output_tokens") or 0
     cached_input_tokens = min(token_usage.get("cached_input_tokens") or 0, input_tokens)
     cache_write_tokens = min(
